@@ -1,0 +1,20 @@
+{
+  "crons": [
+    {
+      "path": "/api/cron/scrape-events",
+      "schedule": "0 6 * * 3"
+    },
+    {
+      "path": "/api/cron/send-newsletter",
+      "schedule": "0 8 * * 1"
+    },
+    {
+      "path": "/api/cron/generate-articles",
+      "schedule": "0 7 * * 4"
+    },
+    {
+      "path": "/api/cron/scrape-cliniche",
+      "schedule": "0 5 * * 6"
+    }
+  ]
+}

@@ -6,9 +6,10 @@
 
 :root {
   /* Palette Pet Tech App — UI/UX Pro Max skill riga 25 */
-  --primary: #F97316;
-  --primary-dark: #EA580C;
-  --primary-light: #FB923C;
+  /* Primary scurito a #EA580C per WCAG AA (3.56:1 su bianco — passa AA Large text) */
+  --primary: #EA580C;
+  --primary-dark: #C2410C;
+  --primary-light: #F97316;
   --primary-foreground: #ffffff;
   --secondary: #2563EB;
   --secondary-foreground: #ffffff;

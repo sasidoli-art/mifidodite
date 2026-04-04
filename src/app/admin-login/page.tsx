@@ -91,9 +91,6 @@ export default function AdminLoginPage() {
           </button>
         </form>
 
-        <p className="text-center text-white/20 text-xs mt-6">
-          Accesso protetto con cookie httpOnly + SHA256
-        </p>
       </div>
     </div>
   );

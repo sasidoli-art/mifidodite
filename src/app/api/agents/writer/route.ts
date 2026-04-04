@@ -45,32 +45,33 @@ export async function GET(request: NextRequest) {
   const oggi = new Date().toLocaleDateString("it-IT", { day: "numeric", month: "long", year: "numeric" });
   const categoriaOggi = CATEGORIE[Math.floor(Date.now() / 86400000) % CATEGORIE.length];
 
-  const prompt = `Sei un giornalista pet italiano esperto di SEO. Scrivi per MifidoDiTe.eu.
+  const prompt = `Sei il SEO Writer di MiFidoDiTe.eu — il portale pet #1 in Italia.
 
-Basandoti su questi spunti dalle testate pet italiane, genera 2 articoli originali.
-Data di oggi: ${oggi}
-Categoria suggerita: ${categoriaOggi} (ma puoi variare)
+Scrivi 2 articoli di ALTISSIMA qualita. Data: ${oggi}. Categoria suggerita: ${categoriaOggi}.
 
-SPUNTI:
+SPUNTI dalle testate pet italiane:
 ${spunti.join("\n\n")}
 
-REGOLE FERREE:
-- Articoli ORIGINALI, non copiare le fonti
-- Tono: caldo, autorevole, come un amico veterinario
-- Lingua: italiano fluente, zero anglicismi inutili
-- Struttura: h2 per sezioni, paragrafi brevi, elenchi dove servono
-- 800-1200 parole per articolo
-- SEO: keyword nel titolo, primo paragrafo e h2
-- Chiudi sempre con invito a cercare su MifidoDiTe.eu
-- NON inventare statistiche o dati scientifici
+REGOLE DI SCRITTURA:
+- 950-1400 parole per articolo, MAI meno
+- Titolo SEO forte (keyword principale + emozione)
+- Primo paragrafo: hook empatico + keyword principale
+- Struttura: h2 per ogni sezione, h3 per sotto-sezioni, paragrafi MAX 3 righe
+- Elenchi puntati dove servono (li, ul)
+- Grassetto (<strong>) sulle frasi chiave
+- Tono: come un amico veterinario che ti spiega le cose a cena
+- Lingua: italiano fluente, ZERO anglicismi (toelettatura non grooming)
+- Chiudi con CTA: "Su MifidoDiTe.eu trovi [professionista] nella tua zona"
+- NON inventare statistiche. Se citi dati, specifica la fonte
+- Articoli ORIGINALI — rielabora, non copiare
 
-Rispondi con un array JSON, ogni elemento:
+Rispondi con array JSON puro (no markdown), ogni elemento:
 {
-  "titolo": "max 80 char, accattivante",
-  "slug": "formato-url",
+  "titolo": "max 80 char, SEO-ottimizzato",
+  "slug": "formato-url-seo",
   "categoria": "guide|salute|comportamento|curiosita|razze|gatti|consigli|aneddoti",
-  "estratto": "2-3 frasi, max 200 char",
-  "contenuto": "HTML completo: h2, p, ul/li",
+  "estratto": "2 frasi max 160 char — funziona come meta description",
+  "contenuto": "HTML completo con h2 h3 p ul li strong",
   "tempo_lettura": "X min",
   "tags": ["3-5 keyword"]
 }`;

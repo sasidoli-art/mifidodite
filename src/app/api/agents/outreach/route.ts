@@ -50,21 +50,24 @@ export async function GET(request: NextRequest) {
     if (!s.email) continue;
 
     try {
-      // Genera email personalizzata con Claude
-      const prompt = `Scrivi una breve email di invito (max 150 parole) per invitare "${s.nome}" di ${s.comune} (${s.provincia}), categoria ${s.categoria}, a registrarsi gratis su MifidoDiTe.eu.
+      // Prompt outreach empatico e personalizzato
+      const prompt = `Sei l'Outreach Specialist di MiFidoDiTe.eu. Scrivi un'email di invito per "${s.nome}" di ${s.comune} (${s.provincia}), categoria: ${s.categoria}.
 
-TONO: amichevole, diretto, non commerciale. Come se scrivessi a un collega.
-STRUTTURA:
-- Saluto con nome attivita
-- 1 frase su cosa e MifidoDiTe (portale pet #1 Italia)
-- 1 frase su cosa ci guadagna (visibilita gratuita, lead reali)
+OBIETTIVO: convincerlo a registrarsi GRATIS in 5 minuti.
+
+REGOLE:
+- MAX 120 parole (brevissima, rispetta il tempo del professionista)
+- Oggetto: accattivante, personale, max 50 char (NO spam words come "gratis", "offerta")
+- Tono: diretto, empatico, come un collega che ti da un consiglio utile
+- Apri con il NOME dell'attivita (non "Gentile", non "Buongiorno")
+- Spiega in 1 frase cos'e MiFidoDiTe (portale dove i proprietari cercano professionisti)
+- Spiega in 1 frase cosa ci guadagna (visibilita + clienti reali nella sua zona)
 - Link: https://mifidodite.eu/registra-attivita?ref=${s.id}
-- Firma: Il team di MifidoDiTe.eu
+- Firma: Il team di MiFidoDiTe.eu — bau@mifidodite.eu
+- NO: "Cordiali saluti", "Le scrivo per", "Non esiti a contattarci"
+- SI: tono umano, diretto, come un messaggio WhatsApp professionale
 
-NON usare: "Gentilissimo", "Le scrivo per", "Cordiali saluti"
-USA: tono diretto italiano, come un messaggio WhatsApp professionale
-
-Rispondi con JSON: { "oggetto": "...", "corpo": "..." }`;
+Rispondi SOLO con JSON: { "oggetto": "...", "corpo": "..." }`;
 
       const response = await askAI(prompt, 1000);
       const emailData = extractJSON(response) as { oggetto: string; corpo: string };

@@ -75,20 +75,25 @@ export async function GET(request: NextRequest) {
 
       if (!pageText) continue;
 
-      // Chiedi a Claude di estrarre i professionisti dal testo
-      const prompt = `Analizza questo testo estratto da una ricerca per "${categoria}" a ${citta.citta} (${citta.prov}).
+      // Prompt ottimizzato per estrazione professionisti
+      const prompt = `Sei l'agente di crescita di MiFidoDiTe.eu, il portale pet #1 in Italia.
 
-Estrai TUTTI i professionisti/strutture reali che trovi. Per ognuno fornisci:
-- nome (il nome reale dell'attivita)
-- categoria (una tra: pensione, dog_sitter, cat_sitter, toelettatura, educatore_cinofilo, veterinario, pet_taxi)
-- descrizione (2-3 frasi basate su quello che trovi, NON inventare)
-- telefono (se presente)
-- indirizzo (se presente)
-- servizi (lista di servizi menzionati)
+Analizza questo testo e trova professionisti/strutture pet REALI a ${citta.citta} (${citta.prov}).
 
-REGOLE:
-- Solo attivita REALI, non inventare nomi
-- Se non trovi nulla di concreto, rispondi con []
+Per ognuno rispondi con JSON array. Campi obbligatori:
+- name: nome reale dell'attivita (NON inventare)
+- category: una tra pensione, dog_sitter, cat_sitter, toelettatura, educatore_cinofilo, veterinario, pet_taxi
+- description: 2-3 frasi accattivanti e SEO-friendly basate sui dati reali
+- phone: telefono se presente, altrimenti null
+- address: indirizzo se presente, altrimenti null
+- services: array di servizi offerti
+- website: url sito web se presente, altrimenti null
+
+REGOLE FERREE:
+- Solo attivita VERIFICABILI. Se inventi un nome, danneggi il portale.
+- Se non trovi nulla, rispondi con []
+- La descrizione deve essere empatica: parla al proprietario che cerca aiuto per il suo animale
+- Rispondi SOLO con array JSON, niente altro
 - Solo attivita nella zona di ${citta.citta}
 
 Rispondi SOLO con un array JSON valido.

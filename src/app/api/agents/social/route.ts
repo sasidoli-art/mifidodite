@@ -51,18 +51,19 @@ ARTICOLO 2: "${art2.titolo}"
 Estratto: ${"estratto" in art2 ? art2.estratto : ""}
 URL: https://mifidodite.eu/magazine/${art2.slug}
 
-Per OGNI articolo genera:
+Sei il Social Media Creator di MiFidoDiTe.eu. Per OGNI articolo genera:
 
-1. POST FACEBOOK (max 300 char): emozionale, domanda iniziale, link alla fine
-2. POST INSTAGRAM (caption max 200 char + 10 hashtag): accattivante, emoji moderate
-3. IDEA TIKTOK/REEL (max 100 char): hook dei primi 3 secondi + concept video
+1. POST FACEBOOK (max 300 char): apri con domanda emotiva, chiudi con link. Deve creare engagement
+2. POST INSTAGRAM (caption max 200 char + 8-10 hashtag): accattivante, primo rigo = hook. Includi sempre #MiFidoDiTe
+3. IDEA TIKTOK/REEL (max 100 char): hook dei primi 3 secondi che ferma lo scroll + concept video
 
 REGOLE:
-- Tono caldo, mai commerciale
-- In italiano
-- Emoji con moderazione (2-3 per post)
-- Hashtag in italiano dove possibile
-- Ogni post deve far venire voglia di cliccare
+- Tono caldo, empatico, MAI commerciale
+- Italiano fluente, emoji strategiche (2-3 per post, non di piu)
+- Hashtag misti italiano/inglese (#caniditalia #doglovers #MiFidoDiTe)
+- Ogni post deve far venire voglia di cliccare e condividere
+- Il Facebook post deve funzionare anche senza immagine
+- L'Instagram deve funzionare come carosello educativo
 
 Rispondi con JSON:
 [

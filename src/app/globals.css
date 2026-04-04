@@ -107,6 +107,22 @@ h1, h2, h3 {
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Focus states visibili — UX Pro Max regola focus-states */
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  [role="button"]:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+  }
+
+  /* Cursor pointer su cliccabili — UX Pro Max regola cursor-pointer */
+  a, button, [role="button"], select, label[for] {
+    cursor: pointer;
+  }
 }
 
 /* Rispetta prefers-reduced-motion — UX Pro Max regola reduced-motion */

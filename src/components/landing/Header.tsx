@@ -87,7 +87,7 @@ export function Header() {
           <div className="lg:hidden">
             <Sheet>
               <SheetTrigger>
-                <div className="p-2 hover:bg-muted rounded-lg transition-colors"><Menu size={24} /></div>
+                <div className="p-2 hover:bg-muted rounded-lg transition-colors" role="button" aria-label="Apri menu di navigazione"><Menu size={24} /></div>
               </SheetTrigger>
               <SheetContent side="right" className="w-72">
                 <div className="flex flex-col gap-0.5 mt-8">

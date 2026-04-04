@@ -5,26 +5,36 @@
 @custom-variant dark (&:is(.dark *));
 
 :root {
-  --background: #fefcf9;
-  --foreground: #1a1a2e;
-  --primary: #e67e22;
-  --primary-dark: #d35400;
+  /* Palette Pet Tech App — UI/UX Pro Max skill riga 25 */
+  --primary: #F97316;
+  --primary-dark: #EA580C;
+  --primary-light: #FB923C;
   --primary-foreground: #ffffff;
-  --secondary: #2ecc71;
+  --secondary: #2563EB;
   --secondary-foreground: #ffffff;
-  --accent: #3498db;
+  --accent: #FB923C;
   --accent-foreground: #ffffff;
-  --muted: #f5f0eb;
-  --muted-foreground: #6b7280;
+
+  /* Warm backgrounds */
+  --background: #FFF7ED;
+  --foreground: #9A3412;
+  --muted: #FFEDD5;
+  --muted-foreground: #C2410C;
   --card: #ffffff;
-  --card-foreground: #1a1a2e;
-  --border: #e5e1dc;
-  --input: #e5e1dc;
-  --ring: #e67e22;
+  --card-foreground: #9A3412;
+  --border: #FED7AA;
+  --input: #FED7AA;
+  --ring: #F97316;
   --popover: #ffffff;
-  --popover-foreground: #1a1a2e;
-  --destructive: #e74c3c;
-  --radius: 0.75rem;
+  --popover-foreground: #9A3412;
+  --destructive: #DC2626;
+
+  /* Claymorphism — UI/UX Pro Max skill riga 9 */
+  --radius: 1.25rem;  /* 20px — chunky rounded */
+  --border-width: 3px;
+  --shadow-clay: 6px 6px 12px rgba(249, 115, 22, 0.15), -2px -2px 8px rgba(255, 255, 255, 0.8);
+  --shadow-clay-hover: 8px 8px 16px rgba(249, 115, 22, 0.2), -3px -3px 10px rgba(255, 255, 255, 0.9);
+  --shadow-clay-inset: inset 2px 2px 4px rgba(249, 115, 22, 0.1), inset -2px -2px 4px rgba(255, 255, 255, 0.7);
 }
 
 @theme inline {
@@ -32,6 +42,7 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-primary-dark: var(--primary-dark);
+  --color-primary-light: var(--primary-light);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
@@ -47,7 +58,8 @@
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
   --color-destructive: var(--destructive);
-  --font-sans: var(--font-sans);
+  --font-sans: var(--font-body);
+  --font-heading: var(--font-heading);
   --font-mono: ui-monospace, monospace;
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
@@ -61,7 +73,31 @@ html {
 }
 
 body {
-  font-family: var(--font-sans), "Plus Jakarta Sans", Arial, Helvetica, sans-serif;
+  font-family: var(--font-body), "Nunito", Arial, sans-serif;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Headings con Fredoka (playful, arrotondato) */
+h1, h2, h3 {
+  font-family: var(--font-heading), "Fredoka", sans-serif;
+}
+
+/* Claymorphism utility classes */
+.clay {
+  border-radius: var(--radius);
+  border: var(--border-width) solid var(--border);
+  box-shadow: var(--shadow-clay);
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.clay:hover {
+  box-shadow: var(--shadow-clay-hover);
+  transform: translateY(-2px);
+}
+
+.clay-inset {
+  box-shadow: var(--shadow-clay-inset);
 }
 
 @layer base {

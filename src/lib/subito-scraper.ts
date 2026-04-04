@@ -27,6 +27,36 @@ const BLACKLIST = [
   "recinzion", "cancell", "gabbia", "mangiatoia",
 ];
 
+// Migliora titoli generici o troppo corti
+function miglioraTitolo(subject: string, body: string, specie: string, comune: string): string {
+  const s = subject.trim();
+  const lowerS = s.toLowerCase();
+
+  // Titoli troppo generici da riscrivere
+  const generici = ["animale", "animali", "cane", "gatto", "cucciolo", "cuccioli", "regalo"];
+  const isGenerico = generici.includes(lowerS) || s.length < 5;
+
+  if (isGenerico) {
+    // Cerca razza o dettagli nel body
+    const primaRiga = body.split("\n")[0]?.trim().slice(0, 80) || "";
+
+    if (primaRiga.length > 10) {
+      return `${primaRiga}${comune ? ` — ${comune}` : ""}`;
+    }
+
+    // Fallback: genera titolo dal tipo
+    const emoji = specie === "gatto" ? "Gatto" : "Cane";
+    return `${emoji} in regalo${comune ? ` a ${comune}` : ""} cerca famiglia`;
+  }
+
+  // Se il titolo e gia buono ma corto, aggiungi la citta
+  if (s.length < 25 && comune && !lowerS.includes(comune.toLowerCase())) {
+    return `${s} — ${comune}`;
+  }
+
+  return s;
+}
+
 export async function fetchSubitoAnimali(params: {
   query?: string;
   tipo?: "g" | "s"; // g = regalo, s = vendita
@@ -72,9 +102,13 @@ export async function fetchSubitoAnimali(params: {
         const dates = ad.dates as Record<string, string> | undefined;
         const urn = (ad as { urn?: string }).urn || "";
 
+        // Genera titolo leggibile
+        const comune = geo?.town?.value || geo?.city?.value || "";
+        const titolo = miglioraTitolo(subject, body, isGatto ? "gatto" : "cane", comune);
+
         return {
           id: `subito-${urn.split(":")[3] || Date.now()}`,
-          titolo: subject,
+          titolo,
           descrizione: body.slice(0, 250),
           comune: geo?.town?.value || geo?.city?.value || "",
           provincia: geo?.city?.short_name || "",

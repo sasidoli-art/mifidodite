@@ -1,11 +1,11 @@
 import { Header } from "@/components/landing/Header";
 import { Footer } from "@/components/landing/Footer";
-import { Check, Star, Crown, Zap, ArrowRight } from "lucide-react";
+import { Check, Star, Crown, Zap, ArrowRight, X, Eye, EyeOff, Lock } from "lucide-react";
 import Link from "next/link";
 
 export const metadata = {
   title: "Per i Professionisti — MifidoDiTe.eu",
-  description: "Registra la tua attivita pet su MifidoDiTe.eu. Piani gratuiti e premium per pensioni, dog sitter, toelettatori e veterinari.",
+  description: "Registra la tua attivita pet su MifidoDiTe.eu. I tuoi prossimi clienti ti stanno gia cercando.",
 };
 
 const PLANS = [
@@ -13,117 +13,122 @@ const PLANS = [
     name: "Free",
     price: "0",
     period: "per sempre",
-    desc: "Perfetto per iniziare e farsi trovare",
-    cta: "Registrati gratis",
+    desc: "Provalo. Vedi che funziona.",
+    cta: "Inizia gratis",
+    ctaStyle: "border-2 border-primary text-primary hover:bg-primary hover:text-white",
     popular: false,
+    badge: null,
     features: [
-      "Profilo base con descrizione",
-      "Fino a 3 foto",
-      "Visibile nei risultati di ricerca",
-      "Ricevi lead via email",
-      "1 categoria",
-      "Contatti visibili (telefono, email)",
+      { text: "Profilo con info base", included: true },
+      { text: "1 foto", included: true },
+      { text: "Visibile nei risultati di ricerca", included: true },
+      { text: "Vedi QUANTI lead ricevi", included: true },
     ],
-    notIncluded: [
-      "Priorita nei risultati",
-      "Badge verificato",
-      "Galleria illimitata",
-      "Statistiche visite e lead",
-      "Evidenza in homepage",
-      "Newsletter dedicata",
+    limitations: [
+      { text: "Non vedi chi ti ha scritto", icon: EyeOff },
+      { text: "Non puoi rispondere ai lead", icon: Lock },
+      { text: "Nessuna statistica", icon: Lock },
+      { text: "Nessun badge o priorita", icon: Lock },
     ],
+    hook: "Vedi i clienti che ti cercano... ma non puoi contattarli.",
   },
   {
-    name: "Premium",
-    price: "29",
+    name: "Pro",
+    price: "19",
+    priceCents: "90",
     period: "al mese",
-    desc: "Per chi vuole piu visibilita e clienti",
+    desc: "Tutto quello che serve per lavorare.",
     cta: "Inizia 14 giorni gratis",
+    ctaStyle: "bg-primary text-white hover:bg-primary-dark",
     popular: true,
+    badge: "Scelta intelligente",
     features: [
-      "Tutto di Free, piu:",
-      "Priorita nei risultati di ricerca",
-      "Badge \"Verificato\" sul profilo",
-      "Galleria foto illimitata",
-      "Fino a 3 categorie",
-      "Statistiche visite e lead",
-      "Descrizione storytelling generata da AI",
-      "Risposta prioritaria ai lead",
-      "Supporto email dedicato",
+      { text: "Profilo completo e personalizzabile", included: true },
+      { text: "Fino a 10 foto", included: true },
+      { text: "Ricevi TUTTI i lead (nome, email, telefono)", included: true },
+      { text: "Rispondi direttamente ai clienti", included: true },
+      { text: "Statistiche visite e richieste", included: true },
+      { text: "Badge \"Verificato\" sul profilo", included: true },
+      { text: "Descrizione professionale generata da AI", included: true },
+      { text: "Supporto email dedicato", included: true },
     ],
-    notIncluded: [
-      "Evidenza in homepage",
-      "Newsletter dedicata",
-      "Account manager",
-    ],
+    limitations: [],
+    hook: null,
   },
   {
-    name: "Premium Plus",
-    price: "59",
+    name: "Top",
+    price: "24",
+    priceCents: "90",
     period: "al mese",
-    desc: "Massima visibilita per chi vuole crescere",
+    desc: "Solo 5€ in piu. Davvero vuoi rinunciarci?",
     cta: "Inizia 14 giorni gratis",
+    ctaStyle: "bg-foreground text-white hover:bg-foreground/90",
     popular: false,
+    badge: "Miglior valore",
     features: [
-      "Tutto di Premium, piu:",
-      "In evidenza nella homepage",
-      "Incluso nella newsletter settimanale",
-      "Categorie illimitate",
-      "Profilo con video",
-      "Account manager dedicato",
-      "Report mensile performance",
-      "Supporto prioritario WhatsApp",
-      "Badge \"Top Professionista\"",
+      { text: "Tutto del Pro, piu:", included: true },
+      { text: "Foto illimitate + video (embed YouTube)", included: true },
+      { text: "Mini-sito personale (mifidodite.eu/pro/nome)", included: true },
+      { text: "Appari PRIMA nei risultati di ricerca", included: true },
+      { text: "In evidenza nella homepage", included: true },
+      { text: "Incluso nella newsletter settimanale", included: true },
+      { text: "Upload certificati e attestati professionali", included: true },
+      { text: "Report mensile PDF con performance", included: true },
+      { text: "Badge \"Top Professionista\"", included: true },
     ],
-    notIncluded: [],
+    limitations: [],
+    hook: null,
   },
 ];
 
 const TESTIMONIALS = [
   {
     name: "Daniela C.",
-    role: "Pensione Il Giardino dei Cani — Bergamo",
-    text: "Da quando sono su MifidoDiTe ricevo 3-4 richieste a settimana. Prima dovevo fare tutto passaparola. Il piano Premium si e ripagato dal primo mese.",
+    role: "Pensione per cani — Bergamo",
+    text: "Con il piano Pro ricevo 3-4 richieste a settimana. Prima era solo passaparola. Si e ripagato dal primo mese.",
     rating: 5,
+    piano: "Pro",
   },
   {
     name: "Marco T.",
     role: "Dog Sitter — Milano",
-    text: "Non avevo un sito web e non sapevo come farmi trovare. MifidoDiTe mi ha dato una vetrina professionale senza spendere nulla. Quando ho visto i primi lead ho fatto l'upgrade a Premium.",
+    text: "Con il Free vedevo che arrivavano le richieste ma non potevo rispondere. Dopo 2 giorni ho fatto l'upgrade. Ora ho l'agenda piena.",
     rating: 5,
+    piano: "Top",
   },
   {
     name: "Laura B.",
-    role: "Toelettatura Zampe Felici — Roma",
-    text: "La cosa che apprezzo di piu sono le recensioni vere. I clienti che arrivano da MifidoDiTe sanno gia cosa aspettarsi e sono sempre soddisfatti.",
+    role: "Toelettatura — Roma",
+    text: "Il mini-sito del piano Top e diventato il mio biglietto da visita. Lo mando ai clienti al posto del sito che non ho mai avuto.",
     rating: 5,
+    piano: "Top",
   },
 ];
 
 const FAQ = [
   {
-    q: "Quanto costa registrarsi?",
-    a: "La registrazione e il profilo base sono gratuiti per sempre. Puoi iniziare senza carta di credito e decidere dopo se passare a Premium.",
+    q: "Posso provare prima di pagare?",
+    a: "Si. Il piano Free e gratis per sempre. I piani Pro e Top hanno 14 giorni di prova gratuita — se non ti convince, non paghi nulla.",
   },
   {
-    q: "Come ricevo le richieste dei clienti?",
-    a: "Quando un utente compila il form \"Chiedi disponibilita\" sulla tua scheda, ricevi una email con tutti i dettagli: nome, contatti, date, tipo animale e note. Puoi rispondere direttamente.",
+    q: "Cosa succede con il piano Free?",
+    a: "Vedi quante persone ti cercano e quante richieste ricevi. Ma non vedi chi sono e non puoi contattarli. E pensato per farti capire il potenziale — quando vedi che i clienti ci sono, l'upgrade e naturale.",
   },
   {
-    q: "Posso cancellare l'abbonamento Premium?",
+    q: "Perche il Top costa solo 5€ in piu del Pro?",
+    a: "Perche vogliamo che tu lo prenda. Il mini-sito, l'evidenza in homepage e la newsletter valgono molto piu di 5 euro. E il piano che consigliamo a tutti.",
+  },
+  {
+    q: "Posso cancellare quando voglio?",
     a: "Si, in qualsiasi momento. La cancellazione ha effetto dalla fine del mese gia pagato. Il tuo profilo torna al piano Free.",
   },
   {
-    q: "Cosa succede se qualcuno lascia una recensione falsa?",
-    a: "Puoi segnalarla e la esamineremo entro 48 ore. Rimuoviamo tutte le recensioni che violano le nostre linee guida.",
+    q: "Come ricevo i lead?",
+    a: "Via email, in tempo reale. Quando un proprietario compila il form sulla tua scheda, ricevi nome, email, telefono, date e note direttamente nella tua casella.",
   },
   {
-    q: "Posso modificare il mio profilo dopo la registrazione?",
-    a: "Certo, accedi alla Dashboard e modifica foto, descrizione, servizi e prezzi quando vuoi.",
-  },
-  {
-    q: "Il mio profilo e gia presente ma non l'ho creato io. Come faccio?",
-    a: "Alcuni profili vengono creati automaticamente da fonti pubbliche. Puoi reclamarlo: scrivici a pro@mifidodite.eu con i tuoi dati e te lo assegneremo.",
+    q: "Il mini-sito del piano Top come funziona?",
+    a: "E una pagina completa dedicata a te: bio, foto, video, certificati, servizi, prezzi, recensioni. Con URL personalizzato tipo mifidodite.eu/pro/il-tuo-nome. Lo condividi al posto del sito web.",
   },
 ];
 
@@ -132,104 +137,135 @@ export default function PerProfessionistiPage() {
     <>
       <Header />
       <main className="flex-1">
-        {/* Hero */}
+        {/* Hero — diretto, zero fronzoli */}
         <section className="bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 py-20">
-          <div className="max-w-4xl mx-auto px-4 text-center">
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-foreground">
-              Fatti trovare da chi cerca <span className="text-primary">proprio te</span>
+          <div className="max-w-3xl mx-auto px-4 text-center">
+            <h1 className="text-4xl sm:text-5xl font-extrabold text-foreground leading-tight">
+              I tuoi prossimi clienti
+              <br />
+              <span className="text-primary">ti stanno gia cercando</span>
             </h1>
-            <p className="mt-4 text-xl text-muted-foreground max-w-2xl mx-auto">
-              Migliaia di proprietari cercano ogni giorno pensioni, dog sitter e professionisti pet nella loro zona. Registra la tua attivita e inizia a ricevere clienti.
+            <p className="mt-5 text-lg text-muted-foreground max-w-xl mx-auto">
+              Ogni giorno migliaia di proprietari cercano pensioni, dog sitter e toelettatori nella loro zona. Con MifidoDiTe ti trovano.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
-              <Link href="/registra-attivita" className="bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-xl font-bold text-lg transition-colors">
-                Registrati gratis
-              </Link>
-              <a href="#piani" className="border-2 border-primary text-primary px-8 py-4 rounded-xl font-bold text-lg hover:bg-primary hover:text-white transition-colors">
-                Vedi i piani
-              </a>
-            </div>
           </div>
         </section>
 
-        {/* Piani */}
+        {/* Piani — il cuore della pagina */}
         <section id="piani" className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-foreground">Scegli il piano giusto per te</h2>
-              <p className="mt-3 text-muted-foreground">Inizia gratis, cresci quando vuoi. Nessun vincolo.</p>
+          <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-14">
+              <h2 className="text-3xl font-bold text-foreground">Scegli il tuo piano</h2>
+              <p className="mt-3 text-muted-foreground">Inizia gratis. Cresci quando vuoi. Cancelli quando vuoi.</p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-3 gap-6 items-start">
               {PLANS.map((plan) => (
                 <div
                   key={plan.name}
-                  className={`rounded-2xl p-8 border-2 transition-all ${
+                  className={`relative rounded-2xl transition-all ${
                     plan.popular
-                      ? "border-primary shadow-xl scale-[1.02] relative"
-                      : "border-border hover:border-primary/30 hover:shadow-md"
-                  }`}
+                      ? "border-2 border-primary shadow-xl ring-1 ring-primary/20 scale-[1.02]"
+                      : plan.name === "Top"
+                      ? "border-2 border-foreground/20 shadow-lg"
+                      : "border border-border"
+                  } bg-white p-7`}
                 >
-                  {plan.popular && (
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-white text-sm font-bold px-4 py-1 rounded-full flex items-center gap-1">
-                      <Star size={14} /> Piu popolare
+                  {plan.badge && (
+                    <div className={`absolute -top-3.5 left-1/2 -translate-x-1/2 text-xs font-bold px-4 py-1 rounded-full ${
+                      plan.popular
+                        ? "bg-primary text-white"
+                        : "bg-foreground text-white"
+                    }`}>
+                      {plan.badge}
                     </div>
                   )}
 
-                  <h3 className="text-xl font-bold text-foreground">{plan.name}</h3>
-                  <div className="mt-3">
-                    <span className="text-4xl font-extrabold text-foreground">{plan.price}€</span>
-                    <span className="text-muted-foreground ml-1">/{plan.period}</span>
+                  <h3 className="text-lg font-bold text-foreground">{plan.name}</h3>
+
+                  {/* Prezzo */}
+                  <div className="mt-3 flex items-baseline">
+                    <span className="text-5xl font-extrabold text-foreground">{plan.price}</span>
+                    {"priceCents" in plan && (
+                      <span className="text-2xl font-bold text-foreground">,{plan.priceCents}</span>
+                    )}
+                    <span className="text-lg text-muted-foreground ml-1">€</span>
+                    <span className="text-sm text-muted-foreground ml-2">/{plan.period}</span>
                   </div>
+
                   <p className="text-sm text-muted-foreground mt-2">{plan.desc}</p>
 
+                  {/* CTA */}
                   <Link
                     href="/registra-attivita"
-                    className={`block mt-6 py-3 rounded-xl font-semibold text-center transition-colors ${
-                      plan.popular
-                        ? "bg-primary text-white hover:bg-primary-dark"
-                        : "border-2 border-primary text-primary hover:bg-primary hover:text-white"
-                    }`}
+                    className={`block mt-6 py-3.5 rounded-xl font-bold text-center transition-all ${plan.ctaStyle}`}
                   >
                     {plan.cta}
                   </Link>
 
-                  <ul className="mt-8 space-y-3">
+                  {/* Hook psicologico per il Free */}
+                  {plan.hook && (
+                    <p className="mt-4 text-xs text-center text-amber-600 font-medium bg-amber-50 rounded-lg py-2 px-3">
+                      ⚠️ {plan.hook}
+                    </p>
+                  )}
+
+                  {/* Features incluse */}
+                  <ul className="mt-6 space-y-3">
                     {plan.features.map((f) => (
-                      <li key={f} className="flex items-start gap-2 text-sm">
+                      <li key={f.text} className="flex items-start gap-2.5 text-sm">
                         <Check size={16} className="text-secondary shrink-0 mt-0.5" />
-                        <span className="text-foreground">{f}</span>
-                      </li>
-                    ))}
-                    {plan.notIncluded.map((f) => (
-                      <li key={f} className="flex items-start gap-2 text-sm opacity-40">
-                        <span className="w-4 h-4 shrink-0 mt-0.5 text-center">—</span>
-                        <span>{f}</span>
+                        <span className="text-foreground">{f.text}</span>
                       </li>
                     ))}
                   </ul>
+
+                  {/* Limitazioni (solo Free) */}
+                  {plan.limitations.length > 0 && (
+                    <ul className="mt-4 pt-4 border-t border-border space-y-3">
+                      {plan.limitations.map((l) => (
+                        <li key={l.text} className="flex items-start gap-2.5 text-sm">
+                          <l.icon size={16} className="text-red-400 shrink-0 mt-0.5" />
+                          <span className="text-muted-foreground">{l.text}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
               ))}
+            </div>
+
+            {/* Confronto diretto */}
+            <div className="mt-14 text-center">
+              <p className="text-muted-foreground text-sm">
+                Il <strong className="text-foreground">Pro</strong> costa meno di un caffe al giorno.
+                Il <strong className="text-foreground">Top</strong> costa solo <strong className="text-primary">5€ in piu</strong> e include il mini-sito, l'evidenza in homepage e la newsletter.
+              </p>
             </div>
           </div>
         </section>
 
-        {/* Testimonianze */}
-        <section className="py-20 bg-muted/50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-foreground">Cosa dicono i professionisti</h2>
-            </div>
+        {/* Social proof — testimonianze */}
+        <section className="py-16 bg-muted/50">
+          <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-2xl font-bold text-foreground text-center mb-10">Chi l'ha provato, non torna indietro</h2>
             <div className="grid md:grid-cols-3 gap-6">
               {TESTIMONIALS.map((t) => (
                 <div key={t.name} className="bg-white rounded-2xl p-6 shadow-sm">
-                  <div className="flex gap-0.5 mb-3">
-                    {Array.from({ length: t.rating }).map((_, i) => (
-                      <Star key={i} size={16} className="fill-amber-400 text-amber-400" />
-                    ))}
+                  <div className="flex items-center justify-between mb-3">
+                    <div className="flex gap-0.5">
+                      {Array.from({ length: t.rating }).map((_, i) => (
+                        <Star key={i} size={14} className="fill-amber-400 text-amber-400" />
+                      ))}
+                    </div>
+                    <span className={`text-xs font-bold px-2 py-0.5 rounded-full ${
+                      t.piano === "Top" ? "bg-foreground text-white" : "bg-primary/10 text-primary"
+                    }`}>
+                      Piano {t.piano}
+                    </span>
                   </div>
-                  <p className="text-foreground leading-relaxed text-sm italic">"{t.text}"</p>
-                  <div className="mt-4 pt-4 border-t border-border">
+                  <p className="text-foreground text-sm leading-relaxed italic">"{t.text}"</p>
+                  <div className="mt-4 pt-3 border-t border-border">
                     <p className="font-semibold text-foreground text-sm">{t.name}</p>
                     <p className="text-xs text-muted-foreground">{t.role}</p>
                   </div>
@@ -240,10 +276,10 @@ export default function PerProfessionistiPage() {
         </section>
 
         {/* FAQ */}
-        <section className="py-20 bg-white">
+        <section className="py-16 bg-white">
           <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-foreground text-center mb-12">Domande frequenti</h2>
-            <div className="space-y-4">
+            <h2 className="text-2xl font-bold text-foreground text-center mb-10">Domande frequenti</h2>
+            <div className="space-y-3">
               {FAQ.map((faq) => (
                 <div key={faq.q} className="border border-border rounded-xl p-5">
                   <h3 className="font-semibold text-foreground">{faq.q}</h3>
@@ -255,12 +291,13 @@ export default function PerProfessionistiPage() {
         </section>
 
         {/* CTA finale */}
-        <section className="py-20 bg-foreground text-center">
-          <div className="max-w-2xl mx-auto px-4">
-            <Zap className="mx-auto text-primary mb-4" size={40} />
-            <h2 className="text-3xl font-bold text-white mb-4">Pronto a ricevere clienti?</h2>
-            <p className="text-white/70 mb-8">
-              Registrati in 5 minuti. Il listing base e gratis per sempre. Nessuna carta di credito richiesta.
+        <section className="py-16 bg-foreground">
+          <div className="max-w-2xl mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold text-white mb-4">
+              Il primo passo costa zero
+            </h2>
+            <p className="text-white/60 mb-8">
+              Registrati gratis in 5 minuti. Vedi quanti clienti ti cercano. Poi decidi tu.
             </p>
             <Link
               href="/registra-attivita"

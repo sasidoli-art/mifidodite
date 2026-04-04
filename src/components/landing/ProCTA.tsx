@@ -1,62 +1,98 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { AnimatedSection } from "@/components/shared/AnimatedSection";
+import { ArrowRight, Star, Users, Zap } from "lucide-react";
 
 export function ProCTA() {
   return (
-    <section
-      id="professionisti-cta"
-      className="py-20 relative bg-fixed bg-center bg-cover"
-      style={{ backgroundImage: "url(/images/slider/bg.jpg)" }}
-    >
-      <div className="absolute inset-0 bg-primary/90" />
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight animate-zoomIn">
-          Hai una pensione, toelettatura
-          <br />
-          o sei un <span className="text-secondary">dog sitter</span>?
-        </h2>
+    <section className="py-20 bg-white">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <AnimatedSection>
+          <div className="relative rounded-3xl overflow-hidden">
+            {/* Sfondo scuro elegante con gradiente sottile */}
+            <div className="absolute inset-0 bg-foreground" />
+            <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-primary/10" />
 
-        <p className="mt-6 text-lg text-white/80 max-w-2xl mx-auto animate-fadeInUp delay-300">
-          Migliaia di proprietari cercano ogni giorno qualcuno di fiducia vicino
-          a loro. Registra gratis il tuo profilo e inizia a ricevere richieste.
-          <strong className="text-white"> Nessun costo nascosto.</strong>
-        </p>
+            {/* Contenuto */}
+            <div className="relative px-8 sm:px-14 py-14 sm:py-20">
+              <div className="grid lg:grid-cols-2 gap-12 items-center">
+                {/* Testo */}
+                <div>
+                  <span className="inline-flex items-center gap-1.5 bg-primary/20 text-primary text-sm font-semibold px-3 py-1 rounded-full mb-6">
+                    <Zap size={14} />
+                    Per i professionisti
+                  </span>
 
-        <div className="grid sm:grid-cols-3 gap-6 mt-12">
-          {[
-            { num: "1", title: "Registrati", desc: "Crea il tuo profilo gratis in 5 minuti" },
-            { num: "2", title: "Fatti trovare", desc: "Il tuo profilo visibile a migliaia di proprietari" },
-            { num: "3", title: "Ricevi clienti", desc: "Lead reali direttamente nella tua email" },
-          ].map((step) => (
-            <div key={step.num} className="text-center animate-fadeInUp delay-500">
-              <div className="w-14 h-14 rounded-full bg-secondary text-white text-2xl font-extrabold flex items-center justify-center mx-auto mb-3">
-                {step.num}
+                  <h2 className="text-3xl sm:text-4xl font-extrabold text-white leading-tight">
+                    I tuoi prossimi clienti
+                    <br />
+                    ti stanno gia cercando
+                  </h2>
+
+                  <p className="mt-5 text-white/60 text-lg leading-relaxed max-w-md">
+                    Ogni giorno migliaia di proprietari cercano pensioni, dog sitter e toelettatori nella loro zona. Fatti trovare.
+                  </p>
+
+                  {/* CTA */}
+                  <div className="flex flex-col sm:flex-row gap-3 mt-8">
+                    <Link href="/registra-attivita">
+                      <motion.div
+                        className="relative inline-flex items-center gap-2 bg-primary text-white px-7 py-3.5 rounded-xl font-bold overflow-hidden"
+                        whileHover={{ scale: 1.04 }}
+                        whileTap={{ scale: 0.96 }}
+                      >
+                        <motion.div
+                          className="absolute inset-0 bg-gradient-to-r from-transparent via-white/15 to-transparent"
+                          initial={{ x: "-100%" }}
+                          whileHover={{ x: "100%" }}
+                          transition={{ duration: 0.5 }}
+                        />
+                        <span className="relative z-10 flex items-center gap-2">
+                          Registrati gratis <ArrowRight size={16} />
+                        </span>
+                      </motion.div>
+                    </Link>
+                    <Link href="/per-professionisti">
+                      <motion.div
+                        className="inline-flex items-center gap-2 border border-white/20 text-white/80 px-7 py-3.5 rounded-xl font-semibold hover:bg-white/5 transition-colors"
+                        whileHover={{ scale: 1.04 }}
+                        whileTap={{ scale: 0.96 }}
+                      >
+                        Vedi i piani
+                      </motion.div>
+                    </Link>
+                  </div>
+                </div>
+
+                {/* Card statistiche */}
+                <div className="grid grid-cols-2 gap-4">
+                  {[
+                    { icon: Users, value: "18.000+", label: "Richieste al mese", color: "from-primary/30 to-primary/10" },
+                    { icon: Star, value: "4.8/5", label: "Rating medio", color: "from-amber-500/30 to-amber-500/10" },
+                    { icon: Zap, value: "5 min", label: "Per registrarti", color: "from-secondary/30 to-secondary/10" },
+                    { icon: ArrowRight, value: "0€", label: "Costo listing base", color: "from-accent/30 to-accent/10" },
+                  ].map((stat, i) => (
+                    <motion.div
+                      key={stat.label}
+                      className={`bg-gradient-to-br ${stat.color} backdrop-blur-sm border border-white/10 rounded-2xl p-5`}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.1 }}
+                      whileHover={{ y: -4, borderColor: "rgba(255,255,255,0.2)" }}
+                    >
+                      <stat.icon size={20} className="text-white/50 mb-3" />
+                      <div className="text-2xl font-extrabold text-white">{stat.value}</div>
+                      <div className="text-xs text-white/40 mt-1">{stat.label}</div>
+                    </motion.div>
+                  ))}
+                </div>
               </div>
-              <h3 className="text-white font-bold text-lg">{step.title}</h3>
-              <p className="text-white/60 text-sm mt-1">{step.desc}</p>
             </div>
-          ))}
-        </div>
-
-        <div className="flex flex-col sm:flex-row gap-4 justify-center mt-12 animate-fadeInUp delay-700">
-          <Link
-            href="/registra-attivita"
-            className="bg-secondary text-white px-10 py-4 rounded text-lg font-bold uppercase tracking-wider hover:bg-secondary/90 transition-all"
-            style={{ boxShadow: "4px 4px 0 rgba(0,0,0,0.2)" }}
-          >
-            Registra la tua attivita — gratis
-          </Link>
-          <Link
-            href="/per-professionisti"
-            className="border-2 border-white/40 text-white px-10 py-4 rounded text-lg font-bold uppercase tracking-wider hover:bg-white/10 transition-all"
-          >
-            Scopri i piani premium
-          </Link>
-        </div>
-
-        <div className="mt-8 flex justify-center gap-8 text-white/50 text-sm">
-          <span><strong className="text-white">2.400+</strong> professionisti registrati</span>
-          <span><strong className="text-white">18.000+</strong> richieste al mese</span>
-        </div>
+          </div>
+        </AnimatedSection>
       </div>
     </section>
   );

@@ -235,9 +235,9 @@ function SubitoSection() {
       </div>
 
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-        {annunci.map((ad) => (
+        {annunci.map((ad, index) => (
           <a
-            key={ad.id}
+            key={`${ad.id}-${index}`}
             href={ad.url}
             target="_blank"
             rel="noopener noreferrer"

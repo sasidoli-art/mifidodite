@@ -25,6 +25,7 @@ export function RegistraForm() {
     sito_web: "",
     facebook_url: "",
     instagram_url: "",
+    codice_sconto: "",
   });
 
   function update(key: string, value: string) {
@@ -181,6 +182,15 @@ export function RegistraForm() {
             className="w-full px-4 py-2.5 rounded-xl border border-border bg-muted/50 outline-none focus:ring-2 focus:ring-primary/30"
             placeholder="https://instagram.com/..." />
         </div>
+      </div>
+
+      {/* Codice sconto / invito */}
+      <div className="bg-amber-50 rounded-xl p-4 border border-amber-200/50">
+        <label className="block text-sm font-medium text-foreground mb-1">🎁 Hai un codice sconto o invito?</label>
+        <input type="text" value={form.codice_sconto} onChange={(e) => update("codice_sconto", e.target.value.toUpperCase())}
+          className="w-full px-4 py-2.5 rounded-xl border border-amber-200 bg-white outline-none focus:ring-2 focus:ring-primary/30 uppercase tracking-wider font-mono"
+          placeholder="Es. BENVENUTO, VIP-NOME, LANCIO" />
+        <p className="text-xs text-amber-700 mt-1.5">Se te l'ha dato un amico o un professionista, inseriscilo per ottenere vantaggi esclusivi.</p>
       </div>
 
       <button type="submit" disabled={loading}

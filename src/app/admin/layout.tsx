@@ -6,6 +6,7 @@ import {
   MessageSquare,
   Newspaper,
   Mail,
+  Tag,
   Settings,
   LogOut,
 } from "lucide-react";
@@ -13,6 +14,7 @@ import {
 const SIDEBAR_LINKS = [
   { href: "/admin", label: "Dashboard", icon: LayoutDashboard },
   { href: "/admin/strutture", label: "Strutture", icon: Building2 },
+  { href: "/admin/codici", label: "Codici Sconto", icon: Tag },
   { href: "/admin/adozioni", label: "Adozioni", icon: Heart },
   { href: "/admin/lead", label: "Lead", icon: MessageSquare },
   { href: "/admin/articoli", label: "Articoli", icon: Newspaper },

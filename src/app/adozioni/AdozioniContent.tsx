@@ -1,7 +1,7 @@
 "use client";
 
-import { useState } from "react";
-import { Heart, HandHeart, Search, MapPin, Filter, Plus, Syringe, Shield, Dog, Cat, Baby, X } from "lucide-react";
+import { useState, useEffect } from "react";
+import { Heart, HandHeart, Search, MapPin, Filter, Plus, Syringe, Shield, Dog, Cat, Baby, X, ExternalLink, RefreshCw } from "lucide-react";
 import Link from "next/link";
 import { ADOZIONI_SEED, formatEta } from "@/lib/adozioni-seed";
 import type { AnnuncioSeed } from "@/lib/adozioni-seed";
@@ -147,6 +147,9 @@ export function AdozioniContent() {
         )}
 
         {/* Info box */}
+        {/* Sezione Subito.it */}
+        <SubitoSection />
+
         <div className="mt-12 grid sm:grid-cols-3 gap-6">
           <div className="bg-red-50 rounded-2xl p-6 text-center">
             <Heart size={28} className="mx-auto mb-3 text-red-500" />
@@ -172,6 +175,133 @@ export function AdozioniContent() {
         </div>
       </div>
     </>
+  );
+}
+
+// ============================================
+// Sezione annunci da Subito.it
+// ============================================
+
+interface SubitoAd {
+  id: string;
+  titolo: string;
+  descrizione: string;
+  comune: string;
+  provincia: string;
+  regione: string;
+  url: string;
+  img: string | null;
+  data: string;
+  specie: string;
+}
+
+function SubitoSection() {
+  const [annunci, setAnnunci] = useState<SubitoAd[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch("/api/subito")
+      .then((res) => res.json())
+      .then((data) => setAnnunci(data))
+      .catch(() => {})
+      .finally(() => setLoading(false));
+  }, []);
+
+  if (loading) {
+    return (
+      <div className="mt-16 text-center py-10">
+        <RefreshCw size={24} className="mx-auto text-muted-foreground animate-spin mb-3" />
+        <p className="text-muted-foreground text-sm">Caricamento annunci da Subito.it...</p>
+      </div>
+    );
+  }
+
+  if (annunci.length === 0) return null;
+
+  return (
+    <div className="mt-16">
+      <div className="flex items-center justify-between mb-6">
+        <div>
+          <h2 className="text-2xl font-bold text-foreground flex items-center gap-2">
+            Annunci da Subito.it
+          </h2>
+          <p className="text-sm text-muted-foreground mt-1">
+            Annunci reali di cani e gatti in regalo — aggiornati in tempo reale
+          </p>
+        </div>
+        <span className="text-xs bg-muted text-muted-foreground px-3 py-1 rounded-full">
+          {annunci.length} annunci
+        </span>
+      </div>
+
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        {annunci.map((ad) => (
+          <a
+            key={ad.id}
+            href={ad.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 border border-border/50"
+          >
+            {/* Foto */}
+            <div className="relative h-48 overflow-hidden bg-muted">
+              {ad.img ? (
+                <img
+                  src={ad.img}
+                  alt={ad.titolo}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
+              ) : (
+                <div className="w-full h-full flex items-center justify-center text-5xl">
+                  {ad.specie === "gatto" ? "🐱" : "🐶"}
+                </div>
+              )}
+              <div className="absolute top-3 left-3 flex gap-2">
+                <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-orange-100 text-primary">
+                  In regalo
+                </span>
+              </div>
+              <div className="absolute top-3 right-3 bg-white/90 text-foreground text-xs font-medium px-2 py-0.5 rounded-full flex items-center gap-1">
+                <ExternalLink size={10} />
+                Subito.it
+              </div>
+              <div className="absolute bottom-3 right-3 bg-black/60 text-white text-xs px-2.5 py-1 rounded-full flex items-center gap-1">
+                {ad.specie === "gatto" ? <Cat size={12} /> : <Dog size={12} />}
+                {ad.specie === "gatto" ? "Gatto" : "Cane"}
+              </div>
+            </div>
+
+            {/* Info */}
+            <div className="p-4">
+              <h3 className="font-bold text-foreground leading-snug group-hover:text-primary transition-colors line-clamp-2">
+                {ad.titolo}
+              </h3>
+
+              <div className="flex items-center gap-2 mt-2 text-sm text-muted-foreground">
+                <MapPin size={13} />
+                <span>{ad.comune} ({ad.provincia})</span>
+              </div>
+
+              <p className="text-sm text-muted-foreground mt-2 line-clamp-2">
+                {ad.descrizione}
+              </p>
+
+              <div className="flex items-center justify-between mt-3 pt-3 border-t border-border/50">
+                <span className="text-xs text-muted-foreground">{ad.data}</span>
+                <span className="text-xs font-semibold text-primary flex items-center gap-1 group-hover:underline">
+                  Vedi su Subito.it <ExternalLink size={11} />
+                </span>
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+
+      <p className="text-xs text-center text-muted-foreground mt-6">
+        Questi annunci provengono da Subito.it e vengono aggiornati automaticamente.
+        MifidoDiTe non e responsabile del contenuto degli annunci esterni.
+      </p>
+    </div>
   );
 }
 

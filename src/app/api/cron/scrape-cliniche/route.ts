@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import { cercaClinicheGoogle, CITTA_ITALIANE, REGIONI } from "@/lib/scraper-google";
 import { slugify } from "@/lib/utils";
+import { verifyCron } from "@/lib/cron-auth";
 
 // Vercel Cron: ogni sabato alle 5:00
 // Scrapa una regione per volta (rotazione settimanale)
@@ -15,6 +16,9 @@ const TIPI_RICERCA = [
 ] as const;
 
 export async function GET(request: NextRequest) {
+  const authError = verifyCron(request);
+  if (authError) return authError;
+
   const supabase = await createClient();
 
   // Determina quale regione scrapare questa settimana

@@ -1,19 +1,18 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import { slugify } from "@/lib/utils";
 import { scrapeGenericPage } from "@/lib/scraper";
+import { verifyCron } from "@/lib/cron-auth";
 
-// Vercel Cron: ogni giovedi alle 7:00
-// vercel.json: aggiungi { "path": "/api/cron/generate-articles", "schedule": "0 7 * * 4" }
-
-// Fonti da cui estrarre spunti per articoli
 const FONTI = [
   { url: "https://www.kodami.it/", nome: "Kodami" },
   { url: "https://www.greenme.it/animali/", nome: "GreenMe" },
   { url: "https://www.lastampa.it/la-zampa", nome: "La Zampa" },
 ];
 
-export async function GET() {
+export async function GET(request: NextRequest) {
+  const authError = verifyCron(request);
+  if (authError) return authError;
   const supabase = await createClient();
   const apiKey = process.env.ANTHROPIC_API_KEY;
 

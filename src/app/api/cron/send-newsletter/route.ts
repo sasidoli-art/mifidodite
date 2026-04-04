@@ -1,11 +1,11 @@
-import { NextResponse } from "next/server";
+import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import { sendEmail, buildNewsletterHtml } from "@/lib/brevo";
+import { verifyCron } from "@/lib/cron-auth";
 
-// Vercel Cron: ogni lunedi alle 8:00
-// vercel.json: { "crons": [{ "path": "/api/cron/send-newsletter", "schedule": "0 8 * * 1" }] }
-
-export async function GET() {
+export async function GET(request: NextRequest) {
+  const authError = verifyCron(request);
+  if (authError) return authError;
   const supabase = await createClient();
   const appUrl = process.env.NEXT_PUBLIC_APP_URL || "https://mifidodite.eu";
 

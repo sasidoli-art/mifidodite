@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Search, MapPin, ArrowDown } from "lucide-react";
+import { Search, MapPin, ArrowDown, PawPrint } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 
@@ -41,7 +41,7 @@ export function Hero() {
             delay: i * 0.5,
           }}
         >
-          🐾
+          <PawPrint size={40} className="text-primary/5" strokeWidth={1.5} />
         </motion.div>
       ))}
 

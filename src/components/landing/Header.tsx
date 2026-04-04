@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { Menu } from "lucide-react";
+import { Menu, PawPrint } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { motion } from "framer-motion";
 
@@ -46,9 +46,13 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2 shrink-0">
-            <motion.span className="text-2xl" whileHover={{ rotate: [0, -15, 15, 0] }} transition={{ duration: 0.5 }}>
-              🐾
-            </motion.span>
+            <motion.div
+              className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center text-primary"
+              whileHover={{ rotate: [0, -15, 15, 0] }}
+              transition={{ duration: 0.5 }}
+            >
+              <PawPrint size={22} strokeWidth={2} />
+            </motion.div>
             <span className="text-lg font-bold text-primary">
               MifidoDiTe<span className="text-foreground">.eu</span>
             </span>

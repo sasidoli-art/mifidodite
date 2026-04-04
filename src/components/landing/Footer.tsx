@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, Heart } from "lucide-react";
+import { Mail, Heart, PawPrint } from "lucide-react";
 
 export function Footer() {
   return (
@@ -9,7 +9,7 @@ export function Footer() {
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <span className="text-2xl">🐾</span>
+              <PawPrint size={24} className="text-primary" strokeWidth={2} />
               <span className="text-xl font-bold text-white">MifidoDiTe.eu</span>
             </div>
             <p className="text-sm leading-relaxed mb-4">

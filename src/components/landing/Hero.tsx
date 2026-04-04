@@ -59,7 +59,7 @@ export function Hero() {
 
         {/* Titolo con animazione parola per parola */}
         <motion.h1
-          className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-foreground leading-tight"
+          className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-foreground leading-tight"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -99,7 +99,7 @@ export function Hero() {
             <MapPin size={20} className="text-primary shrink-0" />
             <input
               type="text"
-              placeholder="CAP, comune o provincia..."
+              placeholder="CAP o comune..."
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               className="flex-1 bg-transparent outline-none text-foreground placeholder:text-muted-foreground"

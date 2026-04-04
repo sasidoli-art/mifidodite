@@ -98,9 +98,9 @@ export function Newsletter() {
 
                     {/* Riga 2: tipo animale + nome (i dati preziosi) */}
                     <div className="flex flex-col sm:flex-row gap-3">
-                      <div className="flex gap-2">
+                      <div className="flex gap-2 shrink-0">
                         <button type="button" onClick={() => setAnimale("cane")}
-                          className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-xl font-semibold text-sm transition-all ${
+                          className={`px-5 flex items-center justify-center gap-2 py-3 rounded-xl font-semibold text-sm transition-all ${
                             animale === "cane"
                               ? "bg-white text-primary shadow-sm"
                               : "bg-white/20 text-white/80 hover:bg-white/30"
@@ -108,7 +108,7 @@ export function Newsletter() {
                           <Dog size={18} /> Cane
                         </button>
                         <button type="button" onClick={() => setAnimale("gatto")}
-                          className={`flex-1 flex items-center justify-center gap-2 py-3 rounded-xl font-semibold text-sm transition-all ${
+                          className={`px-5 flex items-center justify-center gap-2 py-3 rounded-xl font-semibold text-sm transition-all ${
                             animale === "gatto"
                               ? "bg-white text-primary shadow-sm"
                               : "bg-white/20 text-white/80 hover:bg-white/30"

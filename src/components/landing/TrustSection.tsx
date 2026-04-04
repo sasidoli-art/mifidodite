@@ -35,7 +35,7 @@ export function TrustSection() {
       {/* Contatori animati */}
       <section className="py-14 bg-foreground">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-8" staggerDelay={0.1}>
+          <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8" staggerDelay={0.1}>
             {STATS.map((stat) => (
               <StaggerItem key={stat.label}>
                 <div className="text-center">

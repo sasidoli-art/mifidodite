@@ -16,7 +16,7 @@ export function ProCTA() {
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 via-transparent to-primary/10" />
 
             {/* Contenuto */}
-            <div className="relative px-8 sm:px-14 py-14 sm:py-20">
+            <div className="relative px-5 sm:px-14 py-10 sm:py-20">
               <div className="grid lg:grid-cols-2 gap-12 items-center">
                 {/* Testo */}
                 <div>
@@ -67,7 +67,7 @@ export function ProCTA() {
                 </div>
 
                 {/* Card statistiche */}
-                <div className="grid grid-cols-2 gap-4">
+                <div className="grid grid-cols-2 gap-3 sm:gap-4">
                   {[
                     { icon: Users, value: "18.000+", label: "Richieste al mese", color: "from-primary/30 to-primary/10" },
                     { icon: Star, value: "4.8/5", label: "Rating medio", color: "from-amber-500/30 to-amber-500/10" },

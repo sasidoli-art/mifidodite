@@ -78,10 +78,10 @@ export function FeaturedPros() {
             <Link
               key={item.id}
               href={`/struttura/${item.id}`}
-              className={`group flex gap-5 bg-white rounded-lg border border-border p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-300 animate-fadeInUp delay-${(i % 3 + 1) * 200}`}
+              className={`group flex flex-col sm:flex-row gap-4 bg-white rounded-lg border border-border p-4 hover:shadow-lg hover:border-primary/30 transition-all duration-300 animate-fadeInUp delay-${(i % 3 + 1) * 200}`}
             >
               {/* Foto rotonda */}
-              <div className="shrink-0 w-24 h-24 rounded-full overflow-hidden border-3 border-primary/20">
+              <div className="shrink-0 w-16 h-16 sm:w-24 sm:h-24 rounded-full overflow-hidden border-3 border-primary/20 mx-auto sm:mx-0">
                 <img
                   src={item.img}
                   alt={item.nome}

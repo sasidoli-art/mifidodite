@@ -58,7 +58,7 @@ export function PetNews() {
               href={`/magazine/${article.id}`}
               className={`group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 animate-fadeInUp delay-${(i + 1) * 200}`}
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-36 sm:h-48 overflow-hidden">
                 <img
                   src={article.img}
                   alt={article.titolo}

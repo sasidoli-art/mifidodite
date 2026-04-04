@@ -1,6 +1,7 @@
 "use client";
 
 import { Clock } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
 const NEWS = [
@@ -59,9 +60,11 @@ export function PetNews() {
               className={`group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 animate-fadeInUp delay-${(i + 1) * 200}`}
             >
               <div className="relative h-36 sm:h-48 overflow-hidden">
-                <img
+                <Image
                   src={article.img}
                   alt={article.titolo}
+                  width={400}
+                  height={192}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
                 <span className="absolute top-3 left-3 bg-primary text-white text-xs font-bold px-3 py-1 rounded">

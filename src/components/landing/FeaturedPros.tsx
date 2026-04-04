@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 
 // TODO: dati da Supabase — per ora mock con immagini puppies del template
 const FEATURED = [
@@ -82,9 +83,11 @@ export function FeaturedPros() {
             >
               {/* Foto rotonda */}
               <div className="shrink-0 w-16 h-16 sm:w-24 sm:h-24 rounded-full overflow-hidden border-3 border-primary/20 mx-auto sm:mx-0">
-                <img
+                <Image
                   src={item.img}
                   alt={item.nome}
+                  width={96}
+                  height={96}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                 />
               </div>

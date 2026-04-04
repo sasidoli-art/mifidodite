@@ -78,13 +78,37 @@ Rispondi con JSON:
     const response = await askClaude(prompt, 3000);
     const posts = extractJSON(response);
 
-    await logAgent({ agente: "social", stato: "ok", risultati_trovati: Array.isArray(posts) ? posts.length : 0, durata_ms: elapsed(), dettagli: { posts } });
+    // Salva post nel DB
+    let salvati = 0;
+    if (process.env.NEXT_PUBLIC_SUPABASE_URL && Array.isArray(posts)) {
+      const { createClient } = await import("@/lib/supabase/server");
+      const supabase = await createClient();
+
+      for (const post of posts as Array<{ articolo?: string; facebook?: string; instagram?: { caption?: string; hashtags?: string[] }; tiktok?: string }>) {
+        const titolo = post.articolo || "";
+        if (post.facebook) {
+          await supabase.from("social_posts").insert({ articolo_titolo: titolo, piattaforma: "facebook", contenuto: post.facebook });
+          salvati++;
+        }
+        if (post.instagram?.caption) {
+          await supabase.from("social_posts").insert({ articolo_titolo: titolo, piattaforma: "instagram", contenuto: post.instagram.caption, hashtags: post.instagram.hashtags || [] });
+          salvati++;
+        }
+        if (post.tiktok) {
+          await supabase.from("social_posts").insert({ articolo_titolo: titolo, piattaforma: "tiktok", contenuto: post.tiktok });
+          salvati++;
+        }
+      }
+    }
+
+    await logAgent({ agente: "social", stato: "ok", risultati_trovati: Array.isArray(posts) ? posts.length : 0, risultati_salvati: salvati, durata_ms: elapsed(), dettagli: { posts } });
 
     return NextResponse.json({
       success: true,
       agente: "social",
       data: new Date().toISOString().split("T")[0],
       posts,
+      salvati,
     });
   } catch (err) {
     await logAgent({ agente: "social", stato: "errore", errore_messaggio: String(err), durata_ms: elapsed() });

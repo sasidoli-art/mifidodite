@@ -23,6 +23,14 @@ export async function GET(request: NextRequest) {
   const { createClient } = await import("@/lib/supabase/server");
   const supabase = await createClient();
 
+  // Warm-up: i primi 7 giorni manda max 3 email/giorno, poi scala a 10
+  const { data: logCount } = await supabase
+    .from("agent_logs")
+    .select("id")
+    .eq("agente", "outreach");
+  const esecuzioniPassate = logCount?.length || 0;
+  const maxOggi = esecuzioniPassate < 7 ? 3 : 10; // warm-up graduale
+
   // Prendi strutture con email che non sono ancora state invitate
   const { data: strutture } = await supabase
     .from("strutture")
@@ -30,7 +38,7 @@ export async function GET(request: NextRequest) {
     .eq("affiliazione", "non_invitato")
     .not("email", "is", null)
     .order("created_at", { ascending: false })
-    .limit(10);
+    .limit(maxOggi);
 
   if (!strutture || strutture.length === 0) {
     return NextResponse.json({ success: true, agente: "outreach", inviati: 0, msg: "Nessun professionista da contattare" });

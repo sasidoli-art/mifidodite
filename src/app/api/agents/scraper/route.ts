@@ -54,13 +54,29 @@ export async function GET(request: NextRequest) {
   for (const categoria of CATEGORIE_RICERCA) {
     try {
       const query = encodeURIComponent(`${categoria} ${citta.citta} ${citta.prov}`);
-      const googleUrl = `https://www.google.com/search?q=${query}&num=10&hl=it`;
 
-      const page = await scrapeGenericPage(googleUrl);
-      if (!page.text || page.text.length < 100) continue;
+      // Fonte 1: Google
+      let pageText = "";
+      const googleUrl = `https://www.google.com/search?q=${query}&num=10&hl=it`;
+      const googlePage = await scrapeGenericPage(googleUrl);
+      if (googlePage.text && googlePage.text.length > 100) {
+        pageText = googlePage.text;
+      }
+
+      // Fonte 2: PagineGialle (fallback se Google blocca)
+      if (!pageText) {
+        const pgQuery = encodeURIComponent(`${categoria}`);
+        const pgUrl = `https://www.paginegialle.it/ricerca/${pgQuery}/${encodeURIComponent(citta.citta)}`;
+        const pgPage = await scrapeGenericPage(pgUrl);
+        if (pgPage.text && pgPage.text.length > 100) {
+          pageText = pgPage.text;
+        }
+      }
+
+      if (!pageText) continue;
 
       // Chiedi a Claude di estrarre i professionisti dal testo
-      const prompt = `Analizza questo testo estratto da una ricerca Google per "${categoria}" a ${citta.citta} (${citta.prov}).
+      const prompt = `Analizza questo testo estratto da una ricerca per "${categoria}" a ${citta.citta} (${citta.prov}).
 
 Estrai TUTTI i professionisti/strutture reali che trovi. Per ognuno fornisci:
 - nome (il nome reale dell'attivita)
@@ -78,7 +94,7 @@ REGOLE:
 Rispondi SOLO con un array JSON valido.
 
 TESTO DA ANALIZZARE:
-${page.text.slice(0, 3000)}`;
+${pageText.slice(0, 3000)}`;
 
       const response = await askClaude(prompt, 3000);
       totalInputChars += prompt.length;
@@ -110,8 +126,8 @@ ${page.text.slice(0, 3000)}`;
         }
       }
 
-      // Pausa tra le ricerche
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      // Rate limiting: pausa 3-5 secondi tra le ricerche (randomizzata per sembrare umano)
+      await new Promise((resolve) => setTimeout(resolve, 3000 + Math.random() * 2000));
     } catch {
       // Continua con la prossima categoria
     }

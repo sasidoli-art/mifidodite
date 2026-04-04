@@ -44,6 +44,27 @@ export async function logAgent(entry: AgentLogEntry) {
   console.log(
     `[Agent:${entry.agente}] ${emoji} ${entry.stato} | trovati:${entry.risultati_trovati || 0} salvati:${entry.risultati_salvati || 0} errori:${entry.errori || 0}${entry.citta ? ` | ${entry.citta}` : ""}${entry.errore_messaggio ? ` | ${entry.errore_messaggio}` : ""}`
   );
+
+  // Se errore, manda notifica email
+  if (entry.stato === "errore" && process.env.BREVO_API_KEY) {
+    try {
+      const { sendEmail } = await import("@/lib/brevo");
+      await sendEmail({
+        to: [{ email: "bau@mifidodite.eu" }],
+        subject: `⚠️ Agente ${entry.agente} in ERRORE`,
+        htmlContent: `
+          <h2>Agente ${entry.agente} ha fallito</h2>
+          <p><strong>Errore:</strong> ${entry.errore_messaggio || "Sconosciuto"}</p>
+          <p><strong>Citta:</strong> ${entry.citta || "N/A"}</p>
+          <p><strong>Durata:</strong> ${entry.durata_ms ? `${(entry.durata_ms / 1000).toFixed(1)}s` : "N/A"}</p>
+          <p><strong>Data:</strong> ${new Date().toISOString()}</p>
+          <p>Controlla la dashboard: <a href="https://mifidodite.eu/admin/agenti">Admin Agenti</a></p>
+        `,
+      });
+    } catch {
+      console.error("[AgentLogger] Impossibile inviare email di errore");
+    }
+  }
 }
 
 // Timer helper

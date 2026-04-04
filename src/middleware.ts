@@ -30,17 +30,29 @@ export async function middleware(request: NextRequest) {
     data: { user },
   } = await supabase.auth.getUser();
 
-  // Proteggi le rotte /dashboard
-  if (request.nextUrl.pathname.startsWith("/dashboard") && !user) {
+  // Proteggi le rotte /dashboard e /admin
+  const isProtected =
+    request.nextUrl.pathname.startsWith("/dashboard") ||
+    request.nextUrl.pathname.startsWith("/admin");
+
+  if (isProtected && !user) {
     const url = request.nextUrl.clone();
     url.pathname = "/login";
     url.searchParams.set("redirect", request.nextUrl.pathname);
     return NextResponse.redirect(url);
   }
 
+  // Per /admin verifica anche il ruolo admin (quando DB attivo)
+  // if (request.nextUrl.pathname.startsWith("/admin") && user) {
+  //   const { data } = await supabase.from("admin_users").select("id").eq("user_id", user.id).single();
+  //   if (!data) {
+  //     return NextResponse.redirect(new URL("/dashboard", request.url));
+  //   }
+  // }
+
   return supabaseResponse;
 }
 
 export const config = {
-  matcher: ["/dashboard/:path*"],
+  matcher: ["/dashboard/:path*", "/admin/:path*"],
 };

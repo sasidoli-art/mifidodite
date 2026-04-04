@@ -245,17 +245,19 @@ function SubitoSection() {
           >
             {/* Foto */}
             <div className="relative h-48 overflow-hidden bg-muted">
-              {ad.img ? (
-                <img
-                  src={ad.img}
-                  alt={ad.titolo}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              ) : (
-                <div className="w-full h-full flex items-center justify-center text-5xl">
-                  {ad.specie === "gatto" ? "🐱" : "🐶"}
-                </div>
-              )}
+              <img
+                src={ad.img || (ad.specie === "gatto"
+                  ? "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400&q=80"
+                  : "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&q=80"
+                )}
+                alt={ad.titolo}
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).src = ad.specie === "gatto"
+                    ? "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400&q=80"
+                    : "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&q=80";
+                }}
+              />
               <div className="absolute top-3 left-3 flex gap-2">
                 <span className="text-xs font-bold px-2.5 py-1 rounded-full bg-orange-100 text-primary">
                   In regalo

@@ -8,9 +8,18 @@ import { motion } from "framer-motion";
 
 const NAV_LINKS = [
   { href: "/magazine", label: "Magazine" },
-  { href: "/professionisti", label: "Cerca Professionisti" },
+  { href: "/professionisti", label: "Professionisti" },
   { href: "/mappa", label: "Mappa" },
+  { href: "/adozioni", label: "Adozioni" },
   { href: "/sos-smarriti", label: "SOS Smarriti", accent: true },
+];
+
+const NAV_MOBILE_EXTRA = [
+  { href: "/spiagge", label: "Spiagge" },
+  { href: "/cliniche", label: "Cliniche & Rifugi" },
+  { href: "/eventi", label: "Eventi" },
+  { href: "/offerte", label: "Offerte" },
+  { href: "/prezzi", label: "Prezzi" },
 ];
 
 export function Header() {
@@ -44,10 +53,10 @@ export function Header() {
             </span>
           </Link>
 
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-0.5">
             {NAV_LINKS.map((link) => (
               <Link key={link.href} href={link.href}
-                className={`relative px-4 py-2 text-sm font-medium transition-colors group ${
+                className={`relative px-3 py-2 text-sm font-medium transition-colors group ${
                   link.accent ? "text-red-500 hover:text-red-600" : "text-muted-foreground hover:text-foreground"
                 }`}>
                 {link.label}
@@ -56,12 +65,15 @@ export function Header() {
                 }`} />
               </Link>
             ))}
-            <div className="w-px h-6 bg-border mx-2" />
-            <Link href="/per-professionisti" className="px-4 py-2 text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+
+            <div className="w-px h-5 bg-border mx-2" />
+
+            <Link href="/per-professionisti" className="px-3 py-2 text-sm font-medium text-primary hover:text-primary-dark transition-colors">
               Sei un professionista?
             </Link>
+
             <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
-              <Link href="#newsletter" className="ml-2 bg-primary text-white px-5 py-2 rounded-lg text-sm font-semibold hover:bg-primary-dark transition-colors">
+              <Link href="#newsletter" className="ml-2 bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-primary-dark transition-colors">
                 Iscriviti gratis
               </Link>
             </motion.div>
@@ -82,8 +94,16 @@ export function Header() {
                       {link.label}
                     </Link>
                   ))}
-                  <div className="border-t border-border my-3" />
-                  <Link href="/per-professionisti" className="px-4 py-3 rounded-lg text-base font-medium text-foreground hover:bg-muted">
+                  <div className="border-t border-border my-2" />
+                  <p className="px-4 text-xs font-semibold text-muted-foreground uppercase tracking-wider">Altro</p>
+                  {NAV_MOBILE_EXTRA.map((link) => (
+                    <Link key={link.href} href={link.href}
+                      className="px-4 py-2.5 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors">
+                      {link.label}
+                    </Link>
+                  ))}
+                  <div className="border-t border-border my-2" />
+                  <Link href="/per-professionisti" className="px-4 py-3 rounded-lg text-base font-medium text-primary hover:bg-primary/5">
                     Sei un professionista?
                   </Link>
                   <Link href="#newsletter" className="mx-4 mt-2 py-3 rounded-lg text-base font-medium bg-primary text-white text-center">

@@ -1,62 +1,18 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "framer-motion";
+import { StaggerContainer, StaggerItem } from "@/components/shared/AnimatedSection";
 
 const CATEGORIES = [
-  {
-    emoji: "🏠",
-    label: "Pensioni",
-    desc: "Lascia il tuo amico in mani sicure",
-    href: "/professionisti?cat=pensione",
-    color: "bg-orange-50 hover:bg-orange-100",
-  },
-  {
-    emoji: "🏖️",
-    label: "Spiagge dog-friendly",
-    desc: "Mare e sabbia anche per lui",
-    href: "/spiagge",
-    color: "bg-blue-50 hover:bg-blue-100",
-  },
-  {
-    emoji: "✂️",
-    label: "Toelettatura",
-    desc: "Bello, pulito e coccolato",
-    href: "/professionisti?cat=toelettatura",
-    color: "bg-pink-50 hover:bg-pink-100",
-  },
-  {
-    emoji: "🐕",
-    label: "Dog sitter",
-    desc: "Come stare a casa, ma meglio",
-    href: "/professionisti?cat=dog_sitter",
-    color: "bg-green-50 hover:bg-green-100",
-  },
-  {
-    emoji: "🎓",
-    label: "Educatori cinofili",
-    desc: "Per un cane felice e equilibrato",
-    href: "/professionisti?cat=educatore_cinofilo",
-    color: "bg-purple-50 hover:bg-purple-100",
-  },
-  {
-    emoji: "🏥",
-    label: "Veterinari",
-    desc: "La salute prima di tutto",
-    href: "/professionisti?cat=veterinario",
-    color: "bg-red-50 hover:bg-red-100",
-  },
-  {
-    emoji: "📸",
-    label: "Fotografi pet",
-    desc: "Ricordi a 4 zampe",
-    href: "/professionisti?cat=fotografo_pet",
-    color: "bg-yellow-50 hover:bg-yellow-100",
-  },
-  {
-    emoji: "🚗",
-    label: "Pet taxi",
-    desc: "Trasporto sicuro e confortevole",
-    href: "/professionisti?cat=pet_taxi",
-    color: "bg-teal-50 hover:bg-teal-100",
-  },
+  { emoji: "🏠", label: "Pensioni", desc: "Lascia il tuo amico in mani sicure", href: "/professionisti?cat=pensione", color: "from-orange-100 to-orange-50" },
+  { emoji: "🏖️", label: "Spiagge dog-friendly", desc: "Mare e sabbia anche per lui", href: "/spiagge", color: "from-blue-100 to-blue-50" },
+  { emoji: "✂️", label: "Toelettatura", desc: "Bello, pulito e coccolato", href: "/professionisti?cat=toelettatura", color: "from-pink-100 to-pink-50" },
+  { emoji: "🐕", label: "Dog sitter", desc: "Come stare a casa, ma meglio", href: "/professionisti?cat=dog_sitter", color: "from-green-100 to-green-50" },
+  { emoji: "🎓", label: "Educatori cinofili", desc: "Per un cane felice e equilibrato", href: "/professionisti?cat=educatore_cinofilo", color: "from-purple-100 to-purple-50" },
+  { emoji: "🏥", label: "Veterinari", desc: "La salute prima di tutto", href: "/professionisti?cat=veterinario", color: "from-red-100 to-red-50" },
+  { emoji: "📸", label: "Fotografi pet", desc: "Ricordi a 4 zampe", href: "/professionisti?cat=fotografo_pet", color: "from-yellow-100 to-yellow-50" },
+  { emoji: "🚗", label: "Pet taxi", desc: "Trasporto sicuro e confortevole", href: "/professionisti?cat=pet_taxi", color: "from-teal-100 to-teal-50" },
 ];
 
 export function Categories() {
@@ -64,31 +20,51 @@ export function Categories() {
     <section className="py-20 bg-muted/50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
+          <motion.h2
+            className="text-3xl sm:text-4xl font-bold text-foreground"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
             Cosa stai cercando?
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          </motion.h2>
+          <motion.p
+            className="mt-4 text-lg text-muted-foreground"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+          >
             Esplora per categoria e trova il professionista giusto
-          </p>
+          </motion.p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6">
+        <StaggerContainer className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6" staggerDelay={0.08}>
           {CATEGORIES.map((cat) => (
-            <Link
-              key={cat.label}
-              href={cat.href}
-              className={`${cat.color} rounded-2xl p-6 text-center transition-all hover:shadow-md group`}
-            >
-              <span className="text-4xl block mb-3 group-hover:scale-110 transition-transform">
-                {cat.emoji}
-              </span>
-              <h3 className="font-semibold text-foreground mb-1">
-                {cat.label}
-              </h3>
-              <p className="text-sm text-muted-foreground">{cat.desc}</p>
-            </Link>
+            <StaggerItem key={cat.label}>
+              <Link href={cat.href}>
+                <motion.div
+                  className={`bg-gradient-to-br ${cat.color} rounded-2xl p-6 text-center transition-all group cursor-pointer h-full`}
+                  whileHover={{ scale: 1.04, y: -4 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <motion.span
+                    className="text-4xl block mb-3"
+                    whileHover={{ scale: 1.2, rotate: [0, -10, 10, 0] }}
+                    transition={{ duration: 0.4 }}
+                  >
+                    {cat.emoji}
+                  </motion.span>
+                  <h3 className="font-semibold text-foreground mb-1">
+                    {cat.label}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">{cat.desc}</p>
+                </motion.div>
+              </Link>
+            </StaggerItem>
           ))}
-        </div>
+        </StaggerContainer>
       </div>
     </section>
   );

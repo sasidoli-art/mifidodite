@@ -3,6 +3,7 @@ import { verifyCron } from "@/lib/cron-auth";
 import { fetchSubitoAnimali } from "@/lib/subito-scraper";
 import { askClaude, extractJSON } from "@/lib/ai-agent";
 import { slugify } from "@/lib/utils";
+import { logAgent, startTimer } from "@/lib/agent-logger";
 
 // ============================================
 // AGENTE MONITOR
@@ -13,6 +14,7 @@ import { slugify } from "@/lib/utils";
 export async function GET(request: NextRequest) {
   const authError = verifyCron(request);
   if (authError) return authError;
+  const elapsed = startTimer();
 
   let importati = 0;
 
@@ -146,6 +148,14 @@ Se l'annuncio non e realmente di un animale smarrito/trovato, rispondi con null.
       }
     }
   }
+
+  await logAgent({
+    agente: "monitor",
+    stato: importati > 0 ? "ok" : annunci.length > 0 ? "parziale" : "errore",
+    risultati_trovati: annunci.length,
+    risultati_salvati: importati,
+    durata_ms: elapsed(),
+  });
 
   return NextResponse.json({
     success: true,

@@ -4,6 +4,7 @@ import { scrapeGenericPage } from "@/lib/scraper";
 import { askClaude, extractJSON } from "@/lib/ai-agent";
 import { slugify } from "@/lib/utils";
 import { CITTA_ITALIANE, REGIONI } from "@/lib/scraper-google";
+import { logAgent, startTimer, stimaCosto } from "@/lib/agent-logger";
 
 // ============================================
 // AGENTE SCRAPER
@@ -24,6 +25,10 @@ const CATEGORIE_RICERCA = [
 export async function GET(request: NextRequest) {
   const authError = verifyCron(request);
   if (authError) return authError;
+
+  const elapsed = startTimer();
+  let totalInputChars = 0;
+  let totalOutputChars = 0;
 
   // Determina quale citta scrapare oggi (rotazione giornaliera)
   const oggi = Math.floor(Date.now() / (24 * 60 * 60 * 1000));
@@ -76,6 +81,8 @@ TESTO DA ANALIZZARE:
 ${page.text.slice(0, 3000)}`;
 
       const response = await askClaude(prompt, 3000);
+      totalInputChars += prompt.length;
+      totalOutputChars += response.length;
       const parsed = extractJSON(response) as Array<{
         nome: string;
         categoria: string;
@@ -146,6 +153,23 @@ ${page.text.slice(0, 3000)}`;
       }
     }
   }
+
+  // Log esecuzione
+  await logAgent({
+    agente: "scraper",
+    stato: risultati.length > 0 ? "ok" : "parziale",
+    citta: `${citta.citta} (${citta.prov})`,
+    risultati_trovati: risultati.length,
+    risultati_salvati: salvati,
+    errori: 0,
+    durata_ms: elapsed(),
+    costo_stimato: stimaCosto(totalInputChars, totalOutputChars),
+    dettagli: {
+      regione: citta.regione,
+      categorie_cercate: CATEGORIE_RICERCA.length,
+      nomi: risultati.map((r) => r.nome),
+    },
+  });
 
   return NextResponse.json({
     success: true,

@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { verifyCron } from "@/lib/cron-auth";
 import { askClaude, extractJSON } from "@/lib/ai-agent";
 import { ARTICOLI_SEED } from "@/lib/articoli-seed";
+import { logAgent, startTimer } from "@/lib/agent-logger";
 
 // ============================================
 // AGENTE SOCIAL
@@ -12,6 +13,7 @@ import { ARTICOLI_SEED } from "@/lib/articoli-seed";
 export async function GET(request: NextRequest) {
   const authError = verifyCron(request);
   if (authError) return authError;
+  const elapsed = startTimer();
 
   // Prendi gli ultimi articoli (da DB o seed)
   let articoli = ARTICOLI_SEED;
@@ -76,7 +78,8 @@ Rispondi con JSON:
     const response = await askClaude(prompt, 3000);
     const posts = extractJSON(response);
 
-    // Salva i post generati (per ora li ritorna, in futuro salva su DB)
+    await logAgent({ agente: "social", stato: "ok", risultati_trovati: Array.isArray(posts) ? posts.length : 0, durata_ms: elapsed(), dettagli: { posts } });
+
     return NextResponse.json({
       success: true,
       agente: "social",
@@ -84,6 +87,7 @@ Rispondi con JSON:
       posts,
     });
   } catch (err) {
+    await logAgent({ agente: "social", stato: "errore", errore_messaggio: String(err), durata_ms: elapsed() });
     return NextResponse.json({ success: false, error: String(err) });
   }
 }

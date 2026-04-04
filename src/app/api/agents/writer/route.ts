@@ -3,6 +3,7 @@ import { verifyCron } from "@/lib/cron-auth";
 import { scrapeGenericPage } from "@/lib/scraper";
 import { askClaude, extractJSON } from "@/lib/ai-agent";
 import { slugify } from "@/lib/utils";
+import { logAgent, startTimer, stimaCosto } from "@/lib/agent-logger";
 
 // ============================================
 // AGENTE WRITER
@@ -22,6 +23,8 @@ const CATEGORIE = ["guide", "salute", "comportamento", "curiosita", "razze", "ga
 export async function GET(request: NextRequest) {
   const authError = verifyCron(request);
   if (authError) return authError;
+
+  const elapsed = startTimer();
 
   // 1. Scrapa le fonti per trovare spunti
   const spunti: string[] = [];
@@ -118,6 +121,16 @@ Rispondi con un array JSON, ogni elemento:
       }
     }
 
+    await logAgent({
+      agente: "writer",
+      stato: salvati > 0 ? "ok" : "parziale",
+      risultati_trovati: articoli.length,
+      risultati_salvati: salvati,
+      durata_ms: elapsed(),
+      costo_stimato: stimaCosto(prompt.length, response.length),
+      dettagli: { titoli: articoli.map((a: { titolo: string }) => a.titolo) },
+    });
+
     return NextResponse.json({
       success: true,
       agente: "writer",
@@ -126,6 +139,12 @@ Rispondi con un array JSON, ogni elemento:
       titoli: articoli.map((a) => a.titolo),
     });
   } catch (err) {
+    await logAgent({
+      agente: "writer",
+      stato: "errore",
+      errore_messaggio: String(err),
+      durata_ms: elapsed(),
+    });
     return NextResponse.json({ success: false, error: String(err) });
   }
 }

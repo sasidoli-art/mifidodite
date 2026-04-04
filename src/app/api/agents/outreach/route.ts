@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { verifyCron } from "@/lib/cron-auth";
 import { askClaude, extractJSON } from "@/lib/ai-agent";
 import { sendEmail } from "@/lib/brevo";
+import { logAgent, startTimer } from "@/lib/agent-logger";
 
 // ============================================
 // AGENTE OUTREACH
@@ -13,6 +14,7 @@ import { sendEmail } from "@/lib/brevo";
 export async function GET(request: NextRequest) {
   const authError = verifyCron(request);
   if (authError) return authError;
+  const elapsed = startTimer();
 
   if (!process.env.NEXT_PUBLIC_SUPABASE_URL) {
     return NextResponse.json({ success: true, dev: true, msg: "DB non configurato" });
@@ -97,6 +99,14 @@ ${emailData.corpo.split("\n").map((p: string) => `<p style="color:#333;line-heig
       // Continua col prossimo
     }
   }
+
+  await logAgent({
+    agente: "outreach",
+    stato: inviati > 0 ? "ok" : "parziale",
+    risultati_trovati: strutture.length,
+    risultati_salvati: inviati,
+    durata_ms: elapsed(),
+  });
 
   return NextResponse.json({
     success: true,

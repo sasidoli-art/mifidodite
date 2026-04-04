@@ -16,10 +16,16 @@ export function Footer() {
               Il portale italiano per trovare professionisti pet vicino a te.
               Pensioni, dog sitter, toelettatori e molto altro.
             </p>
-            <a href="mailto:bau@mifidodite.eu"
-              className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors">
-              <Mail size={14} /> bau@mifidodite.eu
-            </a>
+            <div className="space-y-1.5">
+              <a href="mailto:bau@mifidodite.eu"
+                className="flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors">
+                <Mail size={14} /> bau@mifidodite.eu
+              </a>
+              <a href="mailto:miao@mifidodite.eu"
+                className="flex items-center gap-2 text-sm text-white/60 hover:text-primary transition-colors">
+                <Mail size={14} /> miao@mifidodite.eu
+              </a>
+            </div>
           </div>
 
           {/* Sezioni principali */}

@@ -58,25 +58,28 @@ export default function RegistraAttivitaPage() {
                   <div className="flex items-start gap-3">
                     <span className="bg-muted text-foreground text-xs font-bold px-2.5 py-1 rounded-full">FREE</span>
                     <div>
-                      <p className="font-medium text-foreground">Listing base — gratis per sempre</p>
-                      <p className="text-sm text-muted-foreground">Profilo visibile, fino a 3 foto, ricevi lead via email.</p>
+                      <p className="font-medium text-foreground">Gratis per sempre</p>
+                      <p className="text-sm text-muted-foreground">Profilo base, 1 foto, vedi quanti lead ricevi ma non chi sono.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <span className="bg-primary text-white text-xs font-bold px-2.5 py-1 rounded-full">PRO</span>
                     <div>
-                      <p className="font-medium text-foreground">Premium — 29€/mese</p>
-                      <p className="text-sm text-muted-foreground">Priorita nei risultati, galleria illimitata, badge verificato, statistiche.</p>
+                      <p className="font-medium text-foreground">19,90€/mese — <span className="text-primary">Scelta intelligente</span></p>
+                      <p className="text-sm text-muted-foreground">Ricevi TUTTI i lead, 10 foto, badge verificato, statistiche, descrizione AI.</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <span className="bg-foreground text-white text-xs font-bold px-2.5 py-1 rounded-full">TOP</span>
                     <div>
-                      <p className="font-medium text-foreground">Premium Plus — 59€/mese</p>
-                      <p className="text-sm text-muted-foreground">Tutto Pro + in evidenza homepage, newsletter dedicata, supporto prioritario.</p>
+                      <p className="font-medium text-foreground">24,90€/mese — <span className="text-secondary">Solo 5€ in piu</span></p>
+                      <p className="text-sm text-muted-foreground">Tutto Pro + mini-sito personale, evidenza homepage, newsletter, certificati.</p>
                     </div>
                   </div>
                 </div>
+                <a href="/per-professionisti" className="block mt-4 text-center text-sm text-primary font-medium hover:underline">
+                  Confronta i piani nel dettaglio →
+                </a>
               </div>
             </div>
 

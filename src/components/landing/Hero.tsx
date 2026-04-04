@@ -20,30 +20,13 @@ export function Hero() {
 
   return (
     <section className="relative bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 py-20 sm:py-28 overflow-hidden">
-      {/* Zampine animate che fluttuano */}
-      {[...Array(5)].map((_, i) => (
-        <motion.div
-          key={i}
-          className="absolute text-primary/5 select-none pointer-events-none"
-          style={{
-            top: `${15 + i * 18}%`,
-            left: `${5 + i * 22}%`,
-            fontSize: `${60 + i * 15}px`,
-          }}
-          animate={{
-            y: [0, -15, 0],
-            rotate: [0, 10, -10, 0],
-          }}
-          transition={{
-            duration: 4 + i,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: i * 0.5,
-          }}
-        >
-          <PawPrint size={40} className="text-primary/5" strokeWidth={1.5} />
-        </motion.div>
-      ))}
+      {/* Zampine decorative statiche */}
+      <div className="absolute inset-0 pointer-events-none select-none overflow-hidden">
+        <PawPrint size={60} className="absolute top-[15%] left-[5%] text-primary/[0.04] rotate-12" strokeWidth={1.5} />
+        <PawPrint size={75} className="absolute top-[50%] left-[27%] text-primary/[0.03] -rotate-12" strokeWidth={1.5} />
+        <PawPrint size={50} className="absolute top-[25%] right-[10%] text-primary/[0.04] rotate-45" strokeWidth={1.5} />
+        <PawPrint size={65} className="absolute bottom-[20%] right-[25%] text-primary/[0.03] -rotate-20" strokeWidth={1.5} />
+      </div>
 
       <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         {/* Badge */}
@@ -151,7 +134,7 @@ export function Hero() {
         >
           <motion.div
             animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.5, repeat: Infinity }}
+            transition={{ duration: 1.5, repeat: 3 }}
             className="inline-flex flex-col items-center text-muted-foreground/40 cursor-pointer"
           >
             <span className="text-xs mb-1">Scopri</span>

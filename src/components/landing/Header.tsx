@@ -9,9 +9,10 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const NAV_LINKS = [
   { href: "/magazine", label: "Magazine" },
+  { href: "/adozioni", label: "Adozioni" },
   { href: "/professionisti", label: "Professionisti" },
   { href: "/spiagge", label: "Spiagge" },
-  { href: "/cliniche", label: "Cliniche & Rifugi" },
+  { href: "/cliniche", label: "Cliniche" },
   { href: "/eventi", label: "Eventi" },
 ];
 

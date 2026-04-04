@@ -64,7 +64,7 @@ export async function sendEmail(params: {
     body: JSON.stringify({
       sender: params.sender || {
         name: process.env.BREVO_SENDER_NAME || "MifidoDiTe.eu",
-        email: process.env.BREVO_SENDER_EMAIL || "ciao@mifidodite.eu",
+        email: process.env.BREVO_SENDER_EMAIL || "miao@mifidodite.eu",
       },
       to: params.to,
       subject: params.subject,

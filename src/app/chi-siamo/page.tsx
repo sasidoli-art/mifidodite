@@ -135,8 +135,8 @@ export default function ChiSiamoPage() {
               Per qualsiasi domanda, suggerimento o segnalazione:
             </p>
             <p className="mt-2">
-              <a href="mailto:ciao@mifidodite.eu" className="text-primary font-semibold text-lg hover:underline">
-                ciao@mifidodite.eu
+              <a href="mailto:bau@mifidodite.eu" className="text-primary font-semibold text-lg hover:underline">
+                bau@mifidodite.eu
               </a>
             </p>
             <p className="text-sm text-muted-foreground mt-4">

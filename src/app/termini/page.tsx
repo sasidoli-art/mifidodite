@@ -77,7 +77,7 @@ export default function TerminiPage() {
             <p>Tutti i contenuti del Portale (testi, grafica, logo, codice) sono di proprieta di MifidoDiTe.eu o utilizzati su licenza. E vietata la riproduzione non autorizzata. I Professionisti mantengono la proprieta dei contenuti (foto, descrizioni) caricati sul proprio profilo.</p>
 
             <h2>9. Dati scraping</h2>
-            <p>Il Portale raccoglie informazioni pubblicamente disponibili su professionisti del settore pet da fonti pubbliche (siti web, pagine social, directory). Queste informazioni vengono utilizzate per creare profili base che i Professionisti possono reclamare e completare. Qualsiasi Professionista puo richiedere la rimozione del proprio profilo scrivendo a <a href="mailto:ciao@mifidodite.eu">ciao@mifidodite.eu</a>.</p>
+            <p>Il Portale raccoglie informazioni pubblicamente disponibili su professionisti del settore pet da fonti pubbliche (siti web, pagine social, directory). Queste informazioni vengono utilizzate per creare profili base che i Professionisti possono reclamare e completare. Qualsiasi Professionista puo richiedere la rimozione del proprio profilo scrivendo a <a href="mailto:bau@mifidodite.eu">bau@mifidodite.eu</a>.</p>
 
             <h2>10. Legge applicabile e foro competente</h2>
             <p>I presenti Termini sono regolati dalla legge italiana. Per qualsiasi controversia e competente il Foro del luogo di residenza del consumatore, ai sensi del D.Lgs. 206/2005 (Codice del Consumo).</p>
@@ -88,7 +88,7 @@ export default function TerminiPage() {
             <h2>12. Contatti</h2>
             <p>
               Per domande sui Termini di Servizio:<br />
-              Email: <a href="mailto:ciao@mifidodite.eu">ciao@mifidodite.eu</a>
+              Email: <a href="mailto:bau@mifidodite.eu">bau@mifidodite.eu</a>
             </p>
           </div>
         </div>

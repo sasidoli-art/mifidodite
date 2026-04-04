@@ -123,7 +123,7 @@ const FAQ = [
   },
   {
     q: "Il mio profilo e gia presente ma non l'ho creato io. Come faccio?",
-    a: "Alcuni profili vengono creati automaticamente da fonti pubbliche. Puoi reclamarlo: scrivici a ciao@mifidodite.eu con i tuoi dati e te lo assegneremo.",
+    a: "Alcuni profili vengono creati automaticamente da fonti pubbliche. Puoi reclamarlo: scrivici a pro@mifidodite.eu con i tuoi dati e te lo assegneremo.",
   },
 ];
 

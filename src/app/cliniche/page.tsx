@@ -191,7 +191,7 @@ export default function ClinichePage() {
               Stiamo costruendo l'elenco piu completo d'Italia. Se conosci una clinica, ambulatorio o rifugio che non e presente, segnalacelo.
             </p>
             <a
-              href="mailto:segnalazioni@mifidodite.eu?subject=Segnalazione clinica/rifugio"
+              href="mailto:sos@mifidodite.eu?subject=Segnalazione clinica/rifugio"
               className="inline-block mt-4 bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-xl font-semibold transition-colors"
             >
               Segnala una struttura

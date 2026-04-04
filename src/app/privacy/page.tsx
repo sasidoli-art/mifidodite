@@ -18,7 +18,7 @@ export default function PrivacyPage() {
           <div className="prose prose-lg max-w-none text-foreground/80">
             <h2>1. Titolare del trattamento</h2>
             <p>
-              Il titolare del trattamento dei dati personali e MifidoDiTe.eu (di seguito "il Titolare"), contattabile all'indirizzo email: <a href="mailto:privacy@mifidodite.eu">privacy@mifidodite.eu</a>.
+              Il titolare del trattamento dei dati personali e MifidoDiTe.eu (di seguito "il Titolare"), contattabile all'indirizzo email: <a href="mailto:bau@mifidodite.eu">bau@mifidodite.eu</a>.
             </p>
 
             <h2>2. Dati raccolti</h2>
@@ -78,7 +78,7 @@ export default function PrivacyPage() {
               <li>Opporti al trattamento</li>
               <li>Revocare il consenso in qualsiasi momento</li>
             </ul>
-            <p>Per esercitare questi diritti, scrivi a: <a href="mailto:privacy@mifidodite.eu">privacy@mifidodite.eu</a>.</p>
+            <p>Per esercitare questi diritti, scrivi a: <a href="mailto:bau@mifidodite.eu">bau@mifidodite.eu</a>.</p>
 
             <h2>8. Cookie</h2>
             <p>Il portale utilizza esclusivamente cookie tecnici necessari al funzionamento del servizio (autenticazione, preferenze). Non utilizziamo cookie di profilazione o di terze parti per finalita pubblicitarie.</p>
@@ -92,7 +92,7 @@ export default function PrivacyPage() {
             <h2>11. Contatti</h2>
             <p>
               Per qualsiasi domanda relativa alla privacy:<br />
-              Email: <a href="mailto:privacy@mifidodite.eu">privacy@mifidodite.eu</a><br />
+              Email: <a href="mailto:bau@mifidodite.eu">bau@mifidodite.eu</a><br />
               Autorita di controllo: Garante per la protezione dei dati personali — <a href="https://www.garanteprivacy.it" target="_blank" rel="noopener noreferrer">www.garanteprivacy.it</a>
             </p>
           </div>

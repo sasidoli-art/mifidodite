@@ -21,11 +21,11 @@ export function Footer() {
               hanno un sito web.
             </p>
             <a
-              href="mailto:ciao@mifidodite.eu"
+              href="mailto:bau@mifidodite.eu"
               className="inline-flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors"
             >
               <Mail size={14} />
-              ciao@mifidodite.eu
+              bau@mifidodite.eu
             </a>
           </div>
 

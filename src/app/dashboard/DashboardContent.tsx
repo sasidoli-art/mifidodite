@@ -168,7 +168,7 @@ export function DashboardContent() {
           </p>
           <div className="mt-6 p-8 bg-muted rounded-xl text-center text-muted-foreground">
             Editor profilo in arrivo — per ora modifica i dati contattando{" "}
-            <a href="mailto:supporto@mifidodite.it" className="text-primary font-medium">supporto@mifidodite.it</a>
+            <a href="mailto:bau@mifidodite.eu" className="text-primary font-medium">bau@mifidodite.eu</a>
           </div>
         </div>
       )}

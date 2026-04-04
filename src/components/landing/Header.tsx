@@ -10,6 +10,7 @@ const NAV_LINKS = [
   { href: "/magazine", label: "Magazine" },
   { href: "/professionisti", label: "Professionisti" },
   { href: "/mappa", label: "Mappa" },
+  { href: "/offerte", label: "Offerte" },
   { href: "/adozioni", label: "Adozioni" },
   { href: "/sos-smarriti", label: "SOS Smarriti", accent: true },
 ];

@@ -114,7 +114,7 @@ Rispondi con un array JSON, ogni elemento:
             tempo_lettura: art.tempo_lettura || "5 min",
             tags: art.tags || [],
             img: `https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&q=80`,
-            pubblicato: true,
+            pubblicato: false,  // Bozza — passa per approvazione admin
           });
           salvati++;
         }

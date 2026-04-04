@@ -147,7 +147,8 @@ ${page.text.slice(0, 3000)}`;
           indirizzo: r.indirizzo,
           servizi: r.servizi,
           fonte: "scraping_google",
-          attivo: true,
+          attivo: false,  // Non visibile — passa per approvazione admin
+          verificato: false,
         });
         salvati++;
       }

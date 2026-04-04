@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyCron } from "@/lib/cron-auth";
-import { askClaude, extractJSON } from "@/lib/ai-agent";
+import { askAI, extractJSON } from "@/lib/ai-agent";
 import { ARTICOLI_SEED } from "@/lib/articoli-seed";
 import { logAgent, startTimer } from "@/lib/agent-logger";
 
@@ -75,7 +75,7 @@ Rispondi con JSON:
 ]`;
 
   try {
-    const response = await askClaude(prompt, 3000);
+    const response = await askAI(prompt, 3000);
     const posts = extractJSON(response);
 
     // Salva post nel DB

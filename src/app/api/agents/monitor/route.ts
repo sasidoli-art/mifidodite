@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyCron } from "@/lib/cron-auth";
 import { fetchSubitoAnimali } from "@/lib/subito-scraper";
-import { askClaude, extractJSON } from "@/lib/ai-agent";
+import { askAI, extractJSON } from "@/lib/ai-agent";
 import { slugify } from "@/lib/utils";
 import { logAgent, startTimer } from "@/lib/agent-logger";
 
@@ -103,7 +103,7 @@ Estrai in JSON:
 
 Se l'annuncio non e realmente di un animale smarrito/trovato, rispondi con null.`;
 
-        const response = await askClaude(prompt, 500);
+        const response = await askAI(prompt, 500);
         const dati = extractJSON(response) as {
           nome_animale: string | null;
           specie: string;

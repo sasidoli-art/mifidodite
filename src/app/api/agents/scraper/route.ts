@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyCron } from "@/lib/cron-auth";
 import { scrapeGenericPage } from "@/lib/scraper";
-import { askClaude, extractJSON } from "@/lib/ai-agent";
+import { askAI, extractJSON } from "@/lib/ai-agent";
 import { slugify } from "@/lib/utils";
 import { CITTA_ITALIANE, REGIONI } from "@/lib/scraper-google";
 import { logAgent, startTimer, stimaCosto } from "@/lib/agent-logger";
@@ -96,7 +96,7 @@ Rispondi SOLO con un array JSON valido.
 TESTO DA ANALIZZARE:
 ${pageText.slice(0, 3000)}`;
 
-      const response = await askClaude(prompt, 3000);
+      const response = await askAI(prompt, 3000);
       totalInputChars += prompt.length;
       totalOutputChars += response.length;
       const parsed = extractJSON(response) as Array<{

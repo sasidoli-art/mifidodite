@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyCron } from "@/lib/cron-auth";
-import { askClaude, extractJSON } from "@/lib/ai-agent";
+import { askAI, extractJSON } from "@/lib/ai-agent";
 import { sendEmail } from "@/lib/brevo";
 import { logAgent, startTimer } from "@/lib/agent-logger";
 
@@ -66,7 +66,7 @@ USA: tono diretto italiano, come un messaggio WhatsApp professionale
 
 Rispondi con JSON: { "oggetto": "...", "corpo": "..." }`;
 
-      const response = await askClaude(prompt, 1000);
+      const response = await askAI(prompt, 1000);
       const emailData = extractJSON(response) as { oggetto: string; corpo: string };
 
       if (emailData.oggetto && emailData.corpo) {

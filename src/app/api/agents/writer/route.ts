@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyCron } from "@/lib/cron-auth";
 import { scrapeGenericPage } from "@/lib/scraper";
-import { askClaude, extractJSON } from "@/lib/ai-agent";
+import { askAI, extractJSON } from "@/lib/ai-agent";
 import { slugify } from "@/lib/utils";
 import { logAgent, startTimer, stimaCosto } from "@/lib/agent-logger";
 
@@ -76,7 +76,7 @@ Rispondi con un array JSON, ogni elemento:
 }`;
 
   try {
-    const response = await askClaude(prompt, 8000);
+    const response = await askAI(prompt, 8000);
     const articoli = extractJSON(response) as Array<{
       titolo: string;
       slug: string;

@@ -1,6 +1,6 @@
 import { Header } from "@/components/landing/Header";
 import { Footer } from "@/components/landing/Footer";
-import { MapPin, Phone, Clock, ExternalLink, Shield, Heart } from "lucide-react";
+import { MapPin, Phone, Clock, ExternalLink, Shield, Heart, Users } from "lucide-react";
 import Link from "next/link";
 import { CLINICHE_SEED, getClinichePerRegione } from "@/lib/cliniche-seed";
 import { REGIONI } from "@/lib/scraper-google";
@@ -174,8 +174,35 @@ export default function ClinichePage() {
                               Sito web
                             </a>
                           )}
+                          {c.accetta_donazioni && (
+                            <a
+                              href={c.link_donazioni || `mailto:bau@mifidodite.eu?subject=Donazione per ${c.nome}`}
+                              target={c.link_donazioni ? "_blank" : undefined}
+                              rel={c.link_donazioni ? "noopener noreferrer" : undefined}
+                              className="bg-secondary hover:bg-secondary/90 text-white px-5 py-2.5 rounded-xl font-bold flex items-center gap-2 transition-colors text-sm"
+                            >
+                              <Heart size={16} />
+                              Dona a questo rifugio
+                            </a>
+                          )}
+                          {c.cerca_volontari && (
+                            <a
+                              href={c.link_volontari || `mailto:bau@mifidodite.eu?subject=Volontariato presso ${c.nome}`}
+                              target={c.link_volontari ? "_blank" : undefined}
+                              rel={c.link_volontari ? "noopener noreferrer" : undefined}
+                              className="border-2 border-secondary text-secondary px-5 py-2.5 rounded-xl font-bold flex items-center gap-2 hover:bg-secondary hover:text-white transition-colors text-sm"
+                            >
+                              <Users size={16} />
+                              Diventa volontario
+                            </a>
+                          )}
                         </div>
                       </div>
+
+                      {/* Descrizione rifugio */}
+                      {c.descrizione && (
+                        <p className="mt-3 text-sm text-muted-foreground">{c.descrizione}</p>
+                      )}
                     </div>
                   );
                 })}

@@ -50,6 +50,27 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="it" className={`${heading.variable} ${body.variable} h-full antialiased`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              name: "MifidoDiTe.eu",
+              alternateName: "Mi Fido di Te",
+              url: "https://mifidodite.eu",
+              description: "Il portale italiano per trovare pensioni, spiagge dog-friendly, dog sitter, toelettatori e professionisti pet vicino a te.",
+              inLanguage: "it-IT",
+              potentialAction: {
+                "@type": "SearchAction",
+                target: "https://mifidodite.eu/professionisti?q={search_term_string}",
+                "query-input": "required name=search_term_string",
+              },
+            }),
+          }}
+        />
+      </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );

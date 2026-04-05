@@ -44,8 +44,7 @@ export async function POST(request: NextRequest) {
       tipo_animale: tipo_animale || "cane",
       taglia: taglia || null,
       note: note || null,
-      ip_address: request.headers.get("x-forwarded-for") || request.headers.get("x-real-ip"),
-      user_agent: request.headers.get("user-agent"),
+      // IP e User-Agent rimossi per conformita GDPR (dati non necessari)
     })
     .select()
     .single();

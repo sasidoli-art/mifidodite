@@ -16,8 +16,13 @@ function UnsubscribeForm() {
   async function handleUnsubscribe(e: React.FormEvent) {
     e.preventDefault();
     setLoading(true);
-    // TODO: chiamare API per disiscrivere quando DB newsletter attivo
-    await new Promise((r) => setTimeout(r, 1000));
+    try {
+      await fetch("/api/unsubscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email }),
+      });
+    } catch {}
     setDone(true);
     setLoading(false);
   }

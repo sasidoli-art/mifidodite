@@ -116,7 +116,14 @@ export default async function StrutturaPage({ params }: { params: Promise<{ slug
                         </span>
                       )}
                     </div>
-                    <span className="inline-block mt-2 text-xs font-semibold bg-primary/10 text-primary px-3 py-1 rounded-full">{catLabel}</span>
+                    <div className="flex items-center gap-2 mt-2 flex-wrap">
+                      <span className="text-xs font-semibold bg-primary/10 text-primary px-3 py-1 rounded-full">{catLabel}</span>
+                      {!s.verificato && (
+                        <span className="text-xs bg-muted text-muted-foreground px-2.5 py-1 rounded-full">
+                          Profilo importato automaticamente
+                        </span>
+                      )}
+                    </div>
                     <div className="flex items-center gap-1 mt-2 text-muted-foreground">
                       <MapPin size={16} />
                       <span>{s.indirizzo ? `${s.indirizzo}, ` : ""}{s.comune}{s.provincia ? ` (${s.provincia})` : ""}</span>
@@ -141,6 +148,11 @@ export default async function StrutturaPage({ params }: { params: Promise<{ slug
                   <p className="text-foreground leading-relaxed text-lg">
                     {s.descrizione_storytelling || s.descrizione || "Nessuna descrizione disponibile."}
                   </p>
+                  {s.descrizione_storytelling && !s.verificato && (
+                    <p className="text-xs text-muted-foreground mt-2 italic">
+                      Descrizione rielaborata con l&apos;assistenza dell&apos;AI a partire da informazioni pubbliche.
+                    </p>
+                  )}
                 </div>
 
                 {/* Contatti */}

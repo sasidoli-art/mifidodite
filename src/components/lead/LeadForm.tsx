@@ -223,6 +223,15 @@ export function LeadForm({ strutturaId, strutturaNome }: LeadFormProps) {
         />
       </div>
 
+      {/* Consenso GDPR */}
+      <label className="flex items-start gap-2 text-xs text-muted-foreground cursor-pointer">
+        <input type="checkbox" required className="accent-primary mt-0.5 shrink-0" />
+        <span>
+          Acconsento all&apos;invio dei miei dati a <strong>{strutturaNome}</strong> per ricevere una risposta alla mia richiesta.{" "}
+          <a href="/privacy" className="underline text-primary">Privacy Policy</a>
+        </span>
+      </label>
+
       {error && (
         <p className="text-red-500 text-sm text-center">{error}</p>
       )}
@@ -235,14 +244,6 @@ export function LeadForm({ strutturaId, strutturaNome }: LeadFormProps) {
         <Send size={18} />
         {loading ? "Invio in corso..." : "Chiedi disponibilita"}
       </button>
-
-      <p className="text-xs text-center text-muted-foreground">
-        I tuoi dati saranno condivisi solo con questa struttura. Leggi la nostra{" "}
-        <a href="/privacy" className="underline">
-          privacy policy
-        </a>
-        .
-      </p>
     </form>
   );
 }

@@ -98,6 +98,12 @@ export default async function ArticoloPage({ params }: { params: Promise<{ slug:
             </Link>
           </div>
 
+          {/* Disclosure AI Act */}
+          <div className="flex items-center gap-2 bg-muted rounded-xl p-3 mb-6 text-xs text-muted-foreground">
+            <span>🤖</span>
+            <span>Questo articolo e stato scritto con l&apos;assistenza dell&apos;intelligenza artificiale e revisionato dalla redazione di MifidoDiTe.eu.</span>
+          </div>
+
           <article className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-foreground/80 prose-a:text-primary prose-strong:text-foreground"
             dangerouslySetInnerHTML={{ __html: articolo.contenuto }} />
 

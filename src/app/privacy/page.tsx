@@ -86,7 +86,18 @@ export default function PrivacyPage() {
             <h2>9. Sicurezza</h2>
             <p>Adottiamo misure tecniche e organizzative adeguate per proteggere i dati personali: crittografia in transito (HTTPS/TLS), password hashate con bcrypt, accesso ai dati limitato al personale autorizzato, backup cifrati.</p>
 
-            <h2>10. Modifiche alla policy</h2>
+            <h2>10. Utilizzo dell&apos;Intelligenza Artificiale</h2>
+            <p>MifidoDiTe.eu utilizza sistemi di intelligenza artificiale (AI) per le seguenti finalita:</p>
+            <ul>
+              <li><strong>Generazione di contenuti editoriali:</strong> gli articoli del magazine possono essere scritti con l&apos;assistenza dell&apos;AI e successivamente revisionati dalla redazione. Ogni articolo riporta una nota di trasparenza.</li>
+              <li><strong>Descrizioni delle strutture:</strong> le descrizioni emozionali (storytelling) delle strutture pet possono essere generate o rielaborate dall&apos;AI a partire da informazioni pubblicamente disponibili.</li>
+              <li><strong>Comunicazioni automatiche:</strong> alcune email di invito ai professionisti sono generate automaticamente dall&apos;AI. Ogni email contiene una nota di trasparenza.</li>
+              <li><strong>Analisi dati:</strong> l&apos;AI viene utilizzata per analizzare e strutturare informazioni raccolte da fonti pubbliche (siti web, directory, social media).</li>
+            </ul>
+            <p>I modelli AI utilizzati sono Claude (Anthropic, dati in EU) e DeepSeek. Nessun dato personale degli utenti viene utilizzato per addestrare modelli AI. L&apos;AI non prende decisioni automatizzate che producono effetti giuridici sugli utenti.</p>
+            <p>Ai sensi del Regolamento UE sull&apos;Intelligenza Artificiale (AI Act, Reg. 2024/1689), ci impegniamo alla massima trasparenza sull&apos;utilizzo di sistemi AI nel portale.</p>
+
+            <h2>11. Modifiche alla policy</h2>
             <p>Questa privacy policy puo essere aggiornata. La data dell'ultimo aggiornamento e indicata in cima alla pagina. In caso di modifiche sostanziali, ne daremo comunicazione via email agli utenti registrati.</p>
 
             <h2>11. Contatti</h2>

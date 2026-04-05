@@ -88,8 +88,9 @@ ${emailData.corpo.split("\n").map((p: string) => `<p style="color:#333;line-heig
   </a>
 </p>
 <p style="color:#999;font-size:12px;margin-top:24px;">
-  Ricevi questa email perche ${s.nome} e stato trovato su fonti pubbliche.
-  <a href="mailto:bau@mifidodite.eu" style="color:#999;">Scrivi a bau@mifidodite.eu per rimuovere i tuoi dati.</a>
+  Questa email e stata generata automaticamente da MifidoDiTe.eu.<br>
+  Ricevi questa email perche ${s.nome} e stato trovato su fonti pubbliche.<br>
+  <a href="mailto:bau@mifidodite.eu?subject=Rimozione dati ${s.nome}" style="color:#999;">Scrivi a bau@mifidodite.eu per rimuovere i tuoi dati.</a>
 </p>
 </body></html>`,
         });

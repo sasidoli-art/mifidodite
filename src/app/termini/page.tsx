@@ -77,9 +77,19 @@ export default function TerminiPage() {
             <p>Tutti i contenuti del Portale (testi, grafica, logo, codice) sono di proprieta di MifidoDiTe.eu o utilizzati su licenza. E vietata la riproduzione non autorizzata. I Professionisti mantengono la proprieta dei contenuti (foto, descrizioni) caricati sul proprio profilo.</p>
 
             <h2>9. Dati scraping</h2>
-            <p>Il Portale raccoglie informazioni pubblicamente disponibili su professionisti del settore pet da fonti pubbliche (siti web, pagine social, directory). Queste informazioni vengono utilizzate per creare profili base che i Professionisti possono reclamare e completare. Qualsiasi Professionista puo richiedere la rimozione del proprio profilo scrivendo a <a href="mailto:bau@mifidodite.eu">bau@mifidodite.eu</a>.</p>
+            <p>Il Portale raccoglie informazioni pubblicamente disponibili su professionisti del settore pet da fonti pubbliche (siti web, pagine social, directory). Queste informazioni vengono utilizzate per creare profili base che i Professionisti possono reclamare e completare. I profili importati automaticamente sono contrassegnati come tali. Qualsiasi Professionista puo richiedere la rimozione del proprio profilo scrivendo a <a href="mailto:bau@mifidodite.eu">bau@mifidodite.eu</a>. La rimozione avviene entro 48 ore dalla richiesta.</p>
 
-            <h2>10. Legge applicabile e foro competente</h2>
+            <h2>10. Contenuti generati con Intelligenza Artificiale</h2>
+            <p>Il Portale utilizza sistemi di intelligenza artificiale per:</p>
+            <ul>
+              <li>Generare e rielaborare contenuti editoriali (articoli del magazine)</li>
+              <li>Creare descrizioni emozionali delle strutture a partire da dati pubblici</li>
+              <li>Generare comunicazioni automatiche (email di invito ai professionisti)</li>
+              <li>Analizzare e strutturare dati raccolti da fonti pubbliche</li>
+            </ul>
+            <p>Tutti i contenuti generati dall&apos;AI sono identificati come tali tramite apposita nota di trasparenza. L&apos;AI non viene utilizzata per prendere decisioni automatizzate che producono effetti giuridici sugli utenti. Il Portale si impegna alla conformita con il Regolamento UE 2024/1689 (AI Act).</p>
+
+            <h2>11. Legge applicabile e foro competente</h2>
             <p>I presenti Termini sono regolati dalla legge italiana. Per qualsiasi controversia e competente il Foro del luogo di residenza del consumatore, ai sensi del D.Lgs. 206/2005 (Codice del Consumo).</p>
 
             <h2>11. Modifiche ai termini</h2>

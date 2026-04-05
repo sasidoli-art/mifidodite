@@ -1,119 +1,117 @@
 import { Header } from "@/components/landing/Header";
 import { Footer } from "@/components/landing/Footer";
-import { MapPin, Star, Waves } from "lucide-react";
-import Link from "next/link";
+import { MapPin, Waves } from "lucide-react";
+import { neon } from "@neondatabase/serverless";
 import { SPIAGGE_SEED } from "@/lib/spiagge-seed";
+
+export const dynamic = "force-dynamic";
 
 export const metadata = {
   title: "Spiagge Dog-Friendly in Italia — MifidoDiTe.eu",
-  description: "La guida completa alle spiagge italiane che accettano cani. Cerca per regione e trova la spiaggia perfetta per te e il tuo amico.",
+  description: "La guida completa alle spiagge italiane che accettano cani.",
 };
 
-const REGIONI = [...new Set(SPIAGGE_SEED.map((s) => s.regione))];
+interface Spiaggia {
+  nome: string;
+  slug: string;
+  comune: string;
+  provincia: string;
+  regione: string;
+  descrizione: string;
+  servizi: string[];
+  foto_copertina: string | null;
+}
 
-export default function SpiaggePage() {
+async function getSpiagge(): Promise<Record<string, Spiaggia[]>> {
+  if (process.env.DATABASE_URL) {
+    try {
+      const sql = neon(process.env.DATABASE_URL);
+      const rows = await sql`SELECT nome, slug, comune, provincia, regione, descrizione, servizi, foto_copertina FROM strutture WHERE categoria = 'spiaggia_dog_friendly' AND attivo = true ORDER BY regione, comune`;
+      if (rows.length > 0) {
+        const map: Record<string, Spiaggia[]> = {};
+        for (const r of rows) {
+          const regione = (r.regione as string) || "Altro";
+          if (!map[regione]) map[regione] = [];
+          map[regione].push(r as unknown as Spiaggia);
+        }
+        return map;
+      }
+    } catch {}
+  }
+  const map: Record<string, Spiaggia[]> = {};
+  for (const s of SPIAGGE_SEED) {
+    if (!map[s.regione]) map[s.regione] = [];
+    map[s.regione].push({ ...s, descrizione: s.descrizione, foto_copertina: s.img } as unknown as Spiaggia);
+  }
+  return map;
+}
+
+export default async function SpiaggePage() {
+  const perRegione = await getSpiagge();
+  const regioni = Object.keys(perRegione).sort();
+  const totale = Object.values(perRegione).flat().length;
+
   return (
     <>
       <Header />
       <main className="flex-1">
-        {/* Hero */}
         <section className="bg-gradient-to-br from-blue-50 via-cyan-50 to-sky-50 py-16">
           <div className="max-w-5xl mx-auto px-4 text-center">
-            <div className="text-5xl mb-4">🏖️</div>
             <h1 className="text-4xl sm:text-5xl font-extrabold text-foreground">
               Spiagge <span className="text-accent">Dog-Friendly</span> in Italia
             </h1>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              {SPIAGGE_SEED.length} spiagge verificate in {REGIONI.length} regioni dove il tuo cane e il benvenuto.
-              Dati reali da ENPA, Zampa Vacanza e fonti ufficiali.
+              {totale} spiagge verificate in {regioni.length} regioni dove il tuo cane e il benvenuto.
             </p>
-
-            {/* Filtro regioni */}
             <div className="mt-8 flex flex-wrap justify-center gap-2">
-              {REGIONI.map((r) => (
-                <a
-                  key={r}
-                  href={`#${r.toLowerCase().replace(/[\s-]+/g, "-")}`}
-                  className="bg-white text-foreground px-4 py-2 rounded-full text-sm font-medium hover:bg-accent hover:text-white transition-colors cursor-pointer shadow-sm"
-                >
-                  {r} ({SPIAGGE_SEED.filter((s) => s.regione === r).length})
+              {regioni.map((r) => (
+                <a key={r} href={`#${r.toLowerCase().replace(/[\s-]+/g, "-")}`}
+                  className="bg-white text-foreground px-4 py-2 rounded-full text-sm font-medium hover:bg-accent hover:text-white transition-colors shadow-sm">
+                  {r} ({perRegione[r].length})
                 </a>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Lista per regione */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          {REGIONI.map((regione) => {
-            const spiaggeRegione = SPIAGGE_SEED.filter((s) => s.regione === regione);
-            return (
-              <section key={regione} id={regione.toLowerCase().replace(/[\s-]+/g, "-")} className="mb-14 scroll-mt-24">
-                <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
-                  <Waves className="text-accent" size={24} />
-                  {regione}
-                  <span className="text-sm font-normal text-muted-foreground ml-2">
-                    ({spiaggeRegione.length} {spiaggeRegione.length === 1 ? "spiaggia" : "spiagge"})
-                  </span>
-                </h2>
-
-                <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {spiaggeRegione.map((spiaggia) => (
-                    <div
-                      key={spiaggia.slug}
-                      className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 border border-border/50"
-                    >
-                      <div className="relative h-48 overflow-hidden">
-                        <img
-                          src={spiaggia.img}
-                          alt={spiaggia.nome}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        />
-                        <span className="absolute top-3 left-3 bg-accent text-white text-xs font-bold px-2.5 py-1 rounded-full flex items-center gap-1">
-                          <Waves size={12} /> {spiaggia.tipo}
-                        </span>
-                      </div>
-
-                      <div className="p-4">
-                        <h3 className="font-bold text-lg text-foreground group-hover:text-accent transition-colors">
-                          {spiaggia.nome}
-                        </h3>
-                        <div className="flex items-center gap-1 mt-1 text-sm text-muted-foreground">
-                          <MapPin size={14} />
-                          {spiaggia.comune} ({spiaggia.provincia})
-                        </div>
-
-                        <p className="text-sm text-muted-foreground mt-2 line-clamp-3">
-                          {spiaggia.descrizione}
-                        </p>
-
-                        <div className="flex flex-wrap gap-1.5 mt-3">
-                          {spiaggia.servizi.slice(0, 4).map((s) => (
-                            <span key={s} className="text-xs bg-blue-50 text-accent px-2 py-0.5 rounded-full">
-                              {s}
-                            </span>
-                          ))}
-                          {spiaggia.servizi.length > 4 && (
-                            <span className="text-xs text-muted-foreground">+{spiaggia.servizi.length - 4}</span>
-                          )}
-                        </div>
-                      </div>
+          {regioni.map((regione) => (
+            <section key={regione} id={regione.toLowerCase().replace(/[\s-]+/g, "-")} className="mb-14 scroll-mt-24">
+              <h2 className="text-2xl font-bold text-foreground mb-6 flex items-center gap-2">
+                <Waves className="text-accent" size={24} /> {regione}
+                <span className="text-sm font-normal text-muted-foreground ml-2">({perRegione[regione].length})</span>
+              </h2>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {perRegione[regione].map((s) => (
+                  <div key={s.slug} className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 border border-border/50">
+                    <div className="h-48 overflow-hidden">
+                      <img src={s.foto_copertina || "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=80"} alt={s.nome} className="w-full h-full object-cover" />
                     </div>
-                  ))}
-                </div>
-              </section>
-            );
-          })}
+                    <div className="p-4">
+                      <h3 className="font-bold text-lg text-foreground">{s.nome}</h3>
+                      <div className="flex items-center gap-1 mt-1 text-sm text-muted-foreground">
+                        <MapPin size={14} /> {s.comune} ({s.provincia})
+                      </div>
+                      <p className="text-sm text-muted-foreground mt-2 line-clamp-2">{s.descrizione}</p>
+                      {s.servizi && s.servizi.length > 0 && (
+                        <div className="flex flex-wrap gap-1.5 mt-3">
+                          {s.servizi.slice(0, 4).map((sv) => (
+                            <span key={sv} className="text-xs bg-blue-50 text-accent px-2 py-0.5 rounded-full">{sv}</span>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          ))}
         </div>
 
-        {/* Disclaimer */}
         <section className="py-8 bg-muted/50">
           <div className="max-w-3xl mx-auto px-4 text-center">
             <p className="text-sm text-muted-foreground">
-              Verifica sempre le ordinanze comunali prima di recarti in spiaggia con il tuo cane.
-              Le regole possono cambiare di stagione in stagione (generalmente da Pasqua al 2 novembre).
-              <br />
-              Fonti: ENPA, Zampa Vacanza, Dogwelcome, Wamiz, VacanzeAnimali.
+              Verifica le ordinanze comunali prima di recarti in spiaggia con il tuo cane. Fonti: ENPA, Zampa Vacanza, Dogwelcome.
             </p>
           </div>
         </section>

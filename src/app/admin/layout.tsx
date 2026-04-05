@@ -8,6 +8,7 @@ import {
   Mail,
   Tag,
   Bot,
+  Database,
   Settings,
   LogOut,
 } from "lucide-react";
@@ -21,6 +22,7 @@ const SIDEBAR_LINKS = [
   { href: "/admin/lead", label: "Lead", icon: MessageSquare },
   { href: "/admin/articoli", label: "Articoli", icon: Newspaper },
   { href: "/admin/newsletter", label: "Newsletter", icon: Mail },
+  { href: "/admin/export", label: "Esporta Dati", icon: Database },
 ];
 
 export default function AdminLayout({

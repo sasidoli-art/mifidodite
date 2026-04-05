@@ -99,9 +99,9 @@ export default function PrivacyPage() {
             <p>Ai sensi del Regolamento UE sull&apos;Intelligenza Artificiale (AI Act, Reg. 2024/1689), ci impegniamo alla massima trasparenza sull&apos;utilizzo di sistemi AI nel portale.</p>
 
             <h2>11. Modifiche alla policy</h2>
-            <p>Questa privacy policy puo essere aggiornata. La data dell'ultimo aggiornamento e indicata in cima alla pagina. In caso di modifiche sostanziali, ne daremo comunicazione via email agli utenti registrati.</p>
+            <p>Questa privacy policy puo essere aggiornata. La data dell&apos;ultimo aggiornamento e indicata in cima alla pagina. In caso di modifiche sostanziali, ne daremo comunicazione via email agli utenti registrati.</p>
 
-            <h2>11. Contatti</h2>
+            <h2>12. Contatti</h2>
             <p>
               Per qualsiasi domanda relativa alla privacy:<br />
               Email: <a href="mailto:bau@mifidodite.eu">bau@mifidodite.eu</a><br />

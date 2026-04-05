@@ -332,6 +332,15 @@ function ContattoForm({ annuncio }: { annuncio: AnnuncioSeed }) {
         </div>
       )}
 
+      {/* Consenso GDPR */}
+      <label className="flex items-start gap-2 text-xs text-muted-foreground cursor-pointer">
+        <input type="checkbox" required className="accent-primary mt-0.5 shrink-0" />
+        <span>
+          Acconsento all&apos;invio dei miei dati a {annuncio.nome_contatto} per essere contattato/a.{" "}
+          <a href="/privacy" className="underline text-primary">Privacy Policy</a>
+        </span>
+      </label>
+
       <button type="submit" disabled={loading}
         className="w-full bg-primary hover:bg-primary-dark text-white py-3 rounded-xl font-semibold flex items-center justify-center gap-2 transition-colors disabled:opacity-50 text-sm">
         <Send size={16} />

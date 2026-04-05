@@ -1,18 +1,22 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { AlertTriangle, Heart, MapPin, Phone, Clock, Search, Eye, Share2, Plus, Dog, Cat } from "lucide-react";
 import Link from "next/link";
-import { SOS_SEED } from "@/lib/sos-seed";
 import type { SOSSeed } from "@/lib/sos-seed";
 
 export function SOSContent() {
   const [tab, setTab] = useState<"perso" | "trovato">("perso");
   const [provincia, setProvincia] = useState("");
+  const [allSOS, setAllSOS] = useState<SOSSeed[]>([]);
 
-  const province = [...new Set(SOS_SEED.map((s) => s.provincia))].sort();
+  useEffect(() => {
+    fetch("/api/sos-list").then(r => r.json()).then(setAllSOS).catch(() => {});
+  }, []);
 
-  const filtered = SOS_SEED.filter((s) => {
+  const province = [...new Set(allSOS.map((s) => s.provincia))].sort();
+
+  const filtered = allSOS.filter((s: SOSSeed) => {
     if (s.tipo !== tab) return false;
     if (provincia && s.provincia !== provincia) return false;
     return true;
@@ -56,7 +60,7 @@ export function SOSContent() {
             </h3>
             <p className="text-xs text-muted-foreground mt-1">Il mio animale e scomparso</p>
             <span className="inline-block mt-2 text-xs font-semibold bg-red-100 text-red-600 rounded-full px-2.5 py-0.5">
-              {SOS_SEED.filter((s) => s.tipo === "perso").length} segnalazioni
+              {allSOS.filter((s) => s.tipo === "perso").length} segnalazioni
             </span>
           </button>
 
@@ -74,7 +78,7 @@ export function SOSContent() {
             </h3>
             <p className="text-xs text-muted-foreground mt-1">Ho trovato un animale vagante</p>
             <span className="inline-block mt-2 text-xs font-semibold bg-green-100 text-green-600 rounded-full px-2.5 py-0.5">
-              {SOS_SEED.filter((s) => s.tipo === "trovato").length} segnalazioni
+              {allSOS.filter((s) => s.tipo === "trovato").length} segnalazioni
             </span>
           </button>
         </div>

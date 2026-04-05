@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { Heart, HandHeart, Search, MapPin, Filter, Plus, Syringe, Shield, Dog, Cat, Baby, X, ExternalLink, RefreshCw } from "lucide-react";
 import Link from "next/link";
-import { ADOZIONI_SEED, formatEta } from "@/lib/adozioni-seed";
+import { formatEta } from "@/lib/adozioni-seed";
 import type { AnnuncioSeed } from "@/lib/adozioni-seed";
 
 const TABS = [
@@ -17,8 +17,13 @@ export function AdozioniContent() {
   const [specie, setSpecie] = useState<string>("");
   const [taglia, setTaglia] = useState<string>("");
   const [provincia, setProvincia] = useState<string>("");
+  const [allAnnunci, setAllAnnunci] = useState<AnnuncioSeed[]>([]);
 
-  const filtered = ADOZIONI_SEED.filter((a) => {
+  useEffect(() => {
+    fetch("/api/adozioni-list").then(r => r.json()).then(data => setAllAnnunci(data)).catch(() => {});
+  }, []);
+
+  const filtered = allAnnunci.filter((a: AnnuncioSeed) => {
     if (a.tipo !== tab) return false;
     if (specie && a.specie !== specie) return false;
     if (taglia && a.taglia !== taglia) return false;
@@ -26,7 +31,7 @@ export function AdozioniContent() {
     return true;
   });
 
-  const province = [...new Set(ADOZIONI_SEED.filter((a) => a.tipo === tab).map((a) => a.provincia))].sort();
+  const province = [...new Set(allAnnunci.filter((a) => a.tipo === tab).map((a) => a.provincia))].sort();
 
   return (
     <>
@@ -70,7 +75,7 @@ export function AdozioniContent() {
               </h3>
               <p className="text-xs text-muted-foreground mt-1 hidden sm:block">{t.desc}</p>
               <span className="inline-block mt-2 text-xs font-semibold bg-muted rounded-full px-2.5 py-0.5">
-                {ADOZIONI_SEED.filter((a) => a.tipo === t.id).length} annunci
+                {allAnnunci.filter((a) => a.tipo === t.id).length} annunci
               </span>
             </button>
           ))}

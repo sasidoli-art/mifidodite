@@ -301,8 +301,16 @@ export function PubblicaForm() {
             )}
           </div>
 
+          <label className="flex items-start gap-2 text-xs text-muted-foreground cursor-pointer mt-4">
+            <input type="checkbox" required className="accent-primary mt-0.5 shrink-0" />
+            <span>
+              Autorizzo la pubblicazione di questo annuncio e dei miei dati di contatto su MifidoDiTe.eu.
+              Dichiaro che le informazioni sono veritiere. <a href="/privacy" className="underline text-primary">Privacy Policy</a>
+            </span>
+          </label>
+
           <button type="submit" disabled={loading}
-            className="w-full mt-6 bg-primary hover:bg-primary-dark text-white py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 transition-colors disabled:opacity-50">
+            className="w-full mt-4 bg-primary hover:bg-primary-dark text-white py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 transition-colors disabled:opacity-50">
             <Heart size={20} />
             {loading ? "Invio in corso..." : "Pubblica annuncio"}
           </button>

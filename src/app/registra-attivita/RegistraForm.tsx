@@ -193,13 +193,23 @@ export function RegistraForm() {
         <p className="text-xs text-amber-700 mt-1.5">Se te l'ha dato un amico o un professionista, inseriscilo per ottenere vantaggi esclusivi.</p>
       </div>
 
+      {/* Consenso GDPR */}
+      <label className="flex items-start gap-2 text-xs text-muted-foreground cursor-pointer">
+        <input type="checkbox" required className="accent-primary mt-0.5 shrink-0" />
+        <span>
+          Acconsento alla pubblicazione della mia attivita su MifidoDiTe.eu e dichiaro che le informazioni fornite sono veritiere.
+          Accetto i <a href="/termini" className="underline text-primary">termini di servizio</a> e
+          la <a href="/privacy" className="underline text-primary">privacy policy</a>.
+        </span>
+      </label>
+
       <button type="submit" disabled={loading}
         className="w-full bg-primary hover:bg-primary-dark text-white py-4 rounded-xl font-bold text-lg flex items-center justify-center gap-2 transition-colors disabled:opacity-50">
         {loading ? "Registrazione in corso..." : "Registra la mia attivita — gratis"}
       </button>
 
       <p className="text-xs text-center text-muted-foreground">
-        Registrandoti accetti i nostri <a href="/termini" className="underline">termini di servizio</a> e
+        Il listing base e gratuito per sempre. <a href="/per-professionisti" className="underline">Vedi i piani</a> e
         la <a href="/privacy" className="underline">privacy policy</a>.
       </p>
     </form>

@@ -64,6 +64,7 @@ export default function PrivacyPage() {
               <li>Dati account e profilo: per tutta la durata dell'account, cancellati entro 30 giorni dalla richiesta di cancellazione.</li>
               <li>Dati newsletter: fino alla disiscrizione.</li>
               <li>Dati lead: 12 mesi dalla richiesta, poi anonimizzati.</li>
+              <li>Annunci adozione e SOS smarriti: 60 giorni dalla pubblicazione, poi cancellati automaticamente. L&apos;utente puo richiedere la rimozione anticipata in qualsiasi momento.</li>
               <li>Dati di navigazione: 26 mesi.</li>
             </ul>
 

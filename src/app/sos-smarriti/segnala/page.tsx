@@ -196,8 +196,16 @@ export default function SegnalaPage() {
                   )}
                 </div>
 
+                <label className="flex items-start gap-2 text-xs text-muted-foreground cursor-pointer">
+                  <input type="checkbox" required className="accent-primary mt-0.5 shrink-0" />
+                  <span>
+                    Autorizzo la pubblicazione di questa segnalazione e dei miei contatti (telefono, nome) su MifidoDiTe.eu.
+                    I dati saranno visibili pubblicamente. <a href="/privacy" className="underline text-primary">Privacy Policy</a>
+                  </span>
+                </label>
+
                 <button type="submit" disabled={loading}
-                  className={`w-full py-4 rounded-xl font-bold text-lg text-white flex items-center justify-center gap-2 transition-colors disabled:opacity-50 ${
+                  className={`w-full mt-2 py-4 rounded-xl font-bold text-lg text-white flex items-center justify-center gap-2 transition-colors disabled:opacity-50 ${
                     form.tipo === "perso" ? "bg-red-500 hover:bg-red-600" : "bg-green-500 hover:bg-green-600"
                   }`}>
                   <AlertTriangle size={20} />

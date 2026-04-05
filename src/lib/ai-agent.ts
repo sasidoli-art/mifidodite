@@ -1,21 +1,28 @@
 // ============================================
 // AI Agent — wrapper multi-provider
-// Supporta: Claude Haiku (Anthropic) + Grok (xAI)
-// Usa Claude come primario, Grok come fallback
+// Claude Haiku (primario) → DeepSeek (fallback economico) → Grok (ultimo)
 // ============================================
 
-// Chiama l'AI migliore disponibile
 export async function askAI(prompt: string, maxTokens: number = 4000): Promise<string> {
-  // Prova Claude prima (piu economico e preciso per i nostri usi)
+  // 1. Claude Haiku (preciso, economico)
   if (process.env.ANTHROPIC_API_KEY) {
     try {
       return await askClaude(prompt, maxTokens);
     } catch (err) {
-      console.warn("[AI] Claude fallito, provo Grok:", (err as Error).message);
+      console.warn("[AI] Claude fallito:", (err as Error).message);
     }
   }
 
-  // Fallback su Grok
+  // 2. DeepSeek (molto economico, buona qualita)
+  if (process.env.DEEPSEEK_API_KEY) {
+    try {
+      return await askDeepSeek(prompt, maxTokens);
+    } catch (err) {
+      console.warn("[AI] DeepSeek fallito:", (err as Error).message);
+    }
+  }
+
+  // 3. Grok (ultimo tentativo)
   if (process.env.GROK_API_KEY) {
     try {
       return await askGrok(prompt, maxTokens);
@@ -24,7 +31,7 @@ export async function askAI(prompt: string, maxTokens: number = 4000): Promise<s
     }
   }
 
-  throw new Error("Nessuna API AI configurata (serve ANTHROPIC_API_KEY o GROK_API_KEY)");
+  throw new Error("Nessuna API AI configurata (serve ANTHROPIC_API_KEY, DEEPSEEK_API_KEY o GROK_API_KEY)");
 }
 
 // Claude Haiku (Anthropic)
@@ -48,14 +55,41 @@ export async function askClaude(prompt: string, maxTokens: number = 4000): Promi
 
   if (!res.ok) {
     const err = await res.text();
-    throw new Error(`Claude API error: ${err}`);
+    throw new Error(`Claude: ${err}`);
   }
 
   const data = await res.json();
   return data.content?.[0]?.text || "";
 }
 
-// Grok (xAI) — compatibile con API OpenAI
+// DeepSeek (API compatibile OpenAI)
+export async function askDeepSeek(prompt: string, maxTokens: number = 4000): Promise<string> {
+  const apiKey = process.env.DEEPSEEK_API_KEY;
+  if (!apiKey) throw new Error("DEEPSEEK_API_KEY mancante");
+
+  const res = await fetch("https://api.deepseek.com/v1/chat/completions", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${apiKey}`,
+    },
+    body: JSON.stringify({
+      model: "deepseek-chat",
+      max_tokens: maxTokens,
+      messages: [{ role: "user", content: prompt }],
+    }),
+  });
+
+  if (!res.ok) {
+    const err = await res.text();
+    throw new Error(`DeepSeek: ${err}`);
+  }
+
+  const data = await res.json();
+  return data.choices?.[0]?.message?.content || "";
+}
+
+// Grok (xAI — API compatibile OpenAI)
 export async function askGrok(prompt: string, maxTokens: number = 4000): Promise<string> {
   const apiKey = process.env.GROK_API_KEY;
   if (!apiKey) throw new Error("GROK_API_KEY mancante");
@@ -75,20 +109,18 @@ export async function askGrok(prompt: string, maxTokens: number = 4000): Promise
 
   if (!res.ok) {
     const err = await res.text();
-    throw new Error(`Grok API error: ${err}`);
+    throw new Error(`Grok: ${err}`);
   }
 
   const data = await res.json();
   return data.choices?.[0]?.message?.content || "";
 }
 
-// Estrai JSON da una risposta che potrebbe contenere testo extra
+// Estrai JSON da una risposta
 export function extractJSON(text: string): unknown {
-  // Cerca array JSON
   const arrayMatch = text.match(/\[[\s\S]*\]/);
   if (arrayMatch) return JSON.parse(arrayMatch[0]);
 
-  // Cerca oggetto JSON
   const objMatch = text.match(/\{[\s\S]*\}/);
   if (objMatch) return JSON.parse(objMatch[0]);
 

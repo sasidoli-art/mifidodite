@@ -5,6 +5,7 @@ import { useState, useEffect } from "react";
 import { Menu, PawPrint } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { motion } from "framer-motion";
+import { NewsletterPopup } from "@/components/shared/NewsletterPopup";
 
 const NAV_LINKS = [
   { href: "/magazine", label: "Magazine" },
@@ -26,6 +27,8 @@ const NAV_MOBILE_EXTRA = [
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
 
+  const [showNewsletter, setShowNewsletter] = useState(false);
+
   useEffect(() => {
     function onScroll() { setScrolled(window.scrollY > 20); }
     window.addEventListener("scroll", onScroll);
@@ -33,6 +36,8 @@ export function Header() {
   }, []);
 
   return (
+    <>
+    <NewsletterPopup open={showNewsletter} onClose={() => setShowNewsletter(false)} />
     <motion.header
       className={`sticky top-0 z-50 transition-all duration-300 ${
         scrolled
@@ -78,9 +83,9 @@ export function Header() {
             </Link>
 
             <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
-              <Link href="#newsletter" className="ml-2 bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-primary-dark transition-colors">
+              <button onClick={() => setShowNewsletter(true)} className="ml-2 bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-primary-dark transition-colors">
                 Iscriviti gratis
-              </Link>
+              </button>
             </motion.div>
           </nav>
 
@@ -111,9 +116,9 @@ export function Header() {
                   <Link href="/per-professionisti" className="px-4 py-3 rounded-lg text-base font-medium text-primary hover:bg-primary/5">
                     Sei un professionista?
                   </Link>
-                  <Link href="#newsletter" className="mx-4 mt-2 py-3 rounded-lg text-base font-medium bg-primary text-white text-center">
+                  <button onClick={() => setShowNewsletter(true)} className="mx-4 mt-2 py-3 rounded-lg text-base font-medium bg-primary text-white text-center">
                     Iscriviti gratis
-                  </Link>
+                  </button>
                 </div>
               </SheetContent>
             </Sheet>
@@ -121,5 +126,6 @@ export function Header() {
         </div>
       </div>
     </motion.header>
+    </>
   );
 }

@@ -22,16 +22,7 @@ export async function askAI(prompt: string, maxTokens: number = 4000): Promise<s
     }
   }
 
-  // 3. Grok (ultimo tentativo)
-  if (process.env.GROK_API_KEY) {
-    try {
-      return await askGrok(prompt, maxTokens);
-    } catch (err) {
-      console.error("[AI] Anche Grok fallito:", (err as Error).message);
-    }
-  }
-
-  throw new Error("Nessuna API AI configurata (serve ANTHROPIC_API_KEY, DEEPSEEK_API_KEY o GROK_API_KEY)");
+  throw new Error("Nessuna API AI configurata (serve ANTHROPIC_API_KEY o DEEPSEEK_API_KEY)");
 }
 
 // Claude Haiku (Anthropic)

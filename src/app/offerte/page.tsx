@@ -1,21 +1,27 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Header } from "@/components/landing/Header";
 import { Footer } from "@/components/landing/Footer";
 import { Tag, MapPin, Clock, Filter, X, ShoppingBag, ArrowRight, Sparkles, Building2 } from "lucide-react";
 import { motion } from "framer-motion";
 import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/shared/AnimatedSection";
-import { OFFERTE_SEED, CATEGORIE_PRODOTTO } from "@/lib/offerte-seed";
+import { CATEGORIE_PRODOTTO } from "@/lib/offerte-seed";
 import type { OffertaSeed } from "@/lib/offerte-seed";
 
 export default function OffertePage() {
   const [categoria, setCategoria] = useState("");
   const [marca, setMarca] = useState("");
+  const [allOfferte, setAllOfferte] = useState<OffertaSeed[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  const marche = [...new Set(OFFERTE_SEED.map((o) => o.marca).filter(Boolean))].sort() as string[];
+  useEffect(() => {
+    fetch("/api/offerte").then(r => r.json()).then(setAllOfferte).catch(() => {}).finally(() => setLoading(false));
+  }, []);
 
-  const filtered = OFFERTE_SEED.filter((o) => {
+  const marche = [...new Set(allOfferte.map((o) => o.marca).filter(Boolean))].sort() as string[];
+
+  const filtered = allOfferte.filter((o) => {
     if (categoria && o.categoria_prodotto !== categoria) return false;
     if (marca && o.marca !== marca) return false;
     return true;
@@ -87,11 +93,11 @@ export default function OffertePage() {
                     !categoria ? "bg-primary text-white border-primary" : "bg-white text-foreground"
                   }`}
                   whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-                  <ShoppingBag size={15} /> Tutte ({OFFERTE_SEED.length})
+                  <ShoppingBag size={15} /> Tutte ({allOfferte.length})
                 </motion.button>
               </StaggerItem>
               {Object.entries(CATEGORIE_PRODOTTO).map(([key, { label, emoji }]) => {
-                const count = OFFERTE_SEED.filter((o) => o.categoria_prodotto === key).length;
+                const count = allOfferte.filter((o) => o.categoria_prodotto === key).length;
                 if (count === 0) return null;
                 return (
                   <StaggerItem key={key}>

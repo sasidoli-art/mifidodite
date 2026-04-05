@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import { Fredoka, Nunito } from "next/font/google";
 import "./globals.css";
+import { CookieBanner } from "@/components/shared/CookieBanner";
+
+function CookieBannerWrapper() {
+  return <CookieBanner />;
+}
 
 // Font consigliati da UI/UX Pro Max skill
 // Riga 6: Playful Creative — "Rounded, friendly fonts perfect for playful UIs"
@@ -71,7 +76,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        {children}
+        <CookieBannerWrapper />
+      </body>
     </html>
   );
 }

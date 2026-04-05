@@ -58,7 +58,8 @@ export function Footer() {
               <li><Link href="/per-professionisti" className="hover:text-primary transition-colors">Per i professionisti</Link></li>
               <li><Link href="/chi-siamo" className="hover:text-primary transition-colors">Chi siamo</Link></li>
               <li><Link href="/privacy" className="hover:text-primary transition-colors">Privacy Policy</Link></li>
-              <li><Link href="/termini" className="hover:text-primary transition-colors">Termini di servizio</Link></li>
+              <li><Link href="/termini" className="hover:text-primary transition-colors">Termini e Condizioni</Link></li>
+              <li><Link href="/legal" className="hover:text-primary transition-colors">Documenti legali</Link></li>
             </ul>
           </div>
         </div>

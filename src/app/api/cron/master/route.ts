@@ -71,8 +71,12 @@ export async function GET(request: NextRequest) {
       await callAgent("writer", "/api/agents/writer");
       break;
 
-    case 5: // VENERDI — Outreach
-      await callAgent("outreach", "/api/agents/outreach");
+    case 5: // VENERDI — Outreach DISABILITATO (Art. 130 Codice Privacy: email non sollecitate)
+      // L'outreach verra riabilitato solo quando i professionisti si registreranno
+      // volontariamente e daranno consenso a ricevere comunicazioni.
+      // await callAgent("outreach", "/api/agents/outreach");
+      risultati.outreach = { status: "disabilitato", motivo: "Art. 130 Codice Privacy" };
+      taskEseguiti.push("outreach_DISABILITATO");
       break;
 
     case 6: // SABATO — Lost Pet Monitor

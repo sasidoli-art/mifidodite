@@ -123,6 +123,14 @@ export function Newsletter() {
                       </div>
                     </div>
 
+                    <label className="flex items-start gap-2 text-xs text-white/70 cursor-pointer">
+                      <input type="checkbox" required className="accent-white mt-0.5 shrink-0" />
+                      <span>
+                        Acconsento al trattamento dei miei dati per la newsletter. Posso cancellarmi quando voglio.{" "}
+                        <a href="/privacy" className="underline text-white/90">Privacy Policy</a>
+                      </span>
+                    </label>
+
                     <motion.button type="submit" disabled={loading}
                       className="w-full sm:w-auto sm:px-10 bg-white text-primary py-3.5 rounded-xl font-bold text-base flex items-center justify-center gap-2 hover:bg-white/95 transition-colors disabled:opacity-50 shadow-lg mx-auto"
                       whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>

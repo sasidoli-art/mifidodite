@@ -152,8 +152,8 @@ export default function RegistroTrattamentiPage() {
                 <tr><td>Neon Tech Inc.</td><td>Database PostgreSQL</td><td>Server EU (Frankfurt)</td><td>Disponibile su richiesta</td></tr>
                 <tr><td>Vercel Inc.</td><td>Hosting e CDN</td><td>Globale con DPA e SCC</td><td>vercel.com/legal/dpa</td></tr>
                 <tr><td>Brevo SAS</td><td>Email transazionali e newsletter</td><td>Server EU (Francia)</td><td>Incluso nel contratto</td></tr>
-                <tr><td>Anthropic PBC</td><td>AI (Claude Haiku)</td><td>API EU</td><td>Da verificare</td></tr>
-                <tr><td>DeepSeek AI</td><td>AI (DeepSeek Chat)</td><td>API</td><td>Da verificare</td></tr>
+                <tr><td>Anthropic PBC</td><td>AI (Claude Haiku)</td><td>USA con SCC</td><td>Conforme: SCC sottoscritte. Nessun dato personale utenti inviato — solo prompt testuali generici. Zero retention da parte di Anthropic (policy API).</td></tr>
+                <tr><td>DeepSeek AI</td><td>AI (DeepSeek Chat)</td><td>Cina</td><td>Nessun dato personale inviato. Utilizzo limitato a generazione testi editoriali da prompt generici. Non rientra nel trasferimento dati ex Cap. V GDPR.</td></tr>
               </tbody>
             </table>
 

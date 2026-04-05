@@ -113,18 +113,22 @@ export function NewsletterPopup({ open, onClose }: Props) {
                 onChange={(e) => setNomeAnimale(e.target.value)}
                 className="w-full px-4 py-3 rounded-xl border border-border outline-none focus:ring-2 focus:ring-primary/30 text-sm" />
 
+              {/* Consenso GDPR */}
+              <label className="flex items-start gap-2 text-xs text-muted-foreground cursor-pointer">
+                <input type="checkbox" required className="accent-primary mt-0.5 shrink-0" />
+                <span>
+                  Acconsento al trattamento dei miei dati per l&apos;invio della newsletter settimanale.
+                  Posso cancellarmi in qualsiasi momento. <a href="/privacy" className="underline text-primary">Privacy Policy</a>
+                </span>
+              </label>
+
               {error && <p className="text-red-500 text-sm text-center">{error}</p>}
 
-              {/* Submit */}
               <button type="submit" disabled={loading}
                 className="w-full bg-primary hover:bg-primary-dark text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2 transition-colors disabled:opacity-50">
                 <Send size={16} />
                 {loading ? "Un momento..." : "Iscrivimi gratis"}
               </button>
-
-              <p className="text-xs text-center text-muted-foreground">
-                Zero spam. Cancellati quando vuoi.
-              </p>
             </form>
           </>
         )}

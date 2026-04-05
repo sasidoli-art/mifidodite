@@ -1,49 +1,45 @@
 import { NextRequest, NextResponse } from "next/server";
-import { createClient } from "@/lib/supabase/server";
+import { neon } from "@neondatabase/serverless";
 import { syncContact } from "@/lib/brevo";
 import { rateLimit, getClientIP } from "@/lib/rate-limit";
 
 export async function POST(request: NextRequest) {
-  const { allowed } = rateLimit(getClientIP(request), 3, 60000); // max 3 iscrizioni/minuto
+  const { allowed } = rateLimit(getClientIP(request), 3, 60000);
   if (!allowed) return NextResponse.json({ error: "Troppe richieste. Riprova tra un minuto." }, { status: 429 });
+
   const body = await request.json();
-  const { email, cap, nome, tipo_animale, categorie_interesse } = body;
+  const { email, cap, nome, tipo_animale, nome_animale } = body;
 
   if (!email || !email.includes("@")) {
-    return NextResponse.json(
-      { error: "Email non valida" },
-      { status: 400 }
-    );
+    return NextResponse.json({ error: "Email non valida" }, { status: 400 });
   }
 
-  const supabase = await createClient();
+  const emailClean = email.toLowerCase().trim();
 
-  const { error } = await supabase.from("newsletter_iscritti").upsert(
-    {
-      email: email.toLowerCase().trim(),
-      cap: cap || null,
-      nome: nome || null,
+  if (process.env.DATABASE_URL) {
+    try {
+      const sql = neon(process.env.DATABASE_URL);
+      const existing = await sql`SELECT id FROM newsletter_iscritti WHERE email = ${emailClean} LIMIT 1`;
+
+      if (existing.length > 0) {
+        await sql`UPDATE newsletter_iscritti SET cap = ${cap || null}, nome = ${nome || nome_animale || null}, tipo_animale = ${tipo_animale || 'cane'} WHERE email = ${emailClean}`;
+      } else {
+        await sql`INSERT INTO newsletter_iscritti (email, cap, nome, tipo_animale, attivo) VALUES (${emailClean}, ${cap || null}, ${nome || nome_animale || null}, ${tipo_animale || 'cane'}, ${true})`;
+      }
+    } catch (err) {
+      console.error("Newsletter DB error:", err);
+      return NextResponse.json({ error: "Errore durante l'iscrizione. Riprova." }, { status: 500 });
+    }
+  }
+
+  if (process.env.BREVO_API_KEY) {
+    syncContact({
+      email: emailClean,
+      nome: nome || nome_animale || undefined,
+      cap: cap || undefined,
       tipo_animale: tipo_animale || "cane",
-      categorie_interesse: categorie_interesse || [],
-    },
-    { onConflict: "email" }
-  );
-
-  if (error) {
-    console.error("Newsletter signup error:", error);
-    return NextResponse.json(
-      { error: "Errore durante l'iscrizione. Riprova." },
-      { status: 500 }
-    );
+    }).catch((err) => console.error("Brevo sync error:", err));
   }
-
-  // Sync con Brevo (non blocca la risposta)
-  syncContact({
-    email: email.toLowerCase().trim(),
-    nome: nome || undefined,
-    cap: cap || undefined,
-    tipo_animale: tipo_animale || "cane",
-  }).catch((err) => console.error("Brevo sync error:", err));
 
   return NextResponse.json({ success: true });
 }

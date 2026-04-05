@@ -3,11 +3,12 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { StaggerContainer, StaggerItem } from "@/components/shared/AnimatedSection";
-import { Home, Umbrella, Scissors, Dog, GraduationCap, Stethoscope, Camera, Car } from "lucide-react";
+import { Home, Umbrella, Scissors, Dog, GraduationCap, Stethoscope, Camera, Car, Hotel } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
 
 const CATEGORIES: { icon: LucideIcon; label: string; desc: string; href: string; color: string; iconColor: string }[] = [
   { icon: Home, label: "Pensioni", desc: "Lascia il tuo amico in mani sicure", href: "/professionisti?cat=pensione", color: "from-orange-100 to-orange-50", iconColor: "text-orange-500" },
+  { icon: Hotel, label: "Hotel pet-friendly", desc: "Viaggia col tuo amico senza rinunce", href: "/professionisti?cat=hotel_pet_friendly", color: "from-indigo-100 to-indigo-50", iconColor: "text-indigo-500" },
   { icon: Umbrella, label: "Spiagge dog-friendly", desc: "Mare e sabbia anche per lui", href: "/spiagge", color: "from-blue-100 to-blue-50", iconColor: "text-blue-500" },
   { icon: Scissors, label: "Toelettatura", desc: "Bello, pulito e coccolato", href: "/professionisti?cat=toelettatura", color: "from-pink-100 to-pink-50", iconColor: "text-pink-500" },
   { icon: Dog, label: "Dog sitter", desc: "Come stare a casa, ma meglio", href: "/professionisti?cat=dog_sitter", color: "from-green-100 to-green-50", iconColor: "text-green-500" },

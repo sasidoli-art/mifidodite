@@ -23,8 +23,8 @@ interface Evento {
 async function getEventi(): Promise<Evento[]> {
   if (process.env.DATABASE_URL) {
     try {
-      const { getDB } = await import("@/lib/db");
-      const sql = getDB();
+      const { neon } = await import("@neondatabase/serverless");
+      const sql = neon(process.env.DATABASE_URL!);
       const rows = await sql`SELECT id, titolo, tipo, data_inizio::text, data_fine::text, citta, regione, sommario, organizzatore, prezzo FROM eventi WHERE attivo = true ORDER BY data_inizio ASC`;
       if (rows.length > 0) return rows as Evento[];
     } catch { /* fallback */ }

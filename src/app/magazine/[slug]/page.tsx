@@ -7,8 +7,8 @@ import { ARTICOLI_SEED } from "@/lib/articoli-seed";
 async function getArticolo(slug: string) {
   if (process.env.DATABASE_URL) {
     try {
-      const { getDB } = await import("@/lib/db");
-      const sql = getDB();
+      const { neon } = await import("@neondatabase/serverless");
+      const sql = neon(process.env.DATABASE_URL!);
       const rows = await sql`SELECT * FROM articoli WHERE slug = ${slug} AND pubblicato = true LIMIT 1`;
       if (rows.length > 0) {
         const r = rows[0] as Record<string, unknown>;
@@ -32,8 +32,8 @@ async function getArticolo(slug: string) {
 async function getCorrelati(categoria: string, excludeSlug: string) {
   if (process.env.DATABASE_URL) {
     try {
-      const { getDB } = await import("@/lib/db");
-      const sql = getDB();
+      const { neon } = await import("@neondatabase/serverless");
+      const sql = neon(process.env.DATABASE_URL!);
       const rows = await sql`SELECT titolo, slug, img FROM articoli WHERE categoria = ${categoria} AND slug != ${excludeSlug} AND pubblicato = true ORDER BY created_at DESC LIMIT 3`;
       return rows.map((r: Record<string, unknown>) => ({
         slug: r.slug as string,

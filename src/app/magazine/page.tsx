@@ -13,8 +13,8 @@ export const metadata = {
 async function getArticoli() {
   if (process.env.DATABASE_URL) {
     try {
-      const { getDB } = await import("@/lib/db");
-      const sql = getDB();
+      const { neon } = await import("@neondatabase/serverless");
+      const sql = neon(process.env.DATABASE_URL!);
       const rows = await sql`SELECT titolo, slug, categoria, estratto, img, tempo_lettura, created_at FROM articoli WHERE pubblicato = true ORDER BY created_at DESC LIMIT 20`;
       if (rows.length > 0) {
         return rows.map((r: Record<string, unknown>) => ({

@@ -1,29 +1,32 @@
 import { NextRequest, NextResponse } from "next/server";
+import { neon } from "@neondatabase/serverless";
 import { PROFESSIONISTI_SEED } from "@/lib/professionisti-seed";
+
+export const dynamic = "force-dynamic";
 
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   const cat = searchParams.get("cat") || "";
   const q = searchParams.get("q") || "";
 
-  // Prova DB Neon
-  if (process.env.DATABASE_URL) {
+  const dbUrl = process.env.DATABASE_URL;
+
+  if (dbUrl) {
     try {
-      const { getDB } = await import("@/lib/db");
-      const sql = getDB();
+      const sql = neon(dbUrl);
 
       let results;
       if (cat && q) {
-        results = await sql`SELECT id, nome, slug, descrizione, categoria, comune, provincia, rating_medio, numero_recensioni, attivo FROM strutture WHERE attivo = true AND categoria = ${cat} AND (comune ILIKE ${'%' + q + '%'} OR provincia ILIKE ${'%' + q + '%'} OR nome ILIKE ${'%' + q + '%'}) ORDER BY nome LIMIT 50`;
+        results = await sql`SELECT id, nome, slug, descrizione, categoria, comune, provincia, rating_medio, numero_recensioni FROM strutture WHERE attivo = true AND categoria = ${cat} AND (comune ILIKE ${'%' + q + '%'} OR provincia ILIKE ${'%' + q + '%'} OR nome ILIKE ${'%' + q + '%'}) ORDER BY nome LIMIT 50`;
       } else if (cat) {
-        results = await sql`SELECT id, nome, slug, descrizione, categoria, comune, provincia, rating_medio, numero_recensioni, attivo FROM strutture WHERE attivo = true AND categoria = ${cat} ORDER BY nome LIMIT 50`;
+        results = await sql`SELECT id, nome, slug, descrizione, categoria, comune, provincia, rating_medio, numero_recensioni FROM strutture WHERE attivo = true AND categoria = ${cat} ORDER BY nome LIMIT 50`;
       } else if (q) {
-        results = await sql`SELECT id, nome, slug, descrizione, categoria, comune, provincia, rating_medio, numero_recensioni, attivo FROM strutture WHERE attivo = true AND (comune ILIKE ${'%' + q + '%'} OR provincia ILIKE ${'%' + q + '%'} OR nome ILIKE ${'%' + q + '%'}) ORDER BY nome LIMIT 50`;
+        results = await sql`SELECT id, nome, slug, descrizione, categoria, comune, provincia, rating_medio, numero_recensioni FROM strutture WHERE attivo = true AND (comune ILIKE ${'%' + q + '%'} OR provincia ILIKE ${'%' + q + '%'} OR nome ILIKE ${'%' + q + '%'}) ORDER BY nome LIMIT 50`;
       } else {
-        results = await sql`SELECT id, nome, slug, descrizione, categoria, comune, provincia, rating_medio, numero_recensioni, attivo FROM strutture WHERE attivo = true ORDER BY nome LIMIT 50`;
+        results = await sql`SELECT id, nome, slug, descrizione, categoria, comune, provincia, rating_medio, numero_recensioni FROM strutture WHERE attivo = true ORDER BY nome LIMIT 50`;
       }
 
-      const mapped = results.map((r: Record<string, unknown>) => ({
+      return NextResponse.json(results.map((r) => ({
         id: r.id,
         nome: r.nome,
         slug: r.slug,
@@ -37,11 +40,9 @@ export async function GET(request: NextRequest) {
         numero_recensioni: Number(r.numero_recensioni) || 0,
         piano: "free",
         in_evidenza: false,
-      }));
-
-      return NextResponse.json(mapped);
+      })));
     } catch (err) {
-      console.error("DB error, fallback to seed:", err);
+      console.error("[API strutture] DB error:", err);
     }
   }
 
@@ -52,6 +53,5 @@ export async function GET(request: NextRequest) {
     const ql = q.toLowerCase();
     data = data.filter((s) => s.comune.toLowerCase().includes(ql) || s.provincia?.toLowerCase().includes(ql) || s.nome.toLowerCase().includes(ql));
   }
-
   return NextResponse.json(data);
 }

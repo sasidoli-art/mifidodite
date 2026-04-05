@@ -1,8 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import { slugify } from "@/lib/utils";
+import { rateLimit, getClientIP } from "@/lib/rate-limit";
 
 export async function POST(request: NextRequest) {
+  const { allowed } = rateLimit(getClientIP(request), 3, 60000);
+  if (!allowed) return NextResponse.json({ error: "Troppe richieste." }, { status: 429 });
   const body = await request.json();
   const { tipo, descrizione, nome_contatto, telefono_contatto, comune, provincia } = body;
 

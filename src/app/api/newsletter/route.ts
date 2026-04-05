@@ -1,8 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
 import { createClient } from "@/lib/supabase/server";
 import { syncContact } from "@/lib/brevo";
+import { rateLimit, getClientIP } from "@/lib/rate-limit";
 
 export async function POST(request: NextRequest) {
+  const { allowed } = rateLimit(getClientIP(request), 3, 60000); // max 3 iscrizioni/minuto
+  if (!allowed) return NextResponse.json({ error: "Troppe richieste. Riprova tra un minuto." }, { status: 429 });
   const body = await request.json();
   const { email, cap, nome, tipo_animale, categorie_interesse } = body;
 

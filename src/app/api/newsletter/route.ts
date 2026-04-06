@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 import { neon } from "@neondatabase/serverless";
-import { syncContact } from "@/lib/brevo";
 import { rateLimit, getClientIP } from "@/lib/rate-limit";
 
 export async function POST(request: NextRequest) {
@@ -30,15 +29,6 @@ export async function POST(request: NextRequest) {
       console.error("Newsletter DB error:", err);
       return NextResponse.json({ error: "Errore durante l'iscrizione. Riprova." }, { status: 500 });
     }
-  }
-
-  if (process.env.BREVO_API_KEY) {
-    syncContact({
-      email: emailClean,
-      nome: nome || nome_animale || undefined,
-      cap: cap || undefined,
-      tipo_animale: tipo_animale || "cane",
-    }).catch((err) => console.error("Brevo sync error:", err));
   }
 
   return NextResponse.json({ success: true });

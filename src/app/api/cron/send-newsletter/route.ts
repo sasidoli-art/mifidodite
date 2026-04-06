@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { neon } from "@neondatabase/serverless";
-import { sendEmail, buildNewsletterHtml } from "@/lib/brevo";
+import { sendNewsletter, buildNewsletterHtml } from "@/lib/email";
 import { verifyCron } from "@/lib/cron-auth";
 import { logAgent, startTimer } from "@/lib/agent-logger";
 
@@ -11,8 +11,8 @@ export async function GET(request: NextRequest) {
   if (authError) return authError;
   const elapsed = startTimer();
 
-  if (!process.env.DATABASE_URL || !process.env.BREVO_API_KEY) {
-    return NextResponse.json({ success: false, motivo: "DATABASE_URL o BREVO_API_KEY mancante" });
+  if (!process.env.DATABASE_URL || !process.env.SMTP_PASS) {
+    return NextResponse.json({ success: false, motivo: "DATABASE_URL o SMTP_PASS mancante" });
   }
 
   const sql = neon(process.env.DATABASE_URL);
@@ -56,15 +56,11 @@ export async function GET(request: NextRequest) {
   // 6. SOS smarriti attivi
   const smarriti = await sql`SELECT nome_animale, comune, specie FROM sos_smarriti WHERE stato = 'attivo' ORDER BY created_at DESC LIMIT 3`;
 
-  // 7. Invio (max 290/giorno per Brevo free)
+  // 7. Invio via SMTP Aruba
   let inviati = 0;
-  const maxGiornaliero = 290;
 
   for (const iscritto of iscritti) {
-    if (inviati >= maxGiornaliero) break;
-
     try {
-      // Filtra novita per provincia
       let locali = novita || [];
       if (iscritto.provincia) {
         const filtrate = locali.filter((n) => n.provincia === iscritto.provincia);
@@ -97,10 +93,11 @@ export async function GET(request: NextRequest) {
         appUrl,
       });
 
-      const sent = await sendEmail({
-        to: [{ email: iscritto.email as string, name: (iscritto.nome as string) || undefined }],
-        subject: `🐾 Novita pet vicino a ${(iscritto.comune as string) || "te"} — MifidoDiTe`,
-        htmlContent: html,
+      const sent = await sendNewsletter({
+        to: iscritto.email as string,
+        nome: (iscritto.nome as string) || "",
+        comune: (iscritto.comune as string) || "la tua zona",
+        html,
       });
 
       if (sent) inviati++;

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyCron } from "@/lib/cron-auth";
 import { askAI, extractJSON } from "@/lib/ai-agent";
-import { sendEmail } from "@/lib/brevo";
+import { sendEmail } from "@/lib/email";
 import { logAgent, startTimer } from "@/lib/agent-logger";
 
 // ============================================
@@ -74,9 +74,9 @@ Rispondi SOLO con JSON: { "oggetto": "...", "corpo": "..." }`;
 
       if (emailData.oggetto && emailData.corpo) {
         const sent = await sendEmail({
-          to: [{ email: s.email }],
+          to: s.email,
           subject: emailData.oggetto,
-          htmlContent: `
+          html: `
 <!DOCTYPE html>
 <html><head><meta charset="utf-8"></head>
 <body style="font-family:Arial,sans-serif;max-width:500px;margin:0 auto;padding:20px;">

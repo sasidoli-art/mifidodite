@@ -2,11 +2,12 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { PawPrint, Lock, User, AlertCircle } from "lucide-react";
+import { PawPrint, Lock, Mail, AlertCircle } from "lucide-react";
+import Link from "next/link";
 
 export default function AdminLoginPage() {
   const router = useRouter();
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -16,17 +17,21 @@ export default function AdminLoginPage() {
     setLoading(true);
     setError("");
 
-    const res = await fetch("/api/admin-auth", {
+    const res = await fetch("/api/auth/login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ username, password }),
+      body: JSON.stringify({ email, password }),
     });
 
-    if (res.ok) {
+    const data = await res.json();
+
+    if (res.ok && data.user?.ruolo === "admin") {
       router.push("/admin");
       router.refresh();
+    } else if (res.ok) {
+      setError("Questo account non ha accesso admin.");
     } else {
-      setError("Credenziali non valide");
+      setError(data.error || "Credenziali non valide");
     }
     setLoading(false);
   }
@@ -44,17 +49,17 @@ export default function AdminLoginPage() {
 
         <form onSubmit={handleSubmit} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl p-8 space-y-5">
           <div>
-            <label className="block text-sm font-medium text-white/70 mb-1">Username</label>
+            <label className="block text-sm font-medium text-white/70 mb-1">Email</label>
             <div className="relative">
-              <User size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-white/30" />
+              <Mail size={18} className="absolute left-3 top-1/2 -translate-y-1/2 text-white/30" />
               <input
-                type="text"
+                type="email"
                 required
-                value={username}
-                onChange={(e) => setUsername(e.target.value)}
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="w-full pl-10 pr-4 py-3 rounded-xl bg-white/10 border border-white/10 text-white outline-none focus:border-primary focus:ring-1 focus:ring-primary placeholder:text-white/20"
-                placeholder="admin"
-                autoComplete="username"
+                placeholder="info@mifidodite.eu"
+                autoComplete="email"
               />
             </div>
           </div>
@@ -89,8 +94,13 @@ export default function AdminLoginPage() {
           >
             {loading ? "Accesso..." : "Accedi"}
           </button>
-        </form>
 
+          <div className="text-center">
+            <Link href="/forgot-password" className="text-white/40 text-sm hover:text-white/60 transition-colors">
+              Password dimenticata?
+            </Link>
+          </div>
+        </form>
       </div>
     </div>
   );

@@ -122,13 +122,22 @@ export async function askOpenRouter(prompt: string, maxTokens: number = 4000): P
   return data.choices?.[0]?.message?.content || "";
 }
 
-// Estrai JSON da una risposta
+// Estrai JSON da una risposta AI (gestisce markdown fences)
 export function extractJSON(text: string): unknown {
-  const arrayMatch = text.match(/\[[\s\S]*\]/);
-  if (arrayMatch) return JSON.parse(arrayMatch[0]);
+  // Rimuovi markdown code fences
+  const cleaned = text.replace(/```json\s*/gi, "").replace(/```\s*/g, "").trim();
 
-  const objMatch = text.match(/\{[\s\S]*\}/);
-  if (objMatch) return JSON.parse(objMatch[0]);
+  // Prova oggetto {...}
+  const objMatch = cleaned.match(/\{[\s\S]*\}/);
+  if (objMatch) {
+    try { return JSON.parse(objMatch[0]); } catch { /* try array */ }
+  }
 
-  throw new Error("Nessun JSON trovato nella risposta");
+  // Prova array [...]
+  const arrayMatch = cleaned.match(/\[[\s\S]*\]/);
+  if (arrayMatch) {
+    try { return JSON.parse(arrayMatch[0]); } catch { /* give up */ }
+  }
+
+  throw new Error("Nessun JSON valido trovato nella risposta AI");
 }

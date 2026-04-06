@@ -3,7 +3,6 @@
 import { useState, Suspense } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
-import { createClient } from "@/lib/supabase/client";
 
 export default function LoginPage() {
   return (
@@ -27,20 +26,21 @@ function LoginForm() {
     setLoading(true);
     setError("");
 
-    const supabase = createClient();
-    const { error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
+    const res = await fetch("/api/auth/login", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email, password }),
     });
 
-    if (error) {
-      setError("Email o password non corretti.");
-      setLoading(false);
-      return;
-    }
+    const data = await res.json();
 
-    router.push(redirect);
-    router.refresh();
+    if (res.ok) {
+      router.push(redirect);
+      router.refresh();
+    } else {
+      setError(data.error || "Email o password non corretti.");
+      setLoading(false);
+    }
   }
 
   return (
@@ -50,7 +50,7 @@ function LoginForm() {
           <Link href="/" className="inline-flex items-center gap-2">
             <span className="text-3xl">🐾</span>
             <span className="text-2xl font-bold text-primary">
-              MifidoDiTe<span className="text-foreground">.it</span>
+              MifidoDiTe<span className="text-foreground">.eu</span>
             </span>
           </Link>
           <h1 className="text-2xl font-bold text-foreground mt-6">Accedi al tuo account</h1>
@@ -78,10 +78,14 @@ function LoginForm() {
             {loading ? "Accesso in corso..." : "Accedi"}
           </button>
 
-          <p className="text-center text-sm text-muted-foreground">
-            Non hai un account?{" "}
-            <Link href="/signup" className="text-primary font-medium hover:underline">Registrati</Link>
-          </p>
+          <div className="flex items-center justify-between text-sm">
+            <Link href="/forgot-password" className="text-primary font-medium hover:underline">
+              Password dimenticata?
+            </Link>
+            <Link href="/signup" className="text-muted-foreground hover:text-foreground">
+              Registrati
+            </Link>
+          </div>
         </form>
       </div>
     </div>

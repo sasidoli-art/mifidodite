@@ -45,14 +45,14 @@ export async function logAgent(entry: AgentLogEntry) {
     `[Agent:${entry.agente}] ${emoji} ${entry.stato} | trovati:${entry.risultati_trovati || 0} salvati:${entry.risultati_salvati || 0} errori:${entry.errori || 0}${entry.citta ? ` | ${entry.citta}` : ""}${entry.errore_messaggio ? ` | ${entry.errore_messaggio}` : ""}`
   );
 
-  // Se errore, manda notifica email
-  if (entry.stato === "errore" && process.env.BREVO_API_KEY) {
+  // Se errore, manda notifica email via SMTP Aruba
+  if (entry.stato === "errore" && process.env.SMTP_PASS) {
     try {
-      const { sendEmail } = await import("@/lib/brevo");
+      const { sendEmail } = await import("@/lib/email");
       await sendEmail({
-        to: [{ email: "bau@mifidodite.eu" }],
-        subject: `⚠️ Agente ${entry.agente} in ERRORE`,
-        htmlContent: `
+        to: "info@mifidodite.eu",
+        subject: `Agente ${entry.agente} in ERRORE`,
+        html: `
           <h2>Agente ${entry.agente} ha fallito</h2>
           <p><strong>Errore:</strong> ${entry.errore_messaggio || "Sconosciuto"}</p>
           <p><strong>Citta:</strong> ${entry.citta || "N/A"}</p>

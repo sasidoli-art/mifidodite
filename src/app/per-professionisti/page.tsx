@@ -14,7 +14,7 @@ const PLANS = [
     price: "0",
     period: "per sempre",
     desc: "Provalo. Vedi che funziona.",
-    cta: "Inizia gratis",
+    cta: "Registrati con codice invito",
     ctaStyle: "border-2 border-primary text-primary hover:bg-primary hover:text-white",
     popular: false,
     badge: null,
@@ -38,7 +38,7 @@ const PLANS = [
     priceCents: "90",
     period: "al mese",
     desc: "Tutto quello che serve per lavorare.",
-    cta: "Inizia 14 giorni gratis",
+    cta: "Registrati con codice invito",
     ctaStyle: "bg-primary text-white hover:bg-primary-dark",
     popular: true,
     badge: "Scelta intelligente",
@@ -61,7 +61,7 @@ const PLANS = [
     priceCents: "90",
     period: "al mese",
     desc: "Solo 5€ in piu. Davvero vuoi rinunciarci?",
-    cta: "Inizia 14 giorni gratis",
+    cta: "Registrati con codice invito",
     ctaStyle: "bg-foreground text-white hover:bg-foreground/90",
     popular: false,
     badge: "Miglior valore",
@@ -156,7 +156,7 @@ export default function PerProfessionistiPage() {
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-14">
               <h2 className="text-3xl font-bold text-foreground">Scegli il tuo piano</h2>
-              <p className="mt-3 text-muted-foreground">Inizia gratis. Cresci quando vuoi. Cancelli quando vuoi.</p>
+              <p className="mt-3 text-muted-foreground">Registrati con codice invito. Cresci quando vuoi. Cancelli quando vuoi.</p>
             </div>
 
             <div className="grid md:grid-cols-3 gap-6 items-start">

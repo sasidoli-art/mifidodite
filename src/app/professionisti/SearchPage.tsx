@@ -82,9 +82,14 @@ export function SearchPage() {
       const data = await res.json();
       setResults(data);
 
-      // Se DB vuoto + categoria + citta + categoria supportata da OSM → fetch OSM
-      if (data.length === 0 && categoria && query && OSM_SUPPORTED.has(categoria)) {
-        await fetchOSM();
+      // Se DB vuoto + citta → fetch OSM (con categoria specifica o tutte)
+      if (data.length === 0 && query) {
+        if (categoria && OSM_SUPPORTED.has(categoria)) {
+          await fetchOSM(categoria);
+        } else if (!categoria) {
+          // Senza categoria: cerca su tutte quelle supportate
+          await fetchOSMAll();
+        }
       }
     } catch {
       setResults([]);
@@ -93,11 +98,11 @@ export function SearchPage() {
     }
   }
 
-  async function fetchOSM() {
+  async function fetchOSM(cat: string) {
     setLoadingOSM(true);
     try {
       const params = new URLSearchParams();
-      params.set("categoria", categoria);
+      params.set("categoria", cat);
       params.set("citta", query);
       params.set("limit", "30");
       const res = await fetch(`/api/osm?${params}`);
@@ -105,6 +110,28 @@ export function SearchPage() {
       if (data.places) setOsmResults(data.places);
     } catch (err) {
       console.error("OSM fetch error:", err);
+    } finally {
+      setLoadingOSM(false);
+    }
+  }
+
+  async function fetchOSMAll() {
+    setLoadingOSM(true);
+    try {
+      // Cerca su tutte le categorie supportate da OSM in parallelo
+      const cats = Array.from(OSM_SUPPORTED);
+      const promises = cats.map((c) => {
+        const p = new URLSearchParams();
+        p.set("categoria", c);
+        p.set("citta", query);
+        p.set("limit", "10");
+        return fetch(`/api/osm?${p}`).then((r) => r.json()).catch(() => null);
+      });
+      const results = await Promise.all(promises);
+      const allPlaces = results.flatMap((r) => (r?.places as OSMPlace[]) || []);
+      setOsmResults(allPlaces);
+    } catch (err) {
+      console.error("OSM fetch all error:", err);
     } finally {
       setLoadingOSM(false);
     }

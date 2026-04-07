@@ -144,12 +144,13 @@ export async function geocodeItaly(query: string): Promise<{ lat: number; lon: n
     const r = data[0];
     const lat = Number(r.lat);
     const lon = Number(r.lon);
-    // Crea bbox di ~10km (0.1 deg lat ~ 11km)
-    const radius = 0.1;
+    // Bbox ~25km (0.25 deg lat ~ 28km, 0.3 deg lon a Milano ~ 23km)
+    const radiusLat = 0.25;
+    const radiusLon = 0.3;
     return {
       lat,
       lon,
-      bbox: [lat - radius, lon - radius, lat + radius, lon + radius],
+      bbox: [lat - radiusLat, lon - radiusLon, lat + radiusLat, lon + radiusLon],
       nome: r.display_name,
     };
   } catch (err) {

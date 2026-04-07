@@ -14,6 +14,9 @@ export interface OffertaSeed {
   img: string;
   valido_dal: string;
   valido_al: string;
+  link_acquisto?: string | null;
+  affiliate_source?: string | null;
+  asin?: string | null;
 }
 
 export const OFFERTE_SEED: OffertaSeed[] = [

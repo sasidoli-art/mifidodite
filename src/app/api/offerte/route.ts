@@ -26,6 +26,9 @@ export async function GET() {
           img: r.img || "https://images.unsplash.com/photo-1589941013453-ec89f33b5e95?w=400&q=80",
           valido_dal: r.valido_dal,
           valido_al: r.valido_al,
+          link_acquisto: r.link_acquisto || null,
+          affiliate_source: r.affiliate_source || null,
+          asin: r.asin || null,
         })));
       }
     } catch (err) {

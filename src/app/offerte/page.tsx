@@ -186,10 +186,21 @@ export default function OffertePage() {
 function OffertaCard({ offerta: o }: { offerta: OffertaSeed }) {
   const catInfo = CATEGORIE_PRODOTTO[o.categoria_prodotto];
   const scaduto = new Date(o.valido_al) < new Date();
+  const trackingUrl = o.link_acquisto ? `/api/offerte/${o.id}/click` : null;
+
+  const CardWrapper = ({ children }: { children: React.ReactNode }) =>
+    trackingUrl && !scaduto ? (
+      <a href={trackingUrl} target="_blank" rel="sponsored nofollow noopener" className="block">
+        {children}
+      </a>
+    ) : (
+      <div>{children}</div>
+    );
 
   return (
+    <CardWrapper>
     <motion.div
-      className={`clay bg-white overflow-hidden group ${scaduto ? "opacity-50 grayscale" : ""}`}
+      className={`clay bg-white overflow-hidden group ${scaduto ? "opacity-50 grayscale" : ""} ${trackingUrl && !scaduto ? "cursor-pointer" : ""}`}
       whileHover={scaduto ? {} : { y: -4 }}
       transition={{ duration: 0.2 }}
     >
@@ -248,12 +259,20 @@ function OffertaCard({ offerta: o }: { offerta: OffertaSeed }) {
           )}
         </div>
 
-        {/* Validita */}
-        <div className="flex items-center gap-1 mt-3 pt-3 border-t border-border text-xs text-muted-foreground">
-          <Clock size={11} />
-          Fino al {new Date(o.valido_al).toLocaleDateString("it-IT", { day: "numeric", month: "short" })}
+        {/* Validita + CTA */}
+        <div className="flex items-center justify-between gap-1 mt-3 pt-3 border-t border-border text-xs text-muted-foreground">
+          <span className="flex items-center gap-1">
+            <Clock size={11} />
+            Fino al {new Date(o.valido_al).toLocaleDateString("it-IT", { day: "numeric", month: "short" })}
+          </span>
+          {trackingUrl && !scaduto && (
+            <span className="flex items-center gap-1 text-primary font-semibold">
+              Su {o.affiliate_source === "amazon" ? "Amazon" : o.nome_negozio} <ArrowRight size={11} />
+            </span>
+          )}
         </div>
       </div>
     </motion.div>
+    </CardWrapper>
   );
 }

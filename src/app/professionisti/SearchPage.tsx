@@ -2,12 +2,31 @@
 
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
-import { Search, MapPin, SlidersHorizontal, X, ExternalLink } from "lucide-react";
+import { Search, MapPin, SlidersHorizontal, X, ExternalLink, Phone, Globe, Navigation } from "lucide-react";
 import { StrutturaCard } from "@/components/shared/StrutturaCard";
 import { CATEGORIE_LABELS } from "@/lib/types";
 import type { StrutturaCard as StrutturaCardType, CategoriaTipo } from "@/lib/types";
 
 const CATEGORIE_OPTIONS = Object.entries(CATEGORIE_LABELS).map(([value, label]) => ({ value, label }));
+
+interface OSMPlace {
+  id: string;
+  nome: string;
+  categoria: string;
+  lat: number;
+  lon: number;
+  indirizzo: string | null;
+  cap: string | null;
+  comune: string | null;
+  telefono: string | null;
+  email: string | null;
+  website: string | null;
+  orari: string | null;
+  osm_url: string;
+}
+
+// Categorie supportate da OSM
+const OSM_SUPPORTED = new Set(["veterinario", "toelettatura", "pensione"]);
 
 // Keyword di ricerca per categoria — usate per costruire query verso i siti esterni
 const CATEGORIE_KEYWORDS: Record<string, string> = {
@@ -44,7 +63,9 @@ export function SearchPage() {
   const [raggio, setRaggio] = useState(30);
   const [showFilters, setShowFilters] = useState(false);
   const [results, setResults] = useState<StrutturaCardType[]>([]);
+  const [osmResults, setOsmResults] = useState<OSMPlace[]>([]);
   const [loading, setLoading] = useState(true);
+  const [loadingOSM, setLoadingOSM] = useState(false);
 
   useEffect(() => {
     fetchResults();
@@ -52,6 +73,7 @@ export function SearchPage() {
 
   async function fetchResults() {
     setLoading(true);
+    setOsmResults([]);
     try {
       const params = new URLSearchParams();
       if (categoria) params.set("cat", categoria);
@@ -59,10 +81,32 @@ export function SearchPage() {
       const res = await fetch(`/api/strutture?${params}`);
       const data = await res.json();
       setResults(data);
+
+      // Se DB vuoto + categoria + citta + categoria supportata da OSM → fetch OSM
+      if (data.length === 0 && categoria && query && OSM_SUPPORTED.has(categoria)) {
+        await fetchOSM();
+      }
     } catch {
       setResults([]);
     } finally {
       setLoading(false);
+    }
+  }
+
+  async function fetchOSM() {
+    setLoadingOSM(true);
+    try {
+      const params = new URLSearchParams();
+      params.set("categoria", categoria);
+      params.set("citta", query);
+      params.set("limit", "30");
+      const res = await fetch(`/api/osm?${params}`);
+      const data = await res.json();
+      if (data.places) setOsmResults(data.places);
+    } catch (err) {
+      console.error("OSM fetch error:", err);
+    } finally {
+      setLoadingOSM(false);
     }
   }
 
@@ -150,7 +194,40 @@ export function SearchPage() {
         </div>
       )}
 
-      {!loading && results.length === 0 && (() => {
+      {/* Risultati da OpenStreetMap (quando il DB e vuoto) */}
+      {!loading && results.length === 0 && (osmResults.length > 0 || loadingOSM) && (
+        <div className="mb-12">
+          <div className="bg-blue-50 border border-blue-200 rounded-2xl p-4 mb-6 flex items-start gap-3">
+            <MapPin size={20} className="text-blue-600 shrink-0 mt-0.5" />
+            <div className="text-sm">
+              <p className="font-semibold text-blue-900">Risultati da OpenStreetMap</p>
+              <p className="text-blue-800 mt-0.5">
+                Mostriamo {osmResults.length > 0 ? `${osmResults.length} ` : ""}attivita reali da OpenStreetMap, la mappa libera del mondo. I dati possono essere incompleti — se sei il titolare,{" "}
+                <a href="/registra-attivita" className="underline font-semibold">registrati gratis</a> per gestire la tua scheda.
+              </p>
+            </div>
+          </div>
+
+          {loadingOSM && (
+            <div className="text-center py-8">
+              <div className="inline-block animate-spin rounded-full h-8 w-8 border-2 border-primary border-t-transparent" />
+              <p className="text-muted-foreground text-sm mt-2">Caricamento da OpenStreetMap...</p>
+            </div>
+          )}
+
+          {osmResults.length > 0 && (
+            <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {osmResults.map((p) => <OSMCard key={p.id} place={p} />)}
+            </div>
+          )}
+
+          <p className="text-xs text-muted-foreground text-center mt-6">
+            Dati © OpenStreetMap contributors, licenza ODbL
+          </p>
+        </div>
+      )}
+
+      {!loading && results.length === 0 && osmResults.length === 0 && !loadingOSM && (() => {
         const links = buildExternalLinks(query, categoria);
         const categoriaLabel = categoria ? CATEGORIE_LABELS[categoria as CategoriaTipo] : "professionisti pet";
         return (
@@ -198,6 +275,49 @@ export function SearchPage() {
           </div>
         );
       })()}
+    </div>
+  );
+}
+
+// Card per risultati OpenStreetMap
+function OSMCard({ place: p }: { place: OSMPlace }) {
+  const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lon}`;
+  return (
+    <div className="bg-white rounded-2xl border border-border overflow-hidden hover:shadow-md transition-all p-5">
+      <div className="flex items-start justify-between gap-2 mb-2">
+        <h3 className="font-bold text-foreground leading-snug flex-1">{p.nome}</h3>
+        <span className="text-xs bg-blue-50 text-blue-700 font-medium px-2 py-0.5 rounded-full shrink-0">OSM</span>
+      </div>
+
+      {p.indirizzo && (
+        <p className="text-sm text-muted-foreground flex items-start gap-1 mb-1">
+          <MapPin size={13} className="mt-0.5 shrink-0" />
+          <span>
+            {p.indirizzo}
+            {p.cap && p.comune ? <><br />{p.cap} {p.comune}</> : p.comune ? <><br />{p.comune}</> : null}
+          </span>
+        </p>
+      )}
+
+      {p.orari && (
+        <p className="text-xs text-muted-foreground mt-2 line-clamp-1">Orari: {p.orari}</p>
+      )}
+
+      <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-border">
+        {p.telefono && (
+          <a href={`tel:${p.telefono}`} className="inline-flex items-center gap-1 text-xs bg-primary/10 text-primary hover:bg-primary/20 px-3 py-1.5 rounded-lg font-semibold">
+            <Phone size={12} /> Chiama
+          </a>
+        )}
+        {p.website && (
+          <a href={p.website} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs bg-muted hover:bg-border text-foreground px-3 py-1.5 rounded-lg font-semibold">
+            <Globe size={12} /> Sito
+          </a>
+        )}
+        <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs bg-muted hover:bg-border text-foreground px-3 py-1.5 rounded-lg font-semibold">
+          <Navigation size={12} /> Mappa
+        </a>
+      </div>
     </div>
   );
 }

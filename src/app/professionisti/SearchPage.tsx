@@ -123,10 +123,16 @@ export function SearchPage() {
       )}
 
       {!loading && results.length === 0 && (
-        <div className="text-center py-20">
+        <div className="text-center py-20 max-w-xl mx-auto">
           <div className="text-6xl mb-4">🐾</div>
-          <h3 className="text-xl font-bold text-foreground mb-2">Nessun risultato</h3>
-          <p className="text-muted-foreground">Prova a cambiare i filtri o ad ampliare il raggio di ricerca.</p>
+          <h3 className="text-xl font-bold text-foreground mb-2">Stiamo costruendo la community</h3>
+          <p className="text-muted-foreground mb-6">
+            MifidoDiTe.eu sta crescendo. Le prime attivita registrate appariranno presto qui.
+            Sei un professionista del mondo pet? Registrati gratis con il codice invito.
+          </p>
+          <a href="/registra-attivita" className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-xl font-semibold transition-colors">
+            Registra la tua attivita
+          </a>
         </div>
       )}
     </div>

@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
 import { neon } from "@neondatabase/serverless";
-import { PROFESSIONISTI_SEED } from "@/lib/professionisti-seed";
 
 export const dynamic = "force-dynamic";
 
@@ -46,12 +45,6 @@ export async function GET(request: NextRequest) {
     }
   }
 
-  // Fallback seed
-  let data = PROFESSIONISTI_SEED;
-  if (cat) data = data.filter((s) => s.categoria === cat);
-  if (q) {
-    const ql = q.toLowerCase();
-    data = data.filter((s) => s.comune.toLowerCase().includes(ql) || s.provincia?.toLowerCase().includes(ql) || s.nome.toLowerCase().includes(ql));
-  }
-  return NextResponse.json(data);
+  // Niente fallback seed: meglio array vuoto che dati finti
+  return NextResponse.json([]);
 }

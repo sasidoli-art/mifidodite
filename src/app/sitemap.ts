@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
 import { ARTICOLI_SEED } from "@/lib/articoli-seed";
-import { PROFESSIONISTI_SEED } from "@/lib/professionisti-seed";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://mifidodite.eu";
@@ -33,13 +32,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  // Professionisti
-  const proPages = PROFESSIONISTI_SEED.map((pro) => ({
-    url: `${baseUrl}/struttura/${pro.slug}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly" as const,
-    priority: 0.6,
-  }));
-
-  return [...staticPages, ...articlePages, ...proPages];
+  return [...staticPages, ...articlePages];
 }

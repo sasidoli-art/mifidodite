@@ -2,12 +2,40 @@
 
 import { useState, useEffect } from "react";
 import { useSearchParams } from "next/navigation";
-import { Search, MapPin, SlidersHorizontal, X } from "lucide-react";
+import { Search, MapPin, SlidersHorizontal, X, ExternalLink } from "lucide-react";
 import { StrutturaCard } from "@/components/shared/StrutturaCard";
 import { CATEGORIE_LABELS } from "@/lib/types";
 import type { StrutturaCard as StrutturaCardType, CategoriaTipo } from "@/lib/types";
 
 const CATEGORIE_OPTIONS = Object.entries(CATEGORIE_LABELS).map(([value, label]) => ({ value, label }));
+
+// Keyword di ricerca per categoria — usate per costruire query verso i siti esterni
+const CATEGORIE_KEYWORDS: Record<string, string> = {
+  pensione: "pensione cani gatti",
+  hotel_pet_friendly: "hotel pet friendly",
+  spiaggia_dog_friendly: "spiagge dog friendly",
+  toelettatura: "toelettatura cani",
+  dog_sitter: "dog sitter",
+  cat_sitter: "cat sitter",
+  educatore_cinofilo: "educatore cinofilo",
+  veterinario: "veterinario",
+  fotografo_pet: "fotografo pet",
+  groomer: "toelettatura cani",
+  dog_walking: "dog walking",
+  pet_taxi: "pet taxi",
+  altro: "servizi pet",
+};
+
+function buildExternalLinks(query: string, categoria: string) {
+  const keyword = CATEGORIE_KEYWORDS[categoria] || "servizi pet";
+  const luogo = query?.trim() || "Italia";
+  const fullQuery = `${keyword} ${luogo}`;
+  return {
+    google: `https://www.google.com/maps/search/${encodeURIComponent(fullQuery)}`,
+    paginegialle: `https://www.paginegialle.it/ricerca/${encodeURIComponent(keyword)}/${encodeURIComponent(luogo)}`,
+    subito: `https://www.subito.it/annunci-italia/vendita/usato/?q=${encodeURIComponent(fullQuery)}`,
+  };
+}
 
 export function SearchPage() {
   const searchParams = useSearchParams();
@@ -122,19 +150,54 @@ export function SearchPage() {
         </div>
       )}
 
-      {!loading && results.length === 0 && (
-        <div className="text-center py-20 max-w-xl mx-auto">
-          <div className="text-6xl mb-4">🐾</div>
-          <h3 className="text-xl font-bold text-foreground mb-2">Stiamo costruendo la community</h3>
-          <p className="text-muted-foreground mb-6">
-            MifidoDiTe.eu sta crescendo. Le prime attivita registrate appariranno presto qui.
-            Sei un professionista del mondo pet? Registrati gratis con il codice invito.
-          </p>
-          <a href="/registra-attivita" className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-xl font-semibold transition-colors">
-            Registra la tua attivita
-          </a>
-        </div>
-      )}
+      {!loading && results.length === 0 && (() => {
+        const links = buildExternalLinks(query, categoria);
+        const categoriaLabel = categoria ? CATEGORIE_LABELS[categoria as CategoriaTipo] : "professionisti pet";
+        return (
+          <div className="max-w-2xl mx-auto py-12">
+            <div className="text-center mb-8">
+              <div className="text-6xl mb-4">🐾</div>
+              <h3 className="text-xl font-bold text-foreground mb-2">Stiamo costruendo la community</h3>
+              <p className="text-muted-foreground">
+                MifidoDiTe.eu sta crescendo. Nel frattempo puoi cercare {categoriaLabel.toLowerCase()}{query ? ` a ${query}` : ""} sui principali portali italiani:
+              </p>
+            </div>
+
+            {/* Link esterni — Google, PagineGialle, Subito */}
+            <div className="grid sm:grid-cols-3 gap-3 mb-8">
+              <a href={links.google} target="_blank" rel="noopener noreferrer"
+                className="flex flex-col items-center gap-2 p-5 bg-white border-2 border-border hover:border-primary hover:shadow-md rounded-2xl transition-all group">
+                <div className="text-2xl">🗺️</div>
+                <span className="font-semibold text-foreground group-hover:text-primary">Google Maps</span>
+                <span className="text-xs text-muted-foreground flex items-center gap-1">Apri ricerca <ExternalLink size={11} /></span>
+              </a>
+              <a href={links.paginegialle} target="_blank" rel="noopener noreferrer"
+                className="flex flex-col items-center gap-2 p-5 bg-white border-2 border-border hover:border-primary hover:shadow-md rounded-2xl transition-all group">
+                <div className="text-2xl">📞</div>
+                <span className="font-semibold text-foreground group-hover:text-primary">PagineGialle</span>
+                <span className="text-xs text-muted-foreground flex items-center gap-1">Apri ricerca <ExternalLink size={11} /></span>
+              </a>
+              <a href={links.subito} target="_blank" rel="noopener noreferrer"
+                className="flex flex-col items-center gap-2 p-5 bg-white border-2 border-border hover:border-primary hover:shadow-md rounded-2xl transition-all group">
+                <div className="text-2xl">📋</div>
+                <span className="font-semibold text-foreground group-hover:text-primary">Subito.it</span>
+                <span className="text-xs text-muted-foreground flex items-center gap-1">Apri ricerca <ExternalLink size={11} /></span>
+              </a>
+            </div>
+
+            {/* CTA professionisti */}
+            <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 text-center border border-amber-200">
+              <p className="text-sm text-foreground font-semibold mb-2">Sei un professionista del mondo pet?</p>
+              <p className="text-sm text-muted-foreground mb-4">
+                Registra la tua attivita gratis su MifidoDiTe.eu con il codice invito e fatti trovare dai proprietari della tua zona.
+              </p>
+              <a href="/registra-attivita" className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-xl font-semibold transition-colors">
+                Registra la tua attivita
+              </a>
+            </div>
+          </div>
+        );
+      })()}
     </div>
   );
 }

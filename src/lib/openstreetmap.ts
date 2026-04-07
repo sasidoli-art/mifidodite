@@ -64,10 +64,9 @@ export async function searchOSM(
   if (!tag) return [];
 
   const [south, west, north, east] = bbox;
-  const query = `[out:json][timeout:30];
+  const query = `[out:json][timeout:15];
 (
   node["${tag.key}"="${tag.value}"](${south},${west},${north},${east});
-  way["${tag.key}"="${tag.value}"](${south},${west},${north},${east});
 );
 out center ${limit};`;
 
@@ -76,7 +75,7 @@ out center ${limit};`;
     try {
       const url = `${mirror}?data=${encodeURIComponent(query)}`;
       const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 25000);
+      const timeout = setTimeout(() => controller.abort(), 18000);
 
       const res = await fetch(url, {
         method: "GET",

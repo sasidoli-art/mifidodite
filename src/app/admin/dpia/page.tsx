@@ -1,16 +1,10 @@
-import { Header } from "@/components/landing/Header";
-import { Footer } from "@/components/landing/Footer";
-
 export const metadata = {
-  title: "DPIA — Valutazione d'Impatto sulla Protezione dei Dati — MifidoDiTe.eu",
+  title: "DPIA — Admin MifidoDiTe",
 };
 
 export default function DPIAPage() {
   return (
-    <>
-      <Header />
-      <main className="flex-1 py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="max-w-4xl">
           <h1 className="text-3xl font-bold text-foreground mb-2">Valutazione d&apos;Impatto sulla Protezione dei Dati (DPIA)</h1>
           <p className="text-muted-foreground mb-2">Ai sensi dell&apos;Art. 35 del Regolamento UE 2016/679 (GDPR)</p>
           <p className="text-sm text-muted-foreground mb-10">Data valutazione: 5 aprile 2026</p>
@@ -95,10 +89,7 @@ export default function DPIAPage() {
             <p>Valutazione effettuata da: Titolare del trattamento, MifidoDiTe.eu<br />
             Data: 5 aprile 2026<br />
             Prossima revisione: 5 aprile 2027</p>
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </>
+      </div>
+    </div>
   );
 }

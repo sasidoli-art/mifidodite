@@ -1,17 +1,10 @@
-import { Header } from "@/components/landing/Header";
-import { Footer } from "@/components/landing/Footer";
-
 export const metadata = {
-  title: "Registro dei Trattamenti — MifidoDiTe.eu",
-  description: "Registro dei trattamenti ai sensi dell'Art. 30 del Regolamento UE 2016/679 (GDPR).",
+  title: "Registro Trattamenti — Admin MifidoDiTe",
 };
 
 export default function RegistroTrattamentiPage() {
   return (
-    <>
-      <Header />
-      <main className="flex-1 py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="max-w-4xl">
           <h1 className="text-3xl font-bold text-foreground mb-2">Registro dei Trattamenti</h1>
           <p className="text-muted-foreground mb-2">Ai sensi dell&apos;Art. 30 del Regolamento UE 2016/679 (GDPR)</p>
           <p className="text-sm text-muted-foreground mb-10">Ultimo aggiornamento: 5 aprile 2026</p>
@@ -173,10 +166,7 @@ export default function RegistroTrattamentiPage() {
               <li>Repository Git privato (GitHub)</li>
               <li>Accesso admin limitato per IP</li>
             </ul>
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </>
+      </div>
+    </div>
   );
 }

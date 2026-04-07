@@ -1,17 +1,10 @@
-import { Header } from "@/components/landing/Header";
-import { Footer } from "@/components/landing/Footer";
-
 export const metadata = {
-  title: "Registro Sistemi AI — MifidoDiTe.eu",
-  description: "Registro dei sistemi di intelligenza artificiale ai sensi del Regolamento UE 2024/1689 (AI Act).",
+  title: "Registro AI — Admin MifidoDiTe",
 };
 
 export default function RegistroAIPage() {
   return (
-    <>
-      <Header />
-      <main className="flex-1 py-16">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="max-w-4xl">
           <h1 className="text-3xl font-bold text-foreground mb-2">Registro Sistemi di Intelligenza Artificiale</h1>
           <p className="text-muted-foreground mb-2">Ai sensi del Regolamento UE 2024/1689 (AI Act)</p>
           <p className="text-sm text-muted-foreground mb-10">Ultimo aggiornamento: 5 aprile 2026</p>
@@ -119,10 +112,7 @@ export default function RegistroAIPage() {
 
             <h2>Contatti</h2>
             <p>Per domande sull&apos;utilizzo dell&apos;AI nel Portale: <a href="mailto:bau@mifidodite.eu">bau@mifidodite.eu</a></p>
-          </div>
-        </div>
-      </main>
-      <Footer />
-    </>
+      </div>
+    </div>
   );
 }

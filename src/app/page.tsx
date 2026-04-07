@@ -1,5 +1,6 @@
 import { Header } from "@/components/landing/Header";
 import { Hero } from "@/components/landing/Hero";
+import { HowItWorksVideo } from "@/components/landing/HowItWorksVideo";
 import { HowItWorks } from "@/components/landing/HowItWorks";
 import { Categories } from "@/components/landing/Categories";
 import { SOSBanner } from "@/components/landing/SOSBanner";
@@ -16,6 +17,7 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
+        <HowItWorksVideo />
         <HowItWorks />
         <Categories />
         <FeaturedPros />

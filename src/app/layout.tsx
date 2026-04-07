@@ -25,9 +25,9 @@ const body = Nunito({
 });
 
 export const metadata: Metadata = {
-  title: "MifidoDiTe.eu — Trova chi si prende cura del tuo amico a 4 zampe",
+  title: "MifidoDiTe.eu — Il magazine pet d'Italia",
   description:
-    "Il portale italiano per trovare pensioni, spiagge dog-friendly, dog sitter, toelettatori e professionisti pet vicino a te. Mi fido di te!",
+    "Magazine, guide, consigli, offerte e servizi per cani e gatti. Tutto quello che ti serve per il tuo amico a 4 zampe in un unico portale.",
   keywords: [
     "pensione cani",
     "dog sitter",

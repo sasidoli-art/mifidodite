@@ -37,7 +37,7 @@ export function Hero() {
           className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-full px-4 py-1.5 shadow-sm mb-6"
         >
           <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
-          <span className="text-sm font-medium text-muted-foreground">Il portale pet #1 in Italia</span>
+          <span className="text-sm font-medium text-muted-foreground">Il magazine pet d&apos;Italia</span>
         </motion.div>
 
         {/* Titolo con animazione parola per parola */}
@@ -47,7 +47,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Il tuo amico a 4 zampe
+          Tutto per il tuo
           <br />
           <motion.span
             className="text-primary inline-block"
@@ -55,7 +55,7 @@ export function Hero() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            merita chi si fida
+            amico a 4 zampe
           </motion.span>
         </motion.h1>
 
@@ -65,9 +65,8 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.6 }}
         >
-          Trova pensioni, spiagge dog-friendly, dog sitter, toelettatori e
-          professionisti pet vicino a te.{" "}
-          <strong>Anche quelli che non hanno un sito web.</strong>
+          Guide, consigli, offerte e servizi per cani e gatti.
+          Tutto quello che ti serve per <strong>volergli ancora piu bene</strong>.
         </motion.p>
 
         {/* Search Bar con entrata dal basso */}

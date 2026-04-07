@@ -100,10 +100,28 @@ export default async function EventiPage() {
               ))}
             </div>
           ) : (
-            <div className="text-center py-16">
-              <Calendar size={48} className="mx-auto text-muted-foreground/30 mb-4" />
-              <h3 className="text-xl font-bold">Nessun evento in programma</h3>
-              <p className="text-muted-foreground mt-2">Torna presto per scoprire i prossimi eventi pet in Italia.</p>
+            <div className="max-w-2xl mx-auto py-12">
+              <div className="text-center mb-8">
+                <Calendar size={48} className="mx-auto text-muted-foreground/30 mb-4" />
+                <h3 className="text-xl font-bold">Calendario in costruzione</h3>
+                <p className="text-muted-foreground mt-2">
+                  Stiamo raccogliendo gli eventi pet italiani. Nel frattempo puoi consultare i calendari ufficiali:
+                </p>
+              </div>
+              <div className="grid sm:grid-cols-2 gap-3">
+                <a href="https://www.enci.it/eventi" target="_blank" rel="noopener noreferrer"
+                  className="flex flex-col items-center gap-2 p-5 bg-white border-2 border-border hover:border-primary hover:shadow-md rounded-2xl transition-all">
+                  <div className="text-2xl">🏆</div>
+                  <span className="font-semibold text-foreground">Calendario ENCI</span>
+                  <span className="text-xs text-muted-foreground">Esposizioni e raduni cinofili ufficiali</span>
+                </a>
+                <a href="https://www.bauadvisor.it/eventi" target="_blank" rel="noopener noreferrer"
+                  className="flex flex-col items-center gap-2 p-5 bg-white border-2 border-border hover:border-primary hover:shadow-md rounded-2xl transition-all">
+                  <div className="text-2xl">🐾</div>
+                  <span className="font-semibold text-foreground">BauAdvisor</span>
+                  <span className="text-xs text-muted-foreground">Eventi pet generici in Italia</span>
+                </a>
+              </div>
             </div>
           )}
         </div>

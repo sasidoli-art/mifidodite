@@ -164,11 +164,9 @@ export default async function MagazinePage({
                   <img src={article.img} alt={article.titolo} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
                 </div>
                 <div className="p-5">
-                  <Link href={`/magazine?cat=${article.categoria}`}
-                    className="text-xs font-semibold text-primary capitalize hover:underline"
-                    onClick={(e) => e.stopPropagation()}>
+                  <span className="text-xs font-semibold text-primary capitalize">
                     {CATEGORIE_LABELS[article.categoria] || article.categoria}
-                  </Link>
+                  </span>
                   <h3 className="font-bold text-foreground mt-1 leading-snug group-hover:text-primary transition-colors line-clamp-2">
                     {article.titolo}
                   </h3>

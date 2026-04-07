@@ -3,6 +3,7 @@ import { searchOSMByCity } from "@/lib/openstreetmap";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
+export const maxDuration = 30;
 
 // GET /api/osm?categoria=veterinario&citta=Milano
 // Restituisce attivita pet da OpenStreetMap (legale, ODbL)

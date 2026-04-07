@@ -3,7 +3,12 @@
 // Recupera attivita pet da OSM (legale, gratis, ODbL)
 // ============================================
 
-const OVERPASS_URL = "https://overpass-api.de/api/interpreter";
+// Mirror Overpass — proviamo in cascata in caso uno sia lento
+const OVERPASS_MIRRORS = [
+  "https://overpass.kumi.systems/api/interpreter",
+  "https://overpass-api.de/api/interpreter",
+  "https://overpass.openstreetmap.fr/api/interpreter",
+];
 
 // Mapping categorie MifidoDiTe → tag OSM
 const OSM_TAGS: Record<string, { key: string; value: string }> = {
@@ -66,32 +71,45 @@ export async function searchOSM(
 );
 out center ${limit};`;
 
-  try {
-    const res = await fetch(OVERPASS_URL, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-        "User-Agent": "MifidoDiTe.eu/1.0 (info@mifidodite.eu)",
-      },
-      body: `data=${encodeURIComponent(query)}`,
-    });
+  // Prova ogni mirror in cascata
+  for (const mirror of OVERPASS_MIRRORS) {
+    try {
+      const url = `${mirror}?data=${encodeURIComponent(query)}`;
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 25000);
 
-    if (!res.ok) {
-      console.error("[OSM] Overpass HTTP error:", res.status);
-      return [];
+      const res = await fetch(url, {
+        method: "GET",
+        headers: {
+          "User-Agent": "MifidoDiTe.eu/1.0 (info@mifidodite.eu)",
+          "Accept": "application/json",
+        },
+        signal: controller.signal,
+      });
+
+      clearTimeout(timeout);
+
+      if (!res.ok) {
+        console.error(`[OSM] ${mirror} HTTP error:`, res.status);
+        continue;
+      }
+
+      const data = await res.json() as { elements: OSMNode[] };
+      const elements = data.elements || [];
+      console.log(`[OSM] ${mirror} returned ${elements.length} elements`);
+
+      return elements
+        .filter((e) => e.tags)
+        .map((e) => mapOSMtoPlace(e, categoria))
+        .filter((p): p is OSMPlace => p !== null);
+    } catch (err) {
+      console.error(`[OSM] ${mirror} fallito:`, (err as Error).message);
+      continue;
     }
-
-    const data = await res.json() as { elements: OSMNode[] };
-    const elements = data.elements || [];
-
-    return elements
-      .filter((e) => e.tags) // scarta nodi senza tag
-      .map((e) => mapOSMtoPlace(e, categoria))
-      .filter((p): p is OSMPlace => p !== null);
-  } catch (err) {
-    console.error("[OSM] Errore Overpass:", (err as Error).message);
-    return [];
   }
+
+  console.error("[OSM] Tutti i mirror falliti");
+  return [];
 }
 
 function mapOSMtoPlace(node: OSMNode, categoria: string): OSMPlace | null {

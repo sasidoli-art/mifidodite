@@ -111,8 +111,11 @@ export async function GET(request: Request) {
   const results: Array<{ titolo: string; slug: string; stato: string }> = [];
   const errors: string[] = [];
 
-  // Scegli temi random
-  const temiScelti = [...TEMI].sort(() => Math.random() - 0.5).slice(0, numArticoli);
+  // Permette di forzare i primi N temi (i piu importanti) via ?force=true
+  const forceFirst = url.searchParams.get("force") === "true";
+  const temiScelti = forceFirst
+    ? TEMI.slice(0, numArticoli)
+    : [...TEMI].sort(() => Math.random() - 0.5).slice(0, numArticoli);
 
   for (const t of temiScelti) {
     try {

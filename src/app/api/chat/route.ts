@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { chatWithMiFido, logChatMessage, type ChatMessage } from "@/lib/chatbot";
+import { chatWithZampa, logChatMessage, type ChatMessage } from "@/lib/chatbot";
 import { rateLimit, getClientIP } from "@/lib/rate-limit";
 import { getDB } from "@/lib/db";
 
@@ -65,7 +65,7 @@ export async function POST(request: NextRequest) {
   }
 
   try {
-    const { reply, model, ms } = await chatWithMiFido(messages, userName);
+    const { reply, model, ms } = await chatWithZampa(messages, userName);
 
     // Logga conversazione (non blocca la risposta)
     logChatMessage({

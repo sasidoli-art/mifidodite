@@ -2,6 +2,7 @@ import { getDB } from "@/lib/db";
 import Link from "next/link";
 import { Clock, Eye } from "lucide-react";
 import { ArticleActions } from "./ArticleActions";
+import { BulkActions } from "./BulkActions";
 
 export const dynamic = "force-dynamic";
 export const metadata = { title: "Articoli — Admin MifidoDiTe" };
@@ -82,10 +83,13 @@ export default async function AdminArticoliPage() {
       {/* BOZZE in attesa */}
       {bozze.length > 0 && (
         <div className="mb-10">
-          <h2 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
-            <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
-            Bozze in attesa ({bozze.length})
-          </h2>
+          <div className="flex items-center justify-between mb-4 flex-wrap gap-3">
+            <h2 className="text-xl font-bold text-foreground flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
+              Bozze in attesa ({bozze.length})
+            </h2>
+            <BulkActions count={bozze.length} />
+          </div>
           <div className="space-y-3">
             {bozze.map((a) => (
               <div key={a.id} className="bg-white border-2 border-amber-200 rounded-2xl overflow-hidden">

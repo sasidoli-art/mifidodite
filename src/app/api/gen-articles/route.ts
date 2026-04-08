@@ -111,10 +111,11 @@ export async function GET(request: Request) {
   const results: Array<{ titolo: string; slug: string; stato: string }> = [];
   const errors: string[] = [];
 
-  // Permette di forzare i primi N temi (i piu importanti) via ?force=true
+  // Permette di forzare specifici temi: ?force=true (primi N), ?from=2 (skip primi 2)
   const forceFirst = url.searchParams.get("force") === "true";
+  const from = Number(url.searchParams.get("from") || "0");
   const temiScelti = forceFirst
-    ? TEMI.slice(0, numArticoli)
+    ? TEMI.slice(from, from + numArticoli)
     : [...TEMI].sort(() => Math.random() - 0.5).slice(0, numArticoli);
 
   for (const t of temiScelti) {

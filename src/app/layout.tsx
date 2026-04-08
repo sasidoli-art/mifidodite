@@ -3,6 +3,7 @@ import Script from "next/script";
 import { Fredoka, Nunito } from "next/font/google";
 import "./globals.css";
 import { CookieBanner } from "@/components/shared/CookieBanner";
+import { ChatBot } from "@/components/shared/ChatBot";
 
 const GA_ID = "G-WTEF9GDNNN";
 
@@ -82,6 +83,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         {children}
         <CookieBannerWrapper />
+        <ChatBot />
 
         {/* Google Analytics 4 */}
         <Script

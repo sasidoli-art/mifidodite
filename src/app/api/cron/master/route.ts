@@ -30,21 +30,32 @@ export async function GET(request: NextRequest) {
   const giorno = oggi.getDay(); // 0=Dom, 1=Lun, ... 6=Sab
   const giornoNome = ["Domenica", "Lunedi", "Martedi", "Mercoledi", "Giovedi", "Venerdi", "Sabato"][giorno];
   const dataISO = oggi.toISOString().split("T")[0];
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3333";
-  const secret = process.env.CRON_SECRET || "";
+  // Costruisci baseUrl: priorita NEXT_PUBLIC_APP_URL, poi VERCEL_URL, poi localhost
+  let baseUrl = process.env.NEXT_PUBLIC_APP_URL || "";
+  if (!baseUrl && process.env.VERCEL_URL) baseUrl = `https://${process.env.VERCEL_URL}`;
+  if (!baseUrl) baseUrl = "http://localhost:3333";
 
+  // Forza https su domini noti
+  if (baseUrl.startsWith("http://") && !baseUrl.includes("localhost")) {
+    baseUrl = baseUrl.replace("http://", "https://");
+  }
+
+  const secret = process.env.CRON_SECRET || "";
   const headers = { Authorization: `Bearer ${secret}` };
   const risultati: Record<string, unknown> = {};
   const taskEseguiti: string[] = [];
 
   async function callAgent(nome: string, path: string) {
     try {
-      const res = await fetch(`${baseUrl}${path}`, { headers });
+      const res = await fetch(`${baseUrl}${path}`, {
+        headers,
+        signal: AbortSignal.timeout(50000), // 50s max per agent
+      });
       const data = await res.json();
       risultati[nome] = { status: res.ok ? "ok" : "errore", ...data };
       taskEseguiti.push(nome);
     } catch (err) {
-      risultati[nome] = { status: "errore", error: String(err) };
+      risultati[nome] = { status: "errore", error: String(err), baseUrl };
       taskEseguiti.push(`${nome}_FALLITO`);
     }
   }

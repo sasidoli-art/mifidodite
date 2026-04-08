@@ -4,12 +4,14 @@ import { Clock, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { ARTICOLI_SEED } from "@/lib/articoli-seed";
 
-async function getArticolo(slug: string) {
+async function getArticolo(slug: string, preview: boolean = false) {
   if (process.env.DATABASE_URL) {
     try {
       const { neon } = await import("@neondatabase/serverless");
       const sql = neon(process.env.DATABASE_URL!);
-      const rows = await sql`SELECT * FROM articoli WHERE slug = ${slug} AND pubblicato = true LIMIT 1`;
+      const rows = preview
+        ? await sql`SELECT * FROM articoli WHERE slug = ${slug} LIMIT 1`
+        : await sql`SELECT * FROM articoli WHERE slug = ${slug} AND pubblicato = true LIMIT 1`;
       if (rows.length > 0) {
         const r = rows[0] as Record<string, unknown>;
         return {
@@ -54,9 +56,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   };
 }
 
-export default async function ArticoloPage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function ArticoloPage({
+  params,
+  searchParams,
+}: {
+  params: Promise<{ slug: string }>;
+  searchParams: Promise<{ preview?: string }>;
+}) {
   const { slug } = await params;
-  const articolo = await getArticolo(slug);
+  const sp = await searchParams;
+  const preview = sp.preview === "1";
+  const articolo = await getArticolo(slug, preview);
 
   if (!articolo) {
     return (

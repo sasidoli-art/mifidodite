@@ -186,7 +186,7 @@ REGOLE IMPORTANTI:
 
       await sql`
         INSERT INTO articoli (titolo, slug, categoria, estratto, contenuto, tempo_lettura, tags, img, pubblicato)
-        VALUES (${meta.titolo}, ${slug}, ${t.categoria}, ${meta.estratto || ""}, ${html}, ${meta.tempo_lettura || "7 min"}, ${meta.tags || t.keywords}, ${UNSPLASH_IMAGES[t.categoria] || UNSPLASH_IMAGES.curiosita}, true)
+        VALUES (${meta.titolo}, ${slug}, ${t.categoria}, ${meta.estratto || ""}, ${html}, ${meta.tempo_lettura || "7 min"}, ${meta.tags || t.keywords}, ${UNSPLASH_IMAGES[t.categoria] || UNSPLASH_IMAGES.curiosita}, false)
       `;
 
       results.push({ titolo: meta.titolo, slug, stato: "salvato" });

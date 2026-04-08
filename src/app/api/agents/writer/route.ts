@@ -196,7 +196,7 @@ REGOLE:
           ${img},
           ${meta.fonte_nome || null},
           ${meta.fonte_url || null},
-          true
+          false
         )
       `;
       salvati++;

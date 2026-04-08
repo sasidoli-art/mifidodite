@@ -254,7 +254,7 @@ export function ChatBot() {
 
       {/* Finestra chat */}
       {open && (
-        <div className="fixed bottom-5 right-5 z-50 w-[calc(100vw-2.5rem)] sm:w-[400px] h-[calc(100vh-4rem)] sm:h-[640px] max-h-[90vh] flex flex-col bg-white rounded-2xl shadow-2xl border border-border overflow-hidden">
+        <div className="fixed inset-x-3 bottom-3 sm:inset-x-auto sm:right-5 sm:bottom-5 top-3 sm:top-auto z-50 sm:w-[400px] sm:h-[640px] sm:max-h-[calc(100vh-2.5rem)] flex flex-col bg-white rounded-2xl shadow-2xl border border-border overflow-hidden">
           {/* Header */}
           <div className="bg-gradient-to-r from-primary to-primary-dark text-white p-4 flex items-center justify-between shrink-0">
             <div className="flex items-center gap-3">

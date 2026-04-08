@@ -1,45 +1,69 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyCron } from "@/lib/cron-auth";
 import { askAI, extractJSON } from "@/lib/ai-agent";
-import { ARTICOLI_SEED } from "@/lib/articoli-seed";
 import { logAgent, startTimer } from "@/lib/agent-logger";
+import { getDB } from "@/lib/db";
+import { postToInstagram } from "@/lib/buffer";
 
 // ============================================
 // AGENTE SOCIAL
-// Prende gli articoli del magazine e genera post pronti
-// per Facebook, Instagram e TikTok. Tu copi e incolli.
+// Genera post social dai migliori articoli del magazine
+// e li pubblica automaticamente su Instagram via Buffer.
+// Gira mercoledi e domenica dal master cron.
 // ============================================
+
+interface ArticoloRow {
+  titolo: string;
+  slug: string;
+  estratto: string;
+  categoria: string;
+  img: string;
+  tags: string[];
+}
+
+interface PostGenerated {
+  articolo: string;
+  slug?: string;
+  img?: string;
+  facebook?: string;
+  instagram?: { caption: string; hashtags: string[] };
+  tiktok?: string;
+}
+
+export const maxDuration = 60;
 
 export async function GET(request: NextRequest) {
   const authError = verifyCron(request);
   if (authError) return authError;
   const elapsed = startTimer();
+  const sql = getDB();
 
-  // Prendi gli ultimi articoli (da DB o seed)
-  let articoli = ARTICOLI_SEED;
-
-  if (process.env.NEXT_PUBLIC_SUPABASE_URL) {
-    try {
-      const { createClient } = await import("@/lib/supabase/server");
-      const supabase = await createClient();
-      const { data } = await supabase
-        .from("articoli")
-        .select("titolo, slug, estratto, categoria, tags")
-        .eq("pubblicato", true)
-        .order("created_at", { ascending: false })
-        .limit(5);
-      if (data && data.length > 0) {
-        articoli = data as typeof ARTICOLI_SEED;
-      }
-    } catch { /* usa seed */ }
+  // Prendi gli ultimi 5 articoli pubblicati dal DB Neon
+  let articoli: ArticoloRow[] = [];
+  try {
+    const rows = await sql`
+      SELECT titolo, slug, estratto, categoria, img, tags
+      FROM articoli
+      WHERE pubblicato = true
+      ORDER BY created_at DESC
+      LIMIT 5
+    `;
+    articoli = rows as unknown as ArticoloRow[];
+  } catch (err) {
+    console.error("[Social] errore lettura articoli:", err);
   }
 
-  // Scegli 2 articoli per oggi
-  const oggi = Math.floor(Date.now() / 86400000);
-  const art1 = articoli[oggi % articoli.length];
-  const art2 = articoli[(oggi + 1) % articoli.length];
+  if (articoli.length < 2) {
+    await logAgent({ agente: "social", stato: "parziale", errore_messaggio: "Articoli insufficienti", durata_ms: elapsed() });
+    return NextResponse.json({ success: false, error: "Articoli insufficienti" });
+  }
 
-  const prompt = `Sei un social media manager per MifidoDiTe.eu, il portale pet #1 in Italia.
+  // Scegli 2 articoli random dai 5 piu recenti
+  const shuffled = [...articoli].sort(() => Math.random() - 0.5);
+  const art1 = shuffled[0];
+  const art2 = shuffled[1];
+
+  const prompt = `Sei il Social Media Creator di MifidoDiTe.eu, il magazine pet d'Italia.
 
 Genera post social per questi 2 articoli:
 
@@ -48,68 +72,105 @@ Estratto: ${art1.estratto}
 URL: https://mifidodite.eu/magazine/${art1.slug}
 
 ARTICOLO 2: "${art2.titolo}"
-Estratto: ${"estratto" in art2 ? art2.estratto : ""}
+Estratto: ${art2.estratto}
 URL: https://mifidodite.eu/magazine/${art2.slug}
 
-Sei il Social Media Creator di MiFidoDiTe.eu. Per OGNI articolo genera:
+Per OGNI articolo genera:
 
-1. POST FACEBOOK (max 300 char): apri con domanda emotiva, chiudi con link. Deve creare engagement
-2. POST INSTAGRAM (caption max 200 char + 8-10 hashtag): accattivante, primo rigo = hook. Includi sempre #MiFidoDiTe
-3. IDEA TIKTOK/REEL (max 100 char): hook dei primi 3 secondi che ferma lo scroll + concept video
+1. POST FACEBOOK (max 300 char): apri con domanda emotiva, chiudi con link
+2. POST INSTAGRAM (caption max 200 char + 8 hashtag): primo rigo = hook che ferma lo scroll
+3. IDEA TIKTOK/REEL (max 100 char): hook + concept video
 
 REGOLE:
 - Tono caldo, empatico, MAI commerciale
-- Italiano fluente, emoji strategiche (2-3 per post, non di piu)
-- Hashtag misti italiano/inglese (#caniditalia #doglovers #MiFidoDiTe)
-- Ogni post deve far venire voglia di cliccare e condividere
-- Il Facebook post deve funzionare anche senza immagine
-- L'Instagram deve funzionare come carosello educativo
+- Italiano fluente, 2-3 emoji strategiche
+- Hashtag misti italiano/inglese, includi sempre #MiFidoDiTe
+- L'instagram caption finisce sempre con "↓ link in bio"
 
-Rispondi con JSON:
+Rispondi SOLO con array JSON puro (no markdown, no fences):
 [
   {
-    "articolo": "titolo",
-    "facebook": "testo post",
-    "instagram": { "caption": "testo", "hashtags": ["#tag1", "#tag2"] },
-    "tiktok": "hook + concept"
+    "articolo": "${art1.titolo}",
+    "facebook": "...",
+    "instagram": { "caption": "...", "hashtags": ["#tag1", "#tag2"] },
+    "tiktok": "..."
+  },
+  {
+    "articolo": "${art2.titolo}",
+    "facebook": "...",
+    "instagram": { "caption": "...", "hashtags": ["#tag1", "#tag2"] },
+    "tiktok": "..."
   }
 ]`;
 
   try {
     const response = await askAI(prompt, 3000);
-    const posts = extractJSON(response);
+    const parsed = extractJSON(response);
+    const posts = (Array.isArray(parsed) ? parsed : [parsed]) as PostGenerated[];
+
+    // Aggiungi slug e img al primo (Instagram lo usa)
+    if (posts[0]) { posts[0].slug = art1.slug; posts[0].img = art1.img; }
+    if (posts[1]) { posts[1].slug = art2.slug; posts[1].img = art2.img; }
 
     // Salva post nel DB
     let salvati = 0;
-    if (process.env.NEXT_PUBLIC_SUPABASE_URL && Array.isArray(posts)) {
-      const { createClient } = await import("@/lib/supabase/server");
-      const supabase = await createClient();
-
-      for (const post of posts as Array<{ articolo?: string; facebook?: string; instagram?: { caption?: string; hashtags?: string[] }; tiktok?: string }>) {
-        const titolo = post.articolo || "";
+    for (const post of posts) {
+      try {
         if (post.facebook) {
-          await supabase.from("social_posts").insert({ articolo_titolo: titolo, piattaforma: "facebook", contenuto: post.facebook });
+          await sql`INSERT INTO social_posts (articolo_titolo, piattaforma, contenuto) VALUES (${post.articolo || ""}, 'facebook', ${post.facebook})`;
           salvati++;
         }
         if (post.instagram?.caption) {
-          await supabase.from("social_posts").insert({ articolo_titolo: titolo, piattaforma: "instagram", contenuto: post.instagram.caption, hashtags: post.instagram.hashtags || [] });
+          await sql`INSERT INTO social_posts (articolo_titolo, piattaforma, contenuto, hashtags) VALUES (${post.articolo || ""}, 'instagram', ${post.instagram.caption}, ${post.instagram.hashtags || []})`;
           salvati++;
         }
         if (post.tiktok) {
-          await supabase.from("social_posts").insert({ articolo_titolo: titolo, piattaforma: "tiktok", contenuto: post.tiktok });
+          await sql`INSERT INTO social_posts (articolo_titolo, piattaforma, contenuto) VALUES (${post.articolo || ""}, 'tiktok', ${post.tiktok})`;
           salvati++;
+        }
+      } catch (err) {
+        console.error("[Social] errore salvataggio post:", err);
+      }
+    }
+
+    // PUBBLICAZIONE AUTOMATICA SU BUFFER (Instagram)
+    const bufferResults: Array<{ post: string; status: string; error?: string }> = [];
+    if (process.env.BUFFER_API_KEY) {
+      for (const post of posts) {
+        if (!post.instagram?.caption || !post.img) continue;
+
+        try {
+          // Combina caption + hashtag in un singolo testo
+          const hashtags = (post.instagram.hashtags || []).join(" ");
+          const fullText = `${post.instagram.caption}\n\n${hashtags}`;
+
+          const result = await postToInstagram(fullText, post.img);
+          bufferResults.push({ post: post.articolo || "", status: result.status });
+          console.log(`[Social] post Buffer creato: ${result.id}`);
+        } catch (err) {
+          bufferResults.push({ post: post.articolo || "", status: "errore", error: String(err) });
+          console.error("[Social] errore publish Buffer:", err);
         }
       }
     }
 
-    await logAgent({ agente: "social", stato: "ok", risultati_trovati: Array.isArray(posts) ? posts.length : 0, risultati_salvati: salvati, durata_ms: elapsed(), dettagli: { posts } });
+    await logAgent({
+      agente: "social",
+      stato: "ok",
+      risultati_trovati: posts.length,
+      risultati_salvati: salvati,
+      durata_ms: elapsed(),
+      dettagli: { posts, buffer_results: bufferResults },
+    });
 
     return NextResponse.json({
       success: true,
       agente: "social",
       data: new Date().toISOString().split("T")[0],
       posts,
-      salvati,
+      salvati_db: salvati,
+      buffer_pubblicati: bufferResults.filter((r) => r.status !== "errore").length,
+      buffer_risultati: bufferResults,
     });
   } catch (err) {
     await logAgent({ agente: "social", stato: "errore", errore_messaggio: String(err), durata_ms: elapsed() });

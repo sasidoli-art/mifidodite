@@ -9,6 +9,6 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/admin/", "/dashboard/", "/api/"],
       },
     ],
-    sitemap: "https://mifidodite.eu/sitemap.xml",
+    sitemap: "https://www.mifidodite.eu/sitemap.xml",
   };
 }

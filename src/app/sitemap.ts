@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 export const revalidate = 3600; // 1 ora
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  const baseUrl = "https://mifidodite.eu";
+  const baseUrl = "https://www.mifidodite.eu";
 
   // Pagine statiche
   const staticPages: MetadataRoute.Sitemap = [

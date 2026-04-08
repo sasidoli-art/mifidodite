@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { MessageCircle, X, Send, PawPrint, Loader2 } from "lucide-react";
+import { MessageCircle, X, Send, PawPrint, Loader2, Mail, User } from "lucide-react";
 
 interface ChatMessage {
   role: "user" | "assistant";
@@ -12,12 +12,19 @@ interface ChatMessage {
 const STORAGE_KEY = "mifidodite-chat";
 const SESSION_KEY = "mifidodite-chat-session";
 const CONSENT_KEY = "mifidodite-chat-consent";
+const USER_INFO_KEY = "mifidodite-chat-user";
 
 const WELCOME_MESSAGE: ChatMessage = {
   role: "assistant",
   content:
     "Ciao! 🐾 Sono **MiFido**, l'assistente AI di MifidoDiTe.eu. Posso aiutarti a trovare articoli, professionisti pet o offerte. **Non sono un veterinario** — per la salute del tuo animale rivolgiti sempre a un professionista.\n\nCosa cerchi oggi?",
 };
+
+interface UserInfo {
+  name?: string;
+  email?: string;
+  newsletter?: boolean;
+}
 
 function generateSessionId(): string {
   return Math.random().toString(36).slice(2) + Date.now().toString(36);
@@ -31,10 +38,15 @@ export function ChatBot() {
   const [loading, setLoading] = useState(false);
   const [consentGiven, setConsentGiven] = useState(false);
   const [sessionId, setSessionId] = useState<string>("");
+  const [userInfo, setUserInfo] = useState<UserInfo>({});
+  const [formName, setFormName] = useState("");
+  const [formEmail, setFormEmail] = useState("");
+  const [formNewsletter, setFormNewsletter] = useState(false);
+  const [formGdpr, setFormGdpr] = useState(false);
+  const [formError, setFormError] = useState("");
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLTextAreaElement>(null);
 
-  // Non mostrare su admin, login, dashboard (DOPO gli hooks per rispettare regole React)
   const isHidden =
     pathname?.startsWith("/admin") ||
     pathname?.startsWith("/dashboard") ||
@@ -43,7 +55,6 @@ export function ChatBot() {
     pathname === "/forgot-password" ||
     pathname === "/reset-password";
 
-  // Carica session, consenso e messaggi da localStorage
   useEffect(() => {
     if (typeof window === "undefined") return;
 
@@ -62,13 +73,17 @@ export function ChatBot() {
       try {
         const parsed = JSON.parse(stored) as ChatMessage[];
         if (Array.isArray(parsed) && parsed.length > 0) setMessages(parsed);
-      } catch {
-        // ignora
-      }
+      } catch { /* ignora */ }
+    }
+
+    const userStored = localStorage.getItem(USER_INFO_KEY);
+    if (userStored) {
+      try {
+        setUserInfo(JSON.parse(userStored) as UserInfo);
+      } catch { /* ignora */ }
     }
   }, []);
 
-  // Salva messaggi
   useEffect(() => {
     if (typeof window === "undefined") return;
     if (messages.length > 1) {
@@ -76,23 +91,59 @@ export function ChatBot() {
     }
   }, [messages]);
 
-  // Auto-scroll in fondo
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, loading]);
 
-  // Focus input quando si apre
   useEffect(() => {
     if (open && consentGiven) {
       setTimeout(() => inputRef.current?.focus(), 200);
     }
   }, [open, consentGiven]);
 
-  function acceptConsent() {
-    setConsentGiven(true);
-    if (typeof window !== "undefined") {
+  function startChat(asGuest: boolean) {
+    setFormError("");
+
+    if (asGuest) {
+      // Skip form, entra come ospite
+      setConsentGiven(true);
       localStorage.setItem(CONSENT_KEY, "true");
+      return;
     }
+
+    // Validazione form
+    if (!formGdpr) {
+      setFormError("Devi accettare la Privacy Policy per continuare.");
+      return;
+    }
+    if (!formName.trim()) {
+      setFormError("Inserisci almeno il tuo nome.");
+      return;
+    }
+    if (formEmail && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formEmail)) {
+      setFormError("Email non valida.");
+      return;
+    }
+
+    const newUserInfo: UserInfo = {
+      name: formName.trim(),
+      email: formEmail.trim() || undefined,
+      newsletter: formNewsletter,
+    };
+
+    setUserInfo(newUserInfo);
+    localStorage.setItem(USER_INFO_KEY, JSON.stringify(newUserInfo));
+
+    // Personalizza il messaggio di benvenuto col nome
+    setMessages([
+      {
+        role: "assistant",
+        content: `Ciao **${newUserInfo.name}**! 🐾 Piacere di conoscerti. Sono **MiFido**, l'assistente AI di MifidoDiTe.eu. **Non sono un veterinario**, ma posso aiutarti a trovare articoli, professionisti o offerte pet. Cosa cerchi?`,
+      },
+    ]);
+
+    setConsentGiven(true);
+    localStorage.setItem(CONSENT_KEY, "true");
   }
 
   async function sendMessage(e?: React.FormEvent) {
@@ -113,6 +164,9 @@ export function ChatBot() {
           sessionId,
           messages: newMessages,
           pageUrl: typeof window !== "undefined" ? window.location.pathname : undefined,
+          userName: userInfo.name,
+          userEmail: userInfo.email,
+          newsletterSignup: userInfo.newsletter && newMessages.length === 1,
         }),
       });
 
@@ -150,7 +204,6 @@ export function ChatBot() {
     }
   }
 
-  // Format markdown semplice (grassetto + link)
   function formatMessage(text: string): React.ReactNode {
     const parts: React.ReactNode[] = [];
     const lines = text.split("\n");
@@ -201,9 +254,9 @@ export function ChatBot() {
 
       {/* Finestra chat */}
       {open && (
-        <div className="fixed bottom-5 right-5 z-50 w-[calc(100vw-2.5rem)] sm:w-[400px] h-[calc(100vh-4rem)] sm:h-[600px] max-h-[600px] flex flex-col bg-white rounded-2xl shadow-2xl border border-border overflow-hidden">
+        <div className="fixed bottom-5 right-5 z-50 w-[calc(100vw-2.5rem)] sm:w-[400px] h-[calc(100vh-4rem)] sm:h-[640px] max-h-[90vh] flex flex-col bg-white rounded-2xl shadow-2xl border border-border overflow-hidden">
           {/* Header */}
-          <div className="bg-gradient-to-r from-primary to-primary-dark text-white p-4 flex items-center justify-between">
+          <div className="bg-gradient-to-r from-primary to-primary-dark text-white p-4 flex items-center justify-between shrink-0">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
                 <PawPrint size={20} />
@@ -222,35 +275,102 @@ export function ChatBot() {
             </button>
           </div>
 
-          {/* Consenso GDPR (primo accesso) */}
+          {/* SCHERMATA BENVENUTO con form opzionale */}
           {!consentGiven && (
-            <div className="flex-1 flex flex-col items-center justify-center p-6 text-center">
-              <div className="text-4xl mb-3">🤖</div>
-              <h4 className="font-bold text-foreground mb-2">Prima di iniziare</h4>
-              <p className="text-sm text-muted-foreground mb-4 leading-relaxed">
-                MiFido e un&apos;assistente AI. Le tue conversazioni vengono salvate in modo anonimo per 30 giorni
-                per migliorare il servizio (nessun dato personale viene raccolto).
-              </p>
-              <p className="text-xs text-muted-foreground mb-5">
-                Per dettagli leggi la{" "}
-                <a href="/privacy" className="text-primary underline" target="_blank">
-                  Privacy Policy
-                </a>
-                .
-              </p>
-              <button
-                onClick={acceptConsent}
-                className="bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-xl font-semibold transition-colors w-full"
-              >
-                Accetto e inizio la chat
-              </button>
-              <button onClick={() => setOpen(false)} className="mt-3 text-xs text-muted-foreground hover:underline">
-                Annulla
-              </button>
+            <div className="flex-1 overflow-y-auto p-5">
+              <div className="text-center mb-5">
+                <div className="text-4xl mb-2">🐾</div>
+                <h4 className="font-bold text-foreground text-lg">Ciao! Sono MiFido</h4>
+                <p className="text-sm text-muted-foreground mt-1">
+                  Presentati e iniziamo a chattare
+                </p>
+              </div>
+
+              <form onSubmit={(e) => { e.preventDefault(); startChat(false); }} className="space-y-3">
+                <div>
+                  <label className="text-xs font-semibold text-foreground/70 block mb-1">Il tuo nome</label>
+                  <div className="relative">
+                    <User size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
+                    <input
+                      type="text"
+                      value={formName}
+                      onChange={(e) => setFormName(e.target.value)}
+                      placeholder="Mario"
+                      maxLength={50}
+                      className="w-full pl-9 pr-3 py-2.5 rounded-xl border border-border bg-muted/30 outline-none focus:ring-2 focus:ring-primary/30 text-sm"
+                    />
+                  </div>
+                </div>
+
+                <div>
+                  <label className="text-xs font-semibold text-foreground/70 block mb-1">Email (opzionale)</label>
+                  <div className="relative">
+                    <Mail size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-muted-foreground" />
+                    <input
+                      type="email"
+                      value={formEmail}
+                      onChange={(e) => setFormEmail(e.target.value)}
+                      placeholder="mario@esempio.it"
+                      className="w-full pl-9 pr-3 py-2.5 rounded-xl border border-border bg-muted/30 outline-none focus:ring-2 focus:ring-primary/30 text-sm"
+                    />
+                  </div>
+                </div>
+
+                {/* Newsletter checkbox - solo se ha messo email */}
+                {formEmail && (
+                  <label className="flex items-start gap-2 bg-amber-50 border border-amber-200 rounded-xl p-3 cursor-pointer">
+                    <input
+                      type="checkbox"
+                      checked={formNewsletter}
+                      onChange={(e) => setFormNewsletter(e.target.checked)}
+                      className="mt-0.5 accent-primary shrink-0"
+                    />
+                    <div className="text-xs text-foreground/80 leading-snug">
+                      <strong>📬 Iscrivimi alla newsletter</strong>
+                      <br />
+                      Ricevi 3 articoli pet selezionati + offerte ogni settimana. Puoi disiscriverti in qualsiasi momento.
+                    </div>
+                  </label>
+                )}
+
+                <label className="flex items-start gap-2 cursor-pointer">
+                  <input
+                    type="checkbox"
+                    checked={formGdpr}
+                    onChange={(e) => setFormGdpr(e.target.checked)}
+                    className="mt-0.5 accent-primary shrink-0"
+                  />
+                  <div className="text-xs text-muted-foreground leading-snug">
+                    Accetto la{" "}
+                    <a href="/privacy" target="_blank" rel="noopener noreferrer" className="text-primary underline">
+                      Privacy Policy
+                    </a>
+                    . Le conversazioni vengono salvate per 30 giorni in modo pseudonimo.
+                  </div>
+                </label>
+
+                {formError && <p className="text-xs text-red-500">{formError}</p>}
+
+                <button
+                  type="submit"
+                  className="w-full bg-primary hover:bg-primary-dark text-white py-3 rounded-xl font-semibold transition-colors text-sm"
+                >
+                  Inizia la chat →
+                </button>
+              </form>
+
+              <div className="text-center mt-4 pt-4 border-t border-border">
+                <button
+                  onClick={() => startChat(true)}
+                  className="text-xs text-muted-foreground hover:text-foreground transition-colors underline"
+                >
+                  Continua come ospite (senza dati)
+                </button>
+              </div>
             </div>
           )}
 
-          {/* Messaggi */}
+          {/* MESSAGGI */}
           {consentGiven && (
             <>
               <div className="flex-1 overflow-y-auto p-4 space-y-3 bg-muted/30">
@@ -280,8 +400,7 @@ export function ChatBot() {
                 <div ref={messagesEndRef} />
               </div>
 
-              {/* Input */}
-              <form onSubmit={sendMessage} className="border-t border-border p-3 bg-white">
+              <form onSubmit={sendMessage} className="border-t border-border p-3 bg-white shrink-0">
                 <div className="flex gap-2 items-end">
                   <textarea
                     ref={inputRef}

@@ -11,6 +11,7 @@ import {
   Database,
   Scale,
   ShoppingBag,
+  MessageCircle,
   Settings,
   LogOut,
 } from "lucide-react";
@@ -18,6 +19,7 @@ import {
 const SIDEBAR_LINKS = [
   { href: "/admin", label: "Dashboard", icon: LayoutDashboard },
   { href: "/admin/agenti", label: "Agenti AI", icon: Bot },
+  { href: "/admin/chat", label: "Chat MiFido", icon: MessageCircle },
   { href: "/admin/strutture", label: "Strutture", icon: Building2 },
   { href: "/admin/offerte", label: "Offerte Affiliate", icon: ShoppingBag },
   { href: "/admin/codici", label: "Codici Sconto", icon: Tag },

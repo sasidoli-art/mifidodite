@@ -23,13 +23,18 @@ interface KbArticle {
 /**
  * System prompt di MiFido — definisce personalita, regole e disclaimer
  */
-function buildSystemPrompt(knowledgeBase: KbArticle[]): string {
+function buildSystemPrompt(knowledgeBase: KbArticle[], userName?: string | null): string {
   const articoliList = knowledgeBase
     .slice(0, 30)
     .map((a) => `- "${a.titolo}" (${a.categoria}) → https://mifidodite.eu/magazine/${a.slug}`)
     .join("\n");
 
+  const userPersonalization = userName
+    ? `\n# UTENTE\nL'utente si chiama ${userName}. Usalo nelle tue risposte in modo naturale (es. "Ciao ${userName}!", "Certo ${userName}, ti spiego..."). NON in tutte le frasi, solo dove e naturale.\n`
+    : "";
+
   return `Sei MiFido, l'assistente AI ufficiale di MifidoDiTe.eu, il magazine pet d'Italia.
+${userPersonalization}
 
 # CHI SEI
 - Nome: MiFido
@@ -115,14 +120,16 @@ async function getKnowledgeBase(): Promise<KbArticle[]> {
 /**
  * Chiama DeepSeek con i messaggi della conversazione + system prompt.
  */
-export async function chatWithMiFido(messages: ChatMessage[]): Promise<{ reply: string; model: string; ms: number }> {
+export async function chatWithMiFido(
+  messages: ChatMessage[],
+  userName?: string | null,
+): Promise<{ reply: string; model: string; ms: number }> {
   const start = Date.now();
   const kb = await getKnowledgeBase();
-  const systemPrompt = buildSystemPrompt(kb);
+  const systemPrompt = buildSystemPrompt(kb, userName);
 
   const apiKey = process.env.DEEPSEEK_API_KEY;
   if (!apiKey) {
-    // Fallback a Claude se DeepSeek manca
     const lastUserMessage = messages.filter((m) => m.role === "user").pop()?.content || "";
     const fullPrompt = `${systemPrompt}\n\n# CONVERSAZIONE\nUtente: ${lastUserMessage}`;
     const reply = await askDeepSeek(fullPrompt, 500);
@@ -169,15 +176,24 @@ export async function logChatMessage(params: {
   pageUrl?: string;
   responseMs?: number;
   model?: string;
+  userName?: string | null;
+  userEmail?: string | null;
+  newsletterSignup?: boolean;
 }): Promise<void> {
   try {
     const sql = getDB();
-    // Pseudonimo dal session_id (no IP, no email)
-    const pseudonym = `user_${params.sessionId.slice(0, 8)}`;
+    const pseudonym = params.userName || `user_${params.sessionId.slice(0, 8)}`;
 
     await sql`
-      INSERT INTO chat_conversazioni (session_id, user_message, bot_response, user_pseudonym, page_url, response_ms, model)
-      VALUES (${params.sessionId}, ${params.userMessage}, ${params.botResponse}, ${pseudonym}, ${params.pageUrl || null}, ${params.responseMs || null}, ${params.model || MODEL})
+      INSERT INTO chat_conversazioni (
+        session_id, user_message, bot_response, user_pseudonym,
+        page_url, response_ms, model, user_nome, user_email, newsletter_signup
+      )
+      VALUES (
+        ${params.sessionId}, ${params.userMessage}, ${params.botResponse}, ${pseudonym},
+        ${params.pageUrl || null}, ${params.responseMs || null}, ${params.model || MODEL},
+        ${params.userName || null}, ${params.userEmail || null}, ${params.newsletterSignup || false}
+      )
     `;
   } catch (err) {
     console.error("[Chatbot] log fallito:", err);

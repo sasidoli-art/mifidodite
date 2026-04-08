@@ -7,7 +7,7 @@ export default function RegistroTrattamentiPage() {
     <div className="max-w-4xl">
           <h1 className="text-3xl font-bold text-foreground mb-2">Registro dei Trattamenti</h1>
           <p className="text-muted-foreground mb-2">Ai sensi dell&apos;Art. 30 del Regolamento UE 2016/679 (GDPR)</p>
-          <p className="text-sm text-muted-foreground mb-10">Ultimo aggiornamento: 5 aprile 2026</p>
+          <p className="text-sm text-muted-foreground mb-10">Ultimo aggiornamento: 9 aprile 2026</p>
 
           <div className="prose prose-sm max-w-none text-foreground/80">
 
@@ -15,7 +15,7 @@ export default function RegistroTrattamentiPage() {
             <table>
               <tbody>
                 <tr><td><strong>Denominazione</strong></td><td>MifidoDiTe.eu</td></tr>
-                <tr><td><strong>Email</strong></td><td>bau@mifidodite.eu</td></tr>
+                <tr><td><strong>Email</strong></td><td>info@mifidodite.eu</td></tr>
                 <tr><td><strong>PEC</strong></td><td>In fase di attivazione</td></tr>
                 <tr><td><strong>P.IVA</strong></td><td>In fase di registrazione</td></tr>
               </tbody>
@@ -30,9 +30,9 @@ export default function RegistroTrattamentiPage() {
                 <tr><td><strong>Base giuridica</strong></td><td>Legittimo interesse (Art. 6.1.f GDPR)</td></tr>
                 <tr><td><strong>Categorie di interessati</strong></td><td>Visitatori del sito web</td></tr>
                 <tr><td><strong>Categorie di dati</strong></td><td>Dati di navigazione (pagine visitate, timestamp), cookie tecnici di sessione</td></tr>
-                <tr><td><strong>Destinatari</strong></td><td>Vercel Inc. (hosting, DPA sottoscritto)</td></tr>
-                <tr><td><strong>Trasferimento extra-UE</strong></td><td>Vercel utilizza CDN globale con DPA conforme alle Clausole Contrattuali Standard (SCC)</td></tr>
-                <tr><td><strong>Periodo di conservazione</strong></td><td>Log di navigazione: 26 mesi. Cookie di sessione: fino alla chiusura del browser</td></tr>
+                <tr><td><strong>Destinatari</strong></td><td>Vercel Inc. (hosting); Google LLC (Google Analytics 4 con IP anonimizzato + Search Console)</td></tr>
+                <tr><td><strong>Trasferimento extra-UE</strong></td><td>Vercel e Google utilizzano server globali con DPA conforme alle Clausole Contrattuali Standard (SCC) e adesione DPF EU-USA</td></tr>
+                <tr><td><strong>Periodo di conservazione</strong></td><td>Log Vercel: 26 mesi. GA4: 14 mesi. Cookie di sessione: fino alla chiusura del browser</td></tr>
                 <tr><td><strong>Misure di sicurezza</strong></td><td>HTTPS/TLS, HSTS preload, security headers (X-Frame-Options, CSP, XSS Protection)</td></tr>
               </tbody>
             </table>
@@ -46,7 +46,7 @@ export default function RegistroTrattamentiPage() {
                 <tr><td><strong>Base giuridica</strong></td><td>Consenso esplicito (Art. 6.1.a GDPR)</td></tr>
                 <tr><td><strong>Categorie di interessati</strong></td><td>Utenti che si iscrivono volontariamente alla newsletter</td></tr>
                 <tr><td><strong>Categorie di dati</strong></td><td>Email (obbligatorio), CAP (facoltativo), nome animale (facoltativo), tipo animale (cane/gatto)</td></tr>
-                <tr><td><strong>Destinatari</strong></td><td>Neon Tech Inc. (database, server EU Frankfurt, DPA); Brevo SAS (invio email, server EU Francia, DPA)</td></tr>
+                <tr><td><strong>Destinatari</strong></td><td>Neon Tech Inc. (database, server EU Frankfurt, DPA); Aruba S.p.A. (SMTP server in Italia, DPA standard Aruba Cloud)</td></tr>
                 <tr><td><strong>Trasferimento extra-UE</strong></td><td>Nessuno. Tutti i dati restano in UE</td></tr>
                 <tr><td><strong>Periodo di conservazione</strong></td><td>Fino alla disiscrizione dell&apos;utente. Dati cancellati entro 30 giorni dalla richiesta</td></tr>
                 <tr><td><strong>Misure di sicurezza</strong></td><td>Database crittografato (SSL/TLS), accesso limitato, rate limiting (max 3 iscrizioni/minuto per IP)</td></tr>
@@ -63,7 +63,7 @@ export default function RegistroTrattamentiPage() {
                 <tr><td><strong>Base giuridica</strong></td><td>Consenso esplicito (Art. 6.1.a GDPR) tramite checkbox obbligatorio nel form</td></tr>
                 <tr><td><strong>Categorie di interessati</strong></td><td>Utenti che compilano il form &quot;Chiedi disponibilita&quot;</td></tr>
                 <tr><td><strong>Categorie di dati</strong></td><td>Nome, email, telefono (facoltativo), date, tipo/numero animali, taglia, note</td></tr>
-                <tr><td><strong>Destinatari</strong></td><td>Neon Tech Inc. (database); il Professionista selezionato (via email); Brevo SAS (invio email)</td></tr>
+                <tr><td><strong>Destinatari</strong></td><td>Neon Tech Inc. (database); il Professionista selezionato (via email); Aruba S.p.A. (SMTP server Italia)</td></tr>
                 <tr><td><strong>Trasferimento extra-UE</strong></td><td>Nessuno</td></tr>
                 <tr><td><strong>Periodo di conservazione</strong></td><td>12 mesi dalla richiesta, poi anonimizzati</td></tr>
                 <tr><td><strong>Misure di sicurezza</strong></td><td>Rate limiting (max 5 richieste/minuto per IP), nessun dato IP/User-Agent salvato</td></tr>
@@ -115,7 +115,7 @@ export default function RegistroTrattamentiPage() {
                 <tr><td><strong>Destinatari</strong></td><td>Neon Tech Inc. (database); Anthropic/DeepSeek (analisi AI, no storage permanente)</td></tr>
                 <tr><td><strong>Trasferimento extra-UE</strong></td><td>I dati testuali sono inviati ad Anthropic (EU) e DeepSeek per analisi. Non vengono usati per training dei modelli AI</td></tr>
                 <tr><td><strong>Periodo di conservazione</strong></td><td>Fino alla richiesta di rimozione del professionista. Rimozione entro 48h lavorative</td></tr>
-                <tr><td><strong>Diritto di opposizione</strong></td><td>I profili sono contrassegnati come &quot;importati automaticamente&quot;. Rimozione su richiesta a bau@mifidodite.eu</td></tr>
+                <tr><td><strong>Diritto di opposizione</strong></td><td>I profili sono contrassegnati come &quot;importati automaticamente&quot;. Rimozione su richiesta a info@mifidodite.eu</td></tr>
               </tbody>
             </table>
 
@@ -136,6 +136,26 @@ export default function RegistroTrattamentiPage() {
 
             <hr />
 
+            <h2>Trattamento 8: Chatbot conversazionale Zampa</h2>
+            <table>
+              <tbody>
+                <tr><td><strong>Finalita</strong></td><td>Fornire un assistente AI conversazionale (Zampa) che risponde a domande degli utenti su contenuti del magazine, articoli, professionisti, offerte. Disclaimer permanente: non e un veterinario.</td></tr>
+                <tr><td><strong>Base giuridica</strong></td><td>Consenso esplicito (Art. 6.1.a GDPR) tramite checkbox prima dell&apos;avvio della chat</td></tr>
+                <tr><td><strong>Categorie di interessati</strong></td><td>Utenti del sito che decidono di interagire con il chatbot</td></tr>
+                <tr><td><strong>Categorie di dati</strong></td><td>Messaggi inviati dall&apos;utente, risposte del chatbot, ID di sessione pseudonimizzato, pagina di provenienza, timestamp. Opzionali: nome, email (solo se l&apos;utente li fornisce volontariamente nel form di benvenuto)</td></tr>
+                <tr><td><strong>Modello AI utilizzato</strong></td><td>DeepSeek Chat (DeepSeek AI). Tempo medio risposta: 2-7 secondi</td></tr>
+                <tr><td><strong>Destinatari</strong></td><td>DeepSeek AI (elaborazione richiesta in tempo reale, no storage permanente lato DeepSeek); Neon Tech Inc. (database conversazioni)</td></tr>
+                <tr><td><strong>Trasferimento extra-UE</strong></td><td>I messaggi vengono inviati a DeepSeek (Cina) per l&apos;elaborazione. Trasferimento basato su consenso esplicito dell&apos;interessato (Art. 49.1.a GDPR). I messaggi non contengono dati personali identificativi a meno che l&apos;utente non li fornisca volontariamente nel testo</td></tr>
+                <tr><td><strong>Periodo di conservazione</strong></td><td><strong>30 giorni</strong> dalla data del messaggio. Cancellazione automatica dal database.</td></tr>
+                <tr><td><strong>Decisioni automatizzate</strong></td><td>Nessuna decisione con effetti giuridici. Il chatbot fornisce solo informazioni e link al magazine.</td></tr>
+                <tr><td><strong>Misure di sicurezza</strong></td><td>Pseudonimizzazione automatica (no IP, no email se non fornita), rate limiting (max 20 messaggi/minuto per IP), system prompt che vieta la generazione di consigli medici, disclaimer obbligatorio prima di ogni chat</td></tr>
+                <tr><td><strong>Diritto di opposizione</strong></td><td>L&apos;utente puo non avviare la chat o chiudere la finestra in qualsiasi momento. Per cancellazione anticipata delle conversazioni: scrivere a info@mifidodite.eu indicando la session ID</td></tr>
+                <tr><td><strong>Conformita AI Act</strong></td><td>Sistema classificato come &quot;rischio limitato&quot; ai sensi dell&apos;Art. 50 Reg. UE 2024/1689. Trasparenza garantita: l&apos;utente e sempre informato che sta parlando con un&apos;AI</td></tr>
+              </tbody>
+            </table>
+
+            <hr />
+
             <h2>Responsabili del trattamento (Art. 28 GDPR)</h2>
             <table>
               <thead>
@@ -143,10 +163,12 @@ export default function RegistroTrattamentiPage() {
               </thead>
               <tbody>
                 <tr><td>Neon Tech Inc.</td><td>Database PostgreSQL</td><td>Server EU (Frankfurt)</td><td>Disponibile su richiesta</td></tr>
-                <tr><td>Vercel Inc.</td><td>Hosting e CDN</td><td>Globale con DPA e SCC</td><td>vercel.com/legal/dpa</td></tr>
-                <tr><td>Brevo SAS</td><td>Email transazionali e newsletter</td><td>Server EU (Francia)</td><td>Incluso nel contratto</td></tr>
-                <tr><td>Anthropic PBC</td><td>AI (Claude Haiku)</td><td>USA con SCC</td><td>Conforme: SCC sottoscritte. Nessun dato personale utenti inviato — solo prompt testuali generici. Zero retention da parte di Anthropic (policy API).</td></tr>
-                <tr><td>DeepSeek AI</td><td>AI (DeepSeek Chat)</td><td>Cina</td><td>Nessun dato personale inviato. Utilizzo limitato a generazione testi editoriali da prompt generici. Non rientra nel trasferimento dati ex Cap. V GDPR.</td></tr>
+                <tr><td>Vercel Inc.</td><td>Hosting e CDN</td><td>Globale con DPA e SCC, adesione DPF EU-USA</td><td>vercel.com/legal/dpa</td></tr>
+                <tr><td>Aruba S.p.A.</td><td>Email SMTP (Aruba Mail)</td><td>Server in Italia</td><td>Termini Aruba Cloud</td></tr>
+                <tr><td>Google LLC</td><td>Google Analytics 4 (IP anonimizzato), Search Console</td><td>USA con DPF EU-USA</td><td>support.google.com/analytics/answer/9012600</td></tr>
+                <tr><td>Anthropic PBC</td><td>AI Claude Haiku — generazione articoli, classificazione, post social</td><td>USA con SCC</td><td>SCC sottoscritte. Zero retention sui prompt API. Nessun training sui nostri dati.</td></tr>
+                <tr><td>DeepSeek AI</td><td>AI DeepSeek Chat — chatbot Zampa</td><td>Cina</td><td>Trasferimento basato su consenso esplicito dell&apos;utente (Art. 49.1.a GDPR). Nessun training sui dati inviati.</td></tr>
+                <tr><td>OpenRouter / Alibaba</td><td>AI Qwen 2.5 72B — fallback emergenza</td><td>UK / Cina</td><td>Mai utilizzato in produzione. Configurato come fallback per indisponibilita Claude/DeepSeek.</td></tr>
               </tbody>
             </table>
 

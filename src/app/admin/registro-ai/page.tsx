@@ -7,7 +7,7 @@ export default function RegistroAIPage() {
     <div className="max-w-4xl">
           <h1 className="text-3xl font-bold text-foreground mb-2">Registro Sistemi di Intelligenza Artificiale</h1>
           <p className="text-muted-foreground mb-2">Ai sensi del Regolamento UE 2024/1689 (AI Act)</p>
-          <p className="text-sm text-muted-foreground mb-10">Ultimo aggiornamento: 5 aprile 2026</p>
+          <p className="text-sm text-muted-foreground mb-10">Ultimo aggiornamento: 9 aprile 2026</p>
 
           <div className="prose prose-sm max-w-none text-foreground/80">
 
@@ -101,6 +101,37 @@ export default function RegistroAIPage() {
 
             <hr />
 
+            <h2>Sistema AI 6: Chatbot conversazionale &quot;Zampa&quot;</h2>
+            <table>
+              <tbody>
+                <tr><td><strong>Modello utilizzato</strong></td><td>DeepSeek Chat (DeepSeek AI) — primario; Claude Haiku come fallback</td></tr>
+                <tr><td><strong>Scopo</strong></td><td>Assistente conversazionale gratuito per gli utenti del sito. Risponde a domande su articoli del magazine, professionisti, offerte, navigazione del sito. Aiuta a trovare contenuti pertinenti e suggerisce collegamenti utili.</td></tr>
+                <tr><td><strong>Input</strong></td><td>Messaggi testuali dell&apos;utente (max 2000 caratteri). System prompt fisso con regole di sicurezza e knowledge base degli ultimi 50 articoli del magazine.</td></tr>
+                <tr><td><strong>Output</strong></td><td>Risposte testuali in italiano (max 600 token). Include link agli articoli del magazine quando rilevanti.</td></tr>
+                <tr><td><strong>Disponibilita</strong></td><td>24/7 su tutte le pagine pubbliche del sito (icona fluttuante in basso a destra). Non disponibile su pagine admin/login/dashboard.</td></tr>
+                <tr><td><strong>Limiti hard-coded nel system prompt</strong></td><td>
+                  <ul>
+                    <li>NON fa diagnosi mediche o veterinarie (Art. 348 Codice Penale)</li>
+                    <li>NON prescrive farmaci o terapie</li>
+                    <li>Se l&apos;utente descrive sintomi → rinvia a veterinario + Centro Antiveleni Pavia (0382 24444)</li>
+                    <li>Se l&apos;utente chiede di parlare con un umano → fornisce info@mifidodite.eu</li>
+                    <li>Si dichiara sempre come AI (Art. 50.1 AI Act): &quot;Sono MiFido, un assistente AI&quot;</li>
+                    <li>Tono educato, italiano fluente, max 5 frasi per risposta</li>
+                    <li>Non genera contenuti su temi off-topic (politica, sport, cucina umana)</li>
+                  </ul>
+                </td></tr>
+                <tr><td><strong>Trasparenza (Art. 50.1)</strong></td><td>Schermata di benvenuto OBBLIGATORIA prima di chattare: dichiara che Zampa e un&apos;AI, NON un veterinario, e richiede consenso GDPR esplicito. Disclaimer permanente in footer della chat: &quot;🤖 AI · Non sono un veterinario&quot;</td></tr>
+                <tr><td><strong>Trattamento dati</strong></td><td>Le conversazioni vengono salvate in modo pseudonimizzato per 30 giorni. Vedi Trattamento 8 nel Registro GDPR.</td></tr>
+                <tr><td><strong>Decisioni automatizzate</strong></td><td>NESSUNA. Il chatbot fornisce solo informazioni testuali, mai decisioni con effetti giuridici.</td></tr>
+                <tr><td><strong>Trasferimento extra-UE</strong></td><td>I messaggi vengono inviati a DeepSeek (Cina) per l&apos;elaborazione. Trasferimento basato su consenso esplicito dell&apos;interessato (Art. 49.1.a GDPR).</td></tr>
+                <tr><td><strong>Misure di sicurezza</strong></td><td>Rate limiting (max 20 messaggi/min per IP), validazione lunghezza input, system prompt protetto, no storage permanente lato DeepSeek</td></tr>
+                <tr><td><strong>Costo runtime</strong></td><td>~0.30€/mese per ogni 1.000 messaggi (DeepSeek e fino a 10x piu economico di Claude per task conversazionali ad alto volume)</td></tr>
+                <tr><td><strong>Rischio</strong></td><td><strong>Limitato</strong> (Art. 50 AI Act). Non rientra in &quot;rischio inaccettabile&quot; ne &quot;alto rischio&quot;.</td></tr>
+              </tbody>
+            </table>
+
+            <hr />
+
             <h2>Misure di conformita AI Act</h2>
             <ul>
               <li><strong>Art. 50.1 — Trasparenza:</strong> tutti i contenuti AI sono identificati con badge, note o disclosure</li>
@@ -111,7 +142,7 @@ export default function RegistroAIPage() {
             </ul>
 
             <h2>Contatti</h2>
-            <p>Per domande sull&apos;utilizzo dell&apos;AI nel Portale: <a href="mailto:bau@mifidodite.eu">bau@mifidodite.eu</a></p>
+            <p>Per domande sull&apos;utilizzo dell&apos;AI nel Portale: <a href="mailto:info@mifidodite.eu">info@mifidodite.eu</a></p>
       </div>
     </div>
   );

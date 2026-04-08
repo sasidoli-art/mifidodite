@@ -5,21 +5,22 @@ import { logAgent, startTimer } from "@/lib/agent-logger";
 // ============================================
 // MASTER ORCHESTRATOR — MiFidoDiTe Growth Engine
 //
-// Intelligenza centrale che coordina la crescita automatica.
-// Gira ogni giorno alle 7:00 via Vercel Cron.
+// Chiama gli agent DIRETTAMENTE (no HTTP fetch interno)
+// per essere affidabile su Vercel serverless.
 //
 // SCHEDULE:
-// LUN: Scraper + Event Enrichment (priorita alta)
-// MAR: Scraper + SEO Writer (2 articoli)
-// MER: Scraper + Social Creator
-// GIO: Scraper + SEO Writer (2 articoli)
-// VEN: Scraper + Outreach (10-12 email)
-// SAB: Scraper + Lost Pet Monitor
-// DOM: Scraper + Social Creator + Weekly Report
+// LUN: Newsletter
+// MAR: Scraper + Writer (3 articoli)
+// MER: Scraper + Social
+// GIO: Scraper + Writer (3 articoli)
+// VEN: Scraper (Outreach disabilitato per Art. 130)
+// SAB: Scraper + Monitor
+// DOM: Scraper + Social
 //
-// Lo Scraper gira OGNI GIORNO — 1 citta a rotazione
-// Costo totale: ~1.50€/mese (Claude Haiku)
+// Costo: ~1.50€/mese (Claude Haiku)
 // ============================================
+
+export const maxDuration = 300;
 
 export async function GET(request: NextRequest) {
   const authError = verifyCron(request);
@@ -27,93 +28,97 @@ export async function GET(request: NextRequest) {
 
   const elapsed = startTimer();
   const oggi = new Date();
-  const giorno = oggi.getDay(); // 0=Dom, 1=Lun, ... 6=Sab
+  const giorno = oggi.getDay();
   const giornoNome = ["Domenica", "Lunedi", "Martedi", "Mercoledi", "Giovedi", "Venerdi", "Sabato"][giorno];
   const dataISO = oggi.toISOString().split("T")[0];
-  // Costruisci baseUrl: priorita NEXT_PUBLIC_APP_URL, poi VERCEL_URL, poi localhost
-  let baseUrl = process.env.NEXT_PUBLIC_APP_URL || "";
-  if (!baseUrl && process.env.VERCEL_URL) baseUrl = `https://${process.env.VERCEL_URL}`;
-  if (!baseUrl) baseUrl = "http://localhost:3333";
 
-  // Forza https su domini noti
-  if (baseUrl.startsWith("http://") && !baseUrl.includes("localhost")) {
-    baseUrl = baseUrl.replace("http://", "https://");
-  }
-
-  const secret = process.env.CRON_SECRET || "";
-  const headers = { Authorization: `Bearer ${secret}` };
   const risultati: Record<string, unknown> = {};
   const taskEseguiti: string[] = [];
 
-  async function callAgent(nome: string, path: string) {
+  async function runAgent(nome: string, agentFn: () => Promise<unknown>) {
     try {
-      const res = await fetch(`${baseUrl}${path}`, {
-        headers,
-        signal: AbortSignal.timeout(50000), // 50s max per agent
-      });
-      const data = await res.json();
-      risultati[nome] = { status: res.ok ? "ok" : "errore", ...data };
+      const result = await agentFn();
+      risultati[nome] = { status: "ok", ...((result as object) || {}) };
       taskEseguiti.push(nome);
     } catch (err) {
-      risultati[nome] = { status: "errore", error: String(err), baseUrl };
+      risultati[nome] = { status: "errore", error: String(err) };
       taskEseguiti.push(`${nome}_FALLITO`);
     }
   }
 
-  // ---- SCRAPER: gira SEMPRE (1 citta al giorno) ----
-  await callAgent("scraper", "/api/agents/scraper");
+  // ---- SCRAPER: gira SEMPRE ----
+  await runAgent("scraper", async () => {
+    const mod = await import("@/app/api/agents/scraper/route");
+    const fakeReq = new NextRequest(new URL("https://mifidodite.eu/api/agents/scraper"), {
+      headers: { Authorization: `Bearer ${process.env.CRON_SECRET || ""}` },
+    });
+    const res = await mod.GET(fakeReq);
+    return await res.json();
+  });
 
   // ---- TASK GIORNALIERO ----
   switch (giorno) {
-    case 1: // LUNEDI — Event Enrichment (priorita alta)
-      await callAgent("newsletter", "/api/cron/send-newsletter");
-      // TODO: aggiungere agent eventi dedicato
+    case 1: // LUNEDI — Newsletter
+      await runAgent("newsletter", async () => {
+        const mod = await import("@/app/api/cron/send-newsletter/route");
+        const fakeReq = new NextRequest(new URL("https://mifidodite.eu/api/cron/send-newsletter"), {
+          headers: { Authorization: `Bearer ${process.env.CRON_SECRET || ""}` },
+        });
+        const res = await mod.GET(fakeReq);
+        return await res.json();
+      });
       break;
 
-    case 2: // MARTEDI — SEO Writer
-      await callAgent("writer", "/api/agents/writer");
+    case 2: // MARTEDI — Writer
+    case 4: // GIOVEDI — Writer
+      await runAgent("writer", async () => {
+        const mod = await import("@/app/api/agents/writer/route");
+        const fakeReq = new NextRequest(new URL("https://mifidodite.eu/api/agents/writer"), {
+          headers: { Authorization: `Bearer ${process.env.CRON_SECRET || ""}` },
+        });
+        const res = await mod.GET(fakeReq);
+        return await res.json();
+      });
       break;
 
-    case 3: // MERCOLEDI — Social Creator
-      await callAgent("social", "/api/agents/social");
+    case 3: // MERCOLEDI — Social
+    case 0: // DOMENICA — Social
+      await runAgent("social", async () => {
+        const mod = await import("@/app/api/agents/social/route");
+        const fakeReq = new NextRequest(new URL("https://mifidodite.eu/api/agents/social"), {
+          headers: { Authorization: `Bearer ${process.env.CRON_SECRET || ""}` },
+        });
+        const res = await mod.GET(fakeReq);
+        return await res.json();
+      });
       break;
 
-    case 4: // GIOVEDI — SEO Writer
-      await callAgent("writer", "/api/agents/writer");
-      break;
-
-    case 5: // VENERDI — Outreach DISABILITATO (Art. 130 Codice Privacy: email non sollecitate)
-      // L'outreach verra riabilitato solo quando i professionisti si registreranno
-      // volontariamente e daranno consenso a ricevere comunicazioni.
-      // await callAgent("outreach", "/api/agents/outreach");
+    case 5: // VENERDI — Outreach disabilitato
       risultati.outreach = { status: "disabilitato", motivo: "Art. 130 Codice Privacy" };
       taskEseguiti.push("outreach_DISABILITATO");
       break;
 
-    case 6: // SABATO — Lost Pet Monitor
-      await callAgent("monitor", "/api/agents/monitor");
-      break;
-
-    case 0: // DOMENICA — Social + Report
-      await callAgent("social", "/api/agents/social");
+    case 6: // SABATO — Monitor
+      await runAgent("monitor", async () => {
+        const mod = await import("@/app/api/agents/monitor/route");
+        const fakeReq = new NextRequest(new URL("https://mifidodite.eu/api/agents/monitor"), {
+          headers: { Authorization: `Bearer ${process.env.CRON_SECRET || ""}` },
+        });
+        const res = await mod.GET(fakeReq);
+        return await res.json();
+      });
       break;
   }
 
   const durataMs = elapsed();
 
-  // Log nel DB
   await logAgent({
     agente: "master",
     stato: "ok",
     risultati_trovati: taskEseguiti.length,
-    risultati_salvati: taskEseguiti.filter(t => !t.includes("FALLITO")).length,
+    risultati_salvati: taskEseguiti.filter((t) => !t.includes("FALLITO")).length,
     durata_ms: durataMs,
-    dettagli: {
-      data: dataISO,
-      giorno: giornoNome,
-      tasks: taskEseguiti,
-      risultati,
-    },
+    dettagli: { data: dataISO, giorno: giornoNome, tasks: taskEseguiti, risultati },
   });
 
   return NextResponse.json({

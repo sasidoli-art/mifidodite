@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import { Fredoka, Nunito } from "next/font/google";
 import "./globals.css";
 import { CookieBanner } from "@/components/shared/CookieBanner";
+
+const GA_ID = "G-WTEF9GDNNN";
 
 function CookieBannerWrapper() {
   return <CookieBanner />;
@@ -79,6 +82,23 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         {children}
         <CookieBannerWrapper />
+
+        {/* Google Analytics 4 */}
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}', {
+              anonymize_ip: true,
+              cookie_flags: 'SameSite=None;Secure'
+            });
+          `}
+        </Script>
       </body>
     </html>
   );

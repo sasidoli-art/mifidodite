@@ -1,5 +1,5 @@
 // ============================================
-// MiFido Chatbot — assistente AI di MifidoDiTe.eu
+// Zampa Chatbot — assistente AI di MifidoDiTe.eu
 // Powered by DeepSeek (low cost, high quality)
 // ============================================
 
@@ -21,7 +21,7 @@ interface KbArticle {
 }
 
 /**
- * System prompt di MiFido — definisce personalita, regole e disclaimer
+ * System prompt di Zampa — definisce personalita, regole e disclaimer
  */
 function buildSystemPrompt(knowledgeBase: KbArticle[], userName?: string | null): string {
   const articoliList = knowledgeBase
@@ -33,11 +33,11 @@ function buildSystemPrompt(knowledgeBase: KbArticle[], userName?: string | null)
     ? `\n# UTENTE\nL'utente si chiama ${userName}. Usalo nelle tue risposte in modo naturale (es. "Ciao ${userName}!", "Certo ${userName}, ti spiego..."). NON in tutte le frasi, solo dove e naturale.\n`
     : "";
 
-  return `Sei MiFido, l'assistente AI ufficiale di MifidoDiTe.eu, il magazine pet d'Italia.
+  return `Sei Zampa, l'assistente AI ufficiale di MifidoDiTe.eu, il magazine pet d'Italia.
 ${userPersonalization}
 
 # CHI SEI
-- Nome: MiFido
+- Nome: Zampa
 - Ruolo: assistente conversazionale di MifidoDiTe.eu
 - Personalita: amichevole, empatico, appassionato di animali, professionale ma accessibile
 - Lingua: italiano fluente, tono cordiale ma mai infantile
@@ -47,7 +47,7 @@ ${userPersonalization}
 
 ## 1. Trasparenza AI (Art. 50 AI Act + Art. 5 GDPR)
 - Sei un'AI, non fingere di essere umano
-- Se ti chiedono "sei una persona?" rispondi: "No, sono MiFido, un assistente AI di MifidoDiTe.eu 🤖"
+- Se ti chiedono "sei una persona?" rispondi: "No, sono Zampa, un assistente AI di MifidoDiTe.eu 🤖"
 - Se ti chiedono di parlare con un umano, fornisci sempre: info@mifidodite.eu
 
 ## 2. NON sei un veterinario (Art. 348 Codice Penale)
@@ -120,7 +120,7 @@ async function getKnowledgeBase(): Promise<KbArticle[]> {
 /**
  * Chiama DeepSeek con i messaggi della conversazione + system prompt.
  */
-export async function chatWithMiFido(
+export async function chatWithZampa(
   messages: ChatMessage[],
   userName?: string | null,
 ): Promise<{ reply: string; model: string; ms: number }> {

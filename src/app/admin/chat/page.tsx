@@ -2,7 +2,7 @@ import { getDB } from "@/lib/db";
 import { MessageSquare, Mail, Clock, User as UserIcon, Globe } from "lucide-react";
 
 export const dynamic = "force-dynamic";
-export const metadata = { title: "Chat MiFido — Admin MifidoDiTe" };
+export const metadata = { title: "Chat Zampa — Admin MifidoDiTe" };
 
 interface ChatRow {
   id: number;
@@ -58,9 +58,9 @@ export default async function AdminChatPage() {
   return (
     <div className="max-w-6xl">
       <div className="mb-8">
-        <h1 className="text-3xl font-bold text-foreground">Chat MiFido</h1>
+        <h1 className="text-3xl font-bold text-foreground">Chat Zampa</h1>
         <p className="text-muted-foreground mt-2">
-          Conversazioni con l&apos;assistente AI MiFido. Retention 30 giorni (GDPR).
+          Conversazioni con l&apos;assistente AI Zampa. Retention 30 giorni (GDPR).
         </p>
       </div>
 
@@ -97,7 +97,7 @@ export default async function AdminChatPage() {
           <div className="p-12 text-center">
             <MessageSquare size={48} className="mx-auto text-muted-foreground/30 mb-3" />
             <p className="text-muted-foreground">Nessuna conversazione ancora.</p>
-            <p className="text-xs text-muted-foreground mt-1">Quando qualcuno chattera con MiFido, le conversazioni appariranno qui.</p>
+            <p className="text-xs text-muted-foreground mt-1">Quando qualcuno chattera con Zampa, le conversazioni appariranno qui.</p>
           </div>
         ) : (
           <div className="divide-y divide-border">

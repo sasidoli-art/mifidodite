@@ -17,7 +17,7 @@ const USER_INFO_KEY = "mifidodite-chat-user";
 const WELCOME_MESSAGE: ChatMessage = {
   role: "assistant",
   content:
-    "Ciao! 🐾 Sono **MiFido**, l'assistente AI di MifidoDiTe.eu. Posso aiutarti a trovare articoli, professionisti pet o offerte. **Non sono un veterinario** — per la salute del tuo animale rivolgiti sempre a un professionista.\n\nCosa cerchi oggi?",
+    "Ciao! 🐾 Sono **Zampa**, l'assistente AI di MifidoDiTe.eu. Posso aiutarti a trovare articoli, professionisti pet o offerte. **Non sono un veterinario** — per la salute del tuo animale rivolgiti sempre a un professionista.\n\nCosa cerchi oggi?",
 };
 
 interface UserInfo {
@@ -138,7 +138,7 @@ export function ChatBot() {
     setMessages([
       {
         role: "assistant",
-        content: `Ciao **${newUserInfo.name}**! 🐾 Piacere di conoscerti. Sono **MiFido**, l'assistente AI di MifidoDiTe.eu. **Non sono un veterinario**, ma posso aiutarti a trovare articoli, professionisti o offerte pet. Cosa cerchi?`,
+        content: `Ciao **${newUserInfo.name}**! 🐾 Piacere di conoscerti. Sono **Zampa**, l'assistente AI di MifidoDiTe.eu. **Non sono un veterinario**, ma posso aiutarti a trovare articoli, professionisti o offerte pet. Cosa cerchi?`,
       },
     ]);
 
@@ -238,7 +238,7 @@ export function ChatBot() {
         <button
           onClick={() => setOpen(true)}
           className="fixed bottom-5 right-5 z-50 group"
-          aria-label="Apri chat con MiFido"
+          aria-label="Apri chat con Zampa"
         >
           <div className="relative">
             <div className="absolute inset-0 rounded-full bg-primary/30 animate-ping" />
@@ -247,7 +247,7 @@ export function ChatBot() {
             </div>
           </div>
           <div className="absolute bottom-full right-0 mb-2 bg-white text-foreground text-xs font-semibold px-3 py-1.5 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-border">
-            Chiedi a MiFido 🐾
+            Chiedi a Zampa 🐾
           </div>
         </button>
       )}
@@ -262,7 +262,7 @@ export function ChatBot() {
                 <PawPrint size={20} />
               </div>
               <div>
-                <h3 className="font-bold text-base leading-tight">MiFido</h3>
+                <h3 className="font-bold text-base leading-tight">Zampa</h3>
                 <p className="text-xs text-white/80">Assistente AI · MifidoDiTe.eu</p>
               </div>
             </div>
@@ -280,7 +280,7 @@ export function ChatBot() {
             <div className="flex-1 overflow-y-auto p-5">
               <div className="text-center mb-5">
                 <div className="text-4xl mb-2">🐾</div>
-                <h4 className="font-bold text-foreground text-lg">Ciao! Sono MiFido</h4>
+                <h4 className="font-bold text-foreground text-lg">Ciao! Sono Zampa</h4>
                 <p className="text-sm text-muted-foreground mt-1">
                   Presentati e iniziamo a chattare
                 </p>

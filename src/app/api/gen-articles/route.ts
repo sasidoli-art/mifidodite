@@ -20,6 +20,28 @@ const UNSPLASH_IMAGES: Record<string, string> = {
 
 // Pool di temi da generare random
 const TEMI = [
+  // PASSAGGIO DI PROPRIETA — PRIORITA ALTA
+  {
+    tema: "Passaggio di proprieta del cane: guida completa alla procedura italiana. Cosa serve fare quando compri, vendi, regali o adotti un cane. Aggiornamento dell'anagrafe canina regionale (obbligatorio entro 15 giorni dalla legge 281/1991). Documenti necessari: codice fiscale del cedente e del nuovo proprietario, libretto sanitario, codice microchip. Modulo di cessione (cedibile dal veterinario o dall'ASL). Costi reali (variano per regione: gratis in alcune, 5-30€ in altre). Cosa succede se non si fa entro i 15 giorni (multa da 78€ a 466€). Differenze regionali (ad es. Lombardia, Lazio, Veneto, Toscana). Caso particolare: passaggio per eredita. Procedura online vs ASL fisica.",
+    categoria: "guide",
+    keywords: ["passaggio proprieta cane", "anagrafe canina", "cambio proprietario cane", "legge 281/91", "trasferimento microchip cane"],
+  },
+  {
+    tema: "Passaggio di proprieta del gatto: serve davvero? Differenze con il cane. Anagrafe felina obbligatoria solo in alcune regioni (Lombardia obbligatoria dal 2014, Friuli Venezia Giulia, Trentino, alcune province). In altre regioni e facoltativa. Procedura per le regioni dove e obbligatoria: microchip, modulo cessione, ASL veterinaria. Costi (8-30€). Sanzioni se non si fa nelle regioni obbligatorie. Vantaggi pratici dell'iscrizione anche dove e facoltativa (recupero in caso di smarrimento, prove di proprieta, copertura assicurativa).",
+    categoria: "gatti",
+    keywords: ["passaggio proprieta gatto", "anagrafe felina", "microchip gatto obbligatorio", "registro gatti Lombardia", "cambio proprietario gatto"],
+  },
+  {
+    tema: "Adottare un cane da canile o associazione: la procedura completa di cessione. Modulo di affido (con clausole standard: rinuncia se l'adottante non puo piu tenerlo, divieto di cessione a terzi, controllo post-affido). Iscrizione del cane all'anagrafe regionale a nome del nuovo proprietario. Costi tipici (gratuita o contributo 50-150€ per coprire vaccinazioni e sterilizzazione). Documenti che il canile deve fornire (libretto sanitario, certificato microchip, vaccinazioni). Diritti e doveri del nuovo proprietario. Quando il canile puo richiedere indietro il cane.",
+    categoria: "guide",
+    keywords: ["adozione cane canile", "modulo affido cane", "cessione cane associazione", "documenti adozione cane"],
+  },
+  {
+    tema: "Vendere o regalare il proprio cane: gli obblighi di legge. Quando e legale e quando NO. Differenza tra cessione tra privati (legale, anche a titolo oneroso se occasionale) e attivita di vendita continuativa (vietata senza partita IVA e iscrizione ENCI/anagrafe allevatori). Procedura per il passaggio: aggiornamento anagrafe, modulo di cessione firmato da entrambi, consegna del libretto sanitario. Cosa NON puoi fare: vendere cuccioli sotto i 60 giorni (Legge 201/2010), vendere senza microchip, vendere in pessime condizioni di salute. Pene per il commercio illegale (fino a 3 anni di reclusione + multa 5.000-15.000€). Truffe comuni da evitare.",
+    categoria: "guide",
+    keywords: ["vendere cane legge", "cessione cane privati", "regalare cane", "legge cuccioli vendita", "commercio cani illegale"],
+  },
+
   // CODICE DELLA STRADA — IMPORTANTI
   {
     tema: "Trasporto cani in auto: cosa dice il Codice della Strada italiano (Art. 169 CDS). Obblighi del conducente, sanzioni (multe da 87€ a 345€ + decurtazione punti), sistemi di contenimento ammessi (gabbia/trasportino, cintura specifica per cani, rete divisoria). Differenze tra cane singolo e piu cani. Cosa rischia chi non rispetta la norma. Casi pratici e consigli del veterinario per viaggi sicuri.",

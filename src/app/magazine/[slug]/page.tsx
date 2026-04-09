@@ -50,9 +50,27 @@ async function getCorrelati(categoria: string, excludeSlug: string) {
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const articolo = await getArticolo(slug);
+  const title = articolo ? `${articolo.titolo} — MifidoDiTe.eu` : "Articolo — MifidoDiTe.eu";
+  const description = articolo?.estratto || "Magazine pet d'Italia — guide, consigli e curiosita per cani e gatti.";
+  const image = articolo?.img || "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=1200&q=80";
+
   return {
-    title: articolo ? `${articolo.titolo} — MifidoDiTe.eu` : "Articolo — MifidoDiTe.eu",
-    description: articolo?.estratto || "",
+    title,
+    description,
+    openGraph: {
+      title,
+      description,
+      type: "article",
+      locale: "it_IT",
+      siteName: "MiFidoDiTe.eu",
+      images: [{ url: image, width: 1200, height: 630, alt: articolo?.titolo || "MiFidoDiTe.eu" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [image],
+    },
   };
 }
 
@@ -102,11 +120,33 @@ export default async function ArticoloPage({
         </div>
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-          <div className="flex items-center justify-between mb-8">
-            <Link href="/magazine" className="flex items-center gap-1 text-muted-foreground hover:text-primary text-sm">
-              <ArrowLeft size={16} /> Torna al Magazine
-            </Link>
-          </div>
+          {/* Breadcrumb */}
+          <nav className="flex items-center gap-1.5 text-sm text-muted-foreground mb-6 flex-wrap">
+            <Link href="/" className="hover:text-primary transition-colors">Home</Link>
+            <span>/</span>
+            <Link href="/magazine" className="hover:text-primary transition-colors">Magazine</Link>
+            <span>/</span>
+            <Link href={`/magazine?cat=${articolo.categoria}`} className="hover:text-primary transition-colors capitalize">{articolo.categoria}</Link>
+            <span>/</span>
+            <span className="text-foreground font-medium truncate max-w-[200px] sm:max-w-none">{articolo.titolo}</span>
+          </nav>
+
+          {/* Schema.org BreadcrumbList */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.mifidodite.eu" },
+                  { "@type": "ListItem", "position": 2, "name": "Magazine", "item": "https://www.mifidodite.eu/magazine" },
+                  { "@type": "ListItem", "position": 3, "name": articolo.categoria, "item": `https://www.mifidodite.eu/magazine?cat=${articolo.categoria}` },
+                  { "@type": "ListItem", "position": 4, "name": articolo.titolo },
+                ],
+              }),
+            }}
+          />
 
           {/* Disclosure AI Act */}
           <div className="flex items-center gap-2 bg-muted rounded-xl p-3 mb-6 text-xs text-muted-foreground">

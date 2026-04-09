@@ -13,7 +13,7 @@ export default function ProfessionistiPage() {
   return (
     <>
       <Header />
-      <main className="flex-1 bg-muted/30">
+      <main className="flex-1 pt-16 bg-background">
         <Suspense>
           <SearchPage />
         </Suspense>

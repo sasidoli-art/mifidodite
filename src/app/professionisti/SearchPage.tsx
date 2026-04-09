@@ -143,46 +143,44 @@ export function SearchPage() {
   }
 
   return (
-    <div className="max-w-[1160px] mx-auto px-6 py-8">
-      <div className="bg-white rounded-[20px] border border-border p-5 sm:p-6 mb-8">
-        <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-3">
-          <div className="flex-1 flex items-center gap-2 px-4 py-3.5 rounded-full bg-muted/60 border border-border">
-            <MapPin size={18} className="text-muted-foreground shrink-0" />
-            <input type="text" placeholder="CAP o comune..." value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              className="flex-1 bg-transparent outline-none text-foreground placeholder:text-muted-foreground text-sm" />
+    <div>
+      {/* Hero scuro con ricerca integrata */}
+      <section className="bg-foreground py-12 sm:py-16 relative overflow-hidden">
+        <div className="absolute inset-0 opacity-[.03]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='.6' fill='white'/%3E%3C/svg%3E\")" }} />
+        <div className="max-w-[1160px] mx-auto px-6 relative z-10">
+          <div className="text-center mb-8">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">
+              Cerca <span className="bg-gradient-to-r from-primary-light to-accent bg-clip-text text-transparent">professionisti pet</span>
+            </h1>
+            <p className="mt-3 text-white/50 text-base sm:text-lg max-w-xl mx-auto">
+              Veterinari, pensioni, toelettatori e molto altro nella tua zona. Dati reali da OpenStreetMap.
+            </p>
           </div>
-          <select value={categoria} onChange={(e) => setCategoria(e.target.value)}
-            className="px-4 py-3.5 rounded-full bg-muted/60 border border-border text-foreground outline-none cursor-pointer text-sm">
-            <option value="">Tutte le categorie</option>
-            {CATEGORIE_OPTIONS.map((opt) => (
-              <option key={opt.value} value={opt.value}>{opt.label}</option>
-            ))}
-          </select>
-          <button type="submit"
-            className="bg-primary hover:bg-foreground text-white px-8 py-3.5 rounded-full font-semibold flex items-center justify-center gap-2 transition-all hover:shadow-lg hover:-translate-y-0.5 text-sm">
-            <Search size={18} /> Cerca
-          </button>
-          <button type="button" onClick={() => setShowFilters(!showFilters)}
-            className="px-4 py-3 rounded-xl border border-border text-foreground hover:bg-muted transition-colors flex items-center gap-2">
-            <SlidersHorizontal size={18} />
-          </button>
-        </form>
 
-        {showFilters && (
-          <div className="mt-4 pt-4 border-t border-border flex flex-wrap items-center gap-4">
-            <div className="flex items-center gap-2">
-              <label className="text-sm font-medium text-foreground">Raggio:</label>
-              <select value={raggio} onChange={(e) => setRaggio(Number(e.target.value))}
-                className="px-3 py-2 rounded-lg bg-muted text-sm outline-none">
-                <option value={5}>5 km</option><option value={10}>10 km</option>
-                <option value={20}>20 km</option><option value={30}>30 km</option>
-                <option value={50}>50 km</option><option value={100}>100 km</option>
-              </select>
+          <form onSubmit={handleSearch} className="max-w-3xl mx-auto flex flex-col sm:flex-row gap-3">
+            <div className="flex-1 flex items-center gap-2 px-5 py-3.5 rounded-full bg-white/10 border border-white/10 backdrop-blur-sm">
+              <MapPin size={18} className="text-white/40 shrink-0" />
+              <input type="text" placeholder="CAP o comune..." value={query}
+                onChange={(e) => setQuery(e.target.value)}
+                className="flex-1 bg-transparent outline-none text-white placeholder:text-white/40 text-sm" />
             </div>
-          </div>
-        )}
-      </div>
+            <select value={categoria} onChange={(e) => setCategoria(e.target.value)}
+              className="px-5 py-3.5 rounded-full bg-white/10 border border-white/10 text-white/80 outline-none cursor-pointer text-sm backdrop-blur-sm">
+              <option value="">Tutte le categorie</option>
+              {CATEGORIE_OPTIONS.map((opt) => (
+                <option key={opt.value} value={opt.value}>{opt.label}</option>
+              ))}
+            </select>
+            <button type="submit"
+              className="bg-primary hover:bg-primary-dark text-white px-8 py-3.5 rounded-full font-semibold flex items-center justify-center gap-2 transition-all hover:shadow-lg text-sm">
+              <Search size={18} /> Cerca
+            </button>
+          </form>
+        </div>
+      </section>
+
+      {/* Contenuto risultati */}
+      <div className="max-w-[1160px] mx-auto px-6 py-8">
 
       {categoria && (
         <div className="flex items-center gap-2 mb-6">
@@ -268,34 +266,34 @@ export function SearchPage() {
             </div>
 
             {/* Link esterni — Google, PagineGialle, Subito */}
-            <div className="grid sm:grid-cols-3 gap-3 mb-8">
+            <div className="grid sm:grid-cols-3 gap-4 mb-8">
               <a href={links.google} target="_blank" rel="noopener noreferrer"
-                className="flex flex-col items-center gap-2 p-5 bg-white border-2 border-border hover:border-primary hover:shadow-md rounded-2xl transition-all group">
-                <div className="text-2xl">🗺️</div>
-                <span className="font-semibold text-foreground group-hover:text-primary">Google Maps</span>
+                className="flex flex-col items-center gap-3 p-6 bg-white rounded-[20px] border border-border card-hover group">
+                <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center"><MapPin size={22} className="text-primary" /></div>
+                <span className="font-bold text-foreground group-hover:text-primary text-sm">Google Maps</span>
                 <span className="text-xs text-muted-foreground flex items-center gap-1">Apri ricerca <ExternalLink size={11} /></span>
               </a>
               <a href={links.paginegialle} target="_blank" rel="noopener noreferrer"
-                className="flex flex-col items-center gap-2 p-5 bg-white border-2 border-border hover:border-primary hover:shadow-md rounded-2xl transition-all group">
-                <div className="text-2xl">📞</div>
-                <span className="font-semibold text-foreground group-hover:text-primary">PagineGialle</span>
+                className="flex flex-col items-center gap-3 p-6 bg-white rounded-[20px] border border-border card-hover group">
+                <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center"><Phone size={22} className="text-secondary" /></div>
+                <span className="font-bold text-foreground group-hover:text-primary text-sm">PagineGialle</span>
                 <span className="text-xs text-muted-foreground flex items-center gap-1">Apri ricerca <ExternalLink size={11} /></span>
               </a>
               <a href={links.subito} target="_blank" rel="noopener noreferrer"
-                className="flex flex-col items-center gap-2 p-5 bg-white border-2 border-border hover:border-primary hover:shadow-md rounded-2xl transition-all group">
-                <div className="text-2xl">📋</div>
-                <span className="font-semibold text-foreground group-hover:text-primary">Subito.it</span>
+                className="flex flex-col items-center gap-3 p-6 bg-white rounded-[20px] border border-border card-hover group">
+                <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center"><Search size={22} className="text-accent" /></div>
+                <span className="font-bold text-foreground group-hover:text-primary text-sm">Subito.it</span>
                 <span className="text-xs text-muted-foreground flex items-center gap-1">Apri ricerca <ExternalLink size={11} /></span>
               </a>
             </div>
 
             {/* CTA professionisti */}
-            <div className="bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-6 text-center border border-amber-200">
+            <div className="bg-muted rounded-[20px] p-6 text-center border border-border">
               <p className="text-sm text-foreground font-semibold mb-2">Sei un professionista del mondo pet?</p>
               <p className="text-sm text-muted-foreground mb-4">
                 Registra la tua attivita gratis su MifidoDiTe.eu con il codice invito e fatti trovare dai proprietari della tua zona.
               </p>
-              <a href="/registra-attivita" className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-xl font-semibold transition-colors">
+              <a href="/registra-attivita" className="inline-flex items-center gap-2 bg-primary hover:bg-foreground text-white px-7 py-3.5 rounded-full font-semibold transition-all hover:shadow-lg hover:-translate-y-0.5 text-sm">
                 Registra la tua attivita
               </a>
             </div>

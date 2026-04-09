@@ -96,12 +96,13 @@ export function MappaClient() {
 
   const onBoundsChange = useCallback((bounds: { south: number; west: number; north: number; east: number }) => {
     const latDiff = bounds.north - bounds.south;
-    if (latDiff < 1.2) {
+    if (latDiff < 2.5) {
+      // Zoom sufficiente — carica dati
       setZoomTooFar(false);
       loadOSMData(bounds.south, bounds.west, bounds.north, bounds.east);
     } else {
+      // Troppo lontano — non resettare i pin gia caricati, mostra solo il messaggio
       setZoomTooFar(true);
-      setPins([]);
     }
   }, [loadOSMData]);
 

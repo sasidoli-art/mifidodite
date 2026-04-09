@@ -73,7 +73,7 @@ export default function MapComponent({ pins, selected, onSelect, userPos, onBoun
           north: b.getNorth(),
           east: b.getEast(),
         });
-      }, 600); // 600ms debounce
+      }, 1000); // 1s debounce per evitare loop
     }
 
     map.on("moveend", emitBounds);
@@ -115,10 +115,10 @@ export default function MapComponent({ pins, selected, onSelect, userPos, onBoun
     });
   }, [pins, onSelect]);
 
-  // Centra su pin selezionato
+  // Centra su pin selezionato (setView senza animazione per evitare loop moveend)
   useEffect(() => {
     if (!mapRef.current || !selected) return;
-    mapRef.current.flyTo([selected.lat, selected.lon], 14, { duration: 1 });
+    mapRef.current.setView([selected.lat, selected.lon], Math.max(mapRef.current.getZoom(), 13), { animate: false });
   }, [selected]);
 
   // Posizione utente

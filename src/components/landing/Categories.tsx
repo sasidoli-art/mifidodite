@@ -36,14 +36,14 @@ export function Categories() {
           {SERVICES.map((s, i) => (
             <motion.div
               key={s.label}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20, filter: "blur(8px)" }}
+              whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.08 }}
+              transition={{ delay: i * 0.08, duration: 0.6 }}
             >
               <Link href={s.href} className="group block bg-white rounded-[20px] overflow-hidden border border-border card-hover">
                 <div className="h-[180px] overflow-hidden relative">
-                  <img
+                  <img loading="lazy"
                     src={s.img}
                     alt={s.label}
                     className="w-full h-full object-cover group-hover:scale-[1.06] group-hover:brightness-105 transition-all duration-500"

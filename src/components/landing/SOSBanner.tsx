@@ -18,7 +18,7 @@ export function SOSBanner() {
               <div className="relative flex flex-col sm:flex-row items-center gap-6 sm:gap-10 p-8 sm:p-10 bg-gradient-to-r from-red-600 via-red-500 to-orange-500 overflow-hidden">
                 {/* Immagine */}
                 <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shrink-0 border-4 border-white/20 shadow-xl">
-                  <img
+                  <img loading="lazy"
                     src="https://images.unsplash.com/photo-1544568100-847a948585b9?w=400&q=80"
                     alt="Cane smarrito"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"

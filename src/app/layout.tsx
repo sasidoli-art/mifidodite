@@ -4,6 +4,7 @@ import { Bricolage_Grotesque, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { CookieBanner } from "@/components/shared/CookieBanner";
 import { ChatBot } from "@/components/shared/ChatBot";
+import { BackToTop } from "@/components/shared/BackToTop";
 
 const GA_ID = "G-WTEF9GDNNN";
 
@@ -80,6 +81,7 @@ export default function RootLayout({
         {children}
         <CookieBannerWrapper />
         <ChatBot />
+        <BackToTop />
 
         {/* Google Analytics 4 */}
         <Script

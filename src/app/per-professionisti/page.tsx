@@ -138,7 +138,7 @@ export default function PerProfessionistiPage() {
       <Header />
       <main className="flex-1">
         {/* Hero — diretto, zero fronzoli */}
-        <section className="bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 py-20">
+        <section className="bg-muted py-20">
           <div className="max-w-3xl mx-auto px-4 text-center">
             <h1 className="text-4xl sm:text-5xl font-extrabold text-foreground leading-tight">
               I tuoi prossimi clienti

@@ -130,7 +130,7 @@ export function PetNews() {
         >
           <Link href={`/magazine/${NEWS[0].slug}`} className="group block">
             <div className="relative h-64 sm:h-96 rounded-3xl overflow-hidden">
-              <img
+              <img loading="lazy"
                 src={NEWS[0].img}
                 alt={NEWS[0].titolo}
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
@@ -165,7 +165,7 @@ export function PetNews() {
                 className="group block bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
               >
                 <div className="relative h-36 overflow-hidden">
-                  <img
+                  <img loading="lazy"
                     src={article.img}
                     alt={article.titolo}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"

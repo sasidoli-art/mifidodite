@@ -53,10 +53,10 @@ export function TrustSection() {
             <motion.div
               key={point.title}
               className="group bg-white rounded-2xl border border-border p-6 hover:shadow-xl hover:border-primary/30 transition-all duration-300 hover:-translate-y-2"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: i % 2 === 0 ? -20 : 20, scale: 0.95 }}
+              whileInView={{ opacity: 1, x: 0, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
+              transition={{ delay: i * 0.1, type: "spring", stiffness: 200 }}
             >
               <motion.div
                 className={`w-14 h-14 rounded-2xl ${point.color} flex items-center justify-center mb-5`}

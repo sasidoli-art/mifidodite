@@ -72,7 +72,7 @@ export function ProCTA() {
             viewport={{ once: true }}
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
-              <img
+              <img loading="lazy"
                 src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=700&q=80"
                 alt="Professionista pet con cane"
                 className="w-full h-[400px] object-cover"

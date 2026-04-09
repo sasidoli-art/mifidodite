@@ -59,7 +59,7 @@ export function HowItWorks() {
             >
               {/* Immagine */}
               <div className="h-[160px] overflow-hidden">
-                <img
+                <img loading="lazy"
                   src={step.img}
                   alt={step.title}
                   className="w-full h-full object-cover hover:scale-[1.06] transition-transform duration-500"

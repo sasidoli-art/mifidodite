@@ -106,7 +106,7 @@ export function Testimonials() {
 
               {/* Author */}
               <div className="flex items-center gap-3 pt-5 border-t border-white/[.06]">
-                <img
+                <img loading="lazy"
                   src={review.avatar}
                   alt={review.name}
                   className="w-10 h-10 rounded-full object-cover ring-2 ring-white/10"

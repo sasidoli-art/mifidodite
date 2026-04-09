@@ -53,13 +53,13 @@ export function FeaturedPros() {
           {SERVIZI.map((s, i) => (
             <motion.div
               key={s.titolo}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, scale: 0.9 }}
+              whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ delay: i * 0.1 }}
+              transition={{ delay: i * 0.12, type: "spring", stiffness: 150 }}
             >
               <Link href={s.href} className="group block relative h-72 sm:h-80 rounded-3xl overflow-hidden">
-                <img
+                <img loading="lazy"
                   src={s.img}
                   alt={s.titolo}
                   className="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"

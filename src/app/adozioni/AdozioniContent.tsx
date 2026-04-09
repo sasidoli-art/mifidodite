@@ -9,7 +9,7 @@ export function AdozioniContent() {
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-br from-red-50 via-pink-50 to-orange-50 py-16">
+      <section className="bg-muted py-16">
         <div className="max-w-5xl mx-auto px-4 text-center">
           <div className="text-5xl mb-4">🏠</div>
           <h1 className="text-4xl sm:text-5xl font-extrabold text-foreground">

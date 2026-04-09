@@ -29,19 +29,21 @@ const STEPS = [
 
 export function HowItWorks() {
   return (
-    <section className="py-24 bg-background">
-      <div className="max-w-[1160px] mx-auto px-6">
+    <section className="py-24 bg-foreground relative overflow-hidden">
+      {/* Dot pattern */}
+      <div className="absolute inset-0 opacity-[.03]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='.6' fill='white'/%3E%3C/svg%3E\")" }} />
+      <div className="max-w-[1160px] mx-auto px-6 relative z-10">
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <span className="text-xs font-bold uppercase tracking-[1.5px] text-primary mb-4 block">Come funziona</span>
-          <h2 className="text-[28px] sm:text-[36px] lg:text-[42px] font-extrabold leading-tight tracking-tight text-foreground">
+          <span className="text-xs font-bold uppercase tracking-[1.5px] text-primary-light mb-4 block">Come funziona</span>
+          <h2 className="text-[28px] sm:text-[36px] lg:text-[42px] font-extrabold leading-tight tracking-tight text-white">
             Tre passi per trovare chi
             <br />
-            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">si prendera cura di loro</span>
+            <span className="bg-gradient-to-r from-primary-light to-accent bg-clip-text text-transparent">si prendera cura di loro</span>
           </h2>
         </motion.div>
 

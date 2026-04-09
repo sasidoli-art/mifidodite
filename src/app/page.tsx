@@ -16,15 +16,25 @@ export default function Home() {
     <>
       <Header />
       <main className="flex-1">
+        {/* CHIARO — Hero con ricerca */}
         <Hero />
+        {/* SCURO — Come funziona (3 step) */}
         <HowItWorks />
+        {/* CHIARO — Servizi pet con immagini */}
         <Categories />
-        <FeaturedPros />
+        {/* ACCENTO — SOS Smarriti (rosso) */}
         <SOSBanner />
-        <PetNews />
-        <TrustSection />
+        {/* SCURO — Recensioni */}
         <Testimonials />
+        {/* CHIARO — Magazine (articoli) */}
+        <PetNews />
+        {/* CHIARO — Servizi featured (3 card grandi) */}
+        <FeaturedPros />
+        {/* CHIARO — Perche fidarsi */}
+        <TrustSection />
+        {/* SCURO — CTA Professionisti */}
         <ProCTA />
+        {/* SCURO — Newsletter */}
         <Newsletter />
       </main>
       <Footer />

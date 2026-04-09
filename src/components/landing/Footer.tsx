@@ -4,11 +4,12 @@ import { LogoPawDark, LogoText } from "@/components/shared/Logo";
 
 export function Footer() {
   return (
-    <footer className="bg-foreground text-white/80">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
+    <footer className="bg-foreground text-white/80 relative overflow-hidden">
+      <div className="absolute inset-0 opacity-[.02]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='.6' fill='white'/%3E%3C/svg%3E\")" }} />
+      <div className="max-w-[1160px] mx-auto px-6 py-16 relative z-10">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-10">
           {/* Brand */}
-          <div className="sm:col-span-2 lg:col-span-1">
+          <div className="col-span-2 lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
               <LogoPawDark size={28} />
               <LogoText variant="dark" />
@@ -61,8 +62,8 @@ export function Footer() {
         </div>
       </div>
 
-      <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
+      <div className="border-t border-white/10 relative z-10">
+        <div className="max-w-[1160px] mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-sm text-white/40">
             &copy; {new Date().getFullYear()} MifidoDiTe.eu — Mi fido di te. Tutti i diritti riservati.
           </p>

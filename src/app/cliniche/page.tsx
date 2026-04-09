@@ -81,7 +81,7 @@ export default async function ClinichePage() {
     <>
       <Header />
       <main className="flex-1">
-        <section className="bg-gradient-to-br from-red-50 via-pink-50 to-orange-50 py-16">
+        <section className="bg-muted py-16">
           <div className="max-w-5xl mx-auto px-4 text-center">
             <h1 className="text-4xl sm:text-5xl font-extrabold text-foreground">
               Cliniche Veterinarie e <span className="text-primary">Rifugi</span>
@@ -184,7 +184,7 @@ export default async function ClinichePage() {
             </section>
           ))}
 
-          <div className="mt-12 bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-8 text-center">
+          <div className="mt-12 bg-muted rounded-2xl p-8 text-center">
             <Heart className="mx-auto text-primary mb-4" size={40} />
             <h3 className="text-xl font-bold text-foreground">Conosci una clinica che manca?</h3>
             <p className="text-muted-foreground mt-2 max-w-md mx-auto">Segnalacela e la aggiungeremo.</p>

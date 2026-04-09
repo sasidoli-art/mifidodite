@@ -82,7 +82,7 @@ export default async function MagazinePage({
     <>
       <Header />
       <main className="flex-1">
-        <section className="bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 py-16">
+        <section className="bg-muted py-16">
           <div className="max-w-5xl mx-auto px-4 text-center">
             <h1 className="text-4xl sm:text-5xl font-extrabold text-foreground">
               Magazine <span className="text-primary">Pet</span>

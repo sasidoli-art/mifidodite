@@ -32,7 +32,7 @@ export default function OffertePage() {
       <Header />
       <main className="flex-1">
         {/* Hero — caldo, claymorphism */}
-        <section className="relative overflow-hidden py-20" style={{ background: "linear-gradient(135deg, #FFF7ED 0%, #FFEDD5 50%, #FED7AA 100%)" }}>
+        <section className="relative overflow-hidden py-20 bg-muted">
           <div className="absolute inset-0 pointer-events-none">
             {[...Array(4)].map((_, i) => (
               <motion.div key={i} className="absolute text-primary/5"

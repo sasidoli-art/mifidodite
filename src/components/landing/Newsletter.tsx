@@ -40,7 +40,7 @@ export function Newsletter() {
           {/* Left — text */}
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }}>
             <span className="text-xs font-bold uppercase tracking-[1.5px] text-primary mb-4 block">Newsletter</span>
-            <h2 className="text-[42px] font-extrabold leading-tight tracking-tight text-white mb-5">
+            <h2 className="text-[28px] sm:text-[36px] lg:text-[42px] font-extrabold leading-tight tracking-tight text-white mb-5">
               Resta aggiornato,
               <br />
               <span className="bg-gradient-to-r from-primary-light to-accent bg-clip-text text-transparent">ogni settimana</span>

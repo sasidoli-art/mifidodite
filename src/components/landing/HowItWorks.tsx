@@ -38,7 +38,7 @@ export function HowItWorks() {
           viewport={{ once: true }}
         >
           <span className="text-xs font-bold uppercase tracking-[1.5px] text-primary mb-4 block">Come funziona</span>
-          <h2 className="text-[42px] font-extrabold leading-tight tracking-tight text-foreground">
+          <h2 className="text-[28px] sm:text-[36px] lg:text-[42px] font-extrabold leading-tight tracking-tight text-foreground">
             Tre passi per trovare chi
             <br />
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">si prendera cura di loro</span>

@@ -28,7 +28,7 @@ export function Hero() {
   }
 
   return (
-    <section className="relative pt-32 pb-0 overflow-hidden">
+    <section className="relative pt-24 sm:pt-32 pb-0 overflow-hidden">
       {/* Radial gradient backgrounds */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[radial-gradient(ellipse,rgba(212,169,76,.08),transparent_60%)]" />
@@ -49,7 +49,7 @@ export function Hero() {
               Il magazine pet d&apos;Italia
             </div>
 
-            <h1 className="text-[46px] sm:text-[54px] font-extrabold leading-[1.08] tracking-tight text-foreground mb-5">
+            <h1 className="text-[32px] sm:text-[46px] lg:text-[54px] font-extrabold leading-[1.08] tracking-tight text-foreground mb-5">
               Tutto per chi ama
               <br />
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
@@ -63,8 +63,8 @@ export function Hero() {
             </p>
 
             {/* Search form */}
-            <form onSubmit={handleSearch} className="flex gap-3 flex-wrap mb-6">
-              <div className="flex-1 min-w-[200px] flex items-center gap-2 bg-white px-4 py-3.5 rounded-full border border-border shadow-sm">
+            <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-3 mb-6">
+              <div className="flex-1 flex items-center gap-2 bg-white px-4 py-3.5 rounded-full border border-border shadow-sm">
                 <MapPin size={18} className="text-muted-foreground shrink-0" />
                 <input
                   type="text"
@@ -96,7 +96,7 @@ export function Hero() {
               </motion.button>
             </form>
 
-            <div className="flex items-center gap-6 text-sm text-muted-foreground">
+            <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-xs sm:text-sm text-muted-foreground">
               <span className="flex items-center gap-1.5"><Star size={14} className="text-accent" /> 140+ articoli</span>
               <span className="flex items-center gap-1.5"><Heart size={14} className="text-primary" /> Adozioni reali</span>
               <span className="flex items-center gap-1.5"><MapPin size={14} className="text-secondary" /> Dati OpenStreetMap</span>
@@ -165,8 +165,8 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5, duration: 0.7 }}
         >
-          {GALLERY.map((item) => (
-            <div key={item.label} className="flex-1 min-w-0 h-[180px] rounded-[20px] overflow-hidden relative group">
+          {GALLERY.map((item, idx) => (
+            <div key={item.label} className={`flex-1 min-w-0 h-[140px] sm:h-[180px] rounded-[16px] sm:rounded-[20px] overflow-hidden relative group ${idx > 2 ? "hidden lg:block" : ""}`}>
               <img
                 src={item.img}
                 alt={item.label}

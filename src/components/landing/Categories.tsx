@@ -24,7 +24,7 @@ export function Categories() {
           viewport={{ once: true }}
         >
           <span className="text-xs font-bold uppercase tracking-[1.5px] text-primary mb-4 block">Servizi</span>
-          <h2 className="text-[42px] font-extrabold leading-tight tracking-tight text-foreground mb-4">
+          <h2 className="text-[28px] sm:text-[36px] lg:text-[42px] font-extrabold leading-tight tracking-tight text-foreground mb-4">
             Cosa puoi trovare su <span className="text-primary">MiFidoDiTe</span>
           </h2>
           <p className="text-[17px] text-muted-foreground max-w-[560px] mx-auto leading-relaxed">

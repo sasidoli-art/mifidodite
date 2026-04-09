@@ -6,6 +6,7 @@ import { SOSBanner } from "@/components/landing/SOSBanner";
 import { FeaturedPros } from "@/components/landing/FeaturedPros";
 import { PetNews } from "@/components/landing/PetNews";
 import { TrustSection } from "@/components/landing/TrustSection";
+import { Testimonials } from "@/components/landing/Testimonials";
 import { ProCTA } from "@/components/landing/ProCTA";
 import { Newsletter } from "@/components/landing/Newsletter";
 import { Footer } from "@/components/landing/Footer";
@@ -22,6 +23,7 @@ export default function Home() {
         <SOSBanner />
         <PetNews />
         <TrustSection />
+        <Testimonials />
         <ProCTA />
         <Newsletter />
       </main>

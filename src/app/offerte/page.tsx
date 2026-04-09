@@ -30,7 +30,7 @@ export default function OffertePage() {
   return (
     <>
       <Header />
-      <main className="flex-1">
+      <main className="flex-1 pt-16">
         {/* Hero — caldo, claymorphism */}
         <section className="relative overflow-hidden py-20 bg-muted">
           <div className="absolute inset-0 pointer-events-none">

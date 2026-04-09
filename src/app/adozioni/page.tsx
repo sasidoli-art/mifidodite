@@ -11,7 +11,7 @@ export default function AdozioniPage() {
   return (
     <>
       <Header />
-      <main className="flex-1">
+      <main className="flex-1 pt-16">
         <AdozioniContent />
       </main>
       <Footer />

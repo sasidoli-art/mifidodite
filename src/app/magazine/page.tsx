@@ -81,7 +81,7 @@ export default async function MagazinePage({
   return (
     <>
       <Header />
-      <main className="flex-1">
+      <main className="flex-1 pt-16">
         <section className="bg-muted py-16">
           <div className="max-w-5xl mx-auto px-4 text-center">
             <h1 className="text-4xl sm:text-5xl font-extrabold text-foreground">

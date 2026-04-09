@@ -12,7 +12,7 @@ export default function RegistraAttivitaPage() {
   return (
     <>
       <Header />
-      <main className="flex-1">
+      <main className="flex-1 pt-16">
         {/* Hero */}
         <section className="bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 py-16">
           <div className="max-w-4xl mx-auto px-4 text-center">

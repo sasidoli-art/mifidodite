@@ -11,7 +11,7 @@ export default function MappaPage() {
   return (
     <>
       <Header />
-      <main className="flex-1 flex flex-col">
+      <main className="flex-1 pt-16 flex flex-col">
         <MappaClient />
       </main>
     </>

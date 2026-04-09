@@ -136,7 +136,7 @@ export default function PerProfessionistiPage() {
   return (
     <>
       <Header />
-      <main className="flex-1">
+      <main className="flex-1 pt-16">
         {/* Hero — diretto, zero fronzoli */}
         <section className="bg-muted py-20">
           <div className="max-w-3xl mx-auto px-4 text-center">

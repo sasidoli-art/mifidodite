@@ -105,7 +105,7 @@ export default async function ArticoloPage({
   return (
     <>
       <Header />
-      <main className="flex-1">
+      <main className="flex-1 pt-16">
         <div className="relative h-64 sm:h-96">
           <img src={articolo.img} alt={articolo.titolo} className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />

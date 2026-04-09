@@ -115,7 +115,7 @@ export default function PrezziPage() {
   return (
     <>
       <Header />
-      <main className="flex-1">
+      <main className="flex-1 pt-16">
         {/* Hero */}
         <section className="bg-gradient-to-br from-green-50 via-emerald-50 to-teal-50 py-16">
           <div className="max-w-5xl mx-auto px-4 text-center">

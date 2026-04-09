@@ -61,7 +61,7 @@ export default function PartnerPage() {
   return (
     <>
       <Header />
-      <main className="flex-1">
+      <main className="flex-1 pt-16">
         {/* Hero — diretto, business */}
         <section className="bg-foreground py-20">
           <div className="max-w-4xl mx-auto px-4 text-center">

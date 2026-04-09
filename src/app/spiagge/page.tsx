@@ -55,18 +55,19 @@ export default async function SpiaggePage() {
     <>
       <Header />
       <main className="flex-1 pt-16">
-        <section className="bg-gradient-to-br from-blue-50 via-cyan-50 to-sky-50 py-16">
-          <div className="max-w-5xl mx-auto px-4 text-center">
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-foreground">
-              Spiagge <span className="text-accent">Dog-Friendly</span> in Italia
+        <section className="bg-foreground py-16 relative overflow-hidden">
+          <div className="absolute inset-0 opacity-[.03]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='.6' fill='white'/%3E%3C/svg%3E\")" }} />
+          <div className="max-w-5xl mx-auto px-4 text-center relative z-10">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">
+              Spiagge <span className="bg-gradient-to-r from-primary-light to-accent bg-clip-text text-transparent">Dog-Friendly</span> in Italia
             </h1>
-            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+            <p className="mt-4 text-lg text-white/60 max-w-2xl mx-auto">
               {totale} spiagge verificate in {regioni.length} regioni dove il tuo cane e il benvenuto.
             </p>
             <div className="mt-8 flex flex-wrap justify-center gap-2">
               {regioni.map((r) => (
                 <a key={r} href={`#${r.toLowerCase().replace(/[\s-]+/g, "-")}`}
-                  className="bg-white text-foreground px-4 py-2 rounded-full text-sm font-medium hover:bg-accent hover:text-white transition-colors shadow-sm">
+                  className="bg-white/10 text-white/80 px-4 py-2 rounded-full text-sm font-medium hover:bg-white/20 transition-colors border border-white/10">
                   {r} ({perRegione[r].length})
                 </a>
               ))}

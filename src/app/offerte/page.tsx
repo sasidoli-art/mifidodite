@@ -31,32 +31,23 @@ export default function OffertePage() {
     <>
       <Header />
       <main className="flex-1 pt-16">
-        {/* Hero — caldo, claymorphism */}
-        <section className="relative overflow-hidden py-20 bg-muted">
-          <div className="absolute inset-0 pointer-events-none">
-            {[...Array(4)].map((_, i) => (
-              <motion.div key={i} className="absolute text-primary/5"
-                style={{ top: `${15 + i * 20}%`, left: `${10 + i * 22}%`, fontSize: `${60 + i * 15}px` }}
-                animate={{ y: [0, -10, 0], rotate: [0, 5, -5, 0] }}
-                transition={{ duration: 3 + i, repeat: Infinity, ease: "easeInOut", delay: i * 0.4 }}>
-                🏷️
-              </motion.div>
-            ))}
-          </div>
+        {/* Hero — scuro v3 */}
+        <section className="relative overflow-hidden py-20 bg-foreground">
+          <div className="absolute inset-0 opacity-[.03]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='.6' fill='white'/%3E%3C/svg%3E\")" }} />
 
-          <div className="relative max-w-5xl mx-auto px-4 text-center">
-            <motion.div className="inline-flex items-center gap-2 bg-white clay px-4 py-1.5 mb-6"
+          <div className="relative max-w-5xl mx-auto px-4 text-center z-10">
+            <motion.div className="inline-flex items-center gap-2 bg-white/10 border border-white/10 rounded-full px-4 py-1.5 mb-6"
               initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }}>
-              <Sparkles size={14} className="text-primary" />
-              <span className="text-sm font-semibold text-foreground">Aggiornate ogni settimana</span>
+              <Sparkles size={14} className="text-accent" />
+              <span className="text-sm font-semibold text-white/80">Aggiornate ogni settimana</span>
             </motion.div>
 
-            <motion.h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-foreground leading-tight"
+            <motion.h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-tight"
               initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
-              Offerte <span className="text-primary">Pet</span>
+              Offerte <span className="bg-gradient-to-r from-primary-light to-accent bg-clip-text text-transparent">Pet</span>
             </motion.h1>
 
-            <motion.p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto"
+            <motion.p className="mt-4 text-lg text-white/60 max-w-xl mx-auto"
               initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.4 }}>
               Le migliori offerte su cibo, accessori e prodotti per il tuo amico a 4 zampe. Dai migliori brand e negozi d'Italia.
             </motion.p>

@@ -48,6 +48,7 @@ export default function MapComponent({ pins, selected, onSelect, userPos, onBoun
   const markersRef = useRef<L.LayerGroup | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
   const boundsTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const isFlyingRef = useRef(false);
 
   // Inizializza mappa
   useEffect(() => {
@@ -69,11 +70,12 @@ export default function MapComponent({ pins, selected, onSelect, userPos, onBoun
     markersRef.current = L.layerGroup().addTo(map);
     mapRef.current = map;
 
-    // Notifica bounds quando l'utente sposta/zooma (debounced)
+    // Notifica bounds quando l'utente sposta/zooma (debounced, bloccato durante flyTo)
     function emitBounds() {
+      if (isFlyingRef.current) return; // Ignora eventi durante flyTo
       if (boundsTimerRef.current) clearTimeout(boundsTimerRef.current);
       boundsTimerRef.current = setTimeout(() => {
-        if (!mapRef.current || !onBoundsChange) return;
+        if (!mapRef.current || !onBoundsChange || isFlyingRef.current) return;
         const b = mapRef.current.getBounds();
         onBoundsChange({
           south: b.getSouth(),
@@ -81,11 +83,10 @@ export default function MapComponent({ pins, selected, onSelect, userPos, onBoun
           north: b.getNorth(),
           east: b.getEast(),
         });
-      }, 1000); // 1s debounce per evitare loop
+      }, 800);
     }
 
     map.on("moveend", emitBounds);
-    map.on("zoomend", emitBounds);
 
     return () => {
       map.remove();
@@ -123,11 +124,34 @@ export default function MapComponent({ pins, selected, onSelect, userPos, onBoun
     });
   }, [pins, onSelect]);
 
-  // FlyTo da ricerca citta
+  // FlyTo da ricerca citta — blocca moveend durante il volo
   useEffect(() => {
     if (!mapRef.current || !flyTo) return;
-    mapRef.current.flyTo([flyTo[0], flyTo[1]], flyTo[2], { duration: 1.5 });
-  }, [flyTo]);
+    const map = mapRef.current;
+    isFlyingRef.current = true;
+
+    map.flyTo([flyTo[0], flyTo[1]], flyTo[2], { duration: 1.2 });
+
+    // Sblocca dopo che il volo e finito e emetti bounds
+    function onFlyEnd() {
+      isFlyingRef.current = false;
+      map.off("moveend", onFlyEnd);
+      // Emetti bounds manualmente dopo il volo
+      if (onBoundsChange) {
+        const b = map.getBounds();
+        onBoundsChange({
+          south: b.getSouth(),
+          west: b.getWest(),
+          north: b.getNorth(),
+          east: b.getEast(),
+        });
+      }
+    }
+    // Il primo moveend dopo flyTo = fine del volo
+    setTimeout(() => {
+      map.once("moveend", onFlyEnd);
+    }, 100);
+  }, [flyTo, onBoundsChange]);
 
   // Centra su pin selezionato (setView senza animazione per evitare loop moveend)
   useEffect(() => {
@@ -153,7 +177,18 @@ export default function MapComponent({ pins, selected, onSelect, userPos, onBoun
     });
 
     L.marker(userPos, { icon: userIcon }).addTo(mapRef.current);
-    mapRef.current.flyTo(userPos, 12, { duration: 1.5 });
+    isFlyingRef.current = true;
+    mapRef.current.flyTo(userPos, 12, { duration: 1.2 });
+    const m = mapRef.current;
+    setTimeout(() => {
+      m.once("moveend", () => {
+        isFlyingRef.current = false;
+        if (onBoundsChange) {
+          const b = m.getBounds();
+          onBoundsChange({ south: b.getSouth(), west: b.getWest(), north: b.getNorth(), east: b.getEast() });
+        }
+      });
+    }, 100);
   }, [userPos]);
 
   return (

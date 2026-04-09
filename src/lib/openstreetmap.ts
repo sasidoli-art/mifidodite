@@ -64,11 +64,12 @@ export async function searchOSM(
   if (!tag) return [];
 
   const [south, west, north, east] = bbox;
-  const query = `[out:json][timeout:15];
+  // Chiedi solo nodi con nome per evitare risultati "Senza nome" e velocizzare
+  const query = `[out:json][timeout:12];
 (
-  node["${tag.key}"="${tag.value}"](${south},${west},${north},${east});
+  node["${tag.key}"="${tag.value}"]["name"](${south},${west},${north},${east});
 );
-out center ${limit};`;
+out ${limit};`;
 
   // Prova ogni mirror in cascata
   for (const mirror of OVERPASS_MIRRORS) {
@@ -98,7 +99,7 @@ out center ${limit};`;
       console.log(`[OSM] ${mirror} returned ${elements.length} elements`);
 
       return elements
-        .filter((e) => e.tags)
+        .filter((e) => e.tags && e.tags.name) // Solo nodi con nome reale
         .map((e) => mapOSMtoPlace(e, categoria))
         .filter((p): p is OSMPlace => p !== null);
     } catch (err) {

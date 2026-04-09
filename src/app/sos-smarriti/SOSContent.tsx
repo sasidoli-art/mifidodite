@@ -113,20 +113,57 @@ export function SOSContent() {
           </div>
         )}
 
-        {/* Info box */}
-        <div className="mt-12 bg-amber-50 rounded-2xl p-6 sm:p-8">
-          <h3 className="font-bold text-foreground text-lg mb-3">Cosa fare se perdi il tuo animale</h3>
-          <div className="grid sm:grid-cols-2 gap-4 text-sm text-foreground/80">
-            <ul className="space-y-2">
-              <li className="flex items-start gap-2"><span className="text-primary font-bold">1.</span> Cerca subito nelle vicinanze — molti animali restano nel raggio di 1 km</li>
-              <li className="flex items-start gap-2"><span className="text-primary font-bold">2.</span> Lascia una cuccia o un tuo indumento fuori casa — l'odore li guida</li>
-              <li className="flex items-start gap-2"><span className="text-primary font-bold">3.</span> Pubblica una segnalazione qui e sui social</li>
-            </ul>
-            <ul className="space-y-2">
-              <li className="flex items-start gap-2"><span className="text-primary font-bold">4.</span> Chiama i canili e i rifugi della zona</li>
-              <li className="flex items-start gap-2"><span className="text-primary font-bold">5.</span> Contatta la polizia municipale / ASL veterinaria</li>
-              <li className="flex items-start gap-2"><span className="text-primary font-bold">6.</span> Se ha il microchip, segnala lo smarrimento all'anagrafe canina</li>
-            </ul>
+        {/* Come funziona + Numeri utili */}
+        <div className="mt-12 grid sm:grid-cols-2 gap-5">
+          {/* Come funziona la segnalazione */}
+          <div className="bg-white rounded-[20px] border border-border p-6">
+            <h3 className="font-bold text-foreground text-lg mb-4">Come funziona</h3>
+            <div className="space-y-4">
+              <div className="flex gap-3">
+                <div className="w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold text-sm shrink-0">1</div>
+                <div>
+                  <p className="font-semibold text-foreground text-sm">Pubblica la segnalazione</p>
+                  <p className="text-muted-foreground text-xs mt-0.5">Foto, descrizione, zona. Ci vogliono 2 minuti.</p>
+                </div>
+              </div>
+              <div className="flex gap-3">
+                <div className="w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold text-sm shrink-0">2</div>
+                <div>
+                  <p className="font-semibold text-foreground text-sm">La zona viene allertata</p>
+                  <p className="text-muted-foreground text-xs mt-0.5">Chi e vicino a te vedra la segnalazione e potra aiutarti.</p>
+                </div>
+              </div>
+              <div className="flex gap-3">
+                <div className="w-8 h-8 rounded-full bg-red-100 text-red-600 flex items-center justify-center font-bold text-sm shrink-0">3</div>
+                <div>
+                  <p className="font-semibold text-foreground text-sm">Ricevi segnalazioni</p>
+                  <p className="text-muted-foreground text-xs mt-0.5">Chi avvista il tuo amico ti contatta direttamente.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Numeri utili */}
+          <div className="bg-foreground rounded-[20px] p-6 text-white">
+            <h3 className="font-bold text-lg mb-4">Numeri utili — salvali adesso</h3>
+            <div className="space-y-3">
+              <div className="bg-white/10 rounded-xl p-3">
+                <p className="font-bold text-sm">Polizia Municipale</p>
+                <p className="text-white/60 text-xs mt-0.5">Chiama il tuo Comune. Sono obbligati a intervenire per gli animali vaganti.</p>
+              </div>
+              <div className="bg-white/10 rounded-xl p-3">
+                <p className="font-bold text-sm">ASL Veterinaria</p>
+                <p className="text-white/60 text-xs mt-0.5">Gestiscono i canili sanitari. Possono leggere il microchip se trovato.</p>
+              </div>
+              <div className="bg-white/10 rounded-xl p-3">
+                <p className="font-bold text-sm">Anagrafe Canina Regionale</p>
+                <p className="text-white/60 text-xs mt-0.5">Se ha il microchip, segnala lo smarrimento. Ogni regione ha il suo portale.</p>
+              </div>
+              <div className="bg-red-500/20 border border-red-500/30 rounded-xl p-3">
+                <p className="font-bold text-sm">Centro Antiveleni Pavia</p>
+                <p className="text-white/60 text-xs mt-0.5">Se sospetti avvelenamento: <strong className="text-white">0382 24444</strong> (attivo 24/7)</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

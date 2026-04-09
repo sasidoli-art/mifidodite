@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Mail, Heart, PawPrint } from "lucide-react";
+import { Mail, Heart } from "lucide-react";
+import { LogoPawDark, LogoText } from "@/components/shared/Logo";
 
 export function Footer() {
   return (
@@ -8,22 +9,17 @@ export function Footer() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Brand */}
           <div className="sm:col-span-2 lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <PawPrint size={24} className="text-primary" strokeWidth={2} />
-              <span className="text-xl font-bold text-white">MifidoDiTe.eu</span>
+            <div className="flex items-center gap-3 mb-4">
+              <LogoPawDark size={28} />
+              <LogoText variant="dark" />
             </div>
             <p className="text-sm leading-relaxed mb-4">
-              Il portale italiano per trovare professionisti pet vicino a te.
-              Pensioni, dog sitter, toelettatori e molto altro.
+              Il magazine pet d&apos;Italia. Guide, consigli, offerte e servizi per cani e gatti.
             </p>
             <div className="space-y-1.5">
-              <a href="mailto:bau@mifidodite.eu"
+              <a href="mailto:info@mifidodite.eu"
                 className="flex items-center gap-2 text-sm text-primary hover:text-primary/80 transition-colors">
-                <Mail size={14} /> bau@mifidodite.eu
-              </a>
-              <a href="mailto:miao@mifidodite.eu"
-                className="flex items-center gap-2 text-sm text-white/60 hover:text-primary transition-colors">
-                <Mail size={14} /> miao@mifidodite.eu
+                <Mail size={14} /> info@mifidodite.eu
               </a>
             </div>
           </div>

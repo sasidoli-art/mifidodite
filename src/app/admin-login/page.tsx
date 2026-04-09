@@ -2,7 +2,8 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { PawPrint, Lock, Mail, AlertCircle } from "lucide-react";
+import { Lock, Mail, AlertCircle } from "lucide-react";
+import { LogoPawDark } from "@/components/shared/Logo";
 import Link from "next/link";
 
 export default function AdminLoginPage() {
@@ -40,8 +41,8 @@ export default function AdminLoginPage() {
     <div className="min-h-screen flex items-center justify-center bg-foreground px-4">
       <div className="w-full max-w-sm">
         <div className="text-center mb-8">
-          <div className="w-16 h-16 rounded-2xl bg-primary/20 flex items-center justify-center mx-auto mb-4">
-            <PawPrint size={32} className="text-primary" />
+          <div className="w-16 h-16 rounded-2xl bg-primary/20 flex items-center justify-center mx-auto mb-4 pl-0.5">
+            <LogoPawDark size={36} />
           </div>
           <h1 className="text-2xl font-bold text-white">Admin MifidoDiTe</h1>
           <p className="text-white/40 text-sm mt-1">Accesso riservato</p>

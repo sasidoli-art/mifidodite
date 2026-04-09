@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { LogoPawDark } from "@/components/shared/Logo";
 import {
   LayoutDashboard,
   Building2,
@@ -42,10 +43,10 @@ export default function AdminLayout({
       <aside className="w-64 bg-foreground text-white shrink-0 hidden lg:flex flex-col">
         {/* Logo */}
         <div className="p-6 border-b border-white/10">
-          <Link href="/admin" className="flex items-center gap-2">
-            <span className="text-2xl">🐾</span>
+          <Link href="/admin" className="flex items-center gap-3">
+            <LogoPawDark size={24} />
             <div>
-              <span className="font-bold text-white">MifidoDiTe</span>
+              <span className="font-bold text-white">MiFidoDiTe<span className="text-[#FF6B35]">.eu</span></span>
               <span className="text-xs block text-white/40">Pannello Admin</span>
             </div>
           </Link>
@@ -83,8 +84,8 @@ export default function AdminLayout({
         {/* Top bar mobile */}
         <header className="lg:hidden bg-foreground text-white p-4 flex items-center justify-between">
           <Link href="/admin" className="flex items-center gap-2">
-            <span>🐾</span>
-            <span className="font-bold text-sm">Admin MifidoDiTe</span>
+            <LogoPawDark size={20} />
+            <span className="font-bold text-sm">Admin MiFidoDiTe</span>
           </Link>
         </header>
 

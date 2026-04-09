@@ -13,25 +13,25 @@ export default function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "linear-gradient(135deg, #EA580C, #F97316)",
+          background: "linear-gradient(135deg, #FF6B35, #E84E1B)",
           borderRadius: "14px",
         }}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="44"
-          height="44"
-          viewBox="0 0 24 24"
-          fill="white"
-          stroke="white"
-          strokeWidth="1.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          width="50"
+          height="60"
+          viewBox="0 0 100 120"
         >
-          <circle cx="11" cy="4" r="2" />
-          <circle cx="18" cy="8" r="2" />
-          <circle cx="20" cy="16" r="2" />
-          <path d="M9 10a5 5 0 0 1 5 5v3.5a3.5 3.5 0 0 1-6.84 1.045Q6.52 17.48 4.46 16.84A3.5 3.5 0 0 1 5.5 10Z" />
+          <ellipse cx="50" cy="88" rx="30" ry="26" fill="white" />
+          <ellipse cx="20" cy="52" rx="14" ry="17" fill="white" />
+          <ellipse cx="50" cy="38" rx="13" ry="16" fill="white" />
+          <ellipse cx="80" cy="52" rx="14" ry="17" fill="white" />
+          <path
+            d="M50 98 C50 98 36 86 36 80 C36 76 40 73 44 75 C46 76 48 78 50 81 C52 78 54 76 56 75 C60 73 64 76 64 80 C64 86 50 98 50 98Z"
+            fill="#E84E1B"
+            opacity="0.9"
+          />
         </svg>
       </div>
     ),

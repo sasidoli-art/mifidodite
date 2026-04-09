@@ -2,7 +2,8 @@
 
 import { useState, useRef, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { MessageCircle, X, Send, PawPrint, Loader2, Mail, User } from "lucide-react";
+import { MessageCircle, X, Send, Loader2, Mail, User } from "lucide-react";
+import { LogoPaw } from "@/components/shared/Logo";
 
 interface ChatMessage {
   role: "user" | "assistant";
@@ -242,8 +243,8 @@ export function ChatBot() {
         >
           <div className="relative">
             <div className="absolute inset-0 rounded-full bg-primary/30 animate-ping" />
-            <div className="relative bg-primary hover:bg-primary-dark text-white p-4 rounded-full shadow-lg transition-all hover:scale-110">
-              <MessageCircle size={24} />
+            <div className="relative bg-primary hover:bg-primary-dark text-white p-3.5 rounded-full shadow-lg transition-all hover:scale-110">
+              <LogoPaw size={24} />
             </div>
           </div>
           <div className="absolute bottom-full right-0 mb-2 bg-white text-foreground text-xs font-semibold px-3 py-1.5 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap border border-border">
@@ -258,8 +259,8 @@ export function ChatBot() {
           {/* Header */}
           <div className="bg-gradient-to-r from-primary to-primary-dark text-white p-4 flex items-center justify-between shrink-0">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center">
-                <PawPrint size={20} />
+              <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center pl-0.5">
+                <LogoPaw size={22} />
               </div>
               <div>
                 <h3 className="font-bold text-base leading-tight">Zampa</h3>

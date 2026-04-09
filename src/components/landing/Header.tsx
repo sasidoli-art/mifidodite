@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { Menu, PawPrint } from "lucide-react";
+import { Menu } from "lucide-react";
+import { LogoPaw, LogoText } from "@/components/shared/Logo";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { motion } from "framer-motion";
 import { NewsletterPopup } from "@/components/shared/NewsletterPopup";
@@ -52,15 +53,12 @@ export function Header() {
         <div className="flex items-center justify-between h-16">
           <Link href="/" className="flex items-center gap-2 shrink-0">
             <motion.div
-              className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center text-primary"
-              whileHover={{ rotate: [0, -15, 15, 0] }}
+              whileHover={{ rotate: [0, -10, 10, 0] }}
               transition={{ duration: 0.5 }}
             >
-              <PawPrint size={22} strokeWidth={2} />
+              <LogoPaw size={28} />
             </motion.div>
-            <span className="text-lg font-bold text-primary">
-              MifidoDiTe<span className="text-foreground">.eu</span>
-            </span>
+            <LogoText variant="light" />
           </Link>
 
           <nav className="hidden lg:flex items-center gap-0.5">

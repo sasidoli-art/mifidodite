@@ -31,10 +31,10 @@ export function SOSBanner() {
                     SOS SMARRITI
                   </div>
                   <h3 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
-                    Hai perso il tuo animale?
+                    Hai smarrito il tuo amico a 4 zampe?
                   </h3>
                   <p className="text-white/85 mt-2 text-base sm:text-lg max-w-lg">
-                    Pubblica una segnalazione <strong>gratuita</strong>. Avvisiamo tutti i proprietari nella tua zona. Insieme lo ritroviamo.
+                    <strong>Ogni minuto conta.</strong> Pubblica una segnalazione gratuita e la tua zona viene allertata immediatamente. Insieme lo ritroviamo.
                   </p>
                   <div className="mt-5 inline-flex items-center gap-2 bg-white text-red-600 hover:bg-white/90 px-7 py-3 rounded-full font-bold text-sm transition-all group-hover:shadow-lg group-hover:gap-3">
                     Segnala ora <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />

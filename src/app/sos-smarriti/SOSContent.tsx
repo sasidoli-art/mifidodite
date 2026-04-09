@@ -25,13 +25,13 @@ export function SOSContent() {
   return (
     <>
       {/* Hero urgente */}
-      <section className="bg-gradient-to-br from-red-500 via-red-600 to-orange-500 py-14 text-white text-center">
+      <section className="bg-gradient-to-br from-red-600 via-red-500 to-orange-500 py-14 text-white text-center">
         <div className="max-w-3xl mx-auto px-4">
           <AlertTriangle size={48} className="mx-auto mb-4" />
-          <h1 className="text-4xl sm:text-5xl font-extrabold">SOS Smarriti</h1>
-          <p className="mt-3 text-lg text-white/90 max-w-xl mx-auto">
-            Hai perso il tuo animale? Hai trovato un cane o gatto vagante?
-            Pubblica un annuncio e aiutaci a riunire le famiglie.
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold">SOS Smarriti</h1>
+          <p className="mt-4 text-lg sm:text-xl text-white/90 max-w-xl mx-auto leading-relaxed">
+            Hai smarrito il tuo amico a 4 zampe?<br />
+            <strong>Ogni minuto conta.</strong> Pubblica una segnalazione e la tua zona viene allertata immediatamente. Insieme lo ritroviamo.
           </p>
           <Link
             href="/sos-smarriti/segnala"

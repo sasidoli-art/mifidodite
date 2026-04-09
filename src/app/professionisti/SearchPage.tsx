@@ -165,7 +165,7 @@ export function SearchPage() {
                 className="flex-1 bg-transparent outline-none text-white placeholder:text-white/40 text-sm" />
             </div>
             <select value={categoria} onChange={(e) => setCategoria(e.target.value)}
-              className="px-5 py-3.5 rounded-full bg-white/10 border border-white/10 text-white/80 outline-none cursor-pointer text-sm backdrop-blur-sm">
+              className="px-5 py-3.5 rounded-full bg-white/10 border border-white/10 text-white/80 outline-none cursor-pointer text-sm backdrop-blur-sm [&>option]:text-foreground [&>option]:bg-white">
               <option value="">Tutte le categorie</option>
               {CATEGORIE_OPTIONS.map((opt) => (
                 <option key={opt.value} value={opt.value}>{opt.label}</option>

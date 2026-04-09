@@ -137,7 +137,7 @@ export function MappaClient() {
               );
             }
           }}
-          className="w-full flex items-center justify-center gap-2 bg-primary/10 text-primary px-4 py-2.5 rounded-full text-sm font-semibold hover:bg-primary/20 transition-colors mb-4"
+          className="w-full flex items-center justify-center gap-2 bg-foreground text-white px-4 py-2.5 rounded-full text-sm font-semibold hover:bg-foreground/90 transition-colors mb-4"
         >
           <Navigation size={15} /> Usa la mia posizione
         </button>

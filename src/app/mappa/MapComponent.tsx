@@ -32,10 +32,14 @@ const CAT_COLORS: Record<string, string> = {
   pensione: "#D4A94C",
 };
 
-const CAT_ICONS: Record<string, string> = {
-  veterinario: "+",
-  toelettatura: "✂",
-  pensione: "🏠",
+// SVG inline monocolore per i pin — stile coerente col sito
+const CAT_SVG: Record<string, string> = {
+  // Croce veterinaria
+  veterinario: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>`,
+  // Forbici toelettatura
+  toelettatura: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><line x1="20" y1="4" x2="8.12" y2="15.88"/><line x1="14.47" y1="14.48" x2="20" y2="20"/><line x1="8.12" y1="8.12" x2="12" y2="12"/></svg>`,
+  // Casa pensione
+  pensione: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
 };
 
 export default function MapComponent({ pins, selected, onSelect, userPos, onBoundsChange }: Props) {
@@ -54,8 +58,10 @@ export default function MapComponent({ pins, selected, onSelect, userPos, onBoun
       zoomControl: true,
     });
 
-    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-      attribution: '© <a href="https://openstreetmap.org">OpenStreetMap</a>',
+    // Tile layer con stile piu pulito
+    L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+      attribution: '© <a href="https://openstreetmap.org">OSM</a> © <a href="https://carto.com">CARTO</a>',
+      maxZoom: 19,
     }).addTo(map);
 
     markersRef.current = L.layerGroup().addTo(map);
@@ -92,21 +98,21 @@ export default function MapComponent({ pins, selected, onSelect, userPos, onBoun
 
     pins.forEach((pin) => {
       const color = CAT_COLORS[pin.tipo] || "#C4683C";
-      const iconChar = CAT_ICONS[pin.tipo] || "•";
+      const svg = CAT_SVG[pin.tipo] || CAT_SVG.veterinario;
 
       const icon = L.divIcon({
         html: `<div style="
-          width:32px;height:32px;
+          width:36px;height:36px;
           background:${color};
-          border:2px solid white;
-          border-radius:50%;
+          border:2.5px solid white;
+          border-radius:12px;
           display:flex;align-items:center;justify-content:center;
-          font-size:14px;color:white;font-weight:bold;
-          box-shadow:0 2px 8px rgba(0,0,0,.25);
+          box-shadow:0 3px 12px rgba(61,43,31,.25), 0 0 0 1px rgba(61,43,31,.05);
           cursor:pointer;
-        ">${iconChar}</div>`,
-        iconSize: [32, 32],
-        iconAnchor: [16, 16],
+          transition:transform .2s;
+        " onmouseover="this.style.transform='scale(1.15)'" onmouseout="this.style.transform='scale(1)'">${svg}</div>`,
+        iconSize: [36, 36],
+        iconAnchor: [18, 18],
         className: "",
       });
 
@@ -127,14 +133,14 @@ export default function MapComponent({ pins, selected, onSelect, userPos, onBoun
 
     const userIcon = L.divIcon({
       html: `<div style="
-        width:16px;height:16px;
-        background:#3D2B1F;
+        width:14px;height:14px;
+        background:#C4683C;
         border:3px solid white;
         border-radius:50%;
-        box-shadow:0 0 0 6px rgba(61,43,31,.15),0 2px 4px rgba(0,0,0,.2);
+        box-shadow:0 0 0 8px rgba(196,104,60,.15),0 2px 6px rgba(0,0,0,.2);
       "></div>`,
-      iconSize: [16, 16],
-      iconAnchor: [8, 8],
+      iconSize: [14, 14],
+      iconAnchor: [7, 7],
       className: "",
     });
 

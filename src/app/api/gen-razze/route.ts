@@ -87,17 +87,33 @@ Rispondi SOLO con JSON puro (no markdown, no fences):
 TITOLO: ${meta.titolo}
 TEMA: ${t.tema}
 
-STILE:
-- Racconta come una STORIA, non come un'enciclopedia
-- Apri con un fatto sorprendente che catturi subito ("Lo sapevi che..." o "Nel 1957, un cane randagio di Mosca...")
+FORMATO: SEO + AI Ready (ottimizzato per Featured Snippets e citazioni AI)
+
+STRUTTURA:
+1. PRIMO PARAGRAFO = il fatto piu sorprendente, scritto come risposta autonoma.
+   Es: "Il Pastore del Caucaso puo pesare fino a 100 kg ed e stato usato dall'esercito sovietico per sorvegliare i gulag e pattugliare i confini dell'URSS."
+   Questo paragrafo deve funzionare DA SOLO come risposta.
+
+2. SCHEDA RAPIDA subito dopo (in <ul>):
+   - Origine: ...
+   - Peso: ...
+   - Carattere: ...
+   - Curiosita: ...
+
+3. SEZIONI h2 come DOMANDE che la gente cerca:
+   "Perche il Basenji non abbaia?", "Quanto costa un Lagotto Romagnolo?"
+   Sotto ogni h2: risposta diretta + storia/aneddoto.
+
+4. SEZIONE FAQ: 3 domande in <h3>Domanda?</h3><p>Risposta.</p>
+
+REGOLE:
 - 1000-1500 parole
-- HTML: h2, h3, p, ul/li, strong
-- Tono: come un documentario di Netflix narrato da un amico appassionato
-- Paragrafi CORTI (3-4 righe max) per leggibilita mobile
-- Inserisci date, nomi, luoghi reali — mai inventare
-- Se citi studi o fatti storici, specifica la fonte
-- Chiudi con un fatto poco conosciuto che lasci il lettore a bocca aperta
-- Ultima riga: "<p><strong>Scopri altre curiosita sul mondo pet su MifidoDiTe.eu</strong></p>"
+- HTML: h2, h3, p, ul, ol, li, strong. No div/span.
+- Tono: documentario Netflix narrato da un amico
+- Paragrafi MAX 3 righe
+- Date, nomi, luoghi REALI — mai inventare
+- Ogni paragrafo deve essere "copiabile come risposta"
+- Chiudi con: "<p><strong>Scopri altre curiosita sul mondo pet su MifidoDiTe.eu</strong></p>"
 - Rispondi SOLO con HTML.`;
 
       const contenuto = await askAI(contentPrompt, 6000);

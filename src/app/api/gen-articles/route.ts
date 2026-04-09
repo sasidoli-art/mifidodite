@@ -161,23 +161,38 @@ Rispondi SOLO con JSON puro (no markdown, no fences):
       const existing = await sql`SELECT id FROM articoli WHERE slug = ${slug} LIMIT 1`;
       if (existing.length > 0) slug = `${slug}-${Date.now().toString(36)}`;
 
-      const contentPrompt = `Scrivi un articolo completo per il magazine di MifidoDiTe.eu.
+      const contentPrompt = `Scrivi un articolo per MifidoDiTe.eu. Formato SEO + AI Ready (ottimizzato per Google Featured Snippets e citazioni da ChatGPT/Perplexity).
 
 TITOLO: ${meta.titolo}
-TEMA DETTAGLIATO: ${t.tema}
+TEMA: ${t.tema}
 
-REGOLE IMPORTANTI:
-- 1000-1500 parole, MAI meno
-- HTML: usa h2 per sezioni principali, h3 per sotto-sezioni, p per paragrafi, ul/li per elenchi puntati, strong per i concetti chiave
-- Paragrafi MAX 3-4 righe (leggibilita mobile)
-- Tono: come un esperto che ti spiega con autorevolezza ma in modo amichevole
+STRUTTURA OBBLIGATORIA:
+
+1. PRIMO PARAGRAFO = RISPOSTA DIRETTA. NON iniziare con introduzioni.
+   Rispondi subito alla domanda del titolo con fatti, numeri, procedura.
+   Questo paragrafo deve funzionare da solo come risposta completa.
+
+2. PROCEDURA o ELENCO subito dopo (se il tema lo richiede).
+   Usa <ol> per passi sequenziali, <ul> per liste. 1 frase per punto.
+
+3. SEZIONI h2 formulate COME DOMANDE GOOGLE:
+   "Quanto costa...?", "Cosa rischio se...?", "Quali documenti servono?"
+   Sotto ogni h2: risposta diretta nel primo paragrafo.
+
+4. Se riguarda LEGGI: cita Art. + nome legge + sanzioni in euro.
+   Se citi studi: universita + rivista + anno.
+
+5. SEZIONE FAQ finale: 3-4 domande in <h3>Domanda?</h3><p>Risposta.</p>
+
+REGOLE:
+- 1000-1500 parole
+- HTML: h2, h3, p, ol, ul, li, strong. No div/span/classi.
+- Paragrafi MAX 3 righe
+- Tono: esperto ma accessibile
 - Italiano fluente, ZERO anglicismi
-- Se l'articolo riguarda LEGGI o NORMATIVE: cita SEMPRE i numeri di articolo precisi (es. Art. 169 Codice della Strada), le sanzioni esatte in euro, i decreti, le leggi
-- Se citi studi scientifici: indica sempre universita, autori, rivista
-- Includi una sezione "Cosa fare se..." con consigli pratici
-- Includi una sezione FAQ con 3-4 domande comuni
-- Chiudi con: "<p><strong>Su MifidoDiTe.eu trovi guide, consigli e tutto quello che serve per il tuo amico a 4 zampe.</strong></p>"
-- Rispondi SOLO con HTML. Niente markdown, niente fences, niente commenti.`;
+- Ogni paragrafo deve poter essere "copiato come risposta" da solo
+- Chiudi con: "<p><strong>Scopri altre guide su MifidoDiTe.eu, il magazine pet d'Italia.</strong></p>"
+- Rispondi SOLO con HTML.`;
 
       const contenuto = await askAI(contentPrompt, 6000);
       let html = contenuto.replace(/^```html?\s*/i, "").replace(/```\s*$/i, "").trim();

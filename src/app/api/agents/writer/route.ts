@@ -148,22 +148,45 @@ Genera i METADATI di un articolo per il magazine. Rispondi SOLO con JSON puro (n
         continue;
       }
 
-      // STEP 2: Genera il contenuto completo dell'articolo (HTML puro, no JSON)
-      const contentPrompt = `Scrivi un articolo completo per il magazine di MifidoDiTe.eu.
+      // STEP 2: Genera il contenuto — formato SEO + AI Ready
+      const contentPrompt = `Scrivi un articolo per il magazine di MifidoDiTe.eu. Formato ottimizzato per SEO e per essere citato da AI (ChatGPT, Perplexity, Google AI Overview).
 
 TITOLO: ${meta.titolo}
 CATEGORIA: ${meta.categoria}
 ESTRATTO: ${meta.estratto}
 
-REGOLE:
-- 950-1400 parole
-- Scrivi in HTML: usa h2 per sezioni, h3 per sotto-sezioni, p per paragrafi, ul/li per elenchi, strong per grassetto
-- Paragrafi MAX 3 righe
-- Tono: come un amico veterinario che ti spiega le cose a cena
-- Italiano fluente, ZERO anglicismi (toelettatura non grooming)
-- NON inventare statistiche. Se citi dati, specifica la fonte
-- Chiudi con: "<p><strong>Su MifidoDiTe.eu trovi il professionista giusto nella tua zona.</strong></p>"
-- Rispondi SOLO con il codice HTML dell'articolo, niente altro. No markdown, no fences, no commenti.`;
+STRUTTURA OBBLIGATORIA (segui questo schema):
+
+1. PRIMO PARAGRAFO = RISPOSTA DIRETTA alla domanda del titolo.
+   Deve essere "copiabile e incollabile" come risposta autonoma.
+   NON iniziare con "In questo articolo..." o frasi introduttive.
+   Inizia con la RISPOSTA: fatti, numeri, procedura in 2-3 frasi.
+
+2. PROCEDURA / ELENCO CHIAVE subito dopo (se il tema lo richiede).
+   Usa <ol> o <ul> con passi chiari e concreti.
+   Ogni punto = 1 frase. No testo inutile.
+
+3. SEZIONI h2 formulate COME DOMANDE che le persone cercano su Google:
+   Es: "Quanto costa adottare un cane dal canile?"
+   Es: "Quali documenti servono per il passaggio di proprieta?"
+   Es: "Cosa rischio se non metto il microchip?"
+   Ogni h2 = una domanda reale → risposta immediata nel primo paragrafo sotto.
+
+4. SEZIONE FAQ alla fine con 3-4 domande frequenti in formato:
+   <h3>Domanda?</h3><p>Risposta diretta in 1-2 frasi.</p>
+
+REGOLE DI SCRITTURA:
+- 1000-1500 parole
+- HTML: h2, h3, p, ol, ul, li, strong. NO div, NO span, NO classi CSS.
+- Paragrafi MAX 3 righe (leggibilita mobile)
+- Tono: esperto ma accessibile, come un veterinario amico
+- Italiano fluente, ZERO anglicismi
+- Se citi leggi: numero articolo + nome legge (es. Art. 169 CdS, Legge 281/1991)
+- Se citi dati: specifica la fonte (universita, ente, studio)
+- NON inventare statistiche
+- Ogni paragrafo deve poter essere "copiato e incollato come risposta" da solo
+- Chiudi con: "<p><strong>Scopri altre guide e consigli su MifidoDiTe.eu, il magazine pet d'Italia.</strong></p>"
+- Rispondi SOLO con HTML. No markdown, no fences, no commenti.`;
 
       console.log(`[Writer] Step 2: contenuto per "${meta.titolo}"...`);
       const contenuto = await askAI(contentPrompt, 5000);

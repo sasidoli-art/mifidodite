@@ -1,82 +1,79 @@
-"use client";
+import { getDB } from "@/lib/db";
+import { Mail, Users, Trash } from "lucide-react";
 
-import { Mail, Users, TrendingUp, Send, Eye, Calendar } from "lucide-react";
+export const dynamic = "force-dynamic";
+export const metadata = { title: "Newsletter — Admin MifidoDiTe" };
 
-const STATS_NL = [
-  { label: "Iscritti totali", value: "4.832", icon: Users, color: "text-green-500" },
-  { label: "Tasso apertura medio", value: "38%", icon: Eye, color: "text-blue-500" },
-  { label: "Inviate questo mese", value: "3", icon: Send, color: "text-primary" },
-  { label: "Prossimo invio", value: "Lunedi 8:00", icon: Calendar, color: "text-purple-500" },
-];
+interface IscrittoRow { id: number; email: string; nome: string | null; cap: string | null; tipo_animale: string | null; attivo: boolean; created_at: string; }
 
-const INVII_RECENTI = [
-  { data: "31 Mar 2026", oggetto: "Novita pet vicino a te", inviati: 4200, aperture: "38%", click: "12%" },
-  { data: "24 Mar 2026", oggetto: "Nuove spiagge dog-friendly!", inviati: 4050, aperture: "42%", click: "15%" },
-  { data: "17 Mar 2026", oggetto: "5 pensioni top vicino a te", inviati: 3890, aperture: "35%", click: "10%" },
-  { data: "10 Mar 2026", oggetto: "Guida: come scegliere il dog sitter", inviati: 3750, aperture: "41%", click: "18%" },
-];
+export default async function AdminNewsletterPage() {
+  const sql = getDB();
+  const iscritti = (await sql`SELECT id, email, nome, cap, tipo_animale, attivo, created_at FROM newsletter_iscritti ORDER BY created_at DESC`) as unknown as IscrittoRow[];
+  const attivi = iscritti.filter((i) => i.attivo);
 
-export default function AdminNewsletterPage() {
   return (
-    <div>
-      <div className="flex items-center justify-between mb-6">
-        <div>
-          <h1 className="text-2xl font-bold text-foreground">Newsletter</h1>
-          <p className="text-sm text-muted-foreground">Gestione iscritti e invii settimanali</p>
-        </div>
-        <button className="bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-primary-dark transition-colors flex items-center gap-2">
-          <Send size={16} /> Invia newsletter ora
-        </button>
+    <div className="max-w-6xl">
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold text-foreground">Newsletter</h1>
+        <p className="text-muted-foreground mt-2">Iscritti alla newsletter settimanale — dati reali dal database</p>
       </div>
 
-      {/* Stats */}
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
-        {STATS_NL.map((s) => (
-          <div key={s.label} className="bg-white rounded-xl p-5 shadow-sm">
-            <div className="flex items-center gap-3">
-              <div className={`w-10 h-10 rounded-xl bg-muted flex items-center justify-center ${s.color}`}>
-                <s.icon size={20} />
-              </div>
-              <div>
-                <p className="text-2xl font-bold text-foreground">{s.value}</p>
-                <p className="text-xs text-muted-foreground">{s.label}</p>
-              </div>
-            </div>
+      <div className="grid grid-cols-3 gap-4 mb-8">
+        <div className="bg-blue-50 border border-blue-200 rounded-2xl p-5">
+          <Users size={22} className="text-blue-700 mb-2" />
+          <p className="text-3xl font-bold text-blue-700">{attivi.length}</p>
+          <p className="text-xs text-blue-700 mt-1">Iscritti attivi</p>
+        </div>
+        <div className="bg-white border border-border rounded-2xl p-5">
+          <p className="text-3xl font-bold text-foreground">{iscritti.length}</p>
+          <p className="text-xs text-muted-foreground mt-1">Totali (inclusi disiscritti)</p>
+        </div>
+        <div className="bg-white border border-border rounded-2xl p-5">
+          <p className="text-3xl font-bold text-foreground">{iscritti.filter((i) => i.tipo_animale === "cane").length} / {iscritti.filter((i) => i.tipo_animale === "gatto").length}</p>
+          <p className="text-xs text-muted-foreground mt-1">Cane / Gatto</p>
+        </div>
+      </div>
+
+      <div className="bg-white rounded-2xl border border-border overflow-hidden">
+        <div className="p-4 border-b border-border bg-muted/30 flex items-center justify-between">
+          <h2 className="font-bold text-foreground">Tutti gli iscritti ({iscritti.length})</h2>
+        </div>
+        {iscritti.length === 0 ? (
+          <div className="p-12 text-center">
+            <Mail size={48} className="mx-auto text-muted-foreground/30 mb-3" />
+            <p className="text-muted-foreground">Nessun iscritto alla newsletter.</p>
+            <p className="text-xs text-muted-foreground mt-1">I primi iscritti appariranno qui quando si iscriveranno dal popup del sito o dal chatbot Zampa.</p>
           </div>
-        ))}
-      </div>
-
-      {/* Storico invii */}
-      <div className="bg-white rounded-xl shadow-sm overflow-hidden">
-        <div className="p-4 border-b border-border">
-          <h2 className="font-bold text-foreground">Storico invii</h2>
-        </div>
-        <table className="w-full text-sm">
-          <thead>
-            <tr className="border-b border-border bg-muted/50">
-              <th className="text-left p-4 font-semibold">Data</th>
-              <th className="text-left p-4 font-semibold">Oggetto</th>
-              <th className="text-center p-4 font-semibold hidden sm:table-cell">Inviati</th>
-              <th className="text-center p-4 font-semibold hidden md:table-cell">Aperture</th>
-              <th className="text-center p-4 font-semibold hidden lg:table-cell">Click</th>
-            </tr>
-          </thead>
-          <tbody>
-            {INVII_RECENTI.map((inv, i) => (
-              <tr key={i} className="border-b border-border/50 hover:bg-muted/30 transition-colors">
-                <td className="p-4 text-muted-foreground">{inv.data}</td>
-                <td className="p-4 font-medium text-foreground">{inv.oggetto}</td>
-                <td className="p-4 text-center hidden sm:table-cell">{inv.inviati.toLocaleString()}</td>
-                <td className="p-4 text-center hidden md:table-cell">
-                  <span className="text-green-600 font-semibold">{inv.aperture}</span>
-                </td>
-                <td className="p-4 text-center hidden lg:table-cell">
-                  <span className="text-blue-500 font-semibold">{inv.click}</span>
-                </td>
+        ) : (
+          <table className="w-full text-sm">
+            <thead className="bg-muted/50">
+              <tr>
+                <th className="text-left p-4 font-semibold">Email</th>
+                <th className="text-left p-4 font-semibold hidden sm:table-cell">Nome</th>
+                <th className="text-left p-4 font-semibold hidden md:table-cell">CAP</th>
+                <th className="text-left p-4 font-semibold hidden md:table-cell">Animale</th>
+                <th className="text-left p-4 font-semibold">Stato</th>
+                <th className="text-left p-4 font-semibold hidden lg:table-cell">Data</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody className="divide-y divide-border">
+              {iscritti.map((i) => (
+                <tr key={i.id} className="hover:bg-muted/30">
+                  <td className="p-4 font-medium text-foreground">{i.email}</td>
+                  <td className="p-4 text-muted-foreground hidden sm:table-cell">{i.nome || "—"}</td>
+                  <td className="p-4 text-muted-foreground hidden md:table-cell">{i.cap || "—"}</td>
+                  <td className="p-4 hidden md:table-cell">
+                    {i.tipo_animale === "cane" ? "🐕" : i.tipo_animale === "gatto" ? "🐈" : "—"}
+                  </td>
+                  <td className="p-4">
+                    {i.attivo ? <span className="text-xs bg-green-50 text-green-700 px-2 py-0.5 rounded-full font-semibold">Attivo</span> : <span className="text-xs bg-red-50 text-red-600 px-2 py-0.5 rounded-full font-semibold">Disiscritto</span>}
+                  </td>
+                  <td className="p-4 text-muted-foreground text-xs hidden lg:table-cell">{new Date(i.created_at).toLocaleDateString("it-IT")}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
       </div>
     </div>
   );

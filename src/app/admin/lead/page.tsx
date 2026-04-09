@@ -1,79 +1,66 @@
-"use client";
+import { getDB } from "@/lib/db";
+import { MessageSquare, Clock } from "lucide-react";
 
-import { Mail, Phone, Clock, CheckCircle, AlertCircle, XCircle } from "lucide-react";
+export const dynamic = "force-dynamic";
+export const metadata = { title: "Lead — Admin MifidoDiTe" };
 
-const MOCK_LEAD = [
-  { id: "l1", nome: "Laura Mantovani", email: "laura.m@email.it", telefono: "+39 333 111", struttura: "Pensione La Casa di Fido", data: "2026-04-04 10:30", stato: "nuovo", tipo_animale: "cane", note: "Cane Rex, taglia media" },
-  { id: "l2", nome: "Marco Bianchi", email: "marco.b@email.it", telefono: "+39 333 222", struttura: "Toelettatura Zampe d'Oro", data: "2026-04-03 15:45", stato: "inviato", tipo_animale: "cane", note: null },
-  { id: "l3", nome: "Giulia Tosi", email: "giulia.t@email.it", telefono: null, struttura: "Dog Hotel Villa Margherita", data: "2026-04-02 09:15", stato: "risposto", tipo_animale: "cane", note: "Periodo 1-7 maggio" },
-  { id: "l4", nome: "Alessandro Verdi", email: "alex.v@email.it", telefono: "+39 333 444", struttura: "Sara Colombo — Dog Sitter", data: "2026-04-01 11:00", stato: "convertito", tipo_animale: "cane", note: "Weekend" },
-  { id: "l5", nome: "Francesca Neri", email: "fra.n@email.it", telefono: null, struttura: "PawShot Fotografia", data: "2026-03-30 16:20", stato: "scaduto", tipo_animale: "gatto", note: "Servizio fotografico gatto persiano" },
-];
+interface LeadRow { id: number; struttura_id: string | null; nome: string; email: string; telefono: string | null; tipo_animale: string; numero_animali: number; note: string | null; stato: string; created_at: string; }
 
-const STATO_CONFIG: Record<string, { label: string; color: string; icon: typeof CheckCircle }> = {
-  nuovo: { label: "Nuovo", color: "bg-blue-100 text-blue-700", icon: AlertCircle },
-  inviato: { label: "Inviato", color: "bg-yellow-100 text-yellow-700", icon: Mail },
-  risposto: { label: "Risposto", color: "bg-green-100 text-green-700", icon: CheckCircle },
-  convertito: { label: "Convertito", color: "bg-emerald-100 text-emerald-800", icon: CheckCircle },
-  scaduto: { label: "Scaduto", color: "bg-gray-100 text-gray-500", icon: XCircle },
-};
+export default async function AdminLeadPage() {
+  const sql = getDB();
+  const leads = (await sql`SELECT id, struttura_id, nome, email, telefono, tipo_animale, numero_animali, note, stato, created_at FROM lead ORDER BY created_at DESC LIMIT 100`) as unknown as LeadRow[];
+  const totale = await sql`SELECT count(*)::int as n FROM lead`;
+  const oggi = await sql`SELECT count(*)::int as n FROM lead WHERE created_at >= CURRENT_DATE`;
 
-export default function AdminLeadPage() {
   return (
-    <div>
-      <div className="flex items-center justify-between mb-6">
-        <div>
-          <h1 className="text-2xl font-bold text-foreground">Lead Ricevuti</h1>
-          <p className="text-sm text-muted-foreground">{MOCK_LEAD.length} lead totali</p>
+    <div className="max-w-6xl">
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold text-foreground">Lead</h1>
+        <p className="text-muted-foreground mt-2">Richieste di contatto ricevute — dati reali dal database</p>
+      </div>
+
+      <div className="grid grid-cols-3 gap-4 mb-8">
+        <div className="bg-purple-50 border border-purple-200 rounded-2xl p-5">
+          <p className="text-3xl font-bold text-purple-700">{totale[0].n}</p>
+          <p className="text-xs text-purple-700 mt-1">Lead totali</p>
         </div>
-        <div className="flex gap-2">
-          {Object.entries(STATO_CONFIG).map(([key, val]) => (
-            <span key={key} className={`text-xs font-medium px-2.5 py-1 rounded-full ${val.color}`}>
-              {val.label}: {MOCK_LEAD.filter((l) => l.stato === key).length}
-            </span>
-          ))}
+        <div className="bg-white border border-border rounded-2xl p-5">
+          <p className="text-3xl font-bold text-foreground">{oggi[0].n}</p>
+          <p className="text-xs text-muted-foreground mt-1">Oggi</p>
+        </div>
+        <div className="bg-white border border-border rounded-2xl p-5">
+          <p className="text-3xl font-bold text-foreground">{leads.filter((l) => l.stato === "nuovo").length}</p>
+          <p className="text-xs text-muted-foreground mt-1">Da gestire</p>
         </div>
       </div>
 
-      <div className="bg-white rounded-xl shadow-sm overflow-hidden">
-        <table className="w-full text-sm">
-          <thead>
-            <tr className="border-b border-border bg-muted/50">
-              <th className="text-left p-4 font-semibold">Richiedente</th>
-              <th className="text-left p-4 font-semibold hidden md:table-cell">Struttura</th>
-              <th className="text-left p-4 font-semibold hidden lg:table-cell">Note</th>
-              <th className="text-center p-4 font-semibold">Stato</th>
-              <th className="text-right p-4 font-semibold hidden sm:table-cell">Data</th>
-            </tr>
-          </thead>
-          <tbody>
-            {MOCK_LEAD.map((l) => {
-              const stato = STATO_CONFIG[l.stato];
-              return (
-                <tr key={l.id} className="border-b border-border/50 hover:bg-muted/30 transition-colors">
-                  <td className="p-4">
-                    <p className="font-semibold text-foreground">{l.nome}</p>
-                    <div className="flex items-center gap-3 mt-1 text-xs text-muted-foreground">
-                      <span className="flex items-center gap-1"><Mail size={11} /> {l.email}</span>
-                      {l.telefono && <span className="flex items-center gap-1"><Phone size={11} /> {l.telefono}</span>}
-                    </div>
-                  </td>
-                  <td className="p-4 text-muted-foreground hidden md:table-cell">{l.struttura}</td>
-                  <td className="p-4 text-xs text-muted-foreground hidden lg:table-cell">{l.note || "—"}</td>
-                  <td className="p-4 text-center">
-                    <span className={`inline-flex items-center gap-1 text-xs font-bold px-2.5 py-1 rounded-full ${stato.color}`}>
-                      <stato.icon size={12} />
-                      {stato.label}
-                    </span>
-                  </td>
-                  <td className="p-4 text-right text-xs text-muted-foreground hidden sm:table-cell">
-                    <span className="flex items-center justify-end gap-1"><Clock size={11} /> {l.data}</span>
-                  </td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+      <div className="bg-white rounded-2xl border border-border overflow-hidden">
+        {leads.length === 0 ? (
+          <div className="p-12 text-center">
+            <MessageSquare size={48} className="mx-auto text-muted-foreground/30 mb-3" />
+            <p className="text-muted-foreground">Nessun lead ricevuto ancora.</p>
+            <p className="text-xs text-muted-foreground mt-1">I lead arriveranno quando gli utenti invieranno richieste ai professionisti.</p>
+          </div>
+        ) : (
+          <div className="divide-y divide-border">
+            {leads.map((l) => (
+              <div key={l.id} className="p-4 hover:bg-muted/20">
+                <div className="flex items-start justify-between gap-3 mb-2">
+                  <div>
+                    <span className="font-semibold text-foreground">{l.nome}</span>
+                    <span className="text-muted-foreground text-sm ml-2">{l.email}</span>
+                    {l.telefono && <span className="text-muted-foreground text-sm ml-2">{l.telefono}</span>}
+                  </div>
+                  <div className="flex items-center gap-2 shrink-0">
+                    <span className={`text-xs px-2 py-0.5 rounded-full font-semibold ${l.stato === "nuovo" ? "bg-amber-50 text-amber-700" : l.stato === "inviato" ? "bg-blue-50 text-blue-700" : l.stato === "risposto" ? "bg-green-50 text-green-700" : "bg-muted text-muted-foreground"}`}>{l.stato}</span>
+                    <span className="text-xs text-muted-foreground flex items-center gap-1"><Clock size={10} />{new Date(l.created_at).toLocaleDateString("it-IT")}</span>
+                  </div>
+                </div>
+                <p className="text-sm text-muted-foreground">{l.numero_animali}x {l.tipo_animale} {l.note ? `— ${l.note}` : ""}</p>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

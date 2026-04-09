@@ -1,100 +1,128 @@
-"use client";
+import { getDB } from "@/lib/db";
+import { Heart, AlertTriangle } from "lucide-react";
 
-import { useState } from "react";
-import { Check, X, Eye, AlertTriangle, Heart, HandHeart, Search } from "lucide-react";
-import Link from "next/link";
-import { ADOZIONI_SEED, formatEta } from "@/lib/adozioni-seed";
+export const dynamic = "force-dynamic";
+export const metadata = { title: "Adozioni & SOS — Admin MifidoDiTe" };
 
-export default function AdminAdozioniPage() {
-  const [filtroStato, setFiltroStato] = useState<"tutti" | "da_approvare" | "attivi">("da_approvare");
+interface AdozioneRow { id: string; tipo: string; stato: string; nome_animale: string | null; specie: string; titolo: string; comune: string; provincia: string; approvato: boolean; created_at: string; }
+interface SOSRow { id: string; nome_animale: string; specie: string; comune: string; provincia: string; stato: string; created_at: string; }
 
-  // Simula annunci da approvare (tutti i seed sono "approvati", ne aggiungiamo di finti)
-  const daApprovare = [
-    { id: "pending1", titolo: "Cucciolo di Labrador cerca famiglia", specie: "cane", comune: "Parma", provincia: "PR", tipo: "adotta", created_at: "2026-04-04", nome_contatto: "Marco V.", approvato: false },
-    { id: "pending2", titolo: "Gattina sterilizzata cerca casa", specie: "gatto", comune: "Lecce", provincia: "LE", tipo: "adotta", created_at: "2026-04-04", nome_contatto: "Ass. Gatti Liberi", approvato: false },
-    { id: "pending3", titolo: "Cerco dog sitter per vacanza agosto", specie: "cane", comune: "Rimini", provincia: "RN", tipo: "cerco", created_at: "2026-04-03", nome_contatto: "Laura T.", approvato: false },
-  ];
+export default async function AdminAdozioniPage() {
+  const sql = getDB();
 
-  const tutti = [
-    ...daApprovare,
-    ...ADOZIONI_SEED.map((a) => ({ ...a, approvato: true })),
-  ];
+  const [adozioni, sos, statsAdozioni, statsSOS] = await Promise.all([
+    sql`SELECT id, tipo, stato, nome_animale, specie, titolo, comune, provincia, approvato, created_at FROM annunci_adozioni ORDER BY created_at DESC LIMIT 50`,
+    sql`SELECT id, nome_animale, specie, comune, provincia, stato, created_at FROM sos_smarriti ORDER BY created_at DESC LIMIT 50`,
+    sql`SELECT count(*)::int as totali, count(*) FILTER (WHERE approvato = false)::int as da_approvare, count(*) FILTER (WHERE approvato = true AND stato = 'attivo')::int as attivi FROM annunci_adozioni`,
+    sql`SELECT count(*)::int as totali, count(*) FILTER (WHERE stato = 'attivo')::int as attivi, count(*) FILTER (WHERE stato = 'ritrovato')::int as ritrovati FROM sos_smarriti`,
+  ]);
 
-  const filtrati = filtroStato === "da_approvare"
-    ? tutti.filter((a) => !a.approvato)
-    : filtroStato === "attivi"
-    ? tutti.filter((a) => a.approvato)
-    : tutti;
-
-  const tipoIcon = { adotta: Heart, offro: HandHeart, cerco: Search };
+  const adozioniRows = adozioni as unknown as AdozioneRow[];
+  const sosRows = sos as unknown as SOSRow[];
+  const sA = statsAdozioni[0] as Record<string, number>;
+  const sS = statsSOS[0] as Record<string, number>;
 
   return (
-    <div>
-      <div className="flex items-center justify-between mb-6">
-        <div>
-          <h1 className="text-2xl font-bold text-foreground">Gestione Adozioni</h1>
-          <p className="text-sm text-muted-foreground">{daApprovare.length} annunci in attesa di approvazione</p>
+    <div className="max-w-6xl">
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold text-foreground">Adozioni &amp; SOS Smarriti</h1>
+        <p className="text-muted-foreground mt-2">Gestione annunci adozione e segnalazioni smarrimento — dati reali dal database</p>
+      </div>
+
+      {/* Stats */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-8">
+        <div className="bg-red-50 border border-red-200 rounded-2xl p-5">
+          <Heart size={20} className="text-red-600 mb-2" />
+          <p className="text-3xl font-bold text-red-700">{sA.totali}</p>
+          <p className="text-xs text-red-700 mt-1">Adozioni totali</p>
+        </div>
+        <div className={`rounded-2xl p-5 ${sA.da_approvare > 0 ? "bg-amber-50 border border-amber-200" : "bg-white border border-border"}`}>
+          <p className="text-3xl font-bold text-foreground">{sA.da_approvare}</p>
+          <p className="text-xs text-muted-foreground mt-1">Da approvare</p>
+        </div>
+        <div className="bg-orange-50 border border-orange-200 rounded-2xl p-5">
+          <AlertTriangle size={20} className="text-orange-600 mb-2" />
+          <p className="text-3xl font-bold text-orange-700">{sS.attivi}</p>
+          <p className="text-xs text-orange-700 mt-1">SOS attivi</p>
+        </div>
+        <div className="bg-green-50 border border-green-200 rounded-2xl p-5">
+          <p className="text-3xl font-bold text-green-700">{sS.ritrovati}</p>
+          <p className="text-xs text-green-700 mt-1">SOS ritrovati</p>
         </div>
       </div>
 
-      {/* Filtri stato */}
-      <div className="flex gap-2 mb-6">
-        {[
-          { id: "da_approvare" as const, label: "Da approvare", count: daApprovare.length },
-          { id: "attivi" as const, label: "Attivi", count: ADOZIONI_SEED.length },
-          { id: "tutti" as const, label: "Tutti", count: tutti.length },
-        ].map((f) => (
-          <button key={f.id} onClick={() => setFiltroStato(f.id)}
-            className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-              filtroStato === f.id ? "bg-primary text-white" : "bg-white text-foreground hover:bg-muted"
-            }`}>
-            {f.label} ({f.count})
-          </button>
-        ))}
+      {/* Adozioni da approvare */}
+      {adozioniRows.some((a) => !a.approvato) && (
+        <div className="mb-10">
+          <h2 className="text-xl font-bold text-foreground mb-4 flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse" />
+            Adozioni da approvare ({adozioniRows.filter((a) => !a.approvato).length})
+          </h2>
+          <div className="space-y-3">
+            {adozioniRows.filter((a) => !a.approvato).map((a) => (
+              <div key={a.id} className="bg-white border-2 border-amber-200 rounded-2xl p-5 flex items-center justify-between gap-4">
+                <div>
+                  <span className="text-xs bg-amber-100 text-amber-700 font-semibold px-2 py-0.5 rounded-full mr-2">BOZZA</span>
+                  <span className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full capitalize mr-2">{a.tipo}</span>
+                  <span className="font-bold text-foreground">{a.nome_animale || a.titolo}</span>
+                  <p className="text-sm text-muted-foreground mt-1">{a.specie} — {a.comune} ({a.provincia})</p>
+                </div>
+                <div className="text-xs text-muted-foreground">{new Date(a.created_at).toLocaleDateString("it-IT")}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Adozioni attive */}
+      <div className="mb-10">
+        <h2 className="text-xl font-bold text-foreground mb-4">Adozioni ({adozioniRows.filter((a) => a.approvato).length})</h2>
+        {adozioniRows.filter((a) => a.approvato).length === 0 ? (
+          <div className="bg-white rounded-2xl border border-border p-12 text-center">
+            <Heart size={48} className="mx-auto text-muted-foreground/30 mb-3" />
+            <p className="text-muted-foreground">Nessun annuncio di adozione interno.</p>
+            <p className="text-xs text-muted-foreground mt-1">Gli annunci arrivano da Subito.it (sezione pubblica) o dal form di pubblicazione.</p>
+          </div>
+        ) : (
+          <div className="bg-white rounded-2xl border border-border overflow-hidden divide-y divide-border">
+            {adozioniRows.filter((a) => a.approvato).map((a) => (
+              <div key={a.id} className="p-4 hover:bg-muted/20 flex items-center justify-between">
+                <div>
+                  <span className="text-xs bg-primary/10 text-primary px-2 py-0.5 rounded-full capitalize mr-2">{a.tipo}</span>
+                  <span className="font-semibold text-foreground">{a.nome_animale || a.titolo}</span>
+                  <span className="text-sm text-muted-foreground ml-2">{a.comune} ({a.provincia})</span>
+                </div>
+                <span className={`text-xs px-2 py-0.5 rounded-full font-semibold ${a.stato === "attivo" ? "bg-green-50 text-green-700" : "bg-muted text-muted-foreground"}`}>{a.stato}</span>
+              </div>
+            ))}
+          </div>
+        )}
       </div>
 
-      {/* Lista annunci */}
-      <div className="space-y-3">
-        {filtrati.map((a) => {
-          const Icon = tipoIcon[a.tipo as keyof typeof tipoIcon] || Heart;
-          return (
-            <div key={a.id} className={`bg-white rounded-xl p-4 shadow-sm flex items-center gap-4 ${!a.approvato ? "border-l-4 border-l-amber-400" : ""}`}>
-              <Icon size={20} className={a.tipo === "adotta" ? "text-red-400" : a.tipo === "offro" ? "text-primary" : "text-accent"} />
-
-              <div className="flex-1 min-w-0">
-                <div className="flex items-center gap-2 flex-wrap">
-                  <p className="font-semibold text-foreground truncate">{a.titolo}</p>
-                  {!a.approvato && (
-                    <span className="bg-amber-100 text-amber-700 text-xs font-bold px-2 py-0.5 rounded-full flex items-center gap-1">
-                      <AlertTriangle size={10} /> Da approvare
-                    </span>
-                  )}
+      {/* SOS Smarriti */}
+      <div>
+        <h2 className="text-xl font-bold text-foreground mb-4">SOS Smarriti ({sosRows.length})</h2>
+        {sosRows.length === 0 ? (
+          <div className="bg-white rounded-2xl border border-border p-12 text-center">
+            <AlertTriangle size={48} className="mx-auto text-muted-foreground/30 mb-3" />
+            <p className="text-muted-foreground">Nessuna segnalazione SOS.</p>
+          </div>
+        ) : (
+          <div className="bg-white rounded-2xl border border-border overflow-hidden divide-y divide-border">
+            {sosRows.map((s) => (
+              <div key={s.id} className="p-4 hover:bg-muted/20 flex items-center justify-between">
+                <div>
+                  <span className="font-semibold text-foreground">{s.nome_animale}</span>
+                  <span className="text-sm text-muted-foreground ml-2">{s.specie} — {s.comune} ({s.provincia})</span>
                 </div>
-                <p className="text-xs text-muted-foreground mt-0.5">
-                  {a.comune} ({a.provincia}) — {a.nome_contatto} — {a.created_at}
-                </p>
+                <div className="flex items-center gap-2">
+                  <span className={`text-xs px-2 py-0.5 rounded-full font-semibold ${s.stato === "attivo" ? "bg-red-50 text-red-600" : s.stato === "ritrovato" ? "bg-green-50 text-green-700" : "bg-muted text-muted-foreground"}`}>{s.stato}</span>
+                  <span className="text-xs text-muted-foreground">{new Date(s.created_at).toLocaleDateString("it-IT")}</span>
+                </div>
               </div>
-
-              <div className="flex items-center gap-1 shrink-0">
-                {"slug" in a && (
-                  <Link href={`/adozioni/${a.slug}`} className="p-2 hover:bg-muted rounded-lg" title="Vedi">
-                    <Eye size={16} className="text-muted-foreground" />
-                  </Link>
-                )}
-                {!a.approvato && (
-                  <>
-                    <button className="p-2 hover:bg-green-50 rounded-lg" title="Approva">
-                      <Check size={16} className="text-green-600" />
-                    </button>
-                    <button className="p-2 hover:bg-red-50 rounded-lg" title="Rifiuta">
-                      <X size={16} className="text-red-400" />
-                    </button>
-                  </>
-                )}
-              </div>
-            </div>
-          );
-        })}
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );

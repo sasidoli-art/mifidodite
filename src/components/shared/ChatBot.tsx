@@ -257,7 +257,7 @@ export function ChatBot() {
       {open && (
         <div className="fixed inset-x-3 bottom-3 sm:inset-x-auto sm:right-5 sm:bottom-5 top-3 sm:top-auto z-50 sm:w-[400px] sm:h-[640px] sm:max-h-[calc(100vh-2.5rem)] flex flex-col bg-white rounded-2xl shadow-2xl border border-border overflow-hidden">
           {/* Header */}
-          <div className="bg-gradient-to-r from-primary to-primary-dark text-white p-4 flex items-center justify-between shrink-0">
+          <div className="bg-foreground text-white p-4 flex items-center justify-between shrink-0">
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center pl-0.5">
                 <LogoPaw size={22} />

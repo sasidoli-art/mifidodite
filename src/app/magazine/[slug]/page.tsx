@@ -106,8 +106,8 @@ export default async function ArticoloPage({
     <>
       <Header />
       <main className="flex-1 pt-16">
-        <div className="relative h-64 sm:h-96">
-          <img src={articolo.img} alt={articolo.titolo} className="w-full h-full object-cover" />
+        <div className="relative h-56 sm:h-80 lg:h-96">
+          <img loading="lazy" src={articolo.img} alt={articolo.titolo} className="w-full h-full object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 p-6 sm:p-10 max-w-4xl mx-auto">
             <span className="bg-primary text-white text-xs font-bold px-3 py-1 rounded-full capitalize">{articolo.categoria}</span>
@@ -165,10 +165,10 @@ export default async function ArticoloPage({
             </div>
           )}
 
-          <div className="mt-10 bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-8 text-center">
+          <div className="mt-10 bg-muted rounded-[20px] p-8 text-center border border-border">
             <h3 className="text-xl font-bold text-foreground">Cerchi un professionista pet vicino a te?</h3>
             <p className="text-muted-foreground mt-2">Pensioni, dog sitter, toelettatori e molto altro nella tua zona.</p>
-            <Link href="/professionisti" className="inline-block mt-4 bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-xl font-semibold transition-colors">
+            <Link href="/professionisti" className="inline-block mt-4 bg-primary hover:bg-foreground text-white px-7 py-3.5 rounded-full font-semibold transition-all hover:shadow-lg hover:-translate-y-0.5">
               Cerca su MifidoDiTe
             </Link>
           </div>
@@ -179,8 +179,8 @@ export default async function ArticoloPage({
               <div className="grid sm:grid-cols-3 gap-4">
                 {correlati.map((a) => (
                   <Link key={a.slug} href={`/magazine/${a.slug}`} className="group">
-                    <div className="h-32 rounded-xl overflow-hidden mb-2">
-                      <img src={a.img} alt={a.titolo} className="w-full h-full object-cover group-hover:scale-105 transition-transform" />
+                    <div className="h-32 rounded-[16px] overflow-hidden mb-2">
+                      <img loading="lazy" src={a.img} alt={a.titolo} className="w-full h-full object-cover group-hover:scale-[1.06] transition-transform duration-500" />
                     </div>
                     <h4 className="font-semibold text-sm text-foreground group-hover:text-primary transition-colors line-clamp-2">{a.titolo}</h4>
                   </Link>

@@ -143,25 +143,25 @@ export function SearchPage() {
   }
 
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="bg-white rounded-2xl shadow-sm p-6 mb-8">
+    <div className="max-w-[1160px] mx-auto px-6 py-8">
+      <div className="bg-white rounded-[20px] border border-border p-5 sm:p-6 mb-8">
         <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-3">
-          <div className="flex-1 flex items-center gap-2 px-4 py-3 rounded-xl bg-muted">
-            <MapPin size={20} className="text-muted-foreground shrink-0" />
+          <div className="flex-1 flex items-center gap-2 px-4 py-3.5 rounded-full bg-muted/60 border border-border">
+            <MapPin size={18} className="text-muted-foreground shrink-0" />
             <input type="text" placeholder="CAP o comune..." value={query}
               onChange={(e) => setQuery(e.target.value)}
-              className="flex-1 bg-transparent outline-none text-foreground placeholder:text-muted-foreground" />
+              className="flex-1 bg-transparent outline-none text-foreground placeholder:text-muted-foreground text-sm" />
           </div>
           <select value={categoria} onChange={(e) => setCategoria(e.target.value)}
-            className="px-4 py-3 rounded-xl bg-muted text-foreground outline-none cursor-pointer">
+            className="px-4 py-3.5 rounded-full bg-muted/60 border border-border text-foreground outline-none cursor-pointer text-sm">
             <option value="">Tutte le categorie</option>
             {CATEGORIE_OPTIONS.map((opt) => (
               <option key={opt.value} value={opt.value}>{opt.label}</option>
             ))}
           </select>
           <button type="submit"
-            className="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-xl font-semibold flex items-center justify-center gap-2 transition-colors">
-            <Search size={20} /> Cerca
+            className="bg-primary hover:bg-foreground text-white px-8 py-3.5 rounded-full font-semibold flex items-center justify-center gap-2 transition-all hover:shadow-lg hover:-translate-y-0.5 text-sm">
+            <Search size={18} /> Cerca
           </button>
           <button type="button" onClick={() => setShowFilters(!showFilters)}
             className="px-4 py-3 rounded-xl border border-border text-foreground hover:bg-muted transition-colors flex items-center gap-2">
@@ -310,7 +310,7 @@ export function SearchPage() {
 function OSMCard({ place: p }: { place: OSMPlace }) {
   const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${p.lat},${p.lon}`;
   return (
-    <div className="bg-white rounded-2xl border border-border overflow-hidden hover:shadow-md transition-all p-5">
+    <div className="bg-white rounded-[20px] border border-border overflow-hidden card-hover p-5">
       <div className="flex items-start justify-between gap-2 mb-2">
         <h3 className="font-bold text-foreground leading-snug flex-1">{p.nome}</h3>
         <span className="text-xs bg-blue-50 text-blue-700 font-medium px-2 py-0.5 rounded-full shrink-0">OSM</span>
@@ -332,16 +332,16 @@ function OSMCard({ place: p }: { place: OSMPlace }) {
 
       <div className="flex flex-wrap gap-2 mt-4 pt-4 border-t border-border">
         {p.telefono && (
-          <a href={`tel:${p.telefono}`} className="inline-flex items-center gap-1 text-xs bg-primary/10 text-primary hover:bg-primary/20 px-3 py-1.5 rounded-lg font-semibold">
+          <a href={`tel:${p.telefono}`} className="inline-flex items-center gap-1 text-xs bg-primary/10 text-primary hover:bg-primary/20 px-3 py-1.5 rounded-full font-semibold transition-colors">
             <Phone size={12} /> Chiama
           </a>
         )}
         {p.website && (
-          <a href={p.website} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs bg-muted hover:bg-border text-foreground px-3 py-1.5 rounded-lg font-semibold">
+          <a href={p.website} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs bg-muted hover:bg-border text-foreground px-3 py-1.5 rounded-full font-semibold transition-colors">
             <Globe size={12} /> Sito
           </a>
         )}
-        <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs bg-muted hover:bg-border text-foreground px-3 py-1.5 rounded-lg font-semibold">
+        <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-1 text-xs bg-muted hover:bg-border text-foreground px-3 py-1.5 rounded-full font-semibold transition-colors">
           <Navigation size={12} /> Mappa
         </a>
       </div>

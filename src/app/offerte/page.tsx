@@ -66,7 +66,7 @@ export default function OffertePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
           {/* Brand partner bar */}
           <AnimatedSection className="mb-10">
-            <div className="clay bg-white p-6 text-center">
+            <div className="bg-white rounded-[20px] border border-border p-6 text-center">
               <p className="text-xs font-semibold text-muted-foreground uppercase tracking-wider mb-4">Brand presenti</p>
               <div className="flex flex-wrap justify-center gap-6">
                 {marche.map((m) => (
@@ -89,7 +89,7 @@ export default function OffertePage() {
             <StaggerContainer className="flex flex-wrap gap-2 justify-center" staggerDelay={0.05}>
               <StaggerItem>
                 <motion.button onClick={() => setCategoria("")}
-                  className={`clay flex items-center gap-2 px-5 py-2.5 text-sm font-semibold ${
+                  className={`flex rounded-full border border-border items-center gap-2 px-5 py-2.5 text-sm font-semibold ${
                     !categoria ? "bg-primary text-white border-primary" : "bg-white text-foreground"
                   }`}
                   whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -102,7 +102,7 @@ export default function OffertePage() {
                 return (
                   <StaggerItem key={key}>
                     <motion.button onClick={() => setCategoria(categoria === key ? "" : key)}
-                      className={`clay flex items-center gap-2 px-5 py-2.5 text-sm font-semibold ${
+                      className={`flex rounded-full border border-border items-center gap-2 px-5 py-2.5 text-sm font-semibold ${
                         categoria === key ? "bg-primary text-white border-primary" : "bg-white text-foreground"
                       }`}
                       whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
@@ -146,10 +146,10 @@ export default function OffertePage() {
 
           {/* CTA per aziende — il vero obiettivo della pagina */}
           <AnimatedSection className="mt-16" delay={0.2}>
-            <div className="clay bg-white p-8 sm:p-12">
+            <div className="bg-white rounded-[20px] border border-border p-8 sm:p-12">
               <div className="flex flex-col lg:flex-row items-center gap-8">
                 <div className="flex-1 text-center lg:text-left">
-                  <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary text-sm font-semibold px-3 py-1 rounded-full mb-4">
+                  <div className="inline-flex items-center gap-2 bg-primary/10 text-primary text-sm font-semibold px-3 py-1 rounded-full mb-4">
                     <Building2 size={14} />
                     Per aziende e brand
                   </div>
@@ -161,12 +161,12 @@ export default function OffertePage() {
                   </p>
                   <div className="flex flex-col sm:flex-row gap-3 mt-6 justify-center lg:justify-start">
                     <motion.a href="/partner"
-                      className="inline-flex items-center gap-2 bg-secondary text-white px-6 py-3 rounded-xl font-bold"
+                      className="inline-flex items-center gap-2 bg-foreground text-white px-6 py-3 rounded-xl font-bold"
                       whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
                       Diventa partner <ArrowRight size={16} />
                     </motion.a>
                     <motion.a href="mailto:pro@mifidodite.eu?subject=Partnership Offerte"
-                      className="inline-flex items-center gap-2 border-2 border-secondary text-secondary px-6 py-3 rounded-xl font-semibold"
+                      className="inline-flex items-center gap-2 border-2 border-primary text-primary px-6 py-3 rounded-xl font-semibold"
                       whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
                       Scrivici
                     </motion.a>
@@ -200,7 +200,7 @@ function OffertaCard({ offerta: o }: { offerta: OffertaSeed }) {
   return (
     <CardWrapper>
     <motion.div
-      className={`clay bg-white overflow-hidden group ${scaduto ? "opacity-50 grayscale" : ""} ${trackingUrl && !scaduto ? "cursor-pointer" : ""}`}
+      className={`bg-white rounded-[20px] border border-border overflow-hidden group ${scaduto ? "opacity-50 grayscale" : ""} ${trackingUrl && !scaduto ? "cursor-pointer" : ""}`}
       whileHover={scaduto ? {} : { y: -4 }}
       transition={{ duration: 0.2 }}
     >
@@ -222,7 +222,7 @@ function OffertaCard({ offerta: o }: { offerta: OffertaSeed }) {
 
         {scaduto && (
           <div className="absolute inset-0 bg-foreground/50 flex items-center justify-center">
-            <span className="clay bg-white text-foreground font-bold px-5 py-2 text-sm">Scaduta</span>
+            <span className="bg-white rounded-[20px] border border-border text-foreground font-bold px-5 py-2 text-sm">Scaduta</span>
           </div>
         )}
       </div>

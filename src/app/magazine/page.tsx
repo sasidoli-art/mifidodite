@@ -132,9 +132,9 @@ export default async function MagazinePage({
           {/* Articolo principale */}
           {main && (
             <Link href={`/magazine/${main.slug}`} className="group block mb-12">
-              <div className="grid md:grid-cols-2 gap-6 bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all">
-                <div className="h-64 md:h-auto overflow-hidden">
-                  <img src={main.img} alt={main.titolo} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+              <div className="grid md:grid-cols-2 gap-0 bg-white rounded-[20px] overflow-hidden border border-border card-hover">
+                <div className="h-56 md:h-auto overflow-hidden">
+                  <img loading="lazy" src={main.img} alt={main.titolo} className="w-full h-full object-cover group-hover:scale-[1.06] transition-transform duration-500" />
                 </div>
                 <div className="p-6 sm:p-8 flex flex-col justify-center">
                   <Link href={`/magazine?cat=${main.categoria}`} className="text-sm font-semibold text-primary capitalize hover:underline">
@@ -156,12 +156,12 @@ export default async function MagazinePage({
           )}
 
           {/* Griglia articoli */}
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
             {rest.map((article) => (
               <Link key={article.slug} href={`/magazine/${article.slug}`}
-                className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all hover:-translate-y-1">
+                className="group bg-white rounded-[20px] overflow-hidden border border-border card-hover">
                 <div className="h-36 sm:h-48 overflow-hidden">
-                  <img src={article.img} alt={article.titolo} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <img loading="lazy" src={article.img} alt={article.titolo} className="w-full h-full object-cover group-hover:scale-[1.06] transition-transform duration-500" />
                 </div>
                 <div className="p-5">
                   <span className="text-xs font-semibold text-primary capitalize">

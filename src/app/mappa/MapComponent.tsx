@@ -49,6 +49,8 @@ export default function MapComponent({ pins, selected, onSelect, userPos, onBoun
   const containerRef = useRef<HTMLDivElement>(null);
   const boundsTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const isFlyingRef = useRef(false);
+  const onBoundsChangeRef = useRef(onBoundsChange);
+  onBoundsChangeRef.current = onBoundsChange; // Aggiorna ref ad ogni render
 
   // Inizializza mappa
   useEffect(() => {
@@ -75,9 +77,9 @@ export default function MapComponent({ pins, selected, onSelect, userPos, onBoun
       if (isFlyingRef.current) return; // Ignora eventi durante flyTo
       if (boundsTimerRef.current) clearTimeout(boundsTimerRef.current);
       boundsTimerRef.current = setTimeout(() => {
-        if (!mapRef.current || !onBoundsChange || isFlyingRef.current) return;
+        if (!mapRef.current || !onBoundsChangeRef.current || isFlyingRef.current) return;
         const b = mapRef.current.getBounds();
-        onBoundsChange({
+        onBoundsChangeRef.current?.({
           south: b.getSouth(),
           west: b.getWest(),
           north: b.getNorth(),
@@ -137,9 +139,9 @@ export default function MapComponent({ pins, selected, onSelect, userPos, onBoun
       isFlyingRef.current = false;
       map.off("moveend", onFlyEnd);
       // Emetti bounds manualmente dopo il volo
-      if (onBoundsChange) {
+      if (onBoundsChangeRef.current) {
         const b = map.getBounds();
-        onBoundsChange({
+        onBoundsChangeRef.current?.({
           south: b.getSouth(),
           west: b.getWest(),
           north: b.getNorth(),
@@ -183,9 +185,9 @@ export default function MapComponent({ pins, selected, onSelect, userPos, onBoun
     setTimeout(() => {
       m.once("moveend", () => {
         isFlyingRef.current = false;
-        if (onBoundsChange) {
+        if (onBoundsChangeRef.current) {
           const b = m.getBounds();
-          onBoundsChange({ south: b.getSouth(), west: b.getWest(), north: b.getNorth(), east: b.getEast() });
+          onBoundsChangeRef.current?.({ south: b.getSouth(), west: b.getWest(), north: b.getNorth(), east: b.getEast() });
         }
       });
     }, 100);

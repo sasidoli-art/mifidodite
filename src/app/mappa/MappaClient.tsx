@@ -58,6 +58,7 @@ export function MappaClient() {
       if (data.length > 0) {
         const lat = Number(data[0].lat);
         const lon = Number(data[0].lon);
+        setLastBbox(""); // Reset cache per forzare ricaricamento
         setFlyTo([lat, lon, 13]);
       }
     } catch { /* silent */ }
@@ -65,10 +66,11 @@ export function MappaClient() {
   }
 
   const loadOSMData = useCallback(async (south: number, west: number, north: number, east: number) => {
-    const bboxKey = `${south.toFixed(2)},${west.toFixed(2)},${north.toFixed(2)},${east.toFixed(2)},${filtri.join(",")}`;
+    const bboxKey = `${south.toFixed(3)},${west.toFixed(3)},${north.toFixed(3)},${east.toFixed(3)},${filtri.join(",")}`;
     if (bboxKey === lastBbox) return;
     setLastBbox(bboxKey);
     setLoading(true);
+    console.log("[Mappa] Loading OSM data for bbox:", south.toFixed(3), west.toFixed(3), north.toFixed(3), east.toFixed(3));
 
     try {
       const query = `[out:json][timeout:12];(${filtri.map(cat => {
@@ -116,12 +118,11 @@ export function MappaClient() {
 
   const onBoundsChange = useCallback((bounds: { south: number; west: number; north: number; east: number }) => {
     const latDiff = bounds.north - bounds.south;
-    if (latDiff < 2.5) {
-      // Zoom sufficiente — carica dati
+    console.log("[Mappa] onBoundsChange latDiff:", latDiff.toFixed(3));
+    if (latDiff < 3) {
       setZoomTooFar(false);
       loadOSMData(bounds.south, bounds.west, bounds.north, bounds.east);
     } else {
-      // Troppo lontano — non resettare i pin gia caricati, mostra solo il messaggio
       setZoomTooFar(true);
     }
   }, [loadOSMData]);

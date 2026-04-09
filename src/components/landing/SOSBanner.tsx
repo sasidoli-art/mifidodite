@@ -1,50 +1,51 @@
 "use client";
 
+import { AlertTriangle, ArrowRight } from "lucide-react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { AlertTriangle, ArrowRight } from "lucide-react";
-import { AnimatedSection } from "@/components/shared/AnimatedSection";
 
 export function SOSBanner() {
   return (
-    <section className="py-12 bg-white">
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        <AnimatedSection>
-          <Link href="/sos-smarriti">
-            <motion.div
-              className="relative rounded-2xl overflow-hidden bg-gradient-to-r from-red-500 to-red-600 p-8 sm:p-10 cursor-pointer"
-              whileHover={{ scale: 1.01 }}
-              whileTap={{ scale: 0.99 }}
-            >
-              {/* Pulse di sfondo */}
-              <motion.div
-                className="absolute top-4 right-4 w-3 h-3 rounded-full bg-white"
-                animate={{ scale: [1, 1.5, 1], opacity: [1, 0.5, 1] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              />
-
-              <div className="flex flex-col sm:flex-row items-center gap-6">
-                <div className="w-16 h-16 rounded-2xl bg-white/20 flex items-center justify-center shrink-0">
-                  <AlertTriangle size={32} className="text-white" />
+    <section className="py-10 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <Link href="/sos-smarriti" className="group block">
+            <div className="relative overflow-hidden rounded-3xl">
+              <div className="relative flex flex-col sm:flex-row items-center gap-6 sm:gap-10 p-8 sm:p-10 bg-gradient-to-r from-red-600 via-red-500 to-orange-500 overflow-hidden">
+                {/* Immagine */}
+                <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shrink-0 border-4 border-white/20 shadow-xl">
+                  <img
+                    src="https://images.unsplash.com/photo-1544568100-847a948585b9?w=400&q=80"
+                    alt="Cane smarrito"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
                 </div>
 
                 <div className="flex-1 text-center sm:text-left">
-                  <h3 className="text-2xl font-extrabold text-white">
+                  <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white text-xs font-bold px-3 py-1 rounded-full mb-3">
+                    <span className="w-2 h-2 rounded-full bg-white animate-pulse" />
+                    SOS SMARRITI
+                  </div>
+                  <h3 className="text-2xl sm:text-3xl font-extrabold text-white leading-tight">
                     Hai perso il tuo animale?
                   </h3>
-                  <p className="text-white/80 mt-1">
-                    Pubblica una segnalazione gratuita. Avvisiamo tutti i proprietari nella tua zona.
+                  <p className="text-white/85 mt-2 text-base sm:text-lg max-w-lg">
+                    Pubblica una segnalazione <strong>gratuita</strong>. Avvisiamo tutti i proprietari nella tua zona. Insieme lo ritroviamo.
                   </p>
+                  <div className="mt-5 inline-flex items-center gap-2 bg-white text-red-600 hover:bg-white/90 px-7 py-3 rounded-full font-bold text-sm transition-all group-hover:shadow-lg group-hover:gap-3">
+                    Segnala ora <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
+                  </div>
                 </div>
 
-                <div className="flex items-center gap-2 bg-white text-red-600 px-6 py-3 rounded-xl font-bold shrink-0 group">
-                  Segnala ora
-                  <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-                </div>
+                <AlertTriangle size={200} className="absolute -right-10 -bottom-10 text-white/5 rotate-12" />
               </div>
-            </motion.div>
+            </div>
           </Link>
-        </AnimatedSection>
+        </motion.div>
       </div>
     </section>
   );

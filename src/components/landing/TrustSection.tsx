@@ -1,90 +1,76 @@
 "use client";
 
-import { AnimatedSection, StaggerContainer, StaggerItem } from "@/components/shared/AnimatedSection";
-import { AnimatedCounter } from "@/components/shared/AnimatedCounter";
 import { motion } from "framer-motion";
-import { Home, Umbrella, MapPin, Heart, Search, Star, Navigation } from "lucide-react";
-import type { LucideIcon } from "lucide-react";
+import { Shield, Newspaper, Heart, MapPin } from "lucide-react";
 
-const STATS: { value: number; suffix: string; label: string; icon: LucideIcon }[] = [
-  { value: 12500, suffix: "+", label: "Strutture censite", icon: Home },
-  { value: 350, suffix: "+", label: "Spiagge dog-friendly", icon: Umbrella },
-  { value: 20, suffix: "", label: "Regioni coperte", icon: MapPin },
-  { value: 48000, suffix: "+", label: "Proprietari soddisfatti", icon: Heart },
-];
-
-const TRUST_POINTS: { icon: LucideIcon; title: string; desc: string }[] = [
+const TRUST_POINTS = [
   {
-    icon: Search,
-    title: "Troviamo chi non si trova",
-    desc: "Cerchiamo ogni settimana su Facebook, gruppi locali e passaparola. Portiamo alla luce i professionisti invisibili.",
+    icon: Newspaper,
+    title: "140+ articoli nel magazine",
+    desc: "Guide, curiosita scientifiche, leggi italiane e consigli pratici scritti con AI e revisionati dalla redazione.",
+    color: "bg-orange-50 text-primary",
   },
   {
-    icon: Star,
-    title: "Recensioni vere",
-    desc: "Solo recensioni verificate da altri proprietari. Nessuna valutazione comprata o falsa.",
+    icon: MapPin,
+    title: "Dati reali, non inventati",
+    desc: "I professionisti che trovi vengono da OpenStreetMap. Nomi, indirizzi e telefoni verificati, non generati dall'AI.",
+    color: "bg-blue-50 text-accent",
   },
   {
-    icon: Navigation,
-    title: "Vicino a te, davvero",
-    desc: "Ricerca per CAP con raggio in km. Risultati reali, non generici elenchi nazionali.",
+    icon: Heart,
+    title: "Adozioni vere da Subito.it",
+    desc: "Gli annunci di adozione sono reali, aggiornati ogni 30 minuti. Niente annunci finti per fare numero.",
+    color: "bg-red-50 text-red-500",
+  },
+  {
+    icon: Shield,
+    title: "GDPR + AI Act conformi",
+    desc: "Trasparenza totale sull'uso dell'AI. Privacy policy, registri trattamenti e disclaimer sempre visibili.",
+    color: "bg-green-50 text-secondary",
   },
 ];
 
 export function TrustSection() {
   return (
-    <>
-      {/* Contatori animati */}
-      <section className="py-14 bg-foreground">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <StaggerContainer className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8" staggerDelay={0.1}>
-            {STATS.map((stat) => (
-              <StaggerItem key={stat.label}>
-                <div className="text-center">
-                  <stat.icon size={24} className="mx-auto mb-2 text-primary" strokeWidth={1.8} />
-                  <div className="text-3xl sm:text-4xl font-extrabold text-white">
-                    <AnimatedCounter target={stat.value} suffix={stat.suffix} />
-                  </div>
-                  <div className="text-sm text-white/50 mt-1">{stat.label}</div>
-                </div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
-        </div>
-      </section>
+    <section className="py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <motion.div
+          className="text-center mb-14"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+        >
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-foreground">
+            Perche <span className="text-primary">fidarsi</span> di noi
+          </h2>
+          <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+            Non vendiamo fumo. Ecco cosa ci rende diversi.
+          </p>
+        </motion.div>
 
-      {/* Trust points */}
-      <section className="py-20 bg-white">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <AnimatedSection>
-            <h2 className="text-3xl sm:text-4xl font-bold text-foreground mb-6">
-              Perche MifidoDiTe?
-            </h2>
-          </AnimatedSection>
-
-          <StaggerContainer className="grid sm:grid-cols-3 gap-8 mt-10" staggerDelay={0.15}>
-            {TRUST_POINTS.map((point) => (
-              <StaggerItem key={point.title}>
-                <motion.div
-                  className="group"
-                  whileHover={{ y: -5 }}
-                  transition={{ duration: 0.2 }}
-                >
-                  <motion.div
-                    className="w-14 h-14 mx-auto mb-4 rounded-xl bg-primary/10 flex items-center justify-center text-primary"
-                    whileHover={{ scale: 1.15 }}
-                    transition={{ type: "spring", stiffness: 400 }}
-                  >
-                    <point.icon size={28} strokeWidth={1.8} />
-                  </motion.div>
-                  <h3 className="font-semibold text-lg mb-2">{point.title}</h3>
-                  <p className="text-muted-foreground text-sm">{point.desc}</p>
-                </motion.div>
-              </StaggerItem>
-            ))}
-          </StaggerContainer>
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {TRUST_POINTS.map((point, i) => (
+            <motion.div
+              key={point.title}
+              className="group bg-white rounded-2xl border border-border p-6 hover:shadow-xl hover:border-primary/30 transition-all duration-300 hover:-translate-y-2"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.1 }}
+            >
+              <motion.div
+                className={`w-14 h-14 rounded-2xl ${point.color} flex items-center justify-center mb-5`}
+                whileHover={{ scale: 1.15, rotate: [0, -5, 5, 0] }}
+                transition={{ type: "spring", stiffness: 400 }}
+              >
+                <point.icon size={28} />
+              </motion.div>
+              <h3 className="font-bold text-foreground text-lg mb-2 group-hover:text-primary transition-colors">{point.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{point.desc}</p>
+            </motion.div>
+          ))}
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { askAI, extractJSON } from "@/lib/ai-agent";
+import { askDeepSeek, extractJSON } from "@/lib/ai-agent";
 import { slugify } from "@/lib/utils";
 import { getDB } from "@/lib/db";
 
@@ -72,7 +72,7 @@ TEMA: ${t.tema}
 Rispondi SOLO con JSON puro (no markdown, no fences):
 {"titolo":"titolo SEO max 80 char, accattivante e curioso","slug":"formato-url-seo","estratto":"meta description 2 frasi max 160 char che crei curiosita","tempo_lettura":"X min","tags":["5 keyword"]}`;
 
-      const metaResponse = await askAI(metaPrompt, 400);
+      const metaResponse = await askDeepSeek(metaPrompt, 400);
       const parsed = extractJSON(metaResponse);
       const meta = (Array.isArray(parsed) ? parsed[0] : parsed) as { titolo: string; slug: string; estratto: string; tempo_lettura: string; tags: string[] };
 
@@ -116,7 +116,7 @@ REGOLE:
 - Chiudi con: "<p><strong>Scopri altre curiosita sul mondo pet su MifidoDiTe.eu</strong></p>"
 - Rispondi SOLO con HTML.`;
 
-      const contenuto = await askAI(contentPrompt, 6000);
+      const contenuto = await askDeepSeek(contentPrompt, 6000);
       let html = contenuto.replace(/^```html?\s*/i, "").replace(/```\s*$/i, "").trim();
       if (html.length < 500) { errors.push(`Short: ${meta.titolo}`); continue; }
 

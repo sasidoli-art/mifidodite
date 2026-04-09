@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyCron } from "@/lib/cron-auth";
-import { askAI, extractJSON } from "@/lib/ai-agent";
+import { askDeepSeek, extractJSON } from "@/lib/ai-agent";
 import { logAgent, startTimer } from "@/lib/agent-logger";
 import { getDB } from "@/lib/db";
 import { sendEmail } from "@/lib/email";
@@ -106,7 +106,7 @@ Rispondi SOLO con array JSON puro (no markdown, no fences):
 ]`;
 
   try {
-    const response = await askAI(prompt, 3000);
+    const response = await askDeepSeek(prompt, 3000);
     const parsed = extractJSON(response);
     const posts = (Array.isArray(parsed) ? parsed : [parsed]) as PostGenerated[];
 

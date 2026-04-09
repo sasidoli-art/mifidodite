@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyCron } from "@/lib/cron-auth";
 import { scrapeGenericPage } from "@/lib/scraper";
-import { askAI, extractJSON } from "@/lib/ai-agent";
+import { askDeepSeek, extractJSON } from "@/lib/ai-agent";
 import { slugify } from "@/lib/utils";
 import { logAgent, startTimer, stimaCosto } from "@/lib/agent-logger";
 import { getDB } from "@/lib/db";
@@ -131,7 +131,7 @@ Genera i METADATI di un articolo per il magazine. Rispondi SOLO con JSON puro (n
 {"titolo":"titolo SEO max 80 char","slug":"formato-url-seo","categoria":"${task.categoria}","estratto":"meta description 2 frasi max 160 char","tempo_lettura":"X min","tags":["3-5 keyword"],"fonte_nome":"fonte","fonte_url":"url"}`;
 
       console.log(`[Writer] Step 1: metadati per ${task.tipo}...`);
-      const metaResponse = await askAI(metaPrompt, 500);
+      const metaResponse = await askDeepSeek(metaPrompt, 500);
       console.log(`[Writer] Meta response (${metaResponse.length} chars):`, metaResponse.slice(0, 300));
       const meta = extractJSON(metaResponse) as ArticleResult;
       if (!meta?.titolo) {
@@ -189,7 +189,7 @@ REGOLE DI SCRITTURA:
 - Rispondi SOLO con HTML. No markdown, no fences, no commenti.`;
 
       console.log(`[Writer] Step 2: contenuto per "${meta.titolo}"...`);
-      const contenuto = await askAI(contentPrompt, 5000);
+      const contenuto = await askDeepSeek(contentPrompt, 5000);
       console.log(`[Writer] Contenuto ricevuto (${contenuto.length} chars)`);
 
       // Pulisci eventuali fences markdown dal contenuto

@@ -46,24 +46,24 @@ export function Header() {
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.4 }}
     >
-      <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-between h-[56px]">
-          {/* Logo — compatto */}
-          <Link href="/" className="flex items-center gap-2 shrink-0 hover:opacity-80 transition-opacity">
-            <LogoPaw size={22} />
-            <span className="text-[15px] font-extrabold tracking-tight text-foreground">
+      <div className="w-full mx-auto px-6 sm:px-10 lg:px-16">
+        <div className="flex items-center justify-between h-[60px]">
+          {/* Logo */}
+          <Link href="/" className="flex items-center gap-2.5 shrink-0 hover:opacity-80 transition-opacity">
+            <LogoPaw size={26} />
+            <span className="text-[17px] font-extrabold tracking-tight text-foreground">
               Mi<span className="text-primary">Fido</span>Di<span className="text-primary">Te</span>
-              <span className="text-[9px] font-bold text-primary ml-0.5">.eu</span>
+              <span className="text-[10px] font-bold text-primary ml-0.5">.eu</span>
             </span>
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-1">
+          <nav className="hidden lg:flex items-center gap-1.5">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`px-3 py-1.5 rounded-lg text-[13px] font-medium transition-all ${
+                className={`px-3.5 py-2 rounded-lg text-[14px] font-medium transition-all ${
                   link.accent
                     ? "text-red-500 hover:text-red-600 hover:bg-red-50"
                     : "text-foreground/60 hover:text-foreground hover:bg-muted"
@@ -75,23 +75,23 @@ export function Header() {
 
             <Link
               href="/mappa"
-              className="px-3 py-1.5 rounded-lg text-[13px] font-medium text-foreground/60 hover:text-foreground hover:bg-muted transition-all"
+              className="px-3.5 py-2 rounded-lg text-[14px] font-medium text-foreground/60 hover:text-foreground hover:bg-muted transition-all"
             >
               Mappa
             </Link>
 
-            <div className="w-px h-4 bg-foreground/10 mx-1" />
+            <div className="w-px h-5 bg-foreground/10 mx-2" />
 
             <Link
               href="/per-professionisti"
-              className="px-3 py-1.5 rounded-lg text-[13px] font-medium text-primary hover:bg-primary/5 transition-all"
+              className="px-3.5 py-2 rounded-lg text-[14px] font-medium text-primary hover:bg-primary/5 transition-all"
             >
               Per professionisti
             </Link>
 
             <button
               onClick={() => setShowNewsletter(true)}
-              className="ml-1 bg-primary text-white px-4 py-2 rounded-full text-[13px] font-semibold transition-all hover:bg-primary-dark hover:shadow-md active:scale-[0.97]"
+              className="ml-2 bg-primary text-white px-5 py-2.5 rounded-full text-[14px] font-semibold transition-all hover:bg-primary-dark hover:shadow-md active:scale-[0.97]"
             >
               Iscriviti
             </button>

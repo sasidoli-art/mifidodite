@@ -1,9 +1,18 @@
 "use client";
 
 import { useState } from "react";
-import { Search, MapPin, ArrowDown, PawPrint } from "lucide-react";
+import { Search, MapPin, ArrowRight, Star, Heart } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
+import { LogoPaw } from "@/components/shared/Logo";
+
+const GALLERY = [
+  { img: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=500&q=80", label: "Dog Sitter" },
+  { img: "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=500&q=80", label: "Gatti" },
+  { img: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=500&q=80", label: "Pensioni" },
+  { img: "https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=500&q=80", label: "Veterinari" },
+  { img: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=500&q=80", label: "Toelettatura" },
+];
 
 export function Hero() {
   const router = useRouter();
@@ -19,126 +28,156 @@ export function Hero() {
   }
 
   return (
-    <section className="relative bg-gradient-to-br from-orange-50 via-amber-50 to-yellow-50 py-20 sm:py-28 overflow-hidden">
-      {/* Zampine decorative statiche */}
-      <div className="absolute inset-0 pointer-events-none select-none overflow-hidden">
-        <PawPrint size={60} className="absolute top-[15%] left-[5%] text-primary/[0.04] rotate-12" strokeWidth={1.5} />
-        <PawPrint size={75} className="absolute top-[50%] left-[27%] text-primary/[0.03] -rotate-12" strokeWidth={1.5} />
-        <PawPrint size={50} className="absolute top-[25%] right-[10%] text-primary/[0.04] rotate-45" strokeWidth={1.5} />
-        <PawPrint size={65} className="absolute bottom-[20%] right-[25%] text-primary/[0.03] -rotate-20" strokeWidth={1.5} />
+    <section className="relative pt-32 pb-0 overflow-hidden">
+      {/* Radial gradient backgrounds */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-[radial-gradient(ellipse,rgba(212,169,76,.08),transparent_60%)]" />
+        <div className="absolute bottom-0 left-0 w-[500px] h-[500px] bg-[radial-gradient(ellipse,rgba(122,158,126,.06),transparent_60%)]" />
       </div>
 
-      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        {/* Badge */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm rounded-full px-4 py-1.5 shadow-sm mb-6"
-        >
-          <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
-          <span className="text-sm font-medium text-muted-foreground">Il magazine pet d&apos;Italia</span>
-        </motion.div>
-
-        {/* Titolo con animazione parola per parola */}
-        <motion.h1
-          className="text-3xl sm:text-5xl lg:text-6xl font-extrabold text-foreground leading-tight"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-        >
-          Tutto per il tuo
-          <br />
-          <motion.span
-            className="text-primary inline-block"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.5, delay: 0.5 }}
+      <div className="relative max-w-[1160px] mx-auto px-6">
+        {/* Grid: testo + immagine */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left — Text */}
+          <motion.div
+            initial={{ opacity: 0, x: -30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            amico a 4 zampe
-          </motion.span>
-        </motion.h1>
+            <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary text-[13px] font-semibold px-4 py-2 rounded-full border border-secondary/15 mb-5">
+              <LogoPaw size={14} />
+              Il magazine pet d&apos;Italia
+            </div>
 
-        <motion.p
-          className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto"
-          initial={{ opacity: 0, y: 15 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.6 }}
-        >
-          Guide, consigli, offerte e servizi per cani e gatti.
-          Tutto quello che ti serve per <strong>volergli ancora piu bene</strong>.
-        </motion.p>
+            <h1 className="text-[46px] sm:text-[54px] font-extrabold leading-[1.08] tracking-tight text-foreground mb-5">
+              Tutto per chi ama
+              <br />
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                i propri animali
+              </span>
+            </h1>
 
-        {/* Search Bar con entrata dal basso */}
-        <motion.form
-          onSubmit={handleSearch}
-          className="mt-10 max-w-3xl mx-auto bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow p-2 flex flex-col sm:flex-row gap-2"
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-[480px] mb-8">
+              Guide, consigli di esperti, offerte e servizi per cani e gatti.
+              Trova veterinari, pensioni e professionisti pet nella tua zona.
+            </p>
+
+            {/* Search form */}
+            <form onSubmit={handleSearch} className="flex gap-3 flex-wrap mb-6">
+              <div className="flex-1 min-w-[200px] flex items-center gap-2 bg-white px-4 py-3.5 rounded-full border border-border shadow-sm">
+                <MapPin size={18} className="text-muted-foreground shrink-0" />
+                <input
+                  type="text"
+                  placeholder="CAP o comune..."
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  className="flex-1 bg-transparent outline-none text-foreground placeholder:text-muted-foreground text-sm"
+                />
+              </div>
+              <select
+                value={categoria}
+                onChange={(e) => setCategoria(e.target.value)}
+                className="px-4 py-3.5 rounded-full bg-white border border-border text-foreground text-sm outline-none shadow-sm"
+              >
+                <option value="">Tutte le categorie</option>
+                <option value="veterinario">Veterinari</option>
+                <option value="pensione">Pensioni</option>
+                <option value="toelettatura">Toelettatura</option>
+                <option value="dog_sitter">Dog sitter</option>
+                <option value="educatore_cinofilo">Educatori cinofili</option>
+              </select>
+              <motion.button
+                type="submit"
+                className="bg-primary hover:bg-foreground text-white px-7 py-3.5 rounded-full font-semibold text-sm flex items-center gap-2 transition-all duration-300 hover:shadow-lg hover:-translate-y-0.5"
+                whileTap={{ scale: 0.97 }}
+              >
+                <Search size={18} />
+                Cerca
+              </motion.button>
+            </form>
+
+            <div className="flex items-center gap-6 text-sm text-muted-foreground">
+              <span className="flex items-center gap-1.5"><Star size={14} className="text-accent" /> 140+ articoli</span>
+              <span className="flex items-center gap-1.5"><Heart size={14} className="text-primary" /> Adozioni reali</span>
+              <span className="flex items-center gap-1.5"><MapPin size={14} className="text-secondary" /> Dati OpenStreetMap</span>
+            </div>
+          </motion.div>
+
+          {/* Right — Hero Image */}
+          <motion.div
+            className="relative hidden lg:flex justify-center"
+            initial={{ opacity: 0, x: 30 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
+          >
+            <div className="w-[420px] h-[480px] rounded-[28px] overflow-hidden relative shadow-[0_24px_64px_rgba(61,43,31,.14)]">
+              <img
+                src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&q=80"
+                alt="Cane felice"
+                className="w-full h-full object-cover hover:scale-[1.04] transition-transform duration-700"
+              />
+              <div className="absolute bottom-0 left-0 right-0 p-7 bg-gradient-to-t from-[rgba(44,27,14,.85)] via-[rgba(44,27,14,.4)] to-transparent">
+                <div className="flex gap-2 mb-2">
+                  <span className="text-[11px] font-semibold text-white bg-white/15 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10">Magazine Pet</span>
+                  <span className="text-[11px] font-semibold text-white bg-white/15 backdrop-blur-sm px-3 py-1 rounded-full border border-white/10">Professionisti</span>
+                </div>
+                <h3 className="text-white font-bold text-lg">MiFidoDiTe.eu</h3>
+                <p className="text-white/70 text-[13px]">Guide, offerte e servizi per il tuo pet</p>
+              </div>
+            </div>
+
+            {/* Floating badge top-left */}
+            <motion.div
+              className="absolute top-3 -left-5 bg-white rounded-2xl px-4 py-3 shadow-[0_12px_44px_rgba(61,43,31,.12)] flex items-center gap-3 z-10"
+              animate={{ y: [0, -12, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+            >
+              <div className="w-10 h-10 rounded-xl bg-secondary/10 flex items-center justify-center">
+                <Star size={20} className="text-secondary" />
+              </div>
+              <div>
+                <p className="text-[13px] font-bold text-foreground">140+ articoli</p>
+                <p className="text-[11px] text-muted-foreground">Magazine pet</p>
+              </div>
+            </motion.div>
+
+            {/* Floating badge bottom-right */}
+            <motion.div
+              className="absolute bottom-10 -right-8 bg-white rounded-2xl px-4 py-3 shadow-[0_12px_44px_rgba(61,43,31,.12)] flex items-center gap-3 z-10"
+              animate={{ y: [0, -12, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+            >
+              <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+                <Heart size={20} className="text-primary" />
+              </div>
+              <div>
+                <p className="text-[13px] font-bold text-foreground">Adozioni reali</p>
+                <p className="text-[11px] text-muted-foreground">Da Subito.it</p>
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+
+        {/* Gallery strip */}
+        <motion.div
+          className="flex gap-4 pt-12 pb-0 overflow-hidden"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
+          transition={{ delay: 0.5, duration: 0.7 }}
         >
-          <div className="flex-1 flex items-center gap-2 px-4 py-3 rounded-xl bg-muted">
-            <MapPin size={20} className="text-primary shrink-0" />
-            <input
-              type="text"
-              placeholder="CAP o comune..."
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              className="flex-1 bg-transparent outline-none text-foreground placeholder:text-muted-foreground"
-            />
-          </div>
-
-          <select
-            value={categoria}
-            onChange={(e) => setCategoria(e.target.value)}
-            className="px-4 py-3 rounded-xl bg-muted text-foreground outline-none cursor-pointer"
-          >
-            <option value="">Tutte le categorie</option>
-            <option value="pensione">Pensioni</option>
-            <option value="spiaggia_dog_friendly">Spiagge dog-friendly</option>
-            <option value="toelettatura">Toelettatura</option>
-            <option value="dog_sitter">Dog sitter</option>
-            <option value="cat_sitter">Cat sitter</option>
-            <option value="educatore_cinofilo">Educatori cinofili</option>
-            <option value="veterinario">Veterinari</option>
-            <option value="fotografo_pet">Fotografi pet</option>
-          </select>
-
-          <motion.button
-            type="submit"
-            className="bg-primary hover:bg-primary-dark text-white px-8 py-3 rounded-xl font-semibold flex items-center justify-center gap-2 transition-colors"
-            whileHover={{ scale: 1.03 }}
-            whileTap={{ scale: 0.97 }}
-          >
-            <Search size={20} />
-            <span>Cerca</span>
-          </motion.button>
-        </motion.form>
-
-        <motion.p
-          className="mt-4 text-sm text-muted-foreground"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.2 }}
-        >
-          Cerca per CAP, comune o provincia — risultati entro 30 km da te
-        </motion.p>
-
-        {/* Scroll hint */}
-        <motion.div
-          className="mt-12"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 1.5 }}
-        >
-          <motion.div
-            animate={{ y: [0, 8, 0] }}
-            transition={{ duration: 1.5, repeat: 3 }}
-            className="inline-flex flex-col items-center text-muted-foreground/40 cursor-pointer"
-          >
-            <span className="text-xs mb-1">Scopri</span>
-            <ArrowDown size={16} />
-          </motion.div>
+          {GALLERY.map((item) => (
+            <div key={item.label} className="flex-1 min-w-0 h-[180px] rounded-[20px] overflow-hidden relative group">
+              <img
+                src={item.img}
+                alt={item.label}
+                className="w-full h-full object-cover brightness-[.95] group-hover:brightness-100 group-hover:scale-[1.08] transition-all duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[rgba(44,27,14,.3)] to-transparent pointer-events-none" />
+              <span className="absolute bottom-4 left-4 text-white text-[13px] font-semibold flex items-center gap-1.5 z-10">
+                <ArrowRight size={12} /> {item.label}
+              </span>
+            </div>
+          ))}
         </motion.div>
       </div>
     </section>

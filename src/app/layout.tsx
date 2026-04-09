@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
-import { Fredoka, Nunito } from "next/font/google";
+import { Bricolage_Grotesque, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { CookieBanner } from "@/components/shared/CookieBanner";
 import { ChatBot } from "@/components/shared/ChatBot";
@@ -11,21 +11,17 @@ function CookieBannerWrapper() {
   return <CookieBanner />;
 }
 
-// Font consigliati da UI/UX Pro Max skill
-// Riga 6: Playful Creative — "Rounded, friendly fonts perfect for playful UIs"
-// Fredoka per heading (playful, arrotondato)
-// Nunito per body (friendly, leggibile)
-
-const heading = Fredoka({
+// Font v3: Bricolage Grotesque (headings, bold & impactful) + DM Sans (body, clean)
+const heading = Bricolage_Grotesque({
   variable: "--font-heading",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "600", "700", "800"],
 });
 
-const body = Nunito({
+const body = DM_Sans({
   variable: "--font-body",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700", "800"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata: Metadata = {

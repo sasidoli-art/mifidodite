@@ -24,6 +24,7 @@ interface Props {
   onSelect: (pin: MapPinData) => void;
   userPos: [number, number] | null;
   onBoundsChange?: (bounds: { south: number; west: number; north: number; east: number }) => void;
+  flyTo?: [number, number, number] | null; // [lat, lon, zoom]
 }
 
 const CAT_COLORS: Record<string, string> = {
@@ -42,7 +43,7 @@ const CAT_SVG: Record<string, string> = {
   pensione: `<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
 };
 
-export default function MapComponent({ pins, selected, onSelect, userPos, onBoundsChange }: Props) {
+export default function MapComponent({ pins, selected, onSelect, userPos, onBoundsChange, flyTo }: Props) {
   const mapRef = useRef<L.Map | null>(null);
   const markersRef = useRef<L.LayerGroup | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -58,10 +59,11 @@ export default function MapComponent({ pins, selected, onSelect, userPos, onBoun
       zoomControl: true,
     });
 
-    // Tile layer con stile piu pulito
-    L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", {
+    // Tile layer pulito e neutro (CARTO Voyager — piu leggibile di Positron)
+    L.tileLayer("https://a.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png", {
       attribution: '© <a href="https://openstreetmap.org">OSM</a> © <a href="https://carto.com">CARTO</a>',
       maxZoom: 19,
+      subdomains: "abcd",
     }).addTo(map);
 
     markersRef.current = L.layerGroup().addTo(map);
@@ -120,6 +122,12 @@ export default function MapComponent({ pins, selected, onSelect, userPos, onBoun
       marker.on("click", () => onSelect(pin));
     });
   }, [pins, onSelect]);
+
+  // FlyTo da ricerca citta
+  useEffect(() => {
+    if (!mapRef.current || !flyTo) return;
+    mapRef.current.flyTo([flyTo[0], flyTo[1]], flyTo[2], { duration: 1.5 });
+  }, [flyTo]);
 
   // Centra su pin selezionato (setView senza animazione per evitare loop moveend)
   useEffect(() => {

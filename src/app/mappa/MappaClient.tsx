@@ -34,6 +34,8 @@ export function MappaClient() {
   const [filtri, setFiltri] = useState<string[]>(["veterinario", "toelettatura", "pensione"]);
   const [lastBbox, setLastBbox] = useState("");
   const [zoomTooFar, setZoomTooFar] = useState(true);
+  const [searchCity, setSearchCity] = useState("");
+  const [flyTo, setFlyTo] = useState<[number, number, number] | null>(null); // [lat, lon, zoom]
 
   useEffect(() => {
     if ("geolocation" in navigator) {
@@ -43,6 +45,24 @@ export function MappaClient() {
       );
     }
   }, []);
+
+  async function searchCityOnMap(e: React.FormEvent) {
+    e.preventDefault();
+    if (!searchCity.trim()) return;
+    setLoading(true);
+    try {
+      const res = await fetch(`https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(searchCity)}&countrycodes=it&format=json&limit=1`, {
+        headers: { "User-Agent": "MifidoDiTe.eu/1.0" },
+      });
+      const data = await res.json();
+      if (data.length > 0) {
+        const lat = Number(data[0].lat);
+        const lon = Number(data[0].lon);
+        setFlyTo([lat, lon, 13]);
+      }
+    } catch { /* silent */ }
+    finally { setLoading(false); }
+  }
 
   const loadOSMData = useCallback(async (south: number, west: number, north: number, east: number) => {
     const bboxKey = `${south.toFixed(2)},${west.toFixed(2)},${north.toFixed(2)},${east.toFixed(2)},${filtri.join(",")}`;
@@ -129,6 +149,23 @@ export function MappaClient() {
           )}
         </div>
 
+        {/* Ricerca citta */}
+        <form onSubmit={searchCityOnMap} className="flex gap-2 mb-3">
+          <div className="flex-1 flex items-center gap-2 px-3.5 py-2.5 rounded-full bg-muted border border-border">
+            <MapPin size={14} className="text-muted-foreground shrink-0" />
+            <input
+              type="text"
+              placeholder="Cerca citta..."
+              value={searchCity}
+              onChange={(e) => setSearchCity(e.target.value)}
+              className="flex-1 bg-transparent outline-none text-foreground placeholder:text-muted-foreground text-sm"
+            />
+          </div>
+          <button type="submit" className="bg-primary text-white px-4 py-2.5 rounded-full text-sm font-semibold hover:bg-primary-dark transition-colors shrink-0">
+            Vai
+          </button>
+        </form>
+
         <button
           onClick={() => {
             if ("geolocation" in navigator) {
@@ -186,7 +223,7 @@ export function MappaClient() {
 
       {/* Mappa */}
       <div className="flex-1 relative min-h-[400px] lg:min-h-0">
-        <MapComponent pins={pins} selected={selected} onSelect={setSelected} userPos={userPos} onBoundsChange={onBoundsChange} />
+        <MapComponent pins={pins} selected={selected} onSelect={setSelected} userPos={userPos} onBoundsChange={onBoundsChange} flyTo={flyTo} />
 
         {selected && (
           <div className="absolute bottom-4 left-4 right-4 sm:left-auto sm:right-4 sm:w-96 bg-white rounded-[20px] shadow-xl p-5 z-[1000] border border-border">

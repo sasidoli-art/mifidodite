@@ -6,22 +6,21 @@ import { Menu } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { motion } from "framer-motion";
 import { NewsletterPopup } from "@/components/shared/NewsletterPopup";
-import { LogoPaw, LogoText } from "@/components/shared/Logo";
+import { LogoPaw } from "@/components/shared/Logo";
 
 const NAV_LINKS = [
   { href: "/magazine", label: "Magazine" },
   { href: "/professionisti", label: "Professionisti" },
-  { href: "/mappa", label: "Mappa" },
   { href: "/offerte", label: "Offerte" },
   { href: "/adozioni", label: "Adozioni" },
-  { href: "/sos-smarriti", label: "SOS Smarriti", accent: true },
+  { href: "/sos-smarriti", label: "SOS", accent: true },
 ];
 
 const NAV_MOBILE_EXTRA = [
+  { href: "/mappa", label: "Mappa" },
   { href: "/spiagge", label: "Spiagge" },
-  { href: "/cliniche", label: "Cliniche & Rifugi" },
+  { href: "/cliniche", label: "Cliniche" },
   { href: "/eventi", label: "Eventi" },
-  { href: "/prezzi", label: "Prezzi" },
 ];
 
 export function Header() {
@@ -38,53 +37,63 @@ export function Header() {
     <>
     <NewsletterPopup open={showNewsletter} onClose={() => setShowNewsletter(false)} />
     <motion.header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-400 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-background/95 backdrop-blur-[24px] saturate-[1.4] shadow-[0_4px_40px_rgba(61,43,31,.1)] border-b border-foreground/[.05]"
-          : "bg-background/80 backdrop-blur-[24px] saturate-[1.4] border-b border-foreground/[.03]"
+          ? "bg-white/90 backdrop-blur-xl shadow-[0_1px_20px_rgba(61,43,31,.08)] border-b border-foreground/[.04]"
+          : "bg-white/70 backdrop-blur-xl border-b border-foreground/[.03]"
       }`}
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.4 }}
     >
-      <div className="max-w-[1160px] mx-auto px-6">
-        <div className="flex items-center justify-between h-[60px]">
-          <Link href="/" className="flex items-center gap-2.5 shrink-0 hover:scale-[1.03] transition-transform">
-            <LogoPaw size={24} />
-            <LogoText variant="light" />
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6">
+        <div className="flex items-center justify-between h-[56px]">
+          {/* Logo — compatto */}
+          <Link href="/" className="flex items-center gap-2 shrink-0 hover:opacity-80 transition-opacity">
+            <LogoPaw size={22} />
+            <span className="text-[15px] font-extrabold tracking-tight text-foreground">
+              Mi<span className="text-primary">Fido</span>Di<span className="text-primary">Te</span>
+              <span className="text-[9px] font-bold text-primary ml-0.5">.eu</span>
+            </span>
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-8">
+          <nav className="hidden lg:flex items-center gap-1">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`relative text-[14px] font-medium transition-colors py-1 ${
+                className={`px-3 py-1.5 rounded-lg text-[13px] font-medium transition-all ${
                   link.accent
-                    ? "text-destructive hover:text-destructive/80"
-                    : "text-muted-foreground hover:text-primary"
+                    ? "text-red-500 hover:text-red-600 hover:bg-red-50"
+                    : "text-foreground/60 hover:text-foreground hover:bg-muted"
                 }`}
               >
                 {link.label}
-                {!link.accent && (
-                  <span className="absolute bottom-0 left-0 w-0 h-[2px] bg-primary rounded-full transition-all duration-300 group-hover:w-full hover:w-full" />
-                )}
               </Link>
             ))}
 
-            <div className="w-px h-5 bg-border mx-1" />
+            <Link
+              href="/mappa"
+              className="px-3 py-1.5 rounded-lg text-[13px] font-medium text-foreground/60 hover:text-foreground hover:bg-muted transition-all"
+            >
+              Mappa
+            </Link>
 
-            <Link href="/per-professionisti" className="text-[14px] font-medium text-primary hover:text-primary-dark transition-colors">
-              Sei un professionista?
+            <div className="w-px h-4 bg-foreground/10 mx-1" />
+
+            <Link
+              href="/per-professionisti"
+              className="px-3 py-1.5 rounded-lg text-[13px] font-medium text-primary hover:bg-primary/5 transition-all"
+            >
+              Per professionisti
             </Link>
 
             <button
               onClick={() => setShowNewsletter(true)}
-              className="relative bg-foreground text-white px-5 py-2.5 rounded-full text-[14px] font-semibold overflow-hidden transition-all hover:shadow-lg group"
+              className="ml-1 bg-primary text-white px-4 py-2 rounded-full text-[13px] font-semibold transition-all hover:bg-primary-dark hover:shadow-md active:scale-[0.97]"
             >
-              <span className="absolute inset-0 bg-primary transform scale-x-0 origin-right transition-transform duration-400 group-hover:scale-x-100 group-hover:origin-left rounded-full" />
-              <span className="relative z-10">Iscriviti gratis</span>
+              Iscriviti
             </button>
           </nav>
 
@@ -92,30 +101,35 @@ export function Header() {
           <div className="lg:hidden">
             <Sheet>
               <SheetTrigger>
-                <div className="p-2 hover:bg-muted rounded-lg transition-colors" role="button" aria-label="Apri menu"><Menu size={24} /></div>
+                <div className="p-2 hover:bg-muted rounded-lg transition-colors" role="button" aria-label="Menu">
+                  <Menu size={22} />
+                </div>
               </SheetTrigger>
               <SheetContent side="right" className="w-72">
                 <div className="flex flex-col gap-0.5 mt-8">
                   {NAV_LINKS.map((link) => (
                     <Link key={link.href} href={link.href}
-                      className={`px-4 py-3 rounded-lg text-base font-medium transition-colors ${
+                      className={`px-4 py-3 rounded-xl text-[15px] font-medium transition-colors ${
                         link.accent ? "text-red-500 hover:bg-red-50" : "text-foreground hover:bg-muted"
                       }`}>
                       {link.label}
                     </Link>
                   ))}
-                  <div className="border-t border-border my-2" />
+                  <div className="border-t border-border my-3" />
+                  <p className="px-4 text-[11px] font-bold text-muted-foreground uppercase tracking-wider mb-1">Altro</p>
                   {NAV_MOBILE_EXTRA.map((link) => (
                     <Link key={link.href} href={link.href}
-                      className="px-4 py-2.5 rounded-lg text-sm text-muted-foreground hover:text-foreground hover:bg-muted transition-colors">
+                      className="px-4 py-2.5 rounded-xl text-[14px] text-muted-foreground hover:text-foreground hover:bg-muted transition-colors">
                       {link.label}
                     </Link>
                   ))}
-                  <div className="border-t border-border my-2" />
-                  <Link href="/per-professionisti" className="px-4 py-3 rounded-lg text-base font-medium text-primary hover:bg-primary/5">
-                    Sei un professionista?
+                  <div className="border-t border-border my-3" />
+                  <Link href="/per-professionisti"
+                    className="px-4 py-3 rounded-xl text-[15px] font-medium text-primary hover:bg-primary/5">
+                    Per professionisti
                   </Link>
-                  <button onClick={() => setShowNewsletter(true)} className="mx-4 mt-2 py-3 rounded-full text-base font-medium bg-foreground text-white text-center">
+                  <button onClick={() => setShowNewsletter(true)}
+                    className="mx-4 mt-3 py-3 rounded-full text-[15px] font-semibold bg-primary text-white text-center active:scale-[0.97]">
                     Iscriviti gratis
                   </button>
                 </div>

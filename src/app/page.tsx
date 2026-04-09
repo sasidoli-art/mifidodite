@@ -10,31 +10,56 @@ import { Testimonials } from "@/components/landing/Testimonials";
 import { ProCTA } from "@/components/landing/ProCTA";
 import { Newsletter } from "@/components/landing/Newsletter";
 import { Footer } from "@/components/landing/Footer";
+import { SectionDivider } from "@/components/shared/SectionDivider";
 
 export default function Home() {
   return (
     <>
       <Header />
       <main className="flex-1">
-        {/* CHIARO — Hero con ricerca */}
+        {/* CHIARO — Hero */}
         <Hero />
-        {/* SCURO — Come funziona (3 step) */}
+
+        {/* Transizione chiaro → scuro (wave) */}
+        <SectionDivider from="#FBF8F4" to="#3D2B1F" variant="wave" />
+
+        {/* SCURO — Come funziona */}
         <HowItWorks />
-        {/* CHIARO — Servizi pet con immagini */}
+
+        {/* Transizione scuro → chiaro (curve) */}
+        <SectionDivider from="#3D2B1F" to="#F5EDE3" variant="curve" />
+
+        {/* CHIARO — Servizi */}
         <Categories />
-        {/* ACCENTO — SOS Smarriti (rosso) */}
+
+        {/* ACCENTO — SOS */}
         <SOSBanner />
+
+        {/* Transizione chiaro → scuro (fade) */}
+        <SectionDivider from="#FBF8F4" to="#3D2B1F" variant="fade" />
+
         {/* SCURO — Recensioni */}
         <Testimonials />
-        {/* CHIARO — Magazine (articoli) */}
+
+        {/* Transizione scuro → chiaro (wave flip) */}
+        <SectionDivider from="#3D2B1F" to="#FBF8F4" variant="wave" />
+
+        {/* CHIARO — Magazine */}
         <PetNews />
-        {/* CHIARO — Servizi featured (3 card grandi) */}
+
+        {/* CHIARO — Servizi featured */}
         <FeaturedPros />
+
         {/* CHIARO — Perche fidarsi */}
         <TrustSection />
+
+        {/* Transizione chiaro → scuro (angle) */}
+        <SectionDivider from="#FBF8F4" to="#3D2B1F" variant="angle" />
+
         {/* SCURO — CTA Professionisti */}
         <ProCTA />
-        {/* SCURO — Newsletter */}
+
+        {/* SCURO → SCURO (nessun divider, stesso colore) */}
         <Newsletter />
       </main>
       <Footer />

@@ -89,7 +89,7 @@ REGOLE:
 - Hashtag misti italiano/inglese, includi sempre #MiFidoDiTe
 - L'instagram caption finisce sempre con "↓ link in bio"
 
-Rispondi SOLO con array JSON puro (no markdown, no fences):
+IMPORTANTISSIMO: rispondi ESCLUSIVAMENTE con un array JSON. Nessun testo prima o dopo. Nessuna spiegazione. Solo il JSON puro. No markdown, no fences, no commenti.
 [
   {
     "articolo": "${art1.titolo}",
@@ -107,8 +107,28 @@ Rispondi SOLO con array JSON puro (no markdown, no fences):
 
   try {
     const response = await askDeepSeek(prompt, 3000);
-    const parsed = extractJSON(response);
-    const posts = (Array.isArray(parsed) ? parsed : [parsed]) as PostGenerated[];
+    let posts: PostGenerated[];
+    try {
+      const parsed = extractJSON(response);
+      posts = (Array.isArray(parsed) ? parsed : [parsed]) as PostGenerated[];
+    } catch {
+      // Fallback: se extractJSON fallisce, genera post semplici senza AI
+      console.error("[Social] JSON parse fallito, fallback manuale");
+      posts = [
+        {
+          articolo: art1.titolo,
+          facebook: `${art1.estratto} Leggi di piu su MifidoDiTe.eu/magazine/${art1.slug}`,
+          instagram: { caption: `${art1.estratto.slice(0, 150)} ↓ link in bio`, hashtags: ["#MiFidoDiTe", "#Pet", "#CaniDItalia", "#GattiDItalia", "#Magazine"] },
+          tiktok: art1.estratto.slice(0, 80),
+        },
+        {
+          articolo: art2.titolo,
+          facebook: `${art2.estratto} Leggi di piu su MifidoDiTe.eu/magazine/${art2.slug}`,
+          instagram: { caption: `${art2.estratto.slice(0, 150)} ↓ link in bio`, hashtags: ["#MiFidoDiTe", "#Pet", "#AnimaliDomestici", "#PetLovers", "#Italia"] },
+          tiktok: art2.estratto.slice(0, 80),
+        },
+      ];
+    }
 
     if (posts[0]) { posts[0].slug = art1.slug; posts[0].img = art1.img; }
     if (posts[1]) { posts[1].slug = art2.slug; posts[1].img = art2.img; }

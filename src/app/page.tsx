@@ -2,6 +2,7 @@ import { Header } from "@/components/landing/Header";
 import { Hero } from "@/components/landing/Hero";
 import { HowItWorks } from "@/components/landing/HowItWorks";
 import { Categories } from "@/components/landing/Categories";
+import { Strumenti } from "@/components/landing/Strumenti";
 import { SOSBanner } from "@/components/landing/SOSBanner";
 import { FeaturedPros } from "@/components/landing/FeaturedPros";
 import { PetNews } from "@/components/landing/PetNews";
@@ -31,6 +32,9 @@ export default function Home() {
 
         {/* CHIARO — Servizi */}
         <Categories />
+
+        {/* CHIARO — Strumenti utili (quiz + calcolatore) */}
+        <Strumenti />
 
         {/* ACCENTO — SOS */}
         <SOSBanner />

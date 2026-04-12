@@ -1,0 +1,172 @@
+[
+  {
+    "slug": "rimini-dog-no-problem-bagno-81",
+    "nome": "Rimini Dog No Problem Bagno 81",
+    "comune": "Rimini",
+    "regione": "Emilia-Romagna",
+    "lat": 44.0427155,
+    "lon": 12.6106477,
+    "display": "Spiaggia Libera, Marebello, Rimini, Emilia-Romagna, Italia",
+    "query": "Rimini spiaggia"
+  },
+  {
+    "slug": "fido-beach-san-mauro-mare",
+    "nome": "Fido Beach",
+    "comune": "San Mauro a Mare",
+    "regione": "Emilia-Romagna",
+    "lat": 44.1631101,
+    "lon": 12.4466459,
+    "display": "San Mauro a Mare, San Mauro Pascoli, Unione Rubicone e mare, Forlì-Cesena, Emilia-Romagna, 47030, Italia",
+    "query": "San Mauro a Mare Emilia-Romagna"
+  },
+  {
+    "slug": "maremoto-beach-lido-estensi",
+    "nome": "Maremoto Beach",
+    "comune": "Lido degli Estensi",
+    "regione": "Emilia-Romagna",
+    "lat": 44.6686912,
+    "lon": 12.2496405,
+    "display": "Spiaggia del Lido degli Estensi, Lido degli Estensi, Comacchio, Ferrara, Emilia-Romagna, 44029, Italia",
+    "query": "Lido degli Estensi spiaggia"
+  },
+  {
+    "slug": "spiaggia-libera-lido-di-classe",
+    "nome": "Spiaggia Libera Cani",
+    "comune": "Lido di Classe",
+    "regione": "Emilia-Romagna",
+    "lat": 44.3091429,
+    "lon": 12.345163,
+    "display": "Spiaggia San Francisco, Viale Romagna, Lido di Savio, Lido di Classe, Ravenna, Emilia-Romagna, 48016, Italia",
+    "query": "Lido di Classe spiaggia"
+  },
+  {
+    "slug": "dog-beach-san-vincenzo",
+    "nome": "Dog Beach San Vincenzo",
+    "comune": "San Vincenzo",
+    "regione": "Toscana",
+    "lat": 43.0638781,
+    "lon": 10.5342544,
+    "display": "Dog Beach, Via della Principessa, San Vincenzo, Livorno, Toscana, Italia",
+    "query": "Dog Beach San Vincenzo San Vincenzo"
+  },
+  {
+    "slug": "single-fin-tuscany-dog-beach-calambrone",
+    "nome": "Single Fin Tuscany Dog Beach",
+    "comune": "Calambrone",
+    "regione": "Toscana",
+    "lat": 43.5947181,
+    "lon": 10.2973731,
+    "display": "Calambrone, Pisa, Toscana, 56018, Italia",
+    "query": "Calambrone Toscana"
+  },
+  {
+    "slug": "bau-beach-follonica",
+    "nome": "Bau Beach",
+    "comune": "Follonica",
+    "regione": "Toscana",
+    "lat": 42.9191341,
+    "lon": 10.7584805,
+    "display": "Bau beach, Follonica, Grosseto, Toscana, Italia",
+    "query": "Bau Beach Follonica"
+  },
+  {
+    "slug": "spiaggia-di-pippo-baba-beach-albenga",
+    "nome": "Spiaggia di Pippo Baba Beach",
+    "comune": "Albenga",
+    "regione": "Liguria",
+    "lat": 44.0435977,
+    "lon": 8.2257904,
+    "display": "Spiaggia libera, Albenga, Savona, Liguria, Italia",
+    "query": "Albenga spiaggia"
+  },
+  {
+    "slug": "baubeach-maccarese",
+    "nome": "BauBeach",
+    "comune": "Maccarese Fiumicino",
+    "regione": "Lazio",
+    "lat": 41.8773647,
+    "lon": 12.2145902,
+    "display": "Maccarese, Fiumicino, Roma Capitale, Lazio, 00056, Italia",
+    "query": "Maccarese Fiumicino Lazio"
+  },
+  {
+    "slug": "tequila-dog-beach-montalto",
+    "nome": "Tequila Dog Beach",
+    "comune": "Montalto di Castro",
+    "regione": "Lazio",
+    "lat": 42.3515417,
+    "lon": 11.6072988,
+    "display": "Montalto di Castro, Viterbo, Lazio, 01014, Italia",
+    "query": "Montalto di Castro Lazio"
+  },
+  {
+    "slug": "bau-beach-palinuro",
+    "nome": "Bau Beach Palinuro",
+    "comune": "Palinuro",
+    "regione": "Campania",
+    "lat": 40.0272598,
+    "lon": 15.2920837,
+    "display": "spiaggia Buondormire di terra, Palinuro, Centola, Salerno, Campania, Italia",
+    "query": "Palinuro spiaggia"
+  },
+  {
+    "slug": "il-santos-torre-canne",
+    "nome": "Il Santos",
+    "comune": "Torre Canne Fasano",
+    "regione": "Puglia",
+    "lat": 40.8388725,
+    "lon": 17.4654977,
+    "display": "Torre Canne, Fasano, Brindisi, Puglia, 72016, Italia",
+    "query": "Torre Canne Fasano Puglia"
+  },
+  {
+    "slug": "dog-waterpark-bari",
+    "nome": "Dog Waterpark",
+    "comune": "Bari",
+    "regione": "Puglia",
+    "lat": 41.097659,
+    "lon": 16.9122273,
+    "display": "Dog Waterpark, Strada Rafaschieri, Japigia, Municipio 1, Bari, Puglia, 70126, Italia",
+    "query": "Dog Waterpark Bari"
+  },
+  {
+    "slug": "tiliguerta-dog-beach-costa-rei",
+    "nome": "Tiliguerta Dog Beach Costa Rei",
+    "comune": "Muravera",
+    "regione": "Sardegna",
+    "lat": 39.3275139,
+    "lon": 9.5999412,
+    "display": "Spiaggia di Feraxi, Murera/Muravera, Casteddu/Cagliari, Sardigna/Sardegna, 09043, Italia",
+    "query": "Muravera spiaggia"
+  },
+  {
+    "slug": "spiaggia-di-pluto-bibione",
+    "nome": "Spiaggia di Pluto",
+    "comune": "Bibione",
+    "regione": "Veneto",
+    "lat": 45.6337387,
+    "lon": 13.0738336,
+    "display": "Spiaggia di Pluto, Passeggiata Adriatico, Lido dei Pini, Bibione, San Michele al Tagliamento, Venezia, Veneto, 30028, Italia",
+    "query": "Spiaggia di Pluto Bibione"
+  },
+  {
+    "slug": "pachuka-beach-club-lido-venezia",
+    "nome": "Pachuka Beach Club",
+    "comune": "Lido di Venezia",
+    "regione": "Veneto",
+    "lat": 45.4126742,
+    "lon": 12.3764896,
+    "display": "Lido di Venezia, Lido-Pellestrina, Lido, Venezia, Veneto, Italia",
+    "query": "Lido di Venezia spiaggia"
+  },
+  {
+    "slug": "ombelico-del-mondo-mondello",
+    "nome": "L'Ombelico del Mondo",
+    "comune": "Mondello Palermo",
+    "regione": "Sicilia",
+    "lat": 38.2062142,
+    "lon": 13.3245517,
+    "display": "Mondello, VII Circoscrizione, Palermo, Sicilia, 90151, Italia",
+    "query": "Mondello Palermo Sicilia"
+  }
+]

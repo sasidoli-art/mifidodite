@@ -1,116 +1,142 @@
 // Spiagge dog-friendly REALI in Italia
-// Fonti: ENPA, Zampa Vacanza, Dogwelcome, Wamiz, VacanzeAnimali
+// Fonti: ENPA (fonte principale), hdsalento, Zampa Vacanza, Dogwelcome
+// Coordinate: geocoding Nominatim (OSM) via scripts/geocode-spiagge*.mjs
+// Alcune coordinate corrette manualmente per ambiguita' toponimiche
 
-export const SPIAGGE_SEED = [
-  // === EMILIA-ROMAGNA ===
-  {
-    slug: "rimini-dog-no-problem-bagno-81", nome: "Rimini Dog No Problem (Bagno 81)", comune: "Rimini", provincia: "RN", regione: "Emilia-Romagna",
-    tipo: "Stabilimento", descrizione: "Uno degli stabilimenti dog-friendly storici della Riviera Romagnola. Due aree gioco divise per taglia, corsi con educatori cinofili, docce e ciotole sempre disponibili.",
-    servizi: ["2 aree gioco per taglia", "Educatori cinofili", "Docce per cani", "Ciotole", "Ombrelloni"],
-    img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=80",
-  },
-  {
-    slug: "fido-beach-san-mauro-mare", nome: "Fido Beach", comune: "San Mauro a Mare", provincia: "FC", regione: "Emilia-Romagna",
-    tipo: "Stabilimento", descrizione: "Stabilimento balneare con area bagno dedicata ai cani, dog sitter disponibile e veterinario a chiamata.",
-    servizi: ["Area bagno dedicata", "Dog sitter", "Veterinario disponibile"],
-    img: "https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=400&q=80",
-  },
-  {
-    slug: "maremoto-beach-lido-estensi", nome: "Maremoto Beach", comune: "Lido degli Estensi", provincia: "FE", regione: "Emilia-Romagna",
-    tipo: "Stabilimento", descrizione: "250 ombrelloni, area Agility Dog e piscina dedicata ai cani. Un vero paradiso per gli amici a 4 zampe sulla costa ferrarese.",
-    servizi: ["250 ombrelloni", "Area Agility Dog", "Piscina per cani", "Docce"],
-    img: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&q=80",
-  },
-  {
-    slug: "spiaggia-libera-lido-di-classe", nome: "Spiaggia Libera Cani - Lido di Classe", comune: "Lido di Classe", provincia: "RA", regione: "Emilia-Romagna",
-    tipo: "Spiaggia libera", descrizione: "Tratto di spiaggia libera dedicato ai cani. Accesso dal 19 aprile al 2 novembre, ore 6-20. Regolamentata dal Comune di Ravenna.",
-    servizi: ["Ingresso libero", "Accesso regolamentato", "Tratto dedicato"],
-    img: "https://images.unsplash.com/photo-1507146426996-ef05306b995a?w=400&q=80",
-  },
-  // === TOSCANA ===
-  {
-    slug: "dog-beach-san-vincenzo", nome: "Dog Beach San Vincenzo", comune: "San Vincenzo", provincia: "LI", regione: "Toscana",
-    tipo: "Spiaggia libera", descrizione: "200 metri di battigia, parco ombreggiato, area recintata, docce per cani. I cani possono stare senza guinzaglio se educati. Tra le piu famose dog beach toscane.",
-    servizi: ["200m battigia", "Parco ombreggiato", "Area recintata", "Docce", "Cani senza guinzaglio"],
-    img: "https://images.unsplash.com/photo-1601758174114-e711c0cbaa69?w=400&q=80",
-  },
-  {
-    slug: "single-fin-tuscany-dog-beach-calambrone", nome: "Single Fin Tuscany Dog Beach", comune: "Calambrone", provincia: "PI", regione: "Toscana",
-    tipo: "Stabilimento", descrizione: "Circa 100 metri di spiaggia interamente dedicata ai cani tra Livorno e Pisa. Nuoto libero nel recinto, servizi dedicati.",
-    servizi: ["100m spiaggia dedicata", "Nuoto libero", "Servizi dedicati"],
-    img: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&q=80",
-  },
-  {
-    slug: "bau-beach-follonica", nome: "Bau Beach Follonica", comune: "Follonica", provincia: "GR", regione: "Toscana",
-    tipo: "Spiaggia libera", descrizione: "120 metri di tratto libero riservato ai cani con bagno consentito. Guinzaglio obbligatorio fuori dall'acqua.",
-    servizi: ["120m tratto riservato", "Bagno consentito", "Ingresso libero"],
-    img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=80",
-  },
-  // === LIGURIA ===
-  {
-    slug: "spiaggia-di-pippo-baba-beach-albenga", nome: "Spiaggia di Pippo (Baba Beach)", comune: "Albenga", provincia: "SV", regione: "Liguria",
-    tipo: "Stabilimento", descrizione: "Kit benvenuto per ogni cane, lettini, ombrelloni, ciotole, Ice Bau (gelato per cani!) e doccia dedicata. Un'esperienza premium per cani e padroni.",
-    servizi: ["Kit benvenuto", "Lettini", "Ombrelloni", "Ice Bau (gelato cani)", "Doccia dedicata"],
-    img: "https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=400&q=80",
-  },
-  // === LAZIO ===
-  {
-    slug: "baubeach-maccarese", nome: "BauBeach Maccarese", comune: "Fiumicino", provincia: "RM", regione: "Lazio",
-    tipo: "Stabilimento", descrizione: "La prima bau beach d'Italia, fondata nel 1997. BauHome (asilo cani), Baby&Bau, Bau Spa, giardino mediterraneo, sport cinofili e area agility. Associazione FISC.",
-    servizi: ["Asilo cani (BauHome)", "Baby & Bau", "Bau Spa", "Agility", "Sport cinofili", "Giardino mediterraneo"],
-    img: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&q=80",
-  },
-  {
-    slug: "tequila-dog-beach-montalto", nome: "Tequila Dog Beach", comune: "Montalto di Castro", provincia: "VT", regione: "Lazio",
-    tipo: "Stabilimento", descrizione: "Stabilimento balneare sulla Spiaggia delle Murelle con kit benvenuto, docce per cani e veterinario su richiesta.",
-    servizi: ["Kit benvenuto", "Docce per cani", "Veterinario su richiesta"],
-    img: "https://images.unsplash.com/photo-1507146426996-ef05306b995a?w=400&q=80",
-  },
+export interface SpiaggiaSeed {
+  slug: string;
+  nome: string;
+  comune: string;
+  provincia: string;
+  regione: string;
+  tipo: "Stabilimento" | "Spiaggia libera";
+  descrizione: string;
+  servizi: string[];
+  img: string;
+  lat: number;
+  lng: number;
+}
+
+const IMG_STABILIMENTO = [
+  "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=80",
+  "https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=400&q=80",
+  "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&q=80",
+  "https://images.unsplash.com/photo-1601758174114-e711c0cbaa69?w=400&q=80",
+  "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&q=80",
+];
+const IMG_LIBERA = [
+  "https://images.unsplash.com/photo-1507146426996-ef05306b995a?w=400&q=80",
+  "https://images.unsplash.com/photo-1502680390469-be75c86b636f?w=400&q=80",
+  "https://images.unsplash.com/photo-1519046904884-53103b34b206?w=400&q=80",
+];
+const pickImg = (tipo: "Stabilimento" | "Spiaggia libera", i: number) =>
+  tipo === "Stabilimento" ? IMG_STABILIMENTO[i % IMG_STABILIMENTO.length] : IMG_LIBERA[i % IMG_LIBERA.length];
+
+export const SPIAGGE_SEED: SpiaggiaSeed[] = [
+  // === ABRUZZO ===
+  { slug: "lido-riccio-ortona", nome: "Lido Riccio", comune: "Ortona", provincia: "CH", regione: "Abruzzo", tipo: "Stabilimento", descrizione: "Stabilimento balneare dog-friendly con ampi spazi e accesso facilitato all'acqua per i cani.", servizi: ["Area cani", "Accesso facilitato al mare", "Docce"], img: pickImg("Stabilimento", 0), lat: 42.3808, lng: 14.3676 },
+  { slug: "la-prora-bau-village-pescara", nome: "La Prora Estatinfinite Bau Village", comune: "Pescara", provincia: "PE", regione: "Abruzzo", tipo: "Stabilimento", descrizione: "Area dedicata ai cani con docce e ciotole d'acqua sulla costa pescarese.", servizi: ["Area dedicata", "Docce per cani", "Ciotole"], img: pickImg("Stabilimento", 1), lat: 42.4452, lng: 14.2534 },
+  { slug: "bau-beach-martinsicuro", nome: "Bau Beach Martinsicuro", comune: "Martinsicuro", provincia: "TE", regione: "Abruzzo", tipo: "Stabilimento", descrizione: "Stabilimento pet-friendly sulla costa teramana con area dedicata ai cani.", servizi: ["Area cani", "Docce", "Ombrelloni"], img: pickImg("Stabilimento", 2), lat: 42.8851, lng: 13.9155 },
+  { slug: "yochi-beach-fossacesia", nome: "Yochi Beach Dog & Family", comune: "Fossacesia", provincia: "CH", regione: "Abruzzo", tipo: "Stabilimento", descrizione: "Spiaggia attrezzata per famiglie e amici a 4 zampe nella Costa dei Trabocchi.", servizi: ["Family-friendly", "Area cani", "Servizi completi"], img: pickImg("Stabilimento", 3), lat: 42.2446, lng: 14.4829 },
+  { slug: "eucaliptus-spiaggia-alba-adriatica", nome: "Eucaliptus Spiaggia", comune: "Alba Adriatica", provincia: "TE", regione: "Abruzzo", tipo: "Stabilimento", descrizione: "Stabilimento ombreggiato da eucalipti sulla riviera delle palme, con area cani attrezzata.", servizi: ["Zona ombra naturale", "Area cani", "Docce"], img: pickImg("Stabilimento", 4), lat: 42.8231, lng: 13.9364 },
+
+  // === BASILICATA ===
+  { slug: "lido-san-basilio-pisticci", nome: "Lido San Basilio", comune: "Marina di Pisticci", provincia: "MT", regione: "Basilicata", tipo: "Stabilimento", descrizione: "Area riservata ai cani con ombrelloni e lettini sulla costa ionica lucana.", servizi: ["Area riservata", "Ombrelloni", "Lettini"], img: pickImg("Stabilimento", 0), lat: 40.2966, lng: 16.7824 },
+  { slug: "lido-spiaggia-nera-maratea", nome: "Lido Spiaggia Nera", comune: "Maratea", provincia: "PZ", regione: "Basilicata", tipo: "Stabilimento", descrizione: "Stabilimento sulla celebre Spiaggia Nera di Maratea, con area dedicata ai cani.", servizi: ["Area cani", "Docce", "Sabbia nera vulcanica"], img: pickImg("Stabilimento", 1), lat: 39.9424, lng: 15.7376 },
+  { slug: "lido-cala-jannita-maratea", nome: "Lido Cala Jannita", comune: "Maratea", provincia: "PZ", regione: "Basilicata", tipo: "Stabilimento", descrizione: "Lido pet-friendly nella scenografica baia di Cala Jannita, costa di Maratea.", servizi: ["Baia protetta", "Area cani", "Servizi"], img: pickImg("Stabilimento", 2), lat: 39.9310, lng: 15.7489 },
+  { slug: "lido-acquamarina-maratea", nome: "Lido Acquamarina", comune: "Maratea", provincia: "PZ", regione: "Basilicata", tipo: "Stabilimento", descrizione: "Stabilimento balneare con servizi dedicati ai cani sulla costa di Maratea.", servizi: ["Area cani", "Mare cristallino", "Docce"], img: pickImg("Stabilimento", 3), lat: 39.9540, lng: 15.7267 },
+  { slug: "lido-afrodite-metaponto", nome: "Lido Afrodite", comune: "Metaponto", provincia: "MT", regione: "Basilicata", tipo: "Stabilimento", descrizione: "Lido pet-friendly sulla costa ionica lucana di Metaponto.", servizi: ["Area cani", "Servizi dedicati"], img: pickImg("Stabilimento", 4), lat: 40.3741, lng: 16.8101 },
+
+  // === CALABRIA ===
+  { slug: "lido-isola-bella-tropea", nome: "Lido Isola Bella", comune: "Tropea", provincia: "VV", regione: "Calabria", tipo: "Stabilimento", descrizione: "Tra le piu belle della regione con area giochi e servizi per cani, vista sulla costa degli dei.", servizi: ["Area giochi", "Vista panoramica", "Servizi cani"], img: pickImg("Stabilimento", 0), lat: 38.6807, lng: 15.8994 },
+  { slug: "pirate-dog-beach-amantea", nome: "Pirate Dog Beach", comune: "Amantea", provincia: "CS", regione: "Calabria", tipo: "Stabilimento", descrizione: "Dog beach sulla costa tirrenica calabrese, area dedicata ai cani con docce.", servizi: ["Dog beach", "Docce", "Area dedicata"], img: pickImg("Stabilimento", 1), lat: 39.1332, lng: 16.0746 },
+  { slug: "hang-loose-beach-gizzeria", nome: "Hang Loose Beach", comune: "Gizzeria Lido", provincia: "CZ", regione: "Calabria", tipo: "Stabilimento", descrizione: "Beach club pet-friendly a Gizzeria Lido, tra le mete surf del golfo di Sant'Eufemia.", servizi: ["Beach club", "Area cani", "Atmosfera surf"], img: pickImg("Stabilimento", 2), lat: 38.9291, lng: 16.2162 },
+  { slug: "valentino-beach-club-catanzaro", nome: "Valentino Beach Club", comune: "Catanzaro", provincia: "CZ", regione: "Calabria", tipo: "Stabilimento", descrizione: "Stabilimento balneare con area dedicata ai cani sulla costa ionica catanzarese.", servizi: ["Area cani", "Servizi completi"], img: pickImg("Stabilimento", 3), lat: 38.7488, lng: 16.5602 },
+  { slug: "thomas-glauco-beach-soverato", nome: "Thomas Glauco Beach Club", comune: "Soverato", provincia: "CZ", regione: "Calabria", tipo: "Stabilimento", descrizione: "Lido attrezzato con docce e servizi igienici dedicati, sulla costa di Soverato.", servizi: ["Docce", "Servizi igienici", "Area cani"], img: pickImg("Stabilimento", 4), lat: 38.6867, lng: 16.5567 },
+
   // === CAMPANIA ===
-  {
-    slug: "bau-beach-palinuro", nome: "Bau Beach Palinuro", comune: "Palinuro", provincia: "SA", regione: "Campania",
-    tipo: "Stabilimento", descrizione: "Immersa nel Parco Nazionale del Cilento. Veterinario, toelette e dog sitter disponibili. Un'oasi pet-friendly nel cuore della costa salernitana.",
-    servizi: ["Veterinario", "Toelette", "Dog sitter", "Parco Nazionale del Cilento"],
-    img: "https://images.unsplash.com/photo-1601758174114-e711c0cbaa69?w=400&q=80",
-  },
+  { slug: "bau-beach-palinuro", nome: "Bau Beach Palinuro", comune: "Palinuro", provincia: "SA", regione: "Campania", tipo: "Stabilimento", descrizione: "Immersa nel Parco Nazionale del Cilento. Veterinario, toelette e dog sitter disponibili. Un'oasi pet-friendly nel cuore della costa salernitana.", servizi: ["Veterinario", "Toelette", "Dog sitter", "Parco Nazionale del Cilento"], img: pickImg("Stabilimento", 0), lat: 40.0273, lng: 15.2921 },
+  { slug: "baia-rocce-verdi-napoli", nome: "Baia delle Rocce Verdi", comune: "Napoli", provincia: "NA", regione: "Campania", tipo: "Stabilimento", descrizione: "Area riservata con ciotole, docce e zone d'ombra nel suggestivo Capo di Posillipo.", servizi: ["Area riservata", "Ciotole", "Docce", "Zona ombra"], img: pickImg("Stabilimento", 1), lat: 40.7973, lng: 14.1986 },
+  { slug: "bau-beach-village-eboli", nome: "Bau Beach Village", comune: "Eboli", provincia: "SA", regione: "Campania", tipo: "Stabilimento", descrizione: "Villaggio pet-friendly sulla costa di Eboli con ampi spazi per i cani.", servizi: ["Villaggio", "Ampi spazi", "Servizi cani"], img: pickImg("Stabilimento", 2), lat: 40.5156, lng: 14.9240 },
+  { slug: "il-timoniere-ascea", nome: "Il Timoniere", comune: "Marina di Ascea", provincia: "SA", regione: "Campania", tipo: "Stabilimento", descrizione: "Stabilimento balneare nel Cilento con area dedicata ai cani.", servizi: ["Area cani", "Parco del Cilento"], img: pickImg("Stabilimento", 3), lat: 40.1454, lng: 15.1679 },
+  { slug: "lido-laura-paestum", nome: "Lido Laura", comune: "Capaccio Paestum", provincia: "SA", regione: "Campania", tipo: "Stabilimento", descrizione: "Lido pet-friendly sulla costa di Paestum, vicino agli scavi archeologici.", servizi: ["Area cani", "Vicino a Paestum"], img: pickImg("Stabilimento", 4), lat: 40.4552, lng: 14.9621 },
+
+  // === EMILIA-ROMAGNA ===
+  { slug: "rimini-dog-no-problem-bagno-81", nome: "Rimini Dog No Problem (Bagno 81)", comune: "Rimini", provincia: "RN", regione: "Emilia-Romagna", tipo: "Stabilimento", descrizione: "Uno degli stabilimenti dog-friendly storici della Riviera Romagnola. Due aree gioco divise per taglia, corsi con educatori cinofili, docce e ciotole sempre disponibili.", servizi: ["2 aree gioco per taglia", "Educatori cinofili", "Docce per cani", "Ciotole", "Ombrelloni"], img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=80", lat: 44.0427, lng: 12.6106 },
+  { slug: "fido-beach-san-mauro-mare", nome: "Fido Beach", comune: "San Mauro a Mare", provincia: "FC", regione: "Emilia-Romagna", tipo: "Stabilimento", descrizione: "Stabilimento balneare con area bagno dedicata ai cani, dog sitter disponibile e veterinario a chiamata.", servizi: ["Area bagno dedicata", "Dog sitter", "Veterinario disponibile"], img: "https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=400&q=80", lat: 44.1631, lng: 12.4466 },
+  { slug: "maremoto-beach-lido-estensi", nome: "Maremoto Beach", comune: "Lido degli Estensi", provincia: "FE", regione: "Emilia-Romagna", tipo: "Stabilimento", descrizione: "250 ombrelloni, area Agility Dog e piscina dedicata ai cani. Un vero paradiso per gli amici a 4 zampe sulla costa ferrarese.", servizi: ["250 ombrelloni", "Area Agility Dog", "Piscina per cani", "Docce"], img: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&q=80", lat: 44.6687, lng: 12.2496 },
+  { slug: "spiaggia-libera-lido-di-classe", nome: "Spiaggia Libera Cani - Lido di Classe", comune: "Lido di Classe", provincia: "RA", regione: "Emilia-Romagna", tipo: "Spiaggia libera", descrizione: "Tratto di spiaggia libera dedicato ai cani. Accesso dal 19 aprile al 2 novembre, ore 6-20. Regolamentata dal Comune di Ravenna.", servizi: ["Ingresso libero", "Accesso regolamentato", "Tratto dedicato"], img: "https://images.unsplash.com/photo-1507146426996-ef05306b995a?w=400&q=80", lat: 44.3091, lng: 12.3452 },
+
+  // === FRIULI-VENEZIA GIULIA ===
+  { slug: "lido-di-fido-grado", nome: "Spiaggia Lido di Fido", comune: "Grado", provincia: "GO", regione: "Friuli-Venezia Giulia", tipo: "Stabilimento", descrizione: "Aree giochi, zone d'ombra e docce dedicate ai cani nella storica isola di Grado.", servizi: ["Aree giochi", "Zone ombra", "Docce"], img: pickImg("Stabilimento", 0), lat: 45.6765, lng: 13.3984 },
+  { slug: "doggy-beach-lignano", nome: "Doggy Beach Lignano", comune: "Lignano Sabbiadoro", provincia: "UD", regione: "Friuli-Venezia Giulia", tipo: "Stabilimento", descrizione: "Area dedicata con accesso al mare a Lignano Sabbiadoro, una delle mete piu amate del Nord Adriatico.", servizi: ["Accesso mare", "Area cani", "Docce"], img: pickImg("Stabilimento", 1), lat: 45.6825, lng: 13.1092 },
+  { slug: "dog-beach-muggia", nome: "Dog Beach Muggia", comune: "Muggia", provincia: "TS", regione: "Friuli-Venezia Giulia", tipo: "Stabilimento", descrizione: "Stabilimento dog-friendly a Muggia, sul golfo di Trieste.", servizi: ["Area cani", "Golfo di Trieste"], img: pickImg("Stabilimento", 2), lat: 45.5986, lng: 13.7710 },
+  { slug: "costa-dei-barbari-sistiana", nome: "Spiaggia Costa dei Barbari", comune: "Sistiana", provincia: "TS", regione: "Friuli-Venezia Giulia", tipo: "Spiaggia libera", descrizione: "Tratto di spiaggia libera dove i cani sono benvenuti, tra le falesie del Carso triestino.", servizi: ["Ingresso libero", "Natura", "Falesie"], img: pickImg("Spiaggia libera", 0), lat: 45.7577, lng: 13.6418 },
+
+  // === LAZIO ===
+  { slug: "baubeach-maccarese", nome: "BauBeach Maccarese", comune: "Fiumicino", provincia: "RM", regione: "Lazio", tipo: "Stabilimento", descrizione: "La prima bau beach d'Italia, fondata nel 1997. BauHome (asilo cani), Baby&Bau, Bau Spa, giardino mediterraneo, sport cinofili e area agility. Associazione FISC.", servizi: ["Asilo cani (BauHome)", "Baby & Bau", "Bau Spa", "Agility", "Sport cinofili", "Giardino mediterraneo"], img: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&q=80", lat: 41.8774, lng: 12.2146 },
+  { slug: "tequila-dog-beach-montalto", nome: "Tequila Dog Beach", comune: "Montalto di Castro", provincia: "VT", regione: "Lazio", tipo: "Stabilimento", descrizione: "Stabilimento balneare sulla Spiaggia delle Murelle con kit benvenuto, docce per cani e veterinario su richiesta.", servizi: ["Kit benvenuto", "Docce per cani", "Veterinario su richiesta"], img: "https://images.unsplash.com/photo-1507146426996-ef05306b995a?w=400&q=80", lat: 42.3515, lng: 11.6073 },
+  { slug: "torre-flavia-dog-beach-ladispoli", nome: "Torre Flavia Dog Beach", comune: "Ladispoli", provincia: "RM", regione: "Lazio", tipo: "Stabilimento", descrizione: "Accesso al mare con docce e aree ombreggiate nella storica zona di Torre Flavia.", servizi: ["Accesso mare", "Docce", "Zone ombra"], img: pickImg("Stabilimento", 0), lat: 41.9617, lng: 12.0455 },
+  { slug: "sabau-beach-sabaudia", nome: "Sabau Beach", comune: "Sabaudia", provincia: "LT", regione: "Lazio", tipo: "Stabilimento", descrizione: "Stabilimento pet-friendly nel Parco Nazionale del Circeo, sulla costa pontina.", servizi: ["Parco Nazionale Circeo", "Area cani", "Servizi"], img: pickImg("Stabilimento", 1), lat: 41.3575, lng: 12.9564 },
+  { slug: "spiaggia-bufalara-sabaudia", nome: "Spiaggia della Bufalara", comune: "Sabaudia", provincia: "LT", regione: "Lazio", tipo: "Spiaggia libera", descrizione: "Spiaggia libera aperta ai cani nel Parco Nazionale del Circeo.", servizi: ["Ingresso libero", "Parco Nazionale", "Dune"], img: pickImg("Spiaggia libera", 0), lat: 41.3700, lng: 12.9700 },
+  { slug: "gabbiani-dog-beach-bracciano", nome: "Spiaggia dei Gabbiani Dog Beach", comune: "Bracciano", provincia: "RM", regione: "Lazio", tipo: "Stabilimento", descrizione: "Dog beach sul Lago di Bracciano, ottima alternativa lacustre al mare.", servizi: ["Lago di Bracciano", "Area cani", "Acqua dolce"], img: pickImg("Stabilimento", 2), lat: 42.0874, lng: 12.2138 },
+
+  // === LIGURIA ===
+  { slug: "spiaggia-di-pippo-baba-beach-albenga", nome: "Spiaggia di Pippo (Baba Beach)", comune: "Albenga", provincia: "SV", regione: "Liguria", tipo: "Stabilimento", descrizione: "Kit benvenuto per ogni cane, lettini, ombrelloni, ciotole, Ice Bau (gelato per cani!) e doccia dedicata. Un'esperienza premium per cani e padroni.", servizi: ["Kit benvenuto", "Lettini", "Ombrelloni", "Ice Bau (gelato cani)", "Doccia dedicata"], img: "https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=400&q=80", lat: 44.0436, lng: 8.2258 },
+  { slug: "baubau-village-sole-luna-albissola", nome: "Bau Bau Village Sole e Luna", comune: "Albissola Marina", provincia: "SV", regione: "Liguria", tipo: "Stabilimento", descrizione: "Villaggio pet-friendly ad Albissola Marina, sulla riviera ligure di Ponente.", servizi: ["Villaggio", "Area cani", "Servizi completi"], img: pickImg("Stabilimento", 0), lat: 44.3261, lng: 8.5022 },
+  { slug: "pluto-beach-spotorno", nome: "Pluto Beach", comune: "Spotorno", provincia: "SV", regione: "Liguria", tipo: "Stabilimento", descrizione: "Stabilimento balneare dog-friendly a Spotorno, tra le baie piu amate della costa savonese.", servizi: ["Area cani", "Baia protetta", "Servizi"], img: pickImg("Stabilimento", 1), lat: 44.2368, lng: 8.4358 },
+  { slug: "lido-di-fido-chiavari", nome: "Lido di Fido Chiavari", comune: "Chiavari", provincia: "GE", regione: "Liguria", tipo: "Stabilimento", descrizione: "Stabilimento dedicato ai cani nella riviera di Levante, Chiavari.", servizi: ["Area dedicata", "Docce", "Lettini"], img: pickImg("Stabilimento", 2), lat: 44.3111, lng: 9.3284 },
+  { slug: "bagni-capo-marina-genova", nome: "Bagni Capo Marina", comune: "Genova", provincia: "GE", regione: "Liguria", tipo: "Stabilimento", descrizione: "Stabilimento pet-friendly nella zona di Recco, alle porte di Genova.", servizi: ["Area cani", "Servizi"], img: pickImg("Stabilimento", 3), lat: 44.3611, lng: 9.1420 },
+  { slug: "rin-tin-beach-pietra-ligure", nome: "Rin Tin Beach", comune: "Pietra Ligure", provincia: "SV", regione: "Liguria", tipo: "Stabilimento", descrizione: "Stabilimento con nome evocativo a Pietra Ligure, sulla riviera ligure di Ponente.", servizi: ["Area cani", "Docce", "Ombrelloni"], img: pickImg("Stabilimento", 4), lat: 44.1479, lng: 8.2831 },
+
+  // === MARCHE ===
+  { slug: "islamorada-dog-beach-fano", nome: "Islamorada Dog Beach", comune: "Fano", provincia: "PU", regione: "Marche", tipo: "Stabilimento", descrizione: "Accesso al mare con docce e zone d'ombra sulla costa di Fano.", servizi: ["Accesso mare", "Docce", "Zone ombra"], img: pickImg("Stabilimento", 0), lat: 43.8430, lng: 13.0135 },
+  { slug: "baia-canaria-senigallia", nome: "Baia Canaria", comune: "Senigallia", provincia: "AN", regione: "Marche", tipo: "Stabilimento", descrizione: "Accesso al mare, aree giochi e servizi sulla famosa spiaggia di velluto di Senigallia.", servizi: ["Accesso mare", "Aree giochi", "Servizi"], img: pickImg("Stabilimento", 1), lat: 43.7022, lng: 13.2459 },
+  { slug: "animalido-dog-beach-fano", nome: "Animalido Dog Beach", comune: "Fano", provincia: "PU", regione: "Marche", tipo: "Stabilimento", descrizione: "Dog beach attrezzata sulla costa fanese, con servizi dedicati.", servizi: ["Dog beach", "Servizi dedicati"], img: pickImg("Stabilimento", 2), lat: 43.8482, lng: 13.0255 },
+  { slug: "numana-blu", nome: "Numana Blu", comune: "Numana", provincia: "AN", regione: "Marche", tipo: "Stabilimento", descrizione: "Stabilimento del camping village Numana Blu, nel cuore della Riviera del Conero.", servizi: ["Camping village", "Area cani", "Riviera del Conero"], img: pickImg("Stabilimento", 3), lat: 43.4753, lng: 13.6316 },
+  { slug: "scooby-doo-beach-senigallia", nome: "Scooby Doo Beach", comune: "Senigallia", provincia: "AN", regione: "Marche", tipo: "Stabilimento", descrizione: "Stabilimento pet-friendly sulla spiaggia di velluto di Senigallia.", servizi: ["Area cani", "Spiaggia di velluto"], img: pickImg("Stabilimento", 4), lat: 43.7150, lng: 13.2300 },
+
+  // === MOLISE ===
+  { slug: "scooby-doo-beach-campomarino", nome: "Scooby Doo Beach Campomarino", comune: "Campomarino Lido", provincia: "CB", regione: "Molise", tipo: "Stabilimento", descrizione: "Accesso al mare con docce e zone d'ombra sul litorale molisano.", servizi: ["Accesso mare", "Docce", "Zone ombra"], img: pickImg("Stabilimento", 0), lat: 41.9568, lng: 15.0606 },
+  { slug: "bau-beach-termoli", nome: "Bau Beach Termoli", comune: "Termoli", provincia: "CB", regione: "Molise", tipo: "Stabilimento", descrizione: "Aree dedicate e accesso al mare nella storica citta di Termoli.", servizi: ["Area dedicata", "Accesso mare"], img: pickImg("Stabilimento", 1), lat: 42.0081, lng: 14.9655 },
+
   // === PUGLIA ===
-  {
-    slug: "il-santos-torre-canne", nome: "Il Santos", comune: "Torre Canne", provincia: "BR", regione: "Puglia",
-    tipo: "Stabilimento", descrizione: "Premiato dal Ministero del Turismo come struttura pet-friendly. Stabilimento balneare di riferimento per i cani in Puglia.",
-    servizi: ["Premio Ministero Turismo", "Area dedicata cani", "Servizi pet"],
-    img: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&q=80",
-  },
-  {
-    slug: "dog-waterpark-bari", nome: "Dog Waterpark", comune: "Bari", provincia: "BA", regione: "Puglia",
-    tipo: "Stabilimento", descrizione: "Piscina per cani con giochi d'acqua, docce dedicate. Un parco acquatico pensato interamente per gli amici a 4 zampe.",
-    servizi: ["Piscina per cani", "Giochi d'acqua", "Docce"],
-    img: "https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=400&q=80",
-  },
+  { slug: "il-santos-torre-canne", nome: "Il Santos", comune: "Torre Canne", provincia: "BR", regione: "Puglia", tipo: "Stabilimento", descrizione: "Premiato dal Ministero del Turismo come struttura pet-friendly. Stabilimento balneare di riferimento per i cani in Puglia.", servizi: ["Premio Ministero Turismo", "Area dedicata cani", "Servizi pet"], img: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&q=80", lat: 40.8389, lng: 17.4655 },
+  { slug: "dog-waterpark-bari", nome: "Dog Waterpark", comune: "Bari", provincia: "BA", regione: "Puglia", tipo: "Stabilimento", descrizione: "Piscina per cani con giochi d'acqua, docce dedicate. Un parco acquatico pensato interamente per gli amici a 4 zampe.", servizi: ["Piscina per cani", "Giochi d'acqua", "Docce"], img: "https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=400&q=80", lat: 41.0977, lng: 16.9122 },
+  { slug: "eden-salento-agri-beach-pescoluse", nome: "Eden Salento Agri Beach", comune: "Marina di Pescoluse", provincia: "LE", regione: "Puglia", tipo: "Stabilimento", descrizione: "Agri-beach con ombrelloni, gazebo, doccia per cani, ciotola d'acqua, crocchette, area di passeggio e area giochi. Addestratore disponibile.", servizi: ["Agri-beach", "Doccia per cani", "Crocchette", "Area giochi", "Addestratore"], img: pickImg("Stabilimento", 0), lat: 39.8357, lng: 18.2548 },
+  { slug: "soleluna-bau-beach-san-cataldo", nome: "Soleluna Lido Bau Beach", comune: "San Cataldo di Lecce", provincia: "LE", regione: "Puglia", tipo: "Stabilimento", descrizione: "Consente ai cani di nuotare, docce speciali, accesso all'area ristorante, ciotola d'acqua, gonfiabili in mare e servizio veterinario.", servizi: ["Bagno consentito", "Docce speciali", "Ristorante", "Gonfiabili", "Veterinario"], img: pickImg("Stabilimento", 1), lat: 40.3789, lng: 18.2637 },
+  { slug: "lido-coiba-san-foca", nome: "Lido Coiba", comune: "San Foca", provincia: "LE", regione: "Puglia", tipo: "Stabilimento", descrizione: "Beach club con lettini, ombrelloni, ciotole e area riservata per rilassarsi con i cani dall'alba al tramonto.", servizi: ["Beach club", "Area riservata", "Ciotole", "Alba-tramonto"], img: pickImg("Stabilimento", 2), lat: 40.2953, lng: 18.4207 },
+  { slug: "dog-beach-costa-merlata-ostuni", nome: "Dog Beach Costa Merlata", comune: "Ostuni", provincia: "BR", regione: "Puglia", tipo: "Stabilimento", descrizione: "Dog beach nella baia di Costa Merlata, poco distante dalla Citta Bianca di Ostuni.", servizi: ["Dog beach", "Baia protetta", "Ostuni"], img: pickImg("Stabilimento", 3), lat: 40.8081, lng: 17.5333 },
+  { slug: "porto-selvaggio-nardo", nome: "Porto Selvaggio", comune: "Nardo", provincia: "LE", regione: "Puglia", tipo: "Spiaggia libera", descrizione: "Parco naturale regionale con tratti di costa accessibili ai cani, tra pinete e calette.", servizi: ["Parco naturale", "Pineta", "Calette selvagge"], img: pickImg("Spiaggia libera", 0), lat: 40.1780, lng: 17.9427 },
+  { slug: "torre-san-giovanni-ugento", nome: "Torre San Giovanni", comune: "Ugento", provincia: "LE", regione: "Puglia", tipo: "Spiaggia libera", descrizione: "Spiaggia libera aperta ai cani sulla costa ionica salentina.", servizi: ["Ingresso libero", "Costa ionica"], img: pickImg("Spiaggia libera", 1), lat: 39.8889, lng: 18.1140 },
+  { slug: "lido-fantasy-beach-vieste", nome: "Lido Fantasy Beach", comune: "Vieste", provincia: "FG", regione: "Puglia", tipo: "Stabilimento", descrizione: "Stabilimento pet-friendly sulla celebre spiaggia di Scialmarino, Gargano.", servizi: ["Spiaggia Scialmarino", "Gargano", "Area cani"], img: pickImg("Stabilimento", 4), lat: 41.9119, lng: 16.1278 },
+  { slug: "spiaggia-verde-barletta", nome: "Spiaggia Verde", comune: "Barletta", provincia: "BT", regione: "Puglia", tipo: "Spiaggia libera", descrizione: "Tratto di spiaggia libera aperto ai cani sulla costa di Barletta.", servizi: ["Ingresso libero", "Tratto dedicato"], img: pickImg("Spiaggia libera", 2), lat: 41.3271, lng: 16.2656 },
+
   // === SARDEGNA ===
-  {
-    slug: "tiliguerta-dog-beach-costa-rei", nome: "Tiliguerta Dog Beach", comune: "Muravera", provincia: "SU", regione: "Sardegna",
-    tipo: "Stabilimento", descrizione: "Area delimitata e attrezzata sulla spiaggia di Costa Rei. Ciotole, docce, veterinario disponibile e giochi per cani.",
-    servizi: ["Area attrezzata", "Ciotole", "Docce", "Veterinario", "Giochi"],
-    img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=80",
-  },
-  // === VENETO ===
-  {
-    slug: "spiaggia-di-pluto-bibione", nome: "La Spiaggia di Pluto", comune: "Bibione", provincia: "VE", regione: "Veneto",
-    tipo: "Stabilimento", descrizione: "La piu grande spiaggia dog-friendly d'Italia. Accesso mare senza limiti di orario, docce, aree recintate, attivita cinofile, kit benvenuto, veterinario e lettino su misura per cani.",
-    servizi: ["La piu grande d'Italia", "Accesso mare illimitato", "Aree recintate", "Attivita cinofile", "Kit benvenuto", "Veterinario", "Lettino per cani"],
-    img: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&q=80",
-  },
-  {
-    slug: "pachuka-beach-club-lido-venezia", nome: "Pachuka Beach Club", comune: "Venezia Lido", provincia: "VE", regione: "Veneto",
-    tipo: "Stabilimento", descrizione: "Bagno senza limitazioni di orario al Lido di Venezia. Ciotole, lettino e doccia inclusi nel servizio.",
-    servizi: ["Bagno senza limiti", "Ciotole", "Lettino incluso", "Doccia inclusa"],
-    img: "https://images.unsplash.com/photo-1507146426996-ef05306b995a?w=400&q=80",
-  },
+  { slug: "tiliguerta-dog-beach-costa-rei", nome: "Tiliguerta Dog Beach", comune: "Muravera", provincia: "SU", regione: "Sardegna", tipo: "Stabilimento", descrizione: "Area delimitata e attrezzata sulla spiaggia di Costa Rei. Ciotole, docce, veterinario disponibile e giochi per cani.", servizi: ["Area attrezzata", "Ciotole", "Docce", "Veterinario", "Giochi"], img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=80", lat: 39.3275, lng: 9.5999 },
+  { slug: "ira-dog-beach-olbia", nome: "Ira Dog Beach", comune: "Olbia", provincia: "SS", regione: "Sardegna", tipo: "Stabilimento", descrizione: "Numerosi servizi per cani e padroni sulla spiaggia di Bados, Pittulongu.", servizi: ["Servizi cani", "Spiaggia Bados", "Gallura"], img: pickImg("Stabilimento", 0), lat: 40.9541, lng: 9.5778 },
+  { slug: "dog-beach-calasetta", nome: "Dog Beach Calasetta", comune: "Calasetta", provincia: "SU", regione: "Sardegna", tipo: "Stabilimento", descrizione: "Dog beach presso l'ex Tonnara di Calasetta, isola di Sant'Antioco.", servizi: ["Ex Tonnara", "Isola di Sant'Antioco", "Area cani"], img: pickImg("Stabilimento", 1), lat: 39.0841, lng: 8.3576 },
+  { slug: "porto-pino-sant-anna-arresi", nome: "Spiaggia di Porto Pino", comune: "Sant'Anna Arresi", provincia: "SU", regione: "Sardegna", tipo: "Spiaggia libera", descrizione: "Una delle piu belle spiagge libere della Sardegna sud-occidentale, dove i cani sono benvenuti.", servizi: ["Ingresso libero", "Dune", "Pineta"], img: pickImg("Spiaggia libera", 0), lat: 38.9639, lng: 8.5894 },
+  { slug: "bau-beach-bari-sardo", nome: "Bau Beach La Planargia", comune: "Bari Sardo", provincia: "NU", regione: "Sardegna", tipo: "Stabilimento", descrizione: "Stabilimento pet-friendly sulla spiaggia di Planargia, in Ogliastra.", servizi: ["Spiaggia Planargia", "Ogliastra", "Area cani"], img: pickImg("Stabilimento", 2), lat: 39.8163, lng: 9.6755 },
+  { slug: "dog-beach-costa-caddu-san-teodoro", nome: "Dog Beach Costa Caddu", comune: "San Teodoro", provincia: "SS", regione: "Sardegna", tipo: "Stabilimento", descrizione: "Dog beach nella zona di Costa Caddu, San Teodoro, Gallura.", servizi: ["Gallura", "Costa Caddu", "Area cani"], img: pickImg("Stabilimento", 3), lat: 40.7854, lng: 9.6738 },
+  { slug: "dog-beach-punta-nera-palau", nome: "Dog Beach Punta Nera", comune: "Palau", provincia: "SS", regione: "Sardegna", tipo: "Stabilimento", descrizione: "Dog beach a Capo d'Orso, Palau, con vista sull'Arcipelago della Maddalena.", servizi: ["Capo d'Orso", "Vista Maddalena", "Area cani"], img: pickImg("Stabilimento", 4), lat: 41.1721, lng: 9.4228 },
+  { slug: "oasi-biderosa-orosei", nome: "Oasi di Biderosa", comune: "Orosei", provincia: "NU", regione: "Sardegna", tipo: "Spiaggia libera", descrizione: "Riserva naturale con calette dove i cani sono ammessi (oasi n.1 e n.4). Necessaria prenotazione in alta stagione.", servizi: ["Riserva naturale", "Prenotazione", "Calette"], img: pickImg("Spiaggia libera", 1), lat: 40.4427, lng: 9.7888 },
+  { slug: "dog-beach-orvile-posada", nome: "Dog Beach Orvile", comune: "Posada", provincia: "NU", regione: "Sardegna", tipo: "Stabilimento", descrizione: "Dog beach sulla spiaggia di Orvile, costa di Posada in Baronia.", servizi: ["Spiaggia Orvile", "Baronia", "Area cani"], img: pickImg("Stabilimento", 0), lat: 40.6532, lng: 9.7457 },
+
   // === SICILIA ===
-  {
-    slug: "ombelico-del-mondo-mondello", nome: "L'Ombelico del Mondo", comune: "Mondello", provincia: "PA", regione: "Sicilia",
-    tipo: "Stabilimento", descrizione: "Stabilimento balneare a Mondello (Palermo) con accesso mare, aree gioco, zone d'ombra e docce per cani.",
-    servizi: ["Accesso mare", "Aree gioco", "Zone ombra", "Docce"],
-    img: "https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=400&q=80",
-  },
+  { slug: "ombelico-del-mondo-mondello", nome: "L'Ombelico del Mondo", comune: "Mondello", provincia: "PA", regione: "Sicilia", tipo: "Stabilimento", descrizione: "Stabilimento balneare a Mondello (Palermo) con accesso mare, aree gioco, zone d'ombra e docce per cani.", servizi: ["Accesso mare", "Aree gioco", "Zone ombra", "Docce"], img: "https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=400&q=80", lat: 38.2062, lng: 13.3246 },
+  { slug: "lido-le-palme-catania", nome: "Lido Le Palme", comune: "Catania", provincia: "CT", regione: "Sicilia", tipo: "Stabilimento", descrizione: "Ampi spazi con vista spettacolare sulla costa catanese, area dedicata ai cani.", servizi: ["Vista sull'Etna", "Area cani", "Ampi spazi"], img: pickImg("Stabilimento", 1), lat: 37.4620, lng: 15.0847 },
+  { slug: "dog-paradise-palermo", nome: "Dog Paradise", comune: "Palermo", provincia: "PA", regione: "Sicilia", tipo: "Stabilimento", descrizione: "Dog beach nella zona dell'Arenella, Palermo.", servizi: ["Arenella", "Area cani", "Servizi"], img: pickImg("Stabilimento", 2), lat: 38.1535, lng: 13.3748 },
+  { slug: "bau-beach-messina", nome: "Bau Beach Messina", comune: "Messina", provincia: "ME", regione: "Sicilia", tipo: "Stabilimento", descrizione: "Stabilimento pet-friendly sulla costa messinese.", servizi: ["Area cani", "Stretto di Messina"], img: pickImg("Stabilimento", 3), lat: 38.1866, lng: 15.2144 },
+  { slug: "isola-blu-marzamemi", nome: "Isola Blu", comune: "Marzamemi", provincia: "SR", regione: "Sicilia", tipo: "Stabilimento", descrizione: "Stabilimento a Marzamemi, tra i borghi marinari piu suggestivi della Sicilia sud-orientale.", servizi: ["Borgo marinaro", "Area cani", "Val di Noto"], img: pickImg("Stabilimento", 4), lat: 36.7418, lng: 15.1177 },
+  { slug: "lido-punta-burrone-favignana", nome: "Lido Punta Burrone", comune: "Favignana", provincia: "TP", regione: "Sicilia", tipo: "Stabilimento", descrizione: "Lido sull'isola di Favignana, nelle Egadi, area dedicata ai cani.", servizi: ["Isole Egadi", "Cala Minnola", "Area cani"], img: pickImg("Stabilimento", 0), lat: 37.9928, lng: 12.3503 },
+
+  // === TOSCANA ===
+  { slug: "dog-beach-san-vincenzo", nome: "Dog Beach San Vincenzo", comune: "San Vincenzo", provincia: "LI", regione: "Toscana", tipo: "Spiaggia libera", descrizione: "200 metri di battigia, parco ombreggiato, area recintata, docce per cani. I cani possono stare senza guinzaglio se educati. Tra le piu famose dog beach toscane.", servizi: ["200m battigia", "Parco ombreggiato", "Area recintata", "Docce", "Cani senza guinzaglio"], img: "https://images.unsplash.com/photo-1601758174114-e711c0cbaa69?w=400&q=80", lat: 43.0639, lng: 10.5343 },
+  { slug: "single-fin-tuscany-dog-beach-calambrone", nome: "Single Fin Tuscany Dog Beach", comune: "Calambrone", provincia: "PI", regione: "Toscana", tipo: "Stabilimento", descrizione: "Circa 100 metri di spiaggia interamente dedicata ai cani tra Livorno e Pisa. Nuoto libero nel recinto, servizi dedicati.", servizi: ["100m spiaggia dedicata", "Nuoto libero", "Servizi dedicati"], img: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&q=80", lat: 43.5947, lng: 10.2974 },
+  { slug: "bau-beach-follonica", nome: "Bau Beach Follonica", comune: "Follonica", provincia: "GR", regione: "Toscana", tipo: "Spiaggia libera", descrizione: "120 metri di tratto libero riservato ai cani con bagno consentito. Guinzaglio obbligatorio fuori dall'acqua.", servizi: ["120m tratto riservato", "Bagno consentito", "Ingresso libero"], img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=400&q=80", lat: 42.9191, lng: 10.7585 },
+
+  // === VENETO ===
+  { slug: "spiaggia-di-pluto-bibione", nome: "La Spiaggia di Pluto", comune: "Bibione", provincia: "VE", regione: "Veneto", tipo: "Stabilimento", descrizione: "La piu grande spiaggia dog-friendly d'Italia. Accesso mare senza limiti di orario, docce, aree recintate, attivita cinofile, kit benvenuto, veterinario e lettino su misura per cani.", servizi: ["La piu grande d'Italia", "Accesso mare illimitato", "Aree recintate", "Attivita cinofile", "Kit benvenuto", "Veterinario", "Lettino per cani"], img: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&q=80", lat: 45.6337, lng: 13.0738 },
+  { slug: "pachuka-beach-club-lido-venezia", nome: "Pachuka Beach Club", comune: "Venezia Lido", provincia: "VE", regione: "Veneto", tipo: "Stabilimento", descrizione: "Bagno senza limitazioni di orario al Lido di Venezia. Ciotole, lettino e doccia inclusi nel servizio.", servizi: ["Bagno senza limiti", "Ciotole", "Lettino incluso", "Doccia inclusa"], img: "https://images.unsplash.com/photo-1507146426996-ef05306b995a?w=400&q=80", lat: 45.4127, lng: 12.3765 },
 ];

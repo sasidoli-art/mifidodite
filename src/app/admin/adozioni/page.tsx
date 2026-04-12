@@ -10,17 +10,25 @@ interface SOSRow { id: string; nome_animale: string; specie: string; comune: str
 export default async function AdminAdozioniPage() {
   const sql = getDB();
 
-  const [adozioni, sos, statsAdozioni, statsSOS] = await Promise.all([
-    sql`SELECT id, tipo, stato, nome_animale, specie, titolo, comune, provincia, approvato, created_at FROM annunci_adozioni ORDER BY created_at DESC LIMIT 50`,
-    sql`SELECT id, nome_animale, specie, comune, provincia, stato, created_at FROM sos_smarriti ORDER BY created_at DESC LIMIT 50`,
-    sql`SELECT count(*)::int as totali, count(*) FILTER (WHERE approvato = false)::int as da_approvare, count(*) FILTER (WHERE approvato = true AND stato = 'attivo')::int as attivi FROM annunci_adozioni`,
-    sql`SELECT count(*)::int as totali, count(*) FILTER (WHERE stato = 'attivo')::int as attivi, count(*) FILTER (WHERE stato = 'ritrovato')::int as ritrovati FROM sos_smarriti`,
-  ]);
+  let adozioniRows: AdozioneRow[] = [];
+  let sosRows: SOSRow[] = [];
+  let sA = { totali: 0, da_approvare: 0, attivi: 0 };
+  let sS = { totali: 0, attivi: 0, ritrovati: 0 };
 
-  const adozioniRows = adozioni as unknown as AdozioneRow[];
-  const sosRows = sos as unknown as SOSRow[];
-  const sA = statsAdozioni[0] as Record<string, number>;
-  const sS = statsSOS[0] as Record<string, number>;
+  try {
+    const [adozioni, sos, statsAdozioni, statsSOS] = await Promise.all([
+      sql`SELECT id, tipo, stato, nome_animale, specie, titolo, comune, provincia, approvato, created_at FROM annunci_adozioni ORDER BY created_at DESC LIMIT 50`,
+      sql`SELECT id, nome_animale, specie, comune, provincia, stato, created_at FROM sos_smarriti ORDER BY created_at DESC LIMIT 50`,
+      sql`SELECT count(*)::int as totali, count(*) FILTER (WHERE approvato IS NOT TRUE)::int as da_approvare, count(*) FILTER (WHERE approvato = true AND stato = 'attivo')::int as attivi FROM annunci_adozioni`,
+      sql`SELECT count(*)::int as totali, count(*) FILTER (WHERE stato = 'attivo')::int as attivi, count(*) FILTER (WHERE stato = 'ritrovato')::int as ritrovati FROM sos_smarriti`,
+    ]);
+    adozioniRows = adozioni as unknown as AdozioneRow[];
+    sosRows = sos as unknown as SOSRow[];
+    sA = statsAdozioni[0] as Record<string, number> as typeof sA;
+    sS = statsSOS[0] as Record<string, number> as typeof sS;
+  } catch (err) {
+    console.error("[Admin Adozioni] DB error:", err);
+  }
 
   return (
     <div className="max-w-6xl">

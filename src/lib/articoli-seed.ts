@@ -2,8 +2,10 @@
 // Verranno migrati su Supabase quando il DB e configurato
 
 import { ARTICOLI_SPIAGGE } from "./articoli-spiagge-seed";
+import { ARTICOLI_DORMIRE } from "./articoli-dormire-seed";
 
 export const ARTICOLI_SEED = [
+  ...ARTICOLI_DORMIRE,
   ...ARTICOLI_SPIAGGE,
   {
     slug: "come-scegliere-pensione-cani-7-domande",

@@ -4,6 +4,7 @@ import { HowItWorks } from "@/components/landing/HowItWorks";
 import { Categories } from "@/components/landing/Categories";
 import { Strumenti } from "@/components/landing/Strumenti";
 import { SpiaggeHero } from "@/components/landing/SpiaggeHero";
+import { DormireHero } from "@/components/landing/DormireHero";
 import { SOSBanner } from "@/components/landing/SOSBanner";
 import { FeaturedPros } from "@/components/landing/FeaturedPros";
 import { PetNews } from "@/components/landing/PetNews";
@@ -39,6 +40,9 @@ export default function Home() {
 
         {/* SCURO — Hero spiagge dog-friendly (feature stagionale) */}
         <SpiaggeHero />
+
+        {/* CHIARO — Hero dormire pet-friendly */}
+        <DormireHero />
 
         {/* ACCENTO — SOS */}
         <SOSBanner />

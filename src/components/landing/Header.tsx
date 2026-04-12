@@ -9,16 +9,17 @@ import { NewsletterPopup } from "@/components/shared/NewsletterPopup";
 import { LogoPaw } from "@/components/shared/Logo";
 
 const NAV_LINKS = [
+  { href: "/dormire", label: "Dormire" },
+  { href: "/spiagge", label: "Spiagge" },
   { href: "/magazine", label: "Magazine" },
   { href: "/professionisti", label: "Professionisti" },
-  { href: "/offerte", label: "Offerte" },
-  { href: "/adozioni", label: "Adozioni" },
   { href: "/sos-smarriti", label: "SOS", accent: true },
 ];
 
 const NAV_MOBILE_EXTRA = [
   { href: "/mappa", label: "Mappa" },
-  { href: "/spiagge", label: "Spiagge" },
+  { href: "/offerte", label: "Offerte" },
+  { href: "/adozioni", label: "Adozioni" },
   { href: "/cliniche", label: "Cliniche" },
   { href: "/eventi", label: "Eventi" },
 ];

@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyCron } from "@/lib/cron-auth";
-import { askDeepSeek, extractJSON } from "@/lib/ai-agent";
+import { askAI, extractJSON } from "@/lib/ai-agent";
 import { logAgent, startTimer } from "@/lib/agent-logger";
 import { getDB } from "@/lib/db";
 import { sendEmail } from "@/lib/email";
@@ -106,7 +106,7 @@ IMPORTANTISSIMO: rispondi ESCLUSIVAMENTE con un array JSON. Nessun testo prima o
 ]`;
 
   try {
-    const response = await askDeepSeek(prompt, 3000);
+    const response = await askAI(prompt, 3000);
     let posts: PostGenerated[];
     try {
       const parsed = extractJSON(response);

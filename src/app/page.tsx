@@ -3,6 +3,7 @@ import { Hero } from "@/components/landing/Hero";
 import { HowItWorks } from "@/components/landing/HowItWorks";
 import { Categories } from "@/components/landing/Categories";
 import { Strumenti } from "@/components/landing/Strumenti";
+import { SpiaggeHero } from "@/components/landing/SpiaggeHero";
 import { SOSBanner } from "@/components/landing/SOSBanner";
 import { FeaturedPros } from "@/components/landing/FeaturedPros";
 import { PetNews } from "@/components/landing/PetNews";
@@ -35,6 +36,9 @@ export default function Home() {
 
         {/* CHIARO — Strumenti utili (quiz + calcolatore) */}
         <Strumenti />
+
+        {/* SCURO — Hero spiagge dog-friendly (feature stagionale) */}
+        <SpiaggeHero />
 
         {/* ACCENTO — SOS */}
         <SOSBanner />

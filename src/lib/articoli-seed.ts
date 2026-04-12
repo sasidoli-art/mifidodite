@@ -1,7 +1,10 @@
 // Articoli seed — contenuti reali per il magazine
 // Verranno migrati su Supabase quando il DB e configurato
 
+import { ARTICOLI_SPIAGGE } from "./articoli-spiagge-seed";
+
 export const ARTICOLI_SEED = [
+  ...ARTICOLI_SPIAGGE,
   {
     slug: "come-scegliere-pensione-cani-7-domande",
     titolo: "Come scegliere la pensione giusta: 7 domande da fare prima di prenotare",

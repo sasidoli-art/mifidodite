@@ -15,6 +15,7 @@ import {
   type SpiaggiaSeed,
 } from "@/lib/spiagge-seed";
 import { spiaggiaJsonLd, breadcrumbJsonLd, jsonLdScript } from "@/lib/json-ld";
+import { NewsletterInline } from "@/components/shared/NewsletterInline";
 import { MeteoWidget } from "./MeteoWidget";
 import { MiniMap } from "./MiniMap";
 
@@ -246,6 +247,13 @@ export default async function SpiaggiaDettaglioPage({ params }: { params: Promis
 
             <div className="space-y-6">
               <MeteoWidget lat={s.lat} lng={s.lng} />
+
+              <NewsletterInline
+                title="Nuove spiagge ogni mese"
+                description="Ricevi via email le nuove dog beach italiane, le guide stagionali e i consigli per viaggiare col cane."
+                source="spiagge-dettaglio"
+                compact
+              />
 
               <div className="bg-gradient-to-br from-primary to-primary-dark text-white rounded-2xl p-6">
                 <h3 className="font-bold text-lg mb-2">Cerchi altro per la tua vacanza?</h3>

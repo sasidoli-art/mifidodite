@@ -2,6 +2,241 @@
 // Collegati ai dati di src/lib/spiagge-seed.ts
 
 export const ARTICOLI_SPIAGGE = [
+  // === ARTICOLI REGIONALI AGGIUNTIVI (aprile 2026) ===
+  {
+    slug: "spiagge-cani-lazio-2026-dog-beach-sabaudia",
+    titolo: "Spiagge per cani in Lazio 2026: da Maccarese alla Bufalara di Sabaudia",
+    categoria: "guide",
+    estratto: "Il Lazio ha la prima bau beach d'Italia (Maccarese), la Spiaggia della Bufalara nel Parco del Circeo e altre dog beach tra Fiumicino e Sabaudia. Guida completa.",
+    img: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800&q=80",
+    tempo_lettura: "4 min",
+    data: "13 Apr 2026",
+    tags: ["lazio", "sabaudia", "maccarese", "circeo", "spiagge"],
+    contenuto: `
+<p>Il Lazio e' la regione italiana dove tutto e' iniziato: a Maccarese, nel 1997, e' nata la <em>prima bau beach d'Italia</em>. Oggi il Lazio offre 6 spiagge pet-friendly verificate nel nostro database, dal litorale romano al Parco Nazionale del Circeo. Ecco la guida completa 2026.</p>
+
+<h2>BauBeach Maccarese — la prima di tutte</h2>
+
+<p>A <strong>Maccarese (Fiumicino)</strong>, la <strong><a href="/spiagge/lazio/baubeach-maccarese">BauBeach</a></strong> ha cambiato la storia del rapporto tra cani e mare in Italia. Fondata nel 1997 dall'Associazione FISC (Federazione Italiana Sport Cinofili), offre:</p>
+
+<ul>
+<li>BauHome: asilo per cani durante la giornata in spiaggia</li>
+<li>Baby &amp; Bau: area dedicata a bambini e cuccioli insieme</li>
+<li>Bau Spa: trattamenti di benessere per i cani</li>
+<li>Area agility e sport cinofili</li>
+<li>Giardino mediterraneo per il passeggio</li>
+</ul>
+
+<p>E' a 30 minuti dal centro di Roma e raggiungibile in treno (stazione Maccarese-Fregene) + navetta. Il posto piu' completo per chi cerca un'esperienza di spiaggia "a 360 gradi" con il cane.</p>
+
+<h2>Parco Nazionale del Circeo — natura selvaggia</h2>
+
+<p>A Sabaudia, nel cuore del Parco Nazionale del Circeo, trovi due esperienze diverse:</p>
+
+<ul>
+<li><strong><a href="/spiagge/lazio/sabau-beach-sabaudia">Sabau Beach</a></strong>: stabilimento pet-friendly con tutti i servizi standard. Per chi vuole comodita' + parco.</li>
+<li><strong><a href="/spiagge/lazio/spiaggia-bufalara-sabaudia">Spiaggia della Bufalara</a></strong>: tratto di spiaggia libera aperto ai cani, tra dune sabbiose e vegetazione mediterranea. Una delle esperienze piu' "vere" del litorale laziale.</li>
+</ul>
+
+<p>Il Parco del Circeo e' perfetto per combinare mare + escursioni nei boschi mediterranei. A pochi chilometri c'e' il Lago di Sabaudia (accesso ai cani in alcune aree) e il promontorio del Circeo (sentieri).</p>
+
+<h2>Costa Etrusca laziale</h2>
+
+<ul>
+<li><strong><a href="/spiagge/lazio/tequila-dog-beach-montalto">Tequila Dog Beach</a></strong>: stabilimento sulla Spiaggia delle Murelle a Montalto di Castro, vicino al confine toscano. Kit benvenuto, docce per cani, veterinario su richiesta.</li>
+</ul>
+
+<h2>Laziale Roma — Ladispoli e il lago</h2>
+
+<ul>
+<li><strong><a href="/spiagge/lazio/torre-flavia-dog-beach-ladispoli">Torre Flavia Dog Beach</a></strong>: a Ladispoli, accesso al mare con docce e aree ombreggiate nella storica zona di Torre Flavia.</li>
+<li><strong><a href="/spiagge/lazio/gabbiani-dog-beach-bracciano">Spiaggia dei Gabbiani Dog Beach</a></strong>: sul Lago di Bracciano, ottima alternativa lacustre al mare, specialmente nelle giornate di forte mareggiata.</li>
+</ul>
+
+<h2>Consigli pratici</h2>
+
+<p><strong>Quando andare</strong>: il Lazio ha una stagione balneare lunga (da metà aprile a fine ottobre), ma luglio e agosto sono molto affollati nei weekend. I mesi migliori sono maggio, giugno, settembre.</p>
+
+<p><strong>Come muoversi</strong>: se sei a Roma senza auto, le spiagge raggiungibili in treno dal centro sono Maccarese e Ladispoli (entrambe linea Roma-Civitavecchia). Per Sabaudia serve auto o bus.</p>
+
+<p><strong>Combinare con dormire</strong>: se alloggi a Sabaudia, guarda il <a href="/dormire/lazio">Park Hotel Marlin</a> e il <a href="/dormire/lazio">Circeo Park Hotel</a> nella nostra mappa delle strutture pet-friendly del Lazio.</p>
+
+<p><a href="/spiagge/lazio"><strong>Vedi la mappa delle spiagge per cani in Lazio</strong></a>.</p>
+    `,
+  },
+
+  {
+    slug: "spiagge-cani-abruzzo-2026",
+    titolo: "Spiagge per cani in Abruzzo 2026: la Costa dei Trabocchi e la Riviera Adriatica",
+    categoria: "guide",
+    estratto: "Lido Riccio, Yochi Beach, Eucaliptus: le 5 dog beach abruzzesi tra Ortona e Alba Adriatica. Guida alle spiagge pet-friendly della Costa dei Trabocchi.",
+    img: "https://images.unsplash.com/photo-1601758174114-e711c0cbaa69?w=800&q=80",
+    tempo_lettura: "3 min",
+    data: "13 Apr 2026",
+    tags: ["abruzzo", "costa trabocchi", "ortona", "pescara", "spiagge"],
+    contenuto: `
+<p>L'Abruzzo e' una regione ancora poco conosciuta dal turismo italiano ma che offre una costa di 130 chilometri con tanti tratti pet-friendly. La nostra selezione 2026 comprende 5 spiagge verificate tra la costa dei Trabocchi (Ortona, Fossacesia, Vasto) e la Riviera Adriatica (Alba Adriatica, Pescara).</p>
+
+<h2>Costa dei Trabocchi — il Sud abruzzese</h2>
+
+<p>La Costa dei Trabocchi e' famosa per i suoi caratteristici "trabocchi" (antiche palafitte di pesca in legno). Oggi alcuni sono diventati ristoranti panoramici sul mare, e la zona ha investito molto sul turismo pet-friendly.</p>
+
+<ul>
+<li><strong><a href="/spiagge/abruzzo/lido-riccio-ortona">Lido Riccio</a></strong> a Ortona: stabilimento balneare con ampi spazi e accesso facilitato all'acqua per cani.</li>
+<li><strong><a href="/spiagge/abruzzo/yochi-beach-fossacesia">Yochi Beach Dog &amp; Family</a></strong> a Fossacesia: spiaggia attrezzata per famiglie e cani, una delle piu' complete della zona.</li>
+</ul>
+
+<h2>Riviera Adriatica abruzzese</h2>
+
+<ul>
+<li><strong><a href="/spiagge/abruzzo/la-prora-bau-village-pescara">La Prora Estatinfinite Bau Village</a></strong> a Pescara: sul lungomare del capoluogo abruzzese, con docce e ciotole d'acqua per cani.</li>
+<li><strong><a href="/spiagge/abruzzo/bau-beach-martinsicuro">Bau Beach Martinsicuro</a></strong>: stabilimento pet-friendly sulla costa teramana al confine con le Marche.</li>
+<li><strong><a href="/spiagge/abruzzo/eucaliptus-spiaggia-alba-adriatica">Eucaliptus Spiaggia</a></strong> ad Alba Adriatica: ombreggiata da eucalipti sulla "riviera delle palme", con area cani attrezzata.</li>
+</ul>
+
+<h2>Cosa fare oltre al mare</h2>
+
+<p>L'Abruzzo ha il 30% del territorio coperto da parchi nazionali, il piu' alto d'Europa. A pochi chilometri dalla costa puoi fare escursioni nel <strong>Parco Nazionale della Majella</strong>, nella <strong>Riserva di Punta Aderci</strong>, o visitare i borghi medievali come Pescocostanzo, Santo Stefano di Sessanio, Scanno. Tutti accessibili con cane al guinzaglio.</p>
+
+<p><strong>Periodo ideale</strong>: giugno e settembre. Agosto e' molto affollato nei weekend (soprattutto la Pescara di Fabrizio Fontana). Maggio e' perfetto per i parchi ma il mare e' ancora freddo.</p>
+
+<p><a href="/spiagge/abruzzo"><strong>Vedi la mappa delle spiagge dog-friendly in Abruzzo</strong></a>.</p>
+<p>Se cerchi anche dove dormire col cane in Abruzzo, <a href="/dormire/abruzzo">guarda la nostra selezione di strutture pet-friendly abruzzesi</a>.</p>
+    `,
+  },
+
+  {
+    slug: "spiagge-cani-basilicata-2026-maratea-metaponto",
+    titolo: "Spiagge per cani in Basilicata 2026: Maratea e Metaponto",
+    categoria: "guide",
+    estratto: "La Basilicata offre due coste molto diverse: la tirrenica di Maratea con le sue cale e la ionica di Metaponto con lunghe spiagge sabbiose. 5 dog beach verificate.",
+    img: "https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=800&q=80",
+    tempo_lettura: "3 min",
+    data: "13 Apr 2026",
+    tags: ["basilicata", "maratea", "metaponto", "spiagge"],
+    contenuto: `
+<p>La Basilicata ha solo 30 km di costa tirrenica (Maratea) e 40 km di costa ionica (Metapontino), ma la qualita' del mare e delle dog beach e' sorprendentemente alta. Ecco le 5 spiagge pet-friendly verificate nel nostro database.</p>
+
+<h2>Maratea — la Perla del Tirreno</h2>
+
+<p>Maratea, soprannominata "la Perla del Tirreno", e' famosa per i suoi 44 km di costa rocciosa con cale segrete, grotte marine e la celebre Spiaggia Nera di sabbia vulcanica. Tre dog beach:</p>
+
+<ul>
+<li><strong><a href="/spiagge/basilicata/lido-spiaggia-nera-maratea">Lido Spiaggia Nera</a></strong>: sulla celebre spiaggia di sabbia vulcanica, con area cani dedicata.</li>
+<li><strong><a href="/spiagge/basilicata/lido-cala-jannita-maratea">Lido Cala Jannita</a></strong>: in una delle baie piu' scenografiche della costa, mare cristallino.</li>
+<li><strong><a href="/spiagge/basilicata/lido-acquamarina-maratea">Lido Acquamarina</a></strong>: stabilimento con servizi dedicati ai cani.</li>
+</ul>
+
+<h2>Metapontino — la costa ionica</h2>
+
+<p>Sul versante ionico, la costa metapontina offre lunghe spiagge sabbiose perfette per chi ama camminate col cane. Due stabilimenti pet-friendly:</p>
+
+<ul>
+<li><strong><a href="/spiagge/basilicata/lido-san-basilio-pisticci">Lido San Basilio</a></strong> a Marina di Pisticci: area riservata ai cani con ombrelloni e lettini.</li>
+<li><strong><a href="/spiagge/basilicata/lido-afrodite-metaponto">Lido Afrodite</a></strong>: lido pet-friendly sulla costa ionica di Metaponto, vicino agli scavi archeologici della Magna Grecia.</li>
+</ul>
+
+<h2>Cosa fare oltre al mare</h2>
+
+<p>La Basilicata e' patria di due patrimoni UNESCO: i <strong>Sassi di Matera</strong> (cani ammessi al guinzaglio nel centro storico) e il <strong>Parco Nazionale del Pollino</strong> (escursioni con cane). Combinare mare + Matera + Pollino in una settimana e' un'idea di vacanza poco convenzionale e molto apprezzata.</p>
+
+<p><strong>Periodo ideale</strong>: maggio-giugno per Maratea (mare caldo, meno affollamento), settembre per il metapontino (temperature piu' miti).</p>
+
+<p><a href="/spiagge/basilicata"><strong>Vedi la mappa delle spiagge per cani in Basilicata</strong></a>.</p>
+    `,
+  },
+
+  {
+    slug: "spiagge-cani-molise-termoli-campomarino-2026",
+    titolo: "Spiagge per cani in Molise 2026: Termoli e Campomarino",
+    categoria: "guide",
+    estratto: "Il Molise ha solo 36 km di costa ma due dog beach verificate a Termoli e Campomarino Lido. Piccola guida alla regione meno conosciuta d'Italia.",
+    img: "https://images.unsplash.com/photo-1507146426996-ef05306b995a?w=800&q=80",
+    tempo_lettura: "3 min",
+    data: "13 Apr 2026",
+    tags: ["molise", "termoli", "campomarino", "spiagge"],
+    contenuto: `
+<p>"Il Molise non esiste" e' la battuta piu' famosa sulla regione piu' piccola d'Italia (dopo la Val d'Aosta). Ma il Molise esiste eccome, e offre due dog beach verificate sulla sua costa adriatica di 36 km.</p>
+
+<h2>Bau Beach Termoli</h2>
+
+<p>A <strong><a href="/spiagge/molise/bau-beach-termoli">Termoli</a></strong>, la citta' storica del Molise costiero, trovi una bau beach con area dedicata e accesso al mare. Termoli e' una delle poche citta' d'Italia dove il borgo antico e' arroccato su un promontorio che si affaccia direttamente sul mare. Dopo la spiaggia puoi visitare il centro storico col cane al guinzaglio.</p>
+
+<h2>Scooby Doo Beach Campomarino</h2>
+
+<p>A <strong><a href="/spiagge/molise/scooby-doo-beach-campomarino">Campomarino Lido</a></strong>, stabilimento pet-friendly con accesso al mare, docce e zone d'ombra. Campomarino e' una localita' meno affollata di Termoli, ideale per chi cerca tranquillita'.</p>
+
+<h2>Perche' scegliere il Molise</h2>
+
+<p>Il Molise e' la regione ideale per chi vuole "scappare" dal turismo di massa. I prezzi sono tra i piu' bassi d'Italia, le spiagge non sono affollate nemmeno in agosto, e la gente del posto e' autenticamente accogliente. Con un cane, il Molise e' una delle pochissime regioni dove puoi ancora trovare spiaggia libera senza regolamenti rigidi.</p>
+
+<h2>Cosa fare oltre al mare</h2>
+
+<p>Oltre al mare, il Molise ha:</p>
+<ul>
+<li><strong>Tratturi</strong>: antiche vie della transumanza, perfette per lunghe camminate col cane nell'entroterra.</li>
+<li><strong>Isernia e Campobasso</strong>: piccoli capoluoghi a misura di pedone.</li>
+<li><strong>Parco Nazionale d'Abruzzo, Lazio e Molise</strong>: estensione nel versante molisano, sentieri naturalistici.</li>
+<li><strong>Isole Tremiti</strong>: raggiungibili in aliscafo da Termoli (verifica le politiche delle compagnie marittime).</li>
+</ul>
+
+<p><a href="/spiagge/molise"><strong>Vedi la mappa delle spiagge per cani in Molise</strong></a>.</p>
+    `,
+  },
+
+  {
+    slug: "spiagge-cani-friuli-venezia-giulia-2026",
+    titolo: "Spiagge per cani in Friuli-Venezia Giulia 2026: Grado, Lignano, Trieste",
+    categoria: "guide",
+    estratto: "Lido di Fido a Grado, Doggy Beach a Lignano Sabbiadoro e le spiagge del Carso triestino: 4 dog beach verificate nel Friuli-Venezia Giulia.",
+    img: "https://images.unsplash.com/photo-1601758174114-e711c0cbaa69?w=800&q=80",
+    tempo_lettura: "3 min",
+    data: "13 Apr 2026",
+    tags: ["friuli-venezia giulia", "grado", "lignano", "trieste", "spiagge"],
+    contenuto: `
+<p>Il Friuli-Venezia Giulia ha un'alleanza unica tra Adriatico e Alpi: costa bassa sabbiosa a Lignano e Grado, scogliere del Carso a Trieste. Due mondi molto diversi, entrambi pet-friendly. Ecco le 4 dog beach verificate della regione.</p>
+
+<h2>Grado — l'Isola del Sole</h2>
+
+<p>Grado, l'isola balneare del FVG, e' una delle localita' piu' storiche del Nord Adriatico (il suo centro storico e' patrimonio UNESCO). Ospita:</p>
+
+<ul>
+<li><strong><a href="/spiagge/friuli-venezia-giulia/lido-di-fido-grado">Spiaggia Lido di Fido</a></strong>: aree giochi, zone d'ombra e docce dedicate ai cani. Una delle dog beach piu' consolidate del FVG.</li>
+</ul>
+
+<p>Grado e' raggiungibile in auto via lungo ponte sulla laguna, ed e' interamente pedonale (nessuna auto nel centro storico). I cani al guinzaglio sono i benvenuti ovunque.</p>
+
+<h2>Lignano Sabbiadoro — la riviera friulana</h2>
+
+<ul>
+<li><strong><a href="/spiagge/friuli-venezia-giulia/doggy-beach-lignano">Doggy Beach Lignano</a></strong>: area dedicata con accesso al mare a Lignano Sabbiadoro. Una delle mete piu' amate del Nord Adriatico, nota per la spiaggia di 8 km.</li>
+</ul>
+
+<h2>Trieste e il Carso</h2>
+
+<p>L'area di Trieste offre un'esperienza completamente diversa: scogliere, mare cristallino del golfo di Trieste, sentieri delle falesie. Due opzioni:</p>
+
+<ul>
+<li><strong><a href="/spiagge/friuli-venezia-giulia/dog-beach-muggia">Dog Beach Muggia</a></strong>: stabilimento sul golfo di Trieste, nella cittadina istriana annessa all'Italia nel 1954.</li>
+<li><strong><a href="/spiagge/friuli-venezia-giulia/costa-dei-barbari-sistiana">Spiaggia Costa dei Barbari</a></strong>: tratto di spiaggia libera dove i cani sono benvenuti, tra le falesie del Carso. Per chi cerca natura e poca folla.</li>
+</ul>
+
+<h2>Oltre al mare</h2>
+
+<p>Il FVG offre attrattive uniche per chi viaggia col cane:</p>
+<ul>
+<li><strong>Aquileia</strong> (patrimonio UNESCO): il sito archeologico e' accessibile ai cani al guinzaglio.</li>
+<li><strong>Sentiero Rilke</strong>: da Sistiana a Duino, falesie mozzafiato, cani ammessi.</li>
+<li><strong>Alpi Giulie</strong>: a un'ora dalla costa, per escursioni in alta quota.</li>
+<li><strong>Trieste centro</strong>: Piazza Unità d'Italia (una delle piu' grandi d'Europa aperta sul mare), caffè storici con dehors pet-friendly.</li>
+</ul>
+
+<p><a href="/spiagge/friuli-venezia-giulia"><strong>Vedi la mappa delle spiagge per cani in Friuli-Venezia Giulia</strong></a>.</p>
+<p>Per dormire col cane in regione, guarda il <a href="/dormire/friuli-venezia-giulia">Falkensteiner Lignano</a> e il <a href="/dormire/friuli-venezia-giulia">Grand Hotel Astoria di Grado</a>.</p>
+    `,
+  },
+
+
   // ============================================================
   // ARTICOLO HUB NAZIONALE
   // ============================================================

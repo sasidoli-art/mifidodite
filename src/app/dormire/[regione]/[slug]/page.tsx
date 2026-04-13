@@ -17,6 +17,7 @@ import {
   PREZZO_DESCRIZIONE,
 } from "@/lib/dormire-seed";
 import { lodgingJsonLd, breadcrumbJsonLd, jsonLdScript } from "@/lib/json-ld";
+import { NewsletterInline } from "@/components/shared/NewsletterInline";
 import { MeteoWidget } from "@/app/spiagge/[regione]/[slug]/MeteoWidget";
 import { MiniMapDormire } from "./MiniMapDormire";
 
@@ -217,6 +218,13 @@ export default async function DormireDettaglioPage({ params }: { params: Promise
               </div>
 
               <MeteoWidget lat={s.lat} lng={s.lng} />
+
+              <NewsletterInline
+                title="Nuove strutture ogni mese"
+                description="Ricevi via email nuovi hotel e agriturismi pet-friendly, offerte stagionali e guide per viaggiare col cane."
+                source="dormire-dettaglio"
+                compact
+              />
 
               <div className="bg-white rounded-2xl border border-border p-5">
                 <h3 className="font-bold text-foreground mb-4 flex items-center gap-2">

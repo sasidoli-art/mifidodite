@@ -1,9 +1,10 @@
 import { Header } from "@/components/landing/Header";
 import { Footer } from "@/components/landing/Footer";
+import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
-  MapPin, ArrowLeft, Calendar, Clock, Euro, Car, Waves, Dog, Globe, Phone,
+  MapPin, Calendar, Clock, Euro, Car, Waves, Dog, Globe, Phone,
   Check, X, Info, AlertTriangle,
 } from "lucide-react";
 import {
@@ -13,6 +14,7 @@ import {
   getSpiaggeByRegione,
   type SpiaggiaSeed,
 } from "@/lib/spiagge-seed";
+import { spiaggiaJsonLd, breadcrumbJsonLd, jsonLdScript } from "@/lib/json-ld";
 import { MeteoWidget } from "./MeteoWidget";
 import { MiniMap } from "./MiniMap";
 
@@ -24,15 +26,34 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ regione: string; slug: string }> }) {
-  const { slug } = await params;
+  const { regione, slug } = await params;
   const spiaggia = getSpiaggiaBySlug(slug);
   if (!spiaggia) {
     return { title: "Spiaggia non trovata — MifidoDiTe.eu" };
   }
+  const title = `${spiaggia.nome} — Spiaggia dog-friendly a ${spiaggia.comune} | MifidoDiTe.eu`;
+  const description = `${spiaggia.nome} a ${spiaggia.comune} (${spiaggia.regione}): ${spiaggia.descrizione.slice(0, 140)}`;
+  const url = `https://www.mifidodite.eu/spiagge/${regione}/${slug}`;
   return {
-    title: `${spiaggia.nome} — Spiaggia dog-friendly a ${spiaggia.comune} | MifidoDiTe.eu`,
-    description: `${spiaggia.nome} a ${spiaggia.comune} (${spiaggia.regione}): ${spiaggia.descrizione.slice(0, 140)}`,
+    title,
+    description,
     keywords: [spiaggia.nome, `spiaggia cani ${spiaggia.comune}`, `dog beach ${spiaggia.regione}`, "spiagge dog friendly"],
+    alternates: { canonical: url },
+    openGraph: {
+      type: "article",
+      title,
+      description,
+      url,
+      siteName: "MifidoDiTe.eu",
+      locale: "it_IT",
+      images: [{ url: spiaggia.img, width: 800, height: 600, alt: spiaggia.nome }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [spiaggia.img],
+    },
   };
 }
 
@@ -65,12 +86,34 @@ export default async function SpiaggiaDettaglioPage({ params }: { params: Promis
   const s: SpiaggiaSeed = spiaggia;
   const vicine = getSpiaggeByRegione(regioneSlug).filter((x) => x.slug !== slug).slice(0, 3);
 
+  const pageUrl = `https://www.mifidodite.eu/spiagge/${regioneSlug}/${slug}`;
+  const jsonLdData = [
+    spiaggiaJsonLd({
+      nome: s.nome,
+      descrizione: s.descrizione,
+      comune: s.comune,
+      provincia: s.provincia,
+      regione: s.regione,
+      lat: s.lat,
+      lng: s.lng,
+      img: s.img,
+      url: pageUrl,
+    }),
+    breadcrumbJsonLd([
+      { name: "Home", url: "/" },
+      { name: "Spiagge", url: "/spiagge" },
+      { name: s.regione, url: `/spiagge/${regioneSlug}` },
+      { name: s.nome, url: `/spiagge/${regioneSlug}/${slug}` },
+    ]),
+  ];
+
   const hasInfoPratiche =
     s.stagioneInizio || s.orari || s.guinzaglio !== undefined ||
     s.bagnoConsentito !== undefined || s.prezzoTipo || s.parcheggio;
 
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(jsonLdData)} />
       <Header />
       <main className="flex-1 pt-16">
         <section className="relative">
@@ -80,12 +123,16 @@ export default async function SpiaggiaDettaglioPage({ params }: { params: Promis
           </div>
           <div className="absolute inset-0 flex flex-col justify-end">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 w-full">
-              <Link
-                href={`/spiagge/${regioneSlug}`}
-                className="inline-flex items-center gap-1.5 text-white/80 hover:text-white text-sm mb-4 font-medium"
-              >
-                <ArrowLeft size={14} /> Spiagge {s.regione}
-              </Link>
+              <div className="mb-4">
+                <Breadcrumbs
+                  dark
+                  items={[
+                    { name: "Spiagge", url: "/spiagge" },
+                    { name: s.regione, url: `/spiagge/${regioneSlug}` },
+                    { name: s.nome, url: `/spiagge/${regioneSlug}/${slug}` },
+                  ]}
+                />
+              </div>
               <div className="flex items-center gap-2 mb-3">
                 <span className={`text-xs font-semibold px-3 py-1 rounded-full text-white ${s.tipo === "Stabilimento" ? "bg-sky-600" : "bg-emerald-600"}`}>
                   {s.tipo}

@@ -60,20 +60,30 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "WebSite",
-              name: "MifidoDiTe.eu",
-              alternateName: "Mi Fido di Te",
-              url: "https://www.mifidodite.eu",
-              description: "Il portale italiano per trovare pensioni, spiagge dog-friendly, dog sitter, toelettatori e professionisti pet vicino a te.",
-              inLanguage: "it-IT",
-              potentialAction: {
-                "@type": "SearchAction",
-                target: "https://www.mifidodite.eu/professionisti?q={search_term_string}",
-                "query-input": "required name=search_term_string",
+            __html: JSON.stringify([
+              {
+                "@context": "https://schema.org",
+                "@type": "WebSite",
+                name: "MifidoDiTe.eu",
+                alternateName: "Mi Fido di Te",
+                url: "https://www.mifidodite.eu",
+                description: "Il portale italiano per trovare spiagge dog-friendly, hotel pet-friendly, professionisti e guide per chi ama viaggiare e vivere con il proprio animale.",
+                inLanguage: "it-IT",
+                potentialAction: {
+                  "@type": "SearchAction",
+                  target: "https://www.mifidodite.eu/professionisti?q={search_term_string}",
+                  "query-input": "required name=search_term_string",
+                },
               },
-            }),
+              {
+                "@context": "https://schema.org",
+                "@type": "Organization",
+                name: "MifidoDiTe.eu",
+                url: "https://www.mifidodite.eu",
+                logo: "https://www.mifidodite.eu/icon",
+                description: "Il portale italiano per chi ama viaggiare e vivere con il proprio animale. Spiagge dog-friendly, hotel pet-friendly, professionisti e guide.",
+              },
+            ]),
           }}
         />
       </head>

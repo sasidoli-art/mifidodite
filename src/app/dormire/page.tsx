@@ -7,6 +7,22 @@ export const metadata = {
   title: "Dormire con il cane in Italia 2026 — Hotel, agriturismi e camping pet-friendly | MifidoDiTe.eu",
   description: "La mappa delle strutture ricettive pet-friendly in Italia: hotel, agriturismi, B&B, camping e case vacanza verificate. Filtri per regione, tipo, prezzo, taglia cane.",
   keywords: ["hotel pet friendly", "agriturismo cani", "dormire con il cane", "camping cani", "b&b pet friendly italia"],
+  alternates: { canonical: "https://www.mifidodite.eu/dormire" },
+  openGraph: {
+    type: "website",
+    title: "Dormire con il cane in Italia 2026 — 60 strutture pet-friendly",
+    description: "Hotel, agriturismi, masserie, camping e B&B verificati. Mappa, filtri e prenotazione su Booking.",
+    url: "https://www.mifidodite.eu/dormire",
+    siteName: "MifidoDiTe.eu",
+    locale: "it_IT",
+    images: [{ url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Dormire con il cane in Italia 2026",
+    description: "60 strutture pet-friendly in 13 regioni.",
+    images: ["https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80"],
+  },
 };
 
 export default function DormirePage() {

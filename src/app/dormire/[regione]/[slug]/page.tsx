@@ -1,9 +1,10 @@
 import { Header } from "@/components/landing/Header";
 import { Footer } from "@/components/landing/Footer";
+import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
-  MapPin, ArrowLeft, Star, Euro, Dog, ExternalLink, Check, Info,
+  MapPin, Star, Euro, Dog, ExternalLink, Check, Info,
 } from "lucide-react";
 import {
   DORMIRE_SEED,
@@ -15,6 +16,7 @@ import {
   PREZZO_LABEL,
   PREZZO_DESCRIZIONE,
 } from "@/lib/dormire-seed";
+import { lodgingJsonLd, breadcrumbJsonLd, jsonLdScript } from "@/lib/json-ld";
 import { MeteoWidget } from "@/app/spiagge/[regione]/[slug]/MeteoWidget";
 import { MiniMapDormire } from "./MiniMapDormire";
 
@@ -26,13 +28,27 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ regione: string; slug: string }> }) {
-  const { slug } = await params;
+  const { regione, slug } = await params;
   const struttura = getDormireBySlug(slug);
   if (!struttura) return { title: "Struttura non trovata — MifidoDiTe.eu" };
+  const title = `${struttura.nome} — ${DORMIRE_TIPO_LABEL_SINGULAR[struttura.tipo]} pet-friendly a ${struttura.comune} | MifidoDiTe.eu`;
+  const description = `${struttura.nome} a ${struttura.comune} (${struttura.regione}): ${struttura.descrizione.slice(0, 140)}`;
+  const url = `https://www.mifidodite.eu/dormire/${regione}/${slug}`;
   return {
-    title: `${struttura.nome} — ${DORMIRE_TIPO_LABEL_SINGULAR[struttura.tipo]} pet-friendly a ${struttura.comune} | MifidoDiTe.eu`,
-    description: `${struttura.nome} a ${struttura.comune} (${struttura.regione}): ${struttura.descrizione.slice(0, 140)}`,
+    title,
+    description,
     keywords: [struttura.nome, `hotel pet friendly ${struttura.comune}`, `${struttura.tipo} cani ${struttura.regione}`],
+    alternates: { canonical: url },
+    openGraph: {
+      type: "article",
+      title,
+      description,
+      url,
+      siteName: "MifidoDiTe.eu",
+      locale: "it_IT",
+      images: [{ url: struttura.img, width: 800, height: 600, alt: struttura.nome }],
+    },
+    twitter: { card: "summary_large_image", title, description, images: [struttura.img] },
   };
 }
 
@@ -58,8 +74,34 @@ export default async function DormireDettaglioPage({ params }: { params: Promise
   const vicine = getDormireByRegione(regioneSlug).filter((x) => x.slug !== slug).slice(0, 3);
   const bookingUrl = buildBookingUrl(s.bookingQuery);
 
+  const pageUrl = `https://www.mifidodite.eu/dormire/${regioneSlug}/${slug}`;
+  const jsonLdData = [
+    lodgingJsonLd({
+      nome: s.nome,
+      descrizione: s.descrizione,
+      tipo: s.tipo,
+      comune: s.comune,
+      provincia: s.provincia,
+      regione: s.regione,
+      lat: s.lat,
+      lng: s.lng,
+      img: s.img,
+      url: pageUrl,
+      stelle: s.stelle,
+      fascia: s.fascia,
+      amenities: s.amenities,
+    }),
+    breadcrumbJsonLd([
+      { name: "Home", url: "/" },
+      { name: "Dormire", url: "/dormire" },
+      { name: s.regione, url: `/dormire/${regioneSlug}` },
+      { name: s.nome, url: `/dormire/${regioneSlug}/${slug}` },
+    ]),
+  ];
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(jsonLdData)} />
       <Header />
       <main className="flex-1 pt-16">
         <section className="relative">
@@ -69,12 +111,16 @@ export default async function DormireDettaglioPage({ params }: { params: Promise
           </div>
           <div className="absolute inset-0 flex flex-col justify-end">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10 w-full">
-              <Link
-                href={`/dormire/${regioneSlug}`}
-                className="inline-flex items-center gap-1.5 text-white/80 hover:text-white text-sm mb-4 font-medium"
-              >
-                <ArrowLeft size={14} /> Strutture {s.regione}
-              </Link>
+              <div className="mb-4">
+                <Breadcrumbs
+                  dark
+                  items={[
+                    { name: "Dormire", url: "/dormire" },
+                    { name: s.regione, url: `/dormire/${regioneSlug}` },
+                    { name: s.nome, url: `/dormire/${regioneSlug}/${slug}` },
+                  ]}
+                />
+              </div>
               <div className="flex items-center gap-2 mb-3 flex-wrap">
                 <span className="text-xs font-semibold px-3 py-1 rounded-full text-white bg-primary/90">
                   {DORMIRE_TIPO_LABEL_SINGULAR[s.tipo]}

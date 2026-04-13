@@ -1,13 +1,15 @@
 import { Header } from "@/components/landing/Header";
 import { Footer } from "@/components/landing/Footer";
+import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { MapPin, ArrowLeft, Waves } from "lucide-react";
+import { MapPin, Waves } from "lucide-react";
 import {
   unslugifyRegione,
   getSpiaggeByRegione,
   getAllRegioniSlug,
 } from "@/lib/spiagge-seed";
+import { breadcrumbJsonLd, collectionJsonLd, jsonLdScript } from "@/lib/json-ld";
 import { MapSpiagge } from "../MapSpiagge";
 
 export function generateStaticParams() {
@@ -21,10 +23,25 @@ export async function generateMetadata({ params }: { params: Promise<{ regione: 
     return { title: "Regione non trovata" };
   }
   const count = getSpiaggeByRegione(regioneSlug).length;
+  const title = `Spiagge per cani in ${regione} 2026 — Dog beach e spiagge libere | MifidoDiTe.eu`;
+  const description = `Tutte le ${count} spiagge dog-friendly in ${regione}: stabilimenti, dog beach e spiagge libere dove il tuo cane e il benvenuto. Mappa interattiva e info pratiche.`;
+  const url = `https://www.mifidodite.eu/spiagge/${regioneSlug}`;
+  const ogImg = `https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=1200&q=80`;
   return {
-    title: `Spiagge per cani in ${regione} 2026 — Dog beach e spiagge libere | MifidoDiTe.eu`,
-    description: `Tutte le ${count} spiagge dog-friendly in ${regione}: stabilimenti, dog beach e spiagge libere dove il tuo cane e il benvenuto. Mappa interattiva e info pratiche.`,
+    title,
+    description,
     keywords: [`spiagge cani ${regione}`, `dog beach ${regione}`, `spiagge dog friendly ${regione}`, `spiagge libere cani ${regione}`],
+    alternates: { canonical: url },
+    openGraph: {
+      type: "website",
+      title,
+      description,
+      url,
+      siteName: "MifidoDiTe.eu",
+      locale: "it_IT",
+      images: [{ url: ogImg, width: 1200, height: 630, alt: `Spiagge dog-friendly in ${regione}` }],
+    },
+    twitter: { card: "summary_large_image", title, description, images: [ogImg] },
   };
 }
 
@@ -49,16 +66,32 @@ export default async function SpiaggeRegionePage({ params }: { params: Promise<{
     lng: s.lng,
   }));
 
+  const jsonLdData = [
+    collectionJsonLd(`Spiagge dog-friendly in ${regione}`, `/spiagge/${regioneSlug}`, spiagge.length),
+    breadcrumbJsonLd([
+      { name: "Home", url: "/" },
+      { name: "Spiagge", url: "/spiagge" },
+      { name: regione, url: `/spiagge/${regioneSlug}` },
+    ]),
+  ];
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(jsonLdData)} />
       <Header />
       <main className="flex-1 pt-16">
         <section className="bg-foreground py-14 relative overflow-hidden">
           <div className="absolute inset-0 opacity-[.03]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='.6' fill='white'/%3E%3C/svg%3E\")" }} />
           <div className="max-w-5xl mx-auto px-4 text-center relative z-10">
-            <Link href="/spiagge" className="inline-flex items-center gap-1.5 text-white/70 hover:text-white text-sm font-medium mb-4">
-              <ArrowLeft size={14} /> Tutte le regioni
-            </Link>
+            <div className="mb-5 flex justify-center">
+              <Breadcrumbs
+                dark
+                items={[
+                  { name: "Spiagge", url: "/spiagge" },
+                  { name: regione, url: `/spiagge/${regioneSlug}` },
+                ]}
+              />
+            </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">
               Spiagge per cani in <span className="bg-gradient-to-r from-primary-light to-accent bg-clip-text text-transparent">{regione}</span>
             </h1>

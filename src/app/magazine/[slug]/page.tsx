@@ -3,6 +3,7 @@ import { Footer } from "@/components/landing/Footer";
 import { Clock, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { ARTICOLI_SEED } from "@/lib/articoli-seed";
+import { articleJsonLd, jsonLdScript } from "@/lib/json-ld";
 
 async function getArticolo(slug: string, preview: boolean = false) {
   if (process.env.DATABASE_URL) {
@@ -57,12 +58,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title,
     description,
+    alternates: { canonical: `https://www.mifidodite.eu/magazine/${slug}` },
     openGraph: {
       title,
       description,
       type: "article",
       locale: "it_IT",
       siteName: "MiFidoDiTe.eu",
+      url: `https://www.mifidodite.eu/magazine/${slug}`,
       images: [{ url: image, width: 1200, height: 630, alt: articolo?.titolo || "MiFidoDiTe.eu" }],
     },
     twitter: {
@@ -102,8 +105,19 @@ export default async function ArticoloPage({
 
   const correlati = await getCorrelati(articolo.categoria, slug);
 
+  // JSON-LD Article schema
+  const articleLd = articleJsonLd({
+    titolo: articolo.titolo,
+    descrizione: articolo.estratto,
+    slug,
+    categoria: articolo.categoria,
+    img: articolo.img,
+    datePublished: articolo.data ? new Date(articolo.data).toISOString() : new Date().toISOString(),
+  });
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(articleLd)} />
       <Header />
       <main className="flex-1 pt-16">
         <div className="relative h-56 sm:h-80 lg:h-96">

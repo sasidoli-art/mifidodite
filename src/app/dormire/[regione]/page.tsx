@@ -1,8 +1,9 @@
 import { Header } from "@/components/landing/Header";
 import { Footer } from "@/components/landing/Footer";
+import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { MapPin, ArrowLeft, Star, ExternalLink } from "lucide-react";
+import { MapPin, Star, ExternalLink } from "lucide-react";
 import {
   unslugifyRegioneDormire,
   getDormireByRegione,
@@ -10,6 +11,7 @@ import {
   buildBookingUrl,
   PREZZO_LABEL,
 } from "@/lib/dormire-seed";
+import { collectionJsonLd, breadcrumbJsonLd, jsonLdScript } from "@/lib/json-ld";
 import { MapDormire } from "../MapDormire";
 
 export function generateStaticParams() {
@@ -21,10 +23,25 @@ export async function generateMetadata({ params }: { params: Promise<{ regione: 
   const regione = unslugifyRegioneDormire(regioneSlug);
   if (!regione) return { title: "Regione non trovata" };
   const count = getDormireByRegione(regioneSlug).length;
+  const title = `Hotel e strutture pet-friendly in ${regione} 2026 — Dormire con il cane | MifidoDiTe.eu`;
+  const description = `${count} strutture ricettive pet-friendly in ${regione}: hotel, agriturismi, B&B, camping. Mappa, filtri e prenotazioni su Booking.`;
+  const url = `https://www.mifidodite.eu/dormire/${regioneSlug}`;
+  const ogImg = `https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80`;
   return {
-    title: `Hotel e strutture pet-friendly in ${regione} 2026 — Dormire con il cane | MifidoDiTe.eu`,
-    description: `${count} strutture ricettive pet-friendly in ${regione}: hotel, agriturismi, B&B, camping. Mappa, filtri e prenotazioni su Booking.`,
+    title,
+    description,
     keywords: [`hotel pet friendly ${regione}`, `dormire con cane ${regione}`, `agriturismi cani ${regione}`],
+    alternates: { canonical: url },
+    openGraph: {
+      type: "website",
+      title,
+      description,
+      url,
+      siteName: "MifidoDiTe.eu",
+      locale: "it_IT",
+      images: [{ url: ogImg, width: 1200, height: 630, alt: `Hotel pet-friendly in ${regione}` }],
+    },
+    twitter: { card: "summary_large_image", title, description, images: [ogImg] },
   };
 }
 
@@ -54,16 +71,32 @@ export default async function DormireRegionePage({ params }: { params: Promise<{
     lng: s.lng,
   }));
 
+  const jsonLdData = [
+    collectionJsonLd(`Hotel pet-friendly in ${regione}`, `/dormire/${regioneSlug}`, strutture.length),
+    breadcrumbJsonLd([
+      { name: "Home", url: "/" },
+      { name: "Dormire", url: "/dormire" },
+      { name: regione, url: `/dormire/${regioneSlug}` },
+    ]),
+  ];
+
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(jsonLdData)} />
       <Header />
       <main className="flex-1 pt-16">
         <section className="bg-foreground py-14 relative overflow-hidden">
           <div className="absolute inset-0 opacity-[.03]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='.6' fill='white'/%3E%3C/svg%3E\")" }} />
           <div className="max-w-5xl mx-auto px-4 text-center relative z-10">
-            <Link href="/dormire" className="inline-flex items-center gap-1.5 text-white/70 hover:text-white text-sm font-medium mb-4">
-              <ArrowLeft size={14} /> Tutte le regioni
-            </Link>
+            <div className="mb-5 flex justify-center">
+              <Breadcrumbs
+                dark
+                items={[
+                  { name: "Dormire", url: "/dormire" },
+                  { name: regione, url: `/dormire/${regioneSlug}` },
+                ]}
+              />
+            </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">
               Dormire con il cane in <span className="bg-gradient-to-r from-primary-light to-accent bg-clip-text text-transparent">{regione}</span>
             </h1>

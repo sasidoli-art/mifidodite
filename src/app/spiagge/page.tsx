@@ -9,6 +9,23 @@ export const dynamic = "force-dynamic";
 export const metadata = {
   title: "Mappa Spiagge Dog-Friendly in Italia 2026 — MifidoDiTe.eu",
   description: "La mappa interattiva delle spiagge italiane che accettano cani. Oltre 75 stabilimenti e spiagge libere verificate in 15 regioni, con filtri per tipo, prezzo e servizi.",
+  keywords: ["spiagge dog friendly", "mappa spiagge cani italia", "dog beach italia", "spiagge libere cani"],
+  alternates: { canonical: "https://www.mifidodite.eu/spiagge" },
+  openGraph: {
+    type: "website",
+    title: "Mappa Spiagge Dog-Friendly in Italia 2026",
+    description: "77 spiagge verificate in 15 regioni: stabilimenti, dog beach, spiagge libere. Mappa interattiva con filtri.",
+    url: "https://www.mifidodite.eu/spiagge",
+    siteName: "MifidoDiTe.eu",
+    locale: "it_IT",
+    images: [{ url: "https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=1200&q=80", width: 1200, height: 630 }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Mappa Spiagge Dog-Friendly in Italia 2026",
+    description: "77 spiagge verificate in 15 regioni.",
+    images: ["https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=1200&q=80"],
+  },
 };
 
 async function getSpiagge(): Promise<SpiaggiaUI[]> {

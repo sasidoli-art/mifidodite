@@ -3,17 +3,17 @@
 import { useMemo, useState } from "react";
 import Link from "next/link";
 import { MapPin, Filter, X, Check, ExternalLink, Star } from "lucide-react";
-import { MapDormire } from "./MapDormire";
-import type { DormireTipo, PrezzoFascia } from "@/lib/dormire-types";
+import { MapVacanze } from "./MapVacanze";
+import type { VacanzeTipo, PrezzoFascia } from "@/lib/vacanze-types";
 
-export interface DormireUI {
+export interface VacanzeUI {
   slug: string;
   nome: string;
   comune: string;
   provincia: string;
   regione: string;
   regioneSlug: string;
-  tipo: DormireTipo;
+  tipo: VacanzeTipo;
   descrizione: string;
   fascia: PrezzoFascia;
   stelle?: 1 | 2 | 3 | 4 | 5;
@@ -25,14 +25,14 @@ export interface DormireUI {
   bookingUrl: string;
 }
 
-type FiltroTipo = "tutti" | DormireTipo;
+type FiltroTipo = "tutti" | VacanzeTipo;
 type FiltroFascia = "tutte" | PrezzoFascia;
 
 interface Props {
-  strutture: DormireUI[];
+  strutture: VacanzeUI[];
 }
 
-const TIPO_LABEL: Record<DormireTipo, string> = {
+const TIPO_LABEL: Record<VacanzeTipo, string> = {
   hotel: "Hotel & Resort",
   agriturismo: "Agriturismi",
   bnb: "B&B & Boutique",
@@ -40,7 +40,7 @@ const TIPO_LABEL: Record<DormireTipo, string> = {
   casa_vacanza: "Case Vacanza",
 };
 
-const TIPO_BADGE: Record<DormireTipo, { bg: string; label: string }> = {
+const TIPO_BADGE: Record<VacanzeTipo, { bg: string; label: string }> = {
   hotel: { bg: "bg-primary", label: "Hotel" },
   agriturismo: { bg: "bg-secondary", label: "Agriturismo" },
   bnb: { bg: "bg-accent", label: "B&B" },
@@ -55,7 +55,7 @@ const FASCIA_LABEL: Record<PrezzoFascia, string> = {
   luxury: "€€€€",
 };
 
-export function DormireClient({ strutture }: Props) {
+export function VacanzeClient({ strutture }: Props) {
   const [filtroTipo, setFiltroTipo] = useState<FiltroTipo>("tutti");
   const [filtroRegione, setFiltroRegione] = useState<string>("tutte");
   const [filtroFascia, setFiltroFascia] = useState<FiltroFascia>("tutte");
@@ -77,7 +77,7 @@ export function DormireClient({ strutture }: Props) {
   }, [strutture, filtroTipo, filtroRegione, filtroFascia, filtroTagliaGrande]);
 
   const perRegioneFiltrate = useMemo(() => {
-    const m: Record<string, DormireUI[]> = {};
+    const m: Record<string, VacanzeUI[]> = {};
     for (const s of filtrate) {
       if (!m[s.regione]) m[s.regione] = [];
       m[s.regione].push(s);
@@ -113,7 +113,7 @@ export function DormireClient({ strutture }: Props) {
   return (
     <>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-        <MapDormire strutture={pins} />
+        <MapVacanze strutture={pins} />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-6">
@@ -147,7 +147,7 @@ export function DormireClient({ strutture }: Props) {
                         : "border-border bg-white text-muted-foreground hover:border-primary/50"
                     }`}
                   >
-                    {t === "tutti" ? "Tutti" : TIPO_LABEL[t as DormireTipo].split(" ")[0]}
+                    {t === "tutti" ? "Tutti" : TIPO_LABEL[t as VacanzeTipo].split(" ")[0]}
                   </button>
                 ))}
               </div>
@@ -216,7 +216,7 @@ export function DormireClient({ strutture }: Props) {
                     id={`struttura-${s.slug}`}
                     className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 border border-border/50 scroll-mt-24 flex flex-col"
                   >
-                    <Link href={`/dormire/${s.regioneSlug}/${s.slug}`} className="block group">
+                    <Link href={`/vacanze/${s.regioneSlug}/${s.slug}`} className="block group">
                       <div className="h-48 overflow-hidden relative">
                         <img src={s.img} alt={s.nome} className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500" />
                         <span className={`absolute top-3 left-3 text-xs font-semibold px-3 py-1 rounded-full text-white ${TIPO_BADGE[s.tipo].bg}`}>

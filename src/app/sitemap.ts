@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import { SPIAGGE_SEED, slugifyRegione, getAllRegioniSlug as getAllSpiagge } from "@/lib/spiagge-seed";
-import { DORMIRE_SEED, slugifyRegioneD, getAllRegioniDormire } from "@/lib/dormire-seed";
+import { VACANZE_SEED, slugifyRegioneV, getAllRegioniVacanze } from "@/lib/vacanze-seed";
 import { ARTICOLI_SEED } from "@/lib/articoli-seed";
 
 export const revalidate = 3600; // 1 ora
@@ -15,7 +15,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     // Hub feature ad alto traffico
     { url: `${baseUrl}/spiagge`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
-    { url: `${baseUrl}/dormire`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
+    { url: `${baseUrl}/vacanze`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
     { url: `${baseUrl}/magazine`, lastModified: now, changeFrequency: "daily", priority: 0.9 },
     { url: `${baseUrl}/professionisti`, lastModified: now, changeFrequency: "daily", priority: 0.9 },
 
@@ -58,17 +58,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.75,
   }));
 
-  // === DORMIRE — pagine regionali ===
-  const dormireRegionali: MetadataRoute.Sitemap = getAllRegioniDormire().map((regione) => ({
-    url: `${baseUrl}/dormire/${regione}`,
+  // === VACANZE — pagine regionali ===
+  const vacanzeRegionali: MetadataRoute.Sitemap = getAllRegioniVacanze().map((regione) => ({
+    url: `${baseUrl}/vacanze/${regione}`,
     lastModified: now,
     changeFrequency: "weekly" as const,
     priority: 0.85,
   }));
 
-  // === DORMIRE — dettaglio singole (60) ===
-  const dormireDettaglio: MetadataRoute.Sitemap = DORMIRE_SEED.map((s) => ({
-    url: `${baseUrl}/dormire/${slugifyRegioneD(s.regione)}/${s.slug}`,
+  // === VACANZE — dettaglio singole (89) ===
+  const vacanzeDettaglio: MetadataRoute.Sitemap = VACANZE_SEED.map((s) => ({
+    url: `${baseUrl}/vacanze/${slugifyRegioneV(s.regione)}/${s.slug}`,
     lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.75,
@@ -112,8 +112,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...staticPages,
     ...spiaggeRegionali,
     ...spiaggeDettaglio,
-    ...dormireRegionali,
-    ...dormireDettaglio,
+    ...vacanzeRegionali,
+    ...vacanzeDettaglio,
     ...articlePages,
     ...seedArticlePages,
   ];

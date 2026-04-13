@@ -1,10 +1,10 @@
-// Articoli magazine dedicati al dormire con il cane in Italia
-// Collegati ai dati di src/lib/dormire-seed.ts
+// Articoli magazine dedicati al dormire con il cane in Italia (sezione /vacanze)
+// Collegati ai dati di src/lib/vacanze-seed.ts
 
-export const ARTICOLI_DORMIRE = [
+export const ARTICOLI_VACANZE = [
   {
-    slug: "dormire-con-il-cane-italia-2026-guida",
-    titolo: "Dormire con il cane in Italia 2026: hotel, agriturismi e camping pet-friendly",
+    slug: "vacanze-con-il-cane-italia-2026-guida",
+    titolo: "Vacanze con il cane in Italia 2026: hotel, agriturismi e camping pet-friendly — la guida completa",
     categoria: "guide",
     estratto: "60 strutture verificate in 15 regioni italiane per vacanze con il tuo animale: hotel di lusso, masserie, camping village e B&B. La guida completa 2026 con mappa interattiva.",
     img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80",
@@ -62,22 +62,22 @@ export const ARTICOLI_DORMIRE = [
 <p>Ecco dove cerca chi viaggia col cane in Italia. Clicca su ogni regione per la mappa dettagliata.</p>
 
 <h3>Toscana — la regione numero uno</h3>
-<p>La Toscana e' di gran lunga la destinazione piu' amata da chi viaggia col cane: agriturismi a volonta', paesaggi perfetti per passeggiate, cultura del cane come "membro della famiglia". Da <strong>Borgo Santo Pietro</strong> e <strong>Castello di Casole</strong> nel senese, al <strong>Borgo Pignano</strong> di Volterra, fino agli agriturismi della Val d'Orcia — trovi di tutto. <a href="/dormire/toscana">Vedi tutte le strutture in Toscana</a>.</p>
+<p>La Toscana e' di gran lunga la destinazione piu' amata da chi viaggia col cane: agriturismi a volonta', paesaggi perfetti per passeggiate, cultura del cane come "membro della famiglia". Da <strong>Borgo Santo Pietro</strong> e <strong>Castello di Casole</strong> nel senese, al <strong>Borgo Pignano</strong> di Volterra, fino agli agriturismi della Val d'Orcia — trovi di tutto. <a href="/vacanze/toscana">Vedi tutte le strutture in Toscana</a>.</p>
 
 <h3>Puglia — masserie e trulli</h3>
-<p>La Puglia e' il paradiso dell'agriturismo di lusso: <strong>Borgo Egnazia</strong>, <strong>Masseria Torre Coccaro</strong>, <strong>Masseria San Domenico</strong>, <strong>Masseria Il Frantoio</strong>... ogni masseria e' un'esperienza unica. Aggiungi il Salento con il suo mare e le strutture boutique di Martina Franca. <a href="/dormire/puglia">Dormire in Puglia con il cane</a>.</p>
+<p>La Puglia e' il paradiso dell'agriturismo di lusso: <strong>Borgo Egnazia</strong>, <strong>Masseria Torre Coccaro</strong>, <strong>Masseria San Domenico</strong>, <strong>Masseria Il Frantoio</strong>... ogni masseria e' un'esperienza unica. Aggiungi il Salento con il suo mare e le strutture boutique di Martina Franca. <a href="/vacanze/puglia">Dormire in Puglia con il cane</a>.</p>
 
 <h3>Sardegna — Costa Smeralda e non solo</h3>
-<p>La Sardegna offre due tipi di esperienze: da un lato i resort di lusso della Costa Smeralda (Forte Village, Hotel Cala di Volpe, Hotel Romazzino) che accettano cani di piccola taglia; dall'altro camping village pet-friendly come <strong>Baia Blu La Tortuga</strong> in Gallura e <strong>Tiliguerta</strong> sulla Costa Rei, dove i cani di tutte le taglie sono benvenuti. <a href="/dormire/sardegna">Strutture in Sardegna</a>.</p>
+<p>La Sardegna offre due tipi di esperienze: da un lato i resort di lusso della Costa Smeralda (Forte Village, Hotel Cala di Volpe, Hotel Romazzino) che accettano cani di piccola taglia; dall'altro camping village pet-friendly come <strong>Baia Blu La Tortuga</strong> in Gallura e <strong>Tiliguerta</strong> sulla Costa Rei, dove i cani di tutte le taglie sono benvenuti. <a href="/vacanze/sardegna">Strutture in Sardegna</a>.</p>
 
 <h3>Lombardia — laghi e Milano</h3>
-<p>Tre esperienze diverse: i grandi hotel storici sul <strong>Lago di Como</strong> (Villa d'Este, Grand Hotel Tremezzo), i resort del <strong>Lago di Garda</strong> (Splendido Bay, Europa Silvella) e il <strong>Four Seasons Milano</strong> che ha una delle politiche pet-friendly piu' complete d'Italia (cane gratuito, cuccia inclusa, menu dedicato). <a href="/dormire/lombardia">Lombardia pet-friendly</a>.</p>
+<p>Tre esperienze diverse: i grandi hotel storici sul <strong>Lago di Como</strong> (Villa d'Este, Grand Hotel Tremezzo), i resort del <strong>Lago di Garda</strong> (Splendido Bay, Europa Silvella) e il <strong>Four Seasons Milano</strong> che ha una delle politiche pet-friendly piu' complete d'Italia (cane gratuito, cuccia inclusa, menu dedicato). <a href="/vacanze/lombardia">Lombardia pet-friendly</a>.</p>
 
 <h3>Veneto — Bibione, Cavallino e il Lido di Venezia</h3>
-<p>Per chi ama il mare: i camping village del Cavallino-Treporti (<strong>Union Lido</strong>, <strong>Marina di Venezia</strong>, <strong>Ca' Pasquali</strong>) sono i piu' grandi e completi del Nord Adriatico. Per chi preferisce l'hotel, il <strong>JW Marriott Venice Resort</strong> sull'isola delle Rose e le terme di Abano. <a href="/dormire/veneto">Veneto pet-friendly</a>.</p>
+<p>Per chi ama il mare: i camping village del Cavallino-Treporti (<strong>Union Lido</strong>, <strong>Marina di Venezia</strong>, <strong>Ca' Pasquali</strong>) sono i piu' grandi e completi del Nord Adriatico. Per chi preferisce l'hotel, il <strong>JW Marriott Venice Resort</strong> sull'isola delle Rose e le terme di Abano. <a href="/vacanze/veneto">Veneto pet-friendly</a>.</p>
 
 <h3>Altre regioni: Liguria, Sicilia, Campania, Emilia-Romagna, Umbria</h3>
-<p>Anche le altre regioni hanno chicche da scoprire: il <strong>Belmond Hotel Splendido</strong> di Portofino (Liguria), il <strong>Verdura Resort</strong> di Sciacca (Sicilia), l'<strong>Hotel Le Agavi</strong> di Positano (Campania), il <strong>Grand Hotel Rimini</strong> (Emilia-Romagna), il <strong>Castello di Reschio</strong> (Umbria). Vedi tutte le regioni sulla <a href="/dormire">mappa delle strutture pet-friendly</a>.</p>
+<p>Anche le altre regioni hanno chicche da scoprire: il <strong>Belmond Hotel Splendido</strong> di Portofino (Liguria), il <strong>Verdura Resort</strong> di Sciacca (Sicilia), l'<strong>Hotel Le Agavi</strong> di Positano (Campania), il <strong>Grand Hotel Rimini</strong> (Emilia-Romagna), il <strong>Castello di Reschio</strong> (Umbria). Vedi tutte le regioni sulla <a href="/vacanze">mappa delle strutture pet-friendly</a>.</p>
 
 <h2>Come prenotare: consigli pratici</h2>
 
@@ -113,7 +113,7 @@ export const ARTICOLI_DORMIRE = [
 
 <h2>Esplora la mappa interattiva</h2>
 
-<p>Tutte le 60 strutture di questa guida sono visualizzabili sulla <a href="/dormire"><strong>mappa interattiva di dormire con il cane</strong></a>, con filtri per tipo, regione, prezzo e taglia ammessa. Per ogni struttura trovi la scheda di dettaglio con meteo, indicazioni stradali e link di prenotazione.</p>
+<p>Tutte le 60 strutture di questa guida sono visualizzabili sulla <a href="/vacanze"><strong>mappa interattiva di dormire con il cane</strong></a>, con filtri per tipo, regione, prezzo e taglia ammessa. Per ogni struttura trovi la scheda di dettaglio con meteo, indicazioni stradali e link di prenotazione.</p>
 
 <p><strong>Buon viaggio a te e al tuo cane.</strong></p>
     `,
@@ -140,11 +140,11 @@ export const ARTICOLI_DORMIRE = [
 <p>La Val d'Orcia, patrimonio UNESCO, e' probabilmente il paesaggio italiano piu' fotografato. Le colline di cipressi, i borghi di Pienza e Montalcino, i campi di grano dorato: un contesto perfetto per lunghe passeggiate mattutine col cane.</p>
 
 <ul>
-<li><strong><a href="/dormire/toscana/borgo-santo-pietro-palazzetto">Relais Borgo Santo Pietro</a></strong>: borgo del XIII secolo trasformato in relais di lusso su 150 ettari. Cavalli, orto biodinamico, spa naturale. Accoglie cani di tutte le taglie.</li>
-<li><strong><a href="/dormire/toscana/podere-dionora-montepulciano">Podere Dionora</a></strong>: boutique farm con 10 camere esclusive tra le vigne del Nobile di Montepulciano. Vista Val d'Orcia, piscina, cucina gourmet. Taglia media.</li>
-<li><strong><a href="/dormire/toscana/castello-di-velona-montalcino">Castello di Velona Resort</a></strong>: castello medievale con spa termale e cantina Brunello. Accoglie cani di tutte le taglie. La posizione panoramica e' impareggiabile.</li>
-<li><strong><a href="/dormire/toscana/agriturismo-il-rigo">Agriturismo Il Rigo</a></strong>: agriturismo familiare a San Quirico d'Orcia, cucina tradizionale, vigne. L'opzione piu' economica della zona per chi cerca autenticita' senza fronzoli.</li>
-<li><strong><a href="/dormire/toscana/la-bandita-townhouse-pienza">La Bandita Townhouse</a></strong>: boutique nel centro di Pienza, 12 camere esclusive e wine bar. Perfetto per weekend.</li>
+<li><strong><a href="/vacanze/toscana/borgo-santo-pietro-palazzetto">Relais Borgo Santo Pietro</a></strong>: borgo del XIII secolo trasformato in relais di lusso su 150 ettari. Cavalli, orto biodinamico, spa naturale. Accoglie cani di tutte le taglie.</li>
+<li><strong><a href="/vacanze/toscana/podere-dionora-montepulciano">Podere Dionora</a></strong>: boutique farm con 10 camere esclusive tra le vigne del Nobile di Montepulciano. Vista Val d'Orcia, piscina, cucina gourmet. Taglia media.</li>
+<li><strong><a href="/vacanze/toscana/castello-di-velona-montalcino">Castello di Velona Resort</a></strong>: castello medievale con spa termale e cantina Brunello. Accoglie cani di tutte le taglie. La posizione panoramica e' impareggiabile.</li>
+<li><strong><a href="/vacanze/toscana/agriturismo-il-rigo">Agriturismo Il Rigo</a></strong>: agriturismo familiare a San Quirico d'Orcia, cucina tradizionale, vigne. L'opzione piu' economica della zona per chi cerca autenticita' senza fronzoli.</li>
+<li><strong><a href="/vacanze/toscana/la-bandita-townhouse-pienza">La Bandita Townhouse</a></strong>: boutique nel centro di Pienza, 12 camere esclusive e wine bar. Perfetto per weekend.</li>
 </ul>
 
 <h2>Chianti e Firenze — tra vigneti e arte</h2>
@@ -152,9 +152,9 @@ export const ARTICOLI_DORMIRE = [
 <p>A sud di Firenze, tra le colline del Chianti Classico, trovi alcune delle strutture storiche piu' belle d'Italia. Per chi vuole combinare vigneti e arte rinascimentale.</p>
 
 <ul>
-<li><strong><a href="/dormire/toscana/il-borro-valdarno">Il Borro</a></strong>: borgo medievale di proprieta' della famiglia Ferragamo, tra vigne e uliveti. Ristoranti stellati, spa, vino biodinamico. Accoglie cani.</li>
-<li><strong><a href="/dormire/toscana/villa-la-massa-firenze">Villa La Massa</a></strong>: villa medicea del XVI secolo sulle rive dell'Arno, a 15 minuti dal centro di Firenze. Ampi giardini, piscina. Accoglie cani di tutte le taglie.</li>
-<li><strong><a href="/dormire/toscana/castelfalfi-montaione">Castelfalfi</a></strong>: borgo medievale su 2700 ettari tra Siena e Firenze, con golf 27 buche.</li>
+<li><strong><a href="/vacanze/toscana/il-borro-valdarno">Il Borro</a></strong>: borgo medievale di proprieta' della famiglia Ferragamo, tra vigne e uliveti. Ristoranti stellati, spa, vino biodinamico. Accoglie cani.</li>
+<li><strong><a href="/vacanze/toscana/villa-la-massa-firenze">Villa La Massa</a></strong>: villa medicea del XVI secolo sulle rive dell'Arno, a 15 minuti dal centro di Firenze. Ampi giardini, piscina. Accoglie cani di tutte le taglie.</li>
+<li><strong><a href="/vacanze/toscana/castelfalfi-montaione">Castelfalfi</a></strong>: borgo medievale su 2700 ettari tra Siena e Firenze, con golf 27 buche.</li>
 </ul>
 
 <h2>Costa etrusca e San Vincenzo — mare + campagna</h2>
@@ -162,9 +162,9 @@ export const ARTICOLI_DORMIRE = [
 <p>La Costa degli Etruschi e' il sogno di chi vuole mare al mattino e campagna al pomeriggio. A <strong>San Vincenzo</strong> trovi una delle dog beach piu' famose d'Italia (200 metri di battigia senza guinzaglio) e a pochi minuti diverse strutture pet-friendly.</p>
 
 <ul>
-<li><strong><a href="/dormire/toscana/tenuta-poggio-ai-santi">Tenuta Poggio ai Santi</a></strong>: relais di campagna tra mare e colline, a pochi minuti dalla Dog Beach di San Vincenzo. Giardino recintato, cucina bio, pet-friendly completo.</li>
-<li><strong><a href="/dormire/toscana/park-albatros-san-vincenzo">Park Albatros Village</a></strong>: village 5 stelle sulla Costa degli Etruschi con parco acquatico, accesso diretto alla pineta e alla dog beach di San Vincenzo. Bungalow pet-friendly.</li>
-<li><strong><a href="/dormire/toscana/agriturismo-fagianaia-bolgheri">Agriturismo La Fagianaia</a></strong>: agriturismo tra i vigneti di Bolgheri DOC, vicino alla celebre strada degli ulivi.</li>
+<li><strong><a href="/vacanze/toscana/tenuta-poggio-ai-santi">Tenuta Poggio ai Santi</a></strong>: relais di campagna tra mare e colline, a pochi minuti dalla Dog Beach di San Vincenzo. Giardino recintato, cucina bio, pet-friendly completo.</li>
+<li><strong><a href="/vacanze/toscana/park-albatros-san-vincenzo">Park Albatros Village</a></strong>: village 5 stelle sulla Costa degli Etruschi con parco acquatico, accesso diretto alla pineta e alla dog beach di San Vincenzo. Bungalow pet-friendly.</li>
+<li><strong><a href="/vacanze/toscana/agriturismo-fagianaia-bolgheri">Agriturismo La Fagianaia</a></strong>: agriturismo tra i vigneti di Bolgheri DOC, vicino alla celebre strada degli ulivi.</li>
 </ul>
 
 <h2>Maremma — il cuore selvaggio</h2>
@@ -172,18 +172,18 @@ export const ARTICOLI_DORMIRE = [
 <p>La Maremma grossetana e' meno affollata e piu' autentica. Pini, cavalli al pascolo, mare lungo e tranquillo.</p>
 
 <ul>
-<li><strong><a href="/dormire/toscana/argentario-camping-village">Argentario Camping Village</a></strong>: camping sul tombolo di Giannella, accesso spiaggia privata e area cani nella pineta.</li>
-<li><strong><a href="/dormire/toscana/santapomata-camping">Camping Village Santapomata</a></strong>: village a Castiglione della Pescaia nella pineta, ambiente familiare.</li>
-<li><strong><a href="/dormire/toscana/camping-baia-azzurra-scarlino">Camping Baia Azzurra</a></strong>: vicino a Cala Violina, bandiera blu.</li>
+<li><strong><a href="/vacanze/toscana/argentario-camping-village">Argentario Camping Village</a></strong>: camping sul tombolo di Giannella, accesso spiaggia privata e area cani nella pineta.</li>
+<li><strong><a href="/vacanze/toscana/santapomata-camping">Camping Village Santapomata</a></strong>: village a Castiglione della Pescaia nella pineta, ambiente familiare.</li>
+<li><strong><a href="/vacanze/toscana/camping-baia-azzurra-scarlino">Camping Baia Azzurra</a></strong>: vicino a Cala Violina, bandiera blu.</li>
 </ul>
 
 <h2>Altre strutture imperdibili</h2>
 
 <ul>
-<li><strong><a href="/dormire/toscana/tenuta-spannocchia">Tenuta di Spannocchia</a></strong>: azienda agricola biologica del 1225 con allevamento di cinta senese.</li>
-<li><strong><a href="/dormire/toscana/borgo-pignano-volterra">Borgo Pignano</a></strong>: borgo del XVII secolo biologico vicino a Volterra.</li>
-<li><strong><a href="/dormire/toscana/castello-di-casole-hotel">Belmond Castello di Casole</a></strong>: castello del X secolo su 1700 ettari, pet-friendly completo.</li>
-<li><strong><a href="/dormire/toscana/locanda-sant-agostino-pietrasanta">Locanda Sant'Agostino</a></strong>: B&B nel centro storico di Pietrasanta, Versilia.</li>
+<li><strong><a href="/vacanze/toscana/tenuta-spannocchia">Tenuta di Spannocchia</a></strong>: azienda agricola biologica del 1225 con allevamento di cinta senese.</li>
+<li><strong><a href="/vacanze/toscana/borgo-pignano-volterra">Borgo Pignano</a></strong>: borgo del XVII secolo biologico vicino a Volterra.</li>
+<li><strong><a href="/vacanze/toscana/castello-di-casole-hotel">Belmond Castello di Casole</a></strong>: castello del X secolo su 1700 ettari, pet-friendly completo.</li>
+<li><strong><a href="/vacanze/toscana/locanda-sant-agostino-pietrasanta">Locanda Sant'Agostino</a></strong>: B&B nel centro storico di Pietrasanta, Versilia.</li>
 </ul>
 
 <h2>Combinare dormire + spiagge + natura</h2>
@@ -196,7 +196,7 @@ export const ARTICOLI_DORMIRE = [
 <li>Giorno 7: rientro con tappa in un borgo (Pienza, Montepulciano, San Gimignano)</li>
 </ol>
 
-<p><a href="/dormire/toscana"><strong>Vedi la mappa completa delle strutture pet-friendly in Toscana</strong></a>.</p>
+<p><a href="/vacanze/toscana"><strong>Vedi la mappa completa delle strutture pet-friendly in Toscana</strong></a>.</p>
     `,
   },
 
@@ -217,9 +217,9 @@ export const ARTICOLI_DORMIRE = [
 <p>A Savelletri, sulla costa adriatica tra Monopoli e Ostuni, e' nato il modello "masseria di lusso" che oggi tutta la Puglia imita. Qui trovi tre strutture che hanno fatto storia:</p>
 
 <ul>
-<li><strong><a href="/dormire/puglia/borgo-egnazia-savelletri">Borgo Egnazia</a></strong>: non una masseria, ma un intero borgo pugliese contemporaneo ispirato all'architettura rurale locale. Tra i resort piu' premiati del mondo (ha ospitato G7 e matrimoni celebri). 4 piscine, spa Vair, 6 ristoranti, golf. Accoglie cani di tutte le taglie con amenity dedicate. Fascia luxury.</li>
-<li><strong><a href="/dormire/puglia/masseria-torre-coccaro">Masseria Torre Coccaro</a></strong>: masseria del XVI secolo con uliveti secolari e giardini mediterranei. Spiaggia privata, spa. Pet-friendly con menu dedicato. Fascia alta.</li>
-<li><strong><a href="/dormire/puglia/masseria-san-domenico">Masseria San Domenico</a></strong>: masseria fortificata del Cinquecento con campo da golf 18 buche, spa talassoterapica e accesso diretto al mare. Cani di taglia media. Fascia alta.</li>
+<li><strong><a href="/vacanze/puglia/borgo-egnazia-savelletri">Borgo Egnazia</a></strong>: non una masseria, ma un intero borgo pugliese contemporaneo ispirato all'architettura rurale locale. Tra i resort piu' premiati del mondo (ha ospitato G7 e matrimoni celebri). 4 piscine, spa Vair, 6 ristoranti, golf. Accoglie cani di tutte le taglie con amenity dedicate. Fascia luxury.</li>
+<li><strong><a href="/vacanze/puglia/masseria-torre-coccaro">Masseria Torre Coccaro</a></strong>: masseria del XVI secolo con uliveti secolari e giardini mediterranei. Spiaggia privata, spa. Pet-friendly con menu dedicato. Fascia alta.</li>
+<li><strong><a href="/vacanze/puglia/masseria-san-domenico">Masseria San Domenico</a></strong>: masseria fortificata del Cinquecento con campo da golf 18 buche, spa talassoterapica e accesso diretto al mare. Cani di taglia media. Fascia alta.</li>
 </ul>
 
 <h2>Ostuni e la Valle d'Itria</h2>
@@ -227,9 +227,9 @@ export const ARTICOLI_DORMIRE = [
 <p>A pochi chilometri da Savelletri, la Citta Bianca di <strong>Ostuni</strong> e la Valle d'Itria dei trulli sono un'altra chicca della Puglia.</p>
 
 <ul>
-<li><strong><a href="/dormire/puglia/masseria-il-frantoio-ostuni">Masseria Il Frantoio</a></strong>: masseria biologica certificata con un antico frantoio ipogeo del 1500 che produce olio extravergine. Cani benvenuti nel parco di ulivi secolari. Fascia alta.</li>
-<li><strong><a href="/dormire/puglia/relais-la-sommita-ostuni">Relais La Sommita</a></strong>: hotel de charme nel centro storico di Ostuni, 5 stelle con ristorante stellato e vista sulla Valle d'Itria. Cani di piccola taglia.</li>
-<li><strong><a href="/dormire/puglia/relais-villa-san-martino-martina">Relais Villa San Martino</a></strong>: masseria boutique a Martina Franca, nel cuore dei trulli. Piscina, ristorante, spa. Cani di taglia media.</li>
+<li><strong><a href="/vacanze/puglia/masseria-il-frantoio-ostuni">Masseria Il Frantoio</a></strong>: masseria biologica certificata con un antico frantoio ipogeo del 1500 che produce olio extravergine. Cani benvenuti nel parco di ulivi secolari. Fascia alta.</li>
+<li><strong><a href="/vacanze/puglia/relais-la-sommita-ostuni">Relais La Sommita</a></strong>: hotel de charme nel centro storico di Ostuni, 5 stelle con ristorante stellato e vista sulla Valle d'Itria. Cani di piccola taglia.</li>
+<li><strong><a href="/vacanze/puglia/relais-villa-san-martino-martina">Relais Villa San Martino</a></strong>: masseria boutique a Martina Franca, nel cuore dei trulli. Piscina, ristorante, spa. Cani di taglia media.</li>
 </ul>
 
 <h2>Salento — il Sud pet-friendly</h2>
@@ -237,8 +237,8 @@ export const ARTICOLI_DORMIRE = [
 <p>Il Salento e' forse la meta piu' richiesta dagli italiani per le vacanze estive. Le strutture pet-friendly stanno aumentando rapidamente.</p>
 
 <ul>
-<li><strong><a href="/dormire/puglia/masseria-li-foggi-gallipoli">Masseria Li Foggi</a></strong>: tipica masseria salentina del XVII secolo a Gallipoli, con antica cappella, piscine e cucina regionale. Giardino recintato per cani. Fascia media.</li>
-<li><strong><a href="/dormire/puglia/torre-rinalda-lecce">Camping Torre Rinalda</a></strong>: camping village sulla costa adriatica, piazzole in pineta e accesso diretto al mare. Opzione economica ideale per famiglie.</li>
+<li><strong><a href="/vacanze/puglia/masseria-li-foggi-gallipoli">Masseria Li Foggi</a></strong>: tipica masseria salentina del XVII secolo a Gallipoli, con antica cappella, piscine e cucina regionale. Giardino recintato per cani. Fascia media.</li>
+<li><strong><a href="/vacanze/puglia/torre-rinalda-lecce">Camping Torre Rinalda</a></strong>: camping village sulla costa adriatica, piazzole in pineta e accesso diretto al mare. Opzione economica ideale per famiglie.</li>
 </ul>
 
 <h2>Gargano — il nord pugliese</h2>
@@ -246,7 +246,7 @@ export const ARTICOLI_DORMIRE = [
 <p>Il Gargano, sperone d'Italia, e' una destinazione meno affollata del Salento ma altrettanto bella, con pinete, grotte e mare cristallino.</p>
 
 <ul>
-<li><strong><a href="/dormire/puglia/camping-spiaggia-lunga-vieste">Camping Spiaggia Lunga</a></strong>: camping nel Parco Nazionale del Gargano, sulla spiaggia di Scialmarino a Vieste. Pineta naturale, bungalow pet-friendly.</li>
+<li><strong><a href="/vacanze/puglia/camping-spiaggia-lunga-vieste">Camping Spiaggia Lunga</a></strong>: camping nel Parco Nazionale del Gargano, sulla spiaggia di Scialmarino a Vieste. Pineta naturale, bungalow pet-friendly.</li>
 </ul>
 
 <h2>Consigli per organizzare</h2>
@@ -260,7 +260,7 @@ export const ARTICOLI_DORMIRE = [
 
 <p>Combinare struttura + mare: la Puglia ha anche <a href="/spiagge/puglia">10 spiagge pet-friendly mappate</a> tra stabilimenti salentini e dog waterpark di Bari.</p>
 
-<p><a href="/dormire/puglia"><strong>Vedi la mappa delle strutture pet-friendly in Puglia</strong></a>.</p>
+<p><a href="/vacanze/puglia"><strong>Vedi la mappa delle strutture pet-friendly in Puglia</strong></a>.</p>
     `,
   },
 
@@ -281,9 +281,9 @@ export const ARTICOLI_DORMIRE = [
 <p>Pregiudizio comune: in Costa Smeralda non puoi andare col cane. Falso. Diversi hotel storici accettano cani, con due restrizioni: <strong>solo piccola taglia</strong> e <strong>su richiesta</strong>. Ecco i riferimenti:</p>
 
 <ul>
-<li><strong><a href="/dormire/sardegna/hotel-cala-di-volpe-porto-cervo">Hotel Cala di Volpe</a></strong>: icona della Costa Smeralda dal 1963, cinque stelle lusso con baia privata e spa. Accoglie piccoli cani su richiesta, fascia luxury.</li>
-<li><strong><a href="/dormire/sardegna/hotel-romazzino-porto-cervo">Hotel Romazzino</a></strong>: dal 1965 una delle icone pet-friendly di Porto Cervo, con baia privata e campi da tennis.</li>
-<li><strong><a href="/dormire/sardegna/forte-village-resort-pula">Forte Village Resort</a></strong>: non e' tecnicamente Costa Smeralda (si trova sulla costa sud-ovest, a Santa Margherita di Pula) ma e' la risposta piu' completa al "resort di lusso italiano". 8 hotel, 21 ristoranti, spa thalassoterapica. Cani di piccola taglia su richiesta.</li>
+<li><strong><a href="/vacanze/sardegna/hotel-cala-di-volpe-porto-cervo">Hotel Cala di Volpe</a></strong>: icona della Costa Smeralda dal 1963, cinque stelle lusso con baia privata e spa. Accoglie piccoli cani su richiesta, fascia luxury.</li>
+<li><strong><a href="/vacanze/sardegna/hotel-romazzino-porto-cervo">Hotel Romazzino</a></strong>: dal 1965 una delle icone pet-friendly di Porto Cervo, con baia privata e campi da tennis.</li>
+<li><strong><a href="/vacanze/sardegna/forte-village-resort-pula">Forte Village Resort</a></strong>: non e' tecnicamente Costa Smeralda (si trova sulla costa sud-ovest, a Santa Margherita di Pula) ma e' la risposta piu' completa al "resort di lusso italiano". 8 hotel, 21 ristoranti, spa thalassoterapica. Cani di piccola taglia su richiesta.</li>
 </ul>
 
 <h2>Camping village — l'opzione per chi ha un cane grande</h2>
@@ -291,8 +291,8 @@ export const ARTICOLI_DORMIRE = [
 <p>Per chi ha un cane di taglia media o grande e vuole vacanza in Sardegna, i <strong>camping village</strong> sono la scelta giusta. Spazi enormi, bungalow indipendenti, aree dedicate ai cani.</p>
 
 <ul>
-<li><strong><a href="/dormire/sardegna/baia-blu-tortuga-aglientu">Baia Blu La Tortuga</a></strong>: village sulla costa della Gallura, a pochi metri dalla spiaggia di Vignola Mare. Pineta naturale, piazzole e bungalow pet-friendly. Cani di tutte le taglie.</li>
-<li><strong><a href="/dormire/sardegna/tiliguerta-camping-muravera">Camping Tiliguerta</a></strong>: camping sulla celebre Costa Rei, accesso diretto alla spiaggia con la Tiliguerta Dog Beach. Bungalow pet-friendly, ideale per famiglie.</li>
+<li><strong><a href="/vacanze/sardegna/baia-blu-tortuga-aglientu">Baia Blu La Tortuga</a></strong>: village sulla costa della Gallura, a pochi metri dalla spiaggia di Vignola Mare. Pineta naturale, piazzole e bungalow pet-friendly. Cani di tutte le taglie.</li>
+<li><strong><a href="/vacanze/sardegna/tiliguerta-camping-muravera">Camping Tiliguerta</a></strong>: camping sulla celebre Costa Rei, accesso diretto alla spiaggia con la Tiliguerta Dog Beach. Bungalow pet-friendly, ideale per famiglie.</li>
 </ul>
 
 <h2>Come arrivare in Sardegna col cane</h2>
@@ -316,7 +316,7 @@ export const ARTICOLI_DORMIRE = [
 
 <p>La Sardegna offre anche <a href="/spiagge/sardegna">9 spiagge pet-friendly verificate</a>, tra cui Tiliguerta Dog Beach a Costa Rei e l'Oasi di Biderosa a Orosei. Combina struttura + mare per una vacanza completa.</p>
 
-<p><a href="/dormire/sardegna"><strong>Vedi la mappa delle strutture in Sardegna</strong></a>.</p>
+<p><a href="/vacanze/sardegna"><strong>Vedi la mappa delle strutture in Sardegna</strong></a>.</p>
     `,
   },
 
@@ -337,8 +337,8 @@ export const ARTICOLI_DORMIRE = [
 <p>Il Lago di Como e' sinonimo di vacanza di lusso dall'Ottocento. Clooney docet. Le strutture qui sono palazzi storici del XVI-XIX secolo trasformati in alberghi di fama internazionale.</p>
 
 <ul>
-<li><strong><a href="/dormire/lombardia/villa-deste-cernobbio">Villa d'Este</a></strong>: dimora storica del XVI secolo, parco di 10 ettari, piscina sul lago, spa, ristoranti stellati. Accoglie cani di piccola taglia nelle suite selezionate. Fascia luxury.</li>
-<li><strong><a href="/dormire/lombardia/grand-hotel-tremezzo-como">Grand Hotel Tremezzo</a></strong>: palazzo Liberty affacciato sul lago con tre piscine e parco secolare. Programma pet-friendly per cani di media taglia. Tra le foto piu' iconiche del lago.</li>
+<li><strong><a href="/vacanze/lombardia/villa-deste-cernobbio">Villa d'Este</a></strong>: dimora storica del XVI secolo, parco di 10 ettari, piscina sul lago, spa, ristoranti stellati. Accoglie cani di piccola taglia nelle suite selezionate. Fascia luxury.</li>
+<li><strong><a href="/vacanze/lombardia/grand-hotel-tremezzo-como">Grand Hotel Tremezzo</a></strong>: palazzo Liberty affacciato sul lago con tre piscine e parco secolare. Programma pet-friendly per cani di media taglia. Tra le foto piu' iconiche del lago.</li>
 </ul>
 
 <p>Entrambe le strutture sono nella fascia luxury (oltre 400€/notte). Se cerchi qualcosa di piu' accessibile sul Como col cane, il consiglio e' di cercare agriturismi nell'entroterra (Brianza, Valsassina) o B&B nei paesi meno celebrati.</p>
@@ -348,8 +348,8 @@ export const ARTICOLI_DORMIRE = [
 <p>Il Garda e' piu' accessibile del Como e offre soluzioni per tutte le tasche.</p>
 
 <ul>
-<li><strong><a href="/dormire/lombardia/splendido-bay-padenghe">Splendido Bay Luxury Spa Resort</a></strong>: resort moderno a Padenghe con spa, spiaggia privata e menu dedicato per ospiti a 4 zampe. Accoglie cani di tutte le taglie. Fascia alta.</li>
-<li><strong><a href="/dormire/lombardia/europa-silvella-garda">Camping Village Europa Silvella</a></strong>: village 4 stelle a San Felice del Benaco, 4 piscine, parco acquatico, area cani attrezzata. La scelta ideale per famiglie con bambini e cani. Fascia media.</li>
+<li><strong><a href="/vacanze/lombardia/splendido-bay-padenghe">Splendido Bay Luxury Spa Resort</a></strong>: resort moderno a Padenghe con spa, spiaggia privata e menu dedicato per ospiti a 4 zampe. Accoglie cani di tutte le taglie. Fascia alta.</li>
+<li><strong><a href="/vacanze/lombardia/europa-silvella-garda">Camping Village Europa Silvella</a></strong>: village 4 stelle a San Felice del Benaco, 4 piscine, parco acquatico, area cani attrezzata. La scelta ideale per famiglie con bambini e cani. Fascia media.</li>
 </ul>
 
 <h2>Milano — Four Seasons (e una sorpresa)</h2>
@@ -357,8 +357,8 @@ export const ARTICOLI_DORMIRE = [
 <p>Milano e' una citta' molto pet-friendly per essere una grande metropoli: parchi, metro ammessa coi cani, ristoranti con dehors accoglienti. Se vieni in citta' col cane, queste sono le opzioni:</p>
 
 <ul>
-<li><strong><a href="/dormire/lombardia/four-seasons-milano">Four Seasons Hotel Milano</a></strong>: l'ex convento del XV secolo nel Quadrilatero della Moda ha una delle <em>politiche pet-friendly piu' complete d'Italia</em>: cane gratuito, cuccia inclusa in camera, ciotole, menu dedicato, servizio spa per cani. Fascia luxury.</li>
-<li><strong><a href="/dormire/lombardia/palazzo-monti-brescia">Palazzo Monti</a></strong>: tecnicamente a Brescia, non Milano, ma merita una menzione. Palazzo del XIII secolo con affreschi originali, artist residency e B&B boutique pet-friendly. Fascia media, una vera chicca.</li>
+<li><strong><a href="/vacanze/lombardia/four-seasons-milano">Four Seasons Hotel Milano</a></strong>: l'ex convento del XV secolo nel Quadrilatero della Moda ha una delle <em>politiche pet-friendly piu' complete d'Italia</em>: cane gratuito, cuccia inclusa in camera, ciotole, menu dedicato, servizio spa per cani. Fascia luxury.</li>
+<li><strong><a href="/vacanze/lombardia/palazzo-monti-brescia">Palazzo Monti</a></strong>: tecnicamente a Brescia, non Milano, ma merita una menzione. Palazzo del XIII secolo con affreschi originali, artist residency e B&B boutique pet-friendly. Fascia media, una vera chicca.</li>
 </ul>
 
 <h2>Cosa fare col cane in Lombardia</h2>
@@ -369,7 +369,7 @@ export const ARTICOLI_DORMIRE = [
 <li><strong>Milano</strong>: parco Sempione, parco Lambro, parco Monte Stella, Naviglio Grande. Tutti i trasporti pubblici accettano cani con museruola (metro, tram, bus).</li>
 </ul>
 
-<p><a href="/dormire/lombardia"><strong>Vedi la mappa delle strutture pet-friendly in Lombardia</strong></a>.</p>
+<p><a href="/vacanze/lombardia"><strong>Vedi la mappa delle strutture pet-friendly in Lombardia</strong></a>.</p>
     `,
   },
 
@@ -390,9 +390,9 @@ export const ARTICOLI_DORMIRE = [
 <p>Il Cavallino-Treporti e' una penisola tra la laguna di Venezia e il mare Adriatico, con 15 km di spiaggia continua e decine di camping village. Qui nascono le innovazioni pet-friendly del Nord Adriatico: area cani dedicate, dog beach integrate, piazzole riservate.</p>
 
 <ul>
-<li><strong><a href="/dormire/veneto/union-lido-cavallino">Union Lido Park & Resort</a></strong>: uno dei campeggi piu' grandi d'Europa, 60 ettari con piscine, spiaggia privata 1.2km, zone pet dedicate. Tra i piu' famosi del mondo per famiglie con animali.</li>
-<li><strong><a href="/dormire/veneto/marina-di-venezia-camping">Camping Marina di Venezia</a></strong>: 5 stelle con parco acquatico, spiaggia privata di 1km e dog beach integrata. Tra i piu' premiati del Nord Adriatico.</li>
-<li><strong><a href="/dormire/veneto/ca-pasquali-village">Ca' Pasquali Village</a></strong>: village bungalow-camping nella pineta, a 100 metri dal mare. Area cani e dog beach vicine.</li>
+<li><strong><a href="/vacanze/veneto/union-lido-cavallino">Union Lido Park & Resort</a></strong>: uno dei campeggi piu' grandi d'Europa, 60 ettari con piscine, spiaggia privata 1.2km, zone pet dedicate. Tra i piu' famosi del mondo per famiglie con animali.</li>
+<li><strong><a href="/vacanze/veneto/marina-di-venezia-camping">Camping Marina di Venezia</a></strong>: 5 stelle con parco acquatico, spiaggia privata di 1km e dog beach integrata. Tra i piu' premiati del Nord Adriatico.</li>
+<li><strong><a href="/vacanze/veneto/ca-pasquali-village">Ca' Pasquali Village</a></strong>: village bungalow-camping nella pineta, a 100 metri dal mare. Area cani e dog beach vicine.</li>
 </ul>
 
 <p>Questi tre camping sono il "triangolo pet-friendly" del Cavallino. La fascia prezzo e' media (piazzole e bungalow da 80€ a 250€/notte in alta stagione), ma la qualita' e' alta.</p>
@@ -402,7 +402,7 @@ export const ARTICOLI_DORMIRE = [
 <p>Veneza e' la citta' piu' pet-friendly d'Italia. I cani sono ammessi su tutti i vaporetti della linea pubblica (ACTV), nei musei (alcuni), nei ristoranti con dehors e nei giardini. E puoi persino dormire in un resort a 5 stelle sull'isola privata della laguna:</p>
 
 <ul>
-<li><strong><a href="/dormire/veneto/jw-marriott-venice">JW Marriott Venice Resort & Spa</a></strong>: resort sull'isola delle Rose, con navetta privata gratuita dal centro di Venezia. Pet-friendly con amenity dedicate. Fascia luxury, ma un'esperienza che non trovi da nessun'altra parte al mondo.</li>
+<li><strong><a href="/vacanze/veneto/jw-marriott-venice">JW Marriott Venice Resort & Spa</a></strong>: resort sull'isola delle Rose, con navetta privata gratuita dal centro di Venezia. Pet-friendly con amenity dedicate. Fascia luxury, ma un'esperienza che non trovi da nessun'altra parte al mondo.</li>
 </ul>
 
 <p>Se la tua idea di vacanza a Venezia include <strong>spiaggia al mattino + città del patrimonio UNESCO al pomeriggio</strong>, il JW Marriott e' la soluzione perfetta. Alternativa piu' economica: alloggio sul Lido (hotel tradizionali) + vaporetto per il centro.</p>
@@ -412,7 +412,7 @@ export const ARTICOLI_DORMIRE = [
 <p>Abano Terme, a 10 km da Padova, e' la capitale italiana del benessere termale. Le piscine termali sono una specialita' veneta unica in Europa.</p>
 
 <ul>
-<li><strong><a href="/dormire/veneto/abano-grand-hotel">Abano Grand Hotel</a></strong>: storico grand hotel termale con piscine termali, spa medica e parco secolare. Accoglie cani di taglia media. Ideale per weekend di relax.</li>
+<li><strong><a href="/vacanze/veneto/abano-grand-hotel">Abano Grand Hotel</a></strong>: storico grand hotel termale con piscine termali, spa medica e parco secolare. Accoglie cani di taglia media. Ideale per weekend di relax.</li>
 </ul>
 
 <h2>Idee di itinerario</h2>
@@ -429,7 +429,7 @@ export const ARTICOLI_DORMIRE = [
 
 <p>Il Veneto ha la <strong><a href="/spiagge/veneto/spiaggia-di-pluto-bibione">Spiaggia di Pluto a Bibione</a></strong>, la piu' grande dog beach d'Italia. Se il tuo camping e' al Cavallino, e' una gita facile di una giornata. <a href="/spiagge/veneto">Tutte le spiagge in Veneto</a>.</p>
 
-<p><a href="/dormire/veneto"><strong>Vedi la mappa delle strutture in Veneto</strong></a>.</p>
+<p><a href="/vacanze/veneto"><strong>Vedi la mappa delle strutture in Veneto</strong></a>.</p>
     `,
   },
 
@@ -448,8 +448,8 @@ export const ARTICOLI_DORMIRE = [
 <h2>Portofino — il lusso storico</h2>
 
 <ul>
-<li><strong><a href="/dormire/liguria/belmond-hotel-splendido-portofino">Belmond Hotel Splendido</a></strong>: ex monastero del XVI secolo con vista sulla baia di Portofino, tra i piu' iconici al mondo. Accoglie cani di piccola e media taglia su richiesta. Piscina riscaldata, spa, ristorante stellato. Fascia luxury.</li>
-<li><strong><a href="/dormire/liguria/splendido-mare-portofino">Belmond Splendido Mare</a></strong>: hotel storico sulla celebre Piazzetta di Portofino, di proprieta' Belmond. Accoglie cani di piccola taglia. Fascia alta.</li>
+<li><strong><a href="/vacanze/liguria/belmond-hotel-splendido-portofino">Belmond Hotel Splendido</a></strong>: ex monastero del XVI secolo con vista sulla baia di Portofino, tra i piu' iconici al mondo. Accoglie cani di piccola e media taglia su richiesta. Piscina riscaldata, spa, ristorante stellato. Fascia luxury.</li>
+<li><strong><a href="/vacanze/liguria/splendido-mare-portofino">Belmond Splendido Mare</a></strong>: hotel storico sulla celebre Piazzetta di Portofino, di proprieta' Belmond. Accoglie cani di piccola taglia. Fascia alta.</li>
 </ul>
 
 <p>I due Splendido sono gestiti dallo stesso gruppo e rappresentano il top assoluto del lusso ligure. Portofino e' un borgo minuscolo (poche centinaia di metri) ma con un'atmosfera senza pari. Il cane puo' passeggiare sulla piazzetta, nei sentieri del parco, sui moli. Alcuni ristoranti accettano cani nei dehors.</p>
@@ -471,7 +471,7 @@ export const ARTICOLI_DORMIRE = [
 
 <p>Nel nostro database abbiamo solo le 2 strutture di Portofino — il panorama ligure degli hotel pet-friendly e' molto vasto ma frammentato. Per alternative concrete, usa la ricerca Booking filtrata per "animali ammessi" nelle zone di: Sanremo, Alassio, Diano Marina (Riviera di Ponente), Chiavari, Rapallo, Sestri Levante (Tigullio), Levanto (Cinque Terre nord).</p>
 
-<p><a href="/dormire/liguria"><strong>Vedi la mappa delle strutture in Liguria</strong></a>.</p>
+<p><a href="/vacanze/liguria"><strong>Vedi la mappa delle strutture in Liguria</strong></a>.</p>
 <p><a href="/spiagge/liguria"><strong>Vedi anche le spiagge dog-friendly in Liguria</strong></a>.</p>
     `,
   },
@@ -490,26 +490,26 @@ export const ARTICOLI_DORMIRE = [
 
 <h2>Verdura Resort — il top di gamma siciliano</h2>
 
-<p>Sulla costa agrigentina, tra Sciacca e Selinunte, il <strong><a href="/dormire/sicilia/verdura-resort-sciacca">Verdura Resort</a></strong> del gruppo Rocco Forte e' l'unico resort davvero "internazionale" in Sicilia: 230 ettari di terreno, spa di 4000 mq, 3 campi da golf, 2 km di costa privata, bio-farm. Accoglie cani di tutte le taglie con programma dedicato. Fascia luxury.</p>
+<p>Sulla costa agrigentina, tra Sciacca e Selinunte, il <strong><a href="/vacanze/sicilia/verdura-resort-sciacca">Verdura Resort</a></strong> del gruppo Rocco Forte e' l'unico resort davvero "internazionale" in Sicilia: 230 ettari di terreno, spa di 4000 mq, 3 campi da golf, 2 km di costa privata, bio-farm. Accoglie cani di tutte le taglie con programma dedicato. Fascia luxury.</p>
 
 <p>E' una destinazione "chiusa" — entri e non esci per tutta la durata del soggiorno. Il cane puo' muoversi nel parco, accedere ad alcune aree comuni e usufruire di servizi dedicati. Per chi cerca il "tutto incluso" in Sicilia, e' la scelta ovvia.</p>
 
 <h2>Masseria Susafa — l'entroterra madonita</h2>
 
-<p>Nel cuore del <strong>Parco delle Madonie</strong>, la <strong><a href="/dormire/sicilia/masseria-susafa-polizzi">Masseria Susafa</a></strong> e' una masseria fortificata trasformata in boutique hotel 4 stelle. 18 camere, cucina slow food, pane tradizionale fatto a mano. Accoglie cani di tutte le taglie.</p>
+<p>Nel cuore del <strong>Parco delle Madonie</strong>, la <strong><a href="/vacanze/sicilia/masseria-susafa-polizzi">Masseria Susafa</a></strong> e' una masseria fortificata trasformata in boutique hotel 4 stelle. 18 camere, cucina slow food, pane tradizionale fatto a mano. Accoglie cani di tutte le taglie.</p>
 
 <p>Le Madonie sono un paradiso per escursioni: foreste di faggio, borghi medievali (Petralia Sottana, Castelbuono), 200 km di sentieri segnalati. Perfetto per chi vuole evitare il caldo costiero di luglio-agosto.</p>
 
 <h2>Falconara Charming House — il castello sul mare</h2>
 
-<p>Sulla costa tra Gela e Agrigento, il <strong><a href="/dormire/sicilia/falconara-resort-butera">Falconara Charming House Resort</a></strong> e' un castello medievale sul mare, unico nel suo genere in Sicilia. Giardino storico, spiaggia privata, cucina siciliana. Accoglie cani di tutte le taglie. Fascia alta.</p>
+<p>Sulla costa tra Gela e Agrigento, il <strong><a href="/vacanze/sicilia/falconara-resort-butera">Falconara Charming House Resort</a></strong> e' un castello medievale sul mare, unico nel suo genere in Sicilia. Giardino storico, spiaggia privata, cucina siciliana. Accoglie cani di tutte le taglie. Fascia alta.</p>
 
 <h2>Pantelleria — l'isola del vento</h2>
 
 <p>Pantelleria e' una delle isole piu' selvagge del Mediterraneo, a meta' strada tra Sicilia e Tunisia. Paesaggio lunare, dammusi, cale vulcaniche. Non e' una destinazione facile ma per chi cerca qualcosa di unico:</p>
 
 <ul>
-<li><strong><a href="/dormire/sicilia/hotel-paradise-pantelleria">Hotel Paradise Pantelleria</a></strong>: hotel boutique con accesso facile alle calette vulcaniche. Accoglie cani di taglia media.</li>
+<li><strong><a href="/vacanze/sicilia/hotel-paradise-pantelleria">Hotel Paradise Pantelleria</a></strong>: hotel boutique con accesso facile alle calette vulcaniche. Accoglie cani di taglia media.</li>
 </ul>
 
 <p>Attenzione: Pantelleria e' raggiungibile solo in aereo (Trapani, Palermo, Roma) o traghetto (Trapani). In entrambi i casi, assicurati che il tuo cane possa fare il tragitto.</p>
@@ -518,7 +518,7 @@ export const ARTICOLI_DORMIRE = [
 
 <p>Per chi ha budget piu' ridotto o cerca la vacanza "in pineta":</p>
 <ul>
-<li><strong><a href="/dormire/sicilia/camping-la-pineta-sicilia">Camping La Pineta sul Mare</a></strong> a Calatabiano (CT): camping sulla costa ionica tra mare e Etna. Pineta naturale, piazzole e bungalow pet-friendly. Vicino a Taormina, ideale per chi vuole visitare il borgo (cani al guinzaglio).</li>
+<li><strong><a href="/vacanze/sicilia/camping-la-pineta-sicilia">Camping La Pineta sul Mare</a></strong> a Calatabiano (CT): camping sulla costa ionica tra mare e Etna. Pineta naturale, piazzole e bungalow pet-friendly. Vicino a Taormina, ideale per chi vuole visitare il borgo (cani al guinzaglio).</li>
 </ul>
 
 <h2>Quando andare in Sicilia col cane</h2>
@@ -529,7 +529,7 @@ export const ARTICOLI_DORMIRE = [
 
 <p>La Sicilia ha <a href="/spiagge/sicilia">6 spiagge pet-friendly mappate</a>, tra cui Mondello (Palermo) e Marzamemi (Siracusa). Combinare struttura + spiagge e' fondamentale per una vacanza riuscita.</p>
 
-<p><a href="/dormire/sicilia"><strong>Vedi la mappa delle strutture in Sicilia</strong></a>.</p>
+<p><a href="/vacanze/sicilia"><strong>Vedi la mappa delle strutture in Sicilia</strong></a>.</p>
     `,
   },
 
@@ -550,7 +550,7 @@ export const ARTICOLI_DORMIRE = [
 <p>Capri e' una destinazione difficile col cane. L'isola e' piccola, i sentieri sono tra i piu' belli d'Italia ma spesso affollati in alta stagione. I grandi alberghi sono quasi tutti del periodo del Grand Tour (XIX secolo) e hanno regolamenti pet variabili. Il riferimento moderno e':</p>
 
 <ul>
-<li><strong><a href="/dormire/campania/capri-palace-anacapri">Capri Palace Jumeirah</a></strong>: hotel di design nell'alta Anacapri (zona piu' tranquilla dell'isola), con collezione d'arte e spa unica. Accoglie cani di piccola taglia. Fascia luxury.</li>
+<li><strong><a href="/vacanze/campania/capri-palace-anacapri">Capri Palace Jumeirah</a></strong>: hotel di design nell'alta Anacapri (zona piu' tranquilla dell'isola), con collezione d'arte e spa unica. Accoglie cani di piccola taglia. Fascia luxury.</li>
 </ul>
 
 <p>Consigli per Capri col cane: evita luglio-agosto, arriva in aliscafo (piu' veloce del traghetto, cane in trasportino o al guinzaglio), usa i mini-taxi dell'isola per spostarti (accettano cani su richiesta).</p>
@@ -560,13 +560,13 @@ export const ARTICOLI_DORMIRE = [
 <p>Positano e' il borgo piu' fotografato della Costiera Amalfitana. Il punto debole: le spiagge sono piccole e affollate, e le stradine ripide sono impegnative per cani di taglia grande o anziani.</p>
 
 <ul>
-<li><strong><a href="/dormire/campania/hotel-le-agavi-positano">Hotel Le Agavi</a></strong>: hotel sul promontorio di Positano con ascensore privato alla spiaggia. Accoglie cani di taglia media in alcune camere. Vista mozzafiato sulla Costiera. Fascia alta.</li>
+<li><strong><a href="/vacanze/campania/hotel-le-agavi-positano">Hotel Le Agavi</a></strong>: hotel sul promontorio di Positano con ascensore privato alla spiaggia. Accoglie cani di taglia media in alcune camere. Vista mozzafiato sulla Costiera. Fascia alta.</li>
 </ul>
 
 <h2>Costiera Amalfitana — Monastero Santa Rosa</h2>
 
 <ul>
-<li><strong><a href="/dormire/campania/monastero-santa-rosa-conca-marini">Monastero Santa Rosa Hotel & Spa</a></strong>: ex monastero del XVII secolo sulla Costiera Amalfitana, 20 camere esclusive con vista mare. Accoglie cani di piccola taglia. Fascia luxury.</li>
+<li><strong><a href="/vacanze/campania/monastero-santa-rosa-conca-marini">Monastero Santa Rosa Hotel & Spa</a></strong>: ex monastero del XVII secolo sulla Costiera Amalfitana, 20 camere esclusive con vista mare. Accoglie cani di piccola taglia. Fascia luxury.</li>
 </ul>
 
 <p>Il Monastero e' a Conca dei Marini, tra Amalfi e Praiano. Una delle posizioni piu' esclusive della Costiera.</p>
@@ -581,7 +581,7 @@ export const ARTICOLI_DORMIRE = [
 
 <p>La Campania ha <a href="/spiagge/campania">5 spiagge pet-friendly mappate</a>, tra cui Bau Beach Palinuro nel Cilento e Baia delle Rocce Verdi a Napoli. Il Cilento offre il migliore rapporto struttura + mare per chi viaggia col cane in Campania.</p>
 
-<p><a href="/dormire/campania"><strong>Vedi la mappa delle strutture in Campania</strong></a>.</p>
+<p><a href="/vacanze/campania"><strong>Vedi la mappa delle strutture in Campania</strong></a>.</p>
     `,
   },
 
@@ -600,7 +600,7 @@ export const ARTICOLI_DORMIRE = [
 <h2>Grand Hotel Rimini — l'icona felliniana</h2>
 
 <ul>
-<li><strong><a href="/dormire/emilia-romagna/grand-hotel-rimini">Grand Hotel Rimini</a></strong>: hotel simbolo della Riviera Romagnola dal 1908, celebrato da Federico Fellini in "Amarcord". 5 stelle lusso con spiaggia privata (Bagno 1), spa, ristorante storico e parco secolare. Accoglie cani di tutte le taglie con menu dedicato. Fascia alta.</li>
+<li><strong><a href="/vacanze/emilia-romagna/grand-hotel-rimini">Grand Hotel Rimini</a></strong>: hotel simbolo della Riviera Romagnola dal 1908, celebrato da Federico Fellini in "Amarcord". 5 stelle lusso con spiaggia privata (Bagno 1), spa, ristorante storico e parco secolare. Accoglie cani di tutte le taglie con menu dedicato. Fascia alta.</li>
 </ul>
 
 <p>Il Grand Hotel Rimini non e' solo un hotel: e' un monumento nazionale. Dormire qui significa dormire in uno dei simboli del turismo italiano del Novecento. La posizione e' perfetta per esplorare Rimini e la Riviera Romagnola col cane.</p>
@@ -621,7 +621,7 @@ export const ARTICOLI_DORMIRE = [
 
 <p>L'Emilia-Romagna ha la <strong><a href="/spiagge/emilia-romagna/spiaggia-libera-lido-di-classe">Spiaggia Libera di Lido di Classe</a></strong>, una delle migliori dog beach pubbliche d'Italia: gratuita, regolamentata, lunga stagione. A Rimini il Dog No Problem (Bagno 81) e' un punto di riferimento storico. Guarda tutte le <a href="/spiagge/emilia-romagna">spiagge pet-friendly in Emilia-Romagna</a>.</p>
 
-<p><a href="/dormire/emilia-romagna"><strong>Vedi la mappa delle strutture in Emilia-Romagna</strong></a>.</p>
+<p><a href="/vacanze/emilia-romagna"><strong>Vedi la mappa delle strutture in Emilia-Romagna</strong></a>.</p>
     `,
   },
 
@@ -640,7 +640,7 @@ export const ARTICOLI_DORMIRE = [
 <h2>Castello di Reschio — il castello dell'anno 1000</h2>
 
 <ul>
-<li><strong><a href="/dormire/umbria/castello-reschio-umbria">Castello di Reschio</a></strong>: castello dell'anno 1000 con tenuta di 1500 ettari al confine tra Toscana e Umbria, vicino al Lago Trasimeno. Hotel di design, 50 case in pietra ristrutturate e affittabili indipendentemente. Cavalli, spa, ristorante gourmet. Accoglie cani di tutte le taglie. Fascia luxury.</li>
+<li><strong><a href="/vacanze/umbria/castello-reschio-umbria">Castello di Reschio</a></strong>: castello dell'anno 1000 con tenuta di 1500 ettari al confine tra Toscana e Umbria, vicino al Lago Trasimeno. Hotel di design, 50 case in pietra ristrutturate e affittabili indipendentemente. Cavalli, spa, ristorante gourmet. Accoglie cani di tutte le taglie. Fascia luxury.</li>
 </ul>
 
 <p>Reschio e' uno dei luoghi piu' speciali d'Italia. Non e' un hotel in senso tradizionale — e' un'intera tenuta dove puoi affittare una casa storica ristrutturata con standard 5 stelle. Ogni casa ha il proprio giardino, le proprie terrazze, la propria privacy. Perfetto per chi viaggia col cane e vuole libertà totale.</p>
@@ -648,7 +648,7 @@ export const ARTICOLI_DORMIRE = [
 <h2>Palazzo Seneca — il cuore di Norcia</h2>
 
 <ul>
-<li><strong><a href="/dormire/umbria/palazzo-seneca-norcia">Palazzo Seneca</a></strong>: hotel nobiliare del Cinquecento nel cuore di Norcia, cucina di eccellenza con prodotti della tradizione umbra (tartufo nero, salumi di Norcia, lenticchie di Castelluccio). Pet-friendly con cani di taglia media. Fascia alta.</li>
+<li><strong><a href="/vacanze/umbria/palazzo-seneca-norcia">Palazzo Seneca</a></strong>: hotel nobiliare del Cinquecento nel cuore di Norcia, cucina di eccellenza con prodotti della tradizione umbra (tartufo nero, salumi di Norcia, lenticchie di Castelluccio). Pet-friendly con cani di taglia media. Fascia alta.</li>
 </ul>
 
 <p>Norcia e' il centro gastronomico dell'Umbria e la base ideale per esplorare il Parco Nazionale dei Monti Sibillini (Castelluccio, Piano Grande) col cane. Il palazzo Seneca e' gestito dalla famiglia Bianconi da generazioni e ha un approccio personalizzato al cliente.</p>
@@ -667,7 +667,7 @@ export const ARTICOLI_DORMIRE = [
 
 <p><strong>Aprile-giugno</strong> per Castelluccio (fioritura), <strong>settembre-ottobre</strong> per il fogliame autunnale e le degustazioni del tartufo bianco. Luglio-agosto sono caldi ma piu' gestibili della costa grazie all'altitudine.</p>
 
-<p><a href="/dormire/umbria"><strong>Vedi la mappa delle strutture in Umbria</strong></a>.</p>
+<p><a href="/vacanze/umbria"><strong>Vedi la mappa delle strutture in Umbria</strong></a>.</p>
     `,
   },
 ];

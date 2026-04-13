@@ -5,32 +5,32 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { MapPin, Star, ExternalLink } from "lucide-react";
 import {
-  unslugifyRegioneDormire,
-  getDormireByRegione,
-  getAllRegioniDormire,
+  unslugifyRegioneVacanze,
+  getVacanzeByRegione,
+  getAllRegioniVacanze,
   buildBookingUrl,
   PREZZO_LABEL,
-} from "@/lib/dormire-seed";
+} from "@/lib/vacanze-seed";
 import { collectionJsonLd, breadcrumbJsonLd, jsonLdScript } from "@/lib/json-ld";
-import { MapDormire } from "../MapDormire";
+import { MapVacanze } from "../MapVacanze";
 
 export function generateStaticParams() {
-  return getAllRegioniDormire().map((regione) => ({ regione }));
+  return getAllRegioniVacanze().map((regione) => ({ regione }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ regione: string }> }) {
   const { regione: regioneSlug } = await params;
-  const regione = unslugifyRegioneDormire(regioneSlug);
+  const regione = unslugifyRegioneVacanze(regioneSlug);
   if (!regione) return { title: "Regione non trovata" };
-  const count = getDormireByRegione(regioneSlug).length;
-  const title = `Hotel e strutture pet-friendly in ${regione} 2026 — Dormire con il cane | MifidoDiTe.eu`;
+  const count = getVacanzeByRegione(regioneSlug).length;
+  const title = `Vacanze con il cane in ${regione} 2026 — Hotel e strutture pet-friendly | MifidoDiTe.eu`;
   const description = `${count} strutture ricettive pet-friendly in ${regione}: hotel, agriturismi, B&B, camping. Mappa, filtri e prenotazioni su Booking.`;
-  const url = `https://www.mifidodite.eu/dormire/${regioneSlug}`;
+  const url = `https://www.mifidodite.eu/vacanze/${regioneSlug}`;
   const ogImg = `https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80`;
   return {
     title,
     description,
-    keywords: [`hotel pet friendly ${regione}`, `dormire con cane ${regione}`, `agriturismi cani ${regione}`],
+    keywords: [`hotel pet friendly ${regione}`, `vacanze con cane ${regione}`, `dormire con cane ${regione}`, `agriturismi cani ${regione}`],
     alternates: { canonical: url },
     openGraph: {
       type: "website",
@@ -53,12 +53,12 @@ const TIPO_BADGE: Record<string, { bg: string; label: string }> = {
   casa_vacanza: { bg: "bg-purple-600", label: "Casa vacanza" },
 };
 
-export default async function DormireRegionePage({ params }: { params: Promise<{ regione: string }> }) {
+export default async function VacanzeRegionePage({ params }: { params: Promise<{ regione: string }> }) {
   const { regione: regioneSlug } = await params;
-  const regione = unslugifyRegioneDormire(regioneSlug);
+  const regione = unslugifyRegioneVacanze(regioneSlug);
   if (!regione) notFound();
 
-  const strutture = getDormireByRegione(regioneSlug);
+  const strutture = getVacanzeByRegione(regioneSlug);
   if (strutture.length === 0) notFound();
 
   const pins = strutture.map((s) => ({
@@ -72,11 +72,11 @@ export default async function DormireRegionePage({ params }: { params: Promise<{
   }));
 
   const jsonLdData = [
-    collectionJsonLd(`Hotel pet-friendly in ${regione}`, `/dormire/${regioneSlug}`, strutture.length),
+    collectionJsonLd(`Hotel pet-friendly in ${regione}`, `/vacanze/${regioneSlug}`, strutture.length),
     breadcrumbJsonLd([
       { name: "Home", url: "/" },
-      { name: "Dormire", url: "/dormire" },
-      { name: regione, url: `/dormire/${regioneSlug}` },
+      { name: "Vacanze", url: "/vacanze" },
+      { name: regione, url: `/vacanze/${regioneSlug}` },
     ]),
   ];
 
@@ -92,13 +92,13 @@ export default async function DormireRegionePage({ params }: { params: Promise<{
               <Breadcrumbs
                 dark
                 items={[
-                  { name: "Dormire", url: "/dormire" },
-                  { name: regione, url: `/dormire/${regioneSlug}` },
+                  { name: "Vacanze", url: "/vacanze" },
+                  { name: regione, url: `/vacanze/${regioneSlug}` },
                 ]}
               />
             </div>
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">
-              Dormire con il cane in <span className="bg-gradient-to-r from-primary-light to-accent bg-clip-text text-transparent">{regione}</span>
+              Vacanze con il cane in <span className="bg-gradient-to-r from-primary-light to-accent bg-clip-text text-transparent">{regione}</span>
             </h1>
             <p className="mt-4 text-lg text-white/60 max-w-2xl mx-auto">
               {strutture.length} strutture ricettive pet-friendly: hotel, agriturismi, B&amp;B, camping e case vacanza verificate.
@@ -107,7 +107,7 @@ export default async function DormireRegionePage({ params }: { params: Promise<{
         </section>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-          <MapDormire strutture={pins} />
+          <MapVacanze strutture={pins} />
         </div>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-12">
@@ -118,7 +118,7 @@ export default async function DormireRegionePage({ params }: { params: Promise<{
                 key={s.slug}
                 className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 border border-border/50 flex flex-col"
               >
-                <Link href={`/dormire/${regioneSlug}/${s.slug}`} className="group block">
+                <Link href={`/vacanze/${regioneSlug}/${s.slug}`} className="group block">
                   <div className="h-48 overflow-hidden relative">
                     <img src={s.img} alt={s.nome} className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500" />
                     <span className={`absolute top-3 left-3 text-xs font-semibold px-3 py-1 rounded-full text-white ${TIPO_BADGE[s.tipo].bg}`}>

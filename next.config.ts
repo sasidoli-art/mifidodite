@@ -21,6 +21,19 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      // Migrazione /dormire -> /vacanze (13 Apr 2026)
+      { source: "/dormire", destination: "/vacanze", permanent: true },
+      { source: "/dormire/:path*", destination: "/vacanze/:path*", permanent: true },
+      // Vecchio slug articolo hub -> nuovo
+      {
+        source: "/magazine/dormire-con-il-cane-italia-2026-guida",
+        destination: "/magazine/vacanze-con-il-cane-italia-2026-guida",
+        permanent: true,
+      },
+    ];
+  },
   async headers() {
     return [
       {

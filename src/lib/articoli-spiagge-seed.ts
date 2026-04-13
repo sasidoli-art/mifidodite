@@ -59,7 +59,7 @@ export const ARTICOLI_SPIAGGE = [
 
 <p><strong>Come muoversi</strong>: se sei a Roma senza auto, le spiagge raggiungibili in treno dal centro sono Maccarese e Ladispoli (entrambe linea Roma-Civitavecchia). Per Sabaudia serve auto o bus.</p>
 
-<p><strong>Combinare con dormire</strong>: se alloggi a Sabaudia, guarda il <a href="/dormire/lazio">Park Hotel Marlin</a> e il <a href="/dormire/lazio">Circeo Park Hotel</a> nella nostra mappa delle strutture pet-friendly del Lazio.</p>
+<p><strong>Combinare con dormire</strong>: se alloggi a Sabaudia, guarda il <a href="/vacanze/lazio">Park Hotel Marlin</a> e il <a href="/vacanze/lazio">Circeo Park Hotel</a> nella nostra mappa delle strutture pet-friendly del Lazio.</p>
 
 <p><a href="/spiagge/lazio"><strong>Vedi la mappa delle spiagge per cani in Lazio</strong></a>.</p>
     `,
@@ -101,7 +101,7 @@ export const ARTICOLI_SPIAGGE = [
 <p><strong>Periodo ideale</strong>: giugno e settembre. Agosto e' molto affollato nei weekend (soprattutto la Pescara di Fabrizio Fontana). Maggio e' perfetto per i parchi ma il mare e' ancora freddo.</p>
 
 <p><a href="/spiagge/abruzzo"><strong>Vedi la mappa delle spiagge dog-friendly in Abruzzo</strong></a>.</p>
-<p>Se cerchi anche dove dormire col cane in Abruzzo, <a href="/dormire/abruzzo">guarda la nostra selezione di strutture pet-friendly abruzzesi</a>.</p>
+<p>Se cerchi anche dove dormire col cane in Abruzzo, <a href="/vacanze/abruzzo">guarda la nostra selezione di strutture pet-friendly abruzzesi</a>.</p>
     `,
   },
 
@@ -232,7 +232,7 @@ export const ARTICOLI_SPIAGGE = [
 </ul>
 
 <p><a href="/spiagge/friuli-venezia-giulia"><strong>Vedi la mappa delle spiagge per cani in Friuli-Venezia Giulia</strong></a>.</p>
-<p>Per dormire col cane in regione, guarda il <a href="/dormire/friuli-venezia-giulia">Falkensteiner Lignano</a> e il <a href="/dormire/friuli-venezia-giulia">Grand Hotel Astoria di Grado</a>.</p>
+<p>Per dormire col cane in regione, guarda il <a href="/vacanze/friuli-venezia-giulia">Falkensteiner Lignano</a> e il <a href="/vacanze/friuli-venezia-giulia">Grand Hotel Astoria di Grado</a>.</p>
     `,
   },
 

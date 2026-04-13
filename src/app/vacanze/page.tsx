@@ -1,38 +1,38 @@
 import { Header } from "@/components/landing/Header";
 import { Footer } from "@/components/landing/Footer";
-import { DORMIRE_SEED, slugifyRegioneD, buildBookingUrl } from "@/lib/dormire-seed";
-import { DormireClient, type DormireUI } from "./DormireClient";
+import { VACANZE_SEED, slugifyRegioneV, buildBookingUrl } from "@/lib/vacanze-seed";
+import { VacanzeClient, type VacanzeUI } from "./VacanzeClient";
 
 export const metadata = {
-  title: "Dormire con il cane in Italia 2026 — Hotel, agriturismi e camping pet-friendly | MifidoDiTe.eu",
-  description: "La mappa delle strutture ricettive pet-friendly in Italia: hotel, agriturismi, B&B, camping e case vacanza verificate. Filtri per regione, tipo, prezzo, taglia cane.",
-  keywords: ["hotel pet friendly", "agriturismo cani", "dormire con il cane", "camping cani", "b&b pet friendly italia"],
-  alternates: { canonical: "https://www.mifidodite.eu/dormire" },
+  title: "Vacanze con il cane in Italia 2026 — Hotel, agriturismi e camping pet-friendly | MifidoDiTe.eu",
+  description: "La mappa delle strutture ricettive pet-friendly in Italia per le tue vacanze col cane: hotel, agriturismi, B&B, camping e case vacanza verificate. Filtri per regione, tipo, prezzo, taglia cane.",
+  keywords: ["hotel pet friendly", "agriturismo cani", "vacanze con il cane", "dormire con il cane", "camping cani", "b&b pet friendly italia"],
+  alternates: { canonical: "https://www.mifidodite.eu/vacanze" },
   openGraph: {
     type: "website",
-    title: "Dormire con il cane in Italia 2026 — 60 strutture pet-friendly",
+    title: "Vacanze con il cane in Italia 2026 — Strutture pet-friendly",
     description: "Hotel, agriturismi, masserie, camping e B&B verificati. Mappa, filtri e prenotazione su Booking.",
-    url: "https://www.mifidodite.eu/dormire",
+    url: "https://www.mifidodite.eu/vacanze",
     siteName: "MifidoDiTe.eu",
     locale: "it_IT",
     images: [{ url: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80", width: 1200, height: 630 }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dormire con il cane in Italia 2026",
-    description: "60 strutture pet-friendly in 13 regioni.",
+    title: "Vacanze con il cane in Italia 2026",
+    description: "Strutture pet-friendly in tutte le regioni italiane.",
     images: ["https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80"],
   },
 };
 
-export default function DormirePage() {
-  const strutture: DormireUI[] = DORMIRE_SEED.map((s) => ({
+export default function VacanzePage() {
+  const strutture: VacanzeUI[] = VACANZE_SEED.map((s) => ({
     slug: s.slug,
     nome: s.nome,
     comune: s.comune,
     provincia: s.provincia,
     regione: s.regione,
-    regioneSlug: slugifyRegioneD(s.regione),
+    regioneSlug: slugifyRegioneV(s.regione),
     tipo: s.tipo,
     descrizione: s.descrizione,
     fascia: s.fascia,
@@ -55,7 +55,7 @@ export default function DormirePage() {
           <div className="absolute inset-0 opacity-[.03]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='.6' fill='white'/%3E%3C/svg%3E\")" }} />
           <div className="max-w-5xl mx-auto px-4 text-center relative z-10">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">
-              Dormire con il <span className="bg-gradient-to-r from-primary-light to-accent bg-clip-text text-transparent">tuo animale</span> in Italia
+              In <span className="bg-gradient-to-r from-primary-light to-accent bg-clip-text text-transparent">vacanza</span> con il tuo animale
             </h1>
             <p className="mt-4 text-lg text-white/60 max-w-2xl mx-auto">
               {strutture.length} strutture ricettive pet-friendly in {regioni.length} regioni: hotel, agriturismi, B&amp;B, camping e case vacanza. Mappa interattiva con filtri.
@@ -63,7 +63,7 @@ export default function DormirePage() {
           </div>
         </section>
 
-        <DormireClient strutture={strutture} />
+        <VacanzeClient strutture={strutture} />
 
         <section className="py-8 bg-muted/50">
           <div className="max-w-3xl mx-auto px-4 text-center">

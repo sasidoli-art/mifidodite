@@ -19,7 +19,7 @@ interface Props {
   tipo: "hotel" | "agriturismo" | "bnb" | "camping" | "casa_vacanza";
 }
 
-export default function MiniMapDormireInner({ lat, lng, nome, tipo }: Props) {
+export default function MiniMapVacanzeInner({ lat, lng, nome, tipo }: Props) {
   const mapRef = useRef<L.Map | null>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 

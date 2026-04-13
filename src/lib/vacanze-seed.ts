@@ -2,26 +2,26 @@
 // Selezione editoriale di strutture note; pet-friendliness da verificare sempre
 // con la struttura o tramite Booking. Affiliate link monetizzati.
 
-import type { DormireSeed } from "./dormire-types";
-import { slugifyRegioneD } from "./dormire-types";
-export type { DormireSeed } from "./dormire-types";
-export { slugifyRegioneD, buildBookingUrl, DORMIRE_TIPO_LABEL, DORMIRE_TIPO_LABEL_SINGULAR, PREZZO_LABEL, PREZZO_DESCRIZIONE } from "./dormire-types";
+import type { VacanzeSeed } from "./vacanze-types";
+import { slugifyRegioneV } from "./vacanze-types";
+export type { VacanzeSeed } from "./vacanze-types";
+export { slugifyRegioneV, buildBookingUrl, VACANZE_TIPO_LABEL, VACANZE_TIPO_LABEL_SINGULAR, PREZZO_LABEL, PREZZO_DESCRIZIONE } from "./vacanze-types";
 
-export function getDormireBySlug(slug: string): DormireSeed | undefined {
-  return DORMIRE_SEED.find((s) => s.slug === slug);
+export function getVacanzaBySlug(slug: string): VacanzeSeed | undefined {
+  return VACANZE_SEED.find((s) => s.slug === slug);
 }
 
-export function getDormireByRegione(regioneSlug: string): DormireSeed[] {
-  return DORMIRE_SEED.filter((s) => slugifyRegioneD(s.regione) === regioneSlug);
+export function getVacanzeByRegione(regioneSlug: string): VacanzeSeed[] {
+  return VACANZE_SEED.filter((s) => slugifyRegioneV(s.regione) === regioneSlug);
 }
 
-export function getAllRegioniDormire(): string[] {
-  return Array.from(new Set(DORMIRE_SEED.map((s) => slugifyRegioneD(s.regione))));
+export function getAllRegioniVacanze(): string[] {
+  return Array.from(new Set(VACANZE_SEED.map((s) => slugifyRegioneV(s.regione))));
 }
 
-export function unslugifyRegioneDormire(slug: string): string | null {
-  const match = Array.from(new Set(DORMIRE_SEED.map((s) => s.regione))).find(
-    (r) => slugifyRegioneD(r) === slug
+export function unslugifyRegioneVacanze(slug: string): string | null {
+  const match = Array.from(new Set(VACANZE_SEED.map((s) => s.regione))).find(
+    (r) => slugifyRegioneV(r) === slug
   );
   return match || null;
 }
@@ -54,7 +54,7 @@ const IMG_CASA = [
   "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
 ];
 
-const pickImg = (tipo: DormireSeed["tipo"], i: number): string => {
+const pickImg = (tipo: VacanzeSeed["tipo"], i: number): string => {
   const arr =
     tipo === "hotel" ? IMG_HOTEL :
     tipo === "agriturismo" ? IMG_AGRITURISMO :
@@ -64,7 +64,7 @@ const pickImg = (tipo: DormireSeed["tipo"], i: number): string => {
   return arr[i % arr.length];
 };
 
-export const DORMIRE_SEED: DormireSeed[] = [
+export const VACANZE_SEED: VacanzeSeed[] = [
   // === HOTEL & RESORT LUXURY ===
   { slug: "forte-village-resort-pula", nome: "Forte Village Resort", comune: "Santa Margherita di Pula", provincia: "CA", regione: "Sardegna", tipo: "hotel", descrizione: "Uno dei resort piu premiati d'Italia, sulla costa sud-ovest della Sardegna. 8 hotel, 21 ristoranti, spa thalassoterapica, accoglie animali di piccola taglia in alcune camere.", fascia: "luxury", stelle: 5, animaliAmmessi: "cane", tagliaMax: "piccola", supplementoCane: "variabile", amenities: ["Spa thalassoterapica", "Piscine olimpiche", "8 ristoranti", "Spiaggia privata", "Kids club"], img: pickImg("hotel", 0), lat: 38.9581, lng: 8.9593, bookingQuery: "Forte Village Resort Santa Margherita Pula" },
   { slug: "belmond-hotel-splendido-portofino", nome: "Belmond Hotel Splendido", comune: "Portofino", provincia: "GE", regione: "Liguria", tipo: "hotel", descrizione: "Ex monastero del XVI secolo con vista sulla baia di Portofino. Accoglie cani di piccola e media taglia su richiesta.", fascia: "luxury", stelle: 5, animaliAmmessi: "cane", tagliaMax: "media", supplementoCane: "variabile", amenities: ["Vista baia", "Piscina riscaldata", "Spa", "Ristorante stellato", "Giardino"], img: pickImg("hotel", 1), lat: 44.3064, lng: 9.2100, bookingQuery: "Belmond Hotel Splendido Portofino" },

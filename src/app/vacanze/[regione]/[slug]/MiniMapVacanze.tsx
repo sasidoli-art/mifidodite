@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 import { Navigation } from "lucide-react";
 
-const MiniMapDormireInner = dynamic(() => import("./MiniMapDormireInner"), {
+const MiniMapVacanzeInner = dynamic(() => import("./MiniMapVacanzeInner"), {
   ssr: false,
   loading: () => (
     <div className="w-full h-full bg-muted flex items-center justify-center">
@@ -19,13 +19,13 @@ interface Props {
   tipo: "hotel" | "agriturismo" | "bnb" | "camping" | "casa_vacanza";
 }
 
-export function MiniMapDormire({ lat, lng, nome, tipo }: Props) {
+export function MiniMapVacanze({ lat, lng, nome, tipo }: Props) {
   const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lng}&travelmode=driving`;
 
   return (
     <div className="relative">
       <div className="h-[360px] w-full rounded-2xl overflow-hidden border border-border shadow-lg bg-white">
-        <MiniMapDormireInner lat={lat} lng={lng} nome={nome} tipo={tipo} />
+        <MiniMapVacanzeInner lat={lat} lng={lng} nome={nome} tipo={tipo} />
       </div>
       <a
         href={googleMapsUrl}

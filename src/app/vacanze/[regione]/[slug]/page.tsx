@@ -7,34 +7,34 @@ import {
   MapPin, Star, Euro, Dog, ExternalLink, Check, Info,
 } from "lucide-react";
 import {
-  DORMIRE_SEED,
-  slugifyRegioneD,
-  getDormireBySlug,
-  getDormireByRegione,
+  VACANZE_SEED,
+  slugifyRegioneV,
+  getVacanzaBySlug,
+  getVacanzeByRegione,
   buildBookingUrl,
-  DORMIRE_TIPO_LABEL_SINGULAR,
+  VACANZE_TIPO_LABEL_SINGULAR,
   PREZZO_LABEL,
   PREZZO_DESCRIZIONE,
-} from "@/lib/dormire-seed";
+} from "@/lib/vacanze-seed";
 import { lodgingJsonLd, breadcrumbJsonLd, jsonLdScript } from "@/lib/json-ld";
 import { NewsletterInline } from "@/components/shared/NewsletterInline";
 import { MeteoWidget } from "@/app/spiagge/[regione]/[slug]/MeteoWidget";
-import { MiniMapDormire } from "./MiniMapDormire";
+import { MiniMapVacanze } from "./MiniMapVacanze";
 
 export function generateStaticParams() {
-  return DORMIRE_SEED.map((s) => ({
-    regione: slugifyRegioneD(s.regione),
+  return VACANZE_SEED.map((s) => ({
+    regione: slugifyRegioneV(s.regione),
     slug: s.slug,
   }));
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ regione: string; slug: string }> }) {
   const { regione, slug } = await params;
-  const struttura = getDormireBySlug(slug);
+  const struttura = getVacanzaBySlug(slug);
   if (!struttura) return { title: "Struttura non trovata — MifidoDiTe.eu" };
-  const title = `${struttura.nome} — ${DORMIRE_TIPO_LABEL_SINGULAR[struttura.tipo]} pet-friendly a ${struttura.comune} | MifidoDiTe.eu`;
+  const title = `${struttura.nome} — ${VACANZE_TIPO_LABEL_SINGULAR[struttura.tipo]} pet-friendly a ${struttura.comune} | MifidoDiTe.eu`;
   const description = `${struttura.nome} a ${struttura.comune} (${struttura.regione}): ${struttura.descrizione.slice(0, 140)}`;
-  const url = `https://www.mifidodite.eu/dormire/${regione}/${slug}`;
+  const url = `https://www.mifidodite.eu/vacanze/${regione}/${slug}`;
   return {
     title,
     description,
@@ -66,16 +66,16 @@ const ANIMALI_LABEL: Record<string, string> = {
   entrambi: "Cani e gatti",
 };
 
-export default async function DormireDettaglioPage({ params }: { params: Promise<{ regione: string; slug: string }> }) {
+export default async function VacanzeDettaglioPage({ params }: { params: Promise<{ regione: string; slug: string }> }) {
   const { regione: regioneSlug, slug } = await params;
-  const s = getDormireBySlug(slug);
+  const s = getVacanzaBySlug(slug);
 
-  if (!s || slugifyRegioneD(s.regione) !== regioneSlug) notFound();
+  if (!s || slugifyRegioneV(s.regione) !== regioneSlug) notFound();
 
-  const vicine = getDormireByRegione(regioneSlug).filter((x) => x.slug !== slug).slice(0, 3);
+  const vicine = getVacanzeByRegione(regioneSlug).filter((x) => x.slug !== slug).slice(0, 3);
   const bookingUrl = buildBookingUrl(s.bookingQuery);
 
-  const pageUrl = `https://www.mifidodite.eu/dormire/${regioneSlug}/${slug}`;
+  const pageUrl = `https://www.mifidodite.eu/vacanze/${regioneSlug}/${slug}`;
   const jsonLdData = [
     lodgingJsonLd({
       nome: s.nome,
@@ -94,9 +94,9 @@ export default async function DormireDettaglioPage({ params }: { params: Promise
     }),
     breadcrumbJsonLd([
       { name: "Home", url: "/" },
-      { name: "Dormire", url: "/dormire" },
-      { name: s.regione, url: `/dormire/${regioneSlug}` },
-      { name: s.nome, url: `/dormire/${regioneSlug}/${slug}` },
+      { name: "Vacanze", url: "/vacanze" },
+      { name: s.regione, url: `/vacanze/${regioneSlug}` },
+      { name: s.nome, url: `/vacanze/${regioneSlug}/${slug}` },
     ]),
   ];
 
@@ -116,15 +116,15 @@ export default async function DormireDettaglioPage({ params }: { params: Promise
                 <Breadcrumbs
                   dark
                   items={[
-                    { name: "Dormire", url: "/dormire" },
-                    { name: s.regione, url: `/dormire/${regioneSlug}` },
-                    { name: s.nome, url: `/dormire/${regioneSlug}/${slug}` },
+                    { name: "Vacanze", url: "/vacanze" },
+                    { name: s.regione, url: `/vacanze/${regioneSlug}` },
+                    { name: s.nome, url: `/vacanze/${regioneSlug}/${slug}` },
                   ]}
                 />
               </div>
               <div className="flex items-center gap-2 mb-3 flex-wrap">
                 <span className="text-xs font-semibold px-3 py-1 rounded-full text-white bg-primary/90">
-                  {DORMIRE_TIPO_LABEL_SINGULAR[s.tipo]}
+                  {VACANZE_TIPO_LABEL_SINGULAR[s.tipo]}
                 </span>
                 {s.stelle && (
                   <span className="text-xs font-semibold px-3 py-1 rounded-full bg-accent text-foreground inline-flex items-center gap-1">
@@ -197,7 +197,7 @@ export default async function DormireDettaglioPage({ params }: { params: Promise
 
               <div className="bg-white rounded-2xl border border-border p-6 shadow-sm">
                 <h2 className="text-xl font-bold text-foreground mb-4">Dove si trova</h2>
-                <MiniMapDormire lat={s.lat} lng={s.lng} nome={s.nome} tipo={s.tipo} />
+                <MiniMapVacanze lat={s.lat} lng={s.lng} nome={s.nome} tipo={s.tipo} />
               </div>
             </div>
 
@@ -222,7 +222,7 @@ export default async function DormireDettaglioPage({ params }: { params: Promise
               <NewsletterInline
                 title="Nuove strutture ogni mese"
                 description="Ricevi via email nuovi hotel e agriturismi pet-friendly, offerte stagionali e guide per viaggiare col cane."
-                source="dormire-dettaglio"
+                source="vacanze-dettaglio"
                 compact
               />
 
@@ -234,7 +234,7 @@ export default async function DormireDettaglioPage({ params }: { params: Promise
                   {vicine.length > 0 ? vicine.map((v) => (
                     <Link
                       key={v.slug}
-                      href={`/dormire/${regioneSlug}/${v.slug}`}
+                      href={`/vacanze/${regioneSlug}/${v.slug}`}
                       className="flex gap-3 items-center group"
                     >
                       <img src={v.img} alt={v.nome} className="w-16 h-16 object-cover rounded-xl flex-shrink-0" />
@@ -248,7 +248,7 @@ export default async function DormireDettaglioPage({ params }: { params: Promise
                   )}
                 </div>
                 {vicine.length > 0 && (
-                  <Link href={`/dormire/${regioneSlug}`} className="mt-4 block text-sm font-semibold text-primary hover:text-primary-dark text-center">
+                  <Link href={`/vacanze/${regioneSlug}`} className="mt-4 block text-sm font-semibold text-primary hover:text-primary-dark text-center">
                     Tutte le strutture in {s.regione} →
                   </Link>
                 )}

@@ -9,7 +9,7 @@ import { NewsletterPopup } from "@/components/shared/NewsletterPopup";
 import { LogoPaw } from "@/components/shared/Logo";
 
 const NAV_LINKS = [
-  { href: "/dormire", label: "Dormire" },
+  { href: "/vacanze", label: "Vacanze" },
   { href: "/spiagge", label: "Spiagge" },
   { href: "/magazine", label: "Magazine" },
   { href: "/professionisti", label: "Professionisti" },

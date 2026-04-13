@@ -1,18 +1,18 @@
-// Types e helper per strutture ricettive pet-friendly
+// Types e helper per vacanze pet-friendly (strutture ricettive)
 
-export type DormireTipo = "hotel" | "agriturismo" | "bnb" | "camping" | "casa_vacanza";
+export type VacanzeTipo = "hotel" | "agriturismo" | "bnb" | "camping" | "casa_vacanza";
 
 export type PrezzoFascia = "economico" | "medio" | "alto" | "luxury";
 
 export type TagliaMax = "piccola" | "media" | "grande" | "tutte";
 
-export interface DormireSeed {
+export interface VacanzeSeed {
   slug: string;
   nome: string;
   comune: string;
   provincia: string;
   regione: string;
-  tipo: DormireTipo;
+  tipo: VacanzeTipo;
   descrizione: string;
   fascia: PrezzoFascia;
   stelle?: 1 | 2 | 3 | 4 | 5;
@@ -27,7 +27,7 @@ export interface DormireSeed {
   bookingQuery: string;
 }
 
-export const DORMIRE_TIPO_LABEL: Record<DormireTipo, string> = {
+export const VACANZE_TIPO_LABEL: Record<VacanzeTipo, string> = {
   hotel: "Hotel & Resort",
   agriturismo: "Agriturismo & Masserie",
   bnb: "B&B & Boutique",
@@ -35,7 +35,7 @@ export const DORMIRE_TIPO_LABEL: Record<DormireTipo, string> = {
   casa_vacanza: "Case vacanza & Dimore",
 };
 
-export const DORMIRE_TIPO_LABEL_SINGULAR: Record<DormireTipo, string> = {
+export const VACANZE_TIPO_LABEL_SINGULAR: Record<VacanzeTipo, string> = {
   hotel: "Hotel",
   agriturismo: "Agriturismo",
   bnb: "B&B",
@@ -65,13 +65,12 @@ export function buildBookingUrl(query: string): string {
   const params = new URLSearchParams({
     ss: query,
     sb_travel_purpose: "leisure",
-    nflt: "ht_beach=1", // senza effetto, placeholder generico
   });
   if (BOOKING_AID) params.set("aid", BOOKING_AID);
   return `https://www.booking.com/searchresults.it.html?${params.toString()}`;
 }
 
-export function slugifyRegioneD(r: string): string {
+export function slugifyRegioneV(r: string): string {
   return r
     .toLowerCase()
     .replace(/'/g, "")

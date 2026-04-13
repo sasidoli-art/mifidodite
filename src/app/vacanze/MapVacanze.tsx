@@ -3,9 +3,9 @@
 import { useState, useCallback } from "react";
 import dynamic from "next/dynamic";
 import { MapPin, Navigation } from "lucide-react";
-import type { DormirePin } from "./MapDormireInner";
+import type { VacanzaPin } from "./MapVacanzeInner";
 
-const MapDormireInner = dynamic(() => import("./MapDormireInner"), {
+const MapVacanzeInner = dynamic(() => import("./MapVacanzeInner"), {
   ssr: false,
   loading: () => (
     <div className="w-full h-full bg-muted flex items-center justify-center">
@@ -15,10 +15,10 @@ const MapDormireInner = dynamic(() => import("./MapDormireInner"), {
 });
 
 interface Props {
-  strutture: DormirePin[];
+  strutture: VacanzaPin[];
 }
 
-const TIPO_LABEL: Record<DormirePin["tipo"], string> = {
+const TIPO_LABEL: Record<VacanzaPin["tipo"], string> = {
   hotel: "Hotel",
   agriturismo: "Agriturismo",
   bnb: "B&B",
@@ -26,7 +26,7 @@ const TIPO_LABEL: Record<DormirePin["tipo"], string> = {
   casa_vacanza: "Casa vac.",
 };
 
-const TIPO_COLOR: Record<DormirePin["tipo"], string> = {
+const TIPO_COLOR: Record<VacanzaPin["tipo"], string> = {
   hotel: "#C4683C",
   agriturismo: "#7A9E7E",
   bnb: "#D4A94C",
@@ -34,7 +34,7 @@ const TIPO_COLOR: Record<DormirePin["tipo"], string> = {
   casa_vacanza: "#A855F7",
 };
 
-export function MapDormire({ strutture }: Props) {
+export function MapVacanze({ strutture }: Props) {
   const [selectedSlug, setSelectedSlug] = useState<string | null>(null);
 
   const handleSelect = useCallback((slug: string) => {
@@ -49,7 +49,7 @@ export function MapDormire({ strutture }: Props) {
     }
   }, []);
 
-  const counters: Record<DormirePin["tipo"], number> = {
+  const counters: Record<VacanzaPin["tipo"], number> = {
     hotel: 0, agriturismo: 0, bnb: 0, camping: 0, casa_vacanza: 0,
   };
   strutture.forEach((s) => counters[s.tipo]++);
@@ -57,7 +57,7 @@ export function MapDormire({ strutture }: Props) {
   return (
     <div className="relative">
       <div className="h-[500px] lg:h-[600px] w-full rounded-2xl overflow-hidden border border-border shadow-lg bg-white">
-        <MapDormireInner strutture={strutture} selectedSlug={selectedSlug} onSelect={handleSelect} />
+        <MapVacanzeInner strutture={strutture} selectedSlug={selectedSlug} onSelect={handleSelect} />
       </div>
 
       <div className="absolute top-4 right-4 bg-white rounded-xl shadow-md border border-border p-3 z-[1000] text-xs max-w-[180px]">
@@ -65,7 +65,7 @@ export function MapDormire({ strutture }: Props) {
           <MapPin size={12} className="text-primary" /> Legenda
         </div>
         <div className="space-y-1.5">
-          {(Object.keys(TIPO_LABEL) as DormirePin["tipo"][]).map((t) => (
+          {(Object.keys(TIPO_LABEL) as VacanzaPin["tipo"][]).map((t) => (
             counters[t] > 0 && (
               <div key={t} className="flex items-center gap-2">
                 <span className="w-3 h-3 rounded-full flex-shrink-0" style={{ background: TIPO_COLOR[t] }} />

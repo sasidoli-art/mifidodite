@@ -4,7 +4,7 @@ import { useEffect, useRef } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
-export interface DormirePin {
+export interface VacanzaPin {
   slug: string;
   nome: string;
   comune: string;
@@ -15,12 +15,12 @@ export interface DormirePin {
 }
 
 interface Props {
-  strutture: DormirePin[];
+  strutture: VacanzaPin[];
   selectedSlug: string | null;
   onSelect: (slug: string) => void;
 }
 
-const TIPO_COLORS: Record<DormirePin["tipo"], string> = {
+const TIPO_COLORS: Record<VacanzaPin["tipo"], string> = {
   hotel: "#C4683C",          // primary brand
   agriturismo: "#7A9E7E",    // secondary (verde)
   bnb: "#D4A94C",            // accent (oro)
@@ -43,7 +43,7 @@ function buildPinHtml(color: string, selected: boolean): string {
   "><div style="width:10px;height:10px;background:white;border-radius:50%;transform:rotate(45deg);"></div></div>`;
 }
 
-function makeIcon(tipo: DormirePin["tipo"], selected: boolean): L.DivIcon {
+function makeIcon(tipo: VacanzaPin["tipo"], selected: boolean): L.DivIcon {
   const size = selected ? 42 : 34;
   return L.divIcon({
     html: buildPinHtml(TIPO_COLORS[tipo], selected),
@@ -53,7 +53,7 @@ function makeIcon(tipo: DormirePin["tipo"], selected: boolean): L.DivIcon {
   });
 }
 
-export default function MapDormireInner({ strutture, selectedSlug, onSelect }: Props) {
+export default function MapVacanzeInner({ strutture, selectedSlug, onSelect }: Props) {
   const mapRef = useRef<L.Map | null>(null);
   const markersRef = useRef<globalThis.Map<string, L.Marker>>(new globalThis.Map());
   const containerRef = useRef<HTMLDivElement>(null);

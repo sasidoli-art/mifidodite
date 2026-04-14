@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Mail, Heart } from "lucide-react";
+import { Mail } from "lucide-react";
 import { LogoPawDark, LogoText } from "@/components/shared/Logo";
 
 export function Footer() {
@@ -67,8 +67,9 @@ export function Footer() {
           <p className="text-sm text-white/40">
             &copy; {new Date().getFullYear()} MifidoDiTe.eu — Mi fido di te. Tutti i diritti riservati.
           </p>
-          <p className="text-xs text-white/30 flex items-center gap-1">
-            Fatto con <Heart size={12} className="text-primary" /> per gli amici a 4 zampe
+          <p className="text-xs text-white/30 flex items-center gap-1.5">
+            <span className="inline-block w-1 h-1 rounded-full bg-primary" />
+            Creato per l&apos;amore degli amici a 4 zampe
           </p>
         </div>
       </div>

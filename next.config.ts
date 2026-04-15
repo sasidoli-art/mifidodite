@@ -63,6 +63,12 @@ const nextConfig: NextConfig = {
             key: "Permissions-Policy",
             value: "camera=(), microphone=(), geolocation=(self)",
           },
+          {
+            // Anti-copia: disabilita Google Cache + traduzioni automatiche
+            // mantenendo l'indicizzazione normale (no noindex)
+            key: "X-Robots-Tag",
+            value: "noarchive, notranslate, max-image-preview:large",
+          },
         ],
       },
     ];

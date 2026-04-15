@@ -5,6 +5,12 @@ const BASE_URL = "https://www.mifidodite.eu";
 const ORG_NAME = "MifidoDiTe.eu";
 const ORG_LOGO = `${BASE_URL}/icon`;
 
+const COPYRIGHT_HOLDER = {
+  "@type": "Organization",
+  name: ORG_NAME,
+  url: BASE_URL,
+};
+
 export interface BreadcrumbItem {
   name: string;
   url: string;
@@ -56,6 +62,9 @@ export function spiaggiaJsonLd(s: SpiaggiaJsonLd): object {
     },
     touristType: ["Dog owners", "Pet friendly"],
     isAccessibleForFree: true,
+    copyrightHolder: COPYRIGHT_HOLDER,
+    copyrightYear: new Date().getFullYear(),
+    sourceOrganization: COPYRIGHT_HOLDER,
   };
 }
 
@@ -116,6 +125,9 @@ export function lodgingJsonLd(s: LodgingJsonLd): object {
       name: a,
       value: true,
     })),
+    copyrightHolder: COPYRIGHT_HOLDER,
+    copyrightYear: new Date().getFullYear(),
+    sourceOrganization: COPYRIGHT_HOLDER,
   };
   if (s.stelle) {
     base.starRating = {
@@ -165,6 +177,10 @@ export function articleJsonLd(a: ArticleJsonLd): object {
     },
     articleSection: a.categoria,
     inLanguage: "it-IT",
+    copyrightHolder: COPYRIGHT_HOLDER,
+    copyrightYear: new Date(a.datePublished).getFullYear(),
+    isAccessibleForFree: true,
+    license: `${BASE_URL}/termini`,
   };
 }
 

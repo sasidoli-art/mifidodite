@@ -57,6 +57,16 @@ export default function RootLayout({
   return (
     <html lang="it" className={`${heading.variable} ${body.variable} h-full antialiased`}>
       <head>
+        {/* DNS prefetch + preconnect per domini esterni critici */}
+        <link rel="dns-prefetch" href="https://images.unsplash.com" />
+        <link rel="preconnect" href="https://images.unsplash.com" crossOrigin="" />
+        <link rel="dns-prefetch" href="https://a.basemaps.cartocdn.com" />
+        <link rel="dns-prefetch" href="https://b.basemaps.cartocdn.com" />
+        <link rel="dns-prefetch" href="https://c.basemaps.cartocdn.com" />
+        <link rel="dns-prefetch" href="https://d.basemaps.cartocdn.com" />
+        <link rel="dns-prefetch" href="https://api.open-meteo.com" />
+        <link rel="dns-prefetch" href="https://overpass-api.de" />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

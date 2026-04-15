@@ -181,7 +181,7 @@ export function SpiaggeClient({ spiagge }: Props) {
                     className="group bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-all hover:-translate-y-1 border border-border/50 scroll-mt-24 block"
                   >
                     <div className="h-48 overflow-hidden relative">
-                      <img src={s.foto} alt={s.nome} className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500" />
+                      <img src={s.foto} alt={s.nome} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500" />
                       <span className={`absolute top-3 left-3 text-xs font-semibold px-3 py-1 rounded-full text-white ${s.tipo === "Stabilimento" ? "bg-sky-600" : "bg-emerald-600"}`}>
                         {s.tipo}
                       </span>

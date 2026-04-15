@@ -218,7 +218,7 @@ export function VacanzeClient({ strutture }: Props) {
                   >
                     <Link href={`/vacanze/${s.regioneSlug}/${s.slug}`} className="block group">
                       <div className="h-48 overflow-hidden relative">
-                        <img src={s.img} alt={s.nome} className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500" />
+                        <img src={s.img} alt={s.nome} loading="lazy" decoding="async" className="w-full h-full object-cover group-hover:scale-[1.04] transition-transform duration-500" />
                         <span className={`absolute top-3 left-3 text-xs font-semibold px-3 py-1 rounded-full text-white ${TIPO_BADGE[s.tipo].bg}`}>
                           {TIPO_BADGE[s.tipo].label}
                         </span>

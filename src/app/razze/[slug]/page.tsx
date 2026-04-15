@@ -95,7 +95,7 @@ export default async function RazzaDettaglioPage({ params }: { params: Promise<{
       <main className="flex-1 pt-16">
         <section className="relative">
           <div className="h-80 sm:h-[420px] overflow-hidden relative">
-            <img src={r.foto} alt={r.nome} className="w-full h-full object-cover" />
+            <img src={r.foto} alt={r.nome} fetchPriority="high" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent" />
           </div>
           <div className="absolute inset-0 flex flex-col justify-end">
@@ -297,7 +297,7 @@ export default async function RazzaDettaglioPage({ params }: { params: Promise<{
                   <div className="space-y-3">
                     {altre.map((a) => (
                       <Link key={a.slug} href={`/razze/${a.slug}`} className="flex gap-3 items-center group">
-                        <img src={a.foto} alt={a.nome} className="w-14 h-14 object-cover rounded-xl flex-shrink-0" />
+                        <img src={a.foto} alt={a.nome} loading="lazy" decoding="async" className="w-14 h-14 object-cover rounded-xl flex-shrink-0" />
                         <div className="min-w-0">
                           <div className="font-semibold text-sm text-foreground group-hover:text-primary transition-colors line-clamp-1">{a.nome}</div>
                           <div className="text-xs text-muted-foreground">~{a.costoMensile}€/mese</div>

@@ -80,6 +80,7 @@ export default function RazzePage() {
                           src={r.foto}
                           alt={r.nome}
                           loading="lazy"
+                          decoding="async"
                           className="w-full h-full object-cover group-hover:scale-[1.05] transition-transform duration-500"
                         />
                         <span className="absolute top-3 left-3 text-xs font-semibold px-3 py-1 rounded-full bg-white/95 text-foreground capitalize">

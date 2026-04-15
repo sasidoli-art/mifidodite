@@ -107,7 +107,7 @@ export default async function VacanzeDettaglioPage({ params }: { params: Promise
       <main className="flex-1 pt-16">
         <section className="relative">
           <div className="h-80 sm:h-96 overflow-hidden relative">
-            <img src={s.img} alt={s.nome} className="w-full h-full object-cover" />
+            <img src={s.img} alt={s.nome} fetchPriority="high" className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/30 to-transparent" />
           </div>
           <div className="absolute inset-0 flex flex-col justify-end">
@@ -237,7 +237,7 @@ export default async function VacanzeDettaglioPage({ params }: { params: Promise
                       href={`/vacanze/${regioneSlug}/${v.slug}`}
                       className="flex gap-3 items-center group"
                     >
-                      <img src={v.img} alt={v.nome} className="w-16 h-16 object-cover rounded-xl flex-shrink-0" />
+                      <img src={v.img} alt={v.nome} loading="lazy" decoding="async" className="w-16 h-16 object-cover rounded-xl flex-shrink-0" />
                       <div className="min-w-0">
                         <div className="font-semibold text-sm text-foreground group-hover:text-primary transition-colors line-clamp-1">{v.nome}</div>
                         <div className="text-xs text-muted-foreground">{v.comune} • {PREZZO_LABEL[v.fascia]}</div>

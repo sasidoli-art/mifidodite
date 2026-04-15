@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles, Calculator } from "lucide-react";
+import { ArrowRight, Sparkles, Calculator, Utensils, Clock, Scale } from "lucide-react";
 
 const STRUMENTI = [
   {
@@ -16,12 +16,39 @@ const STRUMENTI = [
   },
   {
     label: "Quanto costa un cane?",
-    desc: "Calcola il budget annuale in base a taglia, citta e stile di vita. Dati aggiornati 2026.",
+    desc: "Calcola il budget annuale in base a taglia, citta e stile di vita.",
     cta: "Calcola ora",
     href: "/costo-cane",
     icon: Calculator,
     gradient: "from-secondary to-primary-light",
-    badge: "Calcolatore",
+    badge: "Costi",
+  },
+  {
+    label: "Quanto cibo dare al cane?",
+    desc: "Razioni giornaliere precise in base a peso, eta e attivita.",
+    cta: "Calcola razioni",
+    href: "/razioni-cane",
+    icon: Utensils,
+    gradient: "from-primary to-primary-dark",
+    badge: "Razioni",
+  },
+  {
+    label: "Eta umana del tuo cane",
+    desc: "Quanti anni umani ha davvero? Formula UCSD 2019 per taglia.",
+    cta: "Scopri l'eta",
+    href: "/eta-cane",
+    icon: Clock,
+    gradient: "from-accent to-primary-light",
+    badge: "Eta",
+  },
+  {
+    label: "Peso ideale per razza",
+    desc: "Il tuo cane e sovrappeso? Valutazione BCS con consigli personalizzati.",
+    cta: "Controlla peso",
+    href: "/peso-ideale-cane",
+    icon: Scale,
+    gradient: "from-secondary to-accent",
+    badge: "Peso",
   },
 ];
 

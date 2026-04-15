@@ -24,6 +24,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Strumenti interattivi
     { url: `${baseUrl}/quiz-razza`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
     { url: `${baseUrl}/costo-cane`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/razioni-cane`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${baseUrl}/eta-cane`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${baseUrl}/peso-ideale-cane`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
     { url: `${baseUrl}/mappa`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
 
     // Altre feature

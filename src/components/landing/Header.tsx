@@ -39,7 +39,7 @@ export function Header() {
     <>
     <NewsletterPopup open={showNewsletter} onClose={() => setShowNewsletter(false)} />
     <motion.header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-[9998] transition-all duration-300 ${
         scrolled
           ? "bg-white/90 backdrop-blur-xl shadow-[0_1px_20px_rgba(61,43,31,.08)] border-b border-foreground/[.04]"
           : "bg-white/70 backdrop-blur-xl border-b border-foreground/[.03]"

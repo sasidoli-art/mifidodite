@@ -11,8 +11,9 @@ import { LogoPaw } from "@/components/shared/Logo";
 const NAV_LINKS = [
   { href: "/vacanze", label: "Vacanze" },
   { href: "/spiagge", label: "Spiagge" },
+  { href: "/razze", label: "Razze" },
   { href: "/magazine", label: "Magazine" },
-  { href: "/professionisti", label: "Professionisti" },
+  { href: "/professionisti", label: "Pro" },
   { href: "/sos-smarriti", label: "SOS", accent: true },
 ];
 

@@ -249,16 +249,16 @@ export function QuizClient() {
 
             <div className="flex flex-wrap gap-3">
               <Link
-                href="/professionisti?cat=veterinario"
+                href={`/razze/${primo.slug}`}
                 className="inline-flex items-center gap-2 bg-primary text-white px-5 py-3 rounded-full font-semibold hover:bg-primary-dark transition-colors"
               >
-                Trova professionisti <ArrowRight size={16} />
+                Scheda completa {primo.nome} <ArrowRight size={16} />
               </Link>
               <Link
-                href="/magazine"
+                href="/razze"
                 className="inline-flex items-center gap-2 bg-muted text-foreground px-5 py-3 rounded-full font-semibold hover:bg-muted/70 transition-colors"
               >
-                Leggi guide sul magazine
+                Tutte le razze
               </Link>
               <button
                 onClick={condividi}
@@ -275,13 +275,13 @@ export function QuizClient() {
             <h3 className="text-xl font-bold text-foreground mb-4">Potrebbero piacerti anche</h3>
             <div className="grid sm:grid-cols-2 gap-4">
               {altri.map((r) => (
-                <div key={r.slug} className="bg-white rounded-2xl overflow-hidden border border-border flex items-center gap-4 p-4 shadow-sm">
+                <Link key={r.slug} href={`/razze/${r.slug}`} className="bg-white rounded-2xl overflow-hidden border border-border flex items-center gap-4 p-4 shadow-sm hover:shadow-lg transition-all hover:-translate-y-0.5 group">
                   <img src={r.foto} alt={r.nome} className="w-20 h-20 object-cover rounded-xl flex-shrink-0" />
-                  <div>
-                    <h4 className="font-bold text-foreground">{r.nome}</h4>
+                  <div className="min-w-0">
+                    <h4 className="font-bold text-foreground group-hover:text-primary transition-colors">{r.nome}</h4>
                     <p className="text-xs text-muted-foreground line-clamp-2">{r.descrizione}</p>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>

@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { SPIAGGE_SEED, slugifyRegione, getAllRegioniSlug as getAllSpiagge } from "@/lib/spiagge-seed";
 import { VACANZE_SEED, slugifyRegioneV, getAllRegioniVacanze } from "@/lib/vacanze-seed";
+import { RAZZE } from "@/lib/razze-data";
 import { ARTICOLI_SEED } from "@/lib/articoli-seed";
 
 export const revalidate = 3600; // 1 ora
@@ -16,6 +17,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Hub feature ad alto traffico
     { url: `${baseUrl}/spiagge`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
     { url: `${baseUrl}/vacanze`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
+    { url: `${baseUrl}/razze`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
     { url: `${baseUrl}/magazine`, lastModified: now, changeFrequency: "daily", priority: 0.9 },
     { url: `${baseUrl}/professionisti`, lastModified: now, changeFrequency: "daily", priority: 0.9 },
 
@@ -56,6 +58,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     lastModified: now,
     changeFrequency: "monthly" as const,
     priority: 0.75,
+  }));
+
+  // === RAZZE — dettaglio singole (20) ===
+  const razzeDettaglio: MetadataRoute.Sitemap = RAZZE.map((r) => ({
+    url: `${baseUrl}/razze/${r.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.85,
   }));
 
   // === VACANZE — pagine regionali ===
@@ -110,6 +120,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   return [
     ...staticPages,
+    ...razzeDettaglio,
     ...spiaggeRegionali,
     ...spiaggeDettaglio,
     ...vacanzeRegionali,

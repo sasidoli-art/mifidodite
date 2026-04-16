@@ -3,6 +3,7 @@ import { SPIAGGE_SEED, slugifyRegione, getAllRegioniSlug as getAllSpiagge } from
 import { VACANZE_SEED, slugifyRegioneV, getAllRegioniVacanze } from "@/lib/vacanze-seed";
 import { RAZZE } from "@/lib/razze-data";
 import { RISTORANTI_SEED, slugifyRegioneR, getAllRegioniRistoranti } from "@/lib/ristoranti-seed";
+import { SENTIERI_SEED, slugifyRegioneS, getAllRegioniSentieri } from "@/lib/sentieri-seed";
 import { ARTICOLI_SEED } from "@/lib/articoli-seed";
 
 export const revalidate = 3600; // 1 ora
@@ -20,6 +21,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { url: `${baseUrl}/vacanze`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
     { url: `${baseUrl}/razze`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
     { url: `${baseUrl}/ristoranti`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${baseUrl}/sentieri`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
     { url: `${baseUrl}/magazine`, lastModified: now, changeFrequency: "daily", priority: 0.9 },
     { url: `${baseUrl}/professionisti`, lastModified: now, changeFrequency: "daily", priority: 0.9 },
 
@@ -89,6 +91,21 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.7,
   }));
 
+  // === SENTIERI — pagine regionali + dettaglio ===
+  const sentieriRegionali: MetadataRoute.Sitemap = getAllRegioniSentieri().map((regione) => ({
+    url: `${baseUrl}/sentieri/${regione}`,
+    lastModified: now,
+    changeFrequency: "weekly" as const,
+    priority: 0.8,
+  }));
+
+  const sentieriDettaglio: MetadataRoute.Sitemap = SENTIERI_SEED.map((s) => ({
+    url: `${baseUrl}/sentieri/${slugifyRegioneS(s.regione)}/${s.slug}`,
+    lastModified: now,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
+
   // === VACANZE — pagine regionali ===
   const vacanzeRegionali: MetadataRoute.Sitemap = getAllRegioniVacanze().map((regione) => ({
     url: `${baseUrl}/vacanze/${regione}`,
@@ -144,6 +161,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...razzeDettaglio,
     ...ristorantiRegionali,
     ...ristorantiDettaglio,
+    ...sentieriRegionali,
+    ...sentieriDettaglio,
     ...spiaggeRegionali,
     ...spiaggeDettaglio,
     ...vacanzeRegionali,

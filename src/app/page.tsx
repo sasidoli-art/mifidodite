@@ -36,6 +36,9 @@ export default function Home() {
         {/* CHIARO — Servizi */}
         <Categories />
 
+        {/* CHIARO — Magazine (in primo piano) */}
+        <PetNews />
+
         {/* CHIARO — Strumenti utili (quiz + calcolatore) */}
         <Strumenti />
 
@@ -59,9 +62,6 @@ export default function Home() {
 
         {/* Transizione scuro → chiaro (wave flip) */}
         <SectionDivider from="#3D2B1F" to="#FBF8F4" variant="wave" />
-
-        {/* CHIARO — Magazine */}
-        <PetNews />
 
         {/* CHIARO — Servizi featured */}
         <FeaturedPros />

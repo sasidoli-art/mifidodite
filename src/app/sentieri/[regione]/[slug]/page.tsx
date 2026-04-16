@@ -8,6 +8,7 @@ import { SENTIERI_SEED, slugifyRegioneS, getSentieroBySlug, getSentieriByRegione
 import { breadcrumbJsonLd, jsonLdScript } from "@/lib/json-ld";
 import { MeteoWidget } from "@/app/spiagge/[regione]/[slug]/MeteoWidget";
 import { NewsletterInline } from "@/components/shared/NewsletterInline";
+import { RegioneCrossLinks } from "@/components/shared/RegioneCrossLinks";
 
 export function generateStaticParams() {
   return SENTIERI_SEED.map((s) => ({ regione: slugifyRegioneS(s.regione), slug: s.slug }));
@@ -144,6 +145,8 @@ export default async function SentieroDettaglioPage({ params }: { params: Promis
 
             <div className="space-y-6">
               <MeteoWidget lat={s.lat} lng={s.lng} />
+
+              <RegioneCrossLinks regione={s.regione} regioneSlug={regioneSlug} excludeSection="sentieri" />
 
               <NewsletterInline
                 title="Nuovi sentieri ogni mese"

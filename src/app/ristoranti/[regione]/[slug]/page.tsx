@@ -16,6 +16,7 @@ import {
 } from "@/lib/ristoranti-seed";
 import { breadcrumbJsonLd, jsonLdScript } from "@/lib/json-ld";
 import { NewsletterInline } from "@/components/shared/NewsletterInline";
+import { RegioneCrossLinks } from "@/components/shared/RegioneCrossLinks";
 
 export function generateStaticParams() {
   return RISTORANTI_SEED.map((r) => ({
@@ -171,6 +172,8 @@ export default async function RistoranteDettaglioPage({ params }: { params: Prom
             </div>
 
             <div className="space-y-6">
+              <RegioneCrossLinks regione={r.regione} regioneSlug={regioneSlug} excludeSection="ristoranti" />
+
               <NewsletterInline
                 title="Nuovi ristoranti ogni mese"
                 description="Ricevi via email i nuovi ristoranti pet-friendly e le guide aggiornate."

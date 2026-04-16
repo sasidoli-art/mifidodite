@@ -26,26 +26,50 @@ const body = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "MifidoDiTe.eu — Il magazine pet d'Italia",
+  metadataBase: new URL("https://www.mifidodite.eu"),
+  title: "MifidoDiTe.eu — Vacanze, spiagge e servizi per chi vive con animali",
   description:
-    "Magazine, guide, consigli, offerte e servizi per cani e gatti. Tutto quello che ti serve per il tuo amico a 4 zampe in un unico portale.",
+    "Mappa spiagge e hotel pet-friendly, schede razza, sentieri, ristoranti, calcolatori: tutto per viaggiare e vivere con il tuo animale in Italia. 550+ pagine verificate.",
   keywords: [
+    "spiagge dog friendly",
+    "hotel pet friendly",
+    "vacanze con il cane",
+    "ristoranti pet friendly",
+    "sentieri cani",
+    "razze cani",
     "pensione cani",
     "dog sitter",
-    "spiaggia cani",
     "toelettatura",
-    "pet sitter",
-    "educatore cinofilo",
     "veterinario",
     "animali domestici",
     "Italia",
   ],
+  alternates: {
+    canonical: "https://www.mifidodite.eu",
+    languages: { "it-IT": "https://www.mifidodite.eu", "x-default": "https://www.mifidodite.eu" },
+  },
   openGraph: {
-    title: "MifidoDiTe.eu — Mi fido di te",
+    title: "MifidoDiTe.eu — Portale pet-friendly italiano",
     description:
-      "Trova pensioni, dog sitter, spiagge pet-friendly e professionisti del mondo animale vicino a te.",
+      "Spiagge, hotel, ristoranti e sentieri dove il tuo animale e il benvenuto. Schede razza, calcolatori, mappe interattive.",
+    url: "https://www.mifidodite.eu",
+    siteName: "MifidoDiTe.eu",
     type: "website",
     locale: "it_IT",
+    images: [
+      {
+        url: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1200&q=80",
+        width: 1200,
+        height: 630,
+        alt: "MifidoDiTe.eu — Portale pet-friendly italiano",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "MifidoDiTe.eu — Portale pet-friendly italiano",
+    description: "Spiagge, hotel, ristoranti e sentieri dove il tuo animale e il benvenuto.",
+    images: ["https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=1200&q=80"],
   },
 };
 

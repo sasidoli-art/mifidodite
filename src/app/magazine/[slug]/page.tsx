@@ -179,12 +179,36 @@ export default async function ArticoloPage({
             </div>
           )}
 
-          <div className="mt-10 bg-muted rounded-[20px] p-8 text-center border border-border">
-            <h3 className="text-xl font-bold text-foreground">Cerchi un professionista pet vicino a te?</h3>
-            <p className="text-muted-foreground mt-2">Pensioni, dog sitter, toelettatori e molto altro nella tua zona.</p>
-            <Link href="/professionisti" className="inline-block mt-4 bg-primary hover:bg-foreground text-white px-7 py-3.5 rounded-full font-semibold transition-all hover:shadow-lg hover:-translate-y-0.5">
-              Cerca su MifidoDiTe
-            </Link>
+          <div className="mt-10 bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/5 rounded-[20px] p-6 sm:p-8 border border-border">
+            <h3 className="text-xl font-bold text-foreground text-center mb-2">Pianifica la vacanza col tuo cane</h3>
+            <p className="text-muted-foreground text-center mb-6 text-sm">Tutto il necessario in un click.</p>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              <Link href="/spiagge" className="bg-white hover:bg-emerald-50 border border-border hover:border-emerald-200 rounded-xl p-4 text-center transition-all hover:-translate-y-0.5 group">
+                <div className="text-2xl mb-1">🏖️</div>
+                <div className="font-bold text-sm text-foreground group-hover:text-emerald-700">Spiagge</div>
+                <div className="text-[10px] text-muted-foreground">dog-friendly</div>
+              </Link>
+              <Link href="/vacanze" className="bg-white hover:bg-primary/5 border border-border hover:border-primary/30 rounded-xl p-4 text-center transition-all hover:-translate-y-0.5 group">
+                <div className="text-2xl mb-1">🏨</div>
+                <div className="font-bold text-sm text-foreground group-hover:text-primary">Vacanze</div>
+                <div className="text-[10px] text-muted-foreground">hotel &amp; agriturismi</div>
+              </Link>
+              <Link href="/ristoranti" className="bg-white hover:bg-accent/10 border border-border hover:border-accent/40 rounded-xl p-4 text-center transition-all hover:-translate-y-0.5 group">
+                <div className="text-2xl mb-1">🍽️</div>
+                <div className="font-bold text-sm text-foreground group-hover:text-accent">Ristoranti</div>
+                <div className="text-[10px] text-muted-foreground">pet-friendly</div>
+              </Link>
+              <Link href="/sentieri" className="bg-white hover:bg-amber-50 border border-border hover:border-amber-200 rounded-xl p-4 text-center transition-all hover:-translate-y-0.5 group">
+                <div className="text-2xl mb-1">🥾</div>
+                <div className="font-bold text-sm text-foreground group-hover:text-amber-700">Sentieri</div>
+                <div className="text-[10px] text-muted-foreground">escursioni</div>
+              </Link>
+            </div>
+            <div className="mt-5 text-center">
+              <Link href="/professionisti" className="inline-block text-sm text-muted-foreground hover:text-primary transition-colors">
+                Cerchi un professionista? &rarr;
+              </Link>
+            </div>
           </div>
 
           {correlati.length > 0 && (

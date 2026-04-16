@@ -5,6 +5,7 @@ import { Categories } from "@/components/landing/Categories";
 import { Strumenti } from "@/components/landing/Strumenti";
 import { SpiaggeHero } from "@/components/landing/SpiaggeHero";
 import { VacanzeHero } from "@/components/landing/VacanzeHero";
+import { ScopriDiPiu } from "@/components/landing/ScopriDiPiu";
 import { SOSBanner } from "@/components/landing/SOSBanner";
 import { FeaturedPros } from "@/components/landing/FeaturedPros";
 import { PetNews } from "@/components/landing/PetNews";
@@ -43,6 +44,9 @@ export default function Home() {
 
         {/* CHIARO — Hero vacanze pet-friendly */}
         <VacanzeHero />
+
+        {/* CHIARO — Ristoranti + Sentieri (cross-link alle sezioni) */}
+        <ScopriDiPiu />
 
         {/* ACCENTO — SOS */}
         <SOSBanner />

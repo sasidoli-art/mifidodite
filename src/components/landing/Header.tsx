@@ -11,18 +11,21 @@ import { LogoPaw } from "@/components/shared/Logo";
 const NAV_LINKS = [
   { href: "/vacanze", label: "Vacanze" },
   { href: "/spiagge", label: "Spiagge" },
+  { href: "/ristoranti", label: "Ristoranti" },
+  { href: "/sentieri", label: "Sentieri" },
   { href: "/razze", label: "Razze" },
   { href: "/magazine", label: "Magazine" },
-  { href: "/professionisti", label: "Pro" },
   { href: "/sos-smarriti", label: "SOS", accent: true },
 ];
 
 const NAV_MOBILE_EXTRA = [
+  { href: "/professionisti", label: "Professionisti" },
+  { href: "/quiz-razza", label: "Quiz razza" },
+  { href: "/costo-cane", label: "Costo cane" },
   { href: "/mappa", label: "Mappa" },
   { href: "/offerte", label: "Offerte" },
   { href: "/adozioni", label: "Adozioni" },
   { href: "/cliniche", label: "Cliniche" },
-  { href: "/eventi", label: "Eventi" },
 ];
 
 export function Header() {

@@ -18,6 +18,7 @@ import {
 } from "@/lib/vacanze-seed";
 import { lodgingJsonLd, breadcrumbJsonLd, jsonLdScript } from "@/lib/json-ld";
 import { NewsletterInline } from "@/components/shared/NewsletterInline";
+import { RegioneCrossLinks } from "@/components/shared/RegioneCrossLinks";
 import { MeteoWidget } from "@/app/spiagge/[regione]/[slug]/MeteoWidget";
 import { MiniMapVacanze } from "./MiniMapVacanze";
 
@@ -218,6 +219,8 @@ export default async function VacanzeDettaglioPage({ params }: { params: Promise
               </div>
 
               <MeteoWidget lat={s.lat} lng={s.lng} />
+
+              <RegioneCrossLinks regione={s.regione} regioneSlug={regioneSlug} excludeSection="vacanze" />
 
               <NewsletterInline
                 title="Nuove strutture ogni mese"

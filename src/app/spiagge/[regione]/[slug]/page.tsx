@@ -16,6 +16,7 @@ import {
 } from "@/lib/spiagge-seed";
 import { spiaggiaJsonLd, breadcrumbJsonLd, jsonLdScript } from "@/lib/json-ld";
 import { NewsletterInline } from "@/components/shared/NewsletterInline";
+import { RegioneCrossLinks } from "@/components/shared/RegioneCrossLinks";
 import { MeteoWidget } from "./MeteoWidget";
 import { MiniMap } from "./MiniMap";
 
@@ -247,6 +248,8 @@ export default async function SpiaggiaDettaglioPage({ params }: { params: Promis
 
             <div className="space-y-6">
               <MeteoWidget lat={s.lat} lng={s.lng} />
+
+              <RegioneCrossLinks regione={s.regione} regioneSlug={regioneSlug} excludeSection="spiagge" />
 
               <NewsletterInline
                 title="Nuove spiagge ogni mese"

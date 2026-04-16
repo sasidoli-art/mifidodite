@@ -64,8 +64,8 @@ export function Footer() {
 
       <div className="border-t border-white/10 relative z-10">
         <div className="max-w-[1160px] mx-auto px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-sm text-white/40">
-            &copy; {new Date().getFullYear()} MifidoDiTe.eu &mdash; Mi fido di te. Contenuti, mappe e database protetti da diritto d&apos;autore. Vietata la riproduzione anche parziale senza autorizzazione.
+          <p className="text-[11px] text-white/30">
+            &copy; {new Date().getFullYear()} MifidoDiTe.eu &mdash; Contenuti e database protetti. Riproduzione vietata.
           </p>
           <p className="text-xs text-white/30 flex items-center gap-1.5">
             <span className="inline-block w-1 h-1 rounded-full bg-primary" />

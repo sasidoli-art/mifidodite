@@ -6,26 +6,26 @@ import { Shield, Newspaper, Heart, MapPin } from "lucide-react";
 const TRUST_POINTS = [
   {
     icon: Newspaper,
-    title: "140+ articoli nel magazine",
-    desc: "Guide, curiosita scientifiche, leggi italiane e consigli pratici scritti con AI e revisionati dalla redazione.",
+    title: "Magazine editoriale",
+    desc: "Guide pratiche, curiosita scientifiche, leggi italiane sul mondo pet. Articoli scritti con assistenza AI e revisionati dalla redazione.",
     color: "bg-orange-50 text-primary",
   },
   {
     icon: MapPin,
-    title: "Dati reali, non inventati",
-    desc: "I professionisti che trovi vengono da OpenStreetMap. Nomi, indirizzi e telefoni verificati, non generati dall'AI.",
+    title: "Fonti verificabili",
+    desc: "Coordinate OpenStreetMap, ordinanze comunali, siti ufficiali delle strutture. Ogni voce cita le fonti da cui arriva.",
     color: "bg-blue-50 text-accent",
   },
   {
     icon: Heart,
-    title: "Adozioni vere da Subito.it",
-    desc: "Gli annunci di adozione sono reali, aggiornati ogni 30 minuti. Niente annunci finti per fare numero.",
+    title: "Adozioni dal territorio",
+    desc: "Segnaliamo canili e rifugi affiliati e ospitiamo annunci delle associazioni. Crescono con il supporto dei volontari.",
     color: "bg-red-50 text-red-500",
   },
   {
     icon: Shield,
     title: "GDPR + AI Act conformi",
-    desc: "Trasparenza totale sull'uso dell'AI. Privacy policy, registri trattamenti e disclaimer sempre visibili.",
+    desc: "Trasparenza sull'uso dell'AI. Privacy policy, registri trattamenti e disclaimer sempre visibili a pie di pagina.",
     color: "bg-green-50 text-secondary",
   },
 ];

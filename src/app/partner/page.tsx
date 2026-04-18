@@ -198,9 +198,9 @@ export default function PartnerPage() {
                 className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white px-8 py-4 rounded-xl font-bold text-lg transition-colors">
                 <Mail size={20} /> Richiedi il Media Kit
               </a>
-              <a href="tel:+39000000000"
+              <a href="mailto:pro@mifidodite.eu?subject=Call%20commerciale%20MifidoDiTe"
                 className="inline-flex items-center gap-2 border border-white/20 text-white/80 px-8 py-4 rounded-xl font-semibold hover:bg-white/5 transition-colors">
-                Chiamaci
+                Richiedi una call
               </a>
             </div>
           </div>

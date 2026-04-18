@@ -1,6 +1,6 @@
 import { Header } from "@/components/landing/Header";
 import { Footer } from "@/components/landing/Footer";
-import { Calendar, MapPin } from "lucide-react";
+import { Calendar, MapPin, Mail, ExternalLink } from "lucide-react";
 
 export const metadata = {
   title: "Eventi Pet — MifidoDiTe.eu",
@@ -27,7 +27,9 @@ async function getEventi(): Promise<Evento[]> {
       const sql = neon(process.env.DATABASE_URL!);
       const rows = await sql`SELECT id, titolo, tipo, data_inizio::text, data_fine::text, citta, regione, sommario, organizzatore, prezzo FROM eventi WHERE attivo = true ORDER BY data_inizio ASC`;
       if (rows.length > 0) return rows as Evento[];
-    } catch { /* fallback */ }
+    } catch (err) {
+      console.error("[eventi] DB query failed:", err);
+    }
   }
   return [];
 }
@@ -101,26 +103,50 @@ export default async function EventiPage() {
               ))}
             </div>
           ) : (
-            <div className="max-w-2xl mx-auto py-12">
-              <div className="text-center mb-8">
-                <Calendar size={48} className="mx-auto text-muted-foreground/30 mb-4" />
-                <h3 className="text-xl font-bold">Calendario in costruzione</h3>
-                <p className="text-muted-foreground mt-2">
-                  Stiamo raccogliendo gli eventi pet italiani. Nel frattempo puoi consultare i calendari ufficiali:
+            <div className="max-w-3xl mx-auto py-12">
+              <div className="text-center mb-10">
+                <div className="w-20 h-20 rounded-2xl bg-primary/10 flex items-center justify-center mx-auto mb-5">
+                  <Calendar size={40} className="text-primary" />
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-extrabold text-foreground mb-3">
+                  Sezione in crescita
+                </h2>
+                <p className="text-muted-foreground leading-relaxed max-w-xl mx-auto">
+                  Stiamo costruendo il calendario italiano degli eventi pet: mostre cinofile ENCI, raduni di razza, fiere del settore, gare di agility, giornate di sensibilizzazione.
+                  Nel frattempo, ecco dove trovarli:
                 </p>
               </div>
-              <div className="grid sm:grid-cols-2 gap-3">
+
+              <div className="grid sm:grid-cols-2 gap-3 mb-10">
                 <a href="https://www.enci.it/eventi" target="_blank" rel="noopener noreferrer"
-                  className="flex flex-col items-center gap-2 p-5 bg-white border-2 border-border hover:border-primary hover:shadow-md rounded-2xl transition-all">
-                  <div className="text-2xl">🏆</div>
-                  <span className="font-semibold text-foreground">Calendario ENCI</span>
-                  <span className="text-xs text-muted-foreground">Esposizioni e raduni cinofili ufficiali</span>
+                  className="group flex items-start gap-3 p-5 bg-white border border-border hover:border-primary hover:shadow-md rounded-2xl transition-all">
+                  <div className="text-2xl shrink-0">🏆</div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-1 font-semibold text-foreground group-hover:text-primary transition-colors">
+                      Calendario ENCI <ExternalLink size={12} />
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-0.5">Esposizioni e raduni cinofili ufficiali</p>
+                  </div>
                 </a>
                 <a href="https://www.bauadvisor.it/eventi" target="_blank" rel="noopener noreferrer"
-                  className="flex flex-col items-center gap-2 p-5 bg-white border-2 border-border hover:border-primary hover:shadow-md rounded-2xl transition-all">
-                  <div className="text-2xl">🐾</div>
-                  <span className="font-semibold text-foreground">BauAdvisor</span>
-                  <span className="text-xs text-muted-foreground">Eventi pet generici in Italia</span>
+                  className="group flex items-start gap-3 p-5 bg-white border border-border hover:border-primary hover:shadow-md rounded-2xl transition-all">
+                  <div className="text-2xl shrink-0">🐾</div>
+                  <div className="flex-1 min-w-0">
+                    <div className="flex items-center gap-1 font-semibold text-foreground group-hover:text-primary transition-colors">
+                      BauAdvisor <ExternalLink size={12} />
+                    </div>
+                    <p className="text-xs text-muted-foreground mt-0.5">Eventi pet generici in Italia</p>
+                  </div>
+                </a>
+              </div>
+
+              <div className="bg-gradient-to-br from-primary/5 via-accent/5 to-secondary/5 rounded-2xl p-6 sm:p-8 border border-border text-center">
+                <h3 className="text-lg font-bold text-foreground mb-2">Organizzi un evento pet?</h3>
+                <p className="text-sm text-muted-foreground mb-5 max-w-xl mx-auto">
+                  Scrivici per farlo inserire nel nostro calendario. Gratis e senza vincoli: basta data, luogo, orari e una descrizione.
+                </p>
+                <a href="mailto:info@mifidodite.eu?subject=Segnala%20evento%20pet" className="inline-flex items-center gap-2 bg-primary hover:bg-primary-dark text-white font-semibold px-6 py-3 rounded-full transition-colors">
+                  <Mail size={16} /> Segnala un evento
                 </a>
               </div>
             </div>

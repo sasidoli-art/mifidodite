@@ -140,8 +140,7 @@ export default function ChiSiamoPage() {
               </a>
             </p>
             <p className="text-sm text-muted-foreground mt-4">
-              MifidoDiTe.eu — Progetto italiano<br />
-              P.IVA: in fase di registrazione
+              MifidoDiTe.eu — Redazione pet indipendente italiana
             </p>
           </section>
         </div>

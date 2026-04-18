@@ -46,20 +46,19 @@ export function Hero() {
           >
             <div className="inline-flex items-center gap-2 bg-secondary/10 text-secondary text-[13px] font-semibold px-4 py-2 rounded-full border border-secondary/15 mb-5">
               <LogoPaw size={14} />
-              Il magazine pet d&apos;Italia
+              Portale pet-friendly italiano
             </div>
 
             <h1 className="text-[32px] sm:text-[46px] lg:text-[54px] font-extrabold leading-[1.08] tracking-tight text-foreground mb-5">
-              Tutto per chi ama
+              Viaggia e vivi con il tuo
               <br />
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                i propri animali
+                amico a 4 zampe
               </span>
             </h1>
 
             <p className="text-lg text-muted-foreground leading-relaxed max-w-[480px] mb-8">
-              Guide, consigli di esperti, offerte e servizi per cani e gatti.
-              Trova veterinari, pensioni e professionisti pet nella tua zona.
+              Spiagge, hotel, ristoranti e sentieri dove il tuo cane e il benvenuto. Schede razza, calcolatori e professionisti nella tua zona.
             </p>
 
             {/* Search form */}

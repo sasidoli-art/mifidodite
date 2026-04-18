@@ -11,7 +11,7 @@ export const PROFESSIONISTI_SEED: StrutturaCard[] = [
     descrizione_storytelling: "Immagina un posto dove il tuo cane corre libero in un giardino enorme, circondato dal verde delle colline bergamasche. Ogni ospite ha il suo spazio, le sue coccole, la sua routine.",
     categoria: "pensione", comune: "Bergamo", provincia: "BG",
     foto_copertina: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400&q=80",
-    rating_medio: 4.8, numero_recensioni: 127, piano: "premium", in_evidenza: true, distanza_km: 2.3,
+    rating_medio: 0, numero_recensioni: 0, piano: "premium", in_evidenza: true, distanza_km: 2.3,
   },
   {
     id: "p2", nome: "Dog Hotel Villa Margherita", slug: "dog-hotel-villa-margherita-roma",
@@ -19,7 +19,7 @@ export const PROFESSIONISTI_SEED: StrutturaCard[] = [
     descrizione_storytelling: "Non e una pensione, e un hotel a 5 stelle per il tuo amico. Suite con cuccia ortopedica, piscina per i bagni estivi, e un team che lo tratta come il VIP che e.",
     categoria: "pensione", comune: "Roma", provincia: "RM",
     foto_copertina: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&q=80",
-    rating_medio: 4.9, numero_recensioni: 203, piano: "premium_plus", in_evidenza: true, distanza_km: 5.1,
+    rating_medio: 0, numero_recensioni: 0, piano: "premium_plus", in_evidenza: true, distanza_km: 5.1,
   },
   {
     id: "p3", nome: "Pensione Il Giardino dei Cani", slug: "pensione-giardino-dei-cani-torino",
@@ -27,7 +27,7 @@ export const PROFESSIONISTI_SEED: StrutturaCard[] = [
     descrizione_storytelling: null,
     categoria: "pensione", comune: "Moncalieri", provincia: "TO",
     foto_copertina: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&q=80",
-    rating_medio: 4.6, numero_recensioni: 89, piano: "premium", in_evidenza: false, distanza_km: 8.0,
+    rating_medio: 0, numero_recensioni: 0, piano: "premium", in_evidenza: false, distanza_km: 8.0,
   },
   {
     id: "p4", nome: "Happy Tails Pet Hotel", slug: "happy-tails-pet-hotel-milano",
@@ -35,7 +35,7 @@ export const PROFESSIONISTI_SEED: StrutturaCard[] = [
     descrizione_storytelling: null,
     categoria: "pensione", comune: "Segrate", provincia: "MI",
     foto_copertina: "https://images.unsplash.com/photo-1601758174114-e711c0cbaa69?w=400&q=80",
-    rating_medio: 4.7, numero_recensioni: 156, piano: "premium", in_evidenza: true, distanza_km: 3.5,
+    rating_medio: 0, numero_recensioni: 0, piano: "premium", in_evidenza: true, distanza_km: 3.5,
   },
   {
     id: "p5", nome: "Agriturismo Pensione Quattro Zampe", slug: "agriturismo-quattro-zampe-firenze",
@@ -43,7 +43,7 @@ export const PROFESSIONISTI_SEED: StrutturaCard[] = [
     descrizione_storytelling: null,
     categoria: "pensione", comune: "Fiesole", provincia: "FI",
     foto_copertina: "https://images.unsplash.com/photo-1507146426996-ef05306b995a?w=400&q=80",
-    rating_medio: 4.9, numero_recensioni: 74, piano: "free", in_evidenza: false, distanza_km: 12.0,
+    rating_medio: 0, numero_recensioni: 0, piano: "free", in_evidenza: false, distanza_km: 12.0,
   },
 
   // === DOG SITTER ===
@@ -53,7 +53,7 @@ export const PROFESSIONISTI_SEED: StrutturaCard[] = [
     descrizione_storytelling: null,
     categoria: "dog_sitter", comune: "Milano", provincia: "MI",
     foto_copertina: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&q=80",
-    rating_medio: 4.9, numero_recensioni: 92, piano: "premium", in_evidenza: true, distanza_km: 1.2,
+    rating_medio: 0, numero_recensioni: 0, piano: "premium", in_evidenza: true, distanza_km: 1.2,
   },
   {
     id: "ds2", nome: "Marco Ferri — Pet Sitter Professionale", slug: "marco-ferri-pet-sitter-roma",
@@ -61,7 +61,7 @@ export const PROFESSIONISTI_SEED: StrutturaCard[] = [
     descrizione_storytelling: null,
     categoria: "dog_sitter", comune: "Roma", provincia: "RM",
     foto_copertina: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&q=80",
-    rating_medio: 4.7, numero_recensioni: 64, piano: "free", in_evidenza: false, distanza_km: 4.5,
+    rating_medio: 0, numero_recensioni: 0, piano: "free", in_evidenza: false, distanza_km: 4.5,
   },
   {
     id: "ds3", nome: "Giulia Bianchi — Dog Walking Torino", slug: "giulia-bianchi-dog-walking-torino",
@@ -69,7 +69,7 @@ export const PROFESSIONISTI_SEED: StrutturaCard[] = [
     descrizione_storytelling: null,
     categoria: "dog_walking", comune: "Torino", provincia: "TO",
     foto_copertina: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=400&q=80",
-    rating_medio: 4.8, numero_recensioni: 45, piano: "premium", in_evidenza: false, distanza_km: 2.0,
+    rating_medio: 0, numero_recensioni: 0, piano: "premium", in_evidenza: false, distanza_km: 2.0,
   },
 
   // === TOELETTATURA ===
@@ -79,7 +79,7 @@ export const PROFESSIONISTI_SEED: StrutturaCard[] = [
     descrizione_storytelling: null,
     categoria: "toelettatura", comune: "Bologna", provincia: "BO",
     foto_copertina: "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=400&q=80",
-    rating_medio: 4.7, numero_recensioni: 112, piano: "premium", in_evidenza: true, distanza_km: 3.2,
+    rating_medio: 0, numero_recensioni: 0, piano: "premium", in_evidenza: true, distanza_km: 3.2,
   },
   {
     id: "t2", nome: "Dog Style Grooming", slug: "dog-style-grooming-napoli",
@@ -87,7 +87,7 @@ export const PROFESSIONISTI_SEED: StrutturaCard[] = [
     descrizione_storytelling: null,
     categoria: "toelettatura", comune: "Napoli", provincia: "NA",
     foto_copertina: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&q=80",
-    rating_medio: 4.6, numero_recensioni: 78, piano: "free", in_evidenza: false, distanza_km: 6.0,
+    rating_medio: 0, numero_recensioni: 0, piano: "free", in_evidenza: false, distanza_km: 6.0,
   },
   {
     id: "t3", nome: "Pelo & Contropelo", slug: "pelo-contropelo-verona",
@@ -95,7 +95,7 @@ export const PROFESSIONISTI_SEED: StrutturaCard[] = [
     descrizione_storytelling: null,
     categoria: "toelettatura", comune: "Verona", provincia: "VR",
     foto_copertina: "https://images.unsplash.com/photo-1601758174114-e711c0cbaa69?w=400&q=80",
-    rating_medio: 4.5, numero_recensioni: 56, piano: "free", in_evidenza: false, distanza_km: 9.5,
+    rating_medio: 0, numero_recensioni: 0, piano: "free", in_evidenza: false, distanza_km: 9.5,
   },
 
   // === EDUCATORI CINOFILI ===
@@ -105,7 +105,7 @@ export const PROFESSIONISTI_SEED: StrutturaCard[] = [
     descrizione_storytelling: null,
     categoria: "educatore_cinofilo", comune: "Padova", provincia: "PD",
     foto_copertina: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=400&q=80",
-    rating_medio: 4.9, numero_recensioni: 67, piano: "premium", in_evidenza: true, distanza_km: 5.0,
+    rating_medio: 0, numero_recensioni: 0, piano: "premium", in_evidenza: true, distanza_km: 5.0,
   },
   {
     id: "e2", nome: "Scuola Cinofila Il Branco Felice", slug: "scuola-cinofila-branco-felice-brescia",
@@ -113,7 +113,7 @@ export const PROFESSIONISTI_SEED: StrutturaCard[] = [
     descrizione_storytelling: null,
     categoria: "educatore_cinofilo", comune: "Brescia", provincia: "BS",
     foto_copertina: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=400&q=80",
-    rating_medio: 4.7, numero_recensioni: 98, piano: "premium", in_evidenza: false, distanza_km: 7.0,
+    rating_medio: 0, numero_recensioni: 0, piano: "premium", in_evidenza: false, distanza_km: 7.0,
   },
 
   // === VETERINARI ===
@@ -123,7 +123,7 @@ export const PROFESSIONISTI_SEED: StrutturaCard[] = [
     descrizione_storytelling: null,
     categoria: "veterinario", comune: "Genova", provincia: "GE",
     foto_copertina: null,
-    rating_medio: 4.6, numero_recensioni: 134, piano: "free", in_evidenza: false, distanza_km: 4.0,
+    rating_medio: 0, numero_recensioni: 0, piano: "free", in_evidenza: false, distanza_km: 4.0,
   },
   {
     id: "v2", nome: "Clinica Veterinaria del Parco", slug: "clinica-veterinaria-del-parco-modena",
@@ -131,7 +131,7 @@ export const PROFESSIONISTI_SEED: StrutturaCard[] = [
     descrizione_storytelling: null,
     categoria: "veterinario", comune: "Modena", provincia: "MO",
     foto_copertina: null,
-    rating_medio: 4.8, numero_recensioni: 187, piano: "premium", in_evidenza: true, distanza_km: 2.5,
+    rating_medio: 0, numero_recensioni: 0, piano: "premium", in_evidenza: true, distanza_km: 2.5,
   },
 
   // === FOTOGRAFI PET ===
@@ -141,7 +141,7 @@ export const PROFESSIONISTI_SEED: StrutturaCard[] = [
     descrizione_storytelling: null,
     categoria: "fotografo_pet", comune: "Firenze", provincia: "FI",
     foto_copertina: "https://images.unsplash.com/photo-1507146426996-ef05306b995a?w=400&q=80",
-    rating_medio: 4.9, numero_recensioni: 31, piano: "premium_plus", in_evidenza: true, distanza_km: 3.2,
+    rating_medio: 0, numero_recensioni: 0, piano: "premium_plus", in_evidenza: true, distanza_km: 3.2,
   },
 
   // === CAT SITTER ===
@@ -151,7 +151,7 @@ export const PROFESSIONISTI_SEED: StrutturaCard[] = [
     descrizione_storytelling: null,
     categoria: "cat_sitter", comune: "Roma", provincia: "RM",
     foto_copertina: "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=400&q=80",
-    rating_medio: 4.8, numero_recensioni: 43, piano: "free", in_evidenza: false, distanza_km: 6.0,
+    rating_medio: 0, numero_recensioni: 0, piano: "free", in_evidenza: false, distanza_km: 6.0,
   },
 
   // === PET TAXI ===
@@ -161,6 +161,6 @@ export const PROFESSIONISTI_SEED: StrutturaCard[] = [
     descrizione_storytelling: null,
     categoria: "pet_taxi", comune: "Milano", provincia: "MI",
     foto_copertina: null,
-    rating_medio: 4.5, numero_recensioni: 28, piano: "premium", in_evidenza: false, distanza_km: 0.0,
+    rating_medio: 0, numero_recensioni: 0, piano: "premium", in_evidenza: false, distanza_km: 0.0,
   },
 ];

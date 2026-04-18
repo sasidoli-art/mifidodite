@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Mail } from "lucide-react";
 import { LogoPawDark, LogoText } from "@/components/shared/Logo";
+import { ManageCookiesButton } from "@/components/shared/ManageCookiesButton";
 
 export function Footer() {
   return (
@@ -60,6 +61,7 @@ export function Footer() {
               <li><Link href="/per-professionisti" className="hover:text-primary transition-colors">Per i professionisti</Link></li>
               <li><Link href="/chi-siamo" className="hover:text-primary transition-colors">Chi siamo</Link></li>
               <li><Link href="/privacy" className="hover:text-primary transition-colors">Privacy &amp; Termini</Link></li>
+              <li><ManageCookiesButton /></li>
             </ul>
           </div>
         </div>

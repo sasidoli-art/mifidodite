@@ -13,6 +13,21 @@ export interface ChatMessage {
   content: string;
 }
 
+// Rimuove PII dai messaggi prima di inviarli al modello (DeepSeek e in Cina,
+// paese senza decisione di adeguatezza UE — minimizziamo il trasferimento dati)
+const EMAIL_RE = /[\w.+-]+@[\w-]+\.[\w.-]+/g;
+const PHONE_RE = /(?:\+?\d{1,3}[\s.-]?)?(?:\(?\d{2,4}\)?[\s.-]?)?\d{3}[\s.-]?\d{3,4}[\s.-]?\d{0,4}/g;
+const IBAN_RE = /\b[A-Z]{2}\d{2}[A-Z0-9]{11,30}\b/g;
+const CF_RE = /\b[A-Z]{6}\d{2}[A-Z]\d{2}[A-Z]\d{3}[A-Z]\b/gi;
+
+function redactPII(text: string): string {
+  return text
+    .replace(EMAIL_RE, "[email]")
+    .replace(IBAN_RE, "[iban]")
+    .replace(CF_RE, "[codice-fiscale]")
+    .replace(PHONE_RE, (m) => (m.replace(/\D/g, "").length >= 7 ? "[telefono]" : m));
+}
+
 interface KbArticle {
   titolo: string;
   slug: string;
@@ -23,14 +38,16 @@ interface KbArticle {
 /**
  * System prompt di Zampa — definisce personalita, regole e disclaimer
  */
-function buildSystemPrompt(knowledgeBase: KbArticle[], userName?: string | null): string {
+function buildSystemPrompt(knowledgeBase: KbArticle[], firstName?: string | null): string {
   const articoliList = knowledgeBase
     .slice(0, 30)
     .map((a) => `- "${a.titolo}" (${a.categoria}) → https://mifidodite.eu/magazine/${a.slug}`)
     .join("\n");
 
-  const userPersonalization = userName
-    ? `\n# UTENTE\nL'utente si chiama ${userName}. Usalo nelle tue risposte in modo naturale (es. "Ciao ${userName}!", "Certo ${userName}, ti spiego..."). NON in tutte le frasi, solo dove e naturale.\n`
+  // Solo il nome proprio (no cognome), max 20 char. Evita identita complete verso modello extra-UE.
+  const safeName = firstName ? firstName.split(/\s+/)[0].slice(0, 20).replace(/[^\p{L}]/gu, "") : "";
+  const userPersonalization = safeName
+    ? `\n# UTENTE\nL'utente si chiama ${safeName}. Usalo nelle risposte in modo naturale dove ha senso (non in ogni frase).\n`
     : "";
 
   return `Sei Zampa, l'assistente AI ufficiale di MifidoDiTe.eu, il magazine pet d'Italia.
@@ -128,16 +145,22 @@ export async function chatWithZampa(
   const kb = await getKnowledgeBase();
   const systemPrompt = buildSystemPrompt(kb, userName);
 
+  // Strip PII dai messaggi utente prima di inviarli al modello.
+  // Nome nel system prompt e gia ridotto al solo nome proprio.
+  const sanitizedMessages = messages.map((m) =>
+    m.role === "user" ? { ...m, content: redactPII(m.content) } : m,
+  );
+
   const apiKey = process.env.DEEPSEEK_API_KEY;
   if (!apiKey) {
-    const lastUserMessage = messages.filter((m) => m.role === "user").pop()?.content || "";
+    const lastUserMessage = sanitizedMessages.filter((m) => m.role === "user").pop()?.content || "";
     const fullPrompt = `${systemPrompt}\n\n# CONVERSAZIONE\nUtente: ${lastUserMessage}`;
     const reply = await askDeepSeek(fullPrompt, 500);
     return { reply, model: "claude-fallback", ms: Date.now() - start };
   }
 
-  // DeepSeek con chat history completa (max 10 messaggi per non esagerare)
-  const recentMessages = messages.slice(-10);
+  // DeepSeek con chat history (max 10 messaggi), tutti sanitizzati
+  const recentMessages = sanitizedMessages.slice(-10);
   const fullMessages = [
     { role: "system" as const, content: systemPrompt },
     ...recentMessages,

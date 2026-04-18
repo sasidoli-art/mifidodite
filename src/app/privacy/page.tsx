@@ -94,7 +94,12 @@ export default function PrivacyPage() {
             <p>Per esercitare questi diritti, scrivi a: <a href="mailto:info@mifidodite.eu">info@mifidodite.eu</a>.</p>
 
             <h2>8. Cookie</h2>
-            <p>Il portale utilizza esclusivamente cookie tecnici necessari al funzionamento del servizio (autenticazione, preferenze). Non utilizziamo cookie di profilazione o di terze parti per finalita pubblicitarie.</p>
+            <p>Il portale utilizza due categorie di cookie:</p>
+            <ul>
+              <li><strong>Cookie tecnici (sempre attivi):</strong> necessari al funzionamento del sito (sessione, autenticazione, preferenze). Non richiedono consenso ex art. 122 Codice Privacy.</li>
+              <li><strong>Cookie analitici (opt-in):</strong> Google Analytics 4 con IP anonimizzato, caricato <strong>solo dopo il tuo consenso esplicito</strong>. Conservazione 26 mesi. Dati aggregati, nessuna profilazione pubblicitaria.</li>
+            </ul>
+            <p>Puoi modificare le tue preferenze in qualsiasi momento dal link <strong>&ldquo;Gestisci cookie&rdquo;</strong> nel footer. Non utilizziamo cookie di profilazione pubblicitaria ne traccianti di social network.</p>
 
             <h2>9. Sicurezza</h2>
             <p>Adottiamo misure tecniche e organizzative adeguate per proteggere i dati personali: crittografia in transito (HTTPS/TLS), password hashate con bcrypt, accesso ai dati limitato al personale autorizzato, backup cifrati.</p>

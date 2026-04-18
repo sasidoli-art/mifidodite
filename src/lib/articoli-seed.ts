@@ -3,8 +3,14 @@
 
 import { ARTICOLI_SPIAGGE } from "./articoli-spiagge-seed";
 import { ARTICOLI_VACANZE } from "./articoli-vacanze-seed";
+import { ARTICOLI_EVERGREEN } from "./articoli-evergreen-seed";
+import { ARTICOLI_REGIONALI } from "./articoli-regionali-seed";
+import { ARTICOLI_SHOPPING } from "./articoli-shopping-seed";
 
 export const ARTICOLI_SEED = [
+  ...ARTICOLI_EVERGREEN,
+  ...ARTICOLI_REGIONALI,
+  ...ARTICOLI_SHOPPING,
   ...ARTICOLI_VACANZE,
   ...ARTICOLI_SPIAGGE,
   {

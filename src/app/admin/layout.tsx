@@ -13,6 +13,7 @@ import {
   Scale,
   ShoppingBag,
   MessageCircle,
+  CalendarCheck,
   Settings,
   LogOut,
 } from "lucide-react";
@@ -27,6 +28,7 @@ const SIDEBAR_LINKS = [
   { href: "/admin/adozioni", label: "Adozioni", icon: Heart },
   { href: "/admin/lead", label: "Lead", icon: MessageSquare },
   { href: "/admin/articoli", label: "Articoli", icon: Newspaper },
+  { href: "/admin/eventi-candidati", label: "Eventi candidati", icon: CalendarCheck },
   { href: "/admin/newsletter", label: "Newsletter", icon: Mail },
   { href: "/admin/export", label: "Esporta Dati", icon: Database },
   { href: "/admin/legal", label: "Compliance", icon: Scale },

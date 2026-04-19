@@ -6,8 +6,10 @@ import { ARTICOLI_VACANZE } from "./articoli-vacanze-seed";
 import { ARTICOLI_EVERGREEN } from "./articoli-evergreen-seed";
 import { ARTICOLI_REGIONALI } from "./articoli-regionali-seed";
 import { ARTICOLI_SHOPPING } from "./articoli-shopping-seed";
+import { ARTICOLI_EVENTI } from "./articoli-eventi-seed";
 
 export const ARTICOLI_SEED = [
+  ...ARTICOLI_EVENTI,
   ...ARTICOLI_EVERGREEN,
   ...ARTICOLI_REGIONALI,
   ...ARTICOLI_SHOPPING,

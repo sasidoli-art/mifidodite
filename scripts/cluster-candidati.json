@@ -1,0 +1,428 @@
+{
+  "generato_il": "2026-04-21T19:46:15.705Z",
+  "soglia_jaccard": 0.5,
+  "totale_articoli": 186,
+  "singleton": 147,
+  "cluster_candidati": [
+    {
+      "cluster_id": "cl_005",
+      "size": 3,
+      "articoli": [
+        {
+          "id": "defa7c48-ecb7-4c65-a5fa-b5651e49d2d5",
+          "slug": "microchip-cane-obbligatorio-legge-281-costi-sanzioni-anagrafe-canina",
+          "titolo": "Microchip Cane Obbligatorio: Legge 281, Costi, Sanzioni e Anagrafe Canina",
+          "categoria": "salute",
+          "word_count": 806,
+          "created_at": "2026-04-12T14:42:35.976Z"
+        },
+        {
+          "id": "ff02cbcd-36e3-435a-b7df-72f57d120df9",
+          "slug": "microchip-cane-obbligatorio-legge-281",
+          "titolo": "Microchip cane obbligatorio: legge, costi e sanzioni in Italia",
+          "categoria": "salute",
+          "word_count": 778,
+          "created_at": "2026-04-08T08:21:32.089Z"
+        },
+        {
+          "id": "484df71a-f7c4-4ed5-959c-43ff85010ba7",
+          "slug": "microchip-cane-obbligatorio-legge-italiana",
+          "titolo": "Microchip Cane Obbligatorio: Legge, Costi e Sanzioni in Italia",
+          "categoria": "salute",
+          "word_count": 689,
+          "created_at": "2026-04-08T08:14:40.613Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_013",
+      "size": 3,
+      "articoli": [
+        {
+          "id": "e3aee46e-ff5d-4031-913b-290fa8d490a0",
+          "slug": "cani-capiscono-emozioni-umane-ricerca",
+          "titolo": "I Cani Capiscono Davvero le Nostre Emozioni: Cosa Dice la Ricerca",
+          "categoria": "curiosita",
+          "word_count": 1075,
+          "created_at": "2026-04-09T07:22:38.178Z"
+        },
+        {
+          "id": "71473752-8542-4217-a1e7-d19da59067bd",
+          "slug": "perche-cani-capiscono-emozioni-scienza-legame",
+          "titolo": "Perché i cani capiscono le nostre emozioni? La scienza spiega il legame",
+          "categoria": "curiosita",
+          "word_count": 955,
+          "created_at": "2026-04-16T07:48:52.419Z"
+        },
+        {
+          "id": "8060c7c1-6783-49b0-a754-ab295429f391",
+          "slug": "cani-capiscono-emozioni-scienza",
+          "titolo": "I cani capiscono le nostre emozioni? La scienza conferma",
+          "categoria": "curiosita",
+          "word_count": 877,
+          "created_at": "2026-04-14T07:31:58.959Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_018",
+      "size": 3,
+      "articoli": [
+        {
+          "id": "53412a45-f3fe-4a54-90fd-24c1163869b7",
+          "slug": "longevita-cane-razze-piu-longeve-studio-uk-dati-enci-italia",
+          "titolo": "Longevità canina: lo studio UK sulle razze più longeve e i dati ENCI in Italia",
+          "categoria": "comportamento",
+          "word_count": 1035,
+          "created_at": "2026-04-16T07:50:17.295Z"
+        },
+        {
+          "id": "283b07cf-fb07-42b1-b969-a6ff56b8ba05",
+          "slug": "studio-uk-razze-canine-longeve-dati-enci-italia",
+          "titolo": "Studio UK: le razze canine più longeve e la realtà italiana nei dati ENCI",
+          "categoria": "guide",
+          "word_count": 855,
+          "created_at": "2026-04-14T07:33:19.450Z"
+        },
+        {
+          "id": "9b58463f-9643-48d8-9c19-5e384f6a2feb",
+          "slug": "razze-canine-longeve-dati-enci-studio-internazionale",
+          "titolo": "Razze canine più longeve: dati ENCI a confronto con studio internazionale",
+          "categoria": "guide",
+          "word_count": 820,
+          "created_at": "2026-04-14T07:32:51.187Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_001",
+      "size": 2,
+      "articoli": [
+        {
+          "id": "1b16f82b-9181-41f0-a5b7-a069afe15921",
+          "slug": "vaccinazioni-cane-calendario-completo",
+          "titolo": "Vaccinazioni Cane: Calendario Completo e Linee Guida WSAVA",
+          "categoria": "salute",
+          "word_count": 799,
+          "created_at": "2026-04-08T08:20:26.214Z"
+        },
+        {
+          "id": "2c5b8417-96cf-4bdf-851c-27434bc76c46",
+          "slug": "vaccinazioni-del-cane-calendario-completo-e-costi",
+          "titolo": "Vaccinazioni del cane: calendario completo e costi",
+          "categoria": "salute",
+          "word_count": 702,
+          "created_at": "2026-04-04T22:13:32.362Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_002",
+      "size": 2,
+      "articoli": [
+        {
+          "id": "62351e97-ad3f-4109-a63f-480add441b6e",
+          "slug": "perche-gatti-fanno-fusa-benefici-salute",
+          "titolo": "Perché i gatti fanno le fusa? Scoperte scientifiche e benefici",
+          "categoria": "curiosita",
+          "word_count": 817,
+          "created_at": "2026-04-06T19:55:48.386Z"
+        },
+        {
+          "id": "b9c959cf-48e0-4818-923f-4cb3473a687c",
+          "slug": "perche-gatti-fanno-fusa-benefici-salute-mnnm3c0i",
+          "titolo": "Perché i gatti fanno le fusa? Scoperte scientifiche e benefici",
+          "categoria": "curiosita",
+          "word_count": 557,
+          "created_at": "2026-04-06T19:57:34.099Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_003",
+      "size": 2,
+      "articoli": [
+        {
+          "id": "b34b55ff-052f-4fa2-9a05-afeabc28a1a1",
+          "slug": "microbioma-cane-alimentazione-ricerche-mnnmd44t",
+          "titolo": "Microbioma del cane: come l'alimentazione influenza la salute",
+          "categoria": "salute",
+          "word_count": 771,
+          "created_at": "2026-04-06T20:05:16.735Z"
+        },
+        {
+          "id": "4c820110-a73e-4bea-a7ad-7b48646d042a",
+          "slug": "microbioma-cane-alimentazione-ricerche",
+          "titolo": "Microbioma del cane e alimentazione: le ultime ricerche scientifiche",
+          "categoria": "salute",
+          "word_count": 686,
+          "created_at": "2026-04-06T19:56:13.538Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_004",
+      "size": 2,
+      "articoli": [
+        {
+          "id": "13cecac6-b710-4e75-8bf8-3bb040a41bad",
+          "slug": "scegliere-primo-cucciolo-guida-cane-principianti",
+          "titolo": "Come Scegliere il Primo Cucciolo: Guida Completa per Principianti",
+          "categoria": "guide",
+          "word_count": 1069,
+          "created_at": "2026-04-12T14:45:57.370Z"
+        },
+        {
+          "id": "8cfec930-5b7c-4763-b98c-09e75bffcaaf",
+          "slug": "come-scegliere-primo-cucciolo-guida-completa",
+          "titolo": "Come Scegliere il Primo Cucciolo: Guida Completa per Principianti",
+          "categoria": "guide",
+          "word_count": 858,
+          "created_at": "2026-04-08T08:12:43.284Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_006",
+      "size": 2,
+      "articoli": [
+        {
+          "id": "76805f98-71de-44a3-a881-99e8b326c010",
+          "slug": "razze-gatti-italiane-siamese-foreste-sokoke",
+          "titolo": "Razze di Gatti Italiane: Siamese, Foreste e Sokoke",
+          "categoria": "razze",
+          "word_count": 877,
+          "created_at": "2026-04-08T08:16:05.884Z"
+        },
+        {
+          "id": "7ec4b5a0-f6a5-41b5-a8cf-431fafaa76d1",
+          "slug": "razze-gatti-italiani-siamese-foreste-sokoke",
+          "titolo": "Razze di Gatti Italiani: Siamese, Foreste e Sokoke. Storia e Riconoscimenti",
+          "categoria": "razze",
+          "word_count": 801,
+          "created_at": "2026-04-12T14:48:29.953Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_007",
+      "size": 2,
+      "articoli": [
+        {
+          "id": "cc61d4d5-3136-4421-bd16-a2149a340150",
+          "slug": "educazione-cucciolo-primi-6-mesi-socializzazione-comandi",
+          "titolo": "Educazione del Cucciolo nei Primi 6 Mesi: Guida Completa",
+          "categoria": "comportamento",
+          "word_count": 909,
+          "created_at": "2026-04-08T08:19:54.541Z"
+        },
+        {
+          "id": "ac7c6b9b-c79c-4fad-b562-7b19564beb35",
+          "slug": "educazione-cucciolo-primi-6-mesi-socializzazione-comandi-base",
+          "titolo": "Educazione cucciolo primi 6 mesi: socializzazione, comandi base e gestione",
+          "categoria": "comportamento",
+          "word_count": 782,
+          "created_at": "2026-04-12T14:46:34.484Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_008",
+      "size": 2,
+      "articoli": [
+        {
+          "id": "fa1a9c16-b686-420a-8c79-3aa6cf425b07",
+          "slug": "trasporto-cani-auto-art-169-codice-strada",
+          "titolo": "Trasporto cani in auto: obblighi legali e sanzioni secondo Art. 169 CDS",
+          "categoria": "guide",
+          "word_count": 785,
+          "created_at": "2026-04-08T08:25:59.344Z"
+        },
+        {
+          "id": "16560f2f-d8bc-4852-bffe-d10295c43ed2",
+          "slug": "trasporto-cani-auto-articolo-169-codice-strada",
+          "titolo": "Trasporto cani in auto: Art. 169 CDS, obblighi e sanzioni",
+          "categoria": "guide",
+          "word_count": 747,
+          "created_at": "2026-04-08T15:04:27.100Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_009",
+      "size": 2,
+      "articoli": [
+        {
+          "id": "12083380-f3a6-494b-a381-75e6e5dc35f5",
+          "slug": "trasporto-gatti-auto-sicurezza-codice-strada-consigli",
+          "titolo": "Trasporto gatti in auto: guida sicura, obblighi legali e consigli pratici",
+          "categoria": "gatti",
+          "word_count": 899,
+          "created_at": "2026-04-12T14:39:31.193Z"
+        },
+        {
+          "id": "e29a2428-c2a3-4165-84b8-51bb07563296",
+          "slug": "trasporto-gatti-auto-sicurezza-codice-strada",
+          "titolo": "Trasporto Gatti in Auto: Guida Completa e Sicura secondo il Codice",
+          "categoria": "gatti",
+          "word_count": 602,
+          "created_at": "2026-04-08T08:29:30.861Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_010",
+      "size": 2,
+      "articoli": [
+        {
+          "id": "86c7de78-982f-4ef9-945a-5eb486eadb0d",
+          "slug": "cani-autostrada-vacanza-regole-codice-strada",
+          "titolo": "Cani in Autostrada e Vacanza: Regole, Documenti e Traghetti",
+          "categoria": "viaggi",
+          "word_count": 779,
+          "created_at": "2026-04-08T08:30:23.651Z"
+        },
+        {
+          "id": "8bdc58ce-5699-4dd6-87e8-42c7c1655b4b",
+          "slug": "cani-autostrada-vacanza-regole-codice-strada-traghetti",
+          "titolo": "Cani in autostrada e in vacanza: regole del Codice della Strada e traghetti",
+          "categoria": "viaggi",
+          "word_count": 758,
+          "created_at": "2026-04-12T14:41:33.024Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_011",
+      "size": 2,
+      "articoli": [
+        {
+          "id": "4eddc59f-9c04-4952-84fe-f45375f4d1ee",
+          "slug": "vendere-regalare-cane-legge-italia-obblighi",
+          "titolo": "Vendere o regalare il cane: guida completa alla legge italiana",
+          "categoria": "guide",
+          "word_count": 964,
+          "created_at": "2026-04-08T15:06:40.778Z"
+        },
+        {
+          "id": "41dee2c2-03d0-4e8f-80f9-97f4cdf3ef8c",
+          "slug": "vendere-regalare-cane-obblighi-legge-legale",
+          "titolo": "Vendere o regalare un cane: obblighi di legge e cosa è legale",
+          "categoria": "guide",
+          "word_count": 876,
+          "created_at": "2026-04-12T14:37:20.077Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_012",
+      "size": 2,
+      "articoli": [
+        {
+          "id": "dd0404b1-80e7-47bf-bf2b-140afcaf5f80",
+          "slug": "passaggio-proprieta-cane-guida-procedura-italiana",
+          "titolo": "Passaggio di Proprietà del Cane: Guida Completa alla Procedura Italiana",
+          "categoria": "guide",
+          "word_count": 1873,
+          "created_at": "2026-04-09T13:35:31.967Z"
+        },
+        {
+          "id": "1322f90c-0fef-4df5-a050-2db76438e3e5",
+          "slug": "passaggio-proprieta-cane-guida-italiana",
+          "titolo": "Passaggio Proprietà Cane: Guida Completa alla Procedura Italiana",
+          "categoria": "guide",
+          "word_count": 985,
+          "created_at": "2026-04-08T15:08:27.040Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_014",
+      "size": 2,
+      "articoli": [
+        {
+          "id": "583c83c0-cfb5-4c6f-ab9a-16ed5bf221e2",
+          "slug": "razze-cani-longevi-studio-internazionale-italia-enci",
+          "titolo": "Razze Cani Longevi: Studio Internazionale vs Dati ENCI Italia",
+          "categoria": "curiosita",
+          "word_count": 1059,
+          "created_at": "2026-04-09T07:23:02.257Z"
+        },
+        {
+          "id": "08d79e73-511d-46b0-b80f-7a905f95dbd8",
+          "slug": "razze-cani-longevi-dati-enci-studio-inglese",
+          "titolo": "Razze di cani piu longeve: i dati ENCI sfidano lo studio inglese",
+          "categoria": "comportamento",
+          "word_count": 940,
+          "created_at": "2026-04-16T07:23:31.671Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_015",
+      "size": 2,
+      "articoli": [
+        {
+          "id": "fe5c2742-2c89-4c25-bf74-2249eaeb7147",
+          "slug": "pastore-caucaso-cane-guerra-russo",
+          "titolo": "Pastore del Caucaso: il cane da guerra dell'esercito russo",
+          "categoria": "curiosita",
+          "word_count": 1202,
+          "created_at": "2026-04-09T13:39:28.163Z"
+        },
+        {
+          "id": "748bd152-b0c7-4a61-b580-83cca941abe6",
+          "slug": "pastore-caucaso-cane-guerra-russo-mnrj073p",
+          "titolo": "Pastore del Caucaso: il cane da guerra dell'esercito russo",
+          "categoria": "curiosita",
+          "word_count": 1169,
+          "created_at": "2026-04-09T13:42:18.400Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_016",
+      "size": 2,
+      "articoli": [
+        {
+          "id": "4d2434e1-798b-438c-ac6d-1c0ed34a6813",
+          "slug": "pastore-tedesco-esercito-polizia-addestramento-mnrj0th3",
+          "titolo": "Pastori Tedeschi in Divisa: Da Rin Tin Tin ai Cani Anti-Bombe",
+          "categoria": "curiosita",
+          "word_count": 1343,
+          "created_at": "2026-04-09T13:42:52.324Z"
+        },
+        {
+          "id": "c8447603-08e0-42a2-9665-07f67d4ed7d9",
+          "slug": "pastore-tedesco-esercito-polizia-addestramento",
+          "titolo": "Pastore Tedesco nelle forze armate: da Rin Tin Tin ai cani anti-IED",
+          "categoria": "curiosita",
+          "word_count": 1191,
+          "created_at": "2026-04-09T13:39:58.726Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_017",
+      "size": 2,
+      "articoli": [
+        {
+          "id": "11d9f37e-6fd5-4e30-b997-9c0c88984a67",
+          "slug": "malinois-belga-navy-seal-cani",
+          "titolo": "Malinois Belga: il cane eroe del raid a Bin Laden",
+          "categoria": "curiosita",
+          "word_count": 1394,
+          "created_at": "2026-04-09T13:40:32.813Z"
+        },
+        {
+          "id": "82d55a70-d670-4756-8a8a-1006831aab15",
+          "slug": "malinois-belga-navy-seal-cani-operazioni-speciali",
+          "titolo": "Il Malinois Belga: il Cane Eroe che Catturò Bin Laden",
+          "categoria": "curiosita",
+          "word_count": 1314,
+          "created_at": "2026-04-09T13:43:25.095Z"
+        }
+      ]
+    }
+  ]
+}

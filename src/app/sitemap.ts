@@ -130,7 +130,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     try {
       const { neon } = await import("@neondatabase/serverless");
       const sql = neon(process.env.DATABASE_URL);
-      const rows = await sql`SELECT slug, updated_at, created_at FROM articoli WHERE pubblicato = true ORDER BY created_at DESC`;
+      const rows = await sql`SELECT slug, updated_at, created_at FROM articoli WHERE pubblicato = true AND redirect_to_slug IS NULL ORDER BY created_at DESC`;
       articlePages = rows.map((r: Record<string, unknown>) => {
         const slug = r.slug as string;
         dbArticleSlugs.add(slug);

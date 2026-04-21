@@ -1,0 +1,660 @@
+{
+  "generato_il": "2026-04-21T19:57:39.606Z",
+  "totale_articoli_analizzati": 186,
+  "articoli_singleton": 138,
+  "cluster_analizzati": 18,
+  "decisioni": {
+    "consolidate": 18,
+    "keep_separate": 0,
+    "partial_overlap": 0,
+    "delete_410": 1
+  },
+  "redirects_totali": 29,
+  "azioni": [
+    {
+      "cluster_id": "cl_005",
+      "topic": "Microchip cane obbligatorio (legge, costi, sanzioni, anagrafe)",
+      "decision": "consolidate",
+      "reasoning": "3 articoli sul medesimo topic. Master scelto per word count più alto (806w) + data più recente + slug che copre tutte le query long-tail (costi, sanzioni, anagrafe). Differenza content tra i 3 è minima (<20%).",
+      "master": {
+        "id": "defa7c48-ecb7-4c65-a5fa-b5651e49d2d5",
+        "slug": "microchip-cane-obbligatorio-legge-281-costi-sanzioni-anagrafe-canina",
+        "titolo": "Microchip Cane Obbligatorio: Legge 281, Costi, Sanzioni e Anagrafe Canina",
+        "word_count": 806,
+        "categoria": "salute",
+        "created_at": "2026-04-12T14:42:35.976Z"
+      },
+      "redirects": [
+        {
+          "from_id": "ff02cbcd-36e3-435a-b7df-72f57d120df9",
+          "from_slug": "microchip-cane-obbligatorio-legge-281",
+          "from_titolo": "Microchip cane obbligatorio: legge, costi e sanzioni in Italia",
+          "from_word_count": 778,
+          "from_categoria": "salute",
+          "to_slug": "microchip-cane-obbligatorio-legge-281-costi-sanzioni-anagrafe-canina",
+          "source": "phase_3",
+          "rationale": "Contenuto più scarno (778w). Slug più pulito ma master ha coda descrittiva più ricca per SEO long-tail."
+        },
+        {
+          "from_id": "484df71a-f7c4-4ed5-959c-43ff85010ba7",
+          "from_slug": "microchip-cane-obbligatorio-legge-italiana",
+          "from_titolo": "Microchip Cane Obbligatorio: Legge, Costi e Sanzioni in Italia",
+          "from_word_count": 689,
+          "from_categoria": "salute",
+          "to_slug": "microchip-cane-obbligatorio-legge-281-costi-sanzioni-anagrafe-canina",
+          "source": "phase_3",
+          "rationale": "689w, contenuto più superficiale, slug meno specifico (generico 'legge italiana')."
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_013",
+      "topic": "Cani capiscono le emozioni umane (ricerca scientifica)",
+      "decision": "consolidate",
+      "reasoning": "3 articoli sullo stesso tema scientifico. Master 1075w per word count più alto. Slug corto e senza code ridondanti.",
+      "master": {
+        "id": "e3aee46e-ff5d-4031-913b-290fa8d490a0",
+        "slug": "cani-capiscono-emozioni-umane-ricerca",
+        "titolo": "I Cani Capiscono Davvero le Nostre Emozioni: Cosa Dice la Ricerca",
+        "word_count": 1075,
+        "categoria": "curiosita",
+        "created_at": "2026-04-09T07:22:38.178Z"
+      },
+      "redirects": [
+        {
+          "from_id": "71473752-8542-4217-a1e7-d19da59067bd",
+          "from_slug": "perche-cani-capiscono-emozioni-scienza-legame",
+          "from_titolo": "Perché i cani capiscono le nostre emozioni? La scienza spiega il legame",
+          "from_word_count": 955,
+          "from_categoria": "curiosita",
+          "to_slug": "cani-capiscono-emozioni-umane-ricerca",
+          "source": "phase_3",
+          "rationale": "955w, più recente ma più corto come content. Lo slug con 'perche' è buono per intent ma master copre stessa query."
+        },
+        {
+          "from_id": "8060c7c1-6783-49b0-a754-ab295429f391",
+          "from_slug": "cani-capiscono-emozioni-scienza",
+          "from_titolo": "I cani capiscono le nostre emozioni? La scienza conferma",
+          "from_word_count": 877,
+          "from_categoria": "curiosita",
+          "to_slug": "cani-capiscono-emozioni-umane-ricerca",
+          "source": "phase_3",
+          "rationale": "877w, contenuto più breve, slug nudo senza angolo."
+        },
+        {
+          "from_id": "dc93e718-5b1c-4446-a0d5-268b4f94623f",
+          "from_slug": "capacita-cognitive-cani-emozioni-umane",
+          "from_titolo": "Le Capacità Cognitive dei Cani: Come Comprendono le Emozioni Umane",
+          "from_word_count": 671,
+          "from_categoria": "curiosita",
+          "to_slug": "cani-capiscono-emozioni-umane-ricerca",
+          "source": "phase_3bis",
+          "rationale": "Fase 3-bis: framing 'capacità cognitive' è sub-topic ma copre stessa intent (cani che capiscono emozioni umane). 671w, content minore."
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_018_merged",
+      "topic": "Razze di cani più longeve: studio UK Royal Veterinary College + dati ENCI",
+      "decision": "consolidate",
+      "reasoning": "CLUSTER PIÙ IMPORTANTE DELL'AUDIT (5 articoli Jaccard + 1 singleton keyword-matched = 6 articoli). Stesso studio UK RVC, stessi dati ENCI, stesso Jack Russell come razza longeva top. Master scelto per word count più alto (1059w) e slug che inizia con la keyword principale 'razze cani longevi'. NOTA: il singleton razze-cani-piu-longeve-enci-ricerche (840w) ha lo slug più pulito in assoluto ma content inferiore — se vuoi lo slug canonico migliore, fai un manual editing post-consolidamento copiando il body del master 1059w dentro lo slug più pulito. Per ora master = 1059w as-is.",
+      "master": {
+        "id": "583c83c0-cfb5-4c6f-ab9a-16ed5bf221e2",
+        "slug": "razze-cani-longevi-studio-internazionale-italia-enci",
+        "titolo": "Razze Cani Longevi: Studio Internazionale vs Dati ENCI Italia",
+        "word_count": 1059,
+        "categoria": "curiosita",
+        "created_at": "2026-04-09T07:23:02.257Z"
+      },
+      "redirects": [
+        {
+          "from_id": "53412a45-f3fe-4a54-90fd-24c1163869b7",
+          "from_slug": "longevita-cane-razze-piu-longeve-studio-uk-dati-enci-italia",
+          "from_titolo": "Longevità canina: lo studio UK sulle razze più longeve e i dati ENCI in Italia",
+          "from_word_count": 1035,
+          "from_categoria": "comportamento",
+          "to_slug": "razze-cani-longevi-studio-internazionale-italia-enci",
+          "source": "phase_3",
+          "rationale": "1035w, solo -2.3% word count del master ma slug inizia con 'longevita-cane' non con keyword principale. Data più recente."
+        },
+        {
+          "from_id": "283b07cf-fb07-42b1-b969-a6ff56b8ba05",
+          "from_slug": "studio-uk-razze-canine-longeve-dati-enci-italia",
+          "from_titolo": "Studio UK: le razze canine più longeve e la realtà italiana nei dati ENCI",
+          "from_word_count": 855,
+          "from_categoria": "guide",
+          "to_slug": "razze-cani-longevi-studio-internazionale-italia-enci",
+          "source": "phase_3",
+          "rationale": "855w, slug inizia con 'studio-uk' che è modifier non keyword principale."
+        },
+        {
+          "from_id": "9b58463f-9643-48d8-9c19-5e384f6a2feb",
+          "from_slug": "razze-canine-longeve-dati-enci-studio-internazionale",
+          "from_titolo": "Razze canine più longeve: dati ENCI a confronto con studio internazionale",
+          "from_word_count": 820,
+          "from_categoria": "guide",
+          "to_slug": "razze-cani-longevi-studio-internazionale-italia-enci",
+          "source": "phase_3",
+          "rationale": "820w, word count più basso, slug simile al master ma con 'canine' vs 'cani'."
+        },
+        {
+          "from_id": "08d79e73-511d-46b0-b80f-7a905f95dbd8",
+          "from_slug": "razze-cani-longevi-dati-enci-studio-inglese",
+          "from_titolo": "Razze di cani piu longeve: i dati ENCI sfidano lo studio inglese",
+          "from_word_count": 940,
+          "from_categoria": "comportamento",
+          "to_slug": "razze-cani-longevi-studio-internazionale-italia-enci",
+          "source": "phase_3",
+          "rationale": "940w, variante con 'inglese' invece di 'UK'."
+        },
+        {
+          "from_id": "cf16c9b1-8271-4f52-9f3d-52050c169f0e",
+          "from_slug": "razze-cani-piu-longeve-enci-ricerche",
+          "from_titolo": "Le razze di cani più longeve: guida alle specie che vivono più a lungo",
+          "from_word_count": 840,
+          "from_categoria": "razze",
+          "to_slug": "razze-cani-longevi-studio-internazionale-italia-enci",
+          "source": "phase_3bis",
+          "rationale": "Fase 3-bis: 840w, SLUG PIÙ PULITO del cluster ma word count inferiore al master 1059w. Considerare manual editing per usare questo come canonico con body del master."
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_001",
+      "topic": "Vaccinazioni cane: calendario completo",
+      "decision": "consolidate",
+      "reasoning": "2 articoli cluster + 2 singleton Fase 3-bis = 4 articoli stesso topic. Master per word count + slug più pulito (senza stopword 'del').",
+      "master": {
+        "id": "1b16f82b-9181-41f0-a5b7-a069afe15921",
+        "slug": "vaccinazioni-cane-calendario-completo",
+        "titolo": "Vaccinazioni Cane: Calendario Completo e Linee Guida WSAVA",
+        "word_count": 799,
+        "categoria": "salute",
+        "created_at": "2026-04-08T08:20:26.214Z"
+      },
+      "redirects": [
+        {
+          "from_id": "2c5b8417-96cf-4bdf-851c-27434bc76c46",
+          "from_slug": "vaccinazioni-del-cane-calendario-completo-e-costi",
+          "from_titolo": "Vaccinazioni del cane: calendario completo e costi",
+          "from_word_count": 702,
+          "from_categoria": "salute",
+          "to_slug": "vaccinazioni-cane-calendario-completo",
+          "source": "phase_3",
+          "rationale": "702w, slug con stopword 'del' e coda 'e-costi'."
+        },
+        {
+          "from_id": "f2491f85-dee8-4428-b7c1-73b40bceb320",
+          "from_slug": "vaccini-cane-calendario-vaccinale-completo",
+          "from_titolo": "Vaccini Cane: Calendario Completo da Cucciolo ad Adulto",
+          "from_word_count": 728,
+          "from_categoria": "salute",
+          "to_slug": "vaccinazioni-cane-calendario-completo",
+          "source": "phase_3bis",
+          "rationale": "Fase 3-bis: slug non catturato dal Jaccard perché 'vaccini' vs 'vaccinazioni' differisce. Topic identico."
+        },
+        {
+          "from_id": "05bc6ad2-2339-493a-84fa-b7ecae7eb1fc",
+          "from_slug": "vaccini-cane-calendario-completo-obbligatori-richiami-costi",
+          "from_titolo": "Vaccini Cane: Calendario Completo, Obbligatori, Richiami e Costi",
+          "from_word_count": 801,
+          "from_categoria": "salute",
+          "to_slug": "vaccinazioni-cane-calendario-completo",
+          "source": "phase_3bis",
+          "rationale": "Fase 3-bis: 801w sullo stesso topic calendario vaccinale. Slug pesante."
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_002",
+      "topic": "Perché i gatti fanno le fusa: scoperte scientifiche",
+      "decision": "consolidate",
+      "reasoning": "Duplicato con hash random -mnnm3c0i = artefatto di generazione fallita. Master = slug pulito.",
+      "master": {
+        "id": "62351e97-ad3f-4109-a63f-480add441b6e",
+        "slug": "perche-gatti-fanno-fusa-benefici-salute",
+        "titolo": "Perché i gatti fanno le fusa? Scoperte scientifiche e benefici",
+        "word_count": 817,
+        "categoria": "curiosita",
+        "created_at": "2026-04-06T19:55:48.386Z"
+      },
+      "redirects": [
+        {
+          "from_id": "b9c959cf-48e0-4818-923f-4cb3473a687c",
+          "from_slug": "perche-gatti-fanno-fusa-benefici-salute-mnnm3c0i",
+          "from_titolo": "Perché i gatti fanno le fusa? Scoperte scientifiche e benefici",
+          "from_word_count": 557,
+          "from_categoria": "curiosita",
+          "to_slug": "perche-gatti-fanno-fusa-benefici-salute",
+          "source": "phase_3",
+          "rationale": "557w, slug con hash random mnnm3c0i = artefatto di generazione. MAI master per SEO."
+        },
+        {
+          "from_id": "8fd10997-11fe-45c7-9e98-46036be965e1",
+          "from_slug": "perche-il-gatto-fa-le-fusa-non-e-sempre-per-affetto",
+          "from_titolo": "Perché il gatto fa le fusa: non è sempre per affetto",
+          "from_word_count": 756,
+          "from_categoria": "gatti",
+          "to_slug": "perche-gatti-fanno-fusa-benefici-salute",
+          "source": "phase_3bis",
+          "rationale": "Fase 3-bis: framing leggermente diverso ('non è sempre per affetto') ma topic identico (perché fanno le fusa)."
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_003",
+      "topic": "Microbioma del cane e alimentazione",
+      "decision": "consolidate",
+      "reasoning": "Duplicato con hash random -mnnmd44t. Nonostante il duplicato con hash abbia word count leggermente più alto (771 vs 686), la regola 'slug con hash MAI master' prevale: un master con hash è penalizzato in SERP, il content extra non compensa.",
+      "master": {
+        "id": "4c820110-a73e-4bea-a7ad-7b48646d042a",
+        "slug": "microbioma-cane-alimentazione-ricerche",
+        "titolo": "Microbioma del cane e alimentazione: le ultime ricerche scientifiche",
+        "word_count": 686,
+        "categoria": "salute",
+        "created_at": "2026-04-06T19:56:13.538Z"
+      },
+      "redirects": [
+        {
+          "from_id": "b34b55ff-052f-4fa2-9a05-afeabc28a1a1",
+          "from_slug": "microbioma-cane-alimentazione-ricerche-mnnmd44t",
+          "from_titolo": "Microbioma del cane: come l'alimentazione influenza la salute",
+          "from_word_count": 771,
+          "from_categoria": "salute",
+          "to_slug": "microbioma-cane-alimentazione-ricerche",
+          "source": "phase_3",
+          "rationale": "771w, slug con hash mnnmd44t. Override word count per regola hash-never-master."
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_004",
+      "topic": "Come scegliere il primo cucciolo / cane per principianti",
+      "decision": "consolidate",
+      "reasoning": "Master per word count più alto (1069w) e slug più specifico ('guida-cane-principianti' > 'guida-completa' generico).",
+      "master": {
+        "id": "13cecac6-b710-4e75-8bf8-3bb040a41bad",
+        "slug": "scegliere-primo-cucciolo-guida-cane-principianti",
+        "titolo": "Come Scegliere il Primo Cucciolo: Guida Completa per Principianti",
+        "word_count": 1069,
+        "categoria": "guide",
+        "created_at": "2026-04-12T14:45:57.370Z"
+      },
+      "redirects": [
+        {
+          "from_id": "8cfec930-5b7c-4763-b98c-09e75bffcaaf",
+          "from_slug": "come-scegliere-primo-cucciolo-guida-completa",
+          "from_titolo": "Come Scegliere il Primo Cucciolo: Guida Completa per Principianti",
+          "from_word_count": 858,
+          "from_categoria": "guide",
+          "to_slug": "scegliere-primo-cucciolo-guida-cane-principianti",
+          "source": "phase_3",
+          "rationale": "858w, slug con 'guida-completa' che è coda ridondante (tutti gli articoli sono 'completi')."
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_006",
+      "topic": "Razze di gatti italiane (Siamese Italiano, Gatto delle Foreste, Sokoke)",
+      "decision": "consolidate",
+      "reasoning": "Varianti singolare/plurale dello stesso topic. Master scelto per word count più alto + grammatica italiana corretta ('razze gatti italiane' concorda con 'razze' femminile plurale).",
+      "master": {
+        "id": "76805f98-71de-44a3-a881-99e8b326c010",
+        "slug": "razze-gatti-italiane-siamese-foreste-sokoke",
+        "titolo": "Razze di Gatti Italiane: Siamese, Foreste e Sokoke",
+        "word_count": 877,
+        "categoria": "razze",
+        "created_at": "2026-04-08T08:16:05.884Z"
+      },
+      "redirects": [
+        {
+          "from_id": "7ec4b5a0-f6a5-41b5-a8cf-431fafaa76d1",
+          "from_slug": "razze-gatti-italiani-siamese-foreste-sokoke",
+          "from_titolo": "Razze di Gatti Italiani: Siamese, Foreste e Sokoke. Storia e Riconoscimenti",
+          "from_word_count": 801,
+          "from_categoria": "razze",
+          "to_slug": "razze-gatti-italiane-siamese-foreste-sokoke",
+          "source": "phase_3",
+          "rationale": "801w, grammatica 'italiani' non concorda con 'razze' (femminile)."
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_007",
+      "topic": "Educazione del cucciolo nei primi 6 mesi",
+      "decision": "consolidate",
+      "reasoning": "Master per word count + slug più corto (evita stopword 'base').",
+      "master": {
+        "id": "cc61d4d5-3136-4421-bd16-a2149a340150",
+        "slug": "educazione-cucciolo-primi-6-mesi-socializzazione-comandi",
+        "titolo": "Educazione del Cucciolo nei Primi 6 Mesi: Guida Completa",
+        "word_count": 909,
+        "categoria": "comportamento",
+        "created_at": "2026-04-08T08:19:54.541Z"
+      },
+      "redirects": [
+        {
+          "from_id": "ac7c6b9b-c79c-4fad-b562-7b19564beb35",
+          "from_slug": "educazione-cucciolo-primi-6-mesi-socializzazione-comandi-base",
+          "from_titolo": "Educazione cucciolo primi 6 mesi: socializzazione, comandi base e gestione",
+          "from_word_count": 782,
+          "from_categoria": "comportamento",
+          "to_slug": "educazione-cucciolo-primi-6-mesi-socializzazione-comandi",
+          "source": "phase_3",
+          "rationale": "782w, slug con 'base' ridondante."
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_008",
+      "topic": "Trasporto cani in auto: Art. 169 Codice della Strada",
+      "decision": "consolidate",
+      "reasoning": "2 cluster + 1 singleton Fase 3-bis = 3 articoli stesso topic (la 3a variante che Antonio aveva segnalato). Master per word count + slug con formato canonico 'art-169'.",
+      "master": {
+        "id": "fa1a9c16-b686-420a-8c79-3aa6cf425b07",
+        "slug": "trasporto-cani-auto-art-169-codice-strada",
+        "titolo": "Trasporto cani in auto: obblighi legali e sanzioni secondo Art. 169 CDS",
+        "word_count": 785,
+        "categoria": "guide",
+        "created_at": "2026-04-08T08:25:59.344Z"
+      },
+      "redirects": [
+        {
+          "from_id": "16560f2f-d8bc-4852-bffe-d10295c43ed2",
+          "from_slug": "trasporto-cani-auto-articolo-169-codice-strada",
+          "from_titolo": "Trasporto cani in auto: Art. 169 CDS, obblighi e sanzioni",
+          "from_word_count": 747,
+          "from_categoria": "guide",
+          "to_slug": "trasporto-cani-auto-art-169-codice-strada",
+          "source": "phase_3",
+          "rationale": "747w, variante 'articolo' invece di 'art' (master ha forma più canonica)."
+        },
+        {
+          "from_id": "38fbf2d1-200d-4338-b85c-cf267e17fc84",
+          "from_slug": "trasporto-cani-auto-regole-sanzioni-sistemi-sicurezza",
+          "from_titolo": "Trasporto cani in auto: regole, sanzioni e sistemi di sicurezza",
+          "from_word_count": 723,
+          "from_categoria": "guide",
+          "to_slug": "trasporto-cani-auto-art-169-codice-strada",
+          "source": "phase_3bis",
+          "rationale": "Fase 3-bis: la 3a variante che Antonio aveva segnalato. Stesso topic Art. 169."
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_009",
+      "topic": "Trasporto gatti in auto: sicurezza e Codice della Strada",
+      "decision": "consolidate",
+      "reasoning": "Master nettamente più completo (+49% word count). Lo slug ha 'consigli' come coda ma il contenuto più ricco prevale.",
+      "master": {
+        "id": "12083380-f3a6-494b-a381-75e6e5dc35f5",
+        "slug": "trasporto-gatti-auto-sicurezza-codice-strada-consigli",
+        "titolo": "Trasporto gatti in auto: guida sicura, obblighi legali e consigli pratici",
+        "word_count": 899,
+        "categoria": "gatti",
+        "created_at": "2026-04-12T14:39:31.193Z"
+      },
+      "redirects": [
+        {
+          "from_id": "e29a2428-c2a3-4165-84b8-51bb07563296",
+          "from_slug": "trasporto-gatti-auto-sicurezza-codice-strada",
+          "from_titolo": "Trasporto Gatti in Auto: Guida Completa e Sicura secondo il Codice",
+          "from_word_count": 602,
+          "from_categoria": "gatti",
+          "to_slug": "trasporto-gatti-auto-sicurezza-codice-strada-consigli",
+          "source": "phase_3",
+          "rationale": "602w, contenuto molto più scarno (-33%). Slug più pulito ma content insufficiente."
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_010",
+      "topic": "Cani in autostrada e vacanza: regole Codice della Strada",
+      "decision": "consolidate",
+      "reasoning": "Varianti quasi identiche (779 vs 758w). Master per word count e slug più corto.",
+      "master": {
+        "id": "86c7de78-982f-4ef9-945a-5eb486eadb0d",
+        "slug": "cani-autostrada-vacanza-regole-codice-strada",
+        "titolo": "Cani in Autostrada e Vacanza: Regole, Documenti e Traghetti",
+        "word_count": 779,
+        "categoria": "viaggi",
+        "created_at": "2026-04-08T08:30:23.651Z"
+      },
+      "redirects": [
+        {
+          "from_id": "8bdc58ce-5699-4dd6-87e8-42c7c1655b4b",
+          "from_slug": "cani-autostrada-vacanza-regole-codice-strada-traghetti",
+          "from_titolo": "Cani in autostrada e in vacanza: regole del Codice della Strada e traghetti",
+          "from_word_count": 758,
+          "from_categoria": "viaggi",
+          "to_slug": "cani-autostrada-vacanza-regole-codice-strada",
+          "source": "phase_3",
+          "rationale": "758w, slug ha '-traghetti' come coda (topic ancillare coperto nel master)."
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_011",
+      "topic": "Vendere o regalare un cane: obblighi di legge",
+      "decision": "consolidate",
+      "reasoning": "Master per word count + slug senza ridondanza 'obblighi-legge-legale'.",
+      "master": {
+        "id": "4eddc59f-9c04-4952-84fe-f45375f4d1ee",
+        "slug": "vendere-regalare-cane-legge-italia-obblighi",
+        "titolo": "Vendere o regalare il cane: guida completa alla legge italiana",
+        "word_count": 964,
+        "categoria": "guide",
+        "created_at": "2026-04-08T15:06:40.778Z"
+      },
+      "redirects": [
+        {
+          "from_id": "41dee2c2-03d0-4e8f-80f9-97f4cdf3ef8c",
+          "from_slug": "vendere-regalare-cane-obblighi-legge-legale",
+          "from_titolo": "Vendere o regalare un cane: obblighi di legge e cosa è legale",
+          "from_word_count": 876,
+          "from_categoria": "guide",
+          "to_slug": "vendere-regalare-cane-legge-italia-obblighi",
+          "source": "phase_3",
+          "rationale": "876w, slug con 'legge-legale' ridondante."
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_012",
+      "topic": "Passaggio di proprietà del cane: procedura italiana",
+      "decision": "consolidate",
+      "reasoning": "Master per word count enormemente superiore (1873 vs 985 = +90%). Quasi il doppio di contenuto.",
+      "master": {
+        "id": "dd0404b1-80e7-47bf-bf2b-140afcaf5f80",
+        "slug": "passaggio-proprieta-cane-guida-procedura-italiana",
+        "titolo": "Passaggio di Proprietà del Cane: Guida Completa alla Procedura Italiana",
+        "word_count": 1873,
+        "categoria": "guide",
+        "created_at": "2026-04-09T13:35:31.967Z"
+      },
+      "redirects": [
+        {
+          "from_id": "1322f90c-0fef-4df5-a050-2db76438e3e5",
+          "from_slug": "passaggio-proprieta-cane-guida-italiana",
+          "from_titolo": "Passaggio Proprietà Cane: Guida Completa alla Procedura Italiana",
+          "from_word_count": 985,
+          "from_categoria": "guide",
+          "to_slug": "passaggio-proprieta-cane-guida-procedura-italiana",
+          "source": "phase_3",
+          "rationale": "985w, il master ha quasi il doppio del contenuto."
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_015",
+      "topic": "Pastore del Caucaso: il cane da guerra dell'esercito russo",
+      "decision": "consolidate",
+      "reasoning": "Duplicato con hash mnrj073p. Master = slug pulito con anche word count leggermente superiore.",
+      "master": {
+        "id": "fe5c2742-2c89-4c25-bf74-2249eaeb7147",
+        "slug": "pastore-caucaso-cane-guerra-russo",
+        "titolo": "Pastore del Caucaso: il cane da guerra dell'esercito russo",
+        "word_count": 1202,
+        "categoria": "curiosita",
+        "created_at": "2026-04-09T13:39:28.163Z"
+      },
+      "redirects": [
+        {
+          "from_id": "748bd152-b0c7-4a61-b580-83cca941abe6",
+          "from_slug": "pastore-caucaso-cane-guerra-russo-mnrj073p",
+          "from_titolo": "Pastore del Caucaso: il cane da guerra dell'esercito russo",
+          "from_word_count": 1169,
+          "from_categoria": "curiosita",
+          "to_slug": "pastore-caucaso-cane-guerra-russo",
+          "source": "phase_3",
+          "rationale": "1169w, slug con hash mnrj073p = artefatto di generazione."
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_016",
+      "topic": "Pastore Tedesco nelle forze armate / polizia (storia militare)",
+      "decision": "consolidate",
+      "reasoning": "Duplicato con hash mnrj0th3. Come cl_003: il duplicato con hash ha word count più alto (1343w) ma la regola hash-never-master vince.",
+      "master": {
+        "id": "c8447603-08e0-42a2-9665-07f67d4ed7d9",
+        "slug": "pastore-tedesco-esercito-polizia-addestramento",
+        "titolo": "Pastore Tedesco nelle forze armate: da Rin Tin Tin ai cani anti-IED",
+        "word_count": 1191,
+        "categoria": "curiosita",
+        "created_at": "2026-04-09T13:39:58.726Z"
+      },
+      "redirects": [
+        {
+          "from_id": "4d2434e1-798b-438c-ac6d-1c0ed34a6813",
+          "from_slug": "pastore-tedesco-esercito-polizia-addestramento-mnrj0th3",
+          "from_titolo": "Pastori Tedeschi in Divisa: Da Rin Tin Tin ai Cani Anti-Bombe",
+          "from_word_count": 1343,
+          "from_categoria": "curiosita",
+          "to_slug": "pastore-tedesco-esercito-polizia-addestramento",
+          "source": "phase_3",
+          "rationale": "1343w (+13%), slug con hash mnrj0th3 = artefatto. Override word count per regola hash."
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_017",
+      "topic": "Malinois Belga: cane eroe del raid a Bin Laden (Navy SEAL)",
+      "decision": "consolidate",
+      "reasoning": "Master per word count + slug più corto senza coda.",
+      "master": {
+        "id": "11d9f37e-6fd5-4e30-b997-9c0c88984a67",
+        "slug": "malinois-belga-navy-seal-cani",
+        "titolo": "Malinois Belga: il cane eroe del raid a Bin Laden",
+        "word_count": 1394,
+        "categoria": "curiosita",
+        "created_at": "2026-04-09T13:40:32.813Z"
+      },
+      "redirects": [
+        {
+          "from_id": "82d55a70-d670-4756-8a8a-1006831aab15",
+          "from_slug": "malinois-belga-navy-seal-cani-operazioni-speciali",
+          "from_titolo": "Il Malinois Belga: il Cane Eroe che Catturò Bin Laden",
+          "from_word_count": 1314,
+          "from_categoria": "curiosita",
+          "to_slug": "malinois-belga-navy-seal-cani",
+          "source": "phase_3",
+          "rationale": "1314w, slug con coda 'operazioni-speciali' ridondante."
+        }
+      ]
+    },
+    {
+      "cluster_id": "cl_019",
+      "topic": "Perché i cani inclinano la testa (studio scienza)",
+      "decision": "consolidate",
+      "reasoning": "Fase 3-bis: cluster NUOVO non catturato dal Jaccard 0.5. Gli slug divergono fortemente in lunghezza (5 vs 11 token) → Jaccard = 4/11 = 0.36, sotto soglia. Topic identico (perché cani inclinano la testa + studio).",
+      "master": {
+        "id": "542333c0-a563-4516-bf2e-9f0bcbbdc6fa",
+        "slug": "perche-cani-inclinano-testa-studio",
+        "titolo": "Perché i cani inclinano la testa? Uno studio rivela il motivo",
+        "word_count": 722,
+        "categoria": "curiosita",
+        "created_at": "2026-04-14T07:31:35.561Z"
+      },
+      "redirects": [
+        {
+          "from_id": "2bbfd283-7e5f-41dd-9549-1308c7a7cec9",
+          "from_slug": "perche-i-cani-inclinano-la-testa-quando-parliamo-la-scienza-dietro-quel-gesto-irresistibile",
+          "from_titolo": "Perché i cani inclinano la testa quando parliamo? La scienza dietro quel gesto irresistibile",
+          "from_word_count": 684,
+          "from_categoria": "curiosita",
+          "to_slug": "perche-cani-inclinano-testa-studio",
+          "source": "phase_3bis",
+          "rationale": "Fase 3-bis: slug 11 token con stopwords multiple (i, la, quando, quel). Stesso topic, 684w. Master 722w ha slug pulito + più content."
+        }
+      ]
+    }
+  ],
+  "da_verificare": [
+    {
+      "slug": "microchip-sottocutaneo-obbligatorio-guida-completa-a-funzionamento-costi-e-rischi",
+      "cluster_candidato": "cl_005",
+      "word_count": 1120,
+      "perche_dubbio": "'Microchip sottocutaneo' potrebbe essere topic tecnico generico (include microchip umani per tech/privacy). Va letto il body completo per confermare se è sul cane o no."
+    },
+    {
+      "slug": "animali-longevi-studi-internazionali-italia",
+      "cluster_candidato": "cl_018_merged",
+      "word_count": 1039,
+      "perche_dubbio": "Topic 'animali longevi' generico (include gatti, altri pet), non solo razze cani. Potrebbe essere articolo hub legittimo autonomo."
+    },
+    {
+      "slug": "il-potere-curativo-delle-fusa-quando-il-ronzio-del-gatto-diventa-terapia-per-le-ossa",
+      "cluster_candidato": "cl_002",
+      "word_count": 847,
+      "perche_dubbio": "Angolo specifico (potere curativo vibrazioni 25-150 Hz su osso) che è sub-topic scientifico autonomo del 'perché fanno le fusa'. Leaning KEEP_SEPARATE come sub-topic dedicato."
+    }
+  ],
+  "falsi_positivi_scartati": [
+    {
+      "slug": "passaggio-proprieta-gatto-anagrafe-felina",
+      "cluster_scartato": "cl_012",
+      "perche": "Topic 'GATTO' non cane. Procedura anagrafe felina, legittimo articolo autonomo."
+    },
+    {
+      "slug": "le-5-razze-migliori-come-cani-guida-labrador-golden-pastore-tedesco-e-altre",
+      "cluster_scartato": "cl_016",
+      "perche": "Listicle 'top 5 cani guida' — Pastore Tedesco è citato come uno dei 5 ma il topic è cani guida in generale."
+    },
+    {
+      "slug": "pastore-tedesco-carattere-salute-e-tutto-quello-che-devi-sapere",
+      "cluster_scartato": "cl_016",
+      "perche": "Articolo enciclopedico sulla razza (standard, carattere, salute). Il cluster cl_016 è specificamente su uso militare/polizia."
+    }
+  ],
+  "delete_410": [
+    {
+      "id": "d7234ea7-8f83-449a-9d3a-b8ec9ac8c30c",
+      "slug": "test-articolo",
+      "titolo": "Test articolo",
+      "word_count": 673,
+      "categoria": "curiosita",
+      "created_at": "2026-04-06T19:52:29.058Z",
+      "rationale": "Articolo di test pubblicato per errore in produzione. Slug 'test-articolo', contenuto di test."
+    }
+  ],
+  "fuori_scope": {
+    "categoria_orfana": {
+      "categoria_errata": "salute animale",
+      "articoli": [
+        {
+          "id": "cd4afe30-0c09-44c5-96db-46184d631cd0",
+          "slug": "robot-umanoide-allontana-cinghiali-varsavia-tecnologia-fauna-urbana",
+          "titolo": "Robot umanoide allontana i cinghiali a Varsavia: la tecnologia per la fauna urbana"
+        }
+      ],
+      "azione_suggerita": "UPDATE categoria → 'salute'"
+    },
+    "slug_con_hash_random": [
+      "perche-gatti-fanno-fusa-benefici-salute-mnnm3c0i",
+      "microbioma-cane-alimentazione-ricerche-mnnmd44t",
+      "pastore-caucaso-cane-guerra-russo-mnrj073p",
+      "pastore-tedesco-esercito-polizia-addestramento-mnrj0th3"
+    ]
+  }
+}

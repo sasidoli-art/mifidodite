@@ -1,0 +1,2309 @@
+{
+  "generato_il": "2026-04-21T20:08:30.583Z",
+  "totale_processate": 57,
+  "foto": [
+    {
+      "slug": "beautiful-dog-golden-retriever-labrador-in-autumn-2026-03-16-22-37-08-utc",
+      "originale": "picodg/beautiful-dog-golden-retriever-labrador-in-autumn-2026-03-16-22-37-08-utc.jpg",
+      "hash_originale": "sha256:fc40cf0da80eea95078c120f1f47951b968c252318ecaa4f2f56f7b15a22ab3a",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/beautiful-dog-golden-retriever-labrador-in-autumn-2026-03-16-22-37-08-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/beautiful-dog-golden-retriever-labrador-in-autumn-2026-03-16-22-37-08-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/beautiful-dog-golden-retriever-labrador-in-autumn-2026-03-16-22-37-08-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/beautiful-dog-golden-retriever-labrador-in-autumn-2026-03-16-22-37-08-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/beautiful-dog-golden-retriever-labrador-in-autumn-2026-03-16-22-37-08-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/beautiful-dog-golden-retriever-labrador-in-autumn-2026-03-16-22-37-08-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 4443,
+        "h": 2956,
+        "bytes": 7213586
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "Golden Retriever",
+          "cane adulto",
+          "ritratto"
+        ],
+        "ambientazione": "esterno - terrazza in legno con sfondo naturale sfocato",
+        "mood": "sereno, fiducioso, elegante",
+        "persone_presenti": false,
+        "num_animali": 1,
+        "adatto_per": [
+          "ritratti professionali",
+          "contenuti educativi",
+          "pubblicità pet-friendly",
+          "guide razze canine"
+        ],
+        "alt_text_it": "Golden Retriever seduto su una terrazza in legno con sfondo verde sfocato, sguardo attento",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:00.427Z"
+    },
+    {
+      "slug": "a-closeup-shot-of-a-cat-under-green-leaves-2026-01-11-09-04-34-utc",
+      "originale": "picodg/a-closeup-shot-of-a-cat-under-green-leaves-2026-01-11-09-04-34-utc.jpg",
+      "hash_originale": "sha256:01399683410327d9dba4a37c876fcad3d38c80e96a4a7058842d6628ee8b7b4a",
+      "output": {
+        "thumb_webp": "app/public/img/stock/gatti/a-closeup-shot-of-a-cat-under-green-leaves-2026-01-11-09-04-34-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/gatti/a-closeup-shot-of-a-cat-under-green-leaves-2026-01-11-09-04-34-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/gatti/a-closeup-shot-of-a-cat-under-green-leaves-2026-01-11-09-04-34-utc-card.webp",
+        "card_jpg": "app/public/img/stock/gatti/a-closeup-shot-of-a-cat-under-green-leaves-2026-01-11-09-04-34-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/gatti/a-closeup-shot-of-a-cat-under-green-leaves-2026-01-11-09-04-34-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/gatti/a-closeup-shot-of-a-cat-under-green-leaves-2026-01-11-09-04-34-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 4928,
+        "h": 3264,
+        "bytes": 14076811
+      },
+      "classificazione": {
+        "categoria": "gatti",
+        "sottosoggetti": [
+          "gatto tabby",
+          "fogliame",
+          "fiori"
+        ],
+        "ambientazione": "giardino esterno con vegetazione fitta",
+        "mood": "curioso, naturale, sereno",
+        "persone_presenti": false,
+        "num_animali": 1,
+        "adatto_per": [
+          "amanti dei gatti",
+          "contenuti nature",
+          "blog pet-friendly",
+          "social media"
+        ],
+        "alt_text_it": "Gatto tabby nascosto tra foglie verdi e fiori gialli, sguardo attento tra la vegetazione",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:00.631Z"
+    },
+    {
+      "slug": "beagle-dog-running-through-green-field-2026-01-05-05-45-41-utc",
+      "originale": "picodg/beagle-dog-running-through-green-field-2026-01-05-05-45-41-utc.jpg",
+      "hash_originale": "sha256:f944de5da531e3e0ef091e956b19b4ca0d4d477fb5bd1d2681d59ad7c6be5cbf",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/beagle-dog-running-through-green-field-2026-01-05-05-45-41-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/beagle-dog-running-through-green-field-2026-01-05-05-45-41-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/beagle-dog-running-through-green-field-2026-01-05-05-45-41-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/beagle-dog-running-through-green-field-2026-01-05-05-45-41-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/beagle-dog-running-through-green-field-2026-01-05-05-45-41-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/beagle-dog-running-through-green-field-2026-01-05-05-45-41-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5349,
+        "h": 3571,
+        "bytes": 7382851
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "beagle",
+          "cane in movimento",
+          "collare rosa"
+        ],
+        "ambientazione": "prato all'aperto",
+        "mood": "felice, energico, giocoso",
+        "persone_presenti": false,
+        "num_animali": 1,
+        "adatto_per": [
+          "articoli benessere cani",
+          "guide attività all'aperto",
+          "promozioni pet-friendly",
+          "consigli esercizio fisico"
+        ],
+        "alt_text_it": "Beagle felice corre su prato verde con collare rosa, lingua fuori",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:00.727Z"
+    },
+    {
+      "slug": "cat-kitten-and-dog-with-happy-expression-together-2026-03-09-07-56-55-utc",
+      "originale": "picodg/cat-kitten-and-dog-with-happy-expression-together-2026-03-09-07-56-55-utc.jpg",
+      "hash_originale": "sha256:0dca353a2de2b0242d35ff80cf04b78b42ba683fdf517295240009a6658edc64",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/cat-kitten-and-dog-with-happy-expression-together-2026-03-09-07-56-55-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/cat-kitten-and-dog-with-happy-expression-together-2026-03-09-07-56-55-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/cat-kitten-and-dog-with-happy-expression-together-2026-03-09-07-56-55-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/cat-kitten-and-dog-with-happy-expression-together-2026-03-09-07-56-55-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/cat-kitten-and-dog-with-happy-expression-together-2026-03-09-07-56-55-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/cat-kitten-and-dog-with-happy-expression-together-2026-03-09-07-56-55-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 6705,
+        "h": 3636,
+        "bytes": 6678080
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "gatto",
+          "cane border collie",
+          "sfondo blu"
+        ],
+        "ambientazione": "studio fotografico",
+        "mood": "amichevole, giocoso",
+        "persone_presenti": false,
+        "num_animali": 2,
+        "adatto_per": [
+          "articoli pet-friendly",
+          "guide comportamento animali",
+          "contenuti social media",
+          "annunci servizi pet"
+        ],
+        "alt_text_it": "Gatto grigio e cane border collie che posano insieme su sfondo blu uniforme",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:03.305Z"
+    },
+    {
+      "slug": "border-collie-portrait-on-black-2026-03-09-08-44-55-utc",
+      "originale": "picodg/border-collie-portrait-on-black-2026-03-09-08-44-55-utc.jpg",
+      "hash_originale": "sha256:5d36b2ec6ecefb791f538262b5acea8fc6c686a4aeb2d3ad0db7a9ed698c3f8c",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/border-collie-portrait-on-black-2026-03-09-08-44-55-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/border-collie-portrait-on-black-2026-03-09-08-44-55-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/border-collie-portrait-on-black-2026-03-09-08-44-55-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/border-collie-portrait-on-black-2026-03-09-08-44-55-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/border-collie-portrait-on-black-2026-03-09-08-44-55-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/border-collie-portrait-on-black-2026-03-09-08-44-55-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 4666,
+        "h": 3110,
+        "bytes": 5030369
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "border collie",
+          "cane tricolore",
+          "ritratto"
+        ],
+        "ambientazione": "sfondo nero",
+        "mood": "allegro, amichevole, fiducioso",
+        "persone_presenti": false,
+        "num_animali": 1,
+        "adatto_per": [
+          "annunci pet-friendly",
+          "articoli sui cani",
+          "guide razze canine",
+          "contenuti educativi"
+        ],
+        "alt_text_it": "Border collie marrone, bianco e nero sorridente su sfondo scuro con lingua fuori",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:03.877Z"
+    },
+    {
+      "slug": "cat-needing-affection-2026-03-17-20-43-13-utc",
+      "originale": "picodg/cat-needing-affection-2026-03-17-20-43-13-utc.jpg",
+      "hash_originale": "sha256:4b944b6039abc0d23433056c6c3a33fe21f340196546ff0faf3e71ce0b5a115a",
+      "output": {
+        "thumb_webp": "app/public/img/stock/persone-pet/cat-needing-affection-2026-03-17-20-43-13-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/persone-pet/cat-needing-affection-2026-03-17-20-43-13-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/persone-pet/cat-needing-affection-2026-03-17-20-43-13-utc-card.webp",
+        "card_jpg": "app/public/img/stock/persone-pet/cat-needing-affection-2026-03-17-20-43-13-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/persone-pet/cat-needing-affection-2026-03-17-20-43-13-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/persone-pet/cat-needing-affection-2026-03-17-20-43-13-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5616,
+        "h": 3744,
+        "bytes": 7259378
+      },
+      "classificazione": {
+        "categoria": "persone-pet",
+        "sottosoggetti": [
+          "gatto",
+          "persona",
+          "mani",
+          "abbraccio"
+        ],
+        "ambientazione": "sentiero con fogliame autunnale rosso",
+        "mood": "affettuoso, sereno, naturalistico",
+        "persone_presenti": true,
+        "num_animali": 1,
+        "adatto_per": [
+          "blog-pet",
+          "articoli-legame-umano-animale",
+          "contenuti-outdoor",
+          "guide-socializzazione-gatti"
+        ],
+        "alt_text_it": "Persona abbraccia affettuosamente un gatto grigio striato circondati da foglie rosse autunnali",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:04.272Z"
+    },
+    {
+      "slug": "cats-dogs-pets-group-togetherness-isolate-2026-01-09-10-58-18-utc",
+      "originale": "picodg/cats-dogs-pets-group-togetherness-isolate-2026-01-09-10-58-18-utc.jpg",
+      "hash_originale": "sha256:6d904020c50aa40c9315df0f92dbb541843759521c30f001c028f40756f89bd8",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/cats-dogs-pets-group-togetherness-isolate-2026-01-09-10-58-18-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/cats-dogs-pets-group-togetherness-isolate-2026-01-09-10-58-18-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/cats-dogs-pets-group-togetherness-isolate-2026-01-09-10-58-18-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/cats-dogs-pets-group-togetherness-isolate-2026-01-09-10-58-18-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/cats-dogs-pets-group-togetherness-isolate-2026-01-09-10-58-18-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/cats-dogs-pets-group-togetherness-isolate-2026-01-09-10-58-18-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 4232,
+        "h": 2826,
+        "bytes": 3058276
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "gatto",
+          "coperta",
+          "comfort"
+        ],
+        "ambientazione": "interno - studio fotografico",
+        "mood": "affettuoso, sereno, accogliente",
+        "persone_presenti": false,
+        "num_animali": 2,
+        "adatto_per": [
+          "articoli-convivenza",
+          "guide-amicizia-animali",
+          "content-benessere-pet",
+          "campagne-adozioni"
+        ],
+        "alt_text_it": "Cane marrone e gatto bianco e nero avvolti insieme in una coperta grigia, seduti affettuosamente",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:06.782Z"
+    },
+    {
+      "slug": "cats-portrait-obedient-devon-rex-cat-with-bright-2026-03-20-03-41-36-utc",
+      "originale": "picodg/cats-portrait-obedient-devon-rex-cat-with-bright-2026-03-20-03-41-36-utc.jpg",
+      "hash_originale": "sha256:ed6e71dda4a206f5c6ea5ede6001a337436676e6c2d2d5c515bd1ee0641541ba",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cuccioli/cats-portrait-obedient-devon-rex-cat-with-bright-2026-03-20-03-41-36-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cuccioli/cats-portrait-obedient-devon-rex-cat-with-bright-2026-03-20-03-41-36-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cuccioli/cats-portrait-obedient-devon-rex-cat-with-bright-2026-03-20-03-41-36-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cuccioli/cats-portrait-obedient-devon-rex-cat-with-bright-2026-03-20-03-41-36-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cuccioli/cats-portrait-obedient-devon-rex-cat-with-bright-2026-03-20-03-41-36-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cuccioli/cats-portrait-obedient-devon-rex-cat-with-bright-2026-03-20-03-41-36-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 4480,
+        "h": 6720,
+        "bytes": 20137842
+      },
+      "classificazione": {
+        "categoria": "cuccioli",
+        "sottosoggetti": [
+          "gattino",
+          "mani",
+          "abbigliamento a quadri"
+        ],
+        "ambientazione": "interno",
+        "mood": "affettuoso, tenero, intimo",
+        "persone_presenti": true,
+        "num_animali": 1,
+        "adatto_per": [
+          "articoli su cura gattini",
+          "pet-friendly lifestyle",
+          "adozioni gatti",
+          "bonding animali-umani"
+        ],
+        "alt_text_it": "Persona in giacca a quadri tiene in braccio un gattino bianco e arancione affettuoso su divano",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:07.989Z"
+    },
+    {
+      "slug": "close-up-of-a-maltese-in-front-of-a-blue-backgroun-2026-03-09-07-57-04-utc",
+      "originale": "picodg/close-up-of-a-maltese-in-front-of-a-blue-backgroun-2026-03-09-07-57-04-utc.jpg",
+      "hash_originale": "sha256:665b586f5f288cb6e6ac69269eecebd2cf13e2bdc589e4b104eb80caf5de2e6f",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/close-up-of-a-maltese-in-front-of-a-blue-backgroun-2026-03-09-07-57-04-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/close-up-of-a-maltese-in-front-of-a-blue-backgroun-2026-03-09-07-57-04-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/close-up-of-a-maltese-in-front-of-a-blue-backgroun-2026-03-09-07-57-04-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/close-up-of-a-maltese-in-front-of-a-blue-backgroun-2026-03-09-07-57-04-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/close-up-of-a-maltese-in-front-of-a-blue-backgroun-2026-03-09-07-57-04-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/close-up-of-a-maltese-in-front-of-a-blue-backgroun-2026-03-09-07-57-04-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5310,
+        "h": 6038,
+        "bytes": 11143991
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "West Highland White Terrier",
+          "cane bianco",
+          "ritratto canino"
+        ],
+        "ambientazione": "studio fotografico - sfondo blu",
+        "mood": "allegro, amichevole, professionale",
+        "persone_presenti": false,
+        "num_animali": 1,
+        "adatto_per": [
+          "portali pet",
+          "articoli su razze canine",
+          "contenuti informativi",
+          "campagne pubblicitarie pet-friendly"
+        ],
+        "alt_text_it": "West Highland White Terrier bianco sorridente su sfondo azzurro, ritratto studio professionale",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:08.589Z"
+    },
+    {
+      "slug": "closeup-shot-of-the-snouts-of-a-cute-dog-and-a-cat-2026-01-08-00-23-04-utc",
+      "originale": "picodg/closeup-shot-of-the-snouts-of-a-cute-dog-and-a-cat-2026-01-08-00-23-04-utc.jpeg",
+      "hash_originale": "sha256:c9a535e2964ad6ef204e6fc218fdd688463274dd257d8f2fc28e696df3bd3d93",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/closeup-shot-of-the-snouts-of-a-cute-dog-and-a-cat-2026-01-08-00-23-04-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/closeup-shot-of-the-snouts-of-a-cute-dog-and-a-cat-2026-01-08-00-23-04-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/closeup-shot-of-the-snouts-of-a-cute-dog-and-a-cat-2026-01-08-00-23-04-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/closeup-shot-of-the-snouts-of-a-cute-dog-and-a-cat-2026-01-08-00-23-04-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/closeup-shot-of-the-snouts-of-a-cute-dog-and-a-cat-2026-01-08-00-23-04-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/closeup-shot-of-the-snouts-of-a-cute-dog-and-a-cat-2026-01-08-00-23-04-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 4278,
+        "h": 2852,
+        "bytes": 5321890
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "gatto",
+          "cane",
+          "amicizia animali"
+        ],
+        "ambientazione": "interno - rifugio o capanno in legno",
+        "mood": "affettuoso, sereno, complice",
+        "persone_presenti": false,
+        "num_animali": 2,
+        "adatto_per": [
+          "pet-friendly",
+          "convivenza pacifica",
+          "animali domestici",
+          "articoli cani",
+          "articoli gatti"
+        ],
+        "alt_text_it": "Cane e gatto insieme affacciati da una finestra in legno, simbolo di amicizia e convivenza tra animali domestici",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:09.995Z"
+    },
+    {
+      "slug": "couple-with-their-two-dogs-beagle-and-greyhound-2026-03-18-05-42-30-utc",
+      "originale": "picodg/couple-with-their-two-dogs-beagle-and-greyhound-2026-03-18-05-42-30-utc.jpg",
+      "hash_originale": "sha256:c5e2226de4f87272158d686c0231fd44c91e39926fbc70b72b495bf46f3a19cc",
+      "output": {
+        "thumb_webp": "app/public/img/stock/persone-pet/couple-with-their-two-dogs-beagle-and-greyhound-2026-03-18-05-42-30-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/persone-pet/couple-with-their-two-dogs-beagle-and-greyhound-2026-03-18-05-42-30-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/persone-pet/couple-with-their-two-dogs-beagle-and-greyhound-2026-03-18-05-42-30-utc-card.webp",
+        "card_jpg": "app/public/img/stock/persone-pet/couple-with-their-two-dogs-beagle-and-greyhound-2026-03-18-05-42-30-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/persone-pet/couple-with-their-two-dogs-beagle-and-greyhound-2026-03-18-05-42-30-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/persone-pet/couple-with-their-two-dogs-beagle-and-greyhound-2026-03-18-05-42-30-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 4497,
+        "h": 3377,
+        "bytes": 13010228
+      },
+      "classificazione": {
+        "categoria": "persone-pet",
+        "sottosoggetti": [
+          "cani",
+          "coppia",
+          "beagle",
+          "levriero",
+          "abbracci"
+        ],
+        "ambientazione": "interno - soggiorno con muri in laterizio",
+        "mood": "affettuoso, giocoso, familiare",
+        "persone_presenti": true,
+        "num_animali": 2,
+        "adatto_per": [
+          "blog-pet",
+          "articoli-convivenza",
+          "campagne-adozione",
+          "contenuti-lifestyle-pet",
+          "guide-comportamento-cani"
+        ],
+        "alt_text_it": "Coppia che sorride giocando con due cani in casa, beagle e levriero in ambiente accogliente",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:12.549Z"
+    },
+    {
+      "slug": "cute-cat-and-dog-in-green-grass-at-sunset-2026-03-27-01-39-15-utc",
+      "originale": "picodg/cute-cat-and-dog-in-green-grass-at-sunset-2026-03-27-01-39-15-utc.jpg",
+      "hash_originale": "sha256:7e1c3842393c67b5528e2e306de703a7b997cf61e5096302d246e99b2036b97b",
+      "output": {
+        "thumb_webp": "app/public/img/stock/persone-pet/cute-cat-and-dog-in-green-grass-at-sunset-2026-03-27-01-39-15-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/persone-pet/cute-cat-and-dog-in-green-grass-at-sunset-2026-03-27-01-39-15-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/persone-pet/cute-cat-and-dog-in-green-grass-at-sunset-2026-03-27-01-39-15-utc-card.webp",
+        "card_jpg": "app/public/img/stock/persone-pet/cute-cat-and-dog-in-green-grass-at-sunset-2026-03-27-01-39-15-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/persone-pet/cute-cat-and-dog-in-green-grass-at-sunset-2026-03-27-01-39-15-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/persone-pet/cute-cat-and-dog-in-green-grass-at-sunset-2026-03-27-01-39-15-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 6720,
+        "h": 4480,
+        "bytes": 15770706
+      },
+      "classificazione": {
+        "categoria": "persone-pet",
+        "sottosoggetti": [
+          "cane",
+          "gatto",
+          "amicizia animali"
+        ],
+        "ambientazione": "prato all'aperto con erba alta",
+        "mood": "sereno, amichevole, naturale",
+        "persone_presenti": false,
+        "num_animali": 2,
+        "adatto_per": [
+          "articoli amicizia animali",
+          "pet-friendly lifestyle",
+          "convivenza cani e gatti",
+          "contenuti educativi"
+        ],
+        "alt_text_it": "Cane e gatto insieme in un prato verde, simbolo di amicizia e convivenza pacifica tra animali domestici",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:13.677Z"
+    },
+    {
+      "slug": "cute-puppy-and-kitten-closeup-looking-at-camera-2026-01-05-01-09-12-utc",
+      "originale": "picodg/cute-puppy-and-kitten-closeup-looking-at-camera-2026-01-05-01-09-12-utc.jpg",
+      "hash_originale": "sha256:0dcbdd2b3773962df85d205612f59ff605dca70013e352ff3e1a555026cb72fc",
+      "output": {
+        "thumb_webp": "app/public/img/stock/persone-pet/cute-puppy-and-kitten-closeup-looking-at-camera-2026-01-05-01-09-12-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/persone-pet/cute-puppy-and-kitten-closeup-looking-at-camera-2026-01-05-01-09-12-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/persone-pet/cute-puppy-and-kitten-closeup-looking-at-camera-2026-01-05-01-09-12-utc-card.webp",
+        "card_jpg": "app/public/img/stock/persone-pet/cute-puppy-and-kitten-closeup-looking-at-camera-2026-01-05-01-09-12-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/persone-pet/cute-puppy-and-kitten-closeup-looking-at-camera-2026-01-05-01-09-12-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/persone-pet/cute-puppy-and-kitten-closeup-looking-at-camera-2026-01-05-01-09-12-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 6696,
+        "h": 4464,
+        "bytes": 10898471
+      },
+      "classificazione": {
+        "categoria": "persone-pet",
+        "sottosoggetti": [
+          "cane marrone",
+          "gatto tabby",
+          "collare rosso"
+        ],
+        "ambientazione": "sfondo bianco, studio",
+        "mood": "affettuoso, amichevole, giocoso",
+        "persone_presenti": false,
+        "num_animali": 2,
+        "adatto_per": [
+          "articoli pet-friendly",
+          "guide convivenza cani-gatti",
+          "campagne adozioni",
+          "contenuti socializzazione animali"
+        ],
+        "alt_text_it": "Cane marrone e gatto tabby che si abbracciano affettuosamente su sfondo bianco",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:15.867Z"
+    },
+    {
+      "slug": "composition-of-dogs-head-2026-03-09-07-59-14-utc",
+      "originale": "picodg/composition-of-dogs-head-2026-03-09-07-59-14-utc.jpg",
+      "hash_originale": "sha256:22a354d22f74ea1be746a57a6751e4263ae48861ff5d45defdc1011c545ef58a",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/composition-of-dogs-head-2026-03-09-07-59-14-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/composition-of-dogs-head-2026-03-09-07-59-14-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/composition-of-dogs-head-2026-03-09-07-59-14-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/composition-of-dogs-head-2026-03-09-07-59-14-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/composition-of-dogs-head-2026-03-09-07-59-14-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/composition-of-dogs-head-2026-03-09-07-59-14-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 8858,
+        "h": 8855,
+        "bytes": 74583258
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "Chihuahua",
+          "Dachshund",
+          "Corgi",
+          "Levriero italiano",
+          "Cocker Spaniel",
+          "Shih Tzu",
+          "Bulldog francese",
+          "Cane nero",
+          "Jack Russell Terrier",
+          "Pastore tedesco",
+          "Cani di diverse razze"
+        ],
+        "ambientazione": "Studio fotografico con sfondo rosa",
+        "mood": "Divertente, allegro, colorato e affettuoso",
+        "persone_presenti": false,
+        "num_animali": 16,
+        "adatto_per": [
+          "Portali pet-friendly",
+          "Calendari e poster",
+          "Articoli su razze di cani",
+          "Campagne pubblicitarie pet",
+          "Social media di strutture dog-friendly",
+          "Siti di allevatori"
+        ],
+        "alt_text_it": "Collage di 16 ritratti di cani di razze diverse su sfondo rosa, volti sorridenti e giocosi",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:16.623Z"
+    },
+    {
+      "slug": "dog-beagle-running-fast-and-jumping-with-tongue-ou-2026-01-05-05-09-45-utc",
+      "originale": "picodg/dog-beagle-running-fast-and-jumping-with-tongue-ou-2026-01-05-05-09-45-utc.jpg",
+      "hash_originale": "sha256:8b4d67461bb04ab3781356a3363421c55932f6f0e0d60e133bfc173887c13639",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/dog-beagle-running-fast-and-jumping-with-tongue-ou-2026-01-05-05-09-45-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/dog-beagle-running-fast-and-jumping-with-tongue-ou-2026-01-05-05-09-45-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/dog-beagle-running-fast-and-jumping-with-tongue-ou-2026-01-05-05-09-45-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/dog-beagle-running-fast-and-jumping-with-tongue-ou-2026-01-05-05-09-45-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/dog-beagle-running-fast-and-jumping-with-tongue-ou-2026-01-05-05-09-45-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/dog-beagle-running-fast-and-jumping-with-tongue-ou-2026-01-05-05-09-45-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5459,
+        "h": 3644,
+        "bytes": 7462769
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "cane adulto",
+          "cane marrone e bianco",
+          "movimento",
+          "corsa"
+        ],
+        "ambientazione": "sentiero sterrato",
+        "mood": "giocoso, energico, felice",
+        "persone_presenti": false,
+        "num_animali": 1,
+        "adatto_per": [
+          "articoli su cani attivi",
+          "guide al benessere canino",
+          "consigli esercizio fisico",
+          "adozione cani",
+          "razze medie"
+        ],
+        "alt_text_it": "Cane marrone e bianco corre felice su un sentiero sterrato con la coda alzata",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:17.156Z"
+    },
+    {
+      "slug": "dog-golden-retriever-labrador-in-autumn-at-sunset-2026-03-16-02-11-30-utc",
+      "originale": "picodg/dog-golden-retriever-labrador-in-autumn-at-sunset-2026-03-16-02-11-30-utc.jpg",
+      "hash_originale": "sha256:631c83f816ec71a64ad6168e17bd7e093b6df6ee216df61445a273f4070ad87d",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/dog-golden-retriever-labrador-in-autumn-at-sunset-2026-03-16-02-11-30-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/dog-golden-retriever-labrador-in-autumn-at-sunset-2026-03-16-02-11-30-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/dog-golden-retriever-labrador-in-autumn-at-sunset-2026-03-16-02-11-30-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/dog-golden-retriever-labrador-in-autumn-at-sunset-2026-03-16-02-11-30-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/dog-golden-retriever-labrador-in-autumn-at-sunset-2026-03-16-02-11-30-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/dog-golden-retriever-labrador-in-autumn-at-sunset-2026-03-16-02-11-30-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 4912,
+        "h": 7360,
+        "bytes": 22643146
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "cane adulto",
+          "foglie autunnali",
+          "prato"
+        ],
+        "ambientazione": "parco autunnale con alberi e vegetazione",
+        "mood": "sereno, nostalgico, atmosfera autunnale",
+        "persone_presenti": false,
+        "num_animali": 1,
+        "adatto_per": [
+          "blog pet",
+          "articoli benessere cani",
+          "guide outdoor con cani",
+          "contenuti stagionali"
+        ],
+        "alt_text_it": "Cane setter rossiccio seduto su prato autunnale circondato da foglie cadute e alberi",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:19.758Z"
+    },
+    {
+      "slug": "dog-resting-on-the-garden-2026-03-18-17-45-57-utc",
+      "originale": "picodg/dog-resting-on-the-garden-2026-03-18-17-45-57-utc.jpg",
+      "hash_originale": "sha256:e254a0940e2a05c0824db31f3765066e7f27d7b201c9633f4ae9fd421d4c6da1",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/dog-resting-on-the-garden-2026-03-18-17-45-57-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/dog-resting-on-the-garden-2026-03-18-17-45-57-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/dog-resting-on-the-garden-2026-03-18-17-45-57-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/dog-resting-on-the-garden-2026-03-18-17-45-57-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/dog-resting-on-the-garden-2026-03-18-17-45-57-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/dog-resting-on-the-garden-2026-03-18-17-45-57-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 6240,
+        "h": 4159,
+        "bytes": 10524044
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "cane adulto marrone e bianco",
+          "cucciolo marrone",
+          "albero",
+          "prato verde"
+        ],
+        "ambientazione": "parco all'aperto con alberi e prato",
+        "mood": "sereno, giocoso, naturale",
+        "persone_presenti": false,
+        "num_animali": 2,
+        "adatto_per": [
+          "blog pet-friendly",
+          "articoli su cani",
+          "guide su socializzazione cani",
+          "contenuti su attività all'aperto con animali",
+          "pubblicità servizi per cani"
+        ],
+        "alt_text_it": "Cane marrone e bianco con cucciolo nel prato soleggiato sotto gli alberi",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:20.477Z"
+    },
+    {
+      "slug": "domestic-adorable-dog-with-multicolored-eyes-in-wh-2026-03-17-03-30-52-utc",
+      "originale": "picodg/domestic-adorable-dog-with-multicolored-eyes-in-wh-2026-03-17-03-30-52-utc.jpg",
+      "hash_originale": "sha256:9f7df90c8716728bde9da8fe223bb73228bdd7ff5bda2579d7db0e869ff464e7",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/domestic-adorable-dog-with-multicolored-eyes-in-wh-2026-03-17-03-30-52-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/domestic-adorable-dog-with-multicolored-eyes-in-wh-2026-03-17-03-30-52-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/domestic-adorable-dog-with-multicolored-eyes-in-wh-2026-03-17-03-30-52-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/domestic-adorable-dog-with-multicolored-eyes-in-wh-2026-03-17-03-30-52-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/domestic-adorable-dog-with-multicolored-eyes-in-wh-2026-03-17-03-30-52-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/domestic-adorable-dog-with-multicolored-eyes-in-wh-2026-03-17-03-30-52-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 6240,
+        "h": 4160,
+        "bytes": 13446684
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "cane adulto",
+          "Australian Shepherd",
+          "muso felice",
+          "lingua fuori"
+        ],
+        "ambientazione": "interno - sfondo bianco neutro",
+        "mood": "allegro, giocoso, amichevole",
+        "persone_presenti": false,
+        "num_animali": 1,
+        "adatto_per": [
+          "articoli di razza",
+          "contenuti sociali",
+          "guide comportamentali",
+          "pubblicità pet-friendly"
+        ],
+        "alt_text_it": "Cane Australian Shepherd bianco e marrone con lingua fuori su sfondo bianco, espressione felice e giocosa",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:21.892Z"
+    },
+    {
+      "slug": "five-dogheads-from-big-to-small-in-a-row-2026-03-09-09-18-22-utc",
+      "originale": "picodg/five-dogheads-from-big-to-small-in-a-row-2026-03-09-09-18-22-utc.jpg",
+      "hash_originale": "sha256:fdabf3f79117004cd92005a1362b5dfa45a7ecb168b5bb7a292fd3dbeddd824e",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/five-dogheads-from-big-to-small-in-a-row-2026-03-09-09-18-22-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/five-dogheads-from-big-to-small-in-a-row-2026-03-09-09-18-22-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/five-dogheads-from-big-to-small-in-a-row-2026-03-09-09-18-22-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/five-dogheads-from-big-to-small-in-a-row-2026-03-09-09-18-22-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/five-dogheads-from-big-to-small-in-a-row-2026-03-09-09-18-22-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/five-dogheads-from-big-to-small-in-a-row-2026-03-09-09-18-22-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5456,
+        "h": 1500,
+        "bytes": 3875540
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "cane marrone",
+          "cane nero e bianco",
+          "cane marrone e nero",
+          "cani piccoli"
+        ],
+        "ambientazione": "sfondo azzurro neutro",
+        "mood": "amichevole, familiare, affidabile",
+        "persone_presenti": false,
+        "num_animali": 5,
+        "adatto_per": [
+          "portali pet",
+          "siti veterinari",
+          "negozi animali",
+          "assicurazioni pet",
+          "adozioni"
+        ],
+        "alt_text_it": "Gruppo di cinque cani di diverse razze e taglie su sfondo azzurro, ritratti affettuosi",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:22.637Z"
+    },
+    {
+      "slug": "friends-playing-with-cute-puppies-2026-03-20-04-28-19-utc",
+      "originale": "picodg/friends-playing-with-cute-puppies-2026-03-20-04-28-19-utc.jpg",
+      "hash_originale": "sha256:5df699b6e78fdcbf28c45a203816457ddb33bce1b16d11401f024f31c09c4c11",
+      "output": {
+        "thumb_webp": "app/public/img/stock/persone-pet/friends-playing-with-cute-puppies-2026-03-20-04-28-19-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/persone-pet/friends-playing-with-cute-puppies-2026-03-20-04-28-19-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/persone-pet/friends-playing-with-cute-puppies-2026-03-20-04-28-19-utc-card.webp",
+        "card_jpg": "app/public/img/stock/persone-pet/friends-playing-with-cute-puppies-2026-03-20-04-28-19-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/persone-pet/friends-playing-with-cute-puppies-2026-03-20-04-28-19-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/persone-pet/friends-playing-with-cute-puppies-2026-03-20-04-28-19-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 7360,
+        "h": 4912,
+        "bytes": 22060270
+      },
+      "classificazione": {
+        "categoria": "persone-pet",
+        "sottosoggetti": [
+          "cuccioli di husky",
+          "bambini",
+          "adulti",
+          "interazione affettuosa"
+        ],
+        "ambientazione": "interno, ambiente domestico invernale",
+        "mood": "giocoso, affettuoso, festoso, invernale",
+        "persone_presenti": true,
+        "num_animali": 3,
+        "adatto_per": [
+          "famiglia",
+          "bambini",
+          "pet-friendly lifestyle",
+          "coccole domestiche",
+          "natale",
+          "inverno"
+        ],
+        "alt_text_it": "Famiglia con bambini e tre dolci cuccioli di husky in ambiente caldo e accogliente durante l'inverno",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:24.208Z"
+    },
+    {
+      "slug": "funny-moments-from-the-life-of-pets-2026-03-17-21-42-35-utc",
+      "originale": "picodg/funny-moments-from-the-life-of-pets-2026-03-17-21-42-35-utc.jpg",
+      "hash_originale": "sha256:88a7a15d1bea5489940e81b23703917876014edad889858b9ba3fe1ac5527702",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/funny-moments-from-the-life-of-pets-2026-03-17-21-42-35-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/funny-moments-from-the-life-of-pets-2026-03-17-21-42-35-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/funny-moments-from-the-life-of-pets-2026-03-17-21-42-35-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/funny-moments-from-the-life-of-pets-2026-03-17-21-42-35-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/funny-moments-from-the-life-of-pets-2026-03-17-21-42-35-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/funny-moments-from-the-life-of-pets-2026-03-17-21-42-35-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5247,
+        "h": 3498,
+        "bytes": 8678491
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "gatto",
+          "cane",
+          "relazione animali"
+        ],
+        "ambientazione": "interno",
+        "mood": "calmo, affettuoso, sereno",
+        "persone_presenti": false,
+        "num_animali": 2,
+        "adatto_per": [
+          "pet-friendly",
+          "convivenza animali",
+          "benessere animali",
+          "articoli relazioni"
+        ],
+        "alt_text_it": "Cane e gatto riposano insieme sul letto bianco in armonia e tranquillità",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:24.879Z"
+    },
+    {
+      "slug": "ginger-kitten-wearing-a-rainbow-hat-sitting-on-edg-2026-03-16-01-15-07-utc",
+      "originale": "picodg/ginger-kitten-wearing-a-rainbow-hat-sitting-on-edg-2026-03-16-01-15-07-utc.jpg",
+      "hash_originale": "sha256:a395ff115d4738b1f58a02ee1648f9880b8212172ce16822e3116ef5cf82f2b2",
+      "output": {
+        "thumb_webp": "app/public/img/stock/gatti/ginger-kitten-wearing-a-rainbow-hat-sitting-on-edg-2026-03-16-01-15-07-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/gatti/ginger-kitten-wearing-a-rainbow-hat-sitting-on-edg-2026-03-16-01-15-07-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/gatti/ginger-kitten-wearing-a-rainbow-hat-sitting-on-edg-2026-03-16-01-15-07-utc-card.webp",
+        "card_jpg": "app/public/img/stock/gatti/ginger-kitten-wearing-a-rainbow-hat-sitting-on-edg-2026-03-16-01-15-07-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/gatti/ginger-kitten-wearing-a-rainbow-hat-sitting-on-edg-2026-03-16-01-15-07-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/gatti/ginger-kitten-wearing-a-rainbow-hat-sitting-on-edg-2026-03-16-01-15-07-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 4160,
+        "h": 6240,
+        "bytes": 10485839
+      },
+      "classificazione": {
+        "categoria": "gatti",
+        "sottosoggetti": [
+          "gatto rosso e bianco",
+          "berretto a pom pom",
+          "bandana rossa",
+          "sfondo arcobaleno"
+        ],
+        "ambientazione": "studio fotografico con sfondo colorato",
+        "mood": "divertente, allegro, inclusivo",
+        "persone_presenti": false,
+        "num_animali": 1,
+        "adatto_per": [
+          "social media",
+          "content marketing",
+          "diversity",
+          "pride",
+          "articoli sulla moda pet",
+          "guide accessori gatti"
+        ],
+        "alt_text_it": "Gatto rosso e bianco con berretto viola a pom pom e bandana rossa su sfondo arcobaleno",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:26.051Z"
+    },
+    {
+      "slug": "golden-retriever-dog-pet-retriever-2026-01-07-01-03-13-utc",
+      "originale": "picodg/golden-retriever-dog-pet-retriever-2026-01-07-01-03-13-utc.jpg",
+      "hash_originale": "sha256:81885abd3ae5ddbb8acc9c6da4ccdfd42c8867680f649b42250ef1931036793b",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cuccioli/golden-retriever-dog-pet-retriever-2026-01-07-01-03-13-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cuccioli/golden-retriever-dog-pet-retriever-2026-01-07-01-03-13-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cuccioli/golden-retriever-dog-pet-retriever-2026-01-07-01-03-13-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cuccioli/golden-retriever-dog-pet-retriever-2026-01-07-01-03-13-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cuccioli/golden-retriever-dog-pet-retriever-2026-01-07-01-03-13-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cuccioli/golden-retriever-dog-pet-retriever-2026-01-07-01-03-13-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 4232,
+        "h": 2826,
+        "bytes": 2389389
+      },
+      "classificazione": {
+        "categoria": "cuccioli",
+        "sottosoggetti": [
+          "gattino grigio",
+          "cane golden retriever"
+        ],
+        "ambientazione": "interno luminoso minimalista",
+        "mood": "tenerezza, giocosità, amicizia animale",
+        "persone_presenti": false,
+        "num_animali": 2,
+        "adatto_per": [
+          "pet-friendly lifestyle",
+          "articoli su socializzazione animali",
+          "contenuti famiglia pet",
+          "blog benessere animali"
+        ],
+        "alt_text_it": "Gattino grigio gioca affettuosamente con cane golden retriever in ambiente interno luminoso",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:27.554Z"
+    },
+    {
+      "slug": "golden-retriever-dog-2026-03-25-02-53-24-utc",
+      "originale": "picodg/golden-retriever-dog-2026-03-25-02-53-24-utc.jpg",
+      "hash_originale": "sha256:5fe589f6a4ffb57409acf7304f8f5b578e486c409b633bda62f620bb23b47b81",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/golden-retriever-dog-2026-03-25-02-53-24-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/golden-retriever-dog-2026-03-25-02-53-24-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/golden-retriever-dog-2026-03-25-02-53-24-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/golden-retriever-dog-2026-03-25-02-53-24-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/golden-retriever-dog-2026-03-25-02-53-24-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/golden-retriever-dog-2026-03-25-02-53-24-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5314,
+        "h": 3716,
+        "bytes": 9480744
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "cane adulto",
+          "cane marrone",
+          "vegetazione",
+          "luce naturale"
+        ],
+        "ambientazione": "sentiero boschivo con vegetazione naturale e luce filtrata tra gli alberi",
+        "mood": "sereno, naturale, all'aperto",
+        "persone_presenti": false,
+        "num_animali": 1,
+        "adatto_per": [
+          "articoli sulla vita all'aperto con cani",
+          "guide alla passeggiata in natura",
+          "promozioni pet-friendly sentieri",
+          "benessere animali domestici"
+        ],
+        "alt_text_it": "Cane marrone in piedi su sentiero boschivo circondato da vegetazione e luce naturale filtrante",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:27.875Z"
+    },
+    {
+      "slug": "group-portrait-of-adorable-puppies-2026-01-08-00-07-46-utc",
+      "originale": "picodg/group-portrait-of-adorable-puppies-2026-01-08-00-07-46-utc.jpg",
+      "hash_originale": "sha256:c3e553295e61c644a69a2568dbc22b868e1da7b56bd7928591b353a2d73e817a",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/group-portrait-of-adorable-puppies-2026-01-08-00-07-46-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/group-portrait-of-adorable-puppies-2026-01-08-00-07-46-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/group-portrait-of-adorable-puppies-2026-01-08-00-07-46-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/group-portrait-of-adorable-puppies-2026-01-08-00-07-46-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/group-portrait-of-adorable-puppies-2026-01-08-00-07-46-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/group-portrait-of-adorable-puppies-2026-01-08-00-07-46-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 7500,
+        "h": 3476,
+        "bytes": 17684807
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "Labrador Retriever nero",
+          "Jack Russell Terrier bianco e marrone",
+          "Bulldog francese bianco",
+          "Carlino fulvo",
+          "Beagle marrone e bianco"
+        ],
+        "ambientazione": "sfondo neutro studio",
+        "mood": "allegro, giocoso, affettuoso",
+        "persone_presenti": false,
+        "num_animali": 5,
+        "adatto_per": [
+          "siti pet-friendly",
+          "articoli sulle razze canine",
+          "guide sulla convivenza con cani",
+          "contenuti educativi pet",
+          "campagne pubblicitarie pet"
+        ],
+        "alt_text_it": "Ritratto di cinque cani di diverse razze con lingue di fuori su sfondo beige chiaro",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:29.712Z"
+    },
+    {
+      "slug": "happy-friends-group-wearing-winter-clothes-taking-2026-01-07-23-55-03-utc",
+      "originale": "picodg/happy-friends-group-wearing-winter-clothes-taking-2026-01-07-23-55-03-utc.jpg",
+      "hash_originale": "sha256:013ffd6210f588f9fdd05c46dce1befff9540541fb455ae7e2a149c86923396e",
+      "output": {
+        "thumb_webp": "app/public/img/stock/persone-pet/happy-friends-group-wearing-winter-clothes-taking-2026-01-07-23-55-03-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/persone-pet/happy-friends-group-wearing-winter-clothes-taking-2026-01-07-23-55-03-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/persone-pet/happy-friends-group-wearing-winter-clothes-taking-2026-01-07-23-55-03-utc-card.webp",
+        "card_jpg": "app/public/img/stock/persone-pet/happy-friends-group-wearing-winter-clothes-taking-2026-01-07-23-55-03-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/persone-pet/happy-friends-group-wearing-winter-clothes-taking-2026-01-07-23-55-03-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/persone-pet/happy-friends-group-wearing-winter-clothes-taking-2026-01-07-23-55-03-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5474,
+        "h": 3653,
+        "bytes": 4456208
+      },
+      "classificazione": {
+        "categoria": "persone-pet",
+        "sottosoggetti": [
+          "gruppo di persone",
+          "cane",
+          "abbigliamento invernale",
+          "berretti",
+          "sciarpe"
+        ],
+        "ambientazione": "esterno - strada/piazza con decorazioni natalizie",
+        "mood": "allegro, festivo, spensierato",
+        "persone_presenti": true,
+        "num_animali": 1,
+        "adatto_per": [
+          "campagne marketing pet-friendly",
+          "articoli sulla socializzazione cani",
+          "lifestyle pet",
+          "eventi family-friendly",
+          "natale con animali"
+        ],
+        "alt_text_it": "Gruppo di amici felici con cane al guinzaglio in atmosfera natalizia invernale",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:31.210Z"
+    },
+    {
+      "slug": "happy-little-dog-in-the-arms-of-its-owners-2026-03-19-09-28-30-utc",
+      "originale": "picodg/happy-little-dog-in-the-arms-of-its-owners-2026-03-19-09-28-30-utc.jpg",
+      "hash_originale": "sha256:55aa6aa8b49cb7a826822c5025bb8cbb640bbb5a13bc82b3b0478644d29a510e",
+      "output": {
+        "thumb_webp": "app/public/img/stock/persone-pet/happy-little-dog-in-the-arms-of-its-owners-2026-03-19-09-28-30-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/persone-pet/happy-little-dog-in-the-arms-of-its-owners-2026-03-19-09-28-30-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/persone-pet/happy-little-dog-in-the-arms-of-its-owners-2026-03-19-09-28-30-utc-card.webp",
+        "card_jpg": "app/public/img/stock/persone-pet/happy-little-dog-in-the-arms-of-its-owners-2026-03-19-09-28-30-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/persone-pet/happy-little-dog-in-the-arms-of-its-owners-2026-03-19-09-28-30-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/persone-pet/happy-little-dog-in-the-arms-of-its-owners-2026-03-19-09-28-30-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 7944,
+        "h": 5296,
+        "bytes": 9586591
+      },
+      "classificazione": {
+        "categoria": "persone-pet",
+        "sottosoggetti": [
+          "uomini",
+          "cane",
+          "occhiali",
+          "abbigliamento casual"
+        ],
+        "ambientazione": "esterno urbano",
+        "mood": "affettuoso, gioioso, conviviale",
+        "persone_presenti": true,
+        "num_animali": 1,
+        "adatto_per": [
+          "pet-friendly lifestyle",
+          "adozioni",
+          "convivenza uomini-cani",
+          "contenuti lifestyle"
+        ],
+        "alt_text_it": "Due uomini sorridenti abbracciano un cane marrone con collare azzurro in un contesto urbano",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:31.804Z"
+    },
+    {
+      "slug": "happy-stylish-hipster-family-hugging-with-their-ca-2026-03-23-23-02-41-utc",
+      "originale": "picodg/happy-stylish-hipster-family-hugging-with-their-ca-2026-03-23-23-02-41-utc.JPG",
+      "hash_originale": "sha256:01eb1c316673d9c3bc8f66bfd639b481629146569cd809f9660bbdb58f981b6a",
+      "output": {
+        "thumb_webp": "app/public/img/stock/persone-pet/happy-stylish-hipster-family-hugging-with-their-ca-2026-03-23-23-02-41-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/persone-pet/happy-stylish-hipster-family-hugging-with-their-ca-2026-03-23-23-02-41-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/persone-pet/happy-stylish-hipster-family-hugging-with-their-ca-2026-03-23-23-02-41-utc-card.webp",
+        "card_jpg": "app/public/img/stock/persone-pet/happy-stylish-hipster-family-hugging-with-their-ca-2026-03-23-23-02-41-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/persone-pet/happy-stylish-hipster-family-hugging-with-their-ca-2026-03-23-23-02-41-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/persone-pet/happy-stylish-hipster-family-hugging-with-their-ca-2026-03-23-23-02-41-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 4000,
+        "h": 2667,
+        "bytes": 8027236
+      },
+      "classificazione": {
+        "categoria": "persone-pet",
+        "sottosoggetti": [
+          "coppia",
+          "gatto tabby",
+          "affetto"
+        ],
+        "ambientazione": "interno, sfondo neutro",
+        "mood": "felice, affettuoso, intimo",
+        "persone_presenti": true,
+        "num_animali": 1,
+        "adatto_per": [
+          "famiglie",
+          "pet-friendly lifestyle",
+          "adozioni",
+          "contenuti social",
+          "campagne di consapevolezza animale"
+        ],
+        "alt_text_it": "Coppia sorridente abbraccia tenero gatto tabby grigio in posa affettuosa",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:33.255Z"
+    },
+    {
+      "slug": "head-shot-of-australian-shepherd-sitting-and-panti-2026-01-09-11-01-54-utc",
+      "originale": "picodg/head-shot-of-australian-shepherd-sitting-and-panti-2026-01-09-11-01-54-utc.jpg",
+      "hash_originale": "sha256:1f3d9633438182ab97aecb8bfdf4f6eb5dd258345c2b035897a746f235fd4fbb",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/head-shot-of-australian-shepherd-sitting-and-panti-2026-01-09-11-01-54-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/head-shot-of-australian-shepherd-sitting-and-panti-2026-01-09-11-01-54-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/head-shot-of-australian-shepherd-sitting-and-panti-2026-01-09-11-01-54-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/head-shot-of-australian-shepherd-sitting-and-panti-2026-01-09-11-01-54-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/head-shot-of-australian-shepherd-sitting-and-panti-2026-01-09-11-01-54-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/head-shot-of-australian-shepherd-sitting-and-panti-2026-01-09-11-01-54-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 3931,
+        "h": 2679,
+        "bytes": 4660295
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "cane adulto",
+          "razza mista",
+          "pastore",
+          "collielike"
+        ],
+        "ambientazione": "studio fotografico",
+        "mood": "amichevole, felice, fiducioso",
+        "persone_presenti": false,
+        "num_animali": 1,
+        "adatto_per": [
+          "siti pet-friendly",
+          "articoli benessere cani",
+          "guide razze",
+          "pubblicità servizi per cani"
+        ],
+        "alt_text_it": "Cane adulto bianco e marrone con sguardo felice su sfondo bianco",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:34.351Z"
+    },
+    {
+      "slug": "headshot-portrait-of-cute-funny-dog-jack-russell-t-2026-01-06-09-03-45-utc",
+      "originale": "picodg/headshot-portrait-of-cute-funny-dog-jack-russell-t-2026-01-06-09-03-45-utc.jpg",
+      "hash_originale": "sha256:90f9b3243c7fd384454ed29042e250677c5a1748245188183aac8488c29b7fda",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/headshot-portrait-of-cute-funny-dog-jack-russell-t-2026-01-06-09-03-45-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/headshot-portrait-of-cute-funny-dog-jack-russell-t-2026-01-06-09-03-45-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/headshot-portrait-of-cute-funny-dog-jack-russell-t-2026-01-06-09-03-45-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/headshot-portrait-of-cute-funny-dog-jack-russell-t-2026-01-06-09-03-45-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/headshot-portrait-of-cute-funny-dog-jack-russell-t-2026-01-06-09-03-45-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/headshot-portrait-of-cute-funny-dog-jack-russell-t-2026-01-06-09-03-45-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5400,
+        "h": 3600,
+        "bytes": 2436914
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "cane adulto",
+          "jack russell terrier",
+          "cane marrone e bianco"
+        ],
+        "ambientazione": "studio fotografico con sfondo giallo",
+        "mood": "allegro, entusiasta, amichevole",
+        "persone_presenti": false,
+        "num_animali": 1,
+        "adatto_per": [
+          "articoli su razze canine",
+          "guide benessere animali",
+          "campagne pet-friendly",
+          "annunci strutture per cani"
+        ],
+        "alt_text_it": "Cane marrone e bianco felice con bocca aperta su sfondo giallo luminoso",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:34.852Z"
+    },
+    {
+      "slug": "it-s-a-dog-s-world-three-puppy-dogs-contentedly-s-2026-03-13-01-55-17-utc",
+      "originale": "picodg/it-s-a-dog-s-world-three-puppy-dogs-contentedly-s-2026-03-13-01-55-17-utc.jpg",
+      "hash_originale": "sha256:086d66267f0ba07145005d634886b3cab2e60d753024e4e4dbf5ec0c19bf3c35",
+      "output": {
+        "thumb_webp": "app/public/img/stock/persone-pet/it-s-a-dog-s-world-three-puppy-dogs-contentedly-s-2026-03-13-01-55-17-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/persone-pet/it-s-a-dog-s-world-three-puppy-dogs-contentedly-s-2026-03-13-01-55-17-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/persone-pet/it-s-a-dog-s-world-three-puppy-dogs-contentedly-s-2026-03-13-01-55-17-utc-card.webp",
+        "card_jpg": "app/public/img/stock/persone-pet/it-s-a-dog-s-world-three-puppy-dogs-contentedly-s-2026-03-13-01-55-17-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/persone-pet/it-s-a-dog-s-world-three-puppy-dogs-contentedly-s-2026-03-13-01-55-17-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/persone-pet/it-s-a-dog-s-world-three-puppy-dogs-contentedly-s-2026-03-13-01-55-17-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 3264,
+        "h": 2448,
+        "bytes": 4795395
+      },
+      "classificazione": {
+        "categoria": "persone-pet",
+        "sottosoggetti": [
+          "cani adulti",
+          "persone",
+          "affetto"
+        ],
+        "ambientazione": "interno domestico",
+        "mood": "affettuoso, sereno, conviviale",
+        "persone_presenti": true,
+        "num_animali": 3,
+        "adatto_per": [
+          "adozioni",
+          "pet-friendly lifestyle",
+          "benessere animale",
+          "convivenza uomo-cane"
+        ],
+        "alt_text_it": "Tre cani adulti accoccolati tra due persone in ambiente domestico, momento di tenerezza e affetto",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:35.943Z"
+    },
+    {
+      "slug": "jack-russell-puppy-isolated-on-pink-background-2026-01-09-11-30-40-utc",
+      "originale": "picodg/jack-russell-puppy-isolated-on-pink-background-2026-01-09-11-30-40-utc.jpg",
+      "hash_originale": "sha256:1f1784dfc0aa0da7832d1f9c3e0bc8b49034c9c868195b91dc5c56108ff5e1f5",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/jack-russell-puppy-isolated-on-pink-background-2026-01-09-11-30-40-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/jack-russell-puppy-isolated-on-pink-background-2026-01-09-11-30-40-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/jack-russell-puppy-isolated-on-pink-background-2026-01-09-11-30-40-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/jack-russell-puppy-isolated-on-pink-background-2026-01-09-11-30-40-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/jack-russell-puppy-isolated-on-pink-background-2026-01-09-11-30-40-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/jack-russell-puppy-isolated-on-pink-background-2026-01-09-11-30-40-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 3799,
+        "h": 5700,
+        "bytes": 1170880
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "cane piccolo",
+          "Jack Russell Terrier",
+          "sfondo rosa",
+          "studio fotografico"
+        ],
+        "ambientazione": "Studio interno con sfondo rosa monocolore",
+        "mood": "Giocoso, elegante, minimalista, divertente",
+        "persone_presenti": false,
+        "num_animali": 1,
+        "adatto_per": [
+          "articoli su razze piccole",
+          "guide fotografiche per animali",
+          "content social media",
+          "portfolio fotografico",
+          "pubblicità pet-friendly"
+        ],
+        "alt_text_it": "Piccolo cane bianco e marrone con sguardo verso l'alto su sfondo rosa",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:37.486Z"
+    },
+    {
+      "slug": "jack-russell-terrier-with-paws-up-peeking-over-bla-2026-01-06-10-39-55-utc",
+      "originale": "picodg/jack-russell-terrier-with-paws-up-peeking-over-bla-2026-01-06-10-39-55-utc.jpg",
+      "hash_originale": "sha256:fcb7d1365c6d75c5c8bf024bbde96bbcdc5e6dd00f92b160c9f5ca4bffe5b54f",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/jack-russell-terrier-with-paws-up-peeking-over-bla-2026-01-06-10-39-55-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/jack-russell-terrier-with-paws-up-peeking-over-bla-2026-01-06-10-39-55-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/jack-russell-terrier-with-paws-up-peeking-over-bla-2026-01-06-10-39-55-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/jack-russell-terrier-with-paws-up-peeking-over-bla-2026-01-06-10-39-55-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/jack-russell-terrier-with-paws-up-peeking-over-bla-2026-01-06-10-39-55-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/jack-russell-terrier-with-paws-up-peeking-over-bla-2026-01-06-10-39-55-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 2800,
+        "h": 4200,
+        "bytes": 1602369
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "Jack Russell Terrier",
+          "cane marrone e bianco",
+          "lingua di fuori",
+          "ritratto"
+        ],
+        "ambientazione": "studio fotografico con sfondo giallo",
+        "mood": "allegro, giocoso, amichevole",
+        "persone_presenti": false,
+        "num_animali": 1,
+        "adatto_per": [
+          "pet-friendly portal",
+          "articoli su razze canine",
+          "pubblicità pet-related",
+          "guide comportamento cani",
+          "contenuti social media"
+        ],
+        "alt_text_it": "Cane Jack Russell Terrier marrone e bianco con lingua di fuori su sfondo giallo luminoso",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:37.750Z"
+    },
+    {
+      "slug": "joyful-jack-russell-terrier-on-yellow-backdrop-2026-01-08-23-02-50-utc",
+      "originale": "picodg/joyful-jack-russell-terrier-on-yellow-backdrop-2026-01-08-23-02-50-utc.jpg",
+      "hash_originale": "sha256:b10f62902e5fb2f0412d1f27cf4e5eecebdb745d04678c86b0f00e641fc83820",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/joyful-jack-russell-terrier-on-yellow-backdrop-2026-01-08-23-02-50-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/joyful-jack-russell-terrier-on-yellow-backdrop-2026-01-08-23-02-50-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/joyful-jack-russell-terrier-on-yellow-backdrop-2026-01-08-23-02-50-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/joyful-jack-russell-terrier-on-yellow-backdrop-2026-01-08-23-02-50-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/joyful-jack-russell-terrier-on-yellow-backdrop-2026-01-08-23-02-50-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/joyful-jack-russell-terrier-on-yellow-backdrop-2026-01-08-23-02-50-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 6502,
+        "h": 4335,
+        "bytes": 8384012
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "Chihuahua",
+          "cane piccolo",
+          "cane marrone e bianco"
+        ],
+        "ambientazione": "sfondo giallo neutro",
+        "mood": "allegro, giocoso, energico",
+        "persone_presenti": false,
+        "num_animali": 1,
+        "adatto_per": [
+          "articoli su razze canine",
+          "guide pet-friendly",
+          "annunci adozioni",
+          "pubblicità prodotti cani",
+          "blog pet"
+        ],
+        "alt_text_it": "Chihuahua marrone e bianco sorridente su sfondo giallo, in posa da fronte",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:39.108Z"
+    },
+    {
+      "slug": "little-kittens-are-sitting-in-a-cat-bed-little-ki-2026-01-07-00-19-23-utc",
+      "originale": "picodg/little-kittens-are-sitting-in-a-cat-bed-little-ki-2026-01-07-00-19-23-utc.jpg",
+      "hash_originale": "sha256:e619fef1f1e472857a0814f5f248e2fb3317b6c603934ae92b762bf90e850a00",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cuccioli/little-kittens-are-sitting-in-a-cat-bed-little-ki-2026-01-07-00-19-23-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cuccioli/little-kittens-are-sitting-in-a-cat-bed-little-ki-2026-01-07-00-19-23-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cuccioli/little-kittens-are-sitting-in-a-cat-bed-little-ki-2026-01-07-00-19-23-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cuccioli/little-kittens-are-sitting-in-a-cat-bed-little-ki-2026-01-07-00-19-23-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cuccioli/little-kittens-are-sitting-in-a-cat-bed-little-ki-2026-01-07-00-19-23-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cuccioli/little-kittens-are-sitting-in-a-cat-bed-little-ki-2026-01-07-00-19-23-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 3981,
+        "h": 2260,
+        "bytes": 6590097
+      },
+      "classificazione": {
+        "categoria": "cuccioli",
+        "sottosoggetti": [
+          "gattini",
+          "lettino per animali",
+          "peluche"
+        ],
+        "ambientazione": "interno - lettino/cuccia",
+        "mood": "dolce, affettuoso, giocoso",
+        "persone_presenti": false,
+        "num_animali": 5,
+        "adatto_per": [
+          "blog pet-friendly",
+          "negozi accessori gatti",
+          "siti adozioni",
+          "riviste animali",
+          "social media"
+        ],
+        "alt_text_it": "Cinque gattini grigi e arancioni giocano insieme su un lettino marrone morbido",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:40.680Z"
+    },
+    {
+      "slug": "portrait-of-a-british-shorthair-cat-wearing-a-red-2026-03-24-08-00-26-utc",
+      "originale": "picodg/portrait-of-a-british-shorthair-cat-wearing-a-red-2026-03-24-08-00-26-utc.jpg",
+      "hash_originale": "sha256:b2ffaa385a1d2ddc8c7382ace18ad42d97fbc908234f205d28fe8edf60db8e37",
+      "output": {
+        "thumb_webp": "app/public/img/stock/gatti/portrait-of-a-british-shorthair-cat-wearing-a-red-2026-03-24-08-00-26-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/gatti/portrait-of-a-british-shorthair-cat-wearing-a-red-2026-03-24-08-00-26-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/gatti/portrait-of-a-british-shorthair-cat-wearing-a-red-2026-03-24-08-00-26-utc-card.webp",
+        "card_jpg": "app/public/img/stock/gatti/portrait-of-a-british-shorthair-cat-wearing-a-red-2026-03-24-08-00-26-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/gatti/portrait-of-a-british-shorthair-cat-wearing-a-red-2026-03-24-08-00-26-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/gatti/portrait-of-a-british-shorthair-cat-wearing-a-red-2026-03-24-08-00-26-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 7314,
+        "h": 8421,
+        "bytes": 16823318
+      },
+      "classificazione": {
+        "categoria": "gatti",
+        "sottosoggetti": [
+          "gatto",
+          "ananas",
+          "fiocco rosso",
+          "fogliame"
+        ],
+        "ambientazione": "studio fotografico con sfondo verde",
+        "mood": "divertente, giocoso, creativo",
+        "persone_presenti": false,
+        "num_animali": 1,
+        "adatto_per": [
+          "articoli umoristici",
+          "content social media",
+          "campagne pubblicitarie pet-friendly",
+          "illustrazioni divertenti"
+        ],
+        "alt_text_it": "Gatto soriano con ananas sulla testa e fiocco rosso, sfondo verde menta",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:42.179Z"
+    },
+    {
+      "slug": "portrait-of-a-miniature-schnauzer-in-a-park-under-2026-03-18-12-19-23-utc",
+      "originale": "picodg/portrait-of-a-miniature-schnauzer-in-a-park-under-2026-03-18-12-19-23-utc.jpg",
+      "hash_originale": "sha256:282ffe0b843315e339aa17560631ddb461b7b025881d87a782bf2bbe5aa9f221",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/portrait-of-a-miniature-schnauzer-in-a-park-under-2026-03-18-12-19-23-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/portrait-of-a-miniature-schnauzer-in-a-park-under-2026-03-18-12-19-23-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/portrait-of-a-miniature-schnauzer-in-a-park-under-2026-03-18-12-19-23-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/portrait-of-a-miniature-schnauzer-in-a-park-under-2026-03-18-12-19-23-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/portrait-of-a-miniature-schnauzer-in-a-park-under-2026-03-18-12-19-23-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/portrait-of-a-miniature-schnauzer-in-a-park-under-2026-03-18-12-19-23-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5633,
+        "h": 3755,
+        "bytes": 13328108
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "Schnauzer",
+          "cane adulto",
+          "ritratto"
+        ],
+        "ambientazione": "esterno - strada/pavimento",
+        "mood": "allegro, amichevole, fiducioso",
+        "persone_presenti": false,
+        "num_animali": 1,
+        "adatto_per": [
+          "articoli su razze canine",
+          "guide comportamento cani",
+          "contenuti pet-friendly",
+          "gallerie fotografiche",
+          "guide adozione"
+        ],
+        "alt_text_it": "Schnauzer grigio e bianco seduto all'aperto con lingua fuori, sguardo amichevole",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:42.239Z"
+    },
+    {
+      "slug": "portrait-of-golden-retriever-dog-2026-03-17-00-04-36-utc",
+      "originale": "picodg/portrait-of-golden-retriever-dog-2026-03-17-00-04-36-utc.jpg",
+      "hash_originale": "sha256:c53205072e9c1efbe76a95a0670f30ac4ae6d0cf1778de264a110e4b4fb31b29",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/portrait-of-golden-retriever-dog-2026-03-17-00-04-36-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/portrait-of-golden-retriever-dog-2026-03-17-00-04-36-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/portrait-of-golden-retriever-dog-2026-03-17-00-04-36-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/portrait-of-golden-retriever-dog-2026-03-17-00-04-36-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/portrait-of-golden-retriever-dog-2026-03-17-00-04-36-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/portrait-of-golden-retriever-dog-2026-03-17-00-04-36-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 4717,
+        "h": 3145,
+        "bytes": 5971022
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "Golden Retriever",
+          "cane adulto",
+          "ritratto"
+        ],
+        "ambientazione": "studio fotografico con sfondo verde",
+        "mood": "felice, amichevole, allegro",
+        "persone_presenti": false,
+        "num_animali": 1,
+        "adatto_per": [
+          "articoli su razze canine",
+          "contenuti pet-friendly",
+          "guide comportamento cani",
+          "pubblicità prodotti per cani",
+          "siti veterinari"
+        ],
+        "alt_text_it": "Golden Retriever felice con lingua fuori su sfondo verde, ritratto professionale",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:44.203Z"
+    },
+    {
+      "slug": "selective-focus-shot-of-an-adorable-kooikerhondje-2026-03-18-06-44-27-utc",
+      "originale": "picodg/selective-focus-shot-of-an-adorable-kooikerhondje-2026-03-18-06-44-27-utc.jpeg",
+      "hash_originale": "sha256:df3d49f7982e79be44521573fa16a861e8da96e26de280b7738404ad1819288f",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/selective-focus-shot-of-an-adorable-kooikerhondje-2026-03-18-06-44-27-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/selective-focus-shot-of-an-adorable-kooikerhondje-2026-03-18-06-44-27-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/selective-focus-shot-of-an-adorable-kooikerhondje-2026-03-18-06-44-27-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/selective-focus-shot-of-an-adorable-kooikerhondje-2026-03-18-06-44-27-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/selective-focus-shot-of-an-adorable-kooikerhondje-2026-03-18-06-44-27-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/selective-focus-shot-of-an-adorable-kooikerhondje-2026-03-18-06-44-27-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 3677,
+        "h": 2450,
+        "bytes": 4691552
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "cane adulto",
+          "razza mista",
+          "pelo lungo",
+          "lingua fuori"
+        ],
+        "ambientazione": "esterno naturale sfocato",
+        "mood": "felice, amichevole, sereno",
+        "persone_presenti": false,
+        "num_animali": 1,
+        "adatto_per": [
+          "articoli breed",
+          "guide comportamento",
+          "benessere animale",
+          "pet care",
+          "adozioni"
+        ],
+        "alt_text_it": "Cane marrone e bianco felice con lingua fuori su sfondo verde sfocato",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:44.994Z"
+    },
+    {
+      "slug": "rear-side-of-audiences-sitting-and-listening-the-s-2026-01-05-06-16-45-utc",
+      "originale": "picodg/rear-side-of-audiences-sitting-and-listening-the-s-2026-01-05-06-16-45-utc.jpg",
+      "hash_originale": "sha256:bdb0dfdcc4f63a9161444ad56cca896c7f09ba1742ac561463c7f86066f1f709",
+      "output": {
+        "thumb_webp": "app/public/img/stock/altro/rear-side-of-audiences-sitting-and-listening-the-s-2026-01-05-06-16-45-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/altro/rear-side-of-audiences-sitting-and-listening-the-s-2026-01-05-06-16-45-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/altro/rear-side-of-audiences-sitting-and-listening-the-s-2026-01-05-06-16-45-utc-card.webp",
+        "card_jpg": "app/public/img/stock/altro/rear-side-of-audiences-sitting-and-listening-the-s-2026-01-05-06-16-45-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/altro/rear-side-of-audiences-sitting-and-listening-the-s-2026-01-05-06-16-45-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/altro/rear-side-of-audiences-sitting-and-listening-the-s-2026-01-05-06-16-45-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 6000,
+        "h": 4000,
+        "bytes": 9412972
+      },
+      "classificazione": {
+        "categoria": "altro",
+        "sottosoggetti": [
+          "conferenza",
+          "presentazione",
+          "pubblico",
+          "sala eventi"
+        ],
+        "ambientazione": "sala conferenze interna",
+        "mood": "professionale, educativo",
+        "persone_presenti": true,
+        "num_animali": 0,
+        "adatto_per": [],
+        "alt_text_it": "Sala conferenze con pubblico seduto che assiste a una presentazione su schermo",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:45.085Z"
+    },
+    {
+      "slug": "senior-man-using-laptop-sitting-on-sofa-with-his-t-2026-03-11-00-54-12-utc",
+      "originale": "picodg/senior-man-using-laptop-sitting-on-sofa-with-his-t-2026-03-11-00-54-12-utc.jpg",
+      "hash_originale": "sha256:2e67a275fdc4952c55298b85c4519e9c0d0d4cb0db73f7e6438f5866c0de067e",
+      "output": {
+        "thumb_webp": "app/public/img/stock/persone-pet/senior-man-using-laptop-sitting-on-sofa-with-his-t-2026-03-11-00-54-12-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/persone-pet/senior-man-using-laptop-sitting-on-sofa-with-his-t-2026-03-11-00-54-12-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/persone-pet/senior-man-using-laptop-sitting-on-sofa-with-his-t-2026-03-11-00-54-12-utc-card.webp",
+        "card_jpg": "app/public/img/stock/persone-pet/senior-man-using-laptop-sitting-on-sofa-with-his-t-2026-03-11-00-54-12-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/persone-pet/senior-man-using-laptop-sitting-on-sofa-with-his-t-2026-03-11-00-54-12-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/persone-pet/senior-man-using-laptop-sitting-on-sofa-with-his-t-2026-03-11-00-54-12-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 4896,
+        "h": 3264,
+        "bytes": 8033444
+      },
+      "classificazione": {
+        "categoria": "persone-pet",
+        "sottosoggetti": [
+          "uomo",
+          "due cani",
+          "cani da compagnia",
+          "razze piccole"
+        ],
+        "ambientazione": "interno - divano",
+        "mood": "affettuoso, familiare, accogliente",
+        "persone_presenti": true,
+        "num_animali": 2,
+        "adatto_per": [
+          "articoli su rapporto uomo-animale",
+          "guide pet-friendly",
+          "articoli benessere animale",
+          "pubblicità pet-related"
+        ],
+        "alt_text_it": "Uomo che abbraccia affettuosamente due piccoli cani tricolori seduti insieme sul divano",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:47.350Z"
+    },
+    {
+      "slug": "seven-dog-portrait-2026-03-09-09-16-41-utc",
+      "originale": "picodg/seven-dog-portrait-2026-03-09-09-16-41-utc.jpg",
+      "hash_originale": "sha256:8ce2a070378e2319ae506499e148c85353f4a1ac561f56221745d4e0666ff98c",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/seven-dog-portrait-2026-03-09-09-16-41-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/seven-dog-portrait-2026-03-09-09-16-41-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/seven-dog-portrait-2026-03-09-09-16-41-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/seven-dog-portrait-2026-03-09-09-16-41-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/seven-dog-portrait-2026-03-09-09-16-41-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/seven-dog-portrait-2026-03-09-09-16-41-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 6981,
+        "h": 3000,
+        "bytes": 8429676
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "cani di diverse razze",
+          "cani adulti",
+          "varietà di mantelli"
+        ],
+        "ambientazione": "studio fotografico con sfondo a strisce colorate",
+        "mood": "giocoso, amichevole, variegato",
+        "persone_presenti": false,
+        "num_animali": 7,
+        "adatto_per": [
+          "articoli sulla diversità delle razze canine",
+          "contenuti su cani adulti",
+          "guide alle razze",
+          "blog pet-friendly"
+        ],
+        "alt_text_it": "Sette cani di razze diverse seduti in fila su sfondo colorato a strisce",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:48.063Z"
+    },
+    {
+      "slug": "shorthair-gray-cat-with-winking-eye-looking-straig-2026-03-25-05-09-58-utc",
+      "originale": "picodg/shorthair-gray-cat-with-winking-eye-looking-straig-2026-03-25-05-09-58-utc.jpg",
+      "hash_originale": "sha256:0a37847c380ebe68ddf10500159961d0d1397912c7cd4904f1d74520c21fd56c",
+      "output": {
+        "thumb_webp": "app/public/img/stock/gatti/shorthair-gray-cat-with-winking-eye-looking-straig-2026-03-25-05-09-58-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/gatti/shorthair-gray-cat-with-winking-eye-looking-straig-2026-03-25-05-09-58-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/gatti/shorthair-gray-cat-with-winking-eye-looking-straig-2026-03-25-05-09-58-utc-card.webp",
+        "card_jpg": "app/public/img/stock/gatti/shorthair-gray-cat-with-winking-eye-looking-straig-2026-03-25-05-09-58-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/gatti/shorthair-gray-cat-with-winking-eye-looking-straig-2026-03-25-05-09-58-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/gatti/shorthair-gray-cat-with-winking-eye-looking-straig-2026-03-25-05-09-58-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 9939,
+        "h": 5504,
+        "bytes": 11256635
+      },
+      "classificazione": {
+        "categoria": "gatti",
+        "sottosoggetti": [
+          "gatto adulto",
+          "tabby",
+          "sguardo verso l'alto"
+        ],
+        "ambientazione": "sfondo neutro",
+        "mood": "divertente, giocoso, simpatico",
+        "persone_presenti": false,
+        "num_animali": 1,
+        "adatto_per": [
+          "articoli blog pet",
+          "guide comportamento felini",
+          "content social media",
+          "banner siti pet-friendly"
+        ],
+        "alt_text_it": "Gatto tabby che guarda verso l'alto con espressione divertita su sfondo verde chiaro",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:49.270Z"
+    },
+    {
+      "slug": "small-cute-gray-cat-kitten-in-grass-2026-03-23-23-49-56-utc",
+      "originale": "picodg/small-cute-gray-cat-kitten-in-grass-2026-03-23-23-49-56-utc.jpg",
+      "hash_originale": "sha256:940fd0a131c56ecb6df0ac0865311ed4b0db29e8bed077a6e5d5612c7403c681",
+      "output": {
+        "thumb_webp": "app/public/img/stock/gatti/small-cute-gray-cat-kitten-in-grass-2026-03-23-23-49-56-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/gatti/small-cute-gray-cat-kitten-in-grass-2026-03-23-23-49-56-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/gatti/small-cute-gray-cat-kitten-in-grass-2026-03-23-23-49-56-utc-card.webp",
+        "card_jpg": "app/public/img/stock/gatti/small-cute-gray-cat-kitten-in-grass-2026-03-23-23-49-56-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/gatti/small-cute-gray-cat-kitten-in-grass-2026-03-23-23-49-56-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/gatti/small-cute-gray-cat-kitten-in-grass-2026-03-23-23-49-56-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5472,
+        "h": 3648,
+        "bytes": 11901144
+      },
+      "classificazione": {
+        "categoria": "gatti",
+        "sottosoggetti": [
+          "gatto tabby",
+          "erba",
+          "natura"
+        ],
+        "ambientazione": "giardino all'aperto",
+        "mood": "naturale, curioso, sereno",
+        "persone_presenti": false,
+        "num_animali": 1,
+        "adatto_per": [
+          "blog-pet",
+          "articoli-gatti",
+          "contenuti-comportamento-felino",
+          "guide-outdoor-cats"
+        ],
+        "alt_text_it": "Gatto tabby grigio e bianco seduto sull'erba in giardino, con sguardo attento verso la telecamera",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:50.681Z"
+    },
+    {
+      "slug": "standing-on-the-legs-beautiful-golden-retriever-d-2026-03-24-03-52-18-utc",
+      "originale": "picodg/standing-on-the-legs-beautiful-golden-retriever-d-2026-03-24-03-52-18-utc.jpg",
+      "hash_originale": "sha256:342ad03575e4a31d9af9977f86a808e3a11a75cdd4617f0363aea31c20dbadbe",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/standing-on-the-legs-beautiful-golden-retriever-d-2026-03-24-03-52-18-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/standing-on-the-legs-beautiful-golden-retriever-d-2026-03-24-03-52-18-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/standing-on-the-legs-beautiful-golden-retriever-d-2026-03-24-03-52-18-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/standing-on-the-legs-beautiful-golden-retriever-d-2026-03-24-03-52-18-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/standing-on-the-legs-beautiful-golden-retriever-d-2026-03-24-03-52-18-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/standing-on-the-legs-beautiful-golden-retriever-d-2026-03-24-03-52-18-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 6299,
+        "h": 4199,
+        "bytes": 15029278
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "cane adulto",
+          "labrador retriever",
+          "cane biondo"
+        ],
+        "ambientazione": "giardino con erba e arbusti verdi",
+        "mood": "felice, giocoso, amichevole",
+        "persone_presenti": false,
+        "num_animali": 1,
+        "adatto_per": [
+          "articoli su razze canine",
+          "consigli per proprietari di cani",
+          "promozioni pet-friendly",
+          "content su benessere animale"
+        ],
+        "alt_text_it": "Cane labrador biondo sorridente in giardino verde, vista dall'alto",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:53.201Z"
+    },
+    {
+      "slug": "striped-cat-sits-on-a-wooden-floor-paws-whis-2026-01-07-01-29-39-utc",
+      "originale": "picodg/striped-cat-sits-on-a-wooden-floor-paws-whis-2026-01-07-01-29-39-utc.jpg",
+      "hash_originale": "sha256:1eabb7eee344c39252d5462c8385416188b51ce3c242f97bc2bb7eb60899909b",
+      "output": {
+        "thumb_webp": "app/public/img/stock/gatti/striped-cat-sits-on-a-wooden-floor-paws-whis-2026-01-07-01-29-39-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/gatti/striped-cat-sits-on-a-wooden-floor-paws-whis-2026-01-07-01-29-39-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/gatti/striped-cat-sits-on-a-wooden-floor-paws-whis-2026-01-07-01-29-39-utc-card.webp",
+        "card_jpg": "app/public/img/stock/gatti/striped-cat-sits-on-a-wooden-floor-paws-whis-2026-01-07-01-29-39-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/gatti/striped-cat-sits-on-a-wooden-floor-paws-whis-2026-01-07-01-29-39-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/gatti/striped-cat-sits-on-a-wooden-floor-paws-whis-2026-01-07-01-29-39-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 6048,
+        "h": 4024,
+        "bytes": 11099116
+      },
+      "classificazione": {
+        "categoria": "gatti",
+        "sottosoggetti": [
+          "gatto tabby",
+          "sguardo diretto",
+          "occhi verdi"
+        ],
+        "ambientazione": "interno",
+        "mood": "curioso, giocoso",
+        "persone_presenti": false,
+        "num_animali": 1,
+        "adatto_per": [
+          "articoli su gatti domestici",
+          "guide comportamento felino",
+          "contenuti pet-friendly",
+          "illustrazione carattere gatto"
+        ],
+        "alt_text_it": "Gatto tabby grigio e bianco con occhi verdi luminosi guarda verso l'alto con espressione curiosa",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:53.932Z"
+    },
+    {
+      "slug": "spitz-dog-wedding-couple-2026-03-09-05-23-29-utc",
+      "originale": "picodg/spitz-dog-wedding-couple-2026-03-09-05-23-29-utc.jpg",
+      "hash_originale": "sha256:3f8f1fc3c6ac7e39a99e98b3165d58554789451ce7e9b302964b4a470a667273",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/spitz-dog-wedding-couple-2026-03-09-05-23-29-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/spitz-dog-wedding-couple-2026-03-09-05-23-29-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/spitz-dog-wedding-couple-2026-03-09-05-23-29-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/spitz-dog-wedding-couple-2026-03-09-05-23-29-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/spitz-dog-wedding-couple-2026-03-09-05-23-29-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/spitz-dog-wedding-couple-2026-03-09-05-23-29-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5760,
+        "h": 3840,
+        "bytes": 12362304
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "cane nero",
+          "cane bianco/crema",
+          "cappello rosso e bianco",
+          "velo da sposa",
+          "smoking",
+          "tema matrimonio"
+        ],
+        "ambientazione": "studio fotografico",
+        "mood": "festoso, romantico, giocoso",
+        "persone_presenti": false,
+        "num_animali": 2,
+        "adatto_per": [
+          "matrimoni a tema pet",
+          "anniversari",
+          "campagne creative",
+          "greeting card",
+          "social media",
+          "articoli su cani"
+        ],
+        "alt_text_it": "Due cani in abiti da sposi sorridenti: uno nero con smoking e cappello, uno bianco con velo nuziale",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:54.772Z"
+    },
+    {
+      "slug": "stylish-european-shorthair-wearing-a-suit-and-sung-2026-03-09-07-57-58-utc",
+      "originale": "picodg/stylish-european-shorthair-wearing-a-suit-and-sung-2026-03-09-07-57-58-utc.jpg",
+      "hash_originale": "sha256:73499951c9b80134f2469500bbda3ffa5f675d09e70f69a73aa6a4b65093a11c",
+      "output": {
+        "thumb_webp": "app/public/img/stock/gatti/stylish-european-shorthair-wearing-a-suit-and-sung-2026-03-09-07-57-58-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/gatti/stylish-european-shorthair-wearing-a-suit-and-sung-2026-03-09-07-57-58-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/gatti/stylish-european-shorthair-wearing-a-suit-and-sung-2026-03-09-07-57-58-utc-card.webp",
+        "card_jpg": "app/public/img/stock/gatti/stylish-european-shorthair-wearing-a-suit-and-sung-2026-03-09-07-57-58-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/gatti/stylish-european-shorthair-wearing-a-suit-and-sung-2026-03-09-07-57-58-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/gatti/stylish-european-shorthair-wearing-a-suit-and-sung-2026-03-09-07-57-58-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 4866,
+        "h": 4866,
+        "bytes": 17521614
+      },
+      "classificazione": {
+        "categoria": "gatti",
+        "sottosoggetti": [
+          "occhiali da sole",
+          "giacca verde",
+          "camicia rosa",
+          "cravatta"
+        ],
+        "ambientazione": "studio fotografico",
+        "mood": "divertente, ironico, alla moda",
+        "persone_presenti": false,
+        "num_animali": 1,
+        "adatto_per": [
+          "articoli divertenti",
+          "contenuti social",
+          "marketing creativo",
+          "gallery pet-friendly"
+        ],
+        "alt_text_it": "Gatto tabby con occhiali gialli e abito elegante su sfondo rosa",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:56.997Z"
+    },
+    {
+      "slug": "top-view-of-two-adorable-welsh-corgi-dogs-laying-o-2026-03-12-23-51-58-utc",
+      "originale": "picodg/top-view-of-two-adorable-welsh-corgi-dogs-laying-o-2026-03-12-23-51-58-utc.jpg",
+      "hash_originale": "sha256:00425de179d93a42454b4f4c3aab375f836dc31042378042da209bc970c46740",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/top-view-of-two-adorable-welsh-corgi-dogs-laying-o-2026-03-12-23-51-58-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/top-view-of-two-adorable-welsh-corgi-dogs-laying-o-2026-03-12-23-51-58-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/top-view-of-two-adorable-welsh-corgi-dogs-laying-o-2026-03-12-23-51-58-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/top-view-of-two-adorable-welsh-corgi-dogs-laying-o-2026-03-12-23-51-58-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/top-view-of-two-adorable-welsh-corgi-dogs-laying-o-2026-03-12-23-51-58-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/top-view-of-two-adorable-welsh-corgi-dogs-laying-o-2026-03-12-23-51-58-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 7360,
+        "h": 4912,
+        "bytes": 17020010
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "Corgi",
+          "cani in coppia",
+          "cani che si abbracciano"
+        ],
+        "ambientazione": "prato in erba sintetica",
+        "mood": "affettuoso, giocoso, tenero",
+        "persone_presenti": false,
+        "num_animali": 2,
+        "adatto_per": [
+          "articoli su amicizia tra cani",
+          "contenuti pet-friendly",
+          "pubblicità pet care",
+          "blog benessere animale",
+          "social media pet"
+        ],
+        "alt_text_it": "Due cani Corgi che si abbracciano affettuosamente su prato verde",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:31:57.812Z"
+    },
+    {
+      "slug": "wedding-guests-2026-03-09-05-20-24-utc",
+      "originale": "picodg/wedding-guests-2026-03-09-05-20-24-utc.jpg",
+      "hash_originale": "sha256:c689a64199c262bc0537069154c36bccebdf43b36db8e93abdd491a929bd59fe",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/wedding-guests-2026-03-09-05-20-24-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/wedding-guests-2026-03-09-05-20-24-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/wedding-guests-2026-03-09-05-20-24-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/wedding-guests-2026-03-09-05-20-24-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/wedding-guests-2026-03-09-05-20-24-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/wedding-guests-2026-03-09-05-20-24-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 10000,
+        "h": 6676,
+        "bytes": 10283856
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "cani di piccola taglia",
+          "abbigliamento per cani",
+          "cappellini",
+          "papillon",
+          "collari decorati"
+        ],
+        "ambientazione": "esterno, prato",
+        "mood": "festoso, divertente, elegante",
+        "persone_presenti": false,
+        "num_animali": 4,
+        "adatto_per": [
+          "articoli pet fashion",
+          "costumi cani",
+          "accessori decorativi",
+          "guide stile cani",
+          "social media pet",
+          "blog animali"
+        ],
+        "alt_text_it": "Quattro cani in posa su fieno indossano vestiti eleganti e cappellini colorati in un prato verde",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:32:00.540Z"
+    },
+    {
+      "slug": "training-of-puppy-rottweiler-2026-03-16-00-35-27-utc",
+      "originale": "picodg/training-of-puppy-rottweiler-2026-03-16-00-35-27-utc.jpg",
+      "hash_originale": "sha256:ecaf56e574e090cb9200f231080a7405da2e027ea81b3d2b1883132ad07c67e1",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/training-of-puppy-rottweiler-2026-03-16-00-35-27-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/training-of-puppy-rottweiler-2026-03-16-00-35-27-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/training-of-puppy-rottweiler-2026-03-16-00-35-27-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/training-of-puppy-rottweiler-2026-03-16-00-35-27-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/training-of-puppy-rottweiler-2026-03-16-00-35-27-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/training-of-puppy-rottweiler-2026-03-16-00-35-27-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 4428,
+        "h": 4956,
+        "bytes": 2889819
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "Rottweiler",
+          "cane adulto",
+          "collare",
+          "lingua fuori"
+        ],
+        "ambientazione": "esterno - sfondo sfocato naturale",
+        "mood": "felice, amichevole, fiducioso",
+        "persone_presenti": false,
+        "num_animali": 1,
+        "adatto_per": [
+          "annunci adozioni",
+          "guide razze",
+          "contenuti educativi",
+          "articoli benessere animale",
+          "profili strutture pet-friendly"
+        ],
+        "alt_text_it": "Rottweiler adulto nero e marrone con collare, lingua fuori, sguardo sereno in primo piano",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T19:32:00.729Z"
+    },
+    {
+      "slug": "dog-trainer-at-the-swimming-pool-teaching-the-dog-2026-01-07-00-36-05-utc",
+      "originale": "picodg/dog-trainer-at-the-swimming-pool-teaching-the-dog-2026-01-07-00-36-05-utc.jpg",
+      "hash_originale": "sha256:9d373d2c04d0057052639fceeb3d21119b8a758ed94af917a51db2ce96297b63",
+      "output": {
+        "thumb_webp": "app/public/img/stock/persone-pet/dog-trainer-at-the-swimming-pool-teaching-the-dog-2026-01-07-00-36-05-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/persone-pet/dog-trainer-at-the-swimming-pool-teaching-the-dog-2026-01-07-00-36-05-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/persone-pet/dog-trainer-at-the-swimming-pool-teaching-the-dog-2026-01-07-00-36-05-utc-card.webp",
+        "card_jpg": "app/public/img/stock/persone-pet/dog-trainer-at-the-swimming-pool-teaching-the-dog-2026-01-07-00-36-05-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/persone-pet/dog-trainer-at-the-swimming-pool-teaching-the-dog-2026-01-07-00-36-05-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/persone-pet/dog-trainer-at-the-swimming-pool-teaching-the-dog-2026-01-07-00-36-05-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 3872,
+        "h": 2582,
+        "bytes": 5787210
+      },
+      "classificazione": {
+        "categoria": "persone-pet",
+        "sottosoggetti": [
+          "dobermann",
+          "salvataggio acquatico",
+          "addestramento",
+          "unita cinofila"
+        ],
+        "ambientazione": "piscina di addestramento",
+        "mood": "professionale",
+        "persone_presenti": true,
+        "num_animali": 1,
+        "adatto_per": [
+          "articoli addestramento",
+          "unita cinofile acquatiche",
+          "sport con cane",
+          "articoli salvataggio"
+        ],
+        "alt_text_it": "Istruttrice addestra un Dobermann con giubbotto salvataggio in piscina",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T20:08:30.562Z"
+    },
+    {
+      "slug": "family-and-dog-enjoying-a-day-at-the-beach-2026-03-25-06-30-42-utc",
+      "originale": "picodg/family-and-dog-enjoying-a-day-at-the-beach-2026-03-25-06-30-42-utc.jpg",
+      "hash_originale": "sha256:edc21bc5a0d9bd36d7d521d50bdeab656d9a99f714d7b9acc76705205a65e2b0",
+      "output": {
+        "thumb_webp": "app/public/img/stock/persone-pet/family-and-dog-enjoying-a-day-at-the-beach-2026-03-25-06-30-42-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/persone-pet/family-and-dog-enjoying-a-day-at-the-beach-2026-03-25-06-30-42-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/persone-pet/family-and-dog-enjoying-a-day-at-the-beach-2026-03-25-06-30-42-utc-card.webp",
+        "card_jpg": "app/public/img/stock/persone-pet/family-and-dog-enjoying-a-day-at-the-beach-2026-03-25-06-30-42-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/persone-pet/family-and-dog-enjoying-a-day-at-the-beach-2026-03-25-06-30-42-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/persone-pet/family-and-dog-enjoying-a-day-at-the-beach-2026-03-25-06-30-42-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5760,
+        "h": 3840,
+        "bytes": 3128628
+      },
+      "classificazione": {
+        "categoria": "persone-pet",
+        "sottosoggetti": [
+          "spaniel nero",
+          "salvataggio acquatico",
+          "SAR",
+          "giubbotto salvataggio",
+          "spiaggia"
+        ],
+        "ambientazione": "spiaggia durante esercitazione",
+        "mood": "dinamico",
+        "persone_presenti": true,
+        "num_animali": 1,
+        "adatto_per": [
+          "articoli soccorso animale",
+          "unita cinofile SAR",
+          "cane da salvataggio",
+          "guide spiagge pet friendly"
+        ],
+        "alt_text_it": "Soccorritori in divisa corrono tra le onde con un cane da salvataggio durante un'esercitazione",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T20:08:30.565Z"
+    },
+    {
+      "slug": "group-of-happy-multinational-people-business-team-2026-03-19-07-55-36-utc",
+      "originale": "picodg/group-of-happy-multinational-people-business-team-2026-03-19-07-55-36-utc.jpg",
+      "hash_originale": "sha256:5d2fcc1dfe4d1c02b5e89761d58377e66bac0193ef1934fa8521ccb978e09d6b",
+      "output": {
+        "thumb_webp": "app/public/img/stock/persone-pet/group-of-happy-multinational-people-business-team-2026-03-19-07-55-36-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/persone-pet/group-of-happy-multinational-people-business-team-2026-03-19-07-55-36-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/persone-pet/group-of-happy-multinational-people-business-team-2026-03-19-07-55-36-utc-card.webp",
+        "card_jpg": "app/public/img/stock/persone-pet/group-of-happy-multinational-people-business-team-2026-03-19-07-55-36-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/persone-pet/group-of-happy-multinational-people-business-team-2026-03-19-07-55-36-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/persone-pet/group-of-happy-multinational-people-business-team-2026-03-19-07-55-36-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 7008,
+        "h": 4672,
+        "bytes": 20553277
+      },
+      "classificazione": {
+        "categoria": "persone-pet",
+        "sottosoggetti": [
+          "bulldog francese",
+          "ufficio",
+          "team aziendale",
+          "pet friendly workplace"
+        ],
+        "ambientazione": "interno ufficio",
+        "mood": "allegro",
+        "persone_presenti": true,
+        "num_animali": 1,
+        "adatto_per": [
+          "articoli pet in ufficio",
+          "benessere pet sul lavoro",
+          "aneddoti pet friendly",
+          "guide convivenza"
+        ],
+        "alt_text_it": "Cinque colleghi ridono accarezzando un Bulldog Francese sdraiato sul pavimento dell'ufficio",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T20:08:30.569Z"
+    },
+    {
+      "slug": "large-group-of-head-shot-dogs-looking-at-the-camer-2026-01-05-04-42-31-utc",
+      "originale": "picodg/large-group-of-head-shot-dogs-looking-at-the-camer-2026-01-05-04-42-31-utc.jpg",
+      "hash_originale": "sha256:00cb34b2305b3c404761047a2b8ab0017d6bd793d9d5bed6541a1b854f0125aa",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/large-group-of-head-shot-dogs-looking-at-the-camer-2026-01-05-04-42-31-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/large-group-of-head-shot-dogs-looking-at-the-camer-2026-01-05-04-42-31-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/large-group-of-head-shot-dogs-looking-at-the-camer-2026-01-05-04-42-31-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/large-group-of-head-shot-dogs-looking-at-the-camer-2026-01-05-04-42-31-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/large-group-of-head-shot-dogs-looking-at-the-camer-2026-01-05-04-42-31-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/large-group-of-head-shot-dogs-looking-at-the-camer-2026-01-05-04-42-31-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 11758,
+        "h": 3474,
+        "bytes": 15375163
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "razze miste",
+          "portrait",
+          "golden retriever",
+          "jack russell",
+          "bulldog",
+          "cavalier",
+          "spitz"
+        ],
+        "ambientazione": "studio fotografico sfondo viola",
+        "mood": "neutro",
+        "persone_presenti": false,
+        "num_animali": 8,
+        "adatto_per": [
+          "guide razze",
+          "quiz razza",
+          "listicle multirazza",
+          "articoli scelta razza"
+        ],
+        "alt_text_it": "Otto cani di razze diverse allineati guardano in camera su sfondo viola",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T20:08:30.572Z"
+    },
+    {
+      "slug": "lifeguard-dog-2026-01-09-01-11-12-utc",
+      "originale": "picodg/lifeguard-dog-2026-01-09-01-11-12-utc.JPG",
+      "hash_originale": "sha256:922643c6d92198bfb3ac53690abff7b63ca928e1ed4d0f6e8e67282da96a4fef",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/lifeguard-dog-2026-01-09-01-11-12-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/lifeguard-dog-2026-01-09-01-11-12-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/lifeguard-dog-2026-01-09-01-11-12-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/lifeguard-dog-2026-01-09-01-11-12-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/lifeguard-dog-2026-01-09-01-11-12-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/lifeguard-dog-2026-01-09-01-11-12-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5205,
+        "h": 3700,
+        "bytes": 9252563
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "golden retriever",
+          "cane bagnino",
+          "giubbotto salvataggio",
+          "unita cinofila acquatica"
+        ],
+        "ambientazione": "bordo piscina",
+        "mood": "sereno",
+        "persone_presenti": true,
+        "num_animali": 1,
+        "adatto_per": [
+          "articoli cane bagnino",
+          "unita cinofile acquatiche",
+          "razze golden retriever",
+          "articoli salvataggio"
+        ],
+        "alt_text_it": "Golden Retriever con giubbotto salvataggio arancione seduto a bordo piscina",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T20:08:30.574Z"
+    },
+    {
+      "slug": "lifeguard-dog-2026-01-09-01-13-09-utc",
+      "originale": "picodg/lifeguard-dog-2026-01-09-01-13-09-utc.JPG",
+      "hash_originale": "sha256:07139e99b054b075387490b5be617670bf8be7f168a5524290096530ba564061",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/lifeguard-dog-2026-01-09-01-13-09-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/lifeguard-dog-2026-01-09-01-13-09-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/lifeguard-dog-2026-01-09-01-13-09-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/lifeguard-dog-2026-01-09-01-13-09-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/lifeguard-dog-2026-01-09-01-13-09-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/lifeguard-dog-2026-01-09-01-13-09-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 4904,
+        "h": 3744,
+        "bytes": 9110094
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "golden retriever",
+          "cane bagnino",
+          "giubbotto salvataggio",
+          "squadra acquatica"
+        ],
+        "ambientazione": "bordo piscina con squadra",
+        "mood": "attento",
+        "persone_presenti": true,
+        "num_animali": 2,
+        "adatto_per": [
+          "articoli cane bagnino",
+          "unita cinofile acquatiche",
+          "razze golden retriever",
+          "squadra SAR"
+        ],
+        "alt_text_it": "Golden Retriever con giubbotto arancione in piedi a bordo piscina con la squadra",
+        "confidenza": "alta"
+      },
+      "processato_il": "2026-04-21T20:08:30.583Z"
+    }
+  ],
+  "batch_log": [
+    {
+      "data": "2026-04-21T19:31:00.427Z",
+      "tipo": "batch_iniziale",
+      "foto_aggiunte": 51
+    },
+    {
+      "data": "2026-04-21T20:08:30.583Z",
+      "tipo": "batch_rescue",
+      "foto_aggiunte": 6
+    }
+  ]
+}

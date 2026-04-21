@@ -1,0 +1,1096 @@
+{
+  "generato_il": "2026-04-21T21:17:43.314Z",
+  "totale_sorgenti": 21,
+  "totale_master_sorgente": 18,
+  "totale_singleton_bridge": 3,
+  "totale_link_proposti": 87,
+  "anchor_text_duplicati": [],
+  "piano": [
+    {
+      "source_type": "master",
+      "master_slug": "microchip-cane-obbligatorio-legge-281-costi-sanzioni-anagrafe-canina",
+      "master_title": "Microchip Cane Obbligatorio: Legge 281, Costi, Sanzioni e Anagrafe Canina",
+      "master_categoria": "salute",
+      "cluster_topic": "Adempimenti legali",
+      "links_proposti": [
+        {
+          "target_slug": "passaggio-proprieta-cane-guida-procedura-italiana",
+          "target_type": "master",
+          "target_title": "Passaggio di Proprietà del Cane: Guida Completa alla Procedura Italiana",
+          "anchor_text": "la procedura di passaggio di proprietà del cane",
+          "h2_di_inserimento": 5,
+          "contesto_pre": "del cane e del proprietario. Ogni Regione italiana gestisce la propria anagrafe, ma i dati sono interoperabili a livello nazionale. All’iscrizione, viene rilasciato un certificato che prova la regolarità. È obbligo del proprietario aggiornare i dati in caso di cambiamenti.",
+          "contesto_post": "Come si legge il microchip e cosa contiene? Il microchip si legge avvicinando un lettore RFID specifico alla spalla del cane. Il lettore emette un segnale a radiofrequenza che attiva il chip, restituendo il codice numerico a 15 cifre. Il",
+          "rationale": "Il microchip è lo strumento tecnico del passaggio di proprietà: link naturale dal paragrafo sull'Anagrafe Canina al processo formale di cessione."
+        },
+        {
+          "target_slug": "vaccinazioni-cane-calendario-completo",
+          "target_type": "master",
+          "target_title": "Vaccinazioni Cane: Calendario Completo e Linee Guida WSAVA",
+          "anchor_text": "il calendario vaccinale del cane",
+          "h2_di_inserimento": 4,
+          "contesto_pre": "ricetta veterinaria. Il veterinario compilerà il modulo ufficiale con i dati del cane (razza, sesso, data di nascita) e i dati anagrafici del proprietario. Per i cani di razza, è utile portare il pedigree, ma non è obbligatorio per l’identificazione.",
+          "contesto_post": "Come funziona l'Anagrafe Canina Regionale? L’Anagrafe Canina Regionale è un database pubblico che associa il codice del microchip ai dati del cane e del proprietario. Ogni Regione italiana gestisce la propria anagrafe, ma i dati sono interoperabili a livello nazionale.",
+          "rationale": "Microchip e vaccinazioni sono i due adempimenti base del primo anno: richiamo cross dal H2 sui documenti al libretto sanitario."
+        },
+        {
+          "target_slug": "vendere-regalare-cane-legge-italia-obblighi",
+          "target_type": "master",
+          "target_title": "Vendere o regalare il cane: guida completa alla legge italiana",
+          "anchor_text": "gli obblighi di legge per chi cede un cane",
+          "h2_di_inserimento": 7,
+          "contesto_pre": "Questi soggetti hanno l’obbligo e gli strumenti per leggere il microchip. Attraverso la consultazione dell’Anagrafe Canina, risalgono al proprietario legale per il ricongiungimento. Tenere un cane ritrovato senza denunciarne il ritrovamento alle autorità può configurarare il reato di appropriazione indebita.",
+          "contesto_post": "Ci sono differenze regionali per il microchip? La legge nazionale è uguale per tutte le regioni, ma l’organizzazione pratica può variare. Alcune regioni hanno portali online per verificare i dati o richiedere duplicati del certificato. I costi possono avere minime",
+          "rationale": "Cluster legali: chi trova un cane microchippato può risalire al vecchio proprietario tramite contratto di cessione."
+        },
+        {
+          "target_slug": "adottare-cane-canile-procedura-modulo-affido",
+          "target_type": "singleton",
+          "target_title": "Adottare un Cane da Canile: Procedura, Documenti e Modulo di Affido",
+          "anchor_text": "la procedura di adozione da canile",
+          "h2_di_inserimento": 5,
+          "contesto_pre": "del cane e del proprietario. Ogni Regione italiana gestisce la propria anagrafe, ma i dati sono interoperabili a livello nazionale. All’iscrizione, viene rilasciato un certificato che prova la regolarità. È obbligo del proprietario aggiornare i dati in caso di cambiamenti.",
+          "contesto_post": "Come si legge il microchip e cosa contiene? Il microchip si legge avvicinando un lettore RFID specifico alla spalla del cane. Il lettore emette un segnale a radiofrequenza che attiva il chip, restituendo il codice numerico a 15 cifre. Il",
+          "rationale": "L'adozione da canile prevede trasferimento microchip + iscrizione Anagrafe: completamento pratico del H2 sull'Anagrafe."
+        },
+        {
+          "target_slug": "/professionisti",
+          "target_type": "tool_page",
+          "target_title": "Professionisti pet",
+          "anchor_text": "un veterinario iscritto al registro professionale",
+          "h2_di_inserimento": 2,
+          "contesto_pre": "ai 30€. Il prezzo può cambiare leggermente tra regioni e in base alla tariffa del veterinario. La quota comprende il dispositivo sterile, l’applicazione e le pratiche burocratiche di registrazione. Non sono previsti costi annuali di rinnovo, essendo l’iscrizione a vita.",
+          "contesto_post": "Cosa rischio se il mio cane non ha il microchip? Rischi una sanzione amministrativa da 78€ a 466€, come stabilito dal Decreto 28/02/2000. In caso di controllo, le autorità (Veterinario ASL, Polizia Municipale, Carabinieri Forestali) possono elevare la multa. Il",
+          "rationale": "Il microchip lo applica solo un veterinario abilitato: CTA al tool elenco professionisti dal H2 sui costi."
+        },
+        {
+          "target_slug": "microchip-sottocutaneo-obbligatorio-guida-completa-a-funzionamento-costi-e-rischi",
+          "target_type": "singleton",
+          "target_title": "Microchip sottocutaneo obbligatorio: guida completa a funzionamento, costi e rischi",
+          "anchor_text": "aspetti medici del microchip sottocutaneo",
+          "h2_di_inserimento": 6,
+          "contesto_pre": "a radiofrequenza che attiva il chip, restituendo il codice numerico a 15 cifre. Il chip contiene solo questo codice univoco, nessun altro dato. Il codice, inserito nel portale dell’Anagrafe Canina, rivela i dati registrati del cane e del proprietario responsabile.",
+          "contesto_post": "Cosa fare se trovo un cane microchippato? Porta il cane da un veterinario, in un canile municipale o presso i Carabinieri Forestali. Questi soggetti hanno l’obbligo e gli strumenti per leggere il microchip. Attraverso la consultazione dell’Anagrafe Canina, risalgono al",
+          "rationale": "Bridge keep_separate (risolve segnalazione post-audit caso 1): H2 tecnico 'Come si legge il microchip e cosa contiene' apre al complementare sugli aspetti medici/rischi."
+        }
+      ],
+      "segnalazioni": [
+        "bridge-keep_separate applicato: 'microchip-sottocutaneo-obbligatorio-guida-completa-a-funzionamento-costi-e-rischi' mantenuto come articolo autonomo (angolo medico vs legale). Link reciproco aggiunto come link #6 del master e come entry singleton_bridge."
+      ]
+    },
+    {
+      "source_type": "master",
+      "master_slug": "vaccinazioni-cane-calendario-completo",
+      "master_title": "Vaccinazioni Cane: Calendario Completo e Linee Guida WSAVA",
+      "master_categoria": "salute",
+      "cluster_topic": "Adempimenti legali + Salute",
+      "links_proposti": [
+        {
+          "target_slug": "microchip-cane-obbligatorio-legge-281-costi-sanzioni-anagrafe-canina",
+          "target_type": "master",
+          "target_title": "Microchip Cane Obbligatorio: Legge 281, Costi, Sanzioni e Anagrafe Canina",
+          "anchor_text": "l'identificazione obbligatoria tramite microchip",
+          "h2_di_inserimento": 2,
+          "contesto_pre": "degli anticorpi materni. 6-8 settimane: Prima dose dei vaccini Core (esclusa la rabbia). 10-12 settimane: Secondo richiamo dei Core, più eventuali Non-Core. 14-16 settimane: Terzo richiamo dei Core e della rabbia. 12-16 mesi: Richiamo generale di tutti i vaccini somministrati.",
+          "contesto_post": "Quanto costa vaccinare un cane? Il costo di un vaccino Core varia tra i 50 e gli 80 euro a seduta. Il prezzo finale dipende dalla clinica veterinaria, dalla regione e dai vaccini Non-Core aggiunti. Il ciclo completo del cucciolo",
+          "rationale": "Microchip precede le vaccinazioni come primo adempimento del cucciolo: link dal H2 sul calendario iniziale."
+        },
+        {
+          "target_slug": "scegliere-primo-cucciolo-guida-cane-principianti",
+          "target_type": "master",
+          "target_title": "Come Scegliere il Primo Cucciolo: Guida Completa per Principianti",
+          "anchor_text": "guida per chi sta scegliendo il primo cucciolo",
+          "h2_di_inserimento": 2,
+          "contesto_pre": "degli anticorpi materni. 6-8 settimane: Prima dose dei vaccini Core (esclusa la rabbia). 10-12 settimane: Secondo richiamo dei Core, più eventuali Non-Core. 14-16 settimane: Terzo richiamo dei Core e della rabbia. 12-16 mesi: Richiamo generale di tutti i vaccini somministrati.",
+          "contesto_post": "Quanto costa vaccinare un cane? Il costo di un vaccino Core varia tra i 50 e gli 80 euro a seduta. Il prezzo finale dipende dalla clinica veterinaria, dalla regione e dai vaccini Non-Core aggiunti. Il ciclo completo del cucciolo",
+          "rationale": "I nuovi proprietari arrivano qui dopo l'acquisto: cross-link al cluster Educazione & Scelta."
+        },
+        {
+          "target_slug": "prima-visita-dal-veterinario-la-guida-completa-per-accogliere-il-tuo-cucciolo",
+          "target_type": "singleton",
+          "target_title": "Prima Visita dal Veterinario: La Guida Completa per Accogliere il Tuo Cucciolo",
+          "anchor_text": "la prima visita veterinaria del cucciolo",
+          "h2_di_inserimento": 5,
+          "contesto_pre": "che il cane sia più tranquillo il giorno della vaccinazione. Chiama il veterinario immediatamente se noti: vomito o diarrea intensi, difficoltà respiratorie, gonfiore al muso o orticaria. Questi segni, seppur rari, possono indicare una reazione allergica che richiede intervento urgente.",
+          "contesto_post": "Quando chiamare il veterinario dopo il vaccino? Chiama subito se osservi sintomi allarmanti come difficoltà di respiro, gonfiore marcato del muso o stordimento profondo. Queste reazioni di solito compaiono entro poche ore dalla somministrazione. Contatta il veterinario entro 24 ore",
+          "rationale": "Le reazioni vaccinali vanno gestite dal veterinario: rinforzo al singleton 'prima visita' (top match score 7)."
+        },
+        {
+          "target_slug": "/professionisti",
+          "target_type": "tool_page",
+          "target_title": "Professionisti pet",
+          "anchor_text": "trovare un veterinario di fiducia vicino a te",
+          "h2_di_inserimento": 3,
+          "contesto_pre": "completo del cucciolo su più sedute ha quindi un costo totale che può oscillare tra 150 e 250 euro. Alcuni ambulatori offrono pacchetti puppy che includono visite, vaccini e sverminazioni. Richiedere un preventivo scritto è sempre la scelta più trasparente.",
+          "contesto_post": "Cosa rischio se non vaccino il mio cane? Rischi di esporre il cane a malattie gravi, spesso fatali, come il cimurro o la parvovirosi. Senza vaccinazione, il tuo animale non avrà immunità e sarà vulnerabile al primo contagio. Inoltre, metti",
+          "rationale": "Paragrafo sui costi deve convertire: link al tool che mappa veterinari per zona."
+        },
+        {
+          "target_slug": "/costo-cane",
+          "target_type": "tool_page",
+          "target_title": "Calcolatore costo cane",
+          "anchor_text": "quanto costa mantenere un cane in un anno",
+          "h2_di_inserimento": 3,
+          "contesto_pre": "completo del cucciolo su più sedute ha quindi un costo totale che può oscillare tra 150 e 250 euro. Alcuni ambulatori offrono pacchetti puppy che includono visite, vaccini e sverminazioni. Richiedere un preventivo scritto è sempre la scelta più trasparente.",
+          "contesto_post": "Cosa rischio se non vaccino il mio cane? Rischi di esporre il cane a malattie gravi, spesso fatali, come il cimurro o la parvovirosi. Senza vaccinazione, il tuo animale non avrà immunità e sarà vulnerabile al primo contagio. Inoltre, metti",
+          "rationale": "Il costo vaccini è parte del budget annuo: funnel verso il calcolatore (conversion driver)."
+        }
+      ],
+      "segnalazioni": []
+    },
+    {
+      "source_type": "master",
+      "master_slug": "vendere-regalare-cane-legge-italia-obblighi",
+      "master_title": "Vendere o regalare il cane: guida completa alla legge italiana",
+      "master_categoria": "guide",
+      "cluster_topic": "Adempimenti legali",
+      "links_proposti": [
+        {
+          "target_slug": "passaggio-proprieta-cane-guida-procedura-italiana",
+          "target_type": "master",
+          "target_title": "Passaggio di Proprietà del Cane: Guida Completa alla Procedura Italiana",
+          "anchor_text": "la procedura formale di passaggio di proprietà",
+          "h2_di_inserimento": 3,
+          "contesto_pre": "nascita, il sesso e il colore del mantello. È fondamentale inserire una dichiarazione sullo stato di salute, sulle vaccinazioni effettuate e su eventuali trattamenti in corso. La firma di entrambe le parti rende il contratto valido e opponibile a terzi.",
+          "contesto_post": "Quanto costa trasferire un cane all'Anagrafe Canina? Il costo per l'aggiornamento dei dati anagrafici del cane presso la banca dati regionale è generalmente compreso tra 10 e 30 euro. Questa spesa è a carico del nuovo proprietario e viene pagata",
+          "rationale": "Naturale deep-dive: il contratto di cessione è il documento che innesca il passaggio di proprietà."
+        },
+        {
+          "target_slug": "microchip-cane-obbligatorio-legge-281-costi-sanzioni-anagrafe-canina",
+          "target_type": "master",
+          "target_title": "Microchip Cane Obbligatorio: Legge 281, Costi, Sanzioni e Anagrafe Canina",
+          "anchor_text": "registrare il microchip al nuovo proprietario",
+          "h2_di_inserimento": 6,
+          "contesto_pre": "aggiornata e la proprietà risulta formalmente trasferita. Riceverai una conferma dell'avvenuta registrazione. Conservala insieme al contratto di cessione. Senza questo passaggio, in caso di fuga o controllo, il cane risulterà ancora a tuo nome con tutte le responsabilità del caso.",
+          "contesto_post": "Il cane regalato può essere ripreso indietro? No, la cessione a titolo gratuito (donazione) è un contratto irrevocabile, salvo casi eccezionali previsti dal Codice Civile. Una volta firmato il contratto e trasferito l'animale, il donante non ha più diritto di",
+          "rationale": "Il H2 sul cambio di intestatario del microchip è il punto esatto dove approfondire con la guida microchip."
+        },
+        {
+          "target_slug": "vaccinazioni-cane-calendario-completo",
+          "target_type": "master",
+          "target_title": "Vaccinazioni Cane: Calendario Completo e Linee Guida WSAVA",
+          "anchor_text": "il libretto sanitario con le vaccinazioni",
+          "h2_di_inserimento": 8,
+          "contesto_pre": "distinzione di età. I cuccioli possono essere ceduti solo dopo i 60 giorni di vita e devono essere già microchippati e iscritti all'anagrafe prima della consegna al nuovo proprietario. Scopri altre guide e consigli su MifidoDiTe.eu, il magazine pet d'Italia.",
+          "contesto_post": "(fine articolo)",
+          "rationale": "Il libretto sanitario è parte della cessione: link dal H2 dedicato al calendario vaccinale completo."
+        },
+        {
+          "target_slug": "adottare-cane-canile-procedura-modulo-affido",
+          "target_type": "singleton",
+          "target_title": "Adottare un Cane da Canile: Procedura, Documenti e Modulo di Affido",
+          "anchor_text": "l'adozione da canile come scelta etica",
+          "h2_di_inserimento": 2,
+          "contesto_pre": "deve contenere i dati anagrafici di cedente e cessionario, i dati identificativi del cane e le sue condizioni di salute. Deve inoltre dichiarare l'assenza di vizi redibitori, ovvero di malattie gravi o problemi comportamentali non dichiarati al momento della cessione.",
+          "contesto_post": "Cosa deve contenere il contratto di cessione del cane? Il contratto di cessione deve contenere dati precisi su tutte le parti coinvolte e sull'animale. È un documento vincolante che serve a prevenire controversie e a garantire il benessere del cane",
+          "rationale": "Alternative alla vendita/regalo tra privati: apertura editoriale al singleton sull'adozione."
+        },
+        {
+          "target_slug": "/professionisti",
+          "target_type": "tool_page",
+          "target_title": "Professionisti pet",
+          "anchor_text": "il veterinario come testimone della cessione",
+          "h2_di_inserimento": 3,
+          "contesto_pre": "nascita, il sesso e il colore del mantello. È fondamentale inserire una dichiarazione sullo stato di salute, sulle vaccinazioni effettuate e su eventuali trattamenti in corso. La firma di entrambe le parti rende il contratto valido e opponibile a terzi.",
+          "contesto_post": "Quanto costa trasferire un cane all'Anagrafe Canina? Il costo per l'aggiornamento dei dati anagrafici del cane presso la banca dati regionale è generalmente compreso tra 10 e 30 euro. Questa spesa è a carico del nuovo proprietario e viene pagata",
+          "rationale": "Il contratto di cessione può essere controfirmato dal veterinario: link al tool elenco vet."
+        }
+      ],
+      "segnalazioni": []
+    },
+    {
+      "source_type": "master",
+      "master_slug": "passaggio-proprieta-cane-guida-procedura-italiana",
+      "master_title": "Passaggio di Proprietà del Cane: Guida Completa alla Procedura Italiana",
+      "master_categoria": "guide",
+      "cluster_topic": "Adempimenti legali",
+      "links_proposti": [
+        {
+          "target_slug": "microchip-cane-obbligatorio-legge-281-costi-sanzioni-anagrafe-canina",
+          "target_type": "master",
+          "target_title": "Microchip Cane Obbligatorio: Legge 281, Costi, Sanzioni e Anagrafe Canina",
+          "anchor_text": "i dettagli sul microchip obbligatorio per legge",
+          "h2_di_inserimento": 10,
+          "contesto_pre": "è una procedura semplice, poco invasiva e praticamente indolore. Il costo varia da 30 a 50 euro. Una volta inserito, il numero del microchip deve essere registrato nell'anagrafe canina regionale e deve corrispondere ai dati forniti nel modulo di cessione.",
+          "contesto_post": "Cosa Fare Se... ...Il Cane non Ha il Microchip Contatta immediatamente il tuo veterinario e procedi all'inserimento prima di completare il passaggio di proprietà. Non è possibile registrare un cane in anagrafe senza microchip. Una volta inserito, attendi qualche giorno",
+          "rationale": "H2 'Microchip: Inserimento e Registrazione' è il pitch perfetto per il master microchip."
+        },
+        {
+          "target_slug": "vendere-regalare-cane-legge-italia-obblighi",
+          "target_type": "master",
+          "target_title": "Vendere o regalare il cane: guida completa alla legge italiana",
+          "anchor_text": "i vincoli legali della cessione tra privati",
+          "h2_di_inserimento": 2,
+          "contesto_pre": "Adozione in Rifugio o Associazione Le strutture che affidano cani a scopo di adozione devono garantire il corretto passaggio di proprietà. La maggior parte dei rifugi gestisce direttamente la procedura, ma è importante verificare che tutto sia stato completato correttamente.",
+          "contesto_post": "Documenti Necessari per il Passaggio di Proprietà Prima di recarti presso l'ASL o di procedere online, assicurati di avere in mano tutti i seguenti documenti: Codice fiscale del cedente (il proprietario precedente) Codice fiscale del nuovo proprietario (chi riceve il",
+          "rationale": "H2 'Quando Scatta l'Obbligo di Passaggio': link diretto al master cessione per capire i casi concreti."
+        },
+        {
+          "target_slug": "adottare-cane-canile-procedura-modulo-affido",
+          "target_type": "singleton",
+          "target_title": "Adottare un Cane da Canile: Procedura, Documenti e Modulo di Affido",
+          "anchor_text": "l'iter dell'adozione da canile rispetto alla cessione privata",
+          "h2_di_inserimento": 3,
+          "contesto_pre": "di identità valido per entrambi i proprietari Il microchip è particolarmente importante: ogni cane deve essere dotato di microchip registrato in anagrafe. Se il tuo cane non ne ha uno, dovrai farlo inserire prima di procedere al passaggio di proprietà.",
+          "contesto_post": "Il Modulo di Cessione: Dove Ottenerlo e Come Compilarlo Il modulo di cessione è il documento centrale della procedura. Puoi ottenerlo da diverse fonti: Direttamente presso l' ASL (Azienda Sanitaria Locale) della tua regione Dal tuo veterinario privato , che",
+          "rationale": "H2 documenti: aprire al caso specifico adozione rispetto alla cessione tra privati."
+        },
+        {
+          "target_slug": "passaggio-proprieta-gatto-anagrafe-felina",
+          "target_type": "singleton",
+          "target_title": "Passaggio di Proprietà del Gatto: Guida Completa all'Anagrafe Felina",
+          "anchor_text": "la procedura analoga per i gatti con l'Anagrafe Felina",
+          "h2_di_inserimento": 11,
+          "contesto_pre": "adottarlo, rivolgiti al rifugio o all'ASL della tua zona. Loro gestiranno la procedura di adozione ufficiale e garantiranno il corretto trasferimento di proprietà. Non tentare di procedere autonomamente, in quanto il cane potrebbe essere ancora registrato a un proprietario precedente.",
+          "contesto_post": "Domande Frequenti (FAQ) Quanto Tempo Occorre per Completare il Passaggio di Proprietà? Se procedi online, il passaggio può essere completato in pochi minuti. L'effettiva registrazione nel sistema può richiedere da 1 a 3 giorni lavorativi. Se ti rechi presso l'ASL,",
+          "rationale": "Falso positivo audit (topic gatto, non cane) ma cross-reference legittimo: link verso articolo gemello per i felini."
+        },
+        {
+          "target_slug": "/professionisti",
+          "target_type": "tool_page",
+          "target_title": "Professionisti pet",
+          "anchor_text": "i veterinari abilitati alla registrazione",
+          "h2_di_inserimento": 8,
+          "contesto_pre": "sono leggermente più lunghi, e potrebbe essere necessario attendere una coda, ma il personale sarà disponibile per chiarire eventuali dubbi. Questa opzione è preferibile se hai dubbi sulla compilazione dei moduli o se non hai dimestichezza con gli strumenti digitali.",
+          "contesto_post": "Caso Particolare: Passaggio di Proprietà per Eredità Nel caso in cui un cane passi di proprietà a causa del decesso del proprietario originale, la procedura è leggermente diversa. L'erede deve comunicare il nuovo assetto di proprietà all'anagrafe canina, generalmente accompagnato",
+          "rationale": "H2 'Procedura Online vs ASL Fisica': il vet è alternativa per registrazione microchip, link al tool."
+        }
+      ],
+      "segnalazioni": []
+    },
+    {
+      "source_type": "master",
+      "master_slug": "trasporto-cani-auto-art-169-codice-strada",
+      "master_title": "Trasporto cani in auto: obblighi legali e sanzioni secondo Art. 169 CDS",
+      "master_categoria": "guide",
+      "cluster_topic": "Adempimenti legali + Viaggi",
+      "links_proposti": [
+        {
+          "target_slug": "cani-autostrada-vacanza-regole-codice-strada",
+          "target_type": "master",
+          "target_title": "Cani in Autostrada e Vacanza: Regole, Documenti e Traghetti",
+          "anchor_text": "le regole specifiche per l'autostrada e i traghetti",
+          "h2_di_inserimento": 6,
+          "contesto_pre": "C'è un'eccezione per i cuccioli? No, non ci sono eccezioni per l'età. I cuccioli, anzi, sono più fragili e imprevedibili. Devono viaggiare in un trasportino sicuro e ben ventilato. Scopri altre guide e consigli su MifidoDiTe.eu, il magazine pet d'Italia.",
+          "contesto_post": "(fine articolo)",
+          "rationale": "Naturale continuazione cluster viaggi: dal generale (art. 169) al caso specifico autostrada/traghetti."
+        },
+        {
+          "target_slug": "trasporto-gatti-auto-sicurezza-codice-strada-consigli",
+          "target_type": "master",
+          "target_title": "Trasporto gatti in auto: guida sicura, obblighi legali e consigli pratici",
+          "anchor_text": "le stesse regole applicate al trasporto del gatto",
+          "h2_di_inserimento": 1,
+          "contesto_pre": "con il divisorio. Cintura di sicurezza per cani: è una cintura a doppio aggancio che si collega alla pettorina e all'allacciatura dell'auto. Divisorio rigido o rete di separazione: isola il bagagliaio dall'abitacolo, ed è ideale per cani di taglia grande.",
+          "contesto_post": "Quanto costa la multa per cane non assicurato in auto? La sanzione amministrativa per il trasporto di animali non correttamente assicurati è precisa. L'importo va da un minimo di 84 euro a un massimo di 335 euro. La somma esatta",
+          "rationale": "H2 sistemi di ritenuta: cross-specie, rimando all'articolo parallelo gatti per completezza."
+        },
+        {
+          "target_slug": "microchip-cane-obbligatorio-legge-281-costi-sanzioni-anagrafe-canina",
+          "target_type": "master",
+          "target_title": "Microchip Cane Obbligatorio: Legge 281, Costi, Sanzioni e Anagrafe Canina",
+          "anchor_text": "identificazione obbligatoria del cane",
+          "h2_di_inserimento": 3,
+          "contesto_pre": "immediatamente. Il pericolo maggiore, però, non è la multa. In caso di incidente, un cane libero diventa un proiettile. Può ferirsi mortalmente e ferire gravemente i passeggeri. La tua assicurazione RC Auto potrebbe anche rivalersi su di te per negligenza.",
+          "contesto_post": "Come scegliere il trasportino giusto per l'auto? Scegli un trasportino robusto e della misura corretta: il cane deve potersi alzare e girare su se stesso. Per la macchina, i modelli migliori sono quelli omologati per il trasporto in auto. Controlla",
+          "rationale": "In caso di incidente il cane va identificato: link al master microchip dal H2 sulle distrazioni in guida."
+        },
+        {
+          "target_slug": "/vacanze",
+          "target_type": "tool_page",
+          "target_title": "Vacanze con il cane",
+          "anchor_text": "strutture pet-friendly dove soggiornare",
+          "h2_di_inserimento": 6,
+          "contesto_pre": "C'è un'eccezione per i cuccioli? No, non ci sono eccezioni per l'età. I cuccioli, anzi, sono più fragili e imprevedibili. Devono viaggiare in un trasportino sicuro e ben ventilato. Scopri altre guide e consigli su MifidoDiTe.eu, il magazine pet d'Italia.",
+          "contesto_post": "(fine articolo)",
+          "rationale": "CTA di conversione dal paragrafo conclusivo sull'articolo 169 verso il motore di ricerca strutture."
+        },
+        {
+          "target_slug": "/spiagge",
+          "target_type": "tool_page",
+          "target_title": "Spiagge dog-friendly",
+          "anchor_text": "le spiagge dog-friendly d'Italia",
+          "h2_di_inserimento": 6,
+          "contesto_pre": "C'è un'eccezione per i cuccioli? No, non ci sono eccezioni per l'età. I cuccioli, anzi, sono più fragili e imprevedibili. Devono viaggiare in un trasportino sicuro e ben ventilato. Scopri altre guide e consigli su MifidoDiTe.eu, il magazine pet d'Italia.",
+          "contesto_post": "(fine articolo)",
+          "rationale": "Chi studia le regole per viaggiare cerca anche destinazioni: secondo CTA verso /spiagge."
+        }
+      ],
+      "segnalazioni": []
+    },
+    {
+      "source_type": "master",
+      "master_slug": "trasporto-gatti-auto-sicurezza-codice-strada-consigli",
+      "master_title": "Trasporto gatti in auto: guida sicura, obblighi legali e consigli pratici",
+      "master_categoria": "gatti",
+      "cluster_topic": "Adempimenti legali + Viaggi (gatti)",
+      "links_proposti": [
+        {
+          "target_slug": "trasporto-cani-auto-art-169-codice-strada",
+          "target_type": "master",
+          "target_title": "Trasporto cani in auto: obblighi legali e sanzioni secondo Art. 169 CDS",
+          "anchor_text": "le regole del Codice della Strada applicate ai cani",
+          "h2_di_inserimento": 1,
+          "contesto_pre": "che impediscano la fuga e limitino i movimenti, per non distrarre il conducente. La sanzione per la violazione va da 84 a 335 euro, ma la multa base per il mancato uso dei dispositivi di ritenuta è di 87 euro.",
+          "contesto_post": "Cosa rischio se viaggio con il gatto libero in auto? Rischi una multa da 87 euro per la violazione dell'Articolo 169, ma il pericolo maggiore è per l'incolumità di tutti. Un gatto libero può infilarsi sotto i pedali, bloccare la",
+          "rationale": "Cross-specie: stesso impianto normativo (art. 169), link all'articolo parallelo per i cani."
+        },
+        {
+          "target_slug": "razze-gatti-italiane-siamese-foreste-sokoke",
+          "target_type": "master",
+          "target_title": "Razze di Gatti Italiane: Siamese, Foreste e Sokoke",
+          "anchor_text": "le razze feline italiane e le loro caratteristiche",
+          "h2_di_inserimento": 4,
+          "contesto_pre": "alcuni giorni, fai brevi sessioni di chiusura. Successivamente, porta il gatto nel trasportino in auto da ferma, poi accendi il motore, infine fai viaggi brevissimi (pochi minuti) aumentando gradualmente la durata. La pazienza è fondamentale per ridurre l'ansia da viaggio.",
+          "contesto_post": "Cosa mettere nella valigetta veterinaria per il viaggio? Nella valigetta non devono mancare: il libretto delle vaccinazioni e il passaporto europeo (per l'estero), una scorta di cibo e acqua abituale, le medicine di cui il gatto ha bisogno, una coperta",
+          "rationale": "H2 su come abituare il gatto al viaggio: le razze italiane (Siamese, Sokoke) hanno tempismi diversi di adattamento."
+        },
+        {
+          "target_slug": "perche-gatti-fanno-fusa-benefici-salute",
+          "target_type": "master",
+          "target_title": "Perché i gatti fanno le fusa? Scoperte scientifiche e benefici",
+          "anchor_text": "i segnali di benessere del gatto",
+          "h2_di_inserimento": 6,
+          "contesto_pre": "Per il mal d'auto, caratterizzato da vocalizzi, agitazione, salivazione eccessiva o vomito, consulta il veterinario. Potrà prescrivere farmaci anti-nausea o consigliare integratori naturali a base di triptofano o Zylkene. Evita di dare da mangiare nelle 3-4 ore prima della partenza.",
+          "contesto_post": "Quali sono i consigli per un viaggio lungo con il gatto? Pianifica il percorso individuando aree di sosta tranquille. Programma una pausa ogni 2-3 ore, offrendo acqua senza forzare. Non aprire mai il trasportino in un'area non sicura. In hotel,",
+          "rationale": "H2 su mal d'auto e stress: le fusa sono segnale di rilassamento o al contrario di autoconsolazione."
+        },
+        {
+          "target_slug": "/professionisti",
+          "target_type": "tool_page",
+          "target_title": "Professionisti pet",
+          "anchor_text": "un veterinario comportamentalista",
+          "h2_di_inserimento": 6,
+          "contesto_pre": "Per il mal d'auto, caratterizzato da vocalizzi, agitazione, salivazione eccessiva o vomito, consulta il veterinario. Potrà prescrivere farmaci anti-nausea o consigliare integratori naturali a base di triptofano o Zylkene. Evita di dare da mangiare nelle 3-4 ore prima della partenza.",
+          "contesto_post": "Quali sono i consigli per un viaggio lungo con il gatto? Pianifica il percorso individuando aree di sosta tranquille. Programma una pausa ogni 2-3 ore, offrendo acqua senza forzare. Non aprire mai il trasportino in un'area non sicura. In hotel,",
+          "rationale": "Per gatti che soffrono molto il viaggio serve il vet comportamentalista: CTA al tool."
+        }
+      ],
+      "segnalazioni": []
+    },
+    {
+      "source_type": "master",
+      "master_slug": "cani-autostrada-vacanza-regole-codice-strada",
+      "master_title": "Cani in Autostrada e Vacanza: Regole, Documenti e Traghetti",
+      "master_categoria": "viaggi",
+      "cluster_topic": "Viaggi + Adempimenti legali",
+      "links_proposti": [
+        {
+          "target_slug": "trasporto-cani-auto-art-169-codice-strada",
+          "target_type": "master",
+          "target_title": "Trasporto cani in auto: obblighi legali e sanzioni secondo Art. 169 CDS",
+          "anchor_text": "cosa prescrive l'articolo 169 per i cani in auto",
+          "h2_di_inserimento": 2,
+          "contesto_pre": "approvati sono principalmente tre: trasportino rigido o morbido, adatto alla taglia; cintura di sicurezza con pettorina a \"H\" o \"Y\"; e recinto divisorio per il vano di carico. Scegliete l'opzione più comoda per la taglia e l'abitudine del vostro cane.",
+          "contesto_post": "Cosa rischio se viaggio con il cane libero in auto? Rischiate una multa da 80 a 323 euro, come previsto dall'articolo 169 del CdS. Il rischio maggiore, però, è la sicurezza. Un cane libero può distrarre il guidatore, ostruire i",
+          "rationale": "L'autostrada applica l'art. 169 come base: link al master normativo dal H2 sul trasporto in sicurezza."
+        },
+        {
+          "target_slug": "vaccinazioni-cane-calendario-completo",
+          "target_type": "master",
+          "target_title": "Vaccinazioni Cane: Calendario Completo e Linee Guida WSAVA",
+          "anchor_text": "il libretto sanitario aggiornato con tutti i vaccini",
+          "h2_di_inserimento": 7,
+          "contesto_pre": "Sì, molte compagnie offrono polizze viaggio che coprono spese veterinarie all'estero, furto o smarrimento dell'animale, e anche danni a terzi causati dal cane. È un'ottima idea per viaggiare sereni. Scopri altre guide e consigli su MifidoDiTe.eu, il magazine pet d'Italia.",
+          "contesto_post": "(fine articolo)",
+          "rationale": "H2 'Quando chiamare il veterinario prima di un viaggio' è il punto naturale per richiamare il master vaccini."
+        },
+        {
+          "target_slug": "/vacanze",
+          "target_type": "tool_page",
+          "target_title": "Vacanze con il cane",
+          "anchor_text": "dove dormire con il cane in Italia",
+          "h2_di_inserimento": 6,
+          "contesto_pre": "non viaggiano in cabina, è obbligatorio un kennel robusto e ben ventilato. Molte compagnie impongono anche che il cane abbia effettuato un trattamento antiparassitario recente. Portate con voi copia della prenotazione e la conferma del pagamento per la tariffa animale.",
+          "contesto_post": "Quando chiamare il veterinario prima di un viaggio? È consigliabile una visita se il cane è anziano, ha patologie croniche o se mostrate ansia da viaggio. Il veterinario può verificare lo stato di salute, consigliare eventuali farmaci per la cinetosi",
+          "rationale": "Dopo aver capito come arrivarci: CTA al motore strutture. Cluster viaggi deve sempre linkare pagine prodotto."
+        },
+        {
+          "target_slug": "/spiagge",
+          "target_type": "tool_page",
+          "target_title": "Spiagge dog-friendly",
+          "anchor_text": "le spiagge libere dove il cane è benvenuto",
+          "h2_di_inserimento": 6,
+          "contesto_pre": "non viaggiano in cabina, è obbligatorio un kennel robusto e ben ventilato. Molte compagnie impongono anche che il cane abbia effettuato un trattamento antiparassitario recente. Portate con voi copia della prenotazione e la conferma del pagamento per la tariffa animale.",
+          "contesto_post": "Quando chiamare il veterinario prima di un viaggio? È consigliabile una visita se il cane è anziano, ha patologie croniche o se mostrate ansia da viaggio. Il veterinario può verificare lo stato di salute, consigliare eventuali farmaci per la cinetosi",
+          "rationale": "Destinazione più cercata in estate: CTA diretto da articolo autostrada-vacanza."
+        },
+        {
+          "target_slug": "/sentieri",
+          "target_type": "tool_page",
+          "target_title": "Sentieri per cani",
+          "anchor_text": "i sentieri escursionistici dog-friendly",
+          "h2_di_inserimento": 6,
+          "contesto_pre": "non viaggiano in cabina, è obbligatorio un kennel robusto e ben ventilato. Molte compagnie impongono anche che il cane abbia effettuato un trattamento antiparassitario recente. Portate con voi copia della prenotazione e la conferma del pagamento per la tariffa animale.",
+          "contesto_post": "Quando chiamare il veterinario prima di un viaggio? È consigliabile una visita se il cane è anziano, ha patologie croniche o se mostrate ansia da viaggio. Il veterinario può verificare lo stato di salute, consigliare eventuali farmaci per la cinetosi",
+          "rationale": "Alternativa mare: chi viaggia col cane cerca anche escursioni. Terzo CTA verso pagine tool."
+        }
+      ],
+      "segnalazioni": []
+    },
+    {
+      "source_type": "master",
+      "master_slug": "pastore-caucaso-cane-guerra-russo",
+      "master_title": "Pastore del Caucaso: il cane da guerra dell'esercito russo",
+      "master_categoria": "curiosita",
+      "cluster_topic": "Cani eroi/militari",
+      "links_proposti": [
+        {
+          "target_slug": "pastore-tedesco-esercito-polizia-addestramento",
+          "target_type": "master",
+          "target_title": "Pastore Tedesco nelle forze armate: da Rin Tin Tin ai cani anti-IED",
+          "anchor_text": "il Pastore Tedesco nelle forze armate occidentali",
+          "h2_di_inserimento": 3,
+          "contesto_pre": "addestrati a inseguire i fuggitivi senza pietà. Un fatto poco noto: durante la Guerra Fredda, più persone furono fermate dai cani che da qualsiasi altro mezzo. Non esistono statistiche ufficiali, ma i dossier desecretati suggeriscono migliaia di casi ogni anno.",
+          "contesto_post": "Come riconoscere un vero Pastore del Caucaso Non tutti i Pastori del Caucaso sono \"cani da guerra\". Oggi la razza è divisa in due varietà molto diverse: La linea da guerra (Volkodav) Questi cani, ancora utilizzati da eserciti, servizi segreti",
+          "rationale": "H2 sul Patto di Varsavia apre il parallelo Est vs Ovest: link naturale al Pastore Tedesco."
+        },
+        {
+          "target_slug": "malinois-belga-navy-seal-cani",
+          "target_type": "master",
+          "target_title": "Malinois Belga: il cane eroe del raid a Bin Laden",
+          "anchor_text": "il Malinois Belga dei Navy SEAL",
+          "h2_di_inserimento": 5,
+          "contesto_pre": "sé questi cani come guardie personali. Nel 2018, è stata documentata una rissa in un lussuoso hotel di Monaco in cui i Pastori del Caucaso di due oligarchi si scontrarono in una suite — il costo dei danni: 400.000 euro.",
+          "contesto_post": "Storie di lealtà estrema (e terrore) Il caso di Vladislav: Nel 2003, il generale russo Vladislav aveva un Pastore del Caucaso di nome Titan. Durante un tentativo di furto nella sua dacha (villa) nei sobborghi di Mosca, Titan attaccò il",
+          "rationale": "H2 'situazione oggi': dal cane da guerra sovietico alle unità elite occidentali moderne."
+        },
+        {
+          "target_slug": "cani-spazio-laika-belka-strelova-storia",
+          "target_type": "singleton",
+          "target_title": "I Cani dello Spazio: Laika, Belka e Strelova della Storia Sovietica",
+          "anchor_text": "le imprese spaziali dei cani sovietici Laika e Belka",
+          "h2_di_inserimento": 1,
+          "contesto_pre": "dell'epoca. Gli allevatori sovietici incrociarono i Pastori del Caucaso con altre razze per aumentarne l'aggressività, la massa muscolare e l'indipendenza nel prendere decisioni. Non volevano cani obbedienti come i pastore tedeschi — volevano macchine da combattimento che potessero agire autonomamente.",
+          "contesto_post": "Il cane dei gulag: storie che fanno rabbrividire I documenti declassificati (alcuni ancora parzialmente censurati) mostrano che il KGB utilizzava Pastori del Caucaso per controllare i campi di lavoro forzato. Un cane poteva sostituire quattro guardie armate — e non",
+          "rationale": "H2 origini sovietiche: altra pagina gloriosa della storia dei cani nell'URSS."
+        },
+        {
+          "target_slug": "razze-cani-italiani-enci-caratteristiche-storia-esigenze",
+          "target_type": "singleton",
+          "target_title": "Razze di cani italiani ENCI: caratteristiche, storia e esigenze delle 10 autoctone",
+          "anchor_text": "le razze canine italiane riconosciute dall'ENCI",
+          "h2_di_inserimento": 4,
+          "contesto_pre": "più docile, selezionata per la convivenza domestica. Questi cani mantengono l'istinto di guardia ma sono potenzialmente controllabili da proprietari esperti. Tuttavia, anche la linea civile rimane una razza pericolosa. Non è adatta a famiglie con bambini o a proprietari inesperti.",
+          "contesto_post": "La situazione oggi: il Caucaso dopo il crollo dell'URSS Con la caduta dell'Unione Sovietica nel 1991, molti Pastori del Caucaso addestrati militarmente scomparvero dai registri ufficiali. Alcuni furono adottati da uomini d'affari russi e oligarchi che cercavano cani da guardia",
+          "rationale": "H2 'Come riconoscere un vero Pastore del Caucaso': parallelismo con le razze autoctone italiane, stesso angolo standard/pedigree."
+        }
+      ],
+      "segnalazioni": []
+    },
+    {
+      "source_type": "master",
+      "master_slug": "pastore-tedesco-esercito-polizia-addestramento",
+      "master_title": "Pastore Tedesco nelle forze armate: da Rin Tin Tin ai cani anti-IED",
+      "master_categoria": "curiosita",
+      "cluster_topic": "Cani eroi/militari",
+      "links_proposti": [
+        {
+          "target_slug": "malinois-belga-navy-seal-cani",
+          "target_type": "master",
+          "target_title": "Malinois Belga: il cane eroe del raid a Bin Laden",
+          "anchor_text": "il Malinois Belga che lo ha sostituito nelle operazioni speciali",
+          "h2_di_inserimento": 4,
+          "contesto_pre": "guerra in Afghanistan, i cani militari hanno rilevato esplosivi che avrebbero potuto uccidere migliaia di soldati e civili. È impossibile quantificare esattamente, ma gli esperti stimano che ogni cane anti-IED abbia salvato almeno 50-150 vite nel corso della sua carriera.",
+          "contesto_post": "Cosa Succede Dopo? Il Pensionamento dei Nostri Eroi Una delle domande più importanti è: cosa succede a questi cani quando non possono più servire? Per molti anni, la risposta era deprimente. I cani militari venivano semplicemente soppressi o ceduti a",
+          "rationale": "H2 Anti-IED Afghanistan: naturale handoff al successore moderno del Pastore Tedesco nei reparti elite."
+        },
+        {
+          "target_slug": "pastore-caucaso-cane-guerra-russo",
+          "target_type": "master",
+          "target_title": "Pastore del Caucaso: il cane da guerra dell'esercito russo",
+          "anchor_text": "il cane da guerra sovietico Pastore del Caucaso",
+          "h2_di_inserimento": 2,
+          "contesto_pre": "chilometri in condizioni difficili senza stancarsi facilmente. Fedeltà e legame con il padrone: Questa razza forma un legame intenso con il proprio conduttore. Secondo gli addestratori militari, un Pastore Tedesco seguirà il suo soldato fino alla fine del mondo, letteralmente.",
+          "contesto_post": "Come Vengono Addestrati? Dal Cucciolo al Soldato L'addestramento di un cane militare non è uno scherzo. Negli Stati Uniti, la maggior parte dei cani militari proviene dalla scuola MWD (Military Working Dog) dell'Esercito Americano a Lackland, Texas, dove ricevono addestramento",
+          "rationale": "H2 sui numeri: contestualizza con la contro-parte sovietica nella stessa epoca."
+        },
+        {
+          "target_slug": "le-5-razze-migliori-come-cani-guida-labrador-golden-pastore-tedesco-e-altre",
+          "target_type": "singleton",
+          "target_title": "Le 5 razze migliori come cani guida: Labrador, Golden, Pastore Tedesco e altre",
+          "anchor_text": "il Pastore Tedesco nel mondo dei cani guida",
+          "h2_di_inserimento": 5,
+          "contesto_pre": "bin Laden nel 2011 in Pakistan, dimostrano il legame speciale che si forma tra cane e conduttore. Cairo fu adottato dal suo handler e visse una vita tranquilla e meritata in una casa privata fino alla sua morte nel 2015.",
+          "contesto_post": "La Razza Più Versatile del Mondo Militare Non è solo l'Esercito Americano a fare affidamento sui Pastori Tedeschi. In tutto il mondo, questa razza è la prima scelta: Bundeswehr (Germania): Più di 800 Pastori Tedeschi in servizio attivo Esercito Britannico:",
+          "rationale": "H2 'Pensionamento dei Nostri Eroi': dopo la carriera militare molti PT vanno a servire come cani guida."
+        },
+        {
+          "target_slug": "cani-spazio-laika-belka-strelova-storia",
+          "target_type": "singleton",
+          "target_title": "I Cani dello Spazio: Laika, Belka e Strelova della Storia Sovietica",
+          "anchor_text": "dalla trincea allo spazio: altri cani nella storia militare-scientifica",
+          "h2_di_inserimento": 1,
+          "contesto_pre": "militari del suo beniamino: molti dei film di Rin Tin Tin raccontavano storie di coraggio e servizio nelle forze armate. In un certo senso, il cane stava raccontando al mondo intero perché i Pastori Tedeschi erano così speciali per l'esercito.",
+          "contesto_post": "Perché il Pastore Tedesco? I Numeri Dicono Tutto Oggi, oltre il 50% dei cani delle forze armate americane sono Pastori Tedeschi. Ma perché proprio questa razza, e non altre? I motivi sono molteplici e affondano nelle caratteristiche biologiche e comportamentali",
+          "rationale": "H2 origini in trincea: richiamo storico ad altre missioni scientifico-militari con cani."
+        }
+      ],
+      "segnalazioni": []
+    },
+    {
+      "source_type": "master",
+      "master_slug": "malinois-belga-navy-seal-cani",
+      "master_title": "Malinois Belga: il cane eroe del raid a Bin Laden",
+      "master_categoria": "curiosita",
+      "cluster_topic": "Cani eroi/militari",
+      "links_proposti": [
+        {
+          "target_slug": "pastore-tedesco-esercito-polizia-addestramento",
+          "target_type": "master",
+          "target_title": "Pastore Tedesco nelle forze armate: da Rin Tin Tin ai cani anti-IED",
+          "anchor_text": "perché i Navy SEAL hanno scelto il Malinois al posto del Pastore Tedesco",
+          "h2_di_inserimento": 1,
+          "contesto_pre": "195 PSI Intelligenza adattiva : impara velocemente e sa prendere decisioni autonome in campo Nel 2005, l'esercito americano effettuò il grande passaggio: il Malinois divenne il nuovo standard per le operazioni speciali. I Navy SEAL lo adottarono come cane ufficiale.",
+          "contesto_post": "Cairo: La Leggenda Vivente Cairo nacque nel 2006 in Germania. Non era nulla di straordinario all'inizio: era semplicemente un cucciolo di Malinois con quella caratteristica vivacità della razza. Ma aveva qualcosa di speciale negli occhi. Venne acquistato dall'esercito americano e",
+          "rationale": "H2 'Il Cane Che Ha Cambiato Tutto': spiega la transizione Pastore Tedesco → Malinois con link al predecessore."
+        },
+        {
+          "target_slug": "pastore-caucaso-cane-guerra-russo",
+          "target_type": "master",
+          "target_title": "Pastore del Caucaso: il cane da guerra dell'esercito russo",
+          "anchor_text": "il gigante sovietico Pastore del Caucaso",
+          "h2_di_inserimento": 3,
+          "contesto_pre": "ufficiali, Mali riuscì a localizzare nascondigli di armi e esplosivi che avevano eluso anche i scanner umani. Questi cani non cercavano gloria. Cercavano di fare il loro lavoro: proteggere, cercare, attaccare solo quando necessario. Erano professionisti, a tutti gli effetti.",
+          "contesto_post": "Cosa Rende il Malinois Speciale Un Malinois Belga medio non è come un Pastore Tedesco medio. La razza è stata selezionata per secoli in Belgio con un obiettivo preciso: avere un cane da lavoro straordinario. Non è stato allevato principalmente",
+          "rationale": "H2 'Altre Leggende Su Quattro Zampe': rassegna cani militari moderni include il contraltare russo."
+        },
+        {
+          "target_slug": "animali-domestici-eroi-storie-vere",
+          "target_type": "singleton",
+          "target_title": "Animali Domestici Eroi: Storie Vere Che Hanno Salvato Vite",
+          "anchor_text": "altre storie vere di animali eroi che hanno salvato vite",
+          "h2_di_inserimento": 3,
+          "contesto_pre": "ufficiali, Mali riuscì a localizzare nascondigli di armi e esplosivi che avevano eluso anche i scanner umani. Questi cani non cercavano gloria. Cercavano di fare il loro lavoro: proteggere, cercare, attaccare solo quando necessario. Erano professionisti, a tutti gli effetti.",
+          "contesto_post": "Cosa Rende il Malinois Speciale Un Malinois Belga medio non è come un Pastore Tedesco medio. La razza è stata selezionata per secoli in Belgio con un obiettivo preciso: avere un cane da lavoro straordinario. Non è stato allevato principalmente",
+          "rationale": "H2 rassegna eroi: link singleton correlato per lettori emotivi."
+        },
+        {
+          "target_slug": "storie-fedelta-cani-hachiko-fido-bobby",
+          "target_type": "singleton",
+          "target_title": "Hachiko, Fido e Bobby: le 3 storie di fedeltà canina che hanno commosso il mondo",
+          "anchor_text": "tre storie di fedeltà canina che hanno commosso il mondo",
+          "h2_di_inserimento": 5,
+          "contesto_pre": "quattro zampe. Ma quello che sappiamo è che Cairo visse come pochi cani vivono: al servizio di una causa, in prima linea, con una missione. Non ha mai dubitato, non ha mai tradito, non ha mai chiesto niente in cambio.",
+          "contesto_post": "Il Malinois Belga Oggi Oggi, il Malinois Belga è diventato il cane delle operazioni speciali di tutte le grandi potenze militari. USA, UK, Germania, Francia, Australia: tutti usano il Malinois. Anche le forze di polizia speciali, dalla SWAT americana alla",
+          "rationale": "H2 'Dopo la Missione: la Vita Segreta di Cairo': tema fedeltà/legame con il proprio umano, link a storie iconiche."
+        }
+      ],
+      "segnalazioni": []
+    },
+    {
+      "source_type": "master",
+      "master_slug": "cani-capiscono-emozioni-umane-ricerca",
+      "master_title": "I Cani Capiscono Davvero le Nostre Emozioni: Cosa Dice la Ricerca",
+      "master_categoria": "curiosita",
+      "cluster_topic": "Comportamento/cognitivo",
+      "links_proposti": [
+        {
+          "target_slug": "perche-cani-inclinano-testa-studio",
+          "target_type": "master",
+          "target_title": "Perché i cani inclinano la testa? Uno studio rivela il motivo",
+          "anchor_text": "perché i cani inclinano la testa quando parliamo",
+          "h2_di_inserimento": 5,
+          "contesto_pre": "i suoi segnali di disagio o gioia. Investi tempo di qualità: Il gioco, le coccole e le passeggiate consolidano il vostro legame. Consulta un comportamentista: Se noti comportamenti strani, un professionista può aiutarti a capire cosa comunica il tuo cane.",
+          "contesto_post": "Conclusione La ricerca scientifica ha confermato quello che molti proprietari di cani sentono nel cuore: i nostri amici a quattro zampe capiscono davvero le nostre emozioni. Non è magia, non è un'antropomorfizzazione eccessiva, ma il risultato di capacità cognitive straordinarie",
+          "rationale": "H2 'Come Rafforzare la Connessione Emotiva': gesto empatico più riconoscibile, link al master gemello del cluster cognitivo."
+        },
+        {
+          "target_slug": "cani-capiscono-parole-studio-budapest",
+          "target_type": "singleton",
+          "target_title": "Cani capiscono le parole come bambini di 1-2 anni: lo studio",
+          "anchor_text": "comprendere le parole come un bambino di 1-2 anni",
+          "h2_di_inserimento": 1,
+          "contesto_pre": ". I cani percepiscono i nostri odori corporei, che cambiano quando proviamo emozioni diverse. Quando siamo ansiosi o spaventati, rilasciamo feromoni specifici che il nostro cane può letteralmente annusare . È come se potessero leggere il nostro stato emotivo chimico.",
+          "contesto_post": "La Risposta Emotiva dei Cani Quello che rende ancora più affascinante questa capacità è che i cani non si limitano a percepire le nostre emozioni: vi rispondono . Se siamo tristi, molti cani assumono comportamenti consolatori, come appoggiare la testa",
+          "rationale": "Stesso filone di ricerca (Budapest): link alla scoperta sulle parole dal H2 introduttivo sulla scienza."
+        },
+        {
+          "target_slug": "il-legame-invisibile-come-i-cani-sentono-e-assorbono-il-nostro-stress",
+          "target_type": "singleton",
+          "target_title": "Il Legame Invisibile: Come i Cani Sentono e Assorbono il Nostro Stress",
+          "anchor_text": "la capacità di assorbire lo stress umano",
+          "h2_di_inserimento": 2,
+          "contesto_pre": "sociali e empatiche molto sofisticate. Questo non significa che il tuo cane è uno psicologo, ovviamente. Ma significa che il suo comportamento consolatorio non è solo istintivo: c'è una vera e propria componente di comprensione e di volontà di aiutare.",
+          "contesto_post": "Differenze Individuali tra Cani Non tutti i cani sono uguali. Così come gli umani, anche i nostri amici a quattro zampe hanno personalità diverse e livelli diversi di sensibilità emotiva. Alcuni cani sono naturalmente più attenti e ricettivi , mentre",
+          "rationale": "H2 sulla risposta emotiva: approfondimento specifico sul meccanismo stress-contagio."
+        },
+        {
+          "target_slug": "etologia-comportamento-cani-gatti-lorenz",
+          "target_type": "singleton",
+          "target_title": "Etologia Animale: Capire il Comportamento di Cani e Gatti",
+          "anchor_text": "i fondamenti dell'etologia applicata al cane",
+          "h2_di_inserimento": 1,
+          "contesto_pre": ". I cani percepiscono i nostri odori corporei, che cambiano quando proviamo emozioni diverse. Quando siamo ansiosi o spaventati, rilasciamo feromoni specifici che il nostro cane può letteralmente annusare . È come se potessero leggere il nostro stato emotivo chimico.",
+          "contesto_post": "La Risposta Emotiva dei Cani Quello che rende ancora più affascinante questa capacità è che i cani non si limitano a percepire le nostre emozioni: vi rispondono . Se siamo tristi, molti cani assumono comportamenti consolatori, come appoggiare la testa",
+          "rationale": "H2 introduttivo: dà cornice accademica (Lorenz) al lettore che arriva qui per la prima volta."
+        },
+        {
+          "target_slug": "/razze",
+          "target_type": "tool_page",
+          "target_title": "Razze di cani",
+          "anchor_text": "le caratteristiche delle principali razze",
+          "h2_di_inserimento": 3,
+          "contesto_pre": "emozioni. Rapporto con il proprietario: Quanto più tempo trascorri con il tuo cane, tanto più affinato sarà il vostro \"linguaggio emotivo\" comune. Addestramento: Un cane ben addestrato e socializzato avrà generalmente una migliore capacità di adattarsi a diversi stati emotivi.",
+          "contesto_post": "Applicazioni Pratiche della Ricerca La comprensione scientifica di questa capacità ha portato allo sviluppo di cani da supporto emotivo e cani da terapia . Questi animali vengono addestrati specificamente per riconoscere segni di ansia, depressione o stress nei loro umani",
+          "rationale": "H2 'Differenze Individuali tra Cani': include anche differenze di razza, CTA alla pagina schede razze."
+        }
+      ],
+      "segnalazioni": []
+    },
+    {
+      "source_type": "master",
+      "master_slug": "perche-cani-inclinano-testa-studio",
+      "master_title": "Perché i cani inclinano la testa? Uno studio rivela il motivo",
+      "master_categoria": "curiosita",
+      "cluster_topic": "Comportamento/cognitivo",
+      "links_proposti": [
+        {
+          "target_slug": "cani-capiscono-emozioni-umane-ricerca",
+          "target_type": "master",
+          "target_title": "I Cani Capiscono Davvero le Nostre Emozioni: Cosa Dice la Ricerca",
+          "anchor_text": "come i cani decodificano le nostre emozioni",
+          "h2_di_inserimento": 3,
+          "contesto_pre": "la tua bocca e i tuoi occhi. Secondo lo studio, se usa parole che conosce (come \"palla\" o \"passeggiata\"), l'inclinazione potrebbe significare che sta cercando attivamente quell'oggetto o quell'azione nella sua memoria. È un segno di attenzione verso di te.",
+          "contesto_post": "Il cane inclina la testa per problemi di salute? In casi rari, un'inclinazione persistente e fissa della testa, soprattutto se accompagnata da perdita di equilibrio o nausea, può indicare un problema medico. Condizioni come un'infezione all'orecchio, un problema vestibolare o",
+          "rationale": "H2 'Perché il cane inclina la testa quando parlo': l'inclinazione è parte del decoding emotivo, link al master gemello."
+        },
+        {
+          "target_slug": "cani-capiscono-parole-studio-budapest",
+          "target_type": "singleton",
+          "target_title": "Cani capiscono le parole come bambini di 1-2 anni: lo studio",
+          "anchor_text": "gli studi di Budapest sui cani che capiscono le parole",
+          "h2_di_inserimento": 1,
+          "contesto_pre": "oggetti. Hanno filmato le sessioni in cui il proprietario dava un comando verbale al cane. Hanno contato e confrontato la frequenza dell'inclinazione della testa nei due gruppi. Hanno analizzato statisticamente la correlazione tra il gesto e il successo nel recupero.",
+          "contesto_post": "Il cane che inclina la testa è più intelligente? Non necessariamente. Lo studio indica che i cani che inclinano più spesso la testa quando ascoltano un comando sono spesso quelli con una capacità superiore alla media di memorizzare nomi di",
+          "rationale": "H2 introduttivo sullo studio: dà spessore citando un altro lavoro del team Eötvös di Budapest."
+        },
+        {
+          "target_slug": "cani-sognano-scienza-sonno-cervello",
+          "target_type": "singleton",
+          "target_title": "I cani sognano? La scienza spiega cosa accade nel loro sonno",
+          "anchor_text": "cosa accade nel cervello del cane durante il sonno",
+          "h2_di_inserimento": 5,
+          "contesto_pre": "più spesso per avere una visione migliore del viso umano, ma lo studio ungherese non ha trovato una correlazione significativa con la forma del cranio in questo contesto cognitivo. Scopri altre guide e consigli su MifidoDiTe.eu, il magazine pet d'Italia.",
+          "contesto_post": "(fine articolo)",
+          "rationale": "H2 finale sull'interpretazione del gesto: approfondimento sul funzionamento del cervello canino."
+        },
+        {
+          "target_slug": "/razze",
+          "target_type": "tool_page",
+          "target_title": "Razze di cani",
+          "anchor_text": "le caratteristiche cognitive delle diverse razze",
+          "h2_di_inserimento": 2,
+          "contesto_pre": "assoluto di intelligenza generale. Molti cani inclinano la testa per ragioni diverse, come per localizzare meglio un suono o per vedere più chiaramente il nostro viso. La ricerca distingue questa inclinazione \"cognitiva\" da altre più semplici e legate ai sensi.",
+          "contesto_post": "Perché il cane inclina la testa quando parlo? Il tuo cane potrebbe inclinare la testa quando parli per cercare di comprendere meglio le tue parole, il tuo tono di voce e le tue espressioni facciali. Questo gesto può aiutarlo a",
+          "rationale": "H2 'Il cane che inclina la testa è più intelligente?': aprire al confronto tra razze via pagina tool."
+        }
+      ],
+      "segnalazioni": []
+    },
+    {
+      "source_type": "master",
+      "master_slug": "perche-gatti-fanno-fusa-benefici-salute",
+      "master_title": "Perché i gatti fanno le fusa? Scoperte scientifiche e benefici",
+      "master_categoria": "curiosita",
+      "cluster_topic": "Comportamento/cognitivo gatti",
+      "links_proposti": [
+        {
+          "target_slug": "benefici-scientifici-animali-domestici-salute",
+          "target_type": "singleton",
+          "target_title": "Animali domestici: benefici scientifici per salute e benessere",
+          "anchor_text": "i benefici scientificamente provati della convivenza con un animale",
+          "h2_di_inserimento": 4,
+          "contesto_pre": "of Minnesota Stroke Center (2008) ha rilevato che i proprietari di gatti hanno un rischio inferiore del 30% di attacco cardiaco. La vicinanza a un gatto che fa le fusa crea un legame profondo, rilasciando ossitocina (l'ormone dell'affetto) in entrambi.",
+          "contesto_post": "Quando un gatto fa le fusa per dolore o paura? Un gatto può fare le fusa in situazioni di forte stress, dolore o malattia. In questi casi, le fusa servono come meccanismo di auto-consolazione, simile a come un bambino si",
+          "rationale": "H2 'Le fusa fanno bene anche agli umani?': link naturale all'articolo hub sui benefici pet-salute umana."
+        },
+        {
+          "target_slug": "cani-capiscono-emozioni-umane-ricerca",
+          "target_type": "master",
+          "target_title": "I Cani Capiscono Davvero le Nostre Emozioni: Cosa Dice la Ricerca",
+          "anchor_text": "come anche i cani percepiscono le nostre emozioni",
+          "h2_di_inserimento": 4,
+          "contesto_pre": "of Minnesota Stroke Center (2008) ha rilevato che i proprietari di gatti hanno un rischio inferiore del 30% di attacco cardiaco. La vicinanza a un gatto che fa le fusa crea un legame profondo, rilasciando ossitocina (l'ormone dell'affetto) in entrambi.",
+          "contesto_post": "Quando un gatto fa le fusa per dolore o paura? Un gatto può fare le fusa in situazioni di forte stress, dolore o malattia. In questi casi, le fusa servono come meccanismo di auto-consolazione, simile a come un bambino si",
+          "rationale": "Cross-specie: le fusa dei gatti + empatia dei cani sono due facce della stessa coin 'pet sentiunt'."
+        },
+        {
+          "target_slug": "siamese-il-gatto-che-parla-e-non-smette-mai",
+          "target_type": "singleton",
+          "target_title": "Siamese: il gatto che parla (e non smette mai)",
+          "anchor_text": "l'inconfondibile vocalità del Siamese",
+          "h2_di_inserimento": 7,
+          "contesto_pre": "fusa sono un linguaggio complesso. Possono esprimere anche nervosismo, dolore o una richiesta di aiuto. Il contesto e il linguaggio corporeo completo del gatto sono fondamentali per interpretarle correttamente. Scopri altre guide e consigli su MifidoDiTe.eu, il magazine pet d'Italia.",
+          "contesto_post": "(fine articolo)",
+          "rationale": "H2 'Tutti i felini fanno le fusa?': rassegna razze feline con particolarità vocali."
+        },
+        {
+          "target_slug": "/professionisti",
+          "target_type": "tool_page",
+          "target_title": "Professionisti pet",
+          "anchor_text": "il tuo veterinario di fiducia",
+          "h2_di_inserimento": 6,
+          "contesto_pre": "un indicatore precoce di problemi di salute. Fai particolare attenzione se il gatto fa le fusa intensamente mentre è accovacciato e immobile, rifiuta cibo e acqua, o mostra difficoltà respiratorie. In questi casi, le fusa potrebbero mascherare un malessere serio.",
+          "contesto_post": "Tutti i felini fanno le fusa? No, non tutti i felini possono fare le fusa. Questa capacità è principalmente dei felini di piccola taglia. I gatti domestici, i ghepardi e le linci fanno le fusa sia in inspirazione che in",
+          "rationale": "H2 'Quando chiamare il veterinario': CTA al tool elenco professionisti."
+        },
+        {
+          "target_slug": "il-potere-curativo-delle-fusa-quando-il-ronzio-del-gatto-diventa-terapia-per-le-ossa",
+          "target_type": "singleton",
+          "target_title": "Il potere curativo delle fusa: quando il ronzio del gatto diventa terapia per le ossa",
+          "anchor_text": "le proprietà terapeutiche delle fusa sulla salute ossea",
+          "h2_di_inserimento": 3,
+          "contesto_pre": "un meccanismo di sopravvivenza evoluto. Un gatto ferito o sotto stress spesso fa le fusa per calmarsi e accelerare il proprio recupero. Questo spiega perché molti felini fanno le fusa anche durante un parto difficile o in punto di morte.",
+          "contesto_post": "Le fusa fanno bene anche agli umani? Sì, le fusa del gatto hanno effetti positivi misurabili sulla salute umana. Ascoltare le fusa può abbassare la pressione sanguigna, ridurre i livelli di stress e il rischio di infarto. Agiscono come uno",
+          "rationale": "Bridge keep_separate (risolve segnalazione post-audit caso 3): H2 sui benefici per il gatto si apre al sub-topic specifico sull'effetto terapeutico sulle ossa (vibrazioni 25-150 Hz)."
+        }
+      ],
+      "segnalazioni": [
+        "bridge-keep_separate applicato: 'il-potere-curativo-delle-fusa-...-terapia-per-le-ossa' mantenuto come sub-topic autonomo (angolo terapeutico osso vs comportamento generale). Link reciproco aggiunto."
+      ]
+    },
+    {
+      "source_type": "master",
+      "master_slug": "microbioma-cane-alimentazione-ricerche",
+      "master_title": "Microbioma del cane e alimentazione: le ultime ricerche scientifiche",
+      "master_categoria": "salute",
+      "cluster_topic": "Salute/alimentazione",
+      "links_proposti": [
+        {
+          "target_slug": "razze-cani-longevi-studio-internazionale-italia-enci",
+          "target_type": "master",
+          "target_title": "Razze Cani Longevi: Studio Internazionale vs Dati ENCI Italia",
+          "anchor_text": "l'aspettativa di vita delle diverse razze",
+          "h2_di_inserimento": 1,
+          "contesto_pre": "come zucca, carote o fagiolini, ricche di fibre fermentabili. Valutate probiotici specifici: Consultate il veterinario per integrare ceppi batterici benefici, come Enterococcus faecium o Bacillus coagulans. Evitate cambi bruschi: Ogni modifica alimentare deve essere introdotta progressivamente per non destabilizzare l'intestino.",
+          "contesto_post": "Cosa rischio se il microbioma del mio cane è squilibrato? Un microbioma squilibrato, condizione chiamata disbiosi, aumenta il rischio di malattie croniche e problemi acuti. I pericoli immediati includono diarrea, vomito, flatulenza eccessiva e scarso assorbimento dei nutrienti. A lungo",
+          "rationale": "Cross-cluster salute: microbioma → longevità. Link dall'H2 sulle strategie dietetiche alla ricerca longevità."
+        },
+        {
+          "target_slug": "alimentazione-casalinga-per-cani-si-o-no-la-guida-completa-del-tuo-veterinario-di-fiducia",
+          "target_type": "singleton",
+          "target_title": "Alimentazione casalinga per cani: sì o no? La guida completa del tuo veterinario di fiducia",
+          "anchor_text": "i pro e i contro della dieta casalinga",
+          "h2_di_inserimento": 1,
+          "contesto_pre": "come zucca, carote o fagiolini, ricche di fibre fermentabili. Valutate probiotici specifici: Consultate il veterinario per integrare ceppi batterici benefici, come Enterococcus faecium o Bacillus coagulans. Evitate cambi bruschi: Ogni modifica alimentare deve essere introdotta progressivamente per non destabilizzare l'intestino.",
+          "contesto_post": "Cosa rischio se il microbioma del mio cane è squilibrato? Un microbioma squilibrato, condizione chiamata disbiosi, aumenta il rischio di malattie croniche e problemi acuti. I pericoli immediati includono diarrea, vomito, flatulenza eccessiva e scarso assorbimento dei nutrienti. A lungo",
+          "rationale": "H2 'Come migliorare il microbioma': dieta casalinga è intervento concreto che impatta il microbioma."
+        },
+        {
+          "target_slug": "come-scegliere-il-cibo-giusto-per-il-tuo-cane-la-guida-definitiva-del-tuo-amico-veterinario",
+          "target_type": "singleton",
+          "target_title": "Come Scegliere il Cibo Giusto per il Tuo Cane: La Guida Definitiva del Tuo Amico Veterinario",
+          "anchor_text": "come leggere l'etichetta delle crocchette",
+          "h2_di_inserimento": 5,
+          "contesto_pre": "il DNA batterico per valutare la composizione e la diversità del microbioma. Sono utili in casi cronici complessi e vanno sempre interpretati dal veterinario insieme al quadro clinico generale. Scopri altre guide e consigli su MifidoDiTe.eu, il magazine pet d'Italia.",
+          "contesto_post": "(fine articolo)",
+          "rationale": "H2 'Quali ingredienti danneggiano il microbioma': link operativo alla scelta del cibo commerciale."
+        },
+        {
+          "target_slug": "/razioni-cane",
+          "target_type": "tool_page",
+          "target_title": "Calcolatore razioni",
+          "anchor_text": "il calcolatore delle razioni quotidiane",
+          "h2_di_inserimento": 1,
+          "contesto_pre": "come zucca, carote o fagiolini, ricche di fibre fermentabili. Valutate probiotici specifici: Consultate il veterinario per integrare ceppi batterici benefici, come Enterococcus faecium o Bacillus coagulans. Evitate cambi bruschi: Ogni modifica alimentare deve essere introdotta progressivamente per non destabilizzare l'intestino.",
+          "contesto_post": "Cosa rischio se il microbioma del mio cane è squilibrato? Un microbioma squilibrato, condizione chiamata disbiosi, aumenta il rischio di malattie croniche e problemi acuti. I pericoli immediati includono diarrea, vomito, flatulenza eccessiva e scarso assorbimento dei nutrienti. A lungo",
+          "rationale": "CTA tool: dopo aver parlato di strategia dietetica, offrire il calcolatore come output pratico."
+        }
+      ],
+      "segnalazioni": []
+    },
+    {
+      "source_type": "master",
+      "master_slug": "razze-cani-longevi-studio-internazionale-italia-enci",
+      "master_title": "Razze Cani Longevi: Studio Internazionale vs Dati ENCI Italia",
+      "master_categoria": "curiosita",
+      "cluster_topic": "Razze/Salute (longevità)",
+      "links_proposti": [
+        {
+          "target_slug": "microbioma-cane-alimentazione-ricerche",
+          "target_type": "master",
+          "target_title": "Microbioma del cane e alimentazione: le ultime ricerche scientifiche",
+          "anchor_text": "l'equilibrio del microbioma intestinale",
+          "h2_di_inserimento": 5,
+          "contesto_pre": "mentale attraverso giochi e addestramento Crea un ambiente stabile e affettuoso Questi piccoli gesti, replicati ogni giorno, possono davvero fare la differenza. Non è magia, è semplice biologia: un organismo ben curato, ben nutrito e felice, vive più a lungo.",
+          "contesto_post": "Conclusioni: Le Razze Longeve Esistono, Ma la Qualità della Vita Fa la Differenza Gli studi internazionali e i dati ENCI ci dicono chiaramente quali razze hanno il potenziale genetico per vivere più a lungo. Ma il vero insegnamento è più",
+          "rationale": "H2 'Cosa Posso Fare Concretamente per il Mio Cane': l'alimentazione è la leva più importante per la longevità."
+        },
+        {
+          "target_slug": "razze-cani-italiani-enci-caratteristiche-storia-esigenze",
+          "target_type": "singleton",
+          "target_title": "Razze di cani italiani ENCI: caratteristiche, storia e esigenze delle 10 autoctone",
+          "anchor_text": "le dieci razze canine autoctone italiane",
+          "h2_di_inserimento": 3,
+          "contesto_pre": "chiaramente è che gli studi internazionali e i dati ENCI, pur partendo da metodologie diverse, arrivano a conclusioni simili: la longevità non è soltanto questione di genetica, ma di come scegliamo di prenderci cura dei nostri amici a quattro zampe.",
+          "contesto_post": "Le Eccezioni che Confermano la Regola Naturalmente, non tutti i Chihuahua vivono 15 anni, e non tutti i Molossi muoiono a 8. Ci sono sempre eccezioni, individui che superano le medie statistiche in un senso o nell'altro. Questi outlier sono",
+          "rationale": "H2 'Confronto tra Dati Mondiali e Realtà Italiana': le razze autoctone italiane sono un sottoinsieme dei dati ENCI."
+        },
+        {
+          "target_slug": "/quiz-razza",
+          "target_type": "tool_page",
+          "target_title": "Quiz razza ideale",
+          "anchor_text": "il quiz per trovare la razza più adatta al tuo stile di vita",
+          "h2_di_inserimento": 5,
+          "contesto_pre": "mentale attraverso giochi e addestramento Crea un ambiente stabile e affettuoso Questi piccoli gesti, replicati ogni giorno, possono davvero fare la differenza. Non è magia, è semplice biologia: un organismo ben curato, ben nutrito e felice, vive più a lungo.",
+          "contesto_post": "Conclusioni: Le Razze Longeve Esistono, Ma la Qualità della Vita Fa la Differenza Gli studi internazionali e i dati ENCI ci dicono chiaramente quali razze hanno il potenziale genetico per vivere più a lungo. Ma il vero insegnamento è più",
+          "rationale": "CTA funnel primario: chi legge sulla longevità delle razze è in fase di scelta, bounce verso il quiz conversione."
+        },
+        {
+          "target_slug": "/costo-cane",
+          "target_type": "tool_page",
+          "target_title": "Calcolatore costo cane",
+          "anchor_text": "la stima dei costi veterinari e di mantenimento",
+          "h2_di_inserimento": 4,
+          "contesto_pre": "ci sono testimonianze di cani che hanno superato i 20 anni, anche in razze non teoricamente predisposte alla longevità. Queste storie, pur essendo rare, ci ricordano che il potenziale biologico esiste, ed è la cura quotidiana che spesso lo attiva.",
+          "contesto_post": "Cosa Posso Fare Concretamente per il Mio Cane? Se hai un cucciolo appena arrivato a casa, oppure un cane già adulto, le ricerche scientifiche ti suggeriscono di non ossessionarti sulla razza, ma di concentrarti su quello che realmente conta: una",
+          "rationale": "H2 'Eccezioni che Confermano la Regola': lifetime cost varia con la longevità, CTA al calcolatore."
+        },
+        {
+          "target_slug": "animali-longevi-studi-internazionali-italia",
+          "target_type": "singleton",
+          "target_title": "Animali Longevi: Cosa Insegnano gli Studi Internazionali ai Proprietari Italiani",
+          "anchor_text": "confronto internazionale sulla longevità animale",
+          "h2_di_inserimento": 1,
+          "contesto_pre": "anni Secondo le ricerche internazionali, i cani di piccola taglia hanno un'aspettativa di vita media di 11-13 anni, mentre i cani di grossa taglia raramente superano i 10 anni. Questo fenomeno biologico è ancora oggetto di studio tra i ricercatori.",
+          "contesto_post": "I Dati ENCI in Italia: Il Punto di Vista Nazionale L'ENCI, che tiene registri dettagliati dei cani di razza pura in Italia, raccoglie dati preziosissimi sulla longevità delle diverse razze nel nostro paese. Questi dati, pur seguendo le tendenze internazionali,",
+          "rationale": "Bridge keep_separate (risolve segnalazione post-audit caso 4): H2 'Studio Internazionale' è naturale handoff al hub cross-specie generalista sulla longevità animale."
+        }
+      ],
+      "segnalazioni": [
+        "bridge-keep_separate applicato: 'animali-longevi-studi-internazionali-italia' mantenuto come hub generalista cross-specie (include gatti/altri pet). Link reciproco aggiunto."
+      ]
+    },
+    {
+      "source_type": "master",
+      "master_slug": "scegliere-primo-cucciolo-guida-cane-principianti",
+      "master_title": "Come Scegliere il Primo Cucciolo: Guida Completa per Principianti",
+      "master_categoria": "guide",
+      "cluster_topic": "Educazione & scelta",
+      "links_proposti": [
+        {
+          "target_slug": "educazione-cucciolo-primi-6-mesi-socializzazione-comandi",
+          "target_type": "master",
+          "target_title": "Educazione del Cucciolo nei Primi 6 Mesi: Guida Completa",
+          "anchor_text": "l'educazione nei primi sei mesi del cucciolo",
+          "h2_di_inserimento": 5,
+          "contesto_pre": "casa e l'apprendimento delle regole. Non si tratta solo di passeggiate. Il tempo di qualità include interazioni mentali, addestramento breve e positivo, e semplice compagnia. Un cucciolo lasciato solo troppe ore svilupperà quasi certamente ansia da separazione e comportamenti distruttivi.",
+          "contesto_post": "Quali sono gli errori da evitare assolutamente? Scegliere solo in base all'aspetto fisico, ignorando il carattere. Prendere un cucciolo d'impulso, senza una preparazione adeguata. Sottostimare i costi a lungo termine e le dimensioni da adulto. Non visitare l'allevamento o il",
+          "rationale": "H2 'Quanto tempo richiede un cucciolo': naturale prosecuzione nel master gemello del cluster Educazione."
+        },
+        {
+          "target_slug": "/quiz-razza",
+          "target_type": "tool_page",
+          "target_title": "Quiz razza ideale",
+          "anchor_text": "fai il quiz per capire quale razza fa al caso tuo",
+          "h2_di_inserimento": 1,
+          "contesto_pre": "esigenze lavorative intense se sei alla prima esperienza. Uno studio dell'Università di Helsinki pubblicato su \"Scientific Reports\" (2021) conferma che la razza influenza solo in parte il comportamento, ma fattori come l'età, il sesso e le esperienze precoci sono determinanti.",
+          "contesto_post": "Quanto costa un cucciolo all'anno? Il costo annuale per un cucciolo varia da 1.200 a 2.500 euro. La spesa iniziale (adozione o acquisto, accessori, prime visite) può essere tra 300 e 2.000 euro. Le spese mensili fisse includono cibo di",
+          "rationale": "H2 'Quale razza scegliere per un principiante': CTA primario del funnel — lead magnet principale del sito."
+        },
+        {
+          "target_slug": "/costo-cane",
+          "target_type": "tool_page",
+          "target_title": "Calcolatore costo cane",
+          "anchor_text": "il calcolatore dei costi annui del cane",
+          "h2_di_inserimento": 2,
+          "contesto_pre": "(20-50€). A questo budget vanno aggiunti gli imprevisti veterinari. È saggio costituire un fondo di emergenza di almeno 500 euro. Ricorda che cani di taglia grande hanno costi per cibo e farmaci significativamente più alti di quelli di taglia piccola.",
+          "contesto_post": "Cosa rischio se compro da un allevatore non serio? Rischi di portare a casa un cucciolo malato, non socializzato o con problemi genetici, sostenendo poi spese veterinarie enormi e sofferenze emotive. Gli allevamenti irresponsabili spesso ignorano le norme sul benessere",
+          "rationale": "H2 'Quanto costa un cucciolo all'anno': bounce al tool che risponde con numeri personalizzati."
+        },
+        {
+          "target_slug": "prima-visita-dal-veterinario-la-guida-completa-per-accogliere-il-tuo-cucciolo",
+          "target_type": "singleton",
+          "target_title": "Prima Visita dal Veterinario: La Guida Completa per Accogliere il Tuo Cucciolo",
+          "anchor_text": "tutto quello che serve per la prima visita dal veterinario",
+          "h2_di_inserimento": 4,
+          "contesto_pre": "denuncia di cessione. Il documento fondamentale è il passaporto. Assicurati che il microchip sia registrato a tuo nome presso l'Anagrafe Canina Regionale. Senza questa pratica, potresti incorrere in sanzioni amministrative e non essere riconosciuto come proprietario in caso di smarrimento.",
+          "contesto_post": "Quanto tempo richiede un cucciolo ogni giorno? Un cucciolo richiede in media 2-3 ore del tuo tempo ogni giorno, suddivise in pasti, educazione di base, socializzazione, gioco, esercizio fisico adeguato all'età e pulizia. Nei primi mesi, l'impegno è maggiore per",
+          "rationale": "H2 'Quali documenti servono': la prima visita è il momento dove si consegnano/completano i documenti."
+        },
+        {
+          "target_slug": "vaccinazioni-cane-calendario-completo",
+          "target_type": "master",
+          "target_title": "Vaccinazioni Cane: Calendario Completo e Linee Guida WSAVA",
+          "anchor_text": "il calendario delle vaccinazioni obbligatorie",
+          "h2_di_inserimento": 4,
+          "contesto_pre": "denuncia di cessione. Il documento fondamentale è il passaporto. Assicurati che il microchip sia registrato a tuo nome presso l'Anagrafe Canina Regionale. Senza questa pratica, potresti incorrere in sanzioni amministrative e non essere riconosciuto come proprietario in caso di smarrimento.",
+          "contesto_post": "Quanto tempo richiede un cucciolo ogni giorno? Un cucciolo richiede in media 2-3 ore del tuo tempo ogni giorno, suddivise in pasti, educazione di base, socializzazione, gioco, esercizio fisico adeguato all'età e pulizia. Nei primi mesi, l'impegno è maggiore per",
+          "rationale": "H2 documenti: libretto vaccinale è parte dei documenti del cucciolo, link al master cluster Legali."
+        }
+      ],
+      "segnalazioni": []
+    },
+    {
+      "source_type": "master",
+      "master_slug": "educazione-cucciolo-primi-6-mesi-socializzazione-comandi",
+      "master_title": "Educazione del Cucciolo nei Primi 6 Mesi: Guida Completa",
+      "master_categoria": "comportamento",
+      "cluster_topic": "Educazione & scelta",
+      "links_proposti": [
+        {
+          "target_slug": "scegliere-primo-cucciolo-guida-cane-principianti",
+          "target_type": "master",
+          "target_title": "Come Scegliere il Primo Cucciolo: Guida Completa per Principianti",
+          "anchor_text": "come scegliere un cucciolo adatto alla tua vita",
+          "h2_di_inserimento": 1,
+          "contesto_pre": "persone, cani, ambienti e rumori in modo positivo. Insegnamento della pulizia: porta fuori il cucciolo dopo il sonno, i pasti e il gioco, lodandolo abbondantemente. Gestione del morso: interrompi il gioco se morde troppo forte, offrendo subito un giocattolo alternativo.",
+          "contesto_post": "Come socializzare un cucciolo correttamente? La socializzazione corretta avviene esponendo il cucciolo a stimoli nuovi in modo graduale e positivo, sempre prima del compimento dei 4 mesi. L'obiettivo è far associare ogni esperienza (persone in bicicletta, altri animali, aspirapolvere) a",
+          "rationale": "H2 introduttivo sulla socializzazione: precondizione = aver scelto il cucciolo giusto. Link al master gemello."
+        },
+        {
+          "target_slug": "/quiz-razza",
+          "target_type": "tool_page",
+          "target_title": "Quiz razza ideale",
+          "anchor_text": "scopri con il quiz quale razza si adatta alla tua casa",
+          "h2_di_inserimento": 1,
+          "contesto_pre": "persone, cani, ambienti e rumori in modo positivo. Insegnamento della pulizia: porta fuori il cucciolo dopo il sonno, i pasti e il gioco, lodandolo abbondantemente. Gestione del morso: interrompi il gioco se morde troppo forte, offrendo subito un giocattolo alternativo.",
+          "contesto_post": "Come socializzare un cucciolo correttamente? La socializzazione corretta avviene esponendo il cucciolo a stimoli nuovi in modo graduale e positivo, sempre prima del compimento dei 4 mesi. L'obiettivo è far associare ogni esperienza (persone in bicicletta, altri animali, aspirapolvere) a",
+          "rationale": "Funnel: i lettori interessati all'educazione spesso stanno ancora scegliendo. Secondo touch sul quiz razza."
+        },
+        {
+          "target_slug": "vaccinazioni-cane-calendario-completo",
+          "target_type": "master",
+          "target_title": "Vaccinazioni Cane: Calendario Completo e Linee Guida WSAVA",
+          "anchor_text": "vaccinazioni complete per uscire in sicurezza",
+          "h2_di_inserimento": 2,
+          "contesto_pre": "brevi e controllati con cani adulti vaccinati e di carattere equilibrato. Portalo in ambienti diversi, come parchi urbani (senza farlo camminare a terra prima dei vaccini completi) e negozi pet-friendly. Ricompensa la calma e la curiosità con bocconcini e coccole.",
+          "contesto_post": "Cosa fare se il cucciolo morde sempre? Se il cucciolo morde sempre, sta esplorando il mondo e giocando, ma deve imparare a regolare la pressione della bocca. La reazione deve essere immediata e coerente: emetti un suono acuto \"Ahi!\" quando",
+          "rationale": "H2 'Come socializzare un cucciolo': socializzazione richiede vaccinazioni complete, link al master."
+        },
+        {
+          "target_slug": "/professionisti",
+          "target_type": "tool_page",
+          "target_title": "Professionisti pet",
+          "anchor_text": "un educatore cinofilo certificato",
+          "h2_di_inserimento": 6,
+          "contesto_pre": "problemi comportamentali che altrimenti diventerebbero permanenti. Cerca un educatore che utilizzi metodi gentili e basati sul rinforzo positivo. Un buon professionista lavora prima con te, per insegnarti come comunicare e guidare il tuo cucciolo nelle varie situazioni della vita quotidiana.",
+          "contesto_post": "Quali comandi base insegnare per primi? I comandi base da insegnare per primi sono: il richiamo, il \"seduto\" e il \"resta\". Inizia in un ambiente senza distrazioni, usando piccoli premi golosi. Ogni sessione deve durare massimo 5 minuti, per non",
+          "rationale": "H2 'Quando è necessario rivolgersi a un educatore cinofilo': CTA al tool elenco professionisti."
+        },
+        {
+          "target_slug": "/costo-cane",
+          "target_type": "tool_page",
+          "target_title": "Calcolatore costo cane",
+          "anchor_text": "quanto spenderai ogni anno per il cane",
+          "h2_di_inserimento": 5,
+          "contesto_pre": "è dannoso per il suo sviluppo emotivo. Punizioni fisiche o verbali aggressive. Uscire solo per i bisogni, senza sessioni di esplorazione. Isolarlo da stimoli per paura delle malattie (basta portarlo in braccio). Incoerenza nelle regole tra i membri della famiglia.",
+          "contesto_post": "Quando è necessario rivolgersi a un educatore cinofilo? È necessario rivolgersi a un educatore cinofilo professionista se noti segnali di paura estrema, aggressività (ringhi o morsi che rompono la pelle) o ansia da separazione distruttiva. Un intervento precoce, entro i",
+          "rationale": "H2 sugli errori comuni: sottovalutare i costi è uno degli errori, CTA al calcolatore."
+        }
+      ],
+      "segnalazioni": []
+    },
+    {
+      "source_type": "master",
+      "master_slug": "razze-gatti-italiane-siamese-foreste-sokoke",
+      "master_title": "Razze di Gatti Italiane: Siamese, Foreste e Sokoke",
+      "master_categoria": "razze",
+      "cluster_topic": "Razze (gatti)",
+      "links_proposti": [
+        {
+          "target_slug": "perche-gatti-fanno-fusa-benefici-salute",
+          "target_type": "master",
+          "target_title": "Perché i gatti fanno le fusa? Scoperte scientifiche e benefici",
+          "anchor_text": "il comportamento sociale dei gatti e le fusa",
+          "h2_di_inserimento": 3,
+          "contesto_pre": "e vivace. È un gatto cacciatore e molto affettuoso con la sua famiglia. La sua selezione naturale lo ha reso generalmente rustico e longevo, con una aspettativa di vita media che può superare i 15 anni con le giuste cure.",
+          "contesto_post": "Quando chiamare il veterinario per problemi di razza? Chiama il veterinario se noti difficoltà respiratorie, zoppia improvvisa o segni di dolore. Per il Gatto delle Foreste Norvegesi, controlla spesso il pelo lungo per evitare nodi e boli di pelo, che",
+          "rationale": "H2 'Come riconoscere un vero Gatto Europeo': tratti razza includono vocalizzazione/fusa, link al master comportamento."
+        },
+        {
+          "target_slug": "siamese-il-gatto-che-parla-e-non-smette-mai",
+          "target_type": "singleton",
+          "target_title": "Siamese: il gatto che parla (e non smette mai)",
+          "anchor_text": "l'indole chiacchierona del Siamese",
+          "h2_di_inserimento": 1,
+          "contesto_pre": "Il malinteso sul nome \"Foreste\" ha portato alcuni a credere fosse legato a boschi italiani. In realtà, la sua storia è legata ai climi freddi della Scandinavia, come confermato dagli standard di razza di tutti i principali enti felini mondiali.",
+          "contesto_post": "Quanto costa un gatto di razza italiana? Un esemplare di Gatto Europeo di razza pura, con pedigree, può costare tra i 300 e i 700 euro. Un Gatto delle Foreste Norvegesi, essendo una razza di origine nordica, ha un prezzo",
+          "rationale": "H2 'Quali sono le vere razze': il Siamese è citato, approfondimento sul singleton dedicato."
+        },
+        {
+          "target_slug": "mau-egizio-gatto-veloce-mondo",
+          "target_type": "singleton",
+          "target_title": "Mau Egizio: il gatto più veloce del mondo a 48 km/h",
+          "anchor_text": "altre razze dal passato antico come il Mau Egizio",
+          "h2_di_inserimento": 3,
+          "contesto_pre": "e vivace. È un gatto cacciatore e molto affettuoso con la sua famiglia. La sua selezione naturale lo ha reso generalmente rustico e longevo, con una aspettativa di vita media che può superare i 15 anni con le giuste cure.",
+          "contesto_post": "Quando chiamare il veterinario per problemi di razza? Chiama il veterinario se noti difficoltà respiratorie, zoppia improvvisa o segni di dolore. Per il Gatto delle Foreste Norvegesi, controlla spesso il pelo lungo per evitare nodi e boli di pelo, che",
+          "rationale": "H2 sul Gatto Europeo: parallelismo con altre razze ancestrali del Mediterraneo/Nord Africa."
+        },
+        {
+          "target_slug": "razze-cani-italiani-enci-caratteristiche-storia-esigenze",
+          "target_type": "singleton",
+          "target_title": "Razze di cani italiani ENCI: caratteristiche, storia e esigenze delle 10 autoctone",
+          "anchor_text": "il panorama delle razze italiane nel mondo canino",
+          "h2_di_inserimento": 2,
+          "contesto_pre": "la purezza della linea generazionale. Il costo iniziale include solitamente le prime vaccinazioni, la sverminazione e la microchippatura. È fondamentale rivolgersi ad allevatori seri e riconosciuti, che allevino i gatti in ambiente familiare e diano tutte le garanzie sanitarie necessarie.",
+          "contesto_post": "Come riconoscere un vero Gatto Europeo? Il Gatto Europeo ha un corpo muscoloso e armonioso, né massiccio né snello. La testa è rotonda, con orecchie dritte e distanziate. Gli occhi sono grandi e rotondi, di colore giallo, verde o arancione,",
+          "rationale": "H2 sui costi: parallelismo editoriale con l'articolo gemello sulle razze canine italiane."
+        }
+      ],
+      "segnalazioni": []
+    },
+    {
+      "source_type": "singleton_bridge",
+      "master_slug": "microchip-sottocutaneo-obbligatorio-guida-completa-a-funzionamento-costi-e-rischi",
+      "master_title": "Microchip sottocutaneo obbligatorio: guida completa a funzionamento, costi e rischi",
+      "master_categoria": "guide",
+      "cluster_topic": "Adempimenti legali (bridge)",
+      "links_proposti": [
+        {
+          "target_slug": "microchip-cane-obbligatorio-legge-281-costi-sanzioni-anagrafe-canina",
+          "target_type": "master",
+          "target_title": "Microchip Cane Obbligatorio: Legge 281, Costi, Sanzioni e Anagrafe Canina",
+          "anchor_text": "la legge italiana che rende il microchip obbligatorio",
+          "h2_di_inserimento": 4,
+          "contesto_pre": "un termine perentorio. In assenza del microchip, in caso di smarrimento, sarà estremamente difficile dimostrare la proprietà dell’animale. I canili e i rifugi trattengono i cani non identificati per periodi molto più lunghi prima di poterli dichiarare disponibili per l’adozione.",
+          "contesto_post": "Quali sono i rischi e gli effetti collaterali del microchip? I rischi associati all’impianto del microchip sono estremamente rari. La procedura è considerata minimamente invasiva e sicura. La maggior parte dei cani non mostra alcun fastidio, percependo la puntura come",
+          "rationale": "Bridge reciproco (caso 1): H2 'Cosa rischio se non metto il microchip' del singleton tecnico rimanda al master legale-normativo per gli aspetti di legge/sanzioni."
+        }
+      ],
+      "segnalazioni": []
+    },
+    {
+      "source_type": "singleton_bridge",
+      "master_slug": "il-potere-curativo-delle-fusa-quando-il-ronzio-del-gatto-diventa-terapia-per-le-ossa",
+      "master_title": "Il potere curativo delle fusa: quando il ronzio del gatto diventa terapia per le ossa",
+      "master_categoria": "curiosita",
+      "cluster_topic": "Comportamento/cognitivo gatti (bridge)",
+      "links_proposti": [
+        {
+          "target_slug": "perche-gatti-fanno-fusa-benefici-salute",
+          "target_type": "master",
+          "target_title": "Perché i gatti fanno le fusa? Scoperte scientifiche e benefici",
+          "anchor_text": "il meccanismo fisiologico delle fusa felini",
+          "h2_di_inserimento": 2,
+          "contesto_pre": "che fa le fusa abbassa i livelli di cortisolo, l'ormone dello stress. Questo crea un ambiente ormonale più favorevole alla salute generale. La pressione sanguigna si riduce e la frequenza cardiaca si stabilizza, similmente agli effetti di una meditazione profonda.",
+          "contesto_post": "Come si fa a massimizzare questo effetto terapeutico? Non serve forzare nulla, ma creare le condizioni giuste per la spontaneità del gatto. Accarezzalo dolcemente lungo le guance e sotto il mento, zone dove solitamente ama il contatto. Lascia che si",
+          "rationale": "Bridge reciproco (caso 3): H2 'Benefici scientifici' del singleton terapeutico rimanda al master comportamento per la spiegazione fisiologica base delle fusa."
+        }
+      ],
+      "segnalazioni": []
+    },
+    {
+      "source_type": "singleton_bridge",
+      "master_slug": "animali-longevi-studi-internazionali-italia",
+      "master_title": "Animali Longevi: Cosa Insegnano gli Studi Internazionali ai Proprietari Italiani",
+      "master_categoria": "curiosita",
+      "cluster_topic": "Salute/longevità (bridge)",
+      "links_proposti": [
+        {
+          "target_slug": "razze-cani-longevi-studio-internazionale-italia-enci",
+          "target_type": "master",
+          "target_title": "Razze Cani Longevi: Studio Internazionale vs Dati ENCI Italia",
+          "anchor_text": "le razze di cani più longeve secondo gli studi ENCI",
+          "h2_di_inserimento": 3,
+          "contesto_pre": "a vivere lungamente, ma se lo tengo chiuso in casa senza esercizio e lo alimento male, non vivrà quanto potrebbe. Inversamente, un animale di razza \"più delicata\" può sorprenderti con una longevità straordinaria se hai fatto tutte le scelte giuste.",
+          "contesto_post": "Come Applicare Questi Insegnamenti in Italia Adatta le Conoscenze al Tuo Contesto La ricerca internazionale è preziosa, ma vivere a Palermo non è come vivere a Copenhagen. Le temperature, gli spazi disponibili, la reperibilità dei servizi veterinari cambiano. Se vivi",
+          "rationale": "Bridge reciproco (caso 4): H2 'Razza e Genetica' del singleton generalista rimanda al master specifico cane+ENCI per il deep-dive sulla longevità canina."
+        }
+      ],
+      "segnalazioni": []
+    }
+  ]
+}

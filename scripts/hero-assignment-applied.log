@@ -1,0 +1,205 @@
+# Hero assignment applied log
+Avvio/Fine:  2026-04-21T21:53:33.942Z / 2026-04-21T21:53:34.514Z
+Durata:      506ms
+Master aggiornati: 18/18
+Post-commit anomalie: 0
+
+## Dettaglio per master
+
+### microchip-cane-obbligatorio-legge-281-costi-sanzioni-anagrafe-canina
+  id:            defa7c48-ecb7-4c65-a5fa-b5651e49d2d5
+  cluster:       Adempimenti legali
+  confidenza:    media
+  categoria_foto: cani
+  foto_slug:     dog-resting-on-the-garden-2026-03-18-17-45-57-utc
+  old_img:       https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800&q=80
+  new_img:       /img/stock/cani/dog-resting-on-the-garden-2026-03-18-17-45-57-utc-card.jpg
+  new_alt:       Cane marrone e bianco con cucciolo nel prato soleggiato sotto gli alberi
+  post_ok:       true
+
+### cani-capiscono-emozioni-umane-ricerca
+  id:            e3aee46e-ff5d-4031-913b-290fa8d490a0
+  cluster:       Comportamento/cognitivo
+  confidenza:    media
+  categoria_foto: persone-pet
+  foto_slug:     happy-stylish-hipster-family-hugging-with-their-ca-2026-03-23-23-02-41-utc
+  old_img:       https://images.unsplash.com/photo-1583511655826-05700d52f4d9?w=800&q=80
+  new_img:       /img/stock/persone-pet/happy-stylish-hipster-family-hugging-with-their-ca-2026-03-23-23-02-41-utc-card.jpg
+  new_alt:       Coppia sorridente abbraccia tenero gatto tabby grigio in posa affettuosa
+  post_ok:       true
+
+### razze-cani-longevi-studio-internazionale-italia-enci
+  id:            583c83c0-cfb5-4c6f-ab9a-16ed5bf221e2
+  cluster:       Razze/Salute (longevità)
+  confidenza:    alta
+  categoria_foto: cani
+  foto_slug:     large-group-of-head-shot-dogs-looking-at-the-camer-2026-01-05-04-42-31-utc
+  old_img:       https://images.unsplash.com/photo-1568393691622-c7ba131d63b4?w=800&q=80
+  new_img:       /img/stock/cani/large-group-of-head-shot-dogs-looking-at-the-camer-2026-01-05-04-42-31-utc-card.jpg
+  new_alt:       Otto cani di razze diverse allineati guardano in camera su sfondo viola
+  post_ok:       true
+
+### vaccinazioni-cane-calendario-completo
+  id:            1b16f82b-9181-41f0-a5b7-a069afe15921
+  cluster:       Adempimenti legali + Salute
+  confidenza:    media
+  categoria_foto: cani
+  foto_slug:     five-dogheads-from-big-to-small-in-a-row-2026-03-09-09-18-22-utc
+  old_img:       https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800&q=80
+  new_img:       /img/stock/cani/five-dogheads-from-big-to-small-in-a-row-2026-03-09-09-18-22-utc-card.jpg
+  new_alt:       Gruppo di cinque cani di diverse razze e taglie su sfondo azzurro, ritratti affettuosi
+  post_ok:       true
+
+### perche-gatti-fanno-fusa-benefici-salute
+  id:            62351e97-ad3f-4109-a63f-480add441b6e
+  cluster:       Comportamento/cognitivo gatti
+  confidenza:    alta
+  categoria_foto: persone-pet
+  foto_slug:     cat-needing-affection-2026-03-17-20-43-13-utc
+  old_img:       https://images.unsplash.com/photo-1519052537078-e6302a4968d4?w=800&q=80
+  new_img:       /img/stock/persone-pet/cat-needing-affection-2026-03-17-20-43-13-utc-card.jpg
+  new_alt:       Persona abbraccia affettuosamente un gatto grigio striato circondati da foglie rosse autunnali
+  post_ok:       true
+
+### microbioma-cane-alimentazione-ricerche
+  id:            4c820110-a73e-4bea-a7ad-7b48646d042a
+  cluster:       Salute/alimentazione
+  confidenza:    bassa
+  categoria_foto: cani
+  foto_slug:     golden-retriever-dog-2026-03-25-02-53-24-utc
+  old_img:       https://images.unsplash.com/photo-1558929996-da64ba858215?w=800&q=80
+  new_img:       /img/stock/cani/golden-retriever-dog-2026-03-25-02-53-24-utc-card.jpg
+  new_alt:       Cane marrone in piedi su sentiero boschivo circondato da vegetazione e luce naturale filtrante
+  post_ok:       true
+
+### scegliere-primo-cucciolo-guida-cane-principianti
+  id:            13cecac6-b710-4e75-8bf8-3bb040a41bad
+  cluster:       Educazione & scelta
+  confidenza:    alta
+  categoria_foto: cani
+  foto_slug:     group-portrait-of-adorable-puppies-2026-01-08-00-07-46-utc
+  old_img:       https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&q=80
+  new_img:       /img/stock/cani/group-portrait-of-adorable-puppies-2026-01-08-00-07-46-utc-card.jpg
+  new_alt:       Ritratto di cinque cani di diverse razze con lingue di fuori su sfondo beige chiaro
+  post_ok:       true
+
+### razze-gatti-italiane-siamese-foreste-sokoke
+  id:            76805f98-71de-44a3-a881-99e8b326c010
+  cluster:       Razze (gatti)
+  confidenza:    media
+  categoria_foto: cuccioli
+  foto_slug:     cats-portrait-obedient-devon-rex-cat-with-bright-2026-03-20-03-41-36-utc
+  old_img:       https://images.unsplash.com/photo-1570824104453-508955ab713e?w=800&q=80
+  new_img:       /img/stock/cuccioli/cats-portrait-obedient-devon-rex-cat-with-bright-2026-03-20-03-41-36-utc-card.jpg
+  new_alt:       Persona in giacca a quadri tiene in braccio un gattino bianco e arancione affettuoso su divano
+  post_ok:       true
+
+### educazione-cucciolo-primi-6-mesi-socializzazione-comandi
+  id:            cc61d4d5-3136-4421-bd16-a2149a340150
+  cluster:       Educazione & scelta
+  confidenza:    alta
+  categoria_foto: persone-pet
+  foto_slug:     friends-playing-with-cute-puppies-2026-03-20-04-28-19-utc
+  old_img:       https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=800&q=80
+  new_img:       /img/stock/persone-pet/friends-playing-with-cute-puppies-2026-03-20-04-28-19-utc-card.jpg
+  new_alt:       Famiglia con bambini e tre dolci cuccioli di husky in ambiente caldo e accogliente durante l'inverno
+  post_ok:       true
+
+### trasporto-cani-auto-art-169-codice-strada
+  id:            fa1a9c16-b686-420a-8c79-3aa6cf425b07
+  cluster:       Adempimenti legali + Viaggi
+  confidenza:    bassa
+  categoria_foto: persone-pet
+  foto_slug:     senior-man-using-laptop-sitting-on-sofa-with-his-t-2026-03-11-00-54-12-utc
+  old_img:       https://images.unsplash.com/photo-1535930891776-0c2dfb7fda1a?w=800&q=80
+  new_img:       /img/stock/persone-pet/senior-man-using-laptop-sitting-on-sofa-with-his-t-2026-03-11-00-54-12-utc-card.jpg
+  new_alt:       Uomo che abbraccia affettuosamente due piccoli cani tricolori seduti insieme sul divano
+  post_ok:       true
+
+### trasporto-gatti-auto-sicurezza-codice-strada-consigli
+  id:            12083380-f3a6-494b-a381-75e6e5dc35f5
+  cluster:       Viaggi (gatti)
+  confidenza:    bassa
+  categoria_foto: gatti
+  foto_slug:     striped-cat-sits-on-a-wooden-floor-paws-whis-2026-01-07-01-29-39-utc
+  old_img:       https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=800&q=80
+  new_img:       /img/stock/gatti/striped-cat-sits-on-a-wooden-floor-paws-whis-2026-01-07-01-29-39-utc-card.jpg
+  new_alt:       Gatto tabby grigio e bianco con occhi verdi luminosi guarda verso l'alto con espressione curiosa
+  post_ok:       true
+
+### cani-autostrada-vacanza-regole-codice-strada
+  id:            86c7de78-982f-4ef9-945a-5eb486eadb0d
+  cluster:       Viaggi + Adempimenti legali
+  confidenza:    bassa
+  categoria_foto: cani
+  foto_slug:     beautiful-dog-golden-retriever-labrador-in-autumn-2026-03-16-22-37-08-utc
+  old_img:       https://images.unsplash.com/photo-1558929996-da64ba858215?w=800&q=80
+  new_img:       /img/stock/cani/beautiful-dog-golden-retriever-labrador-in-autumn-2026-03-16-22-37-08-utc-card.jpg
+  new_alt:       Golden Retriever seduto su una terrazza in legno con sfondo verde sfocato, sguardo attento
+  post_ok:       true
+
+### vendere-regalare-cane-legge-italia-obblighi
+  id:            4eddc59f-9c04-4952-84fe-f45375f4d1ee
+  cluster:       Adempimenti legali
+  confidenza:    media
+  categoria_foto: cani
+  foto_slug:     portrait-of-golden-retriever-dog-2026-03-17-00-04-36-utc
+  old_img:       https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=800&q=80
+  new_img:       /img/stock/cani/portrait-of-golden-retriever-dog-2026-03-17-00-04-36-utc-card.jpg
+  new_alt:       Golden Retriever felice con lingua fuori su sfondo verde, ritratto professionale
+  post_ok:       true
+
+### passaggio-proprieta-cane-guida-procedura-italiana
+  id:            dd0404b1-80e7-47bf-bf2b-140afcaf5f80
+  cluster:       Adempimenti legali
+  confidenza:    media
+  categoria_foto: persone-pet
+  foto_slug:     happy-little-dog-in-the-arms-of-its-owners-2026-03-19-09-28-30-utc
+  old_img:       https://images.unsplash.com/photo-1588943211346-0908a1fb0b01?w=800&q=80
+  new_img:       /img/stock/persone-pet/happy-little-dog-in-the-arms-of-its-owners-2026-03-19-09-28-30-utc-card.jpg
+  new_alt:       Due uomini sorridenti abbracciano un cane marrone con collare azzurro in un contesto urbano
+  post_ok:       true
+
+### pastore-caucaso-cane-guerra-russo
+  id:            fe5c2742-2c89-4c25-bf74-2249eaeb7147
+  cluster:       Cani eroi/militari
+  confidenza:    bassa
+  categoria_foto: cani
+  foto_slug:     border-collie-portrait-on-black-2026-03-09-08-44-55-utc
+  old_img:       https://images.unsplash.com/photo-1593134257782-e89567b7718a?w=800&q=80
+  new_img:       /img/stock/cani/border-collie-portrait-on-black-2026-03-09-08-44-55-utc-card.jpg
+  new_alt:       Border collie marrone, bianco e nero sorridente su sfondo scuro con lingua fuori
+  post_ok:       true
+
+### pastore-tedesco-esercito-polizia-addestramento
+  id:            c8447603-08e0-42a2-9665-07f67d4ed7d9
+  cluster:       Cani eroi/militari
+  confidenza:    bassa
+  categoria_foto: cani
+  foto_slug:     head-shot-of-australian-shepherd-sitting-and-panti-2026-01-09-11-01-54-utc
+  old_img:       https://images.unsplash.com/photo-1560743641-3914f2c45636?w=800&q=80
+  new_img:       /img/stock/cani/head-shot-of-australian-shepherd-sitting-and-panti-2026-01-09-11-01-54-utc-card.jpg
+  new_alt:       Cane adulto bianco e marrone con sguardo felice su sfondo bianco
+  post_ok:       true
+
+### malinois-belga-navy-seal-cani
+  id:            11d9f37e-6fd5-4e30-b997-9c0c88984a67
+  cluster:       Cani eroi/militari
+  confidenza:    bassa
+  categoria_foto: cani
+  foto_slug:     selective-focus-shot-of-an-adorable-kooikerhondje-2026-03-18-06-44-27-utc
+  old_img:       https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=800&q=80
+  new_img:       /img/stock/cani/selective-focus-shot-of-an-adorable-kooikerhondje-2026-03-18-06-44-27-utc-card.jpg
+  new_alt:       Cane marrone e bianco felice con lingua fuori su sfondo verde sfocato
+  post_ok:       true
+
+### perche-cani-inclinano-testa-studio
+  id:            542333c0-a563-4516-bf2e-9f0bcbbdc6fa
+  cluster:       Comportamento/cognitivo
+  confidenza:    bassa
+  categoria_foto: cani
+  foto_slug:     domestic-adorable-dog-with-multicolored-eyes-in-wh-2026-03-17-03-30-52-utc
+  old_img:       https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=800&q=80
+  new_img:       /img/stock/cani/domestic-adorable-dog-with-multicolored-eyes-in-wh-2026-03-17-03-30-52-utc-card.jpg
+  new_alt:       Cane Australian Shepherd bianco e marrone con lingua fuori su sfondo bianco, espressione felice e giocosa
+  post_ok:       true

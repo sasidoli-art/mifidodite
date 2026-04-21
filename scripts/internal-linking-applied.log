@@ -1,0 +1,266 @@
+# Internal linking applied log
+Avvio: 2026-04-21T21:23:56.831Z
+Fine:  2026-04-21T21:23:57.611Z
+Durata: 0.59s
+
+Articoli modificati: 21
+Link applicati totali: 87
+Anomalie pre-commit: 0
+Anomalie post-commit: 0
+
+## Dettaglio per articolo
+
+### [master] microchip-cane-obbligatorio-legge-281-costi-sanzioni-anagrafe-canina
+  id: defa7c48-ecb7-4c65-a5fa-b5651e49d2d5
+  cluster: Adempimenti legali
+  link_count_before: 0
+  link_count_after:  6  (delta=6, atteso=6)
+  post_commit_count: 6  (ok=true)
+  applied:
+    - [tool_page] /professionisti  |  "un veterinario iscritto al registro professionale"  (H2#2, wrap="Correlato:")
+    - [master] /magazine/vaccinazioni-cane-calendario-completo  |  "il calendario vaccinale del cane"  (H2#4, wrap="Leggi anche:")
+    - [master] /magazine/passaggio-proprieta-cane-guida-procedura-italiana  |  "la procedura di passaggio di proprietà del cane"  (H2#5, wrap="Approfondisci:")
+    - [singleton] /magazine/adottare-cane-canile-procedura-modulo-affido  |  "la procedura di adozione da canile"  (H2#5, wrap="Correlato:")
+    - [singleton] /magazine/microchip-sottocutaneo-obbligatorio-guida-completa-a-funzionamento-costi-e-rischi  |  "aspetti medici del microchip sottocutaneo"  (H2#6, wrap="Leggi anche:")
+    - [master] /magazine/vendere-regalare-cane-legge-italia-obblighi  |  "gli obblighi di legge per chi cede un cane"  (H2#7, wrap="Approfondisci:")
+
+### [master] vaccinazioni-cane-calendario-completo
+  id: 1b16f82b-9181-41f0-a5b7-a069afe15921
+  cluster: Adempimenti legali + Salute
+  link_count_before: 0
+  link_count_after:  5  (delta=5, atteso=5)
+  post_commit_count: 5  (ok=true)
+  applied:
+    - [master] /magazine/microchip-cane-obbligatorio-legge-281-costi-sanzioni-anagrafe-canina  |  "l'identificazione obbligatoria tramite microchip"  (H2#2, wrap="Correlato:")
+    - [master] /magazine/scegliere-primo-cucciolo-guida-cane-principianti  |  "guida per chi sta scegliendo il primo cucciolo"  (H2#2, wrap="Leggi anche:")
+    - [tool_page] /professionisti  |  "trovare un veterinario di fiducia vicino a te"  (H2#3, wrap="Approfondisci:")
+    - [tool_page] /costo-cane  |  "quanto costa mantenere un cane in un anno"  (H2#3, wrap="Correlato:")
+    - [singleton] /magazine/prima-visita-dal-veterinario-la-guida-completa-per-accogliere-il-tuo-cucciolo  |  "la prima visita veterinaria del cucciolo"  (H2#5, wrap="Leggi anche:")
+
+### [master] vendere-regalare-cane-legge-italia-obblighi
+  id: 4eddc59f-9c04-4952-84fe-f45375f4d1ee
+  cluster: Adempimenti legali
+  link_count_before: 0
+  link_count_after:  5  (delta=5, atteso=5)
+  post_commit_count: 5  (ok=true)
+  applied:
+    - [singleton] /magazine/adottare-cane-canile-procedura-modulo-affido  |  "l'adozione da canile come scelta etica"  (H2#2, wrap="Approfondisci:")
+    - [master] /magazine/passaggio-proprieta-cane-guida-procedura-italiana  |  "la procedura formale di passaggio di proprietà"  (H2#3, wrap="Correlato:")
+    - [tool_page] /professionisti  |  "il veterinario come testimone della cessione"  (H2#3, wrap="Leggi anche:")
+    - [master] /magazine/microchip-cane-obbligatorio-legge-281-costi-sanzioni-anagrafe-canina  |  "registrare il microchip al nuovo proprietario"  (H2#6, wrap="Approfondisci:")
+    - [master] /magazine/vaccinazioni-cane-calendario-completo  |  "il libretto sanitario con le vaccinazioni"  (H2#8, wrap="Correlato:")
+
+### [master] passaggio-proprieta-cane-guida-procedura-italiana
+  id: dd0404b1-80e7-47bf-bf2b-140afcaf5f80
+  cluster: Adempimenti legali
+  link_count_before: 0
+  link_count_after:  5  (delta=5, atteso=5)
+  post_commit_count: 5  (ok=true)
+  applied:
+    - [master] /magazine/vendere-regalare-cane-legge-italia-obblighi  |  "i vincoli legali della cessione tra privati"  (H2#2, wrap="Leggi anche:")
+    - [singleton] /magazine/adottare-cane-canile-procedura-modulo-affido  |  "l'iter dell'adozione da canile rispetto alla cessione privata"  (H2#3, wrap="Approfondisci:")
+    - [tool_page] /professionisti  |  "i veterinari abilitati alla registrazione"  (H2#8, wrap="Correlato:")
+    - [master] /magazine/microchip-cane-obbligatorio-legge-281-costi-sanzioni-anagrafe-canina  |  "i dettagli sul microchip obbligatorio per legge"  (H2#10, wrap="Leggi anche:")
+    - [singleton] /magazine/passaggio-proprieta-gatto-anagrafe-felina  |  "la procedura analoga per i gatti con l'Anagrafe Felina"  (H2#11, wrap="Approfondisci:")
+
+### [master] trasporto-cani-auto-art-169-codice-strada
+  id: fa1a9c16-b686-420a-8c79-3aa6cf425b07
+  cluster: Adempimenti legali + Viaggi
+  link_count_before: 0
+  link_count_after:  5  (delta=5, atteso=5)
+  post_commit_count: 5  (ok=true)
+  applied:
+    - [master] /magazine/trasporto-gatti-auto-sicurezza-codice-strada-consigli  |  "le stesse regole applicate al trasporto del gatto"  (H2#1, wrap="Correlato:")
+    - [master] /magazine/microchip-cane-obbligatorio-legge-281-costi-sanzioni-anagrafe-canina  |  "identificazione obbligatoria del cane"  (H2#3, wrap="Leggi anche:")
+    - [master] /magazine/cani-autostrada-vacanza-regole-codice-strada  |  "le regole specifiche per l'autostrada e i traghetti"  (H2#6, wrap="Approfondisci:")
+    - [tool_page] /vacanze  |  "strutture pet-friendly dove soggiornare"  (H2#6, wrap="Correlato:")
+    - [tool_page] /spiagge  |  "le spiagge dog-friendly d'Italia"  (H2#6, wrap="Leggi anche:")
+
+### [master] trasporto-gatti-auto-sicurezza-codice-strada-consigli
+  id: 12083380-f3a6-494b-a381-75e6e5dc35f5
+  cluster: Adempimenti legali + Viaggi (gatti)
+  link_count_before: 0
+  link_count_after:  4  (delta=4, atteso=4)
+  post_commit_count: 4  (ok=true)
+  applied:
+    - [master] /magazine/trasporto-cani-auto-art-169-codice-strada  |  "le regole del Codice della Strada applicate ai cani"  (H2#1, wrap="Approfondisci:")
+    - [master] /magazine/razze-gatti-italiane-siamese-foreste-sokoke  |  "le razze feline italiane e le loro caratteristiche"  (H2#4, wrap="Correlato:")
+    - [master] /magazine/perche-gatti-fanno-fusa-benefici-salute  |  "i segnali di benessere del gatto"  (H2#6, wrap="Leggi anche:")
+    - [tool_page] /professionisti  |  "un veterinario comportamentalista"  (H2#6, wrap="Approfondisci:")
+
+### [master] cani-autostrada-vacanza-regole-codice-strada
+  id: 86c7de78-982f-4ef9-945a-5eb486eadb0d
+  cluster: Viaggi + Adempimenti legali
+  link_count_before: 0
+  link_count_after:  5  (delta=5, atteso=5)
+  post_commit_count: 5  (ok=true)
+  applied:
+    - [master] /magazine/trasporto-cani-auto-art-169-codice-strada  |  "cosa prescrive l'articolo 169 per i cani in auto"  (H2#2, wrap="Correlato:")
+    - [tool_page] /vacanze  |  "dove dormire con il cane in Italia"  (H2#6, wrap="Leggi anche:")
+    - [tool_page] /spiagge  |  "le spiagge libere dove il cane è benvenuto"  (H2#6, wrap="Approfondisci:")
+    - [tool_page] /sentieri  |  "i sentieri escursionistici dog-friendly"  (H2#6, wrap="Correlato:")
+    - [master] /magazine/vaccinazioni-cane-calendario-completo  |  "il libretto sanitario aggiornato con tutti i vaccini"  (H2#7, wrap="Leggi anche:")
+
+### [master] pastore-caucaso-cane-guerra-russo
+  id: fe5c2742-2c89-4c25-bf74-2249eaeb7147
+  cluster: Cani eroi/militari
+  link_count_before: 0
+  link_count_after:  4  (delta=4, atteso=4)
+  post_commit_count: 4  (ok=true)
+  applied:
+    - [singleton] /magazine/cani-spazio-laika-belka-strelova-storia  |  "le imprese spaziali dei cani sovietici Laika e Belka"  (H2#1, wrap="Approfondisci:")
+    - [master] /magazine/pastore-tedesco-esercito-polizia-addestramento  |  "il Pastore Tedesco nelle forze armate occidentali"  (H2#3, wrap="Correlato:")
+    - [singleton] /magazine/razze-cani-italiani-enci-caratteristiche-storia-esigenze  |  "le razze canine italiane riconosciute dall'ENCI"  (H2#4, wrap="Leggi anche:")
+    - [master] /magazine/malinois-belga-navy-seal-cani  |  "il Malinois Belga dei Navy SEAL"  (H2#5, wrap="Approfondisci:")
+
+### [master] pastore-tedesco-esercito-polizia-addestramento
+  id: c8447603-08e0-42a2-9665-07f67d4ed7d9
+  cluster: Cani eroi/militari
+  link_count_before: 0
+  link_count_after:  4  (delta=4, atteso=4)
+  post_commit_count: 4  (ok=true)
+  applied:
+    - [singleton] /magazine/cani-spazio-laika-belka-strelova-storia  |  "dalla trincea allo spazio: altri cani nella storia militare-scientifica"  (H2#1, wrap="Correlato:")
+    - [master] /magazine/pastore-caucaso-cane-guerra-russo  |  "il cane da guerra sovietico Pastore del Caucaso"  (H2#2, wrap="Leggi anche:")
+    - [master] /magazine/malinois-belga-navy-seal-cani  |  "il Malinois Belga che lo ha sostituito nelle operazioni speciali"  (H2#4, wrap="Approfondisci:")
+    - [singleton] /magazine/le-5-razze-migliori-come-cani-guida-labrador-golden-pastore-tedesco-e-altre  |  "il Pastore Tedesco nel mondo dei cani guida"  (H2#5, wrap="Correlato:")
+
+### [master] malinois-belga-navy-seal-cani
+  id: 11d9f37e-6fd5-4e30-b997-9c0c88984a67
+  cluster: Cani eroi/militari
+  link_count_before: 0
+  link_count_after:  4  (delta=4, atteso=4)
+  post_commit_count: 4  (ok=true)
+  applied:
+    - [master] /magazine/pastore-tedesco-esercito-polizia-addestramento  |  "perché i Navy SEAL hanno scelto il Malinois al posto del Pastore Tedesco"  (H2#1, wrap="Leggi anche:")
+    - [master] /magazine/pastore-caucaso-cane-guerra-russo  |  "il gigante sovietico Pastore del Caucaso"  (H2#3, wrap="Approfondisci:")
+    - [singleton] /magazine/animali-domestici-eroi-storie-vere  |  "altre storie vere di animali eroi che hanno salvato vite"  (H2#3, wrap="Correlato:")
+    - [singleton] /magazine/storie-fedelta-cani-hachiko-fido-bobby  |  "tre storie di fedeltà canina che hanno commosso il mondo"  (H2#5, wrap="Leggi anche:")
+
+### [master] cani-capiscono-emozioni-umane-ricerca
+  id: e3aee46e-ff5d-4031-913b-290fa8d490a0
+  cluster: Comportamento/cognitivo
+  link_count_before: 0
+  link_count_after:  5  (delta=5, atteso=5)
+  post_commit_count: 5  (ok=true)
+  applied:
+    - [singleton] /magazine/cani-capiscono-parole-studio-budapest  |  "comprendere le parole come un bambino di 1-2 anni"  (H2#1, wrap="Approfondisci:")
+    - [singleton] /magazine/etologia-comportamento-cani-gatti-lorenz  |  "i fondamenti dell'etologia applicata al cane"  (H2#1, wrap="Correlato:")
+    - [singleton] /magazine/il-legame-invisibile-come-i-cani-sentono-e-assorbono-il-nostro-stress  |  "la capacità di assorbire lo stress umano"  (H2#2, wrap="Leggi anche:")
+    - [tool_page] /razze  |  "le caratteristiche delle principali razze"  (H2#3, wrap="Approfondisci:")
+    - [master] /magazine/perche-cani-inclinano-testa-studio  |  "perché i cani inclinano la testa quando parliamo"  (H2#5, wrap="Correlato:")
+
+### [master] perche-cani-inclinano-testa-studio
+  id: 542333c0-a563-4516-bf2e-9f0bcbbdc6fa
+  cluster: Comportamento/cognitivo
+  link_count_before: 0
+  link_count_after:  4  (delta=4, atteso=4)
+  post_commit_count: 4  (ok=true)
+  applied:
+    - [singleton] /magazine/cani-capiscono-parole-studio-budapest  |  "gli studi di Budapest sui cani che capiscono le parole"  (H2#1, wrap="Leggi anche:")
+    - [tool_page] /razze  |  "le caratteristiche cognitive delle diverse razze"  (H2#2, wrap="Approfondisci:")
+    - [master] /magazine/cani-capiscono-emozioni-umane-ricerca  |  "come i cani decodificano le nostre emozioni"  (H2#3, wrap="Correlato:")
+    - [singleton] /magazine/cani-sognano-scienza-sonno-cervello  |  "cosa accade nel cervello del cane durante il sonno"  (H2#5, wrap="Leggi anche:")
+
+### [master] perche-gatti-fanno-fusa-benefici-salute
+  id: 62351e97-ad3f-4109-a63f-480add441b6e
+  cluster: Comportamento/cognitivo gatti
+  link_count_before: 0
+  link_count_after:  5  (delta=5, atteso=5)
+  post_commit_count: 5  (ok=true)
+  applied:
+    - [singleton] /magazine/il-potere-curativo-delle-fusa-quando-il-ronzio-del-gatto-diventa-terapia-per-le-ossa  |  "le proprietà terapeutiche delle fusa sulla salute ossea"  (H2#3, wrap="Approfondisci:")
+    - [singleton] /magazine/benefici-scientifici-animali-domestici-salute  |  "i benefici scientificamente provati della convivenza con un animale"  (H2#4, wrap="Correlato:")
+    - [master] /magazine/cani-capiscono-emozioni-umane-ricerca  |  "come anche i cani percepiscono le nostre emozioni"  (H2#4, wrap="Leggi anche:")
+    - [tool_page] /professionisti  |  "il tuo veterinario di fiducia"  (H2#6, wrap="Approfondisci:")
+    - [singleton] /magazine/siamese-il-gatto-che-parla-e-non-smette-mai  |  "l'inconfondibile vocalità del Siamese"  (H2#7, wrap="Correlato:")
+
+### [master] microbioma-cane-alimentazione-ricerche
+  id: 4c820110-a73e-4bea-a7ad-7b48646d042a
+  cluster: Salute/alimentazione
+  link_count_before: 0
+  link_count_after:  4  (delta=4, atteso=4)
+  post_commit_count: 4  (ok=true)
+  applied:
+    - [master] /magazine/razze-cani-longevi-studio-internazionale-italia-enci  |  "l'aspettativa di vita delle diverse razze"  (H2#1, wrap="Leggi anche:")
+    - [singleton] /magazine/alimentazione-casalinga-per-cani-si-o-no-la-guida-completa-del-tuo-veterinario-di-fiducia  |  "i pro e i contro della dieta casalinga"  (H2#1, wrap="Approfondisci:")
+    - [tool_page] /razioni-cane  |  "il calcolatore delle razioni quotidiane"  (H2#1, wrap="Correlato:")
+    - [singleton] /magazine/come-scegliere-il-cibo-giusto-per-il-tuo-cane-la-guida-definitiva-del-tuo-amico-veterinario  |  "come leggere l'etichetta delle crocchette"  (H2#5, wrap="Leggi anche:")
+
+### [master] razze-cani-longevi-studio-internazionale-italia-enci
+  id: 583c83c0-cfb5-4c6f-ab9a-16ed5bf221e2
+  cluster: Razze/Salute (longevità)
+  link_count_before: 0
+  link_count_after:  5  (delta=5, atteso=5)
+  post_commit_count: 5  (ok=true)
+  applied:
+    - [singleton] /magazine/animali-longevi-studi-internazionali-italia  |  "confronto internazionale sulla longevità animale"  (H2#1, wrap="Approfondisci:")
+    - [singleton] /magazine/razze-cani-italiani-enci-caratteristiche-storia-esigenze  |  "le dieci razze canine autoctone italiane"  (H2#3, wrap="Correlato:")
+    - [tool_page] /costo-cane  |  "la stima dei costi veterinari e di mantenimento"  (H2#4, wrap="Leggi anche:")
+    - [master] /magazine/microbioma-cane-alimentazione-ricerche  |  "l'equilibrio del microbioma intestinale"  (H2#5, wrap="Approfondisci:")
+    - [tool_page] /quiz-razza  |  "il quiz per trovare la razza più adatta al tuo stile di vita"  (H2#5, wrap="Correlato:")
+
+### [master] scegliere-primo-cucciolo-guida-cane-principianti
+  id: 13cecac6-b710-4e75-8bf8-3bb040a41bad
+  cluster: Educazione & scelta
+  link_count_before: 0
+  link_count_after:  5  (delta=5, atteso=5)
+  post_commit_count: 5  (ok=true)
+  applied:
+    - [tool_page] /quiz-razza  |  "fai il quiz per capire quale razza fa al caso tuo"  (H2#1, wrap="Leggi anche:")
+    - [tool_page] /costo-cane  |  "il calcolatore dei costi annui del cane"  (H2#2, wrap="Approfondisci:")
+    - [singleton] /magazine/prima-visita-dal-veterinario-la-guida-completa-per-accogliere-il-tuo-cucciolo  |  "tutto quello che serve per la prima visita dal veterinario"  (H2#4, wrap="Correlato:")
+    - [master] /magazine/vaccinazioni-cane-calendario-completo  |  "il calendario delle vaccinazioni obbligatorie"  (H2#4, wrap="Leggi anche:")
+    - [master] /magazine/educazione-cucciolo-primi-6-mesi-socializzazione-comandi  |  "l'educazione nei primi sei mesi del cucciolo"  (H2#5, wrap="Approfondisci:")
+
+### [master] educazione-cucciolo-primi-6-mesi-socializzazione-comandi
+  id: cc61d4d5-3136-4421-bd16-a2149a340150
+  cluster: Educazione & scelta
+  link_count_before: 0
+  link_count_after:  5  (delta=5, atteso=5)
+  post_commit_count: 5  (ok=true)
+  applied:
+    - [master] /magazine/scegliere-primo-cucciolo-guida-cane-principianti  |  "come scegliere un cucciolo adatto alla tua vita"  (H2#1, wrap="Correlato:")
+    - [tool_page] /quiz-razza  |  "scopri con il quiz quale razza si adatta alla tua casa"  (H2#1, wrap="Leggi anche:")
+    - [master] /magazine/vaccinazioni-cane-calendario-completo  |  "vaccinazioni complete per uscire in sicurezza"  (H2#2, wrap="Approfondisci:")
+    - [tool_page] /costo-cane  |  "quanto spenderai ogni anno per il cane"  (H2#5, wrap="Correlato:")
+    - [tool_page] /professionisti  |  "un educatore cinofilo certificato"  (H2#6, wrap="Leggi anche:")
+
+### [master] razze-gatti-italiane-siamese-foreste-sokoke
+  id: 76805f98-71de-44a3-a881-99e8b326c010
+  cluster: Razze (gatti)
+  link_count_before: 0
+  link_count_after:  4  (delta=4, atteso=4)
+  post_commit_count: 4  (ok=true)
+  applied:
+    - [singleton] /magazine/siamese-il-gatto-che-parla-e-non-smette-mai  |  "l'indole chiacchierona del Siamese"  (H2#1, wrap="Approfondisci:")
+    - [singleton] /magazine/razze-cani-italiani-enci-caratteristiche-storia-esigenze  |  "il panorama delle razze italiane nel mondo canino"  (H2#2, wrap="Correlato:")
+    - [master] /magazine/perche-gatti-fanno-fusa-benefici-salute  |  "il comportamento sociale dei gatti e le fusa"  (H2#3, wrap="Leggi anche:")
+    - [singleton] /magazine/mau-egizio-gatto-veloce-mondo  |  "altre razze dal passato antico come il Mau Egizio"  (H2#3, wrap="Approfondisci:")
+
+### [singleton_bridge] microchip-sottocutaneo-obbligatorio-guida-completa-a-funzionamento-costi-e-rischi
+  id: 02878cf2-f383-44ac-ab37-74312dbade8f
+  cluster: Adempimenti legali (bridge)
+  link_count_before: 0
+  link_count_after:  1  (delta=1, atteso=1)
+  post_commit_count: 1  (ok=true)
+  applied:
+    - [master] /magazine/microchip-cane-obbligatorio-legge-281-costi-sanzioni-anagrafe-canina  |  "la legge italiana che rende il microchip obbligatorio"  (H2#4, wrap="Correlato:")
+
+### [singleton_bridge] il-potere-curativo-delle-fusa-quando-il-ronzio-del-gatto-diventa-terapia-per-le-ossa
+  id: 7303de04-9751-4fe3-b620-c9ef9ced2fa8
+  cluster: Comportamento/cognitivo gatti (bridge)
+  link_count_before: 0
+  link_count_after:  1  (delta=1, atteso=1)
+  post_commit_count: 1  (ok=true)
+  applied:
+    - [master] /magazine/perche-gatti-fanno-fusa-benefici-salute  |  "il meccanismo fisiologico delle fusa felini"  (H2#2, wrap="Leggi anche:")
+
+### [singleton_bridge] animali-longevi-studi-internazionali-italia
+  id: 78258900-1a7b-44f0-8d1b-8ab9b58331b8
+  cluster: Salute/longevità (bridge)
+  link_count_before: 0
+  link_count_after:  1  (delta=1, atteso=1)
+  post_commit_count: 1  (ok=true)
+  applied:
+    - [master] /magazine/razze-cani-longevi-studio-internazionale-italia-enci  |  "le razze di cani più longeve secondo gli studi ENCI"  (H2#3, wrap="Approfondisci:")

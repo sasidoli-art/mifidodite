@@ -1,0 +1,387 @@
+{
+  "generato_il": "2026-04-21T21:49:12.986Z",
+  "totale_master": 18,
+  "conf_distribution": {
+    "alta": 4,
+    "media": 6,
+    "bassa": 8
+  },
+  "preview": [
+    {
+      "master_slug": "microchip-cane-obbligatorio-legge-281-costi-sanzioni-anagrafe-canina",
+      "master_title": "Microchip Cane Obbligatorio: Legge 281, Costi, Sanzioni e Anagrafe Canina",
+      "master_categoria": "salute",
+      "cluster_topic": "Adempimenti legali",
+      "foto_scelta": {
+        "slug": "dog-resting-on-the-garden-2026-03-18-17-45-57-utc",
+        "path_card_jpg": "app/public/img/stock/cani/dog-resting-on-the-garden-2026-03-18-17-45-57-utc-card.jpg",
+        "alt_text": "Cane marrone e bianco con cucciolo nel prato soleggiato sotto gli alberi",
+        "origine": "non_specificato",
+        "categoria_foto": "cani",
+        "sottosoggetti": [
+          "cane adulto marrone e bianco",
+          "cucciolo marrone",
+          "albero",
+          "prato verde"
+        ],
+        "rationale": "Cane che riposa in giardino: foto neutra, mood domestico tranquillo. Adempimento burocratico non deve evocare dramma — il microchip è un gesto di cura ordinario."
+      },
+      "confidenza_match": "media"
+    },
+    {
+      "master_slug": "cani-capiscono-emozioni-umane-ricerca",
+      "master_title": "I Cani Capiscono Davvero le Nostre Emozioni: Cosa Dice la Ricerca",
+      "master_categoria": "curiosita",
+      "cluster_topic": "Comportamento/cognitivo",
+      "foto_scelta": {
+        "slug": "happy-stylish-hipster-family-hugging-with-their-ca-2026-03-23-23-02-41-utc",
+        "path_card_jpg": "app/public/img/stock/persone-pet/happy-stylish-hipster-family-hugging-with-their-ca-2026-03-23-23-02-41-utc-card.jpg",
+        "alt_text": "Coppia sorridente abbraccia tenero gatto tabby grigio in posa affettuosa",
+        "origine": "non_specificato",
+        "categoria_foto": "persone-pet",
+        "sottosoggetti": [
+          "coppia",
+          "gatto tabby",
+          "affetto"
+        ],
+        "rationale": "Famiglia che abbraccia il cane: visualizza il legame emotivo cane-umano, tema centrale dell'articolo. Buon match semantico."
+      },
+      "confidenza_match": "media"
+    },
+    {
+      "master_slug": "razze-cani-longevi-studio-internazionale-italia-enci",
+      "master_title": "Razze Cani Longevi: Studio Internazionale vs Dati ENCI Italia",
+      "master_categoria": "curiosita",
+      "cluster_topic": "Razze/Salute (longevità)",
+      "foto_scelta": {
+        "slug": "large-group-of-head-shot-dogs-looking-at-the-camer-2026-01-05-04-42-31-utc",
+        "path_card_jpg": "app/public/img/stock/cani/large-group-of-head-shot-dogs-looking-at-the-camer-2026-01-05-04-42-31-utc-card.jpg",
+        "alt_text": "Otto cani di razze diverse allineati guardano in camera su sfondo viola",
+        "origine": "non_specificato",
+        "categoria_foto": "cani",
+        "sottosoggetti": [
+          "razze miste",
+          "portrait",
+          "golden retriever",
+          "jack russell",
+          "bulldog",
+          "cavalier",
+          "spitz"
+        ],
+        "rationale": "8 cani di razze diverse allineati: match perfetto per articolo che confronta razze per longevità (Jack Russell, Golden, Bulldog ecc. tutti presenti nella foto)."
+      },
+      "confidenza_match": "alta"
+    },
+    {
+      "master_slug": "vaccinazioni-cane-calendario-completo",
+      "master_title": "Vaccinazioni Cane: Calendario Completo e Linee Guida WSAVA",
+      "master_categoria": "salute",
+      "cluster_topic": "Adempimenti legali + Salute",
+      "foto_scelta": {
+        "slug": "five-dogheads-from-big-to-small-in-a-row-2026-03-09-09-18-22-utc",
+        "path_card_jpg": "app/public/img/stock/cani/five-dogheads-from-big-to-small-in-a-row-2026-03-09-09-18-22-utc-card.jpg",
+        "alt_text": "Gruppo di cinque cani di diverse razze e taglie su sfondo azzurro, ritratti affettuosi",
+        "origine": "non_specificato",
+        "categoria_foto": "cani",
+        "sottosoggetti": [
+          "cane marrone",
+          "cane nero e bianco",
+          "cane marrone e nero",
+          "cani piccoli"
+        ],
+        "rationale": "Cinque muso di taglie diverse su bianco: visivamente suggerisce 'calendario per tutti i cani' (cucciolo → adulto). Foto clinica/tassonomica adatta a un articolo WSAVA."
+      },
+      "confidenza_match": "media"
+    },
+    {
+      "master_slug": "perche-gatti-fanno-fusa-benefici-salute",
+      "master_title": "Perché i gatti fanno le fusa? Scoperte scientifiche e benefici",
+      "master_categoria": "curiosita",
+      "cluster_topic": "Comportamento/cognitivo gatti",
+      "foto_scelta": {
+        "slug": "cat-needing-affection-2026-03-17-20-43-13-utc",
+        "path_card_jpg": "app/public/img/stock/persone-pet/cat-needing-affection-2026-03-17-20-43-13-utc-card.jpg",
+        "alt_text": "Persona abbraccia affettuosamente un gatto grigio striato circondati da foglie rosse autunnali",
+        "origine": "non_specificato",
+        "categoria_foto": "persone-pet",
+        "sottosoggetti": [
+          "gatto",
+          "persona",
+          "mani",
+          "abbraccio"
+        ],
+        "rationale": "Gatto che cerca affetto: perfetto per articolo sulle fusa come comportamento di benessere e richiesta interazione."
+      },
+      "confidenza_match": "alta"
+    },
+    {
+      "master_slug": "microbioma-cane-alimentazione-ricerche",
+      "master_title": "Microbioma del cane e alimentazione: le ultime ricerche scientifiche",
+      "master_categoria": "salute",
+      "cluster_topic": "Salute/alimentazione",
+      "foto_scelta": {
+        "slug": "golden-retriever-dog-2026-03-25-02-53-24-utc",
+        "path_card_jpg": "app/public/img/stock/cani/golden-retriever-dog-2026-03-25-02-53-24-utc-card.jpg",
+        "alt_text": "Cane marrone in piedi su sentiero boschivo circondato da vegetazione e luce naturale filtrante",
+        "origine": "non_specificato",
+        "categoria_foto": "cani",
+        "sottosoggetti": [
+          "cane adulto",
+          "cane marrone",
+          "vegetazione",
+          "luce naturale"
+        ],
+        "rationale": "Cane marrone su sentiero boschivo, luce naturale: mood 'naturale/salute'. NOTA: nel catalogo non esistono foto food per cani (ciotola/crocchette/cane che mangia) — le 2 oggetti-cibo sono cibo umano (thanksgiving + cocktail) inadatte. Copertura sub-ottimale: scaricare foto dedicate alimentazione-cane (ciotola, crocchette, cane che mangia) nei prossimi batch."
+      },
+      "confidenza_match": "bassa"
+    },
+    {
+      "master_slug": "scegliere-primo-cucciolo-guida-cane-principianti",
+      "master_title": "Come Scegliere il Primo Cucciolo: Guida Completa per Principianti",
+      "master_categoria": "guide",
+      "cluster_topic": "Educazione & scelta",
+      "foto_scelta": {
+        "slug": "group-portrait-of-adorable-puppies-2026-01-08-00-07-46-utc",
+        "path_card_jpg": "app/public/img/stock/cani/group-portrait-of-adorable-puppies-2026-01-08-00-07-46-utc-card.jpg",
+        "alt_text": "Ritratto di cinque cani di diverse razze con lingue di fuori su sfondo beige chiaro",
+        "origine": "non_specificato",
+        "categoria_foto": "cani",
+        "sottosoggetti": [
+          "Labrador Retriever nero",
+          "Jack Russell Terrier bianco e marrone",
+          "Bulldog francese bianco",
+          "Carlino fulvo",
+          "Beagle marrone e bianco"
+        ],
+        "rationale": "Gruppo di cuccioli vari: perfetto per l'articolo che aiuta a scegliere il PRIMO cucciolo. Mostra varietà razza/taglia senza puntare su una singola."
+      },
+      "confidenza_match": "alta"
+    },
+    {
+      "master_slug": "razze-gatti-italiane-siamese-foreste-sokoke",
+      "master_title": "Razze di Gatti Italiane: Siamese, Foreste e Sokoke",
+      "master_categoria": "razze",
+      "cluster_topic": "Razze (gatti)",
+      "foto_scelta": {
+        "slug": "cats-portrait-obedient-devon-rex-cat-with-bright-2026-03-20-03-41-36-utc",
+        "path_card_jpg": "app/public/img/stock/cuccioli/cats-portrait-obedient-devon-rex-cat-with-bright-2026-03-20-03-41-36-utc-card.jpg",
+        "alt_text": "Persona in giacca a quadri tiene in braccio un gattino bianco e arancione affettuoso su divano",
+        "origine": "non_specificato",
+        "categoria_foto": "cuccioli",
+        "sottosoggetti": [
+          "gattino",
+          "mani",
+          "abbigliamento a quadri"
+        ],
+        "rationale": "Ritratto gatto studio: visualizza 'razza felina di standard'. Non è italiana specificamente ma lo standard fotografico è coerente con l'articolo."
+      },
+      "confidenza_match": "media"
+    },
+    {
+      "master_slug": "educazione-cucciolo-primi-6-mesi-socializzazione-comandi",
+      "master_title": "Educazione del Cucciolo nei Primi 6 Mesi: Guida Completa",
+      "master_categoria": "comportamento",
+      "cluster_topic": "Educazione & scelta",
+      "foto_scelta": {
+        "slug": "friends-playing-with-cute-puppies-2026-03-20-04-28-19-utc",
+        "path_card_jpg": "app/public/img/stock/persone-pet/friends-playing-with-cute-puppies-2026-03-20-04-28-19-utc-card.jpg",
+        "alt_text": "Famiglia con bambini e tre dolci cuccioli di husky in ambiente caldo e accogliente durante l'inverno",
+        "origine": "non_specificato",
+        "categoria_foto": "persone-pet",
+        "sottosoggetti": [
+          "cuccioli di husky",
+          "bambini",
+          "adulti",
+          "interazione affettuosa"
+        ],
+        "rationale": "Persone che giocano con cuccioli: evoca socializzazione + rinforzo positivo, i 2 pilastri dell'articolo sui primi 6 mesi."
+      },
+      "confidenza_match": "alta"
+    },
+    {
+      "master_slug": "trasporto-cani-auto-art-169-codice-strada",
+      "master_title": "Trasporto cani in auto: obblighi legali e sanzioni secondo Art. 169 CDS",
+      "master_categoria": "guide",
+      "cluster_topic": "Adempimenti legali + Viaggi",
+      "foto_scelta": {
+        "slug": "senior-man-using-laptop-sitting-on-sofa-with-his-t-2026-03-11-00-54-12-utc",
+        "path_card_jpg": "app/public/img/stock/persone-pet/senior-man-using-laptop-sitting-on-sofa-with-his-t-2026-03-11-00-54-12-utc-card.jpg",
+        "alt_text": "Uomo che abbraccia affettuosamente due piccoli cani tricolori seduti insieme sul divano",
+        "origine": "non_specificato",
+        "categoria_foto": "persone-pet",
+        "sottosoggetti": [
+          "uomo",
+          "due cani",
+          "cani da compagnia",
+          "razze piccole"
+        ],
+        "rationale": "Uomo con due cani da compagnia su divano: foto persone-pet domestica neutra. Copertura sub-ottimale: scaricare foto dedicate cane-con-cintura/trasportino in auto nei prossimi batch."
+      },
+      "confidenza_match": "bassa"
+    },
+    {
+      "master_slug": "trasporto-gatti-auto-sicurezza-codice-strada-consigli",
+      "master_title": "Trasporto gatti in auto: guida sicura, obblighi legali e consigli pratici",
+      "master_categoria": "gatti",
+      "cluster_topic": "Viaggi (gatti)",
+      "foto_scelta": {
+        "slug": "striped-cat-sits-on-a-wooden-floor-paws-whis-2026-01-07-01-29-39-utc",
+        "path_card_jpg": "app/public/img/stock/gatti/striped-cat-sits-on-a-wooden-floor-paws-whis-2026-01-07-01-29-39-utc-card.jpg",
+        "alt_text": "Gatto tabby grigio e bianco con occhi verdi luminosi guarda verso l'alto con espressione curiosa",
+        "origine": "non_specificato",
+        "categoria_foto": "gatti",
+        "sottosoggetti": [
+          "gatto tabby",
+          "sguardo diretto",
+          "occhi verdi"
+        ],
+        "rationale": "Gatto tabby adulto seduto, soggetto singolo in posa composta: foto neutra per articolo normativo. Copertura sub-ottimale: scaricare gatto-in-trasportino dedicato nei prossimi batch."
+      },
+      "confidenza_match": "bassa"
+    },
+    {
+      "master_slug": "cani-autostrada-vacanza-regole-codice-strada",
+      "master_title": "Cani in Autostrada e Vacanza: Regole, Documenti e Traghetti",
+      "master_categoria": "viaggi",
+      "cluster_topic": "Viaggi + Adempimenti legali",
+      "foto_scelta": {
+        "slug": "beautiful-dog-golden-retriever-labrador-in-autumn-2026-03-16-22-37-08-utc",
+        "path_card_jpg": "app/public/img/stock/cani/beautiful-dog-golden-retriever-labrador-in-autumn-2026-03-16-22-37-08-utc-card.jpg",
+        "alt_text": "Golden Retriever seduto su una terrazza in legno con sfondo verde sfocato, sguardo attento",
+        "origine": "non_specificato",
+        "categoria_foto": "cani",
+        "sottosoggetti": [
+          "Golden Retriever",
+          "cane adulto",
+          "ritratto"
+        ],
+        "rationale": "Golden Retriever su terrazza in legno, sfondo verde sfocato, mood sereno/elegante. Foto neutra non-evocativa — la v1 (family-beach) era vacanza-estiva, la v2 (couple-beagle-greyhound) era interno domestico. Nel catalogo NON esistono foto cane-in-auto/trasportino/traghetto/autostrada: ripiego su portrait neutro come da brief. Copertura sub-ottimale: scaricare foto dedicate cane-in-viaggio (trasportino, traghetto, sosta autogrill) nei prossimi batch."
+      },
+      "confidenza_match": "bassa"
+    },
+    {
+      "master_slug": "vendere-regalare-cane-legge-italia-obblighi",
+      "master_title": "Vendere o regalare il cane: guida completa alla legge italiana",
+      "master_categoria": "guide",
+      "cluster_topic": "Adempimenti legali",
+      "foto_scelta": {
+        "slug": "portrait-of-golden-retriever-dog-2026-03-17-00-04-36-utc",
+        "path_card_jpg": "app/public/img/stock/cani/portrait-of-golden-retriever-dog-2026-03-17-00-04-36-utc-card.jpg",
+        "alt_text": "Golden Retriever felice con lingua fuori su sfondo verde, ritratto professionale",
+        "origine": "non_specificato",
+        "categoria_foto": "cani",
+        "sottosoggetti": [
+          "Golden Retriever",
+          "cane adulto",
+          "ritratto"
+        ],
+        "rationale": "Ritratto Golden Retriever su fondo neutro: foto istituzionale non-evocativa, coerente con argomento legale di cessione tra privati."
+      },
+      "confidenza_match": "media"
+    },
+    {
+      "master_slug": "passaggio-proprieta-cane-guida-procedura-italiana",
+      "master_title": "Passaggio di Proprietà del Cane: Guida Completa alla Procedura Italiana",
+      "master_categoria": "guide",
+      "cluster_topic": "Adempimenti legali",
+      "foto_scelta": {
+        "slug": "happy-little-dog-in-the-arms-of-its-owners-2026-03-19-09-28-30-utc",
+        "path_card_jpg": "app/public/img/stock/persone-pet/happy-little-dog-in-the-arms-of-its-owners-2026-03-19-09-28-30-utc-card.jpg",
+        "alt_text": "Due uomini sorridenti abbracciano un cane marrone con collare azzurro in un contesto urbano",
+        "origine": "non_specificato",
+        "categoria_foto": "persone-pet",
+        "sottosoggetti": [
+          "uomini",
+          "cane",
+          "occhiali",
+          "abbigliamento casual"
+        ],
+        "rationale": "Piccolo cane in braccio ai proprietari: evoca il passaggio di responsabilità/affidamento. Foto delicata, non transazionale-commerciale."
+      },
+      "confidenza_match": "media"
+    },
+    {
+      "master_slug": "pastore-caucaso-cane-guerra-russo",
+      "master_title": "Pastore del Caucaso: il cane da guerra dell'esercito russo",
+      "master_categoria": "curiosita",
+      "cluster_topic": "Cani eroi/militari",
+      "foto_scelta": {
+        "slug": "border-collie-portrait-on-black-2026-03-09-08-44-55-utc",
+        "path_card_jpg": "app/public/img/stock/cani/border-collie-portrait-on-black-2026-03-09-08-44-55-utc-card.jpg",
+        "alt_text": "Border collie marrone, bianco e nero sorridente su sfondo scuro con lingua fuori",
+        "origine": "non_specificato",
+        "categoria_foto": "cani",
+        "sottosoggetti": [
+          "border collie",
+          "cane tricolore",
+          "ritratto"
+        ],
+        "rationale": "Ritratto su sfondo nero, mood drammatico: la foto migliore disponibile per mood militare/eroico. Copertura sub-ottimale: scaricare foto dedicate pastore caucaso nei prossimi batch."
+      },
+      "confidenza_match": "bassa"
+    },
+    {
+      "master_slug": "pastore-tedesco-esercito-polizia-addestramento",
+      "master_title": "Pastore Tedesco nelle forze armate: da Rin Tin Tin ai cani anti-IED",
+      "master_categoria": "curiosita",
+      "cluster_topic": "Cani eroi/militari",
+      "foto_scelta": {
+        "slug": "head-shot-of-australian-shepherd-sitting-and-panti-2026-01-09-11-01-54-utc",
+        "path_card_jpg": "app/public/img/stock/cani/head-shot-of-australian-shepherd-sitting-and-panti-2026-01-09-11-01-54-utc-card.jpg",
+        "alt_text": "Cane adulto bianco e marrone con sguardo felice su sfondo bianco",
+        "origine": "non_specificato",
+        "categoria_foto": "cani",
+        "sottosoggetti": [
+          "cane adulto",
+          "razza mista",
+          "pastore",
+          "collielike"
+        ],
+        "rationale": "Australian Shepherd al posto del Pastore Tedesco — stesso gruppo cinofilo 'cani da pastore/lavoro'. Copertura sub-ottimale: scaricare foto dedicate pastore tedesco nei prossimi batch."
+      },
+      "confidenza_match": "bassa"
+    },
+    {
+      "master_slug": "malinois-belga-navy-seal-cani",
+      "master_title": "Malinois Belga: il cane eroe del raid a Bin Laden",
+      "master_categoria": "curiosita",
+      "cluster_topic": "Cani eroi/militari",
+      "foto_scelta": {
+        "slug": "selective-focus-shot-of-an-adorable-kooikerhondje-2026-03-18-06-44-27-utc",
+        "path_card_jpg": "app/public/img/stock/cani/selective-focus-shot-of-an-adorable-kooikerhondje-2026-03-18-06-44-27-utc-card.jpg",
+        "alt_text": "Cane marrone e bianco felice con lingua fuori su sfondo verde sfocato",
+        "origine": "non_specificato",
+        "categoria_foto": "cani",
+        "sottosoggetti": [
+          "cane adulto",
+          "razza mista",
+          "pelo lungo",
+          "lingua fuori"
+        ],
+        "rationale": "Cane di taglia media su fondo neutro. Nessun Malinois nel catalogo. Copertura sub-ottimale: scaricare foto dedicate Malinois Belga nei prossimi batch."
+      },
+      "confidenza_match": "bassa"
+    },
+    {
+      "master_slug": "perche-cani-inclinano-testa-studio",
+      "master_title": "Perché i cani inclinano la testa? Uno studio rivela il motivo",
+      "master_categoria": "curiosita",
+      "cluster_topic": "Comportamento/cognitivo",
+      "foto_scelta": {
+        "slug": "domestic-adorable-dog-with-multicolored-eyes-in-wh-2026-03-17-03-30-52-utc",
+        "path_card_jpg": "app/public/img/stock/cani/domestic-adorable-dog-with-multicolored-eyes-in-wh-2026-03-17-03-30-52-utc-card.jpg",
+        "alt_text": "Cane Australian Shepherd bianco e marrone con lingua fuori su sfondo bianco, espressione felice e giocosa",
+        "origine": "non_specificato",
+        "categoria_foto": "cani",
+        "sottosoggetti": [
+          "cane adulto",
+          "Australian Shepherd",
+          "muso felice",
+          "lingua fuori"
+        ],
+        "rationale": "Cane che guarda in camera (mood 'curioso'). Non mostra testa inclinata specificamente. Copertura sub-ottimale: scaricare foto dedicate 'cane che inclina la testa' nei prossimi batch."
+      },
+      "confidenza_match": "bassa"
+    }
+  ]
+}

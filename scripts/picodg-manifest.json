@@ -1,6 +1,6 @@
 {
-  "generato_il": "2026-04-21T20:08:30.583Z",
-  "totale_processate": 57,
+  "generato_il": "2026-04-21T21:34:09.452Z",
+  "totale_processate": 105,
   "foto": [
     {
       "slug": "beautiful-dog-golden-retriever-labrador-in-autumn-2026-03-16-22-37-08-utc",
@@ -2292,6 +2292,1946 @@
         "confidenza": "alta"
       },
       "processato_il": "2026-04-21T20:08:30.583Z"
+    },
+    {
+      "slug": "a-country-road-followed-by-cypress-trees-in-tuscan-2026-03-09-06-34-20-utc",
+      "originale": "picodg/a-country-road-followed-by-cypress-trees-in-tuscan-2026-03-09-06-34-20-utc.jpg",
+      "hash_originale": "sha256:216885939a4b0f86ad36631b31dc7dc0a0f0d85dd3140b05b8001a7055c58a2d",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-sentiero/a-country-road-followed-by-cypress-trees-in-tuscan-2026-03-09-06-34-20-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-sentiero/a-country-road-followed-by-cypress-trees-in-tuscan-2026-03-09-06-34-20-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-sentiero/a-country-road-followed-by-cypress-trees-in-tuscan-2026-03-09-06-34-20-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-sentiero/a-country-road-followed-by-cypress-trees-in-tuscan-2026-03-09-06-34-20-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-sentiero/a-country-road-followed-by-cypress-trees-in-tuscan-2026-03-09-06-34-20-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-sentiero/a-country-road-followed-by-cypress-trees-in-tuscan-2026-03-09-06-34-20-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5184,
+        "h": 3456,
+        "bytes": 2682991
+      },
+      "classificazione": {
+        "categoria": "ambienti-sentiero",
+        "sottosoggetti": [
+          "cipressi",
+          "strada bianca toscana",
+          "val d'orcia",
+          "paesaggio rurale"
+        ],
+        "ambientazione": "campagna toscana con filari di cipressi",
+        "mood": "sereno",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "hero vacanze",
+          "hero sentieri",
+          "articoli vacanze in toscana",
+          "card regioni",
+          "regione-toscana",
+          "OG image viaggi"
+        ],
+        "alt_text_it": "Strada bianca tra filari di cipressi nella campagna toscana",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.275Z"
+    },
+    {
+      "slug": "a-serene-coffee-terrace-lies-vacant-in-san-gimigna-2026-03-18-13-48-21-utc",
+      "originale": "picodg/a-serene-coffee-terrace-lies-vacant-in-san-gimigna-2026-03-18-13-48-21-utc.jpg",
+      "hash_originale": "sha256:f240012967a388790650659453ab5203e28e2baf0e7277a314cc5bb7996c704d",
+      "output": {
+        "thumb_webp": "app/public/img/stock/altro/a-serene-coffee-terrace-lies-vacant-in-san-gimigna-2026-03-18-13-48-21-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/altro/a-serene-coffee-terrace-lies-vacant-in-san-gimigna-2026-03-18-13-48-21-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/altro/a-serene-coffee-terrace-lies-vacant-in-san-gimigna-2026-03-18-13-48-21-utc-card.webp",
+        "card_jpg": "app/public/img/stock/altro/a-serene-coffee-terrace-lies-vacant-in-san-gimigna-2026-03-18-13-48-21-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/altro/a-serene-coffee-terrace-lies-vacant-in-san-gimigna-2026-03-18-13-48-21-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/altro/a-serene-coffee-terrace-lies-vacant-in-san-gimigna-2026-03-18-13-48-21-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 8023,
+        "h": 5351,
+        "bytes": 13982114
+      },
+      "classificazione": {
+        "categoria": "altro",
+        "sottosoggetti": [
+          "terrazza ristorante",
+          "san gimignano",
+          "vista colline toscane",
+          "ombrelloni"
+        ],
+        "ambientazione": "terrazza panoramica di ristorante a San Gimignano",
+        "mood": "tranquillo",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "articoli ristoranti pet-friendly",
+          "hero ristoranti",
+          "regione-toscana"
+        ],
+        "alt_text_it": "Terrazza con tavoli e ombrelloni di un ristorante a San Gimignano con vista sulle colline",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.278Z"
+    },
+    {
+      "slug": "aerial-view-of-yaylata-nature-area-near-rusalka-vi-2026-03-25-04-08-09-utc",
+      "originale": "picodg/aerial-view-of-yaylata-nature-area-near-rusalka-vi-2026-03-25-04-08-09-utc.jpg",
+      "hash_originale": "sha256:a26fb741a2267ea23eacdc125d71f221970f17e4fda651208b950201c4e8f1d6",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-spiaggia/aerial-view-of-yaylata-nature-area-near-rusalka-vi-2026-03-25-04-08-09-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-spiaggia/aerial-view-of-yaylata-nature-area-near-rusalka-vi-2026-03-25-04-08-09-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-spiaggia/aerial-view-of-yaylata-nature-area-near-rusalka-vi-2026-03-25-04-08-09-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-spiaggia/aerial-view-of-yaylata-nature-area-near-rusalka-vi-2026-03-25-04-08-09-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-spiaggia/aerial-view-of-yaylata-nature-area-near-rusalka-vi-2026-03-25-04-08-09-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-spiaggia/aerial-view-of-yaylata-nature-area-near-rusalka-vi-2026-03-25-04-08-09-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 4032,
+        "h": 3024,
+        "bytes": 10185899
+      },
+      "classificazione": {
+        "categoria": "ambienti-spiaggia",
+        "sottosoggetti": [
+          "costa rocciosa",
+          "vista aerea",
+          "mare turchese",
+          "riserva naturale"
+        ],
+        "ambientazione": "costa rocciosa mediterranea vista dall'alto",
+        "mood": "drammatico",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "hero spiagge",
+          "articoli spiagge selvagge",
+          "OG image",
+          "non-italia"
+        ],
+        "alt_text_it": "Vista aerea di una costa rocciosa con mare turchese e scogli affioranti",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.283Z"
+    },
+    {
+      "slug": "agritourism-in-tuscany-beautiful-sunny-day-2026-03-24-12-59-04-utc",
+      "originale": "picodg/agritourism-in-tuscany-beautiful-sunny-day-2026-03-24-12-59-04-utc.jpg",
+      "hash_originale": "sha256:167f35351197a6ed7faed2f0170dff700030e60092ebae7087f8ecb8abdf3bf4",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-hotel/agritourism-in-tuscany-beautiful-sunny-day-2026-03-24-12-59-04-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-hotel/agritourism-in-tuscany-beautiful-sunny-day-2026-03-24-12-59-04-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-hotel/agritourism-in-tuscany-beautiful-sunny-day-2026-03-24-12-59-04-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-hotel/agritourism-in-tuscany-beautiful-sunny-day-2026-03-24-12-59-04-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-hotel/agritourism-in-tuscany-beautiful-sunny-day-2026-03-24-12-59-04-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-hotel/agritourism-in-tuscany-beautiful-sunny-day-2026-03-24-12-59-04-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5184,
+        "h": 3456,
+        "bytes": 21030320
+      },
+      "classificazione": {
+        "categoria": "ambienti-hotel",
+        "sottosoggetti": [
+          "agriturismo",
+          "casale in pietra",
+          "cipressi",
+          "fiori in vaso",
+          "toscana"
+        ],
+        "ambientazione": "esterno di agriturismo toscano in pietra",
+        "mood": "accogliente",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "hero vacanze",
+          "articoli vacanze in toscana",
+          "landing pet-friendly",
+          "regione-toscana",
+          "agriturismo"
+        ],
+        "alt_text_it": "Agriturismo toscano in pietra con cipressi e vasi di fiori lungo il vialetto",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.287Z"
+    },
+    {
+      "slug": "ancient-abbey-of-rosazzo-friuli-2026-03-25-22-53-04-utc",
+      "originale": "picodg/ancient-abbey-of-rosazzo-friuli-2026-03-25-22-53-04-utc.jpg",
+      "hash_originale": "sha256:27f4e190acaf3f61dacc3b8f5d1911717a8c53d319fdd1d0957a499e04fa1ef7",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-hotel/ancient-abbey-of-rosazzo-friuli-2026-03-25-22-53-04-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-hotel/ancient-abbey-of-rosazzo-friuli-2026-03-25-22-53-04-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-hotel/ancient-abbey-of-rosazzo-friuli-2026-03-25-22-53-04-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-hotel/ancient-abbey-of-rosazzo-friuli-2026-03-25-22-53-04-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-hotel/ancient-abbey-of-rosazzo-friuli-2026-03-25-22-53-04-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-hotel/ancient-abbey-of-rosazzo-friuli-2026-03-25-22-53-04-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 8256,
+        "h": 5504,
+        "bytes": 43813227
+      },
+      "classificazione": {
+        "categoria": "ambienti-hotel",
+        "sottosoggetti": [
+          "abbazia",
+          "borgo rurale",
+          "colline friulane",
+          "pietra antica"
+        ],
+        "ambientazione": "abbazia medievale su collina in Friuli",
+        "mood": "tranquillo",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "hero vacanze",
+          "articoli borghi",
+          "regione-friuli-venezia-giulia",
+          "turismo rurale"
+        ],
+        "alt_text_it": "Abbazia di Rosazzo in pietra su una collina del Friuli con prato verde",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.291Z"
+    },
+    {
+      "slug": "azure-trail-is-the-most-simple-the-most-famous-an-2026-03-18-15-58-43-utc",
+      "originale": "picodg/azure-trail-is-the-most-simple-the-most-famous-an-2026-03-18-15-58-43-utc.jpg",
+      "hash_originale": "sha256:1a7feed6aee2181c72c98cb0c1d7e40c7c0232125f6bb7d311799af97ab71bb1",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-sentiero/azure-trail-is-the-most-simple-the-most-famous-an-2026-03-18-15-58-43-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-sentiero/azure-trail-is-the-most-simple-the-most-famous-an-2026-03-18-15-58-43-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-sentiero/azure-trail-is-the-most-simple-the-most-famous-an-2026-03-18-15-58-43-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-sentiero/azure-trail-is-the-most-simple-the-most-famous-an-2026-03-18-15-58-43-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-sentiero/azure-trail-is-the-most-simple-the-most-famous-an-2026-03-18-15-58-43-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-sentiero/azure-trail-is-the-most-simple-the-most-famous-an-2026-03-18-15-58-43-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5184,
+        "h": 3456,
+        "bytes": 22223833
+      },
+      "classificazione": {
+        "categoria": "ambienti-sentiero",
+        "sottosoggetti": [
+          "cinque terre",
+          "sentiero azzurro",
+          "ringhiera in legno",
+          "vista mare"
+        ],
+        "ambientazione": "sentiero panoramico sul mare delle Cinque Terre",
+        "mood": "luminoso",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "hero sentieri",
+          "articoli escursioni",
+          "articoli cinque terre",
+          "regione-liguria"
+        ],
+        "alt_text_it": "Sentiero Azzurro delle Cinque Terre con ringhiera in legno e vista sul mare",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.295Z"
+    },
+    {
+      "slug": "back-view-of-senior-man-wearing-straw-hat-on-terra-2026-03-09-05-22-40-utc",
+      "originale": "picodg/back-view-of-senior-man-wearing-straw-hat-on-terra-2026-03-09-05-22-40-utc.jpg",
+      "hash_originale": "sha256:9ce8e4d52ddfd9eaadc4ea5fe4dfd459b4e2cf4607e2c8831506cec71b28ee97",
+      "output": {
+        "thumb_webp": "app/public/img/stock/altro/back-view-of-senior-man-wearing-straw-hat-on-terra-2026-03-09-05-22-40-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/altro/back-view-of-senior-man-wearing-straw-hat-on-terra-2026-03-09-05-22-40-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/altro/back-view-of-senior-man-wearing-straw-hat-on-terra-2026-03-09-05-22-40-utc-card.webp",
+        "card_jpg": "app/public/img/stock/altro/back-view-of-senior-man-wearing-straw-hat-on-terra-2026-03-09-05-22-40-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/altro/back-view-of-senior-man-wearing-straw-hat-on-terra-2026-03-09-05-22-40-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/altro/back-view-of-senior-man-wearing-straw-hat-on-terra-2026-03-09-05-22-40-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5616,
+        "h": 3744,
+        "bytes": 11766825
+      },
+      "classificazione": {
+        "categoria": "altro",
+        "sottosoggetti": [
+          "uomo anziano",
+          "cappello di paglia",
+          "interno domestico",
+          "porta-finestra"
+        ],
+        "ambientazione": "interno di casa con porta-finestra aperta sul giardino",
+        "mood": "contemplativo",
+        "persone_presenti": true,
+        "num_animali": 0,
+        "adatto_per": [
+          "articoli lifestyle",
+          "articoli anziani con pet"
+        ],
+        "alt_text_it": "Uomo anziano con cappello di paglia seduto di spalle davanti a una porta-finestra aperta",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.298Z"
+    },
+    {
+      "slug": "beautiful-mountain-landscape-in-sunrise-seaside-2026-03-17-05-03-49-utc",
+      "originale": "picodg/beautiful-mountain-landscape-in-sunrise-seaside-2026-03-17-05-03-49-utc.JPG",
+      "hash_originale": "sha256:4815b55f090c4b3e97fe7d356bdc4d25327d4e2e63c3491200fdf2a7531e32ed",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-sentiero/beautiful-mountain-landscape-in-sunrise-seaside-2026-03-17-05-03-49-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-sentiero/beautiful-mountain-landscape-in-sunrise-seaside-2026-03-17-05-03-49-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-sentiero/beautiful-mountain-landscape-in-sunrise-seaside-2026-03-17-05-03-49-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-sentiero/beautiful-mountain-landscape-in-sunrise-seaside-2026-03-17-05-03-49-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-sentiero/beautiful-mountain-landscape-in-sunrise-seaside-2026-03-17-05-03-49-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-sentiero/beautiful-mountain-landscape-in-sunrise-seaside-2026-03-17-05-03-49-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 6720,
+        "h": 4480,
+        "bytes": 16153568
+      },
+      "classificazione": {
+        "categoria": "ambienti-sentiero",
+        "sottosoggetti": [
+          "scalinata panoramica",
+          "promontorio",
+          "alba sul mare",
+          "ringhiera in legno"
+        ],
+        "ambientazione": "scalinata su promontorio affacciato sul mare all'alba",
+        "mood": "contemplativo",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "hero sentieri",
+          "articoli escursioni costiere",
+          "OG image"
+        ],
+        "alt_text_it": "Scalinata in pietra che scende verso il mare all'alba con ringhiere in legno",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.302Z"
+    },
+    {
+      "slug": "beautiful-sea-on-the-dramatic-sunset-2026-03-18-07-05-06-utc",
+      "originale": "picodg/beautiful-sea-on-the-dramatic-sunset-2026-03-18-07-05-06-utc.jpg",
+      "hash_originale": "sha256:7e32e5da8dfba845172a346ed63b6a53217fc14fd8fa5bb30f5a6273116bfb29",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-spiaggia/beautiful-sea-on-the-dramatic-sunset-2026-03-18-07-05-06-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-spiaggia/beautiful-sea-on-the-dramatic-sunset-2026-03-18-07-05-06-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-spiaggia/beautiful-sea-on-the-dramatic-sunset-2026-03-18-07-05-06-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-spiaggia/beautiful-sea-on-the-dramatic-sunset-2026-03-18-07-05-06-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-spiaggia/beautiful-sea-on-the-dramatic-sunset-2026-03-18-07-05-06-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-spiaggia/beautiful-sea-on-the-dramatic-sunset-2026-03-18-07-05-06-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 3000,
+        "h": 2000,
+        "bytes": 2729627
+      },
+      "classificazione": {
+        "categoria": "ambienti-spiaggia",
+        "sottosoggetti": [
+          "spiaggia al tramonto",
+          "ombrellone di paglia",
+          "cielo drammatico"
+        ],
+        "ambientazione": "spiaggia al tramonto con cielo acceso",
+        "mood": "drammatico",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "hero spiagge",
+          "OG image vacanze",
+          "articoli vacanze estive"
+        ],
+        "alt_text_it": "Spiaggia con ombrellone di paglia e cielo al tramonto dai colori accesi",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.305Z"
+    },
+    {
+      "slug": "beautiful-winter-at-alpe-di-siusi-seiser-alm-it-2026-01-05-05-07-38-utc",
+      "originale": "picodg/beautiful-winter-at-alpe-di-siusi-seiser-alm-it-2026-01-05-05-07-38-utc.JPG",
+      "hash_originale": "sha256:bebbfbc3513e43e889053b3f4d764b862fa71f8cb20c09d430723ee67db034a6",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-hotel/beautiful-winter-at-alpe-di-siusi-seiser-alm-it-2026-01-05-05-07-38-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-hotel/beautiful-winter-at-alpe-di-siusi-seiser-alm-it-2026-01-05-05-07-38-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-hotel/beautiful-winter-at-alpe-di-siusi-seiser-alm-it-2026-01-05-05-07-38-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-hotel/beautiful-winter-at-alpe-di-siusi-seiser-alm-it-2026-01-05-05-07-38-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-hotel/beautiful-winter-at-alpe-di-siusi-seiser-alm-it-2026-01-05-05-07-38-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-hotel/beautiful-winter-at-alpe-di-siusi-seiser-alm-it-2026-01-05-05-07-38-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5472,
+        "h": 3648,
+        "bytes": 9671865
+      },
+      "classificazione": {
+        "categoria": "ambienti-hotel",
+        "sottosoggetti": [
+          "baita in legno",
+          "alpe di siusi",
+          "neve",
+          "staccionata",
+          "inverno"
+        ],
+        "ambientazione": "baita di montagna sull'Alpe di Siusi sotto la neve",
+        "mood": "quieto",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "hero vacanze montagna",
+          "articoli vacanze invernali",
+          "regione-trentino-alto-adige",
+          "rifugio"
+        ],
+        "alt_text_it": "Baita in legno innevata sull'Alpe di Siusi con staccionata rustica",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.312Z"
+    },
+    {
+      "slug": "boardwalk-path-at-arrayanes-national-park-villa-2026-03-24-22-58-52-utc",
+      "originale": "picodg/boardwalk-path-at-arrayanes-national-park-villa-2026-03-24-22-58-52-utc.jpg",
+      "hash_originale": "sha256:28b224aabc48e00e6975e09184d415e58823a7bed6d0dc420eb631a7368b84e1",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-sentiero/boardwalk-path-at-arrayanes-national-park-villa-2026-03-24-22-58-52-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-sentiero/boardwalk-path-at-arrayanes-national-park-villa-2026-03-24-22-58-52-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-sentiero/boardwalk-path-at-arrayanes-national-park-villa-2026-03-24-22-58-52-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-sentiero/boardwalk-path-at-arrayanes-national-park-villa-2026-03-24-22-58-52-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-sentiero/boardwalk-path-at-arrayanes-national-park-villa-2026-03-24-22-58-52-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-sentiero/boardwalk-path-at-arrayanes-national-park-villa-2026-03-24-22-58-52-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 6000,
+        "h": 4000,
+        "bytes": 23121653
+      },
+      "classificazione": {
+        "categoria": "ambienti-sentiero",
+        "sottosoggetti": [
+          "passerella in legno",
+          "bosco",
+          "lago alpino",
+          "parco nazionale"
+        ],
+        "ambientazione": "passerella in legno che scende verso un lago alpino",
+        "mood": "sereno",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "hero sentieri",
+          "articoli escursioni",
+          "non-italia"
+        ],
+        "alt_text_it": "Passerella in legno nel bosco con vista su un lago alpino e montagne",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.316Z"
+    },
+    {
+      "slug": "cala-fuili-beach-in-cala-gonone-sardinia-italy-2026-03-26-10-03-13-utc",
+      "originale": "picodg/cala-fuili-beach-in-cala-gonone-sardinia-italy-2026-03-26-10-03-13-utc.jpg",
+      "hash_originale": "sha256:b388869c04930659152db3a03922aa2ba80eb87f012f5ee957f03a59c641e679",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-spiaggia/cala-fuili-beach-in-cala-gonone-sardinia-italy-2026-03-26-10-03-13-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-spiaggia/cala-fuili-beach-in-cala-gonone-sardinia-italy-2026-03-26-10-03-13-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-spiaggia/cala-fuili-beach-in-cala-gonone-sardinia-italy-2026-03-26-10-03-13-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-spiaggia/cala-fuili-beach-in-cala-gonone-sardinia-italy-2026-03-26-10-03-13-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-spiaggia/cala-fuili-beach-in-cala-gonone-sardinia-italy-2026-03-26-10-03-13-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-spiaggia/cala-fuili-beach-in-cala-gonone-sardinia-italy-2026-03-26-10-03-13-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5310,
+        "h": 3540,
+        "bytes": 21701176
+      },
+      "classificazione": {
+        "categoria": "ambienti-spiaggia",
+        "sottosoggetti": [
+          "cala fuili",
+          "cala gonone",
+          "mare turchese",
+          "scogliera",
+          "sardegna"
+        ],
+        "ambientazione": "cala della Sardegna con acque cristalline",
+        "mood": "luminoso",
+        "persone_presenti": true,
+        "num_animali": 0,
+        "adatto_per": [
+          "hero spiagge",
+          "articoli spiagge in sardegna",
+          "regione-sardegna",
+          "OG image"
+        ],
+        "alt_text_it": "Cala Fuili a Cala Gonone in Sardegna con mare turchese e scogliera",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.320Z"
+    },
+    {
+      "slug": "close-up-of-thanksgiving-dinner-at-dining-table-2026-03-25-10-51-34-utc",
+      "originale": "picodg/close-up-of-thanksgiving-dinner-at-dining-table-2026-03-25-10-51-34-utc.jpg",
+      "hash_originale": "sha256:98fe7c7ff4f5f03e097cf1fd535032efb4bec2f448576a1c9258d10a136967ec",
+      "output": {
+        "thumb_webp": "app/public/img/stock/oggetti-cibo/close-up-of-thanksgiving-dinner-at-dining-table-2026-03-25-10-51-34-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/oggetti-cibo/close-up-of-thanksgiving-dinner-at-dining-table-2026-03-25-10-51-34-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/oggetti-cibo/close-up-of-thanksgiving-dinner-at-dining-table-2026-03-25-10-51-34-utc-card.webp",
+        "card_jpg": "app/public/img/stock/oggetti-cibo/close-up-of-thanksgiving-dinner-at-dining-table-2026-03-25-10-51-34-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/oggetti-cibo/close-up-of-thanksgiving-dinner-at-dining-table-2026-03-25-10-51-34-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/oggetti-cibo/close-up-of-thanksgiving-dinner-at-dining-table-2026-03-25-10-51-34-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5868,
+        "h": 3912,
+        "bytes": 9929596
+      },
+      "classificazione": {
+        "categoria": "oggetti-cibo",
+        "sottosoggetti": [
+          "tavola imbandita",
+          "cibo",
+          "vino rosso",
+          "candele",
+          "olive"
+        ],
+        "ambientazione": "tavola elegante con piatti e candele",
+        "mood": "caldo",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "articoli cibo",
+          "articoli ristoranti",
+          "articoli feste con cane"
+        ],
+        "alt_text_it": "Tavola imbandita con ciotole di olive, vino e candele accese",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.324Z"
+    },
+    {
+      "slug": "country-house-in-val-d-orcia-tuscany-at-summer-2026-03-09-01-49-57-utc",
+      "originale": "picodg/country-house-in-val-d-orcia-tuscany-at-summer-2026-03-09-01-49-57-utc.jpg",
+      "hash_originale": "sha256:6002fde169e8a21799fdad1e2242a6a1695890bbe52f095edd0ec4bc3cd98197",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-hotel/country-house-in-val-d-orcia-tuscany-at-summer-2026-03-09-01-49-57-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-hotel/country-house-in-val-d-orcia-tuscany-at-summer-2026-03-09-01-49-57-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-hotel/country-house-in-val-d-orcia-tuscany-at-summer-2026-03-09-01-49-57-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-hotel/country-house-in-val-d-orcia-tuscany-at-summer-2026-03-09-01-49-57-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-hotel/country-house-in-val-d-orcia-tuscany-at-summer-2026-03-09-01-49-57-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-hotel/country-house-in-val-d-orcia-tuscany-at-summer-2026-03-09-01-49-57-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 9166,
+        "h": 6111,
+        "bytes": 19181088
+      },
+      "classificazione": {
+        "categoria": "ambienti-hotel",
+        "sottosoggetti": [
+          "casale",
+          "val d'orcia",
+          "pietra antica",
+          "giardino fiorito"
+        ],
+        "ambientazione": "casale in pietra della Val d'Orcia con giardino",
+        "mood": "accogliente",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "hero vacanze",
+          "articoli agriturismi toscana",
+          "regione-toscana",
+          "landing pet-friendly"
+        ],
+        "alt_text_it": "Casale in pietra della Val d'Orcia con staccionata rustica e fiori",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.329Z"
+    },
+    {
+      "slug": "cute-chihuahua-dog-in-outdoors-2026-03-23-23-50-27-utc",
+      "originale": "picodg/cute-chihuahua-dog-in-outdoors-2026-03-23-23-50-27-utc.jpg",
+      "hash_originale": "sha256:b013311433c42a111200b9c3eb2cd758ffa318f13531dae16cf34a136adce950",
+      "output": {
+        "thumb_webp": "app/public/img/stock/cani/cute-chihuahua-dog-in-outdoors-2026-03-23-23-50-27-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/cani/cute-chihuahua-dog-in-outdoors-2026-03-23-23-50-27-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/cani/cute-chihuahua-dog-in-outdoors-2026-03-23-23-50-27-utc-card.webp",
+        "card_jpg": "app/public/img/stock/cani/cute-chihuahua-dog-in-outdoors-2026-03-23-23-50-27-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/cani/cute-chihuahua-dog-in-outdoors-2026-03-23-23-50-27-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/cani/cute-chihuahua-dog-in-outdoors-2026-03-23-23-50-27-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5472,
+        "h": 3648,
+        "bytes": 17001390
+      },
+      "classificazione": {
+        "categoria": "cani",
+        "sottosoggetti": [
+          "chihuahua",
+          "cane scava",
+          "spiaggia",
+          "sabbia"
+        ],
+        "ambientazione": "spiaggia o riva sabbiosa",
+        "mood": "vivace",
+        "persone_presenti": false,
+        "num_animali": 1,
+        "adatto_per": [
+          "articoli comportamento",
+          "articoli scava",
+          "articoli spiagge dog-friendly"
+        ],
+        "alt_text_it": "Chihuahua che scava una buca nella sabbia della spiaggia",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.332Z"
+    },
+    {
+      "slug": "elegantly-set-table-at-beautiful-patio-2026-01-09-09-28-48-utc",
+      "originale": "picodg/elegantly-set-table-at-beautiful-patio-2026-01-09-09-28-48-utc.jpg",
+      "hash_originale": "sha256:58d3775b3644fc32b4aafdee6e50c1fe00985b32fd1f962e22528a07af6b3d8c",
+      "output": {
+        "thumb_webp": "app/public/img/stock/altro/elegantly-set-table-at-beautiful-patio-2026-01-09-09-28-48-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/altro/elegantly-set-table-at-beautiful-patio-2026-01-09-09-28-48-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/altro/elegantly-set-table-at-beautiful-patio-2026-01-09-09-28-48-utc-card.webp",
+        "card_jpg": "app/public/img/stock/altro/elegantly-set-table-at-beautiful-patio-2026-01-09-09-28-48-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/altro/elegantly-set-table-at-beautiful-patio-2026-01-09-09-28-48-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/altro/elegantly-set-table-at-beautiful-patio-2026-01-09-09-28-48-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5824,
+        "h": 3883,
+        "bytes": 14199561
+      },
+      "classificazione": {
+        "categoria": "altro",
+        "sottosoggetti": [
+          "tavolo apparecchiato",
+          "ristorante fine-dining",
+          "candele",
+          "bicchieri di cristallo"
+        ],
+        "ambientazione": "tavolo apparecchiato di ristorante elegante",
+        "mood": "intimo",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "articoli ristoranti pet-friendly",
+          "hero ristoranti fine-dining"
+        ],
+        "alt_text_it": "Tavolo apparecchiato di un ristorante elegante con bicchieri di cristallo e candele",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.334Z"
+    },
+    {
+      "slug": "exterior-of-a-house-with-a-pool-in-a-luxury-comple-2026-03-17-07-10-22-utc",
+      "originale": "picodg/exterior-of-a-house-with-a-pool-in-a-luxury-comple-2026-03-17-07-10-22-utc.jpg",
+      "hash_originale": "sha256:93e05e6921d57fd0920301441751ffc329b572bfc62c3c20b316db0b218fb537",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-hotel/exterior-of-a-house-with-a-pool-in-a-luxury-comple-2026-03-17-07-10-22-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-hotel/exterior-of-a-house-with-a-pool-in-a-luxury-comple-2026-03-17-07-10-22-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-hotel/exterior-of-a-house-with-a-pool-in-a-luxury-comple-2026-03-17-07-10-22-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-hotel/exterior-of-a-house-with-a-pool-in-a-luxury-comple-2026-03-17-07-10-22-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-hotel/exterior-of-a-house-with-a-pool-in-a-luxury-comple-2026-03-17-07-10-22-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-hotel/exterior-of-a-house-with-a-pool-in-a-luxury-comple-2026-03-17-07-10-22-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 7008,
+        "h": 4672,
+        "bytes": 28836138
+      },
+      "classificazione": {
+        "categoria": "ambienti-hotel",
+        "sottosoggetti": [
+          "villa moderna",
+          "piscina",
+          "pini marittimi",
+          "architettura contemporanea"
+        ],
+        "ambientazione": "esterno di villa moderna con piscina e pini",
+        "mood": "elegante",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "hero vacanze lusso",
+          "articoli ville pet-friendly",
+          "landing pet-friendly"
+        ],
+        "alt_text_it": "Villa moderna con piscina e alti pini marittimi nel giardino",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.338Z"
+    },
+    {
+      "slug": "friends-dining-in-restaurant-2026-03-25-01-11-29-utc",
+      "originale": "picodg/friends-dining-in-restaurant-2026-03-25-01-11-29-utc.jpg",
+      "hash_originale": "sha256:534e6896a834ec65405829a54f4196ce9e6c0c611aab121f57421b7177212f40",
+      "output": {
+        "thumb_webp": "app/public/img/stock/altro/friends-dining-in-restaurant-2026-03-25-01-11-29-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/altro/friends-dining-in-restaurant-2026-03-25-01-11-29-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/altro/friends-dining-in-restaurant-2026-03-25-01-11-29-utc-card.webp",
+        "card_jpg": "app/public/img/stock/altro/friends-dining-in-restaurant-2026-03-25-01-11-29-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/altro/friends-dining-in-restaurant-2026-03-25-01-11-29-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/altro/friends-dining-in-restaurant-2026-03-25-01-11-29-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5760,
+        "h": 3840,
+        "bytes": 12153146
+      },
+      "classificazione": {
+        "categoria": "altro",
+        "sottosoggetti": [
+          "amici a cena",
+          "ristorante",
+          "piatti di insalata",
+          "lanterne"
+        ],
+        "ambientazione": "cena tra amici in un ristorante",
+        "mood": "conviviale",
+        "persone_presenti": true,
+        "num_animali": 0,
+        "adatto_per": [
+          "articoli ristoranti pet-friendly",
+          "articoli socialita con cane"
+        ],
+        "alt_text_it": "Gruppo di amici a cena in un ristorante con insalata e lanterne sul tavolo",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.341Z"
+    },
+    {
+      "slug": "girl-look-at-sunset-on-beach-silhouette-2026-03-13-04-22-52-utc",
+      "originale": "picodg/girl-look-at-sunset-on-beach-silhouette-2026-03-13-04-22-52-utc.jpg",
+      "hash_originale": "sha256:14bece5196307c51d9a07fc4efdd2c70cc0568434ae034bbd37a2d2460282f54",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-spiaggia/girl-look-at-sunset-on-beach-silhouette-2026-03-13-04-22-52-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-spiaggia/girl-look-at-sunset-on-beach-silhouette-2026-03-13-04-22-52-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-spiaggia/girl-look-at-sunset-on-beach-silhouette-2026-03-13-04-22-52-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-spiaggia/girl-look-at-sunset-on-beach-silhouette-2026-03-13-04-22-52-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-spiaggia/girl-look-at-sunset-on-beach-silhouette-2026-03-13-04-22-52-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-spiaggia/girl-look-at-sunset-on-beach-silhouette-2026-03-13-04-22-52-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 3992,
+        "h": 2242,
+        "bytes": 5880196
+      },
+      "classificazione": {
+        "categoria": "ambienti-spiaggia",
+        "sottosoggetti": [
+          "silhouette",
+          "stabilimento balneare",
+          "ombrelloni di paglia",
+          "tramonto"
+        ],
+        "ambientazione": "stabilimento balneare al tramonto con silhouette",
+        "mood": "drammatico",
+        "persone_presenti": true,
+        "num_animali": 0,
+        "adatto_per": [
+          "hero spiagge",
+          "OG image vacanze",
+          "articoli vacanze al mare"
+        ],
+        "alt_text_it": "Silhouette di persona tra ombrelloni di paglia in uno stabilimento balneare al tramonto",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.344Z"
+    },
+    {
+      "slug": "illyrian-sea-lily-2026-03-24-09-55-51-utc",
+      "originale": "picodg/illyrian-sea-lily-2026-03-24-09-55-51-utc.jpg",
+      "hash_originale": "sha256:efbd9cb45f7e5892a2f65bffaa0c4826ddd3df81233e0d2290224bf397393985",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-spiaggia/illyrian-sea-lily-2026-03-24-09-55-51-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-spiaggia/illyrian-sea-lily-2026-03-24-09-55-51-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-spiaggia/illyrian-sea-lily-2026-03-24-09-55-51-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-spiaggia/illyrian-sea-lily-2026-03-24-09-55-51-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-spiaggia/illyrian-sea-lily-2026-03-24-09-55-51-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-spiaggia/illyrian-sea-lily-2026-03-24-09-55-51-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 6330,
+        "h": 4220,
+        "bytes": 22485082
+      },
+      "classificazione": {
+        "categoria": "ambienti-spiaggia",
+        "sottosoggetti": [
+          "dune",
+          "giglio di mare",
+          "pancratium maritimum",
+          "flora mediterranea"
+        ],
+        "ambientazione": "dune costiere con gigli di mare in fiore",
+        "mood": "sereno",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "articoli spiagge selvagge",
+          "articoli natura costiera",
+          "hero spiagge"
+        ],
+        "alt_text_it": "Dune costiere mediterranee con gigli di mare in fiore al tramonto",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.348Z"
+    },
+    {
+      "slug": "italy-seiseralm-family-hiking-2026-03-09-05-00-19-utc",
+      "originale": "picodg/italy-seiseralm-family-hiking-2026-03-09-05-00-19-utc.jpg",
+      "hash_originale": "sha256:c01ee989ab11b06f16fd3ba9ec3ecb01df7c9539160c727f83d5244bf5e564ad",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-sentiero/italy-seiseralm-family-hiking-2026-03-09-05-00-19-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-sentiero/italy-seiseralm-family-hiking-2026-03-09-05-00-19-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-sentiero/italy-seiseralm-family-hiking-2026-03-09-05-00-19-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-sentiero/italy-seiseralm-family-hiking-2026-03-09-05-00-19-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-sentiero/italy-seiseralm-family-hiking-2026-03-09-05-00-19-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-sentiero/italy-seiseralm-family-hiking-2026-03-09-05-00-19-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5147,
+        "h": 3425,
+        "bytes": 4878602
+      },
+      "classificazione": {
+        "categoria": "ambienti-sentiero",
+        "sottosoggetti": [
+          "alpe di siusi",
+          "dolomiti",
+          "segnaletica escursionistica",
+          "famiglia in cammino"
+        ],
+        "ambientazione": "prato dell'Alpe di Siusi con cartello escursionistico e vista Dolomiti",
+        "mood": "luminoso",
+        "persone_presenti": true,
+        "num_animali": 0,
+        "adatto_per": [
+          "hero sentieri",
+          "articoli escursioni in dolomiti",
+          "regione-trentino-alto-adige",
+          "articoli vacanze montagna"
+        ],
+        "alt_text_it": "Segnaletica escursionistica sull'Alpe di Siusi con famiglia in cammino e vista sulle Dolomiti",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.352Z"
+    },
+    {
+      "slug": "lake-como-in-town-bellagio-in-italy-2026-03-20-04-53-53-utc",
+      "originale": "picodg/lake-como-in-town-bellagio-in-italy-2026-03-20-04-53-53-utc.jpg",
+      "hash_originale": "sha256:4446c01d346ad36ffad3f9e06f5aba7784132f3d3da15d876e4b5f65bba31393",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-sentiero/lake-como-in-town-bellagio-in-italy-2026-03-20-04-53-53-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-sentiero/lake-como-in-town-bellagio-in-italy-2026-03-20-04-53-53-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-sentiero/lake-como-in-town-bellagio-in-italy-2026-03-20-04-53-53-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-sentiero/lake-como-in-town-bellagio-in-italy-2026-03-20-04-53-53-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-sentiero/lake-como-in-town-bellagio-in-italy-2026-03-20-04-53-53-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-sentiero/lake-como-in-town-bellagio-in-italy-2026-03-20-04-53-53-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 7020,
+        "h": 4680,
+        "bytes": 31937683
+      },
+      "classificazione": {
+        "categoria": "ambienti-sentiero",
+        "sottosoggetti": [
+          "lago di como",
+          "bellagio",
+          "oleandri",
+          "promenade lacustre"
+        ],
+        "ambientazione": "promenade sul lago di Como a Bellagio con oleandri in fiore",
+        "mood": "vivace",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "hero sentieri",
+          "articoli laghi",
+          "articoli passeggiate col cane",
+          "regione-lombardia"
+        ],
+        "alt_text_it": "Promenade sul lago di Como a Bellagio con oleandri rosa in fiore",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.356Z"
+    },
+    {
+      "slug": "mixed-cocktail-drinks-and-sangria-with-snacks-on-r-2026-03-10-03-57-33-utc",
+      "originale": "picodg/mixed-cocktail-drinks-and-sangria-with-snacks-on-r-2026-03-10-03-57-33-utc.jpg",
+      "hash_originale": "sha256:1b4a0a08a62640859498244d65be1460edb111282c420cd1ce592e232a429177",
+      "output": {
+        "thumb_webp": "app/public/img/stock/oggetti-cibo/mixed-cocktail-drinks-and-sangria-with-snacks-on-r-2026-03-10-03-57-33-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/oggetti-cibo/mixed-cocktail-drinks-and-sangria-with-snacks-on-r-2026-03-10-03-57-33-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/oggetti-cibo/mixed-cocktail-drinks-and-sangria-with-snacks-on-r-2026-03-10-03-57-33-utc-card.webp",
+        "card_jpg": "app/public/img/stock/oggetti-cibo/mixed-cocktail-drinks-and-sangria-with-snacks-on-r-2026-03-10-03-57-33-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/oggetti-cibo/mixed-cocktail-drinks-and-sangria-with-snacks-on-r-2026-03-10-03-57-33-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/oggetti-cibo/mixed-cocktail-drinks-and-sangria-with-snacks-on-r-2026-03-10-03-57-33-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 4075,
+        "h": 2717,
+        "bytes": 9288786
+      },
+      "classificazione": {
+        "categoria": "oggetti-cibo",
+        "sottosoggetti": [
+          "cocktail",
+          "sangria",
+          "aperitivo",
+          "drink estivi"
+        ],
+        "ambientazione": "aperitivo all'aperto con cocktail colorati",
+        "mood": "estivo",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "articoli ristoranti",
+          "articoli aperitivi pet-friendly"
+        ],
+        "alt_text_it": "Cocktail colorati e sangria con tapas su un tavolino all'aperto",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.360Z"
+    },
+    {
+      "slug": "mountain-highway-on-a-slope-above-a-blue-bay-mont-2026-01-07-06-23-38-utc",
+      "originale": "picodg/mountain-highway-on-a-slope-above-a-blue-bay-mont-2026-01-07-06-23-38-utc.jpg",
+      "hash_originale": "sha256:0f6516b0a5b7510c9821c5bfeae7e275de92aac65517e967ae8d60ddade83b60",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-sentiero/mountain-highway-on-a-slope-above-a-blue-bay-mont-2026-01-07-06-23-38-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-sentiero/mountain-highway-on-a-slope-above-a-blue-bay-mont-2026-01-07-06-23-38-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-sentiero/mountain-highway-on-a-slope-above-a-blue-bay-mont-2026-01-07-06-23-38-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-sentiero/mountain-highway-on-a-slope-above-a-blue-bay-mont-2026-01-07-06-23-38-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-sentiero/mountain-highway-on-a-slope-above-a-blue-bay-mont-2026-01-07-06-23-38-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-sentiero/mountain-highway-on-a-slope-above-a-blue-bay-mont-2026-01-07-06-23-38-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5381,
+        "h": 3585,
+        "bytes": 13255240
+      },
+      "classificazione": {
+        "categoria": "ambienti-sentiero",
+        "sottosoggetti": [
+          "costa montenegrina",
+          "strada panoramica",
+          "vista aerea",
+          "mare adriatico"
+        ],
+        "ambientazione": "costa alta affacciata sul mare dall'alto",
+        "mood": "maestoso",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "articoli viaggi con cane",
+          "hero sentieri",
+          "non-italia"
+        ],
+        "alt_text_it": "Vista aerea di una costa montuosa affacciata su una baia di mare blu",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.365Z"
+    },
+    {
+      "slug": "national-park-durmitor-in-montenegro-2026-03-20-04-29-43-utc",
+      "originale": "picodg/national-park-durmitor-in-montenegro-2026-03-20-04-29-43-utc.jpg",
+      "hash_originale": "sha256:8c702843911647fa52edb25cf67cc42fd082b4b6e52dad4d1b06f2da5cd5719e",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-sentiero/national-park-durmitor-in-montenegro-2026-03-20-04-29-43-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-sentiero/national-park-durmitor-in-montenegro-2026-03-20-04-29-43-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-sentiero/national-park-durmitor-in-montenegro-2026-03-20-04-29-43-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-sentiero/national-park-durmitor-in-montenegro-2026-03-20-04-29-43-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-sentiero/national-park-durmitor-in-montenegro-2026-03-20-04-29-43-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-sentiero/national-park-durmitor-in-montenegro-2026-03-20-04-29-43-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 7186,
+        "h": 3500,
+        "bytes": 16014612
+      },
+      "classificazione": {
+        "categoria": "ambienti-sentiero",
+        "sottosoggetti": [
+          "parco nazionale",
+          "durmitor",
+          "panchina in legno",
+          "vette rocciose"
+        ],
+        "ambientazione": "altopiano del parco Durmitor con panchina panoramica",
+        "mood": "maestoso",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "hero sentieri",
+          "articoli trekking",
+          "non-italia"
+        ],
+        "alt_text_it": "Panchina in legno affacciata sulle vette del parco nazionale Durmitor",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.369Z"
+    },
+    {
+      "slug": "panorama-of-the-bay-of-kotor-with-beaches-and-hote-2026-03-18-05-01-28-utc",
+      "originale": "picodg/panorama-of-the-bay-of-kotor-with-beaches-and-hote-2026-03-18-05-01-28-utc.jpg",
+      "hash_originale": "sha256:73a4e8cc209f9ddc78aa7e071b45a9a6ebc342c19dfd32da5aba214beef5d6ea",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-sentiero/panorama-of-the-bay-of-kotor-with-beaches-and-hote-2026-03-18-05-01-28-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-sentiero/panorama-of-the-bay-of-kotor-with-beaches-and-hote-2026-03-18-05-01-28-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-sentiero/panorama-of-the-bay-of-kotor-with-beaches-and-hote-2026-03-18-05-01-28-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-sentiero/panorama-of-the-bay-of-kotor-with-beaches-and-hote-2026-03-18-05-01-28-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-sentiero/panorama-of-the-bay-of-kotor-with-beaches-and-hote-2026-03-18-05-01-28-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-sentiero/panorama-of-the-bay-of-kotor-with-beaches-and-hote-2026-03-18-05-01-28-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 6277,
+        "h": 3640,
+        "bytes": 17796660
+      },
+      "classificazione": {
+        "categoria": "ambienti-sentiero",
+        "sottosoggetti": [
+          "bocche di kotor",
+          "panorama aereo",
+          "baia fiord",
+          "villaggio costiero"
+        ],
+        "ambientazione": "panorama aereo delle bocche di Kotor",
+        "mood": "maestoso",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "articoli viaggi",
+          "hero vacanze",
+          "non-italia"
+        ],
+        "alt_text_it": "Panorama aereo delle bocche di Kotor con villaggio costiero incastonato fra le montagne",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.371Z"
+    },
+    {
+      "slug": "peaceful-autumn-alps-mountain-forest-path-road-vie-2026-03-25-23-42-26-utc",
+      "originale": "picodg/peaceful-autumn-alps-mountain-forest-path-road-vie-2026-03-25-23-42-26-utc.jpg",
+      "hash_originale": "sha256:ba9b7996728f39b0a47ccb9fd42b9e40ba5abf648603d61a16730585d0d7ac82",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-sentiero/peaceful-autumn-alps-mountain-forest-path-road-vie-2026-03-25-23-42-26-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-sentiero/peaceful-autumn-alps-mountain-forest-path-road-vie-2026-03-25-23-42-26-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-sentiero/peaceful-autumn-alps-mountain-forest-path-road-vie-2026-03-25-23-42-26-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-sentiero/peaceful-autumn-alps-mountain-forest-path-road-vie-2026-03-25-23-42-26-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-sentiero/peaceful-autumn-alps-mountain-forest-path-road-vie-2026-03-25-23-42-26-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-sentiero/peaceful-autumn-alps-mountain-forest-path-road-vie-2026-03-25-23-42-26-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5829,
+        "h": 3937,
+        "bytes": 32784499
+      },
+      "classificazione": {
+        "categoria": "ambienti-sentiero",
+        "sottosoggetti": [
+          "strada sterrata",
+          "bosco autunnale",
+          "foglie gialle",
+          "alpi"
+        ],
+        "ambientazione": "strada sterrata in bosco autunnale alpino",
+        "mood": "tranquillo",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "hero sentieri",
+          "articoli escursioni autunnali",
+          "articoli passeggiate col cane"
+        ],
+        "alt_text_it": "Strada sterrata in un bosco alpino con foglie autunnali gialle e arancio",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.375Z"
+    },
+    {
+      "slug": "scenery-nature-landscape-of-high-rock-mountains-2026-03-24-15-48-50-utc",
+      "originale": "picodg/scenery-nature-landscape-of-high-rock-mountains-2026-03-24-15-48-50-utc.jpg",
+      "hash_originale": "sha256:73ffc0d2a5e353f7e5bbc50d4ff422d74f93004404dd9aa4de68d1cade86091e",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-sentiero/scenery-nature-landscape-of-high-rock-mountains-2026-03-24-15-48-50-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-sentiero/scenery-nature-landscape-of-high-rock-mountains-2026-03-24-15-48-50-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-sentiero/scenery-nature-landscape-of-high-rock-mountains-2026-03-24-15-48-50-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-sentiero/scenery-nature-landscape-of-high-rock-mountains-2026-03-24-15-48-50-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-sentiero/scenery-nature-landscape-of-high-rock-mountains-2026-03-24-15-48-50-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-sentiero/scenery-nature-landscape-of-high-rock-mountains-2026-03-24-15-48-50-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 7887,
+        "h": 5261,
+        "bytes": 23404244
+      },
+      "classificazione": {
+        "categoria": "ambienti-sentiero",
+        "sottosoggetti": [
+          "dolomiti",
+          "cornice in legno",
+          "vette rocciose",
+          "punto panoramico"
+        ],
+        "ambientazione": "cornice panoramica che inquadra le Dolomiti",
+        "mood": "maestoso",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "hero sentieri",
+          "articoli dolomiti",
+          "regione-trentino-alto-adige",
+          "articoli instagram spot"
+        ],
+        "alt_text_it": "Cornice in legno che inquadra le Dolomiti innevate come un quadro naturale",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.377Z"
+    },
+    {
+      "slug": "scenic-view-through-rustic-window-2026-03-24-13-53-02-utc",
+      "originale": "picodg/scenic-view-through-rustic-window-2026-03-24-13-53-02-utc.jpg",
+      "hash_originale": "sha256:c6021606534dcd4d65e8540efafa77ccd7f0066fccbbf585333b0e10c51024da",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-interno/scenic-view-through-rustic-window-2026-03-24-13-53-02-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-interno/scenic-view-through-rustic-window-2026-03-24-13-53-02-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-interno/scenic-view-through-rustic-window-2026-03-24-13-53-02-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-interno/scenic-view-through-rustic-window-2026-03-24-13-53-02-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-interno/scenic-view-through-rustic-window-2026-03-24-13-53-02-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-interno/scenic-view-through-rustic-window-2026-03-24-13-53-02-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 8089,
+        "h": 5395,
+        "bytes": 37787286
+      },
+      "classificazione": {
+        "categoria": "ambienti-interno",
+        "sottosoggetti": [
+          "finestra rustica",
+          "uliveto",
+          "interno casale",
+          "glicine"
+        ],
+        "ambientazione": "interno di casale con vista su uliveto",
+        "mood": "quieto",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "articoli agriturismi",
+          "articoli casa con cane",
+          "regione-toscana"
+        ],
+        "alt_text_it": "Vista dall'interno di un casale rustico attraverso una finestra su un uliveto",
+        "confidenza": "media",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.382Z"
+    },
+    {
+      "slug": "small-brick-pavilion-with-shingle-roof-in-starkow-2026-03-26-10-49-44-utc",
+      "originale": "picodg/small-brick-pavilion-with-shingle-roof-in-starkow-2026-03-26-10-49-44-utc.jpg",
+      "hash_originale": "sha256:6dfaf4727d8926c24294debb02d7769658314cffb628f3e6b107d28bac0ecd92",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-sentiero/small-brick-pavilion-with-shingle-roof-in-starkow-2026-03-26-10-49-44-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-sentiero/small-brick-pavilion-with-shingle-roof-in-starkow-2026-03-26-10-49-44-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-sentiero/small-brick-pavilion-with-shingle-roof-in-starkow-2026-03-26-10-49-44-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-sentiero/small-brick-pavilion-with-shingle-roof-in-starkow-2026-03-26-10-49-44-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-sentiero/small-brick-pavilion-with-shingle-roof-in-starkow-2026-03-26-10-49-44-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-sentiero/small-brick-pavilion-with-shingle-roof-in-starkow-2026-03-26-10-49-44-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 4272,
+        "h": 2856,
+        "bytes": 10233655
+      },
+      "classificazione": {
+        "categoria": "ambienti-sentiero",
+        "sottosoggetti": [
+          "padiglione antico",
+          "parco",
+          "vista attraverso cornice di alberi"
+        ],
+        "ambientazione": "parco con piccolo padiglione antico",
+        "mood": "quieto",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "articoli passeggiate col cane",
+          "non-italia"
+        ],
+        "alt_text_it": "Piccolo padiglione antico in un parco visto attraverso una cornice di alberi",
+        "confidenza": "media",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.385Z"
+    },
+    {
+      "slug": "small-foot-prints-of-a-wild-frog-in-sand-of-southw-2026-01-11-10-25-33-utc",
+      "originale": "picodg/small-foot-prints-of-a-wild-frog-in-sand-of-southw-2026-01-11-10-25-33-utc.jpg",
+      "hash_originale": "sha256:6967fadd912f5bf0361ba141311deed8ad46c891eb8da23eff69838331ba75b7",
+      "output": {
+        "thumb_webp": "app/public/img/stock/altro/small-foot-prints-of-a-wild-frog-in-sand-of-southw-2026-01-11-10-25-33-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/altro/small-foot-prints-of-a-wild-frog-in-sand-of-southw-2026-01-11-10-25-33-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/altro/small-foot-prints-of-a-wild-frog-in-sand-of-southw-2026-01-11-10-25-33-utc-card.webp",
+        "card_jpg": "app/public/img/stock/altro/small-foot-prints-of-a-wild-frog-in-sand-of-southw-2026-01-11-10-25-33-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/altro/small-foot-prints-of-a-wild-frog-in-sand-of-southw-2026-01-11-10-25-33-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/altro/small-foot-prints-of-a-wild-frog-in-sand-of-southw-2026-01-11-10-25-33-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5184,
+        "h": 2001,
+        "bytes": 12156230
+      },
+      "classificazione": {
+        "categoria": "altro",
+        "sottosoggetti": [
+          "orme",
+          "rana selvatica",
+          "sabbia",
+          "natura"
+        ],
+        "ambientazione": "sabbia con impronte di piccolo anfibio",
+        "mood": "neutro",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "articoli natura",
+          "articoli curiosita",
+          "articoli educazione bambini con pet"
+        ],
+        "alt_text_it": "Impronte di rana selvatica nella sabbia di una riva",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.388Z"
+    },
+    {
+      "slug": "small-grove-on-empty-dry-field-2026-01-09-09-16-08-utc",
+      "originale": "picodg/small-grove-on-empty-dry-field-2026-01-09-09-16-08-utc.jpg",
+      "hash_originale": "sha256:e70eae6ad56a44e58572e4566ce09a3b4904030383a10819296c1ecbf9633b8b",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-sentiero/small-grove-on-empty-dry-field-2026-01-09-09-16-08-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-sentiero/small-grove-on-empty-dry-field-2026-01-09-09-16-08-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-sentiero/small-grove-on-empty-dry-field-2026-01-09-09-16-08-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-sentiero/small-grove-on-empty-dry-field-2026-01-09-09-16-08-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-sentiero/small-grove-on-empty-dry-field-2026-01-09-09-16-08-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-sentiero/small-grove-on-empty-dry-field-2026-01-09-09-16-08-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 7952,
+        "h": 5304,
+        "bytes": 44841385
+      },
+      "classificazione": {
+        "categoria": "ambienti-sentiero",
+        "sottosoggetti": [
+          "casale toscano",
+          "cipressi",
+          "campo coltivato",
+          "luce calda"
+        ],
+        "ambientazione": "casale toscano con filare di cipressi al tramonto",
+        "mood": "dorato",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "hero vacanze",
+          "hero sentieri",
+          "articoli vacanze in toscana",
+          "regione-toscana",
+          "OG image"
+        ],
+        "alt_text_it": "Casale toscano con filare di cipressi su campo coltivato in luce dorata",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.390Z"
+    },
+    {
+      "slug": "st-magdalena-church-in-val-di-funes-valley-dolomi-2026-01-05-05-08-51-utc",
+      "originale": "picodg/st-magdalena-church-in-val-di-funes-valley-dolomi-2026-01-05-05-08-51-utc.jpg",
+      "hash_originale": "sha256:52bf291340e5afea7eb0481f329a4bce500ae7406767bd22808ee9bd5d259185",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-sentiero/st-magdalena-church-in-val-di-funes-valley-dolomi-2026-01-05-05-08-51-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-sentiero/st-magdalena-church-in-val-di-funes-valley-dolomi-2026-01-05-05-08-51-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-sentiero/st-magdalena-church-in-val-di-funes-valley-dolomi-2026-01-05-05-08-51-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-sentiero/st-magdalena-church-in-val-di-funes-valley-dolomi-2026-01-05-05-08-51-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-sentiero/st-magdalena-church-in-val-di-funes-valley-dolomi-2026-01-05-05-08-51-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-sentiero/st-magdalena-church-in-val-di-funes-valley-dolomi-2026-01-05-05-08-51-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5986,
+        "h": 3992,
+        "bytes": 20664612
+      },
+      "classificazione": {
+        "categoria": "ambienti-sentiero",
+        "sottosoggetti": [
+          "val di funes",
+          "dolomiti",
+          "segnaletica escursionistica",
+          "villaggio alpino"
+        ],
+        "ambientazione": "Val di Funes con segnaletica escursionistica e Dolomiti sullo sfondo",
+        "mood": "maestoso",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "hero sentieri",
+          "articoli escursioni dolomiti",
+          "regione-trentino-alto-adige",
+          "articoli vacanze montagna"
+        ],
+        "alt_text_it": "Segnaletica escursionistica in Val di Funes con il gruppo delle Odle sullo sfondo",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.392Z"
+    },
+    {
+      "slug": "street-cafe-on-the-perissa-beach-greece-2026-03-26-09-51-41-utc",
+      "originale": "picodg/street-cafe-on-the-perissa-beach-greece-2026-03-26-09-51-41-utc.jpg",
+      "hash_originale": "sha256:9b1c7d30f47d77aff2ec8b60d23efef3ad57d4b18f9b3a9fbc4dc35828050330",
+      "output": {
+        "thumb_webp": "app/public/img/stock/altro/street-cafe-on-the-perissa-beach-greece-2026-03-26-09-51-41-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/altro/street-cafe-on-the-perissa-beach-greece-2026-03-26-09-51-41-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/altro/street-cafe-on-the-perissa-beach-greece-2026-03-26-09-51-41-utc-card.webp",
+        "card_jpg": "app/public/img/stock/altro/street-cafe-on-the-perissa-beach-greece-2026-03-26-09-51-41-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/altro/street-cafe-on-the-perissa-beach-greece-2026-03-26-09-51-41-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/altro/street-cafe-on-the-perissa-beach-greece-2026-03-26-09-51-41-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 3600,
+        "h": 2400,
+        "bytes": 10883837
+      },
+      "classificazione": {
+        "categoria": "altro",
+        "sottosoggetti": [
+          "ristorante di spiaggia",
+          "perissa beach",
+          "ombrelloni di paglia",
+          "grecia"
+        ],
+        "ambientazione": "ristorante sulla spiaggia di Perissa",
+        "mood": "rilassato",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "articoli ristoranti pet-friendly",
+          "articoli vacanze al mare",
+          "non-italia"
+        ],
+        "alt_text_it": "Ristorante sulla spiaggia di Perissa con ombrelloni di paglia e tavoli in legno",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.396Z"
+    },
+    {
+      "slug": "sunbeds-and-parasols-on-the-seashore-beach-sea-a-2026-03-19-22-49-16-utc",
+      "originale": "picodg/sunbeds-and-parasols-on-the-seashore-beach-sea-a-2026-03-19-22-49-16-utc.jpg",
+      "hash_originale": "sha256:e318bdf09ea42ea9db223bec0af9b5a41e576f43d2e3bfb54767425d3039a28a",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-spiaggia/sunbeds-and-parasols-on-the-seashore-beach-sea-a-2026-03-19-22-49-16-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-spiaggia/sunbeds-and-parasols-on-the-seashore-beach-sea-a-2026-03-19-22-49-16-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-spiaggia/sunbeds-and-parasols-on-the-seashore-beach-sea-a-2026-03-19-22-49-16-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-spiaggia/sunbeds-and-parasols-on-the-seashore-beach-sea-a-2026-03-19-22-49-16-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-spiaggia/sunbeds-and-parasols-on-the-seashore-beach-sea-a-2026-03-19-22-49-16-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-spiaggia/sunbeds-and-parasols-on-the-seashore-beach-sea-a-2026-03-19-22-49-16-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5984,
+        "h": 3989,
+        "bytes": 8498679
+      },
+      "classificazione": {
+        "categoria": "ambienti-spiaggia",
+        "sottosoggetti": [
+          "stabilimento balneare",
+          "sdraio arancioni",
+          "ombrelloni chiusi",
+          "mare"
+        ],
+        "ambientazione": "stabilimento balneare italiano con file di sdraio",
+        "mood": "calmo",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "hero spiagge",
+          "articoli spiagge attrezzate",
+          "articoli vacanze estive"
+        ],
+        "alt_text_it": "File di sdraio arancioni e ombrelloni chiusi in uno stabilimento balneare italiano",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.400Z"
+    },
+    {
+      "slug": "sunny-view-of-myrtos-beach-colorful-morning-scene-2026-03-25-23-30-24-utc",
+      "originale": "picodg/sunny-view-of-myrtos-beach-colorful-morning-scene-2026-03-25-23-30-24-utc.jpg",
+      "hash_originale": "sha256:436721eea8f15b857e2781b97b27950e30b1e023aef50029407e55166337273f",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-spiaggia/sunny-view-of-myrtos-beach-colorful-morning-scene-2026-03-25-23-30-24-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-spiaggia/sunny-view-of-myrtos-beach-colorful-morning-scene-2026-03-25-23-30-24-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-spiaggia/sunny-view-of-myrtos-beach-colorful-morning-scene-2026-03-25-23-30-24-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-spiaggia/sunny-view-of-myrtos-beach-colorful-morning-scene-2026-03-25-23-30-24-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-spiaggia/sunny-view-of-myrtos-beach-colorful-morning-scene-2026-03-25-23-30-24-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-spiaggia/sunny-view-of-myrtos-beach-colorful-morning-scene-2026-03-25-23-30-24-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 7957,
+        "h": 4500,
+        "bytes": 42605636
+      },
+      "classificazione": {
+        "categoria": "ambienti-spiaggia",
+        "sottosoggetti": [
+          "myrtos beach",
+          "cefalonia",
+          "mare turchese",
+          "scogliera"
+        ],
+        "ambientazione": "spiaggia di Myrtos con rocce e mare cristallino",
+        "mood": "luminoso",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "hero spiagge",
+          "articoli spiagge mediterranee",
+          "non-italia"
+        ],
+        "alt_text_it": "Spiaggia di Myrtos con rocce bianche in primo piano e mare turchese",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.404Z"
+    },
+    {
+      "slug": "sunrise-and-deck-with-chairs-chairs-on-the-promena-2026-03-26-07-50-22-utc",
+      "originale": "picodg/sunrise-and-deck-with-chairs-chairs-on-the-promena-2026-03-26-07-50-22-utc.jpg",
+      "hash_originale": "sha256:f383f987252f62821e73e2748fe7cd426f88b9f285ff0bb82fe27ca67ac30003",
+      "output": {
+        "thumb_webp": "app/public/img/stock/altro/sunrise-and-deck-with-chairs-chairs-on-the-promena-2026-03-26-07-50-22-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/altro/sunrise-and-deck-with-chairs-chairs-on-the-promena-2026-03-26-07-50-22-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/altro/sunrise-and-deck-with-chairs-chairs-on-the-promena-2026-03-26-07-50-22-utc-card.webp",
+        "card_jpg": "app/public/img/stock/altro/sunrise-and-deck-with-chairs-chairs-on-the-promena-2026-03-26-07-50-22-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/altro/sunrise-and-deck-with-chairs-chairs-on-the-promena-2026-03-26-07-50-22-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/altro/sunrise-and-deck-with-chairs-chairs-on-the-promena-2026-03-26-07-50-22-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5333,
+        "h": 3555,
+        "bytes": 12073426
+      },
+      "classificazione": {
+        "categoria": "altro",
+        "sottosoggetti": [
+          "ristorante sul mare",
+          "sedie bianche",
+          "alba",
+          "promenade"
+        ],
+        "ambientazione": "ristorante sulla promenade al tramonto/alba",
+        "mood": "sereno",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "articoli ristoranti pet-friendly",
+          "hero ristoranti sul mare"
+        ],
+        "alt_text_it": "Tavoli e sedie bianchi di un ristorante sul mare illuminati dall'alba",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.408Z"
+    },
+    {
+      "slug": "sunrise-on-the-beach-2026-03-09-06-35-30-utc",
+      "originale": "picodg/sunrise-on-the-beach-2026-03-09-06-35-30-utc.jpg",
+      "hash_originale": "sha256:13bcbc527b2a604225309e92406de19e1e46e87a9bef1aa098bf70becccbe74e",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-spiaggia/sunrise-on-the-beach-2026-03-09-06-35-30-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-spiaggia/sunrise-on-the-beach-2026-03-09-06-35-30-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-spiaggia/sunrise-on-the-beach-2026-03-09-06-35-30-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-spiaggia/sunrise-on-the-beach-2026-03-09-06-35-30-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-spiaggia/sunrise-on-the-beach-2026-03-09-06-35-30-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-spiaggia/sunrise-on-the-beach-2026-03-09-06-35-30-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5543,
+        "h": 3696,
+        "bytes": 10217602
+      },
+      "classificazione": {
+        "categoria": "ambienti-spiaggia",
+        "sottosoggetti": [
+          "alba sulla spiaggia",
+          "ombrellone di paglia",
+          "lettino"
+        ],
+        "ambientazione": "spiaggia con ombrellone di paglia all'alba",
+        "mood": "sereno",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "hero spiagge",
+          "OG image vacanze",
+          "articoli vacanze al mare"
+        ],
+        "alt_text_it": "Spiaggia con ombrellone di paglia e lettino illuminati dal sole che sorge sul mare",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.412Z"
+    },
+    {
+      "slug": "sunset-glow-on-a-cabin-in-zug-2026-03-25-07-42-11-utc",
+      "originale": "picodg/sunset-glow-on-a-cabin-in-zug-2026-03-25-07-42-11-utc.jpg",
+      "hash_originale": "sha256:07f6339757ee52f51493b9f8fba8a8af18e8308f2f51d888accb9db825ee12de",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-hotel/sunset-glow-on-a-cabin-in-zug-2026-03-25-07-42-11-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-hotel/sunset-glow-on-a-cabin-in-zug-2026-03-25-07-42-11-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-hotel/sunset-glow-on-a-cabin-in-zug-2026-03-25-07-42-11-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-hotel/sunset-glow-on-a-cabin-in-zug-2026-03-25-07-42-11-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-hotel/sunset-glow-on-a-cabin-in-zug-2026-03-25-07-42-11-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-hotel/sunset-glow-on-a-cabin-in-zug-2026-03-25-07-42-11-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 7925,
+        "h": 5286,
+        "bytes": 33888264
+      },
+      "classificazione": {
+        "categoria": "ambienti-hotel",
+        "sottosoggetti": [
+          "baita alpina",
+          "neve",
+          "tramonto",
+          "panca in legno"
+        ],
+        "ambientazione": "baita alpina innevata al tramonto",
+        "mood": "caldo",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "hero vacanze montagna",
+          "articoli vacanze invernali",
+          "non-italia"
+        ],
+        "alt_text_it": "Baita alpina in legno sulla neve illuminata dai raggi del tramonto",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.414Z"
+    },
+    {
+      "slug": "sunset-in-the-heart-of-tuscany-2026-03-15-23-59-30-utc",
+      "originale": "picodg/sunset-in-the-heart-of-tuscany-2026-03-15-23-59-30-utc.jpg",
+      "hash_originale": "sha256:b9c83aa8c5f0af81da1c925ba93955d9ae6cf67c7bc30014f7d622bde2d205e0",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-sentiero/sunset-in-the-heart-of-tuscany-2026-03-15-23-59-30-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-sentiero/sunset-in-the-heart-of-tuscany-2026-03-15-23-59-30-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-sentiero/sunset-in-the-heart-of-tuscany-2026-03-15-23-59-30-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-sentiero/sunset-in-the-heart-of-tuscany-2026-03-15-23-59-30-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-sentiero/sunset-in-the-heart-of-tuscany-2026-03-15-23-59-30-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-sentiero/sunset-in-the-heart-of-tuscany-2026-03-15-23-59-30-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5044,
+        "h": 5000,
+        "bytes": 15764853
+      },
+      "classificazione": {
+        "categoria": "ambienti-sentiero",
+        "sottosoggetti": [
+          "strada bianca",
+          "cipressi toscani",
+          "tramonto",
+          "val d'orcia"
+        ],
+        "ambientazione": "strada bianca tra cipressi in Toscana al tramonto",
+        "mood": "drammatico",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "hero vacanze",
+          "hero sentieri",
+          "articoli vacanze in toscana",
+          "regione-toscana",
+          "OG image"
+        ],
+        "alt_text_it": "Strada bianca tra cipressi toscani illuminata dai colori del tramonto",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.416Z"
+    },
+    {
+      "slug": "swimming-pool-of-a-luxury-resort-with-waterfall-an-2026-03-26-05-09-53-utc",
+      "originale": "picodg/swimming-pool-of-a-luxury-resort-with-waterfall-an-2026-03-26-05-09-53-utc.jpg",
+      "hash_originale": "sha256:6b85f829c8e85f401672ba2a1ab1ea7207c12ab6a594b0fea28fc694b047375f",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-hotel/swimming-pool-of-a-luxury-resort-with-waterfall-an-2026-03-26-05-09-53-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-hotel/swimming-pool-of-a-luxury-resort-with-waterfall-an-2026-03-26-05-09-53-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-hotel/swimming-pool-of-a-luxury-resort-with-waterfall-an-2026-03-26-05-09-53-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-hotel/swimming-pool-of-a-luxury-resort-with-waterfall-an-2026-03-26-05-09-53-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-hotel/swimming-pool-of-a-luxury-resort-with-waterfall-an-2026-03-26-05-09-53-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-hotel/swimming-pool-of-a-luxury-resort-with-waterfall-an-2026-03-26-05-09-53-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 4992,
+        "h": 3328,
+        "bytes": 15454237
+      },
+      "classificazione": {
+        "categoria": "ambienti-hotel",
+        "sottosoggetti": [
+          "masseria",
+          "piscina",
+          "cascata decorativa",
+          "lettini"
+        ],
+        "ambientazione": "piscina di masseria in pietra con cascata decorativa",
+        "mood": "rilassato",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "hero vacanze",
+          "articoli masserie pet-friendly",
+          "landing pet-friendly",
+          "regione-puglia"
+        ],
+        "alt_text_it": "Piscina di una masseria in pietra con cascata decorativa e ombrellone",
+        "confidenza": "media",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.420Z"
+    },
+    {
+      "slug": "tables-in-street-cafe-in-tbilisi-georgia-2026-01-05-05-49-09-utc",
+      "originale": "picodg/tables-in-street-cafe-in-tbilisi-georgia-2026-01-05-05-49-09-utc.jpg",
+      "hash_originale": "sha256:c39e81bfc90d0440b79bd7a16d39e955270ca5986f6391cea7ea9d24ab428d74",
+      "output": {
+        "thumb_webp": "app/public/img/stock/altro/tables-in-street-cafe-in-tbilisi-georgia-2026-01-05-05-49-09-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/altro/tables-in-street-cafe-in-tbilisi-georgia-2026-01-05-05-49-09-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/altro/tables-in-street-cafe-in-tbilisi-georgia-2026-01-05-05-49-09-utc-card.webp",
+        "card_jpg": "app/public/img/stock/altro/tables-in-street-cafe-in-tbilisi-georgia-2026-01-05-05-49-09-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/altro/tables-in-street-cafe-in-tbilisi-georgia-2026-01-05-05-49-09-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/altro/tables-in-street-cafe-in-tbilisi-georgia-2026-01-05-05-49-09-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 2443,
+        "h": 3600,
+        "bytes": 5083059
+      },
+      "classificazione": {
+        "categoria": "altro",
+        "sottosoggetti": [
+          "caffè stradale",
+          "tbilisi",
+          "tavoli allineati",
+          "fiori"
+        ],
+        "ambientazione": "caffè stradale con tavoli allineati tra i palazzi",
+        "mood": "accogliente",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "articoli ristoranti pet-friendly",
+          "articoli cafe urbani",
+          "non-italia"
+        ],
+        "alt_text_it": "Caffè stradale con tavoli allineati e fiori tra i palazzi di Tbilisi",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.423Z"
+    },
+    {
+      "slug": "tourists-stroll-on-a-sunny-summer-day-enjoying-the-2026-01-05-06-09-22-utc",
+      "originale": "picodg/tourists-stroll-on-a-sunny-summer-day-enjoying-the-2026-01-05-06-09-22-utc.jpg",
+      "hash_originale": "sha256:f4c93044757e21ae5ccbd7928e6e28d8e8628a2ad65351f84cc56dc9edd16c74",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-spiaggia/tourists-stroll-on-a-sunny-summer-day-enjoying-the-2026-01-05-06-09-22-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-spiaggia/tourists-stroll-on-a-sunny-summer-day-enjoying-the-2026-01-05-06-09-22-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-spiaggia/tourists-stroll-on-a-sunny-summer-day-enjoying-the-2026-01-05-06-09-22-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-spiaggia/tourists-stroll-on-a-sunny-summer-day-enjoying-the-2026-01-05-06-09-22-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-spiaggia/tourists-stroll-on-a-sunny-summer-day-enjoying-the-2026-01-05-06-09-22-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-spiaggia/tourists-stroll-on-a-sunny-summer-day-enjoying-the-2026-01-05-06-09-22-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 5962,
+        "h": 3980,
+        "bytes": 14579913
+      },
+      "classificazione": {
+        "categoria": "ambienti-spiaggia",
+        "sottosoggetti": [
+          "pontile",
+          "lago",
+          "ombrellone a raggi",
+          "turisti in lontananza"
+        ],
+        "ambientazione": "pontile su lago con turisti e ombrellone a raggi",
+        "mood": "estivo",
+        "persone_presenti": true,
+        "num_animali": 0,
+        "adatto_per": [
+          "hero spiagge",
+          "articoli laghi",
+          "articoli vacanze estive"
+        ],
+        "alt_text_it": "Pontile su un lago con turisti in cammino e ombrellone a raggi giallo-blu",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.426Z"
+    },
+    {
+      "slug": "trail-through-a-forest-in-the-albanian-alps-on-the-2026-01-11-09-59-11-utc",
+      "originale": "picodg/trail-through-a-forest-in-the-albanian-alps-on-the-2026-01-11-09-59-11-utc.jpg",
+      "hash_originale": "sha256:190b56f9cb2da876b0723bd0ea17476d767f4d7f5adc254a0feb2aa9b149313a",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-sentiero/trail-through-a-forest-in-the-albanian-alps-on-the-2026-01-11-09-59-11-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-sentiero/trail-through-a-forest-in-the-albanian-alps-on-the-2026-01-11-09-59-11-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-sentiero/trail-through-a-forest-in-the-albanian-alps-on-the-2026-01-11-09-59-11-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-sentiero/trail-through-a-forest-in-the-albanian-alps-on-the-2026-01-11-09-59-11-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-sentiero/trail-through-a-forest-in-the-albanian-alps-on-the-2026-01-11-09-59-11-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-sentiero/trail-through-a-forest-in-the-albanian-alps-on-the-2026-01-11-09-59-11-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 6016,
+        "h": 4016,
+        "bytes": 34115663
+      },
+      "classificazione": {
+        "categoria": "ambienti-sentiero",
+        "sottosoggetti": [
+          "bosco di faggi",
+          "sentiero",
+          "alpi albanesi"
+        ],
+        "ambientazione": "sentiero in bosco di faggi delle Alpi albanesi",
+        "mood": "sereno",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "hero sentieri",
+          "articoli escursioni",
+          "non-italia"
+        ],
+        "alt_text_it": "Sentiero che attraversa un bosco di faggi delle Alpi albanesi",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.430Z"
+    },
+    {
+      "slug": "trulli-of-the-itria-valley-details-in-the-sky-pu-2026-03-25-22-55-22-utc",
+      "originale": "picodg/trulli-of-the-itria-valley-details-in-the-sky-pu-2026-03-25-22-55-22-utc.jpg",
+      "hash_originale": "sha256:cb293cc0b5a9d9ce4b42f2a1a33989284023280afc4861af373610c46ad4ea57",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-hotel/trulli-of-the-itria-valley-details-in-the-sky-pu-2026-03-25-22-55-22-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-hotel/trulli-of-the-itria-valley-details-in-the-sky-pu-2026-03-25-22-55-22-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-hotel/trulli-of-the-itria-valley-details-in-the-sky-pu-2026-03-25-22-55-22-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-hotel/trulli-of-the-itria-valley-details-in-the-sky-pu-2026-03-25-22-55-22-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-hotel/trulli-of-the-itria-valley-details-in-the-sky-pu-2026-03-25-22-55-22-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-hotel/trulli-of-the-itria-valley-details-in-the-sky-pu-2026-03-25-22-55-22-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 7360,
+        "h": 4912,
+        "bytes": 37831349
+      },
+      "classificazione": {
+        "categoria": "ambienti-hotel",
+        "sottosoggetti": [
+          "trulli",
+          "valle d'itria",
+          "puglia",
+          "ulivo",
+          "pietra bianca"
+        ],
+        "ambientazione": "trulli della Valle d'Itria con ulivo in primo piano",
+        "mood": "autentico",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "hero vacanze",
+          "articoli masserie pet-friendly",
+          "articoli trulli",
+          "regione-puglia",
+          "landing pet-friendly"
+        ],
+        "alt_text_it": "Trulli della Valle d'Itria in pietra bianca con un ulivo in primo piano",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.434Z"
+    },
+    {
+      "slug": "trullopugliagenerated-image-2026-03-26-23-38-27-utc",
+      "originale": "picodg/trullopugliagenerated-image-2026-03-26-23-38-27-utc.jpg",
+      "hash_originale": "sha256:265e889117991c5b9a64d4c1970e7350a2b83f11fbbfa3e2fc4f67261efe3694",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-hotel/trullopugliagenerated-image-2026-03-26-23-38-27-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-hotel/trullopugliagenerated-image-2026-03-26-23-38-27-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-hotel/trullopugliagenerated-image-2026-03-26-23-38-27-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-hotel/trullopugliagenerated-image-2026-03-26-23-38-27-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-hotel/trullopugliagenerated-image-2026-03-26-23-38-27-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-hotel/trullopugliagenerated-image-2026-03-26-23-38-27-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 8192,
+        "h": 5464,
+        "bytes": 40383903
+      },
+      "classificazione": {
+        "categoria": "ambienti-hotel",
+        "sottosoggetti": [
+          "trullo",
+          "ulivo secolare",
+          "campagna pugliese"
+        ],
+        "ambientazione": "trullo in un uliveto pugliese",
+        "mood": "quieto",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "articoli vacanze",
+          "articoli trulli",
+          "regione-puglia",
+          "ai_content",
+          "OG image social"
+        ],
+        "alt_text_it": "Trullo in campagna pugliese tra ulivi secolari al tramonto",
+        "confidenza": "media",
+        "origine": "ai_enhanced"
+      },
+      "processato_il": "2026-04-21T21:34:09.438Z"
+    },
+    {
+      "slug": "wide-countryside-view-of-abruzzo-hills-through-far-2026-03-17-21-31-27-utc",
+      "originale": "picodg/wide-countryside-view-of-abruzzo-hills-through-far-2026-03-17-21-31-27-utc.jpg",
+      "hash_originale": "sha256:5d6fcb8f02937fd63ad84661ffed5b44b824d613f78d317502466210fb26109d",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-interno/wide-countryside-view-of-abruzzo-hills-through-far-2026-03-17-21-31-27-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-interno/wide-countryside-view-of-abruzzo-hills-through-far-2026-03-17-21-31-27-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-interno/wide-countryside-view-of-abruzzo-hills-through-far-2026-03-17-21-31-27-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-interno/wide-countryside-view-of-abruzzo-hills-through-far-2026-03-17-21-31-27-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-interno/wide-countryside-view-of-abruzzo-hills-through-far-2026-03-17-21-31-27-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-interno/wide-countryside-view-of-abruzzo-hills-through-far-2026-03-17-21-31-27-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 4947,
+        "h": 3298,
+        "bytes": 7797313
+      },
+      "classificazione": {
+        "categoria": "ambienti-interno",
+        "sottosoggetti": [
+          "arco in pietra",
+          "interno di casale",
+          "colline abruzzesi",
+          "vista panoramica"
+        ],
+        "ambientazione": "interno di casale con finestra ad arco sulle colline abruzzesi",
+        "mood": "contemplativo",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "articoli agriturismi",
+          "articoli casa con cane",
+          "regione-abruzzo"
+        ],
+        "alt_text_it": "Vista sulle colline abruzzesi attraverso un arco in pietra di un casale",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.441Z"
+    },
+    {
+      "slug": "winding-cypress-road-in-monticchiello-tuscany-2026-03-09-03-25-38-utc",
+      "originale": "picodg/winding-cypress-road-in-monticchiello-tuscany-2026-03-09-03-25-38-utc.jpg",
+      "hash_originale": "sha256:ae9f283dc7bf32785b445d4017f2898cbaac36dcc4afb3b9dbc110262da81c82",
+      "output": {
+        "thumb_webp": "app/public/img/stock/ambienti-sentiero/winding-cypress-road-in-monticchiello-tuscany-2026-03-09-03-25-38-utc-thumb.webp",
+        "thumb_jpg": "app/public/img/stock/ambienti-sentiero/winding-cypress-road-in-monticchiello-tuscany-2026-03-09-03-25-38-utc-thumb.jpg",
+        "card_webp": "app/public/img/stock/ambienti-sentiero/winding-cypress-road-in-monticchiello-tuscany-2026-03-09-03-25-38-utc-card.webp",
+        "card_jpg": "app/public/img/stock/ambienti-sentiero/winding-cypress-road-in-monticchiello-tuscany-2026-03-09-03-25-38-utc-card.jpg",
+        "hero_webp": "app/public/img/stock/ambienti-sentiero/winding-cypress-road-in-monticchiello-tuscany-2026-03-09-03-25-38-utc-hero.webp",
+        "hero_jpg": "app/public/img/stock/ambienti-sentiero/winding-cypress-road-in-monticchiello-tuscany-2026-03-09-03-25-38-utc-hero.jpg"
+      },
+      "dimensioni_originale": {
+        "w": 6016,
+        "h": 4016,
+        "bytes": 26593153
+      },
+      "classificazione": {
+        "categoria": "ambienti-sentiero",
+        "sottosoggetti": [
+          "strada serpentina",
+          "cipressi",
+          "monticchiello",
+          "vista aerea"
+        ],
+        "ambientazione": "strada a zig-zag con filari di cipressi a Monticchiello",
+        "mood": "pittoresco",
+        "persone_presenti": false,
+        "num_animali": 0,
+        "adatto_per": [
+          "hero vacanze",
+          "hero sentieri",
+          "articoli vacanze in toscana",
+          "regione-toscana",
+          "OG image"
+        ],
+        "alt_text_it": "Strada serpentina con doppio filare di cipressi nella campagna toscana di Monticchiello",
+        "confidenza": "alta",
+        "origine": "fotografia"
+      },
+      "processato_il": "2026-04-21T21:34:09.452Z"
     }
   ],
   "batch_log": [
@@ -2304,6 +4244,11 @@
       "data": "2026-04-21T20:08:30.583Z",
       "tipo": "batch_rescue",
       "foto_aggiunte": 6
+    },
+    {
+      "data": "2026-04-21T21:34:09.452Z",
+      "tipo": "batch_ambienti_italia",
+      "foto_aggiunte": 48
     }
   ]
 }

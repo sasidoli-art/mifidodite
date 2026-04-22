@@ -3,7 +3,7 @@ import { verifyCron } from "@/lib/cron-auth";
 import { scrapeGenericPage } from "@/lib/scraper";
 import { askDeepSeekFull, extractJSON } from "@/lib/ai-agent";
 import { slugify } from "@/lib/utils";
-import { logAgent, startTimer, calculateCost } from "@/lib/agent-logger";
+import { logAgentStart, logAgentSuccess, logAgentError, startTimer, calculateCost } from "@/lib/agent-logger";
 import { getDB } from "@/lib/db";
 
 // Accumulatore token/cost per il run corrente
@@ -118,8 +118,10 @@ export async function GET(request: NextRequest) {
   };
 
   const articoli: ArticleResult[] = [];
+  const articlesGenerated: number[] = [];
   let salvati = 0;
   const accum: RunAccum = { input: 0, output: 0, cost: 0 };
+  const runId = await logAgentStart("writer", "deepseek-chat", undefined, { scheduled: true, tasks: ARTICOLI_DA_SCRIVERE.length });
 
   for (const task of ARTICOLI_DA_SCRIVERE) {
     try {
@@ -217,8 +219,8 @@ REGOLE DI SCRITTURA:
       const categoria = meta.categoria || task.categoria;
       const img = UNSPLASH_IMAGES[categoria] || UNSPLASH_IMAGES.curiosita;
 
-      await sql`
-        INSERT INTO articoli (titolo, slug, categoria, estratto, contenuto, tempo_lettura, tags, img, fonte_nome, fonte_url, pubblicato)
+      const inserted = await sql`
+        INSERT INTO articoli (titolo, slug, categoria, estratto, contenuto, tempo_lettura, tags, img, fonte_nome, fonte_url, pubblicato, source, ai_model)
         VALUES (
           ${meta.titolo},
           ${slug},
@@ -230,9 +232,13 @@ REGOLE DI SCRITTURA:
           ${img},
           ${meta.fonte_nome || null},
           ${meta.fonte_url || null},
-          false
+          false,
+          'ai',
+          'deepseek-chat'
         )
+        RETURNING id
       `;
+      if (inserted[0]?.id) articlesGenerated.push(inserted[0].id as number);
       salvati++;
       articoli.push({ ...meta, contenuto: htmlContent });
       console.log(`[Writer] Articolo "${meta.titolo}" salvato!`);
@@ -243,20 +249,24 @@ REGOLE DI SCRITTURA:
     }
   }
 
-  await logAgent({
-    agente: "writer",
-    stato: salvati > 0 ? "ok" : "parziale",
-    risultati_trovati: articoli.length,
-    risultati_salvati: salvati,
-    durata_ms: elapsed(),
-    costo_stimato: Number(accum.cost.toFixed(6)),
-    dettagli: {
-      titoli: articoli.map((a) => a.titolo),
-      model_used: "deepseek-chat",
-      input_tokens: accum.input,
-      output_tokens: accum.output,
-    },
-  });
+  if (runId) {
+    if (salvati === 0 && articoli.length === 0) {
+      await logAgentError(runId, "Nessun articolo generato", { durata_ms: elapsed() });
+    } else {
+      await logAgentSuccess(runId, {
+        inputTokens: accum.input,
+        outputTokens: accum.output,
+        costEur: Number(accum.cost.toFixed(6)),
+        articlesGeneratedIds: articlesGenerated,
+        metadataExtra: {
+          titoli: articoli.map((a) => a.titolo),
+          salvati,
+          errori: articoli.length - salvati,
+          durata_ms: elapsed(),
+        },
+      });
+    }
+  }
 
   return NextResponse.json({
     success: true,

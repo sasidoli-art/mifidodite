@@ -209,8 +209,8 @@ REGOLE:
       if (html.length < 800) { errors.push(`Short: ${meta.titolo}`); continue; }
 
       const inserted = await sql`
-        INSERT INTO articoli (titolo, slug, categoria, estratto, contenuto, tempo_lettura, tags, img, pubblicato)
-        VALUES (${meta.titolo}, ${slug}, ${t.categoria}, ${meta.estratto || ""}, ${html}, ${meta.tempo_lettura || "7 min"}, ${meta.tags || t.keywords}, ${UNSPLASH_IMAGES[t.categoria] || UNSPLASH_IMAGES.curiosita}, false)
+        INSERT INTO articoli (titolo, slug, categoria, estratto, contenuto, tempo_lettura, tags, img, pubblicato, source, ai_model)
+        VALUES (${meta.titolo}, ${slug}, ${t.categoria}, ${meta.estratto || ""}, ${html}, ${meta.tempo_lettura || "7 min"}, ${meta.tags || t.keywords}, ${UNSPLASH_IMAGES[t.categoria] || UNSPLASH_IMAGES.curiosita}, false, 'ai', 'deepseek-chat')
         RETURNING id
       `;
       if (inserted[0]?.id) articlesGenerated.push(inserted[0].id as number);

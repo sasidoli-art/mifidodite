@@ -116,6 +116,8 @@ Rispondi SOLO con un array JSON valido, ogni elemento con:
         tempo_lettura: art.tempo_lettura || "5 min",
         tags: art.tags || [],
         img,
+        source: "ai",
+        ai_model: "claude-haiku-4-5-20251001",
       });
 
       salvati++;

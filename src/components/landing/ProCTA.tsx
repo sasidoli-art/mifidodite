@@ -72,9 +72,10 @@ export function ProCTA() {
             viewport={{ once: true }}
           >
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
+              {/* orig: https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=700&q=80 */}
               <img loading="lazy"
-                src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=700&q=80"
-                alt="Professionista pet con cane"
+                src="/img/stock/persone-pet/group-of-happy-multinational-people-business-team-2026-03-19-07-55-36-utc-card.jpg"
+                alt="Cinque colleghi ridono accarezzando un Bulldog Francese sdraiato sul pavimento dell'ufficio"
                 className="w-full h-[400px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-foreground/50 to-transparent" />

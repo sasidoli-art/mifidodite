@@ -8,20 +8,26 @@ const SERVIZI = [
   {
     titolo: "Trova il veterinario",
     desc: "Cliniche e ambulatori veterinari verificati nella tua zona",
-    img: "https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=600&q=80",
+    // TODO: sostituire con foto visita veterinaria dedicata in prossimo batch Envato
+    /* orig: https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=600&q=80 */
+    img: "/img/stock/persone-pet/cute-puppy-and-kitten-closeup-looking-at-camera-2026-01-05-01-09-12-utc-card.jpg",
     href: "/professionisti?cat=veterinario",
     color: "from-red-500/80 to-red-600/80",
   },
   {
     titolo: "Pensione per il tuo pet",
     desc: "Strutture sicure dove il tuo amico si sentira a casa",
-    img: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=600&q=80",
+    /* orig: https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=600&q=80 */
+    img: "/img/stock/cani/funny-moments-from-the-life-of-pets-2026-03-17-21-42-35-utc-card.jpg",
     href: "/professionisti?cat=pensione",
     color: "from-amber-500/80 to-orange-500/80",
   },
   {
     titolo: "Toelettatura professionale",
     desc: "Bagno, taglio, stripping e trattamenti per il pelo del tuo cane",
+    /* orig: https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=600&q=80 */
+    // TODO: sostituire con foto toelettatura professionale dedicata in prossimo batch Envato.
+    //       Catalogo attuale non ha match accettabile — lasciata Unsplash originale.
     img: "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=600&q=80",
     href: "/professionisti?cat=toelettatura",
     color: "from-pink-500/80 to-rose-500/80",

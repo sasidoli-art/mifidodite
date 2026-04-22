@@ -42,23 +42,29 @@ export function PetNews() {
     } catch { /* */ }
   }
 
-  // Articoli statici con immagini REALI e link al magazine vero
+  // IMG fields sono snapshot del DB — sincronizzare manualmente
+  // se cambi le hero dei master magazine.
+  // TODO: refactor a fetch dinamico via server component quando
+  // sarà utile gestire dinamicamente gli ultimi articoli.
   const NEWS: Article[] = [
     {
       slug: "trasporto-cani-auto-art-169-codice-strada",
       titolo: "Trasporto cani in auto: obblighi e sanzioni Art. 169 CDS",
       estratto: "Multe fino a 345€ se porti il cane in auto senza sistema di sicurezza. Ecco cosa dice la legge.",
       categoria: "Guide",
-      img: "https://images.unsplash.com/photo-1535930891776-0c2dfb7fda1a?w=600&q=80",
+      /* orig: https://images.unsplash.com/photo-1535930891776-0c2dfb7fda1a?w=600&q=80 */
+      img: "/img/stock/persone-pet/senior-man-using-laptop-sitting-on-sofa-with-his-t-2026-03-11-00-54-12-utc-card.jpg",
       tempo_lettura: "7 min",
       data: "",
     },
     {
-      slug: "passaggio-proprieta-cane-guida-italiana",
+      // Slug aggiornato al master post-audit cannibalization (era: passaggio-proprieta-cane-guida-italiana, redirect 301)
+      slug: "passaggio-proprieta-cane-guida-procedura-italiana",
       titolo: "Passaggio di proprieta del cane: la guida completa",
       estratto: "Anagrafe canina, modulo di cessione, costi regionali e sanzioni. Tutto quello che devi sapere.",
       categoria: "Guide",
-      img: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&q=80",
+      /* orig: https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&q=80 */
+      img: "/img/stock/persone-pet/happy-little-dog-in-the-arms-of-its-owners-2026-03-19-09-28-30-utc-card.jpg",
       tempo_lettura: "8 min",
       data: "",
     },
@@ -67,7 +73,8 @@ export function PetNews() {
       titolo: "Cibi velenosi per cani: la guida che puo salvare una vita",
       estratto: "Cioccolato, uva, cipolla, xilitolo. I cibi che il tuo cane non deve MAI mangiare.",
       categoria: "Salute",
-      img: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&q=80",
+      /* orig: https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&q=80 */
+      img: "/img/stock/cani/composition-of-dogs-head-2026-03-09-07-59-14-utc-card.jpg",
       tempo_lettura: "6 min",
       data: "",
     },
@@ -76,16 +83,19 @@ export function PetNews() {
       titolo: "Primo soccorso al cane: cosa fare in caso di emergenza",
       estratto: "Colpo di calore, ferite, intossicazione. Le manovre che possono fare la differenza.",
       categoria: "Salute",
-      img: "https://images.unsplash.com/photo-1560807707-8cc77767d783?w=600&q=80",
+      /* orig: https://images.unsplash.com/photo-1560807707-8cc77767d783?w=600&q=80 */
+      img: "/img/stock/cani/training-of-puppy-rottweiler-2026-03-16-00-35-27-utc-card.jpg",
       tempo_lettura: "8 min",
       data: "",
     },
     {
-      slug: "perche-i-cani-inclinano-la-testa-quando-parliamo-la-scienza-dietro-quel-gesto-irresistibile",
+      // Slug aggiornato al master post-audit cannibalization (era: perche-i-cani-inclinano-la-testa-quando-parliamo-la-scienza-dietro-quel-gesto-irresistibile, redirect 301)
+      slug: "perche-cani-inclinano-testa-studio",
       titolo: "Perche i cani inclinano la testa quando parliamo?",
       estratto: "La scienza dietro quel gesto irresistibile che ci scioglie il cuore ogni volta.",
       categoria: "Curiosita",
-      img: "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=600&q=80",
+      /* orig: https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=600&q=80 */
+      img: "/img/stock/cani/domestic-adorable-dog-with-multicolored-eyes-in-wh-2026-03-17-03-30-52-utc-card.jpg",
       tempo_lettura: "5 min",
       data: "",
     },
@@ -94,7 +104,8 @@ export function PetNews() {
       titolo: "Il potere curativo delle fusa: terapia per le ossa",
       estratto: "Le fusa del gatto vibrano a 25-50 Hz, la stessa frequenza che accelera la guarigione ossea.",
       categoria: "Curiosita",
-      img: "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&q=80",
+      /* orig: https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&q=80 */
+      img: "/img/stock/gatti/a-closeup-shot-of-a-cat-under-green-leaves-2026-01-11-09-04-34-utc-card.jpg",
       tempo_lettura: "5 min",
       data: "",
     },

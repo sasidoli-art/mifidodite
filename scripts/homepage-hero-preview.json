@@ -1,0 +1,494 @@
+{
+  "generato_il": "2026-04-22T00:00:00.000Z",
+  "totale_sostituzioni": 34,
+  "sostituzioni_da_codice": 28,
+  "sostituzioni_da_db": 6,
+  "distribuzione_confidenza": {
+    "alta": 4,
+    "media": 16,
+    "bassa": 8
+  },
+  "da_sostituire_batch_futuri": 15,
+  "doppioni_riusati": 0,
+  "note_globali": [
+    "6 card PetNews: letti dal DB (campo img), NON matching dal catalogo come da istruzione 'leggi dal DB'. 3 sono già migrati al catalogo locale (master audit), 3 sono ancora Unsplash in DB (singleton non-master). Vedi sezione db_petnews per dettaglio.",
+    "Hero 'use client' resta tale. Rendere dinamico il contatore '140+ articoli' richiede solo una prop da page.tsx (server) a Hero.tsx (client) — refactor piccolo, fattibile. Valore attuale dal DB: 155 articoli.",
+    "SectionDivider: mantenuti tra transizioni light→dark effettive (Hero/PetNews/Strumenti chiaro → SpiaggeHero scuro, ecc.). 3 divider rimossi perché sezioni contigue dello stesso colore.",
+    "HowItWorks non viene più renderizzato da page.tsx ma il componente file resta. Migro comunque le 3 foto Unsplash così è pronto se rientra in futuro."
+  ],
+  "db_petnews": [
+    {
+      "petnews_slot": "petnews_hero_grande",
+      "slug_attuale_in_codice": "trasporto-cani-auto-art-169-codice-strada",
+      "slug_corretto": "trasporto-cani-auto-art-169-codice-strada",
+      "db_img": "/img/stock/persone-pet/senior-man-using-laptop-sitting-on-sofa-with-his-t-2026-03-11-00-54-12-utc-card.jpg",
+      "db_img_status": "LOCAL_CATALOG"
+    },
+    {
+      "petnews_slot": "petnews_card_2",
+      "slug_attuale_in_codice": "passaggio-proprieta-cane-guida-italiana",
+      "slug_corretto": "passaggio-proprieta-cane-guida-procedura-italiana",
+      "fix_slug_required": true,
+      "db_img": "/img/stock/persone-pet/happy-little-dog-in-the-arms-of-its-owners-2026-03-19-09-28-30-utc-card.jpg",
+      "db_img_status": "LOCAL_CATALOG"
+    },
+    {
+      "petnews_slot": "petnews_card_3",
+      "slug_attuale_in_codice": "cibi-velenosi-cani-guida-completa",
+      "slug_corretto": "cibi-velenosi-cani-guida-completa",
+      "db_img": "https://images.unsplash.com/photo-1555685812-4b943f1cb0eb?w=800&q=80",
+      "db_img_status": "UNSPLASH_IN_DB",
+      "note": "⚠ Singleton non-master, img ancora Unsplash. Da migrare con task separato (UPDATE articoli.img)."
+    },
+    {
+      "petnews_slot": "petnews_card_4",
+      "slug_attuale_in_codice": "primo-soccorso-cane-emergenze",
+      "slug_corretto": "primo-soccorso-cane-emergenze",
+      "db_img": "https://images.unsplash.com/photo-1560807707-8cc77767d783?w=800&q=80",
+      "db_img_status": "UNSPLASH_IN_DB",
+      "note": "⚠ Singleton non-master, img ancora Unsplash."
+    },
+    {
+      "petnews_slot": "petnews_card_5",
+      "slug_attuale_in_codice": "perche-i-cani-inclinano-la-testa-quando-parliamo-la-scienza-dietro-quel-gesto-irresistibile",
+      "slug_corretto": "perche-cani-inclinano-testa-studio",
+      "fix_slug_required": true,
+      "db_img": "/img/stock/cani/domestic-adorable-dog-with-multicolored-eyes-in-wh-2026-03-17-03-30-52-utc-card.jpg",
+      "db_img_status": "LOCAL_CATALOG"
+    },
+    {
+      "petnews_slot": "petnews_card_6",
+      "slug_attuale_in_codice": "il-potere-curativo-delle-fusa-quando-il-ronzio-del-gatto-diventa-terapia-per-le-ossa",
+      "slug_corretto": "il-potere-curativo-delle-fusa-quando-il-ronzio-del-gatto-diventa-terapia-per-le-ossa",
+      "db_img": "https://images.unsplash.com/photo-1574144611937-0df059b5ef3e?w=800&q=80",
+      "db_img_status": "UNSPLASH_IN_DB",
+      "note": "⚠ Singleton keep_separate, img ancora Unsplash."
+    }
+  ],
+  "approccio_petnews_proposto": "Sostituire TUTTE le foto hardcoded in PetNews.tsx rimuovendo il campo `img` dall'array NEWS. Il componente farà fetch dal DB (via nuovo helper o query) e userà `img` dal DB. Se il refactor è pesante, fallback: mantengo array hardcoded ma aggiorno gli img ai valori attuali del DB (comunque coerente per ora). Aspetto tua decisione al CHECKPOINT 2.",
+  "sostituzioni": [
+    {
+      "id": "hero_main",
+      "url_attuale": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&q=80",
+      "file": "src/components/landing/Hero.tsx",
+      "riga": 114,
+      "foto_catalogo": {
+        "slug": "close-up-of-a-maltese-in-front-of-a-blue-backgroun-2026-03-09-07-57-04-utc",
+        "path": "/img/stock/cani/close-up-of-a-maltese-in-front-of-a-blue-backgroun-2026-03-09-07-57-04-utc-card.jpg",
+        "alt_text": "West Highland White Terrier bianco sorridente su sfondo azzurro, ritratto studio professionale",
+        "origine": "fotografia"
+      },
+      "confidenza_match": "alta",
+      "da_sostituire_batch_futuri": false,
+      "rationale": "LA FOTO PIÙ IMPORTANTE: Westy sorridente studio blu, portrait, mood allegro-amichevole-professionale. Soggetto singolo, cane felice, fotografia pura. Adatta a portrait verticale 420x480 (i ritratti studio sono facilmente croppabili)."
+    },
+    {
+      "id": "hero_gallery_1_dog_sitter",
+      "url_attuale": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=500&q=80",
+      "file": "src/components/landing/Hero.tsx",
+      "riga": 10,
+      "foto_catalogo": {
+        "slug": "it-s-a-dog-s-world-three-puppy-dogs-contentedly-s-2026-03-13-01-55-17-utc",
+        "path": "/img/stock/persone-pet/it-s-a-dog-s-world-three-puppy-dogs-contentedly-s-2026-03-13-01-55-17-utc-card.jpg",
+        "alt_text": "Tre cani adulti accoccolati tra due persone in ambiente domestico, momento di tenerezza e affetto",
+        "origine": "fotografia"
+      },
+      "confidenza_match": "media",
+      "da_sostituire_batch_futuri": false,
+      "rationale": "3 cani accoccolati tra 2 persone, interno domestico. Evoca il concetto 'dog sitter' come compagnia/cura a casa."
+    },
+    {
+      "id": "hero_gallery_2_gatti",
+      "url_attuale": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=500&q=80",
+      "file": "src/components/landing/Hero.tsx",
+      "riga": 11,
+      "foto_catalogo": {
+        "slug": "shorthair-gray-cat-with-winking-eye-looking-straig-2026-03-25-05-09-58-utc",
+        "path": "/img/stock/gatti/shorthair-gray-cat-with-winking-eye-looking-straig-2026-03-25-05-09-58-utc-card.jpg",
+        "alt_text": "Gatto tabby che guarda verso l'alto con espressione divertita su sfondo verde chiaro",
+        "origine": "fotografia"
+      },
+      "confidenza_match": "media",
+      "da_sostituire_batch_futuri": false,
+      "rationale": "Gatto tabby singolo, espressione iconica. Perfetto label 'Gatti' generico."
+    },
+    {
+      "id": "hero_gallery_3_pensioni",
+      "url_attuale": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=500&q=80",
+      "file": "src/components/landing/Hero.tsx",
+      "riga": 12,
+      "foto_catalogo": {
+        "slug": "dog-golden-retriever-labrador-in-autumn-at-sunset-2026-03-16-02-11-30-utc",
+        "path": "/img/stock/cani/dog-golden-retriever-labrador-in-autumn-at-sunset-2026-03-16-02-11-30-utc-card.jpg",
+        "alt_text": "Cane setter rossiccio seduto su prato autunnale circondato da foglie cadute e alberi",
+        "origine": "fotografia"
+      },
+      "confidenza_match": "media",
+      "da_sostituire_batch_futuri": false,
+      "rationale": "Setter rossiccio su prato, mood sereno. Evoca il concetto 'pensione' come riposo/soggiorno in un ambiente tranquillo."
+    },
+    {
+      "id": "hero_gallery_4_veterinari",
+      "url_attuale": "https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=500&q=80",
+      "file": "src/components/landing/Hero.tsx",
+      "riga": 13,
+      "foto_catalogo": {
+        "slug": "closeup-shot-of-the-snouts-of-a-cute-dog-and-a-cat-2026-01-08-00-23-04-utc",
+        "path": "/img/stock/cani/closeup-shot-of-the-snouts-of-a-cute-dog-and-a-cat-2026-01-08-00-23-04-utc-card.jpg",
+        "alt_text": "Cane e gatto insieme affacciati da una finestra in legno, simbolo di amicizia e convivenza tra animali domestici",
+        "origine": "fotografia"
+      },
+      "confidenza_match": "bassa",
+      "da_sostituire_batch_futuri": true,
+      "rationale": "SURROGATO: nel catalogo non ci sono foto veterinarie. Uso cane+gatto insieme per evocare cura/convivenza animali domestici. TODO: sostituire con foto ambulatorio/veterinario in prossimo batch."
+    },
+    {
+      "id": "hero_gallery_5_toelettatura",
+      "url_attuale": "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=500&q=80",
+      "file": "src/components/landing/Hero.tsx",
+      "riga": 14,
+      "foto_catalogo": {
+        "slug": "jack-russell-puppy-isolated-on-pink-background-2026-01-09-11-30-40-utc",
+        "path": "/img/stock/cuccioli/jack-russell-puppy-isolated-on-pink-background-2026-01-09-11-30-40-utc-card.jpg",
+        "alt_text": "Piccolo cane bianco e marrone con sguardo verso l'alto su sfondo rosa",
+        "origine": "fotografia"
+      },
+      "confidenza_match": "bassa",
+      "da_sostituire_batch_futuri": true,
+      "rationale": "SURROGATO: nel catalogo non ci sono foto di toelettatura. Uso cucciolo JR studio rosa (pulito/fresco). TODO: sostituire con foto cane in vasca/pettinato in prossimo batch."
+    },
+    {
+      "id": "howitworks_step_1",
+      "url_attuale": "https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=500&q=80",
+      "file": "src/components/landing/HowItWorks.tsx",
+      "riga": 12,
+      "foto_catalogo": {
+        "slug": "happy-friends-group-wearing-winter-clothes-taking-2026-01-07-23-55-03-utc",
+        "path": "/img/stock/persone-pet/happy-friends-group-wearing-winter-clothes-taking-2026-01-07-23-55-03-utc-card.jpg",
+        "alt_text": "Gruppo di amici felici con cane al guinzaglio in atmosfera natalizia invernale",
+        "origine": "fotografia"
+      },
+      "confidenza_match": "bassa",
+      "da_sostituire_batch_futuri": true,
+      "note": "HowItWorks NON renderizzato da page.tsx nel nuovo ordine. Migro comunque per futuro uso.",
+      "rationale": "Gruppo+cane al guinzaglio: evoca 'cerca nella tua zona'. TODO: foto con connotazione stagionale meno forte (ha berretti/sciarpe natalizi)."
+    },
+    {
+      "id": "howitworks_step_2",
+      "url_attuale": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=500&q=80",
+      "file": "src/components/landing/HowItWorks.tsx",
+      "riga": 19,
+      "foto_catalogo": {
+        "slug": "headshot-portrait-of-cute-funny-dog-jack-russell-t-2026-01-06-09-03-45-utc",
+        "path": "/img/stock/cani/headshot-portrait-of-cute-funny-dog-jack-russell-t-2026-01-06-09-03-45-utc-card.jpg",
+        "alt_text": "Cane marrone e bianco felice con bocca aperta su sfondo giallo luminoso",
+        "origine": "fotografia"
+      },
+      "confidenza_match": "media",
+      "da_sostituire_batch_futuri": false,
+      "note": "HowItWorks non renderizzato — foto migrata per futuro uso.",
+      "rationale": "Jack Russell felice studio giallo, mood pulito. Neutro, ok per step 'leggi e confronta'."
+    },
+    {
+      "id": "howitworks_step_3",
+      "url_attuale": "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=500&q=80",
+      "file": "src/components/landing/HowItWorks.tsx",
+      "riga": 26,
+      "foto_catalogo": {
+        "slug": "portrait-of-a-miniature-schnauzer-in-a-park-under-2026-03-18-12-19-23-utc",
+        "path": "/img/stock/cani/portrait-of-a-miniature-schnauzer-in-a-park-under-2026-03-18-12-19-23-utc-card.jpg",
+        "alt_text": "Schnauzer grigio e bianco seduto all'aperto con lingua fuori, sguardo amichevole",
+        "origine": "fotografia"
+      },
+      "confidenza_match": "media",
+      "da_sostituire_batch_futuri": false,
+      "note": "HowItWorks non renderizzato — foto migrata per futuro uso.",
+      "rationale": "Schnauzer all'aperto, sguardo amichevole: evoca 'cane disponibile/contattabile'."
+    },
+    {
+      "id": "categories_veterinari",
+      "url_attuale": "https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=500&q=80",
+      "file": "src/components/landing/Categories.tsx",
+      "riga": 8,
+      "foto_catalogo": {
+        "slug": "lifeguard-dog-2026-01-09-01-11-12-utc",
+        "path": "/img/stock/cani/lifeguard-dog-2026-01-09-01-11-12-utc-card.jpg",
+        "alt_text": "Golden Retriever con giubbotto salvataggio arancione seduto a bordo piscina",
+        "origine": "fotografia"
+      },
+      "confidenza_match": "bassa",
+      "da_sostituire_batch_futuri": true,
+      "rationale": "SURROGATO: Golden con giubbotto salvataggio = cane 'equipaggiato/curato'. TODO: foto ambulatorio veterinario dedicata."
+    },
+    {
+      "id": "categories_pensioni",
+      "url_attuale": "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=500&q=80",
+      "file": "src/components/landing/Categories.tsx",
+      "riga": 9,
+      "foto_catalogo": {
+        "slug": "cats-dogs-pets-group-togetherness-isolate-2026-01-09-10-58-18-utc",
+        "path": "/img/stock/cani/cats-dogs-pets-group-togetherness-isolate-2026-01-09-10-58-18-utc-card.jpg",
+        "alt_text": "Cane marrone e gatto bianco e nero avvolti insieme in una coperta grigia, seduti affettuosamente",
+        "origine": "fotografia"
+      },
+      "confidenza_match": "media",
+      "da_sostituire_batch_futuri": false,
+      "rationale": "Cane+gatto avvolti in coperta: accoglienza, sicurezza — concetti chiave per 'Pensioni'."
+    },
+    {
+      "id": "categories_dog_sitter",
+      "url_attuale": "https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=500&q=80",
+      "file": "src/components/landing/Categories.tsx",
+      "riga": 10,
+      "foto_catalogo": {
+        "slug": "couple-with-their-two-dogs-beagle-and-greyhound-2026-03-18-05-42-30-utc",
+        "path": "/img/stock/persone-pet/couple-with-their-two-dogs-beagle-and-greyhound-2026-03-18-05-42-30-utc-card.jpg",
+        "alt_text": "Coppia che sorride giocando con due cani in casa, beagle e levriero in ambiente accogliente",
+        "origine": "fotografia"
+      },
+      "confidenza_match": "media",
+      "da_sostituire_batch_futuri": false,
+      "rationale": "Coppia+cani in casa: relazione persona-cane, contesto domestico. Coerente con dog sitting/compagnia."
+    },
+    {
+      "id": "categories_toelettatura",
+      "url_attuale": "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=500&q=80",
+      "file": "src/components/landing/Categories.tsx",
+      "riga": 11,
+      "foto_catalogo": {
+        "slug": "standing-on-the-legs-beautiful-golden-retriever-d-2026-03-24-03-52-18-utc",
+        "path": "/img/stock/cani/standing-on-the-legs-beautiful-golden-retriever-d-2026-03-24-03-52-18-utc-card.jpg",
+        "alt_text": "Cane labrador biondo sorridente in giardino verde, vista dall'alto",
+        "origine": "fotografia"
+      },
+      "confidenza_match": "bassa",
+      "da_sostituire_batch_futuri": true,
+      "rationale": "SURROGATO: labrador biondo giardino = cane 'pulito e pronto'. TODO: foto cane in vasca/pettinato dedicata."
+    },
+    {
+      "id": "categories_educatori",
+      "url_attuale": "https://images.unsplash.com/photo-1560807707-8cc77767d783?w=500&q=80",
+      "file": "src/components/landing/Categories.tsx",
+      "riga": 12,
+      "foto_catalogo": {
+        "slug": "jack-russell-terrier-with-paws-up-peeking-over-bla-2026-01-06-10-39-55-utc",
+        "path": "/img/stock/cani/jack-russell-terrier-with-paws-up-peeking-over-bla-2026-01-06-10-39-55-utc-card.jpg",
+        "alt_text": "Cane Jack Russell Terrier marrone e bianco con lingua di fuori su sfondo giallo luminoso",
+        "origine": "fotografia"
+      },
+      "confidenza_match": "bassa",
+      "da_sostituire_batch_futuri": true,
+      "rationale": "SURROGATO: JR con zampe alzate = 'cane responsivo/addestrato'. TODO: foto cane in addestramento con educatore dedicata."
+    },
+    {
+      "id": "categories_offerte",
+      "url_attuale": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=500&q=80",
+      "file": "src/components/landing/Categories.tsx",
+      "riga": 13,
+      "foto_catalogo": {
+        "slug": "joyful-jack-russell-terrier-on-yellow-backdrop-2026-01-08-23-02-50-utc",
+        "path": "/img/stock/cani/joyful-jack-russell-terrier-on-yellow-backdrop-2026-01-08-23-02-50-utc-card.jpg",
+        "alt_text": "Chihuahua marrone e bianco sorridente su sfondo giallo, in posa da fronte",
+        "origine": "fotografia"
+      },
+      "confidenza_match": "bassa",
+      "da_sostituire_batch_futuri": true,
+      "rationale": "SURROGATO: cane felice = 'cane che ama i regali'. TODO: foto ciotola crocchette/giochi/accessori dedicata."
+    },
+    {
+      "id": "scopri_ristoranti",
+      "url_attuale": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80",
+      "file": "src/components/landing/ScopriDiPiu.tsx",
+      "riga": 14,
+      "foto_catalogo": {
+        "slug": "sunrise-and-deck-with-chairs-chairs-on-the-promena-2026-03-26-07-50-22-utc",
+        "path": "/img/stock/altro/sunrise-and-deck-with-chairs-chairs-on-the-promena-2026-03-26-07-50-22-utc-card.jpg",
+        "alt_text": "Tavoli e sedie bianchi di un ristorante sul mare illuminati dall'alba",
+        "origine": "fotografia"
+      },
+      "confidenza_match": "media",
+      "da_sostituire_batch_futuri": false,
+      "rationale": "Ristorante sul mare all'alba: atmosferico, coerente con 'Ristoranti pet-friendly' italiani."
+    },
+    {
+      "id": "scopri_sentieri",
+      "url_attuale": "https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&q=80",
+      "file": "src/components/landing/ScopriDiPiu.tsx",
+      "riga": 23,
+      "foto_catalogo": {
+        "slug": "azure-trail-is-the-most-simple-the-most-famous-an-2026-03-18-15-58-43-utc",
+        "path": "/img/stock/ambienti-sentiero/azure-trail-is-the-most-simple-the-most-famous-an-2026-03-18-15-58-43-utc-card.jpg",
+        "alt_text": "Sentiero Azzurro delle Cinque Terre con ringhiera in legno e vista sul mare",
+        "origine": "fotografia"
+      },
+      "confidenza_match": "alta",
+      "da_sostituire_batch_futuri": false,
+      "rationale": "MATCH FORTE: Sentiero Azzurro Cinque Terre — iconico italiano, dog-friendly, perfetto per 'Sentieri ed escursioni'."
+    },
+    {
+      "id": "spiagge_1_bibione_veneto",
+      "url_attuale": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800&q=80",
+      "file": "src/components/landing/SpiaggeHero.tsx",
+      "riga": 14,
+      "foto_catalogo": {
+        "slug": "sunbeds-and-parasols-on-the-seashore-beach-sea-a-2026-03-19-22-49-16-utc",
+        "path": "/img/stock/ambienti-spiaggia/sunbeds-and-parasols-on-the-seashore-beach-sea-a-2026-03-19-22-49-16-utc-card.jpg",
+        "alt_text": "File di sdraio arancioni e ombrelloni chiusi in uno stabilimento balneare italiano",
+        "origine": "fotografia"
+      },
+      "confidenza_match": "media",
+      "da_sostituire_batch_futuri": true,
+      "rationale": "Stabilimento balneare italiano generico (Adriatico-feel). TODO: foto Veneto/Bibione specifica."
+    },
+    {
+      "id": "spiagge_2_sanvincenzo_toscana",
+      "url_attuale": "https://images.unsplash.com/photo-1601758174114-e711c0cbaa69?w=800&q=80",
+      "file": "src/components/landing/SpiaggeHero.tsx",
+      "riga": 23,
+      "foto_catalogo": {
+        "slug": "cala-fuili-beach-in-cala-gonone-sardinia-italy-2026-03-26-10-03-13-utc",
+        "path": "/img/stock/ambienti-spiaggia/cala-fuili-beach-in-cala-gonone-sardinia-italy-2026-03-26-10-03-13-utc-card.jpg",
+        "alt_text": "Cala Fuili a Cala Gonone in Sardegna con mare turchese e scogliera",
+        "origine": "fotografia"
+      },
+      "confidenza_match": "media",
+      "da_sostituire_batch_futuri": true,
+      "rationale": "Cala Fuili Sardegna: mare Tirreno italiano (non Toscana ma idem Tirreno). TODO: foto San Vincenzo/Versilia specifica."
+    },
+    {
+      "id": "spiagge_3_maccarese_lazio",
+      "url_attuale": "https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=800&q=80",
+      "file": "src/components/landing/SpiaggeHero.tsx",
+      "riga": 32,
+      "foto_catalogo": {
+        "slug": "beautiful-sea-on-the-dramatic-sunset-2026-03-18-07-05-06-utc",
+        "path": "/img/stock/ambienti-spiaggia/beautiful-sea-on-the-dramatic-sunset-2026-03-18-07-05-06-utc-card.jpg",
+        "alt_text": "Spiaggia con ombrellone di paglia e cielo al tramonto dai colori accesi",
+        "origine": "fotografia"
+      },
+      "confidenza_match": "media",
+      "da_sostituire_batch_futuri": true,
+      "rationale": "Spiaggia al tramonto, ombrellone di paglia (BauBeach Maccarese feel). TODO: foto Lazio/Maccarese specifica."
+    },
+    {
+      "id": "vacanze_1_borgoegnazia_puglia",
+      "url_attuale": "https://images.unsplash.com/photo-1587474260584-136574528ed5?w=800&q=80",
+      "file": "src/components/landing/VacanzeHero.tsx",
+      "riga": 14,
+      "foto_catalogo": {
+        "slug": "swimming-pool-of-a-luxury-resort-with-waterfall-an-2026-03-26-05-09-53-utc",
+        "path": "/img/stock/ambienti-hotel/swimming-pool-of-a-luxury-resort-with-waterfall-an-2026-03-26-05-09-53-utc-card.jpg",
+        "alt_text": "Piscina di una masseria in pietra con cascata decorativa e ombrellone",
+        "origine": "fotografia"
+      },
+      "confidenza_match": "alta",
+      "da_sostituire_batch_futuri": false,
+      "rationale": "MATCH FORTE: piscina di masseria pugliese in pietra — perfetto per Borgo Egnazia (Savelletri/Fasano, Puglia)."
+    },
+    {
+      "id": "vacanze_2_tremezzo_lombardia",
+      "url_attuale": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80",
+      "file": "src/components/landing/VacanzeHero.tsx",
+      "riga": 24,
+      "foto_catalogo": {
+        "slug": "exterior-of-a-house-with-a-pool-in-a-luxury-comple-2026-03-17-07-10-22-utc",
+        "path": "/img/stock/ambienti-hotel/exterior-of-a-house-with-a-pool-in-a-luxury-comple-2026-03-17-07-10-22-utc-card.jpg",
+        "alt_text": "Villa moderna con piscina e alti pini marittimi nel giardino",
+        "origine": "fotografia"
+      },
+      "confidenza_match": "media",
+      "da_sostituire_batch_futuri": true,
+      "rationale": "Villa lusso con piscina, mood elegante (compatibile con Grand Hotel Tremezzo 5*). TODO: foto Lombardia/Lago di Como specifica."
+    },
+    {
+      "id": "vacanze_3_unionlido_veneto",
+      "url_attuale": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&q=80",
+      "file": "src/components/landing/VacanzeHero.tsx",
+      "riga": 34,
+      "foto_catalogo": {
+        "slug": "agritourism-in-tuscany-beautiful-sunny-day-2026-03-24-12-59-04-utc",
+        "path": "/img/stock/ambienti-hotel/agritourism-in-tuscany-beautiful-sunny-day-2026-03-24-12-59-04-utc-card.jpg",
+        "alt_text": "Agriturismo toscano in pietra con cipressi e vasi di fiori lungo il vialetto",
+        "origine": "fotografia"
+      },
+      "confidenza_match": "bassa",
+      "da_sostituire_batch_futuri": true,
+      "rationale": "SURROGATO: nel catalogo non ci sono foto di camping village sul mare Veneto. Uso agriturismo toscano come struttura 'accogliente italiana'. TODO: foto Union Lido/Cavallino o camping village dedicata."
+    },
+    {
+      "id": "sos_smarriti",
+      "url_attuale": "https://images.unsplash.com/photo-1544568100-847a948585b9?w=400&q=80",
+      "file": "src/components/landing/SOSBanner.tsx",
+      "riga": 22,
+      "foto_catalogo": {
+        "slug": "lifeguard-dog-2026-01-09-01-13-09-utc",
+        "path": "/img/stock/cani/lifeguard-dog-2026-01-09-01-13-09-utc-card.jpg",
+        "alt_text": "Golden Retriever con giubbotto arancione in piedi a bordo piscina con la squadra",
+        "origine": "fotografia"
+      },
+      "confidenza_match": "bassa",
+      "da_sostituire_batch_futuri": true,
+      "rationale": "SURROGATO: Golden con giubbotto di salvataggio (concetto 'salvataggio/SOS'). Rappresenta il 'salvare' più che 'cane smarrito'. TODO: foto cane triste/sguardo implorante dedicata per banner rosso emergenza."
+    },
+    {
+      "id": "featured_pro_veterinario",
+      "url_attuale": "https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=600&q=80",
+      "file": "src/components/landing/FeaturedPros.tsx",
+      "riga": 11,
+      "foto_catalogo": {
+        "slug": "cute-puppy-and-kitten-closeup-looking-at-camera-2026-01-05-01-09-12-utc",
+        "path": "/img/stock/persone-pet/cute-puppy-and-kitten-closeup-looking-at-camera-2026-01-05-01-09-12-utc-card.jpg",
+        "alt_text": "Cane marrone e gatto tabby che si abbracciano affettuosamente su sfondo bianco",
+        "origine": "fotografia"
+      },
+      "confidenza_match": "bassa",
+      "da_sostituire_batch_futuri": true,
+      "rationale": "SURROGATO: cucciolo+gattino cura reciproca — mood 'cura/attenzione'. TODO: foto ambulatorio veterinario dedicata."
+    },
+    {
+      "id": "featured_pro_pensione",
+      "url_attuale": "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=600&q=80",
+      "file": "src/components/landing/FeaturedPros.tsx",
+      "riga": 18,
+      "foto_catalogo": {
+        "slug": "funny-moments-from-the-life-of-pets-2026-03-17-21-42-35-utc",
+        "path": "/img/stock/cani/funny-moments-from-the-life-of-pets-2026-03-17-21-42-35-utc-card.jpg",
+        "alt_text": "Cane e gatto riposano insieme sul letto bianco in armonia e tranquillità",
+        "origine": "fotografia"
+      },
+      "confidenza_match": "media",
+      "da_sostituire_batch_futuri": false,
+      "rationale": "Cane+gatto che riposano sul letto: armonia, accoglienza. Match semantico per pensione pet."
+    },
+    {
+      "id": "featured_pro_toelettatura",
+      "url_attuale": "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=600&q=80",
+      "file": "src/components/landing/FeaturedPros.tsx",
+      "riga": 25,
+      "foto_catalogo": {
+        "slug": "spitz-dog-wedding-couple-2026-03-09-05-23-29-utc",
+        "path": "/img/stock/cani/spitz-dog-wedding-couple-2026-03-09-05-23-29-utc-card.jpg",
+        "alt_text": "Due cani in abiti da sposi sorridenti: uno nero con smoking e cappello, uno bianco con velo nuziale",
+        "origine": "fotografia"
+      },
+      "confidenza_match": "bassa",
+      "da_sostituire_batch_futuri": true,
+      "rationale": "SURROGATO: cani eleganti in abiti da sposi — cane 'curato/esteticamente preparato'. TODO: foto toelettatura professionale dedicata."
+    },
+    {
+      "id": "pro_cta_banner",
+      "url_attuale": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=700&q=80",
+      "file": "src/components/landing/ProCTA.tsx",
+      "riga": 76,
+      "foto_catalogo": {
+        "slug": "group-of-happy-multinational-people-business-team-2026-03-19-07-55-36-utc",
+        "path": "/img/stock/persone-pet/group-of-happy-multinational-people-business-team-2026-03-19-07-55-36-utc-card.jpg",
+        "alt_text": "Cinque colleghi ridono accarezzando un Bulldog Francese sdraiato sul pavimento dell'ufficio",
+        "origine": "fotografia"
+      },
+      "confidenza_match": "alta",
+      "da_sostituire_batch_futuri": false,
+      "rationale": "MATCH FORTE: team multinazionale + Bulldog Francese in ufficio — perfetto per banner 'Sei un professionista pet? Unisciti'."
+    }
+  ]
+}

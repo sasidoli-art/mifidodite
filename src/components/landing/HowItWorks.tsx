@@ -3,27 +3,33 @@
 import { Search, Star, Send } from "lucide-react";
 import { motion } from "framer-motion";
 
+// NOTA: componente NON renderizzato da page.tsx (rimosso dal nuovo ordine sezioni).
+// File mantenuto e foto migrate per eventuale riutilizzo futuro.
 const STEPS = [
   {
     icon: Search,
     num: "01",
     title: "Cerca nella tua zona",
     desc: "Inserisci il CAP o il comune. Ti mostriamo veterinari, pensioni e professionisti pet reali vicino a te.",
-    img: "https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=500&q=80",
+    /* orig: https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=500&q=80 */
+    // TODO: sostituire con foto ricerca territoriale/mappa-cane dedicata in prossimo batch Envato
+    img: "/img/stock/persone-pet/happy-friends-group-wearing-winter-clothes-taking-2026-01-07-23-55-03-utc-card.jpg",
   },
   {
     icon: Star,
     num: "02",
     title: "Leggi e confronta",
     desc: "Consulta il magazine con 140+ articoli, confronta i servizi e informati prima di decidere.",
-    img: "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=500&q=80",
+    /* orig: https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=500&q=80 */
+    img: "/img/stock/cani/headshot-portrait-of-cute-funny-dog-jack-russell-t-2026-01-06-09-03-45-utc-card.jpg",
   },
   {
     icon: Send,
     num: "03",
     title: "Contatta il professionista",
     desc: "Chiedi disponibilita con un click. Il professionista riceve la tua richiesta e ti risponde direttamente.",
-    img: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=500&q=80",
+    /* orig: https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=500&q=80 */
+    img: "/img/stock/cani/portrait-of-a-miniature-schnauzer-in-a-park-under-2026-03-18-12-19-23-utc-card.jpg",
   },
 ];
 

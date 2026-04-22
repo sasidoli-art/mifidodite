@@ -5,12 +5,22 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 const SERVICES = [
-  { label: "Veterinari", desc: "Ambulatori e cliniche nella tua zona", img: "https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=500&q=80", href: "/professionisti?cat=veterinario" },
-  { label: "Pensioni", desc: "Strutture sicure dove il tuo pet sta bene", img: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=500&q=80", href: "/professionisti?cat=pensione" },
-  { label: "Dog Sitter", desc: "A domicilio, passeggiate, compagnia", img: "https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=500&q=80", href: "/professionisti?cat=dog_sitter" },
-  { label: "Toelettatura", desc: "Bagno, taglio, stripping e trattamenti", img: "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=500&q=80", href: "/professionisti?cat=toelettatura" },
-  { label: "Educatori cinofili", desc: "Metodo gentile per cani e proprietari", img: "https://images.unsplash.com/photo-1560807707-8cc77767d783?w=500&q=80", href: "/professionisti?cat=educatore_cinofilo" },
-  { label: "Offerte pet", desc: "Cibo, accessori e giochi in offerta", img: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=500&q=80", href: "/offerte" },
+  // TODO: sostituire con foto clinica/ambulatorio veterinario dedicata in prossimo batch Envato
+  /* orig: https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=500&q=80 */
+  { label: "Veterinari", desc: "Ambulatori e cliniche nella tua zona", img: "/img/stock/cani/lifeguard-dog-2026-01-09-01-11-12-utc-card.jpg", href: "/professionisti?cat=veterinario" },
+  /* orig: https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=500&q=80 */
+  { label: "Pensioni", desc: "Strutture sicure dove il tuo pet sta bene", img: "/img/stock/cani/cats-dogs-pets-group-togetherness-isolate-2026-01-09-10-58-18-utc-card.jpg", href: "/professionisti?cat=pensione" },
+  /* orig: https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=500&q=80 */
+  { label: "Dog Sitter", desc: "A domicilio, passeggiate, compagnia", img: "/img/stock/persone-pet/couple-with-their-two-dogs-beagle-and-greyhound-2026-03-18-05-42-30-utc-card.jpg", href: "/professionisti?cat=dog_sitter" },
+  // TODO: sostituire con foto toelettatura professionale dedicata in prossimo batch Envato
+  /* orig: https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=500&q=80 */
+  { label: "Toelettatura", desc: "Bagno, taglio, stripping e trattamenti", img: "/img/stock/cani/standing-on-the-legs-beautiful-golden-retriever-d-2026-03-24-03-52-18-utc-card.jpg", href: "/professionisti?cat=toelettatura" },
+  // TODO: sostituire con foto educatore cinofilo in azione dedicata in prossimo batch Envato
+  /* orig: https://images.unsplash.com/photo-1560807707-8cc77767d783?w=500&q=80 */
+  { label: "Educatori cinofili", desc: "Metodo gentile per cani e proprietari", img: "/img/stock/cani/jack-russell-terrier-with-paws-up-peeking-over-bla-2026-01-06-10-39-55-utc-card.jpg", href: "/professionisti?cat=educatore_cinofilo" },
+  // TODO: sostituire con foto cibo/accessori pet (crocchette, giochi) dedicata in prossimo batch Envato
+  /* orig: https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=500&q=80 */
+  { label: "Offerte pet", desc: "Cibo, accessori e giochi in offerta", img: "/img/stock/cani/joyful-jack-russell-terrier-on-yellow-backdrop-2026-01-08-23-02-50-utc-card.jpg", href: "/offerte" },
 ];
 
 export function Categories() {

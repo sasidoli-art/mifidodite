@@ -18,9 +18,11 @@ export function SOSBanner() {
               <div className="relative flex flex-col sm:flex-row items-center gap-6 sm:gap-10 p-8 sm:p-10 bg-gradient-to-r from-red-600 via-red-500 to-orange-500 overflow-hidden">
                 {/* Immagine */}
                 <div className="w-28 h-28 sm:w-36 sm:h-36 rounded-2xl overflow-hidden shrink-0 border-4 border-white/20 shadow-xl">
+                  {/* orig: https://images.unsplash.com/photo-1544568100-847a948585b9?w=400&q=80 */}
+                  {/* TODO: sostituire con foto cane triste/sguardo implorante dedicata per banner SOS in prossimo batch Envato */}
                   <img loading="lazy"
-                    src="https://images.unsplash.com/photo-1544568100-847a948585b9?w=400&q=80"
-                    alt="Cane smarrito"
+                    src="/img/stock/cani/lifeguard-dog-2026-01-09-01-13-09-utc-card.jpg"
+                    alt="Golden Retriever con giubbotto arancione in piedi a bordo piscina con la squadra"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                 </div>

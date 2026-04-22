@@ -7,14 +7,21 @@ import { motion } from "framer-motion";
 import { LogoPaw } from "@/components/shared/Logo";
 
 const GALLERY = [
-  { img: "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=500&q=80", label: "Dog Sitter" },
-  { img: "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=500&q=80", label: "Gatti" },
-  { img: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=500&q=80", label: "Pensioni" },
-  { img: "https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=500&q=80", label: "Veterinari" },
-  { img: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=500&q=80", label: "Toelettatura" },
+  /* orig: https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=500&q=80 */
+  { img: "/img/stock/persone-pet/it-s-a-dog-s-world-three-puppy-dogs-contentedly-s-2026-03-13-01-55-17-utc-card.jpg", label: "Dog Sitter" },
+  /* orig: https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=500&q=80 */
+  { img: "/img/stock/gatti/shorthair-gray-cat-with-winking-eye-looking-straig-2026-03-25-05-09-58-utc-card.jpg", label: "Gatti" },
+  /* orig: https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=500&q=80 */
+  { img: "/img/stock/cani/dog-golden-retriever-labrador-in-autumn-at-sunset-2026-03-16-02-11-30-utc-card.jpg", label: "Pensioni" },
+  /* orig: https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=500&q=80 */
+  // TODO: sostituire con foto ambulatorio veterinario dedicata in prossimo batch Envato
+  { img: "/img/stock/cani/closeup-shot-of-the-snouts-of-a-cute-dog-and-a-cat-2026-01-08-00-23-04-utc-card.jpg", label: "Veterinari" },
+  /* orig: https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=500&q=80 */
+  // TODO: sostituire con foto toelettatura dedicata in prossimo batch Envato
+  { img: "/img/stock/cuccioli/jack-russell-puppy-isolated-on-pink-background-2026-01-09-11-30-40-utc-card.jpg", label: "Toelettatura" },
 ];
 
-export function Hero() {
+export function Hero({ articleCount = 155 }: { articleCount?: number }) {
   const router = useRouter();
   const [query, setQuery] = useState("");
   const [categoria, setCategoria] = useState("");
@@ -96,7 +103,7 @@ export function Hero() {
             </form>
 
             <div className="flex flex-wrap items-center gap-4 sm:gap-6 text-xs sm:text-sm text-muted-foreground">
-              <span className="flex items-center gap-1.5"><Star size={14} className="text-accent" /> 140+ articoli</span>
+              <span className="flex items-center gap-1.5"><Star size={14} className="text-accent" /> {articleCount}+ articoli</span>
               <span className="flex items-center gap-1.5"><Heart size={14} className="text-primary" /> Adozioni reali</span>
               <span className="flex items-center gap-1.5"><MapPin size={14} className="text-secondary" /> Dati OpenStreetMap</span>
             </div>
@@ -110,9 +117,11 @@ export function Hero() {
             transition={{ duration: 0.7, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
           >
             <div className="w-[420px] h-[480px] rounded-[28px] overflow-hidden relative shadow-[0_24px_64px_rgba(61,43,31,.14)]">
+              {/* orig: https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&q=80 */}
+              {/* TODO PRIORITÀ ALTA: hero_main — Westy studio è accettabile ma sub-ottimale come prima impressione sito. Cercare foto cane singolo in contesto naturale (casa/giardino) per sostituirlo. */}
               <img
-                src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&q=80"
-                alt="Cane felice"
+                src="/img/stock/cani/close-up-of-a-maltese-in-front-of-a-blue-backgroun-2026-03-09-07-57-04-utc-card.jpg"
+                alt="West Highland White Terrier bianco sorridente su sfondo azzurro, ritratto studio professionale"
                 className="w-full h-full object-cover hover:scale-[1.04] transition-transform duration-700"
               />
               <div className="absolute bottom-0 left-0 right-0 p-7 bg-gradient-to-t from-[rgba(44,27,14,.85)] via-[rgba(44,27,14,.4)] to-transparent">

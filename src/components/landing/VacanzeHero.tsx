@@ -11,7 +11,8 @@ const PREVIEW = [
     regione: "Puglia",
     tipo: "Masseria",
     tagline: "Tra i resort piu' premiati d'Italia",
-    img: "https://images.unsplash.com/photo-1587474260584-136574528ed5?w=800&q=80",
+    /* orig: https://images.unsplash.com/photo-1587474260584-136574528ed5?w=800&q=80 */
+    img: "/img/stock/ambienti-hotel/swimming-pool-of-a-luxury-resort-with-waterfall-an-2026-03-26-05-09-53-utc-card.jpg",
     href: "/vacanze/puglia/borgo-egnazia-savelletri",
     fascia: "€€€€",
   },
@@ -21,7 +22,9 @@ const PREVIEW = [
     regione: "Lombardia",
     tipo: "Hotel 5*",
     tagline: "Palazzo Liberty sul Lago di Como",
-    img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80",
+    // TODO: sostituire con foto Lombardia/Lago di Como specifica in prossimo batch Envato
+    /* orig: https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80 */
+    img: "/img/stock/ambienti-hotel/exterior-of-a-house-with-a-pool-in-a-luxury-comple-2026-03-17-07-10-22-utc-card.jpg",
     href: "/vacanze/lombardia/grand-hotel-tremezzo-como",
     fascia: "€€€€",
   },
@@ -31,7 +34,9 @@ const PREVIEW = [
     regione: "Veneto",
     tipo: "Camping Village",
     tagline: "60 ettari sul mare, area cani dedicata",
-    img: "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&q=80",
+    // TODO: sostituire con foto Union Lido/Cavallino o camping village sul mare in prossimo batch Envato
+    /* orig: https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&q=80 */
+    img: "/img/stock/ambienti-hotel/agritourism-in-tuscany-beautiful-sunny-day-2026-03-24-12-59-04-utc-card.jpg",
     href: "/vacanze/veneto/union-lido-cavallino",
     fascia: "€€",
   },

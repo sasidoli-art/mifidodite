@@ -1,0 +1,335 @@
+{
+  "generato_il": "2026-04-22T00:00:00.000Z",
+  "foto_trovate": 34,
+  "breakdown": {
+    "hardcoded": 34,
+    "da_db": 0
+  },
+  "query_redirect_safe": {
+    "articoli_magazine_home": "n/a — PetNews.tsx ha articoli HARDCODED (non query DB), effetto tecnico: la home NON userà mai articoli redirectati perché gli slug sono scritti a mano nel componente",
+    "spiagge_home": "n/a — SpiaggeHero.tsx ha 3 preview HARDCODED (non query DB)",
+    "vacanze_home": "n/a — VacanzeHero.tsx ha 3 preview HARDCODED (non query DB)"
+  },
+  "bug_noti_correlati": [
+    {
+      "severita": "media",
+      "descrizione": "PetNews.tsx riga 57 ha slug 'passaggio-proprieta-cane-guida-italiana' che è stato REDIRECTATO 301 dall'audit cannibalization al master 'passaggio-proprieta-cane-guida-procedura-italiana'. Il link funziona grazie al proxy middleware (301 dinamico), ma l'utente subisce un hop evitabile. Fix: aggiornare slug hardcoded al master.",
+      "file": "src/components/landing/PetNews.tsx",
+      "riga": 57
+    },
+    {
+      "severita": "media",
+      "descrizione": "PetNews.tsx riga 84 ha slug 'perche-i-cani-inclinano-la-testa-quando-parliamo-la-scienza-dietro-quel-gesto-irresistibile' che è stato REDIRECTATO 301 al master 'perche-cani-inclinano-testa-studio'. Stesso discorso: redirect hop evitabile.",
+      "file": "src/components/landing/PetNews.tsx",
+      "riga": 84
+    }
+  ],
+  "foto": [
+    {
+      "id": "hero_gallery_1_dog_sitter",
+      "url_attuale": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=500&q=80",
+      "file_sorgente": "src/components/landing/Hero.tsx",
+      "riga": 10,
+      "contesto": "Hero gallery thumb 1 — label 'Dog Sitter' (piccola card laterale)",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "cane con persona, compagnia, mood amichevole"
+    },
+    {
+      "id": "hero_gallery_2_gatti",
+      "url_attuale": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=500&q=80",
+      "file_sorgente": "src/components/landing/Hero.tsx",
+      "riga": 11,
+      "contesto": "Hero gallery thumb 2 — label 'Gatti'",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "gatto iconico, portrait"
+    },
+    {
+      "id": "hero_gallery_3_pensioni",
+      "url_attuale": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=500&q=80",
+      "file_sorgente": "src/components/landing/Hero.tsx",
+      "riga": 12,
+      "contesto": "Hero gallery thumb 3 — label 'Pensioni'",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "cane sereno, contesto riposo/accoglienza"
+    },
+    {
+      "id": "hero_gallery_4_veterinari",
+      "url_attuale": "https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=500&q=80",
+      "file_sorgente": "src/components/landing/Hero.tsx",
+      "riga": 13,
+      "contesto": "Hero gallery thumb 4 — label 'Veterinari'",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "cane calmo (idealmente veterinario-related, che non c'è nel catalogo)"
+    },
+    {
+      "id": "hero_gallery_5_toelettatura",
+      "url_attuale": "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=500&q=80",
+      "file_sorgente": "src/components/landing/Hero.tsx",
+      "riga": 14,
+      "contesto": "Hero gallery thumb 5 — label 'Toelettatura'",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "cane curato/pulito"
+    },
+    {
+      "id": "hero_main",
+      "url_attuale": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&q=80",
+      "file_sorgente": "src/components/landing/Hero.tsx",
+      "riga": 114,
+      "contesto": "HERO PRINCIPALE above-the-fold — cane felice iconico, visibile lato destro del fold desktop (hidden lg:flex). La foto più importante del sito.",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "cane felice, sorridente, iconico, PORTRAIT VERTICALE 420x480, ad alta confidenza, origine fotografia"
+    },
+    {
+      "id": "howitworks_step_1",
+      "url_attuale": "https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=500&q=80",
+      "file_sorgente": "src/components/landing/HowItWorks.tsx",
+      "riga": 12,
+      "contesto": "Step 01 — 'Cerca nella tua zona' (ricerca territoriale)",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "cane in contesto urbano/esterno, persona che cerca"
+    },
+    {
+      "id": "howitworks_step_2",
+      "url_attuale": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=500&q=80",
+      "file_sorgente": "src/components/landing/HowItWorks.tsx",
+      "riga": 19,
+      "contesto": "Step 02 — 'Leggi e confronta' (magazine, informazione)",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "cane/pet in posa riflessiva, studio, contesto informativo"
+    },
+    {
+      "id": "howitworks_step_3",
+      "url_attuale": "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=500&q=80",
+      "file_sorgente": "src/components/landing/HowItWorks.tsx",
+      "riga": 26,
+      "contesto": "Step 03 — 'Contatta il professionista'",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "persona e cane, relazione, contatto"
+    },
+    {
+      "id": "categories_veterinari",
+      "url_attuale": "https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=500&q=80",
+      "file_sorgente": "src/components/landing/Categories.tsx",
+      "riga": 8,
+      "contesto": "Card categoria 'Veterinari' — linka a /professionisti?cat=veterinario",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "contesto veterinario (mancante nel catalogo, surrogato cane calmo)"
+    },
+    {
+      "id": "categories_pensioni",
+      "url_attuale": "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=500&q=80",
+      "file_sorgente": "src/components/landing/Categories.tsx",
+      "riga": 9,
+      "contesto": "Card categoria 'Pensioni'",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "cane sereno, mood accoglienza"
+    },
+    {
+      "id": "categories_dog_sitter",
+      "url_attuale": "https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=500&q=80",
+      "file_sorgente": "src/components/landing/Categories.tsx",
+      "riga": 10,
+      "contesto": "Card categoria 'Dog Sitter'",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "cane con persona, passeggiata, compagnia"
+    },
+    {
+      "id": "categories_toelettatura",
+      "url_attuale": "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=500&q=80",
+      "file_sorgente": "src/components/landing/Categories.tsx",
+      "riga": 11,
+      "contesto": "Card categoria 'Toelettatura'",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "cane pulito/curato, mood leggero"
+    },
+    {
+      "id": "categories_educatori",
+      "url_attuale": "https://images.unsplash.com/photo-1560807707-8cc77767d783?w=500&q=80",
+      "file_sorgente": "src/components/landing/Categories.tsx",
+      "riga": 12,
+      "contesto": "Card categoria 'Educatori cinofili'",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "cane in addestramento o persona che insegna al cane"
+    },
+    {
+      "id": "categories_offerte",
+      "url_attuale": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=500&q=80",
+      "file_sorgente": "src/components/landing/Categories.tsx",
+      "riga": 13,
+      "contesto": "Card categoria 'Offerte pet' (cibo, accessori, giochi)",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "cibo/accessori pet (mancante nel catalogo, surrogato cane con oggetto)"
+    },
+    {
+      "id": "petnews_hero_trasporto_169",
+      "url_attuale": "https://images.unsplash.com/photo-1535930891776-0c2dfb7fda1a?w=600&q=80",
+      "file_sorgente": "src/components/landing/PetNews.tsx",
+      "riga": 52,
+      "contesto": "PetNews articolo 1 (HERO GRANDE del magazine home) — trasporto cani in auto art. 169",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "cane in auto / trasporto"
+    },
+    {
+      "id": "petnews_passaggio_proprieta",
+      "url_attuale": "https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&q=80",
+      "file_sorgente": "src/components/landing/PetNews.tsx",
+      "riga": 61,
+      "contesto": "PetNews articolo 2 — passaggio di proprietà cane (⚠ slug 301 redirectato)",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "cane istituzionale/documenti, neutro"
+    },
+    {
+      "id": "petnews_cibi_velenosi",
+      "url_attuale": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=600&q=80",
+      "file_sorgente": "src/components/landing/PetNews.tsx",
+      "riga": 70,
+      "contesto": "PetNews articolo 3 — cibi velenosi per cani",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "cane che guarda cibo umano, mood cauzione"
+    },
+    {
+      "id": "petnews_primo_soccorso",
+      "url_attuale": "https://images.unsplash.com/photo-1560807707-8cc77767d783?w=600&q=80",
+      "file_sorgente": "src/components/landing/PetNews.tsx",
+      "riga": 79,
+      "contesto": "PetNews articolo 4 — primo soccorso al cane",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "cane curato/attenzione, mood emergenza gestita"
+    },
+    {
+      "id": "petnews_testa_inclinata",
+      "url_attuale": "https://images.unsplash.com/photo-1518717758536-85ae29035b6d?w=600&q=80",
+      "file_sorgente": "src/components/landing/PetNews.tsx",
+      "riga": 88,
+      "contesto": "PetNews articolo 5 — perché cani inclinano la testa (⚠ slug 301 redirectato)",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "cane che guarda/ascolta, espressione curiosa"
+    },
+    {
+      "id": "petnews_fusa_terapia",
+      "url_attuale": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?w=600&q=80",
+      "file_sorgente": "src/components/landing/PetNews.tsx",
+      "riga": 97,
+      "contesto": "PetNews articolo 6 — fusa curative dei gatti",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "gatto, mood calmo/affettuoso"
+    },
+    {
+      "id": "scopri_ristoranti",
+      "url_attuale": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80",
+      "file_sorgente": "src/components/landing/ScopriDiPiu.tsx",
+      "riga": 14,
+      "contesto": "Card ScopriDiPiù 'Ristoranti pet-friendly' (38 locali)",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "ristorante/tavolo apparecchiato, mood gastronomico"
+    },
+    {
+      "id": "scopri_sentieri",
+      "url_attuale": "https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&q=80",
+      "file_sorgente": "src/components/landing/ScopriDiPiu.tsx",
+      "riga": 23,
+      "contesto": "Card ScopriDiPiù 'Sentieri ed escursioni' (26 sentieri)",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "sentiero montano/outdoor"
+    },
+    {
+      "id": "spiagge_1_bibione",
+      "url_attuale": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800&q=80",
+      "file_sorgente": "src/components/landing/SpiaggeHero.tsx",
+      "riga": 14,
+      "contesto": "Preview spiaggia 1 — Spiaggia di Pluto Bibione (VENETO)",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "ambienti-spiaggia italiana, preferibilmente Adriatico nord"
+    },
+    {
+      "id": "spiagge_2_san_vincenzo",
+      "url_attuale": "https://images.unsplash.com/photo-1601758174114-e711c0cbaa69?w=800&q=80",
+      "file_sorgente": "src/components/landing/SpiaggeHero.tsx",
+      "riga": 23,
+      "contesto": "Preview spiaggia 2 — Dog Beach San Vincenzo (TOSCANA)",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "ambienti-spiaggia Toscana/Tirreno"
+    },
+    {
+      "id": "spiagge_3_maccarese",
+      "url_attuale": "https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=800&q=80",
+      "file_sorgente": "src/components/landing/SpiaggeHero.tsx",
+      "riga": 32,
+      "contesto": "Preview spiaggia 3 — BauBeach Maccarese (LAZIO)",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "ambienti-spiaggia, stabilimento balneare"
+    },
+    {
+      "id": "vacanze_1_borgo_egnazia",
+      "url_attuale": "https://images.unsplash.com/photo-1587474260584-136574528ed5?w=800&q=80",
+      "file_sorgente": "src/components/landing/VacanzeHero.tsx",
+      "riga": 14,
+      "contesto": "Preview vacanze 1 — Borgo Egnazia Savelletri (PUGLIA — masseria lusso)",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "ambienti-hotel masseria pugliese"
+    },
+    {
+      "id": "vacanze_2_tremezzo",
+      "url_attuale": "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80",
+      "file_sorgente": "src/components/landing/VacanzeHero.tsx",
+      "riga": 24,
+      "contesto": "Preview vacanze 2 — Grand Hotel Tremezzo (LOMBARDIA — hotel 5* sul Lago di Como)",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "ambienti-hotel lago/lusso, preferibilmente Lombardia"
+    },
+    {
+      "id": "vacanze_3_union_lido",
+      "url_attuale": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=800&q=80",
+      "file_sorgente": "src/components/landing/VacanzeHero.tsx",
+      "riga": 34,
+      "contesto": "Preview vacanze 3 — Union Lido Cavallino (VENETO — camping village sul mare)",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "ambienti-hotel camping/piscina/mare"
+    },
+    {
+      "id": "sos_smarriti",
+      "url_attuale": "https://images.unsplash.com/photo-1544568100-847a948585b9?w=400&q=80",
+      "file_sorgente": "src/components/landing/SOSBanner.tsx",
+      "riga": 22,
+      "contesto": "Banner SOS Smarriti (colore rosso/emergenza) — avatar cane da ritrovare",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "cane dolce/vulnerabile/sguardo (mancante nel catalogo, surrogato cane singolo espressivo)"
+    },
+    {
+      "id": "featured_pro_veterinario",
+      "url_attuale": "https://images.unsplash.com/photo-1576201836106-db1758fd1c97?w=600&q=80",
+      "file_sorgente": "src/components/landing/FeaturedPros.tsx",
+      "riga": 11,
+      "contesto": "Card servizio featured 'Trova il veterinario' (gradient rosso)",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "contesto veterinario (mancante, surrogato cane calmo)"
+    },
+    {
+      "id": "featured_pro_pensione",
+      "url_attuale": "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=600&q=80",
+      "file_sorgente": "src/components/landing/FeaturedPros.tsx",
+      "riga": 18,
+      "contesto": "Card servizio featured 'Pensione per il tuo pet' (gradient ambra)",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "cane sereno/a casa"
+    },
+    {
+      "id": "featured_pro_toelettatura",
+      "url_attuale": "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?w=600&q=80",
+      "file_sorgente": "src/components/landing/FeaturedPros.tsx",
+      "riga": 25,
+      "contesto": "Card servizio featured 'Toelettatura professionale' (gradient rosa)",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "cane pulito/curato"
+    },
+    {
+      "id": "pro_cta_banner",
+      "url_attuale": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=700&q=80",
+      "file_sorgente": "src/components/landing/ProCTA.tsx",
+      "riga": 76,
+      "contesto": "ProCTA banner bottom — 'Sei un professionista pet?' (altezza 400px)",
+      "tipo": "hardcoded",
+      "semantica_richiesta": "professionista con cane/relazione lavorativa pet"
+    }
+  ]
+}

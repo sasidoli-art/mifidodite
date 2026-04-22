@@ -11,7 +11,9 @@ const PREVIEW_SPIAGGE = [
     regione: "Veneto",
     tipo: "Stabilimento",
     tagline: "La piu grande dog beach d'Italia",
-    img: "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800&q=80",
+    // TODO: sostituire con foto Bibione/Veneto specifica in prossimo batch Envato
+    /* orig: https://images.unsplash.com/photo-1548199973-03cce0bbc87b?w=800&q=80 */
+    img: "/img/stock/ambienti-spiaggia/sunbeds-and-parasols-on-the-seashore-beach-sea-a-2026-03-19-22-49-16-utc-card.jpg",
     href: "/spiagge/veneto/spiaggia-di-pluto-bibione",
   },
   {
@@ -20,7 +22,9 @@ const PREVIEW_SPIAGGE = [
     regione: "Toscana",
     tipo: "Spiaggia libera",
     tagline: "200m di battigia, cani senza guinzaglio",
-    img: "https://images.unsplash.com/photo-1601758174114-e711c0cbaa69?w=800&q=80",
+    // TODO: sostituire con foto Versilia/Toscana specifica in prossimo batch Envato
+    /* orig: https://images.unsplash.com/photo-1601758174114-e711c0cbaa69?w=800&q=80 */
+    img: "/img/stock/ambienti-spiaggia/cala-fuili-beach-in-cala-gonone-sardinia-italy-2026-03-26-10-03-13-utc-card.jpg",
     href: "/spiagge/toscana/dog-beach-san-vincenzo",
   },
   {
@@ -29,7 +33,9 @@ const PREVIEW_SPIAGGE = [
     regione: "Lazio",
     tipo: "Stabilimento",
     tagline: "La prima bau beach d'Italia, dal 1997",
-    img: "https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=800&q=80",
+    // TODO: sostituire con foto Lazio/Maccarese specifica in prossimo batch Envato
+    /* orig: https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=800&q=80 */
+    img: "/img/stock/ambienti-spiaggia/beautiful-sea-on-the-dramatic-sunset-2026-03-18-07-05-06-utc-card.jpg",
     href: "/spiagge/lazio/baubeach-maccarese",
   },
 ];

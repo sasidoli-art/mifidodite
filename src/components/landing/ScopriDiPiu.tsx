@@ -11,7 +11,8 @@ const CARDS = [
     tag: "Mangiare fuori",
     title: "Ristoranti pet-friendly",
     desc: "38 locali in tutta Italia: osterie, pizzerie, agriturismi con dehors. Il tuo cane e il benvenuto.",
-    img: "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80",
+    /* orig: https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80 */
+    img: "/img/stock/altro/sunrise-and-deck-with-chairs-chairs-on-the-promena-2026-03-26-07-50-22-utc-card.jpg",
     gradient: "from-amber-600 to-orange-700",
   },
   {
@@ -20,7 +21,8 @@ const CARDS = [
     tag: "Outdoor",
     title: "Sentieri ed escursioni",
     desc: "26 sentieri dog-friendly: Dolomiti, Cinque Terre, Sardegna, Gran Sasso. Difficolta, dislivello, durata.",
-    img: "https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&q=80",
+    /* orig: https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&q=80 */
+    img: "/img/stock/ambienti-sentiero/azure-trail-is-the-most-simple-the-most-famous-an-2026-03-18-15-58-43-utc-card.jpg",
     gradient: "from-emerald-600 to-teal-700",
   },
 ];

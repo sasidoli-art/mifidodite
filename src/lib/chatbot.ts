@@ -5,6 +5,7 @@
 
 import { askDeepSeek } from "./ai-agent";
 import { getDB } from "./db";
+import { logAgentStart, logAgentSuccess, logAgentError, calculateCost } from "./agent-logger";
 
 const MODEL = "deepseek-chat";
 
@@ -166,27 +167,47 @@ export async function chatWithZampa(
     ...recentMessages,
   ];
 
-  const res = await fetch("https://api.deepseek.com/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-      Authorization: `Bearer ${apiKey}`,
-    },
-    body: JSON.stringify({
-      model: MODEL,
-      max_tokens: 600,
-      temperature: 0.7,
-      messages: fullMessages,
-    }),
-  });
+  // GDPR: NON salviamo full_input/full_output nel log (contengono messaggi utente).
+  // Solo metrica: token usage, cost, durata, n_messaggi nel context.
+  const runId = await logAgentStart("chatbot", MODEL, undefined, { messages_count: recentMessages.length });
 
-  if (!res.ok) {
-    throw new Error(`DeepSeek HTTP ${res.status}: ${await res.text()}`);
+  try {
+    const res = await fetch("https://api.deepseek.com/v1/chat/completions", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${apiKey}`,
+      },
+      body: JSON.stringify({
+        model: MODEL,
+        max_tokens: 600,
+        temperature: 0.7,
+        messages: fullMessages,
+      }),
+    });
+
+    if (!res.ok) {
+      const errText = await res.text();
+      await logAgentError(runId, `DeepSeek HTTP ${res.status}: ${errText.slice(0, 500)}`);
+      throw new Error(`DeepSeek HTTP ${res.status}: ${errText}`);
+    }
+
+    const data = await res.json();
+    const reply = data.choices?.[0]?.message?.content || "";
+    const inTok = data.usage?.prompt_tokens ?? 0;
+    const outTok = data.usage?.completion_tokens ?? 0;
+    const costEur = calculateCost(MODEL, inTok, outTok);
+    await logAgentSuccess(runId, {
+      inputTokens: inTok,
+      outputTokens: outTok,
+      costEur,
+      // full_input/full_output OMESSI per GDPR — retention separata in chat_messages con TTL 30gg
+    });
+    return { reply, model: MODEL, ms: Date.now() - start };
+  } catch (err) {
+    await logAgentError(runId, (err as Error).message);
+    throw err;
   }
-
-  const data = await res.json();
-  const reply = data.choices?.[0]?.message?.content || "";
-  return { reply, model: MODEL, ms: Date.now() - start };
 }
 
 /**

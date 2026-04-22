@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
-import { askDeepSeek } from "@/lib/ai-agent";
+import { askDeepSeekFull } from "@/lib/ai-agent";
 import { getDB } from "@/lib/db";
+import { logAgentStart, logAgentSuccess, logAgentError, calculateCost } from "@/lib/agent-logger";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 300;
@@ -45,6 +46,9 @@ export async function GET(request: NextRequest) {
 
   const results: Array<{ titolo: string; slug: string; stato: string }> = [];
   const errors: string[] = [];
+  let totalIn = 0, totalOut = 0, totalCost = 0;
+  const articlesUpdated: number[] = [];
+  const runId = await logAgentStart("rewrite-articles", "deepseek-chat", `batch=${batch} offset=${offset}`, { trigger: "manual" });
 
   for (const art of articoli) {
     try {
@@ -93,7 +97,10 @@ REGOLE:
 - Chiudi con: "<p><strong>Scopri altre guide e consigli su MifidoDiTe.eu, il magazine pet d'Italia.</strong></p>"
 - Rispondi SOLO con HTML. No markdown, no fences, no commenti.`;
 
-      const newContent = await askDeepSeek(prompt, 6000);
+      const res = await askDeepSeekFull(prompt, 6000);
+      totalIn += res.usage.input; totalOut += res.usage.output;
+      totalCost += calculateCost(res.model_used, res.usage.input, res.usage.output);
+      const newContent = res.text;
       let html = newContent.replace(/^```html?\s*/i, "").replace(/```\s*$/i, "").trim();
 
       if (html.length < 500) {
@@ -112,6 +119,7 @@ REGOLE:
         WHERE id = ${art.id}
       `;
 
+      articlesUpdated.push(art.id);
       results.push({ titolo: art.titolo, slug: art.slug, stato: "riscritto" });
     } catch (err) {
       errors.push(`${art.titolo.slice(0, 40)}: ${(err as Error).message}`);
@@ -119,6 +127,20 @@ REGOLE:
   }
 
   const totale = await sql`SELECT count(*)::int as n FROM articoli WHERE pubblicato = true`;
+
+  if (runId) {
+    if (errors.length > 0 && results.length === 0) {
+      await logAgentError(runId, errors.join(" | ").slice(0, 1000), { totalIn, totalOut });
+    } else {
+      await logAgentSuccess(runId, {
+        inputTokens: totalIn,
+        outputTokens: totalOut,
+        costEur: Number(totalCost.toFixed(6)),
+        articlesGeneratedIds: articlesUpdated,
+        metadataExtra: { riscritti: results.length, errors_count: errors.length, action: "rewrite" },
+      });
+    }
+  }
 
   return NextResponse.json({
     success: results.length > 0,

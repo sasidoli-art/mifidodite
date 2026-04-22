@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
-import { askDeepSeek, extractJSON } from "@/lib/ai-agent";
+import { askDeepSeekFull, extractJSON } from "@/lib/ai-agent";
+import { logAgentStart, logAgentSuccess, logAgentError, calculateCost } from "@/lib/agent-logger";
 import { slugify } from "@/lib/utils";
 import { getDB } from "@/lib/db";
 
@@ -62,6 +63,9 @@ export async function GET(request: Request) {
   const sql = getDB();
   const results: Array<{ titolo: string; slug: string; stato: string }> = [];
   const errors: string[] = [];
+  let totalIn = 0, totalOut = 0, totalCost = 0;
+  const articlesGenerated: number[] = [];
+  const runId = await logAgentStart("gen-razze", "deepseek-chat", `numArticoli=${numArticoli} from=${from}`, { trigger: "manual" });
 
   const temiScelti = TEMI_RAZZE.slice(from, from + numArticoli);
 
@@ -72,7 +76,10 @@ TEMA: ${t.tema}
 Rispondi SOLO con JSON puro (no markdown, no fences):
 {"titolo":"titolo SEO max 80 char, accattivante e curioso","slug":"formato-url-seo","estratto":"meta description 2 frasi max 160 char che crei curiosita","tempo_lettura":"X min","tags":["5 keyword"]}`;
 
-      const metaResponse = await askDeepSeek(metaPrompt, 400);
+      const metaRes = await askDeepSeekFull(metaPrompt, 400);
+      totalIn += metaRes.usage.input; totalOut += metaRes.usage.output;
+      totalCost += calculateCost(metaRes.model_used, metaRes.usage.input, metaRes.usage.output);
+      const metaResponse = metaRes.text;
       const parsed = extractJSON(metaResponse);
       const meta = (Array.isArray(parsed) ? parsed[0] : parsed) as { titolo: string; slug: string; estratto: string; tempo_lettura: string; tags: string[] };
 
@@ -116,21 +123,40 @@ REGOLE:
 - Chiudi con: "<p><strong>Scopri altre curiosita sul mondo pet su MifidoDiTe.eu</strong></p>"
 - Rispondi SOLO con HTML.`;
 
-      const contenuto = await askDeepSeek(contentPrompt, 6000);
+      const contentRes = await askDeepSeekFull(contentPrompt, 6000);
+      totalIn += contentRes.usage.input; totalOut += contentRes.usage.output;
+      totalCost += calculateCost(contentRes.model_used, contentRes.usage.input, contentRes.usage.output);
+      const contenuto = contentRes.text;
       let html = contenuto.replace(/^```html?\s*/i, "").replace(/```\s*$/i, "").trim();
       if (html.length < 500) { errors.push(`Short: ${meta.titolo}`); continue; }
 
       const imgs = UNSPLASH[t.specie as "cani" | "gatti"] || UNSPLASH.cani;
       const img = imgs[Math.floor(Math.random() * imgs.length)];
 
-      await sql`
+      const inserted = await sql`
         INSERT INTO articoli (titolo, slug, categoria, estratto, contenuto, tempo_lettura, tags, img, pubblicato)
         VALUES (${meta.titolo}, ${slug}, ${t.categoria}, ${meta.estratto || ""}, ${html}, ${meta.tempo_lettura || "7 min"}, ${meta.tags || []}, ${img}, false)
+        RETURNING id
       `;
+      if (inserted[0]?.id) articlesGenerated.push(inserted[0].id as number);
 
       results.push({ titolo: meta.titolo, slug, stato: "bozza" });
     } catch (err) {
       errors.push(`${t.tema.slice(0, 40)}: ${(err as Error).message}`);
+    }
+  }
+
+  if (runId) {
+    if (errors.length > 0 && results.length === 0) {
+      await logAgentError(runId, errors.join(" | ").slice(0, 1000), { totalIn, totalOut });
+    } else {
+      await logAgentSuccess(runId, {
+        inputTokens: totalIn,
+        outputTokens: totalOut,
+        costEur: Number(totalCost.toFixed(6)),
+        articlesGeneratedIds: articlesGenerated,
+        metadataExtra: { salvati: results.length, errors_count: errors.length },
+      });
     }
   }
 

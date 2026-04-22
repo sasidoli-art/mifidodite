@@ -1,9 +1,9 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyCron } from "@/lib/cron-auth";
 import { fetchSubitoAnimali } from "@/lib/subito-scraper";
-import { askAI, extractJSON } from "@/lib/ai-agent";
+import { askAIFull, extractJSON } from "@/lib/ai-agent";
 import { slugify } from "@/lib/utils";
-import { logAgent, startTimer } from "@/lib/agent-logger";
+import { logAgent, startTimer, calculateCost } from "@/lib/agent-logger";
 
 // ============================================
 // AGENTE MONITOR
@@ -17,6 +17,10 @@ export async function GET(request: NextRequest) {
   const elapsed = startTimer();
 
   let importati = 0;
+  let totalInputTokens = 0;
+  let totalOutputTokens = 0;
+  let totalCostEur = 0;
+  let modelUsed = "";
 
   // 1. Cerca su Subito.it annunci di smarrimento
   const queries = [
@@ -103,7 +107,12 @@ Estrai in JSON:
 
 Se l'annuncio non e realmente di un animale smarrito/trovato, rispondi con null.`;
 
-        const response = await askAI(prompt, 500);
+        const fullRes = await askAIFull(prompt, 500);
+        const response = fullRes.text;
+        totalInputTokens += fullRes.usage.input;
+        totalOutputTokens += fullRes.usage.output;
+        modelUsed = fullRes.model_used;
+        totalCostEur += calculateCost(fullRes.model_used, fullRes.usage.input, fullRes.usage.output);
         const dati = extractJSON(response) as {
           nome_animale: string | null;
           specie: string;
@@ -155,6 +164,12 @@ Se l'annuncio non e realmente di un animale smarrito/trovato, rispondi con null.
     risultati_trovati: annunci.length,
     risultati_salvati: importati,
     durata_ms: elapsed(),
+    costo_stimato: Number(totalCostEur.toFixed(6)),
+    dettagli: {
+      model_used: modelUsed,
+      input_tokens: totalInputTokens,
+      output_tokens: totalOutputTokens,
+    },
   });
 
   return NextResponse.json({

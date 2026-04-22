@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
-import { askAI, extractJSON } from "@/lib/ai-agent";
+import { askAIFull, extractJSON } from "@/lib/ai-agent";
 import { sendEmail } from "@/lib/email";
+import { logAgentStart, logAgentSuccess, logAgentError, calculateCost } from "@/lib/agent-logger";
 
 export const dynamic = "force-dynamic";
 export const maxDuration = 60;
@@ -65,12 +66,15 @@ Rispondi SOLO con array JSON puro (no markdown, no fences):
   ... (6 elementi totali)
 ]`;
 
+  const runId = await logAgentStart("gen-social-mifido", null, prompt, { trigger: "manual", context: "lancio-mifido" });
+
   try {
-    const response = await askAI(prompt, 4000);
-    const parsed = extractJSON(response);
+    const response = await askAIFull(prompt, 4000);
+    const parsed = extractJSON(response.text);
     const posts = (Array.isArray(parsed) ? parsed : [parsed]) as MiFidoPost[];
 
     if (posts.length === 0) {
+      await logAgentError(runId, "Nessun post generato (JSON vuoto)", { model_used: response.model_used });
       return NextResponse.json({ success: false, error: "Nessun post generato" });
     }
 
@@ -82,6 +86,15 @@ Rispondi SOLO con array JSON puro (no markdown, no fences):
       html: buildLaunchEmailHtml(posts),
     });
 
+    const cost = calculateCost(response.model_used, response.usage.input, response.usage.output);
+    await logAgentSuccess(runId, {
+      inputTokens: response.usage.input,
+      outputTokens: response.usage.output,
+      costEur: cost,
+      fullOutput: response.text,
+      metadataExtra: { posts_generati: posts.length, email_inviata: emailSent, model_used: response.model_used },
+    });
+
     return NextResponse.json({
       success: true,
       posts_generati: posts.length,
@@ -89,6 +102,7 @@ Rispondi SOLO con array JSON puro (no markdown, no fences):
       angoli: posts.map((p) => p.angolo),
     });
   } catch (err) {
+    await logAgentError(runId, String(err));
     return NextResponse.json({ success: false, error: String(err) });
   }
 }

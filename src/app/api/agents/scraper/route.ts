@@ -1,10 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyCron } from "@/lib/cron-auth";
 import { scrapeGenericPage } from "@/lib/scraper";
-import { askAI, extractJSON } from "@/lib/ai-agent";
+import { askAIFull, extractJSON } from "@/lib/ai-agent";
 import { slugify } from "@/lib/utils";
 import { CITTA_ITALIANE, REGIONI } from "@/lib/scraper-google";
-import { logAgent, startTimer, stimaCosto } from "@/lib/agent-logger";
+import { logAgent, startTimer, calculateCost } from "@/lib/agent-logger";
 
 // ============================================
 // AGENTE SCRAPER
@@ -27,8 +27,10 @@ export async function GET(request: NextRequest) {
   if (authError) return authError;
 
   const elapsed = startTimer();
-  let totalInputChars = 0;
-  let totalOutputChars = 0;
+  let totalInputTokens = 0;
+  let totalOutputTokens = 0;
+  let totalCostEur = 0;
+  let modelUsed = "";
 
   // Determina quale citta scrapare oggi (rotazione giornaliera)
   const oggi = Math.floor(Date.now() / (24 * 60 * 60 * 1000));
@@ -101,9 +103,12 @@ Rispondi SOLO con un array JSON valido.
 TESTO DA ANALIZZARE:
 ${pageText.slice(0, 3000)}`;
 
-      const response = await askAI(prompt, 3000);
-      totalInputChars += prompt.length;
-      totalOutputChars += response.length;
+      const fullRes = await askAIFull(prompt, 3000);
+      const response = fullRes.text;
+      totalInputTokens += fullRes.usage.input;
+      totalOutputTokens += fullRes.usage.output;
+      modelUsed = fullRes.model_used;
+      totalCostEur += calculateCost(fullRes.model_used, fullRes.usage.input, fullRes.usage.output);
       const parsed = extractJSON(response) as Array<{
         nome: string;
         categoria: string;
@@ -185,11 +190,14 @@ ${pageText.slice(0, 3000)}`;
     risultati_salvati: salvati,
     errori: 0,
     durata_ms: elapsed(),
-    costo_stimato: stimaCosto(totalInputChars, totalOutputChars),
+    costo_stimato: Number(totalCostEur.toFixed(6)),
     dettagli: {
       regione: citta.regione,
       categorie_cercate: CATEGORIE_RICERCA.length,
       nomi: risultati.map((r) => r.nome),
+      model_used: modelUsed,
+      input_tokens: totalInputTokens,
+      output_tokens: totalOutputTokens,
     },
   });
 

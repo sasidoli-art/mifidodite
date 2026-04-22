@@ -1,7 +1,160 @@
 // ============================================
-// Agent Logger — traccia ogni esecuzione
+// Agent Logger — traccia ogni esecuzione su Neon
+// Schema: migration 018_agent_logs_v2.sql
 // ============================================
 
+import { neon } from "@neondatabase/serverless";
+
+export type AgentStatus = "started" | "success" | "error" | "timeout" | "skipped";
+
+export interface TokenUsage {
+  input: number;
+  output: number;
+}
+
+// ---- Pricing (USD/1M tokens) + conversione EUR ----
+// fixed conversion rate, update quarterly if needed
+const USD_EUR = 0.92;
+const PRICING_USD_PER_MTOK: Record<string, { in: number; out: number }> = {
+  "claude-haiku-4-5-20251001": { in: 1.0, out: 5.0 },
+  "deepseek-chat":              { in: 0.14, out: 0.28 },
+  "qwen/qwen-2.5-72b-instruct": { in: 0.40, out: 0.40 },
+};
+
+export function calculateCost(model: string, inputTokens: number, outputTokens: number): number {
+  const p = PRICING_USD_PER_MTOK[model];
+  if (!p) return 0;
+  const usd = (inputTokens / 1_000_000) * p.in + (outputTokens / 1_000_000) * p.out;
+  return Number((usd * USD_EUR).toFixed(6));
+}
+
+// ---- DB helper: safe no-throw ----
+function getSql() {
+  const url = process.env.DATABASE_URL;
+  if (!url) return null;
+  return neon(url);
+}
+
+async function safeExec(fn: () => Promise<unknown>, label: string): Promise<void> {
+  try {
+    await fn();
+  } catch (err) {
+    console.error(`[agent-logger] ${label} fallito (non bloccante):`, (err as Error).message);
+  }
+}
+
+// ---- Start: ritorna run_id per follow-up ----
+export async function logAgentStart(
+  agente: string,
+  modelUsed: string | null,
+  fullInput?: string,
+  metadata?: Record<string, unknown>
+): Promise<string | null> {
+  const sql = getSql();
+  if (!sql) return null;
+
+  const runId = crypto.randomUUID();
+  await safeExec(async () => {
+    await sql`
+      INSERT INTO agent_logs (agente, run_id, status, model_used, full_input, metadata)
+      VALUES (${agente}, ${runId}, 'started', ${modelUsed}, ${fullInput ?? null}, ${metadata ? JSON.stringify(metadata) : null}::jsonb)
+    `;
+  }, `start ${agente}`);
+  return runId;
+}
+
+// ---- Success ----
+export async function logAgentSuccess(
+  runId: string | null,
+  opts: {
+    inputTokens?: number;
+    outputTokens?: number;
+    fullOutput?: string;
+    costEur?: number;
+    articlesGeneratedIds?: number[];
+    metadataExtra?: Record<string, unknown>;
+  } = {}
+): Promise<void> {
+  if (!runId) return;
+  const sql = getSql();
+  if (!sql) return;
+
+  const {
+    inputTokens = null,
+    outputTokens = null,
+    fullOutput = null,
+    costEur = null,
+    articlesGeneratedIds = null,
+    metadataExtra = null,
+  } = opts;
+
+  await safeExec(async () => {
+    await sql`
+      UPDATE agent_logs
+      SET status = 'success',
+          timestamp_end = NOW(),
+          duration_ms = (EXTRACT(EPOCH FROM (NOW() - timestamp_start)) * 1000)::int,
+          input_tokens = ${inputTokens},
+          output_tokens = ${outputTokens},
+          cost_eur = ${costEur},
+          full_output = ${fullOutput},
+          articles_generated_ids = ${articlesGeneratedIds},
+          metadata = COALESCE(metadata, '{}'::jsonb) || ${metadataExtra ? JSON.stringify(metadataExtra) : "{}"}::jsonb
+      WHERE run_id = ${runId}
+    `;
+  }, `success ${runId}`);
+}
+
+// ---- Error ----
+export async function logAgentError(
+  runId: string | null,
+  errorMessage: string,
+  metadataExtra?: Record<string, unknown>
+): Promise<void> {
+  if (!runId) return;
+  const sql = getSql();
+  if (!sql) return;
+
+  await safeExec(async () => {
+    await sql`
+      UPDATE agent_logs
+      SET status = 'error',
+          timestamp_end = NOW(),
+          duration_ms = (EXTRACT(EPOCH FROM (NOW() - timestamp_start)) * 1000)::int,
+          error_message = ${errorMessage.slice(0, 5000)},
+          metadata = COALESCE(metadata, '{}'::jsonb) || ${metadataExtra ? JSON.stringify(metadataExtra) : "{}"}::jsonb
+      WHERE run_id = ${runId}
+    `;
+  }, `error ${runId}`);
+}
+
+// ---- Skipped ----
+export async function logAgentSkipped(
+  runId: string | null,
+  reason: string
+): Promise<void> {
+  if (!runId) return;
+  const sql = getSql();
+  if (!sql) return;
+
+  await safeExec(async () => {
+    await sql`
+      UPDATE agent_logs
+      SET status = 'skipped',
+          timestamp_end = NOW(),
+          duration_ms = (EXTRACT(EPOCH FROM (NOW() - timestamp_start)) * 1000)::int,
+          error_message = ${reason}
+      WHERE run_id = ${runId}
+    `;
+  }, `skipped ${runId}`);
+}
+
+// ============================================
+// Legacy API — backward compat per agent vecchi
+// master/scraper/writer/monitor/social esistenti chiamano logAgent()
+// con signature vecchia (agente/stato/dettagli). Li lascio funzionare
+// proxando a INSERT 1-shot.
+// ============================================
 export interface AgentLogEntry {
   agente: string;
   stato: "ok" | "errore" | "parziale";
@@ -15,37 +168,43 @@ export interface AgentLogEntry {
   costo_stimato?: number;
 }
 
-export async function logAgent(entry: AgentLogEntry) {
-  // Salva su DB se configurato
-  if (process.env.NEXT_PUBLIC_SUPABASE_URL) {
-    try {
-      const { createClient } = await import("@/lib/supabase/server");
-      const supabase = await createClient();
-      await supabase.from("agent_logs").insert({
-        agente: entry.agente,
-        stato: entry.stato,
-        citta: entry.citta || null,
-        risultati_trovati: entry.risultati_trovati || 0,
-        risultati_salvati: entry.risultati_salvati || 0,
-        errori: entry.errori || 0,
-        dettagli: entry.dettagli || {},
-        errore_messaggio: entry.errore_messaggio || null,
-        durata_ms: entry.durata_ms || null,
-        costo_stimato: entry.costo_stimato || null,
-      });
-    } catch {
-      // Se il DB non funziona, log in console
-      console.error("[AgentLogger] DB error, fallback to console:", entry);
-    }
+export async function logAgent(entry: AgentLogEntry): Promise<void> {
+  const sql = getSql();
+  if (!sql) {
+    console.log(`[Agent:${entry.agente}] ${entry.stato} (logger no-op: DATABASE_URL mancante)`);
+    return;
   }
 
-  // Sempre log in console per debug
+  const status: AgentStatus =
+    entry.stato === "ok" ? "success" :
+    entry.stato === "errore" ? "error" : "success";
+
+  const metadata = {
+    citta: entry.citta,
+    risultati_trovati: entry.risultati_trovati,
+    risultati_salvati: entry.risultati_salvati,
+    errori: entry.errori,
+    ...(entry.dettagli ?? {}),
+  };
+
+  await safeExec(async () => {
+    await sql`
+      INSERT INTO agent_logs
+        (agente, status, duration_ms, cost_eur, error_message, metadata, timestamp_end)
+      VALUES
+        (${entry.agente}, ${status}, ${entry.durata_ms ?? null}, ${entry.costo_stimato ?? null},
+         ${entry.errore_messaggio ?? null},
+         ${JSON.stringify(metadata)}::jsonb,
+         NOW())
+    `;
+  }, `legacy ${entry.agente}`);
+
   const emoji = entry.stato === "ok" ? "✅" : entry.stato === "parziale" ? "⚠️" : "❌";
   console.log(
-    `[Agent:${entry.agente}] ${emoji} ${entry.stato} | trovati:${entry.risultati_trovati || 0} salvati:${entry.risultati_salvati || 0} errori:${entry.errori || 0}${entry.citta ? ` | ${entry.citta}` : ""}${entry.errore_messaggio ? ` | ${entry.errore_messaggio}` : ""}`
+    `[Agent:${entry.agente}] ${emoji} ${entry.stato} | trovati:${entry.risultati_trovati || 0} salvati:${entry.risultati_salvati || 0} errori:${entry.errori || 0}${entry.errore_messaggio ? ` | ${entry.errore_messaggio}` : ""}`
   );
 
-  // Se errore, manda notifica email via SMTP Aruba
+  // Notifica email su errore (invariato rispetto alla v1)
   if (entry.stato === "errore" && process.env.SMTP_PASS) {
     try {
       const { sendEmail } = await import("@/lib/email");
@@ -58,25 +217,23 @@ export async function logAgent(entry: AgentLogEntry) {
           <p><strong>Citta:</strong> ${entry.citta || "N/A"}</p>
           <p><strong>Durata:</strong> ${entry.durata_ms ? `${(entry.durata_ms / 1000).toFixed(1)}s` : "N/A"}</p>
           <p><strong>Data:</strong> ${new Date().toISOString()}</p>
-          <p>Controlla la dashboard: <a href="https://mifidodite.eu/admin/agenti">Admin Agenti</a></p>
         `,
       });
     } catch {
-      console.error("[AgentLogger] Impossibile inviare email di errore");
+      console.error("[AgentLogger] email errore non inviata");
     }
   }
 }
 
-// Timer helper
-export function startTimer() {
-  const start = Date.now();
-  return () => Date.now() - start;
+export function startTimer(): () => number {
+  const t0 = Date.now();
+  return () => Date.now() - t0;
 }
 
-// Stima costo Claude Haiku per numero di token
-// Haiku: $0.25/1M input, $1.25/1M output (circa)
+// Legacy: stima costo basata su char (usata dagli agent vecchi prima del refactor).
+// Ora ridirige a calculateCost con conversione grezza char→token (÷4).
 export function stimaCosto(inputChars: number, outputChars: number): number {
-  const inputTokens = inputChars / 4; // stima grezza
-  const outputTokens = outputChars / 4;
-  return (inputTokens * 0.25 + outputTokens * 1.25) / 1_000_000;
+  const inputTokens = Math.ceil(inputChars / 4);
+  const outputTokens = Math.ceil(outputChars / 4);
+  return calculateCost("claude-haiku-4-5-20251001", inputTokens, outputTokens);
 }

@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyCron } from "@/lib/cron-auth";
-import { askAI, extractJSON } from "@/lib/ai-agent";
-import { logAgent, startTimer } from "@/lib/agent-logger";
+import { askAIFull, extractJSON } from "@/lib/ai-agent";
+import { logAgent, startTimer, calculateCost } from "@/lib/agent-logger";
 import { getDB } from "@/lib/db";
 import { sendEmail } from "@/lib/email";
 
@@ -106,7 +106,9 @@ IMPORTANTISSIMO: rispondi ESCLUSIVAMENTE con un array JSON. Nessun testo prima o
 ]`;
 
   try {
-    const response = await askAI(prompt, 3000);
+    const fullRes = await askAIFull(prompt, 3000);
+    const response = fullRes.text;
+    const costEur = calculateCost(fullRes.model_used, fullRes.usage.input, fullRes.usage.output);
     let posts: PostGenerated[];
     try {
       const parsed = extractJSON(response);
@@ -168,7 +170,14 @@ IMPORTANTISSIMO: rispondi ESCLUSIVAMENTE con un array JSON. Nessun testo prima o
       risultati_trovati: posts.length,
       risultati_salvati: salvati,
       durata_ms: elapsed(),
-      dettagli: { posts, email_sent: emailSent },
+      costo_stimato: costEur,
+      dettagli: {
+        posts,
+        email_sent: emailSent,
+        model_used: fullRes.model_used,
+        input_tokens: fullRes.usage.input,
+        output_tokens: fullRes.usage.output,
+      },
     });
 
     return NextResponse.json({

@@ -3,11 +3,33 @@
 // Claude Haiku → DeepSeek → OpenRouter (accesso a tutti i modelli)
 // ============================================
 
+export interface AIUsage {
+  input: number;
+  output: number;
+}
+
+export interface AIResponse {
+  text: string;
+  usage: AIUsage;
+  model_used: string;
+}
+
+// ---- Helper: mantiene backward compat (ritorna solo il testo) ----
+function textOnly(p: Promise<AIResponse>): Promise<string> {
+  return p.then((r) => r.text);
+}
+
+// ---- askAI: wrapper con fallback chain. Ritorna string per compat ----
 export async function askAI(prompt: string, maxTokens: number = 4000): Promise<string> {
+  return textOnly(askAIFull(prompt, maxTokens));
+}
+
+// ---- askAIFull: versione estesa (usage + model_used) ----
+export async function askAIFull(prompt: string, maxTokens: number = 4000): Promise<AIResponse> {
   // 1. Claude Haiku (Anthropic diretto — preciso)
   if (process.env.ANTHROPIC_API_KEY) {
     try {
-      return await askClaude(prompt, maxTokens);
+      return await askClaudeFull(prompt, maxTokens);
     } catch (err) {
       console.warn("[AI] Claude fallito:", (err as Error).message);
     }
@@ -16,7 +38,7 @@ export async function askAI(prompt: string, maxTokens: number = 4000): Promise<s
   // 2. DeepSeek (molto economico, volume)
   if (process.env.DEEPSEEK_API_KEY) {
     try {
-      return await askDeepSeek(prompt, maxTokens);
+      return await askDeepSeekFull(prompt, maxTokens);
     } catch (err) {
       console.warn("[AI] DeepSeek fallito:", (err as Error).message);
     }
@@ -25,7 +47,7 @@ export async function askAI(prompt: string, maxTokens: number = 4000): Promise<s
   // 3. OpenRouter (accesso a decine di modelli come fallback)
   if (process.env.OPENROUTER_API_KEY) {
     try {
-      return await askOpenRouter(prompt, maxTokens);
+      return await askOpenRouterFull(prompt, maxTokens);
     } catch (err) {
       console.warn("[AI] OpenRouter fallito:", (err as Error).message);
     }
@@ -34,11 +56,18 @@ export async function askAI(prompt: string, maxTokens: number = 4000): Promise<s
   throw new Error("Nessuna API AI configurata (serve ANTHROPIC_API_KEY, DEEPSEEK_API_KEY o OPENROUTER_API_KEY)");
 }
 
+// ============================================
 // Claude Haiku (Anthropic)
+// ============================================
 export async function askClaude(prompt: string, maxTokens: number = 4000): Promise<string> {
+  return textOnly(askClaudeFull(prompt, maxTokens));
+}
+
+export async function askClaudeFull(prompt: string, maxTokens: number = 4000): Promise<AIResponse> {
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) throw new Error("ANTHROPIC_API_KEY mancante");
 
+  const model = "claude-haiku-4-5-20251001";
   const res = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: {
@@ -47,7 +76,7 @@ export async function askClaude(prompt: string, maxTokens: number = 4000): Promi
       "anthropic-version": "2023-06-01",
     },
     body: JSON.stringify({
-      model: "claude-haiku-4-5-20251001",
+      model,
       max_tokens: maxTokens,
       messages: [{ role: "user", content: prompt }],
     }),
@@ -59,14 +88,28 @@ export async function askClaude(prompt: string, maxTokens: number = 4000): Promi
   }
 
   const data = await res.json();
-  return data.content?.[0]?.text || "";
+  return {
+    text: data.content?.[0]?.text || "",
+    usage: {
+      input: data.usage?.input_tokens ?? 0,
+      output: data.usage?.output_tokens ?? 0,
+    },
+    model_used: model,
+  };
 }
 
+// ============================================
 // DeepSeek (API compatibile OpenAI)
+// ============================================
 export async function askDeepSeek(prompt: string, maxTokens: number = 4000): Promise<string> {
+  return textOnly(askDeepSeekFull(prompt, maxTokens));
+}
+
+export async function askDeepSeekFull(prompt: string, maxTokens: number = 4000): Promise<AIResponse> {
   const apiKey = process.env.DEEPSEEK_API_KEY;
   if (!apiKey) throw new Error("DEEPSEEK_API_KEY mancante");
 
+  const model = "deepseek-chat";
   const res = await fetch("https://api.deepseek.com/v1/chat/completions", {
     method: "POST",
     headers: {
@@ -74,7 +117,7 @@ export async function askDeepSeek(prompt: string, maxTokens: number = 4000): Pro
       Authorization: `Bearer ${apiKey}`,
     },
     body: JSON.stringify({
-      model: "deepseek-chat",
+      model,
       max_tokens: maxTokens,
       messages: [{ role: "user", content: prompt }],
     }),
@@ -86,18 +129,28 @@ export async function askDeepSeek(prompt: string, maxTokens: number = 4000): Pro
   }
 
   const data = await res.json();
-  return data.choices?.[0]?.message?.content || "";
+  return {
+    text: data.choices?.[0]?.message?.content || "",
+    usage: {
+      input: data.usage?.prompt_tokens ?? 0,
+      output: data.usage?.completion_tokens ?? 0,
+    },
+    model_used: model,
+  };
 }
 
+// ============================================
 // OpenRouter (accesso a Claude, GPT-4, Llama, Mistral, Gemini e altri)
+// ============================================
 export async function askOpenRouter(prompt: string, maxTokens: number = 4000): Promise<string> {
+  return textOnly(askOpenRouterFull(prompt, maxTokens));
+}
+
+export async function askOpenRouterFull(prompt: string, maxTokens: number = 4000): Promise<AIResponse> {
   const apiKey = process.env.OPENROUTER_API_KEY;
   if (!apiKey) throw new Error("OPENROUTER_API_KEY mancante");
 
-  // Usa il modello piu economico e veloce disponibile
-  // Qwen di Alibaba — economico, veloce, ottima qualita
   const model = process.env.OPENROUTER_MODEL || "qwen/qwen-2.5-72b-instruct";
-
   const res = await fetch("https://openrouter.ai/api/v1/chat/completions", {
     method: "POST",
     headers: {
@@ -119,7 +172,14 @@ export async function askOpenRouter(prompt: string, maxTokens: number = 4000): P
   }
 
   const data = await res.json();
-  return data.choices?.[0]?.message?.content || "";
+  return {
+    text: data.choices?.[0]?.message?.content || "",
+    usage: {
+      input: data.usage?.prompt_tokens ?? 0,
+      output: data.usage?.completion_tokens ?? 0,
+    },
+    model_used: model,
+  };
 }
 
 // Estrai JSON da una risposta AI (gestisce markdown fences)

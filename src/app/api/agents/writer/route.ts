@@ -1,10 +1,13 @@
 import { NextRequest, NextResponse } from "next/server";
 import { verifyCron } from "@/lib/cron-auth";
 import { scrapeGenericPage } from "@/lib/scraper";
-import { askDeepSeek, extractJSON } from "@/lib/ai-agent";
+import { askDeepSeekFull, extractJSON } from "@/lib/ai-agent";
 import { slugify } from "@/lib/utils";
-import { logAgent, startTimer, stimaCosto } from "@/lib/agent-logger";
+import { logAgent, startTimer, calculateCost } from "@/lib/agent-logger";
 import { getDB } from "@/lib/db";
+
+// Accumulatore token/cost per il run corrente
+type RunAccum = { input: number; output: number; cost: number };
 
 // ============================================
 // AGENTE WRITER v2
@@ -116,6 +119,7 @@ export async function GET(request: NextRequest) {
 
   const articoli: ArticleResult[] = [];
   let salvati = 0;
+  const accum: RunAccum = { input: 0, output: 0, cost: 0 };
 
   for (const task of ARTICOLI_DA_SCRIVERE) {
     try {
@@ -131,9 +135,12 @@ Genera i METADATI di un articolo per il magazine. Rispondi SOLO con JSON puro (n
 {"titolo":"titolo SEO max 80 char","slug":"formato-url-seo","categoria":"${task.categoria}","estratto":"meta description 2 frasi max 160 char","tempo_lettura":"X min","tags":["3-5 keyword"],"fonte_nome":"fonte","fonte_url":"url"}`;
 
       console.log(`[Writer] Step 1: metadati per ${task.tipo}...`);
-      const metaResponse = await askDeepSeek(metaPrompt, 500);
-      console.log(`[Writer] Meta response (${metaResponse.length} chars):`, metaResponse.slice(0, 300));
-      const meta = extractJSON(metaResponse) as ArticleResult;
+      const metaRes = await askDeepSeekFull(metaPrompt, 500);
+      accum.input += metaRes.usage.input;
+      accum.output += metaRes.usage.output;
+      accum.cost += calculateCost(metaRes.model_used, metaRes.usage.input, metaRes.usage.output);
+      console.log(`[Writer] Meta response (${metaRes.text.length} chars):`, metaRes.text.slice(0, 300));
+      const meta = extractJSON(metaRes.text) as ArticleResult;
       if (!meta?.titolo) {
         console.warn(`[Writer] Nessun titolo per ${task.tipo}, skip`);
         continue;
@@ -189,7 +196,11 @@ REGOLE DI SCRITTURA:
 - Rispondi SOLO con HTML. No markdown, no fences, no commenti.`;
 
       console.log(`[Writer] Step 2: contenuto per "${meta.titolo}"...`);
-      const contenuto = await askDeepSeek(contentPrompt, 5000);
+      const contentRes = await askDeepSeekFull(contentPrompt, 5000);
+      accum.input += contentRes.usage.input;
+      accum.output += contentRes.usage.output;
+      accum.cost += calculateCost(contentRes.model_used, contentRes.usage.input, contentRes.usage.output);
+      const contenuto = contentRes.text;
       console.log(`[Writer] Contenuto ricevuto (${contenuto.length} chars)`);
 
       // Pulisci eventuali fences markdown dal contenuto
@@ -238,8 +249,13 @@ REGOLE DI SCRITTURA:
     risultati_trovati: articoli.length,
     risultati_salvati: salvati,
     durata_ms: elapsed(),
-    costo_stimato: 0.01,
-    dettagli: { titoli: articoli.map((a) => a.titolo) },
+    costo_stimato: Number(accum.cost.toFixed(6)),
+    dettagli: {
+      titoli: articoli.map((a) => a.titolo),
+      model_used: "deepseek-chat",
+      input_tokens: accum.input,
+      output_tokens: accum.output,
+    },
   });
 
   return NextResponse.json({

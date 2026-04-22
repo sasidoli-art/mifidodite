@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { MapPin, ArrowRight, BedDouble, BookOpen, Star } from "lucide-react";
+import { MapPin, ArrowRight, BedDouble, BookOpen, Star, Info } from "lucide-react";
 
 const PREVIEW = [
   {
@@ -135,6 +135,12 @@ export function VacanzeHero() {
             <BookOpen size={16} /> Leggi la guida completa
           </Link>
         </motion.div>
+
+        {/* Disclaimer aggiunto per protezione legale (pratiche commerciali + diritto immagine) */}
+        <p className="mt-6 text-xs text-stone-500 italic text-center max-w-2xl mx-auto flex items-center justify-center gap-1.5">
+          <Info size={12} className="flex-shrink-0" />
+          <span>Le immagini in evidenza sono a scopo illustrativo. Le foto effettive di ogni struttura sono visibili nelle rispettive schede.</span>
+        </p>
       </div>
     </section>
   );

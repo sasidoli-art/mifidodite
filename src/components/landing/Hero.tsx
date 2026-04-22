@@ -18,7 +18,7 @@ const GALLERY = [
   { img: "/img/stock/cani/closeup-shot-of-the-snouts-of-a-cute-dog-and-a-cat-2026-01-08-00-23-04-utc-card.jpg", label: "Veterinari" },
   /* orig: https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=500&q=80 */
   // TODO: sostituire con foto toelettatura dedicata in prossimo batch Envato
-  { img: "/img/stock/cuccioli/jack-russell-puppy-isolated-on-pink-background-2026-01-09-11-30-40-utc-card.jpg", label: "Toelettatura" },
+  { img: "/img/stock/cani/jack-russell-puppy-isolated-on-pink-background-2026-01-09-11-30-40-utc-card.jpg", label: "Toelettatura" },
 ];
 
 export function Hero({ articleCount = 155 }: { articleCount?: number }) {

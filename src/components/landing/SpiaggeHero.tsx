@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { MapPin, ArrowRight, Waves, BookOpen } from "lucide-react";
+import { MapPin, ArrowRight, Waves, BookOpen, Info } from "lucide-react";
 
 const PREVIEW_SPIAGGE = [
   {
@@ -145,6 +145,12 @@ export function SpiaggeHero() {
             <BookOpen size={16} /> Leggi la guida completa
           </Link>
         </motion.div>
+
+        {/* Disclaimer aggiunto per protezione legale (pratiche commerciali + diritto immagine) */}
+        <p className="mt-6 text-xs text-stone-300 italic text-center max-w-2xl mx-auto flex items-center justify-center gap-1.5">
+          <Info size={12} className="flex-shrink-0" />
+          <span>Le immagini in evidenza sono a scopo illustrativo. Le foto effettive di ogni struttura sono visibili nelle rispettive schede.</span>
+        </p>
 
         <div className="mt-10 flex items-center justify-center gap-6 text-xs text-white/40">
           <div className="flex items-center gap-1.5">

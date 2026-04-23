@@ -37,7 +37,9 @@ const nextConfig: NextConfig = {
   async headers() {
     return [
       {
-        source: "/(.*)",
+        // Escludi sitemap.xml e robots.txt: GSC rifiuta le sitemap che servono
+        // X-Robots-Tag, interpretandolo come "non processare questa risorsa".
+        source: "/((?!sitemap\\.xml|robots\\.txt).*)",
         headers: [
           {
             key: "Strict-Transport-Security",

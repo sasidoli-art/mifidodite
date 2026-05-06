@@ -21,7 +21,7 @@ const body = DM_Sans({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.mifidodite.eu"),
-  title: "MifidoDiTe.eu — Vacanze, spiagge e servizi per chi vive con animali",
+  title: "550+ Spiagge, Hotel e Ristoranti Dog-Friendly in Italia — MifidoDiTe.eu",
   description:
     "Mappa spiagge e hotel pet-friendly, schede razza, sentieri, ristoranti, calcolatori: tutto per viaggiare e vivere con il tuo animale in Italia. 550+ pagine verificate.",
   keywords: [

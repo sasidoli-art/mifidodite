@@ -4,7 +4,7 @@ import { VACANZE_SEED, slugifyRegioneV, buildBookingUrl } from "@/lib/vacanze-se
 import { VacanzeClient, type VacanzeUI } from "./VacanzeClient";
 
 export const metadata = {
-  title: "Vacanze con il cane in Italia 2026 — Hotel, agriturismi e camping pet-friendly | MifidoDiTe.eu",
+  title: "Hotel Pet-Friendly Italia | Vacanze con il Cane 2026 | MifidoDiTe.eu",
   description: "La mappa delle strutture ricettive pet-friendly in Italia per le tue vacanze col cane: hotel, agriturismi, B&B, camping e case vacanza verificate. Filtri per regione, tipo, prezzo, taglia cane.",
   keywords: ["hotel pet friendly", "agriturismo cani", "vacanze con il cane", "dormire con il cane", "camping cani", "b&b pet friendly italia"],
   alternates: { canonical: "https://www.mifidodite.eu/vacanze" },

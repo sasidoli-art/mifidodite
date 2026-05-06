@@ -41,6 +41,7 @@ const NAV_MOBILE_EXTRA = [
   { href: "/offerte", label: "Offerte" },
   { href: "/adozioni", label: "Adozioni" },
   { href: "/cliniche", label: "Cliniche" },
+  { href: "/chi-siamo", label: "Chi siamo" },
 ];
 
 export function Header() {

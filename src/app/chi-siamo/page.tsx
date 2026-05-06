@@ -4,8 +4,18 @@ import { Heart, Target, Users, Shield, PawPrint, Eye } from "lucide-react";
 import Link from "next/link";
 
 export const metadata = {
-  title: "Chi siamo — MifidoDiTe.eu",
-  description: "La storia di MifidoDiTe: il portale italiano nato per far incontrare chi ama gli animali con chi se ne prende cura.",
+  title: "Chi Siamo — MifidoDiTe.eu",
+  description: "La storia e la missione di MifidoDiTe: il portale italiano dove proprietari di cani e gatti trovano strutture verificate a mano e professionisti affidabili.",
+  keywords: ["chi siamo mifidodite", "about us", "team mifidodite", "missione pet-friendly"],
+  alternates: { canonical: "https://www.mifidodite.eu/chi-siamo" },
+  openGraph: {
+    type: "website",
+    title: "Chi Siamo — MifidoDiTe.eu",
+    description: "La storia e la missione dietro il portale pet-friendly più affidabile d'Italia.",
+    url: "https://www.mifidodite.eu/chi-siamo",
+    siteName: "MifidoDiTe.eu",
+    locale: "it_IT",
+  },
 };
 
 export default function ChiSiamoPage() {
@@ -88,10 +98,10 @@ export default function ChiSiamoPage() {
             <h2 className="text-2xl font-bold text-white mb-8">MifidoDiTe in numeri</h2>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
               {[
-                { value: "20", label: "Regioni coperte" },
-                { value: "100+", label: "Comuni attivi" },
-                { value: "8", label: "Categorie professionisti" },
-                { value: "350+", label: "Spiagge dog-friendly" },
+                { value: "550+", label: "Pagine verificate" },
+                { value: "77", label: "Spiagge dog-friendly" },
+                { value: "89", label: "Strutture ricettive" },
+                { value: "8,000+", label: "Newsletter iscritti" },
               ].map((s) => (
                 <div key={s.label}>
                   <div className="text-3xl font-extrabold text-primary">{s.value}</div>
@@ -128,19 +138,45 @@ export default function ChiSiamoPage() {
             </div>
           </section>
 
+          {/* Credibilita */}
+          <section className="mb-16 bg-white rounded-2xl border border-border p-8">
+            <h2 className="text-2xl font-bold text-foreground mb-6">Trasparenza e Credibilita</h2>
+            <div className="space-y-4 text-sm">
+              <div>
+                <p className="text-muted-foreground font-semibold">Email ufficiale:</p>
+                <p className="text-foreground"><a href="mailto:info@mifidodite.eu" className="text-primary hover:underline">info@mifidodite.eu</a></p>
+              </div>
+              <div>
+                <p className="text-muted-foreground font-semibold">Affiliazioni dichiarate:</p>
+                <p className="text-foreground">Link Booking.com sono affiliati e generano una piccola commissione a supporto del progetto. I prezzi che vedi non cambiano per te.</p>
+              </div>
+              <div>
+                <p className="text-muted-foreground font-semibold">Dati verificabili:</p>
+                <p className="text-foreground">Usiamo OpenStreetMap (open data), Nominatim per geocoding, e compilazioni manuali dirette con le strutture. Zero scraping automatico.</p>
+              </div>
+              <div>
+                <p className="text-muted-foreground font-semibold">Protezione contenuti:</p>
+                <p className="text-foreground">I nostri articoli, schede e descrizioni sono protetti da copyright. AI bot (GPTBot, ClaudeBot, etc.) sono bloccati via robots.txt. Vedi <Link href="/privacy" className="text-primary hover:underline">Privacy Policy</Link> e <Link href="/termini" className="text-primary hover:underline">Termini di Servizio</Link>.</p>
+              </div>
+            </div>
+          </section>
+
           {/* Contatti */}
           <section className="mt-16 text-center">
-            <h2 className="text-2xl font-bold text-foreground mb-4">Contatti</h2>
-            <p className="text-muted-foreground">
-              Per qualsiasi domanda, suggerimento o segnalazione:
+            <h2 className="text-2xl font-bold text-foreground mb-4">Contattaci</h2>
+            <p className="text-muted-foreground mb-4">
+              Hai domande, suggerimenti, o vuoi segnalare un errore? Scrivici direttamente:
             </p>
-            <p className="mt-2">
-              <a href="mailto:bau@mifidodite.eu" className="text-primary font-semibold text-lg hover:underline">
-                bau@mifidodite.eu
+            <p className="mt-3">
+              <a href="mailto:info@mifidodite.eu" className="inline-flex items-center gap-2 bg-primary text-white font-semibold px-6 py-3 rounded-full hover:bg-primary-dark transition-colors">
+                ✉️ info@mifidodite.eu
               </a>
             </p>
-            <p className="text-sm text-muted-foreground mt-4">
-              MifidoDiTe.eu — Redazione pet indipendente italiana
+            <p className="text-sm text-muted-foreground mt-6">
+              Rispondiamo entro 48 ore. Se sei un professionista pet-friendly e cerchi visibilita, contattaci per una partnership verificata.
+            </p>
+            <p className="text-xs text-muted-foreground mt-8">
+              MifidoDiTe.eu — Creato per l'amore degli amici a 4 zampe
             </p>
           </section>
         </div>

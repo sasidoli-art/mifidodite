@@ -127,6 +127,9 @@ export default async function VacanzeDettaglioPage({ params }: { params: Promise
                 <span className="text-xs font-semibold px-3 py-1 rounded-full text-white bg-primary/90">
                   {VACANZE_TIPO_LABEL_SINGULAR[s.tipo]}
                 </span>
+                <span className="text-xs font-bold px-3 py-1 rounded-full bg-green-500/90 text-white inline-flex items-center gap-1">
+                  🐾 Verified Pet-Friendly
+                </span>
                 {s.stelle && (
                   <span className="text-xs font-semibold px-3 py-1 rounded-full bg-accent text-foreground inline-flex items-center gap-1">
                     {Array.from({ length: s.stelle }).map((_, i) => (
@@ -147,6 +150,22 @@ export default async function VacanzeDettaglioPage({ params }: { params: Promise
         </section>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          {/* CTA Booking above-fold */}
+          <div className="mb-8 bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+            <div className="flex-1">
+              <h3 className="font-bold text-foreground mb-1">Vedi disponibilità</h3>
+              <p className="text-sm text-muted-foreground">Verifica le date, leggi le recensioni e prenota con cancellazione gratuita</p>
+            </div>
+            <a
+              href={bookingUrl}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="whitespace-nowrap inline-flex items-center justify-center gap-2 bg-primary text-white font-bold rounded-full px-6 py-3 text-sm hover:bg-primary-dark transition-colors"
+            >
+              Apri Booking.com <ExternalLink size={14} />
+            </a>
+          </div>
+
           <div className="grid lg:grid-cols-[1.5fr_1fr] gap-8">
             <div className="space-y-8">
               <div className="bg-white rounded-2xl border border-border p-6 shadow-sm">

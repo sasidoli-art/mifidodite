@@ -160,17 +160,27 @@ export default async function MagazinePage({
           {/* Newsletter CTA */}
           <div className="my-12">
             <NewsletterInline
-              title="Non perderti i nuovi articoli"
-              description="Iscriviti alla newsletter per ricevere le guide, i consigli e le curiosità sul mondo dei cani e gatti. Senza spam, puoi cancellarti quando vuoi."
+              title="Ricevi 1 guida + tips esclusivi ogni settimana"
+              description="Vacanze, spiagge, addestramento, salute. Le migliori risorse per proprietari di cani — senza spam, leggi in 3 minuti."
               source="magazine-hub"
             />
+            <div className="flex gap-4 justify-center mt-4 text-xs text-muted-foreground">
+              <span className="flex items-center gap-1">✓ Senza spam</span>
+              <span className="flex items-center gap-1">✓ Leggi in 3 min</span>
+              <span className="flex items-center gap-1">✓ 8,000+ iscritti</span>
+            </div>
           </div>
 
           {/* Griglia articoli */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
-            {rest.map((article) => (
+            {rest.map((article, idx) => (
               <Link key={article.slug} href={`/magazine/${article.slug}`}
-                className="group bg-white rounded-[20px] overflow-hidden border border-border card-hover">
+                className="group bg-white rounded-[20px] overflow-hidden border border-border card-hover relative">
+                {idx < 3 && (
+                  <span className="absolute top-3 right-3 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full z-10">
+                    🔥 Trending
+                  </span>
+                )}
                 <div className="h-36 sm:h-48 overflow-hidden">
                   <img loading="lazy" src={article.img} alt={article.titolo} className="w-full h-full object-cover group-hover:scale-[1.06] transition-transform duration-500" />
                 </div>

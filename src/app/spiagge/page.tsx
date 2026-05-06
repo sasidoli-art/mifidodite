@@ -3,6 +3,7 @@ import { Footer } from "@/components/landing/Footer";
 import { neon } from "@neondatabase/serverless";
 import { SPIAGGE_SEED, slugifyRegione, type SpiaggiaSeed } from "@/lib/spiagge-seed";
 import { SpiaggeClient, type SpiaggiaUI } from "./SpiaggeClient";
+import { NewsletterInline } from "@/components/shared/NewsletterInline";
 
 export const dynamic = "force-dynamic";
 
@@ -93,6 +94,18 @@ export default async function SpiaggePage() {
         </section>
 
         <SpiaggeClient spiagge={spiagge} />
+
+        <section className="py-12 bg-muted/30">
+          <div className="max-w-3xl mx-auto px-4">
+            <NewsletterInline
+              title="Non perderti le migliori spiagge dog-friendly"
+              description="Iscriviti per ricevere aggiornamenti su nuove spiagge, ordinanze locali e consigli per vacanze al mare con il tuo cane."
+              source="spiagge-hub"
+              buttonText="Ricevi gli aggiornamenti"
+              compact
+            />
+          </div>
+        </section>
 
         <section className="py-8 bg-muted/50">
           <div className="max-w-3xl mx-auto px-4 text-center">

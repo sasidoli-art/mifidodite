@@ -163,6 +163,7 @@ export default async function MagazinePage({
               title="Ricevi 1 guida + tips esclusivi ogni settimana"
               description="Vacanze, spiagge, addestramento, salute. Le migliori risorse per proprietari di cani — senza spam, leggi in 3 minuti."
               source="magazine-hub"
+              buttonText="Ricevi la guida gratis"
             />
             <div className="flex gap-4 justify-center mt-4 text-xs text-muted-foreground">
               <span className="flex items-center gap-1">✓ Senza spam</span>

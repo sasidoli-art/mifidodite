@@ -8,6 +8,7 @@ interface Props {
   description?: string;
   source?: string;
   compact?: boolean;
+  buttonText?: string;
 }
 
 export function NewsletterInline({
@@ -15,6 +16,7 @@ export function NewsletterInline({
   description = "Iscriviti per ricevere via email le nuove spiagge, strutture pet-friendly e guide del territorio. Niente spam, puoi cancellarti quando vuoi.",
   source = "sidebar",
   compact = false,
+  buttonText = "Iscriviti gratis",
 }: Props) {
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "ok" | "error">("idle");
@@ -82,7 +84,7 @@ export function NewsletterInline({
           {status === "loading" ? (
             <><Loader2 size={14} className="animate-spin" /> Iscrizione...</>
           ) : (
-            "Iscriviti gratis"
+            buttonText
           )}
         </button>
         {status === "error" && (

@@ -99,6 +99,7 @@ export function Hero({ articleCount = 155 }: { articleCount?: number }) {
                 whileTap={{ scale: 0.97 }}
               >
                 <Search size={18} />
+                Trova ora
                 Cerca
               </motion.button>
             </form>

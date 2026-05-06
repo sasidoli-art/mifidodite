@@ -55,10 +55,12 @@ export default function VacanzePage() {
           <div className="absolute inset-0 opacity-[.03]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='.6' fill='white'/%3E%3C/svg%3E\")" }} />
           <div className="max-w-5xl mx-auto px-4 text-center relative z-10">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">
-              In <span className="bg-gradient-to-r from-primary-light to-accent bg-clip-text text-transparent">vacanza</span> con il tuo animale
+              Finalmente una vacanza senza
+              <br />
+              <span className="bg-gradient-to-r from-primary-light to-accent bg-clip-text text-transparent">sensi di colpa</span> per il tuo cane
             </h1>
             <p className="mt-4 text-lg text-white/60 max-w-2xl mx-auto">
-              {strutture.length} strutture ricettive pet-friendly in {regioni.length} regioni: hotel, agriturismi, B&amp;B, camping e case vacanza. Mappa interattiva con filtri.
+              {strutture.length} strutture ricettive <strong className="text-white">verificate a mano</strong> in {regioni.length} regioni: hotel, agriturismi, B&amp;B, camping e case vacanza.
             </p>
           </div>
         </section>

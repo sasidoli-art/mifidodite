@@ -82,10 +82,12 @@ export default async function SpiaggePage() {
           <div className="absolute inset-0 opacity-[.03]" style={{ backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='1' cy='1' r='.6' fill='white'/%3E%3C/svg%3E\")" }} />
           <div className="max-w-5xl mx-auto px-4 text-center relative z-10">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white">
-              Spiagge <span className="bg-gradient-to-r from-primary-light to-accent bg-clip-text text-transparent">Dog-Friendly</span> in Italia
+              {spiagge.length} spiagge dove il tuo cane è
+              <br />
+              <span className="bg-gradient-to-r from-primary-light to-accent bg-clip-text text-transparent">veramente libero</span>
             </h1>
             <p className="mt-4 text-lg text-white/60 max-w-2xl mx-auto">
-              {spiagge.length} spiagge verificate in {regioni.length} regioni dove il tuo cane e il benvenuto.
+              Spiagge e stabilimenti <strong className="text-white">verificati a mano</strong> in {regioni.length} regioni — nuota, gioca, divertiti senza esclusioni.
             </p>
           </div>
         </section>

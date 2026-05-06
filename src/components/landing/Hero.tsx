@@ -57,15 +57,16 @@ export function Hero({ articleCount = 155 }: { articleCount?: number }) {
             </div>
 
             <h1 className="text-[32px] sm:text-[46px] lg:text-[54px] font-extrabold leading-[1.08] tracking-tight text-foreground mb-5">
-              Viaggia e vivi con il tuo
+              550+ spiagge, hotel e ristoranti
               <br />
+              dove il tuo cane è
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                amico a 4 zampe
+                davvero benvenuto
               </span>
             </h1>
 
             <p className="text-lg text-muted-foreground leading-relaxed max-w-[480px] mb-8">
-              Spiagge, hotel, ristoranti e sentieri dove il tuo cane e il benvenuto. Schede razza, calcolatori e professionisti nella tua zona.
+              Tutte le strutture sono <strong className="text-foreground">verificate a mano</strong> — niente sorprese. Trova veterinari, pensioni e professionisti nella tua zona.
             </p>
 
             {/* Search form */}

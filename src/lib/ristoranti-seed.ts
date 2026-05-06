@@ -26,6 +26,11 @@ export function unslugifyRegioneRistoranti(slug: string): string | null {
   return match || null;
 }
 
+export function getRistoranteRegione(slug: string): string | undefined {
+  const ristorante = getRistoranteBySlug(slug);
+  return ristorante ? slugifyRegioneR(ristorante.regione) : undefined;
+}
+
 const IMG = [
   "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&q=80",
   "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800&q=80",

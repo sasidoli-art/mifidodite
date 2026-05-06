@@ -26,6 +26,11 @@ export function unslugifyRegioneVacanze(slug: string): string | null {
   return match || null;
 }
 
+export function getVacanzaRegione(slug: string): string | undefined {
+  const vacanza = getVacanzaBySlug(slug);
+  return vacanza ? slugifyRegioneV(vacanza.regione) : undefined;
+}
+
 const IMG_HOTEL = [
   "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&q=80",
   "https://images.unsplash.com/photo-1582719508461-905c673771fd?w=800&q=80",

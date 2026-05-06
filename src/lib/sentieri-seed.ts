@@ -25,6 +25,11 @@ export function unslugifyRegioneSentieri(slug: string): string | null {
   return match || null;
 }
 
+export function getSentieroRegione(slug: string): string | undefined {
+  const sentiero = getSentieroBySlug(slug);
+  return sentiero ? slugifyRegioneS(sentiero.regione) : undefined;
+}
+
 const IMG = [
   "https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&q=80",
   "https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=800&q=80",

@@ -51,6 +51,11 @@ export function getSpiaggiaBySlug(slug: string): SpiaggiaSeed | undefined {
   return SPIAGGE_SEED.find((s) => s.slug === slug);
 }
 
+export function getSpiaggiaRegione(slug: string): string | undefined {
+  const spiaggia = getSpiaggiaBySlug(slug);
+  return spiaggia ? slugifyRegione(spiaggia.regione) : undefined;
+}
+
 export function getAllRegioniSlug(): string[] {
   return Array.from(new Set(SPIAGGE_SEED.map((s) => slugifyRegione(s.regione))));
 }

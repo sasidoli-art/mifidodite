@@ -9,12 +9,12 @@ import { NewsletterPopup } from "@/components/shared/NewsletterPopup";
 import { LogoPaw } from "@/components/shared/Logo";
 
 const NAV_LINKS = [
+  { href: "/magazine", label: "Magazine" },
   { href: "/vacanze", label: "Vacanze" },
   { href: "/spiagge", label: "Spiagge" },
   { href: "/ristoranti", label: "Ristoranti" },
   { href: "/sentieri", label: "Sentieri" },
   { href: "/razze", label: "Razze" },
-  { href: "/magazine", label: "Magazine" },
   { href: "/sos-smarriti", label: "SOS", accent: true },
 ];
 

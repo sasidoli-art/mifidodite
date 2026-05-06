@@ -2,6 +2,7 @@ import { Header } from "@/components/landing/Header";
 import { Footer } from "@/components/landing/Footer";
 import { Clock, ChevronRight } from "lucide-react";
 import Link from "next/link";
+import { NewsletterInline } from "@/components/shared/NewsletterInline";
 import { ARTICOLI_SEED } from "@/lib/articoli-seed";
 
 export const metadata = {
@@ -155,6 +156,15 @@ export default async function MagazinePage({
               </div>
             </Link>
           )}
+
+          {/* Newsletter CTA */}
+          <div className="my-12">
+            <NewsletterInline
+              title="Non perderti i nuovi articoli"
+              description="Iscriviti alla newsletter per ricevere le guide, i consigli e le curiosità sul mondo dei cani e gatti. Senza spam, puoi cancellarti quando vuoi."
+              source="magazine-hub"
+            />
+          </div>
 
           {/* Griglia articoli */}
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">

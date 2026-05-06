@@ -101,11 +101,11 @@ export function Header() {
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start">
                 {VACANZE_DROPDOWN.map((item) => (
-                  <DropdownMenuItem key={item.href} asChild>
-                    <Link href={item.href} className="cursor-pointer">
+                  <Link key={item.href} href={item.href}>
+                    <DropdownMenuItem className="cursor-pointer">
                       {item.label}
-                    </Link>
-                  </DropdownMenuItem>
+                    </DropdownMenuItem>
+                  </Link>
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>
@@ -117,11 +117,11 @@ export function Header() {
               </DropdownMenuTrigger>
               <DropdownMenuContent align="start">
                 {SCOPRI_DROPDOWN.map((item) => (
-                  <DropdownMenuItem key={item.href} asChild>
-                    <Link href={item.href} className="cursor-pointer">
+                  <Link key={item.href} href={item.href}>
+                    <DropdownMenuItem className="cursor-pointer">
                       {item.label}
-                    </Link>
-                  </DropdownMenuItem>
+                    </DropdownMenuItem>
+                  </Link>
                 ))}
               </DropdownMenuContent>
             </DropdownMenu>

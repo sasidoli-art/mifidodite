@@ -2,7 +2,7 @@ import { Header } from "@/components/landing/Header";
 import { Footer } from "@/components/landing/Footer";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import Link from "next/link";
-import { MapPin, Waves, Utensils, Volcano } from "lucide-react";
+import { MapPin, Waves, Utensils, Sun } from "lucide-react";
 import { VACANZE_SEED } from "@/lib/vacanze-seed";
 
 export const metadata = {
@@ -88,7 +88,7 @@ export default function CampaniaGuida() {
               <p className="text-sm text-muted-foreground">Pizza, pesce fresco, sfogliatelle. Ristoranti con tavoli all'aperto dove il cane è il benvenuto.</p>
             </div>
             <div className="bg-secondary/5 border border-secondary/10 rounded-2xl p-6">
-              <Volcano size={28} className="text-secondary mb-3" />
+              <Sun size={28} className="text-secondary mb-3" />
               <h3 className="font-bold text-foreground mb-2">Storia e cultura</h3>
               <p className="text-sm text-muted-foreground">Napoli, Pompei, Ercolano. Città ricche di storia dove passeggiare con il tuo cane.</p>
             </div>

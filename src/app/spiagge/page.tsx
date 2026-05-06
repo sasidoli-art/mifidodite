@@ -93,6 +93,28 @@ export default async function SpiaggePage() {
           </div>
         </section>
 
+        {/* Social Proof */}
+        <section className="py-10 bg-gradient-to-r from-secondary/5 via-accent/5 to-primary/5 border-y border-border">
+          <div className="max-w-5xl mx-auto px-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12 text-center">
+              <div>
+                <div className="text-2xl sm:text-3xl font-extrabold text-foreground">{spiagge.length}</div>
+                <div className="text-sm text-muted-foreground mt-1">Spiagge verificate</div>
+              </div>
+              <div className="hidden sm:block w-px h-12 bg-border" />
+              <div>
+                <div className="text-2xl sm:text-3xl font-extrabold text-foreground">{regioni.length}</div>
+                <div className="text-sm text-muted-foreground mt-1">Regioni coperte</div>
+              </div>
+              <div className="hidden sm:block w-px h-12 bg-border" />
+              <div>
+                <div className="text-2xl sm:text-3xl font-extrabold text-foreground">✓</div>
+                <div className="text-sm text-muted-foreground mt-1">Verificate a mano</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <SpiaggeClient spiagge={spiagge} />
 
         <section className="py-12 bg-muted/30">

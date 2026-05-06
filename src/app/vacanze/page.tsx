@@ -65,6 +65,28 @@ export default function VacanzePage() {
           </div>
         </section>
 
+        {/* Social Proof */}
+        <section className="py-10 bg-gradient-to-r from-primary/5 via-accent/5 to-secondary/5 border-y border-border">
+          <div className="max-w-5xl mx-auto px-4">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-8 sm:gap-12 text-center">
+              <div>
+                <div className="text-2xl sm:text-3xl font-extrabold text-foreground">{strutture.length}+</div>
+                <div className="text-sm text-muted-foreground mt-1">Strutture verificate</div>
+              </div>
+              <div className="hidden sm:block w-px h-12 bg-border" />
+              <div>
+                <div className="text-2xl sm:text-3xl font-extrabold text-foreground">8,000+</div>
+                <div className="text-sm text-muted-foreground mt-1">Newsletter iscritti</div>
+              </div>
+              <div className="hidden sm:block w-px h-12 bg-border" />
+              <div>
+                <div className="text-2xl sm:text-3xl font-extrabold text-foreground">✓</div>
+                <div className="text-sm text-muted-foreground mt-1">Verificate a mano</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <VacanzeClient strutture={strutture} />
 
         <section className="py-8 bg-muted/50">

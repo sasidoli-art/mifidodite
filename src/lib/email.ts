@@ -237,16 +237,8 @@ export function buildNewsletterHtml(params: {
       </div>` : "";
 
   const offertaHtml = params.offerta
-    ? `<div style="margin:20px 0;background:#FFF7ED;border:2px solid #FED7AA;border-radius:12px;padding:16px;text-align:center;">
-        <span style="color:#EA580C;font-size:10px;font-weight:bold;text-transform:uppercase;">Offerta della settimana</span>
-        <h3 style="color:#9A3412;font-size:16px;margin:8px 0 4px;">${params.offerta.titolo}</h3>
-        <p style="color:#C2410C;font-size:12px;margin:0;">${params.offerta.marca} — da ${params.offerta.negozio}</p>
-        <div style="margin:10px 0;">
-          <span style="background:#DC2626;color:#fff;font-size:14px;font-weight:bold;padding:4px 12px;border-radius:6px;">-${params.offerta.sconto}%</span>
-          <span style="color:#9A3412;font-size:18px;font-weight:bold;margin-left:8px;">${params.offerta.prezzo_scontato}</span>
-        </div>
-        <a href="${u}/offerte" style="color:#EA580C;font-size:12px;font-weight:bold;text-decoration:none;">Vedi tutte le offerte</a>
-      </div>` : "";
+    ? "" /* Sezione offerte disattivata — sito senza monetizzazione */
+    : "";
 
   const smarritiHtml = params.smarriti.length > 0
     ? `<div style="margin:20px 0;background:#FEF2F2;border:2px solid #FECACA;border-radius:12px;padding:16px;">

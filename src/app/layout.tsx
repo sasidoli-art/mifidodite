@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { Bricolage_Grotesque, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { CookieBanner } from "@/components/shared/CookieBanner";
-import { ChatBot } from "@/components/shared/ChatBot";
 import { BackToTop } from "@/components/shared/BackToTop";
-import { Analytics } from "@/components/shared/Analytics";
 
 // Font v3: Bricolage Grotesque (headings, bold & impactful) + DM Sans (body, clean)
 const heading = Bricolage_Grotesque({
@@ -118,9 +116,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         {children}
         <CookieBanner />
-        <ChatBot />
         <BackToTop />
-        <Analytics />
       </body>
     </html>
   );

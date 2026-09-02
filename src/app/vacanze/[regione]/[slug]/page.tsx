@@ -4,14 +4,13 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
-  MapPin, Star, Euro, Dog, ExternalLink, Check, Info,
+  MapPin, Star, Euro, Dog, Check, Info,
 } from "lucide-react";
 import {
   VACANZE_SEED,
   slugifyRegioneV,
   getVacanzaBySlug,
   getVacanzeByRegione,
-  buildBookingUrl,
   VACANZE_TIPO_LABEL_SINGULAR,
   PREZZO_LABEL,
   PREZZO_DESCRIZIONE,
@@ -74,7 +73,6 @@ export default async function VacanzeDettaglioPage({ params }: { params: Promise
   if (!s || slugifyRegioneV(s.regione) !== regioneSlug) notFound();
 
   const vicine = getVacanzeByRegione(regioneSlug).filter((x) => x.slug !== slug).slice(0, 3);
-  const bookingUrl = buildBookingUrl(s.bookingQuery);
 
   const pageUrl = `https://www.mifidodite.eu/vacanze/${regioneSlug}/${slug}`;
   const jsonLdData = [
@@ -150,22 +148,6 @@ export default async function VacanzeDettaglioPage({ params }: { params: Promise
         </section>
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-          {/* CTA Booking above-fold */}
-          <div className="mb-8 bg-gradient-to-r from-primary/10 to-accent/10 border border-primary/20 rounded-2xl p-5 sm:p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-            <div className="flex-1">
-              <h3 className="font-bold text-foreground mb-1">Vedi disponibilità</h3>
-              <p className="text-sm text-muted-foreground">Verifica le date, leggi le recensioni e prenota con cancellazione gratuita</p>
-            </div>
-            <a
-              href={bookingUrl}
-              target="_blank"
-              rel="noopener noreferrer sponsored"
-              className="whitespace-nowrap inline-flex items-center justify-center gap-2 bg-primary text-white font-bold rounded-full px-6 py-3 text-sm hover:bg-primary-dark transition-colors"
-            >
-              Apri Booking.com <ExternalLink size={14} />
-            </a>
-          </div>
-
           <div className="grid lg:grid-cols-[1.5fr_1fr] gap-8">
             <div className="space-y-8">
               <div className="bg-white rounded-2xl border border-border p-6 shadow-sm">
@@ -210,7 +192,7 @@ export default async function VacanzeDettaglioPage({ params }: { params: Promise
                 <div className="bg-amber-50 border border-amber-200 rounded-xl p-4 flex gap-3">
                   <Info size={18} className="text-amber-600 flex-shrink-0 mt-0.5" />
                   <div className="text-sm text-amber-900">
-                    <strong>Verifica prima di prenotare.</strong> Le politiche pet possono cambiare di stagione in stagione. Conferma taglia, supplemento e regole direttamente con la struttura o in fase di prenotazione su Booking.
+                    <strong>Verifica prima di prenotare.</strong> Le politiche pet possono cambiare di stagione in stagione. Conferma taglia, supplemento e regole direttamente con la struttura.
                   </div>
                 </div>
               </div>
@@ -222,21 +204,6 @@ export default async function VacanzeDettaglioPage({ params }: { params: Promise
             </div>
 
             <div className="space-y-6">
-              <div className="bg-gradient-to-br from-[#003580] to-[#002659] text-white rounded-2xl p-6 shadow-xl">
-                <div className="text-xs font-bold uppercase tracking-wider text-white/70 mb-2">Prenotazione</div>
-                <h3 className="font-bold text-2xl mb-2">Verifica disponibilita e prezzi</h3>
-                <p className="text-white/80 text-sm mb-5">Controlla le date del tuo viaggio, leggi le recensioni degli ospiti con animali e prenota in sicurezza.</p>
-                <a
-                  href={bookingUrl}
-                  target="_blank"
-                  rel="noopener noreferrer sponsored"
-                  className="w-full inline-flex items-center justify-center gap-2 bg-white text-[#003580] font-bold rounded-full px-5 py-3.5 text-sm hover:bg-white/90 transition-colors"
-                >
-                  Apri su Booking.com <ExternalLink size={15} />
-                </a>
-                <p className="text-[10px] text-white/50 mt-3 text-center">Link affiliato — senza costi aggiuntivi per te</p>
-              </div>
-
               <MeteoWidget lat={s.lat} lng={s.lng} />
 
               <RegioneCrossLinks regione={s.regione} regioneSlug={regioneSlug} excludeSection="vacanze" />

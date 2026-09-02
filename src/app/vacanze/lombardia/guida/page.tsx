@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import Link from "next/link";
 import { MapPin, Mountain, Coffee, Building } from "lucide-react";
 import { VACANZE_SEED } from "@/lib/vacanze-seed";
+import { breadcrumbJsonLd, newsArticleJsonLd, jsonLdScript } from "@/lib/json-ld";
 
 export const metadata = {
   title: "Vacanze con il Cane in Lombardia 2026 — Hotel Pet-Friendly Milano, Bergamo, Como | MifidoDiTe.eu",
@@ -173,6 +174,29 @@ export default function LombardiaGuida() {
             </Link>
           </section>
         </div>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={jsonLdScript(breadcrumbJsonLd([
+            { name: "Home", url: "/" },
+            { name: "Vacanze", url: "/vacanze" },
+            { name: "Lombardia", url: "/vacanze/lombardia" },
+            { name: "Guida", url: "/vacanze/lombardia/guida" },
+          ]))}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={jsonLdScript(newsArticleJsonLd({
+            titolo: "Vacanze con il Cane in Lombardia 2026",
+            descrizione: "Scopri le migliori vacanze con il cane in Lombardia. Hotel e B&B pet-friendly a Milano, Como, Bergamo. Laghi, montagne e città con il tuo amico a 4 zampe.",
+            slug: "lombardia-guida",
+            regione: "Lombardia",
+            img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80",
+            datePublished: new Date().toISOString().split("T")[0],
+            autoreName: "MifidoDiTe Team",
+          }))}
+        />
       </main>
       <Footer />
     </>

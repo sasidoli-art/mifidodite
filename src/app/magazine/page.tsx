@@ -4,6 +4,11 @@ import { Clock, ChevronRight } from "lucide-react";
 import Link from "next/link";
 import { NewsletterInline } from "@/components/shared/NewsletterInline";
 import { ARTICOLI_SEED } from "@/lib/articoli-seed";
+import { collectionJsonLd, jsonLdScript } from "@/lib/json-ld";
+import { shuffleByHour, pickFeatured, pickImage } from "@/lib/magazine-utils";
+
+// Revalidate ogni ora: cosi' lo shuffle ruota con lo stesso ritmo
+export const revalidate = 3600;
 
 export const metadata = {
   title: "Magazine Pet — MifidoDiTe.eu",
@@ -71,13 +76,22 @@ export default async function MagazinePage({
 }) {
   const params = await searchParams;
   const catFiltro = params.cat || undefined;
-  const [articoli, categorie] = await Promise.all([
+  const [articoliRaw, categorie] = await Promise.all([
     getArticoli(catFiltro),
     getCategorie(),
   ]);
 
-  const main = articoli[0];
-  const rest = articoli.slice(1);
+  // Sostituisce immagini generiche con immagini fresche dal pool per categoria
+  const articoli = articoliRaw.map((a) => ({ ...a, img: pickImage(a) }));
+
+  // Articolo "principale" (featured): rotation settimanale tra contenuti evergreen
+  // Quando l'utente filtra una categoria, mostra il piu' rilevante (primo dopo shuffle)
+  const main = catFiltro
+    ? shuffleByHour(articoli)[0]
+    : pickFeatured(articoli);
+
+  // Il resto della griglia: shuffle orario, esclude il main
+  const rest = shuffleByHour(articoli.filter((a) => a.slug !== main?.slug));
 
   return (
     <>
@@ -210,6 +224,11 @@ export default async function MagazinePage({
               </Link>
             </div>
           )}
+
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={jsonLdScript(collectionJsonLd("Magazine Pet", "/magazine", articoli.length))}
+          />
         </section>
       </main>
       <Footer />

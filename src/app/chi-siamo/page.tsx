@@ -124,16 +124,16 @@ export default function ChiSiamoPage() {
           {/* CTA */}
           <section className="text-center bg-gradient-to-br from-orange-50 to-amber-50 rounded-2xl p-10">
             <PawPrint className="mx-auto text-primary mb-4" size={40} />
-            <h2 className="text-2xl font-bold text-foreground mb-3">Unisciti a noi</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-3">Esplora il sito</h2>
             <p className="text-muted-foreground mb-6 max-w-md mx-auto">
-              Che tu sia un proprietario o un professionista, MifidoDiTe e il posto giusto per te.
+              Guide, mappe e contenuti gratuiti per chi vive ogni giorno con un cane o un gatto.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center">
-              <Link href="/professionisti" className="bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-xl font-semibold transition-colors">
-                Cerca professionisti
+              <Link href="/magazine" className="bg-primary hover:bg-primary-dark text-white px-6 py-3 rounded-xl font-semibold transition-colors">
+                Vai al magazine
               </Link>
-              <Link href="/registra-attivita" className="border-2 border-primary text-primary px-6 py-3 rounded-xl font-semibold hover:bg-primary hover:text-white transition-colors">
-                Registra la tua attivita
+              <Link href="/vacanze" className="border-2 border-primary text-primary px-6 py-3 rounded-xl font-semibold hover:bg-primary hover:text-white transition-colors">
+                Scopri le strutture
               </Link>
             </div>
           </section>

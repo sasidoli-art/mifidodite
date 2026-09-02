@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import Link from "next/link";
 import { MapPin, Waves, Utensils, Palmtree } from "lucide-react";
 import { VACANZE_SEED } from "@/lib/vacanze-seed";
+import { breadcrumbJsonLd, newsArticleJsonLd, jsonLdScript } from "@/lib/json-ld";
 
 export const metadata = {
   title: "Vacanze con il Cane in Liguria 2026 — Hotel e B&B Pet-Friendly al Mare | MifidoDiTe.eu",
@@ -173,6 +174,29 @@ export default function LiguriaGuida() {
             </Link>
           </section>
         </div>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={jsonLdScript(breadcrumbJsonLd([
+            { name: "Home", url: "/" },
+            { name: "Vacanze", url: "/vacanze" },
+            { name: "Liguria", url: "/vacanze/liguria" },
+            { name: "Guida", url: "/vacanze/liguria/guida" },
+          ]))}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={jsonLdScript(newsArticleJsonLd({
+            titolo: "Vacanze con il Cane in Liguria 2026",
+            descrizione: "Guida completa alle vacanze con il cane in Liguria. Scopri hotel, B&B e case vacanza pet-friendly sulla costa ligure, spiagge dog-friendly e ristoranti che accolgono cani.",
+            slug: "liguria-guida",
+            regione: "Liguria",
+            img: "https://images.unsplash.com/photo-1530281700549-e82e7bf110d6?w=1200&q=80",
+            datePublished: new Date().toISOString().split("T")[0],
+            autoreName: "MifidoDiTe Team",
+          }))}
+        />
       </main>
       <Footer />
     </>

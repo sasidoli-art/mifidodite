@@ -32,6 +32,11 @@ const nextConfig: NextConfig = {
         destination: "/magazine/vacanze-con-il-cane-italia-2026-guida",
         permanent: true,
       },
+      // Pagine commerciali dismesse (22 giugno 2026) — sito ora 100% gratuito
+      { source: "/per-professionisti", destination: "/", permanent: true },
+      { source: "/partner", destination: "/", permanent: true },
+      { source: "/registra-attivita", destination: "/", permanent: true },
+      { source: "/offerte", destination: "/magazine", permanent: true },
     ];
   },
   async headers() {

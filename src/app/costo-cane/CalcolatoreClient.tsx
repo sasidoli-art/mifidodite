@@ -210,10 +210,10 @@ export function CalcolatoreClient() {
               Trova veterinari <ArrowRight size={16} />
             </Link>
             <Link
-              href="/offerte"
+              href="/magazine?cat=consigli"
               className="inline-flex items-center gap-2 bg-white border-2 border-border text-foreground px-5 py-3 rounded-full font-semibold hover:border-primary hover:text-primary transition-colors"
             >
-              Offerte su cibo e accessori
+              Consigli su cibo e accessori
             </Link>
           </div>
         </motion.div>

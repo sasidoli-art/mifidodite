@@ -698,4 +698,408 @@ export const ARTICOLI_EVERGREEN = [
 <p>Insegnare a non tirare al guinzaglio e uno dei gesti piu gratificanti per entrambi: il cane fa meno stress, tu torni a casa senza spalla dolorante, le passeggiate diventano un momento di vera relazione. 20 minuti al giorno per 3 settimane — investimento minimo, risultato per la vita.</p>
     `,
   },
+  {
+    slug: "cane-in-treno-2026-regole-trenitalia-italo",
+    titolo: "Cane in treno 2026: regole Trenitalia e Italo, biglietto, museruola, taglia",
+    categoria: "viaggi",
+    estratto: "Tutte le regole aggiornate per viaggiare in treno con il cane in Italia: Trenitalia, Italo, Trenord. Quanto costa, dove sedersi, museruola si o no, taglia massima e documenti.",
+    img: "https://images.unsplash.com/photo-1474487548417-781cb71495f3?w=800&q=80",
+    tempo_lettura: "7 min",
+    data: "26 Giu 2026",
+    tags: ["viaggi", "treno", "trenitalia", "italo", "cane"],
+    contenuto: `
+<p>Viaggiare in treno con il cane in Italia e piu semplice di quanto sembri, ma le regole cambiano per ogni compagnia: cosa porti, quanto paghi, dove ti siedi. Questa guida riassume tutto cio che serve sapere per Trenitalia, Italo e i regionali, aggiornato a giugno 2026.</p>
+
+<h2>Cani di piccola taglia: gratis ovunque (nel trasportino)</h2>
+<p>La regola di base e identica in tutta Italia: <strong>cane fino a 10 kg dentro un trasportino chiuso</strong> (massimo 70x30x50 cm) viaggia <strong>gratis</strong> su tutti i treni nazionali e regionali, sia Trenitalia che Italo. Il trasportino conta come bagaglio a mano e va tenuto a terra o sulla cappelliera.</p>
+<p>Anche i gatti seguono la stessa regola. Importante: il trasportino deve essere veramente chiuso, niente borse aperte o pet sling. Il personale di bordo puo chiedere di vedere l&apos;animale dentro.</p>
+
+<h2>Cani di taglia media e grande: biglietto al 50%</h2>
+<p>Per i cani che non stanno in trasportino, le regole cambiano per compagnia:</p>
+<ul>
+<li><strong>Trenitalia Frecce e Intercity</strong>: serve un biglietto al <strong>50% del prezzo</strong> della seconda classe. Cane al guinzaglio corto + museruola obbligatoria. Posto in seconda classe (anche se viaggi in prima, il cane sta in seconda). Massimo 1 cane per viaggiatore.</li>
+<li><strong>Trenitalia Regionali</strong>: biglietto cane al 50% del biglietto adulto. Solo nelle ore non di punta (lunedi-venerdi prima delle 7 e dopo le 9, tutto il giorno il weekend) un cane puo viaggiare gratis al guinzaglio in alcuni regionali — verifica sempre prima.</li>
+<li><strong>Italo</strong>: cane di qualsiasi taglia <strong>gratis</strong> se nel trasportino. Cani grandi NON sono ammessi sui treni Italo, salvo cani guida.</li>
+<li><strong>Trenord (Lombardia)</strong>: gratis nel trasportino, biglietto al 50% per taglia grande, museruola obbligatoria.</li>
+</ul>
+<p><strong>Cani guida</strong> per non vedenti: gratis sempre, ovunque, su tutti i treni, senza biglietto e senza museruola obbligatoria.</p>
+
+<h2>Museruola: obbligatoria o no?</h2>
+<p>Sui treni a lunga percorrenza (Frecce, Intercity, Trenord) la museruola e <strong>obbligatoria</strong> per i cani fuori dal trasportino. Sui regionali la regola varia, ma in pratica il capotreno puo chiederla in qualsiasi momento se ritiene che ci sia bisogno.</p>
+<p>Il nostro consiglio: <strong>porta sempre la museruola</strong>, anche se non la usi. Pesa 100 grammi, ti evita multe da 50 euro e discussioni con altri passeggeri.</p>
+
+<h2>Documenti da portare</h2>
+<ul>
+<li><strong>Libretto sanitario</strong> aggiornato con vaccinazioni</li>
+<li><strong>Microchip</strong> registrato all&apos;anagrafe canina</li>
+<li><strong>Biglietto del cane</strong> (se acquistato online ti arriva nella stessa email del tuo)</li>
+</ul>
+
+<h2>Dove far salire il cane in stazione</h2>
+<p>Non esiste una carrozza pet-friendly dedicata in Italia. Sui Frecciarossa e Frecciargento i cani al guinzaglio possono salire ovunque in seconda classe — il personale tendenzialmente assegna posti vicino agli ingressi o dove ci sono meno persone, ma non sono garantiti.</p>
+<p>Sulle <strong>Frecce</strong> le cucce per i cani grandi sono ai piedi del posto del padrone, mai sui sedili (multa da 50 a 200 euro se beccato).</p>
+
+<h2>Bisogni durante il viaggio</h2>
+<p>Se il viaggio dura piu di 4 ore (es. Milano-Roma in Freccia, 3h20), pianifica una sosta tecnica in stazione intermedia: scendi a Bologna o Firenze, fai fare i bisogni al cane sul marciapiede e risali. Il biglietto resta valido se cambi treno entro 4 ore con la stessa tratta.</p>
+<p>Porta sacchettini, una bottiglia d&apos;acqua e una ciotola pieghevole. Non far bere il cane mezz&apos;ora prima della partenza per ridurre il rischio di nausea.</p>
+
+<h2>Consigli pratici</h2>
+<ul>
+<li><strong>Prenota in anticipo</strong>: nei weekend e in alta stagione i posti vicino al finestrino con spazio a terra si esauriscono</li>
+<li><strong>Evita i Frecciarossa 1000</strong> piu nuovi se il cane e ansioso — l&apos;aria condizionata e fortissima e i corridoi stretti</li>
+<li><strong>Acqua e snack</strong> a portata, ma niente cibo abbondante prima del viaggio</li>
+<li><strong>Stanchezza preventiva</strong>: una passeggiata lunga prima di partire ti regala un cane che dorme tutto il viaggio</li>
+<li><strong>Niente sedativi</strong> senza parere veterinario, soprattutto per cani anziani o cardiopatici</li>
+</ul>
+
+<h2>Cosa NON puoi fare</h2>
+<ul>
+<li>Mettere il cane sul sedile (multa 50-200 euro)</li>
+<li>Salire senza museruola se il cane e fuori trasportino su lunga percorrenza</li>
+<li>Far mangiare il cane sul vassoietto (rischio multa per igiene)</li>
+<li>Viaggiare in prima classe sui Frecciarossa con cane di taglia grande</li>
+</ul>
+
+<h2>In sintesi</h2>
+<p>Trasportino piccolo = treno gratis ovunque. Cane grande = biglietto al 50%, museruola sempre con te, Trenitalia ok, Italo no. Pianifica soste se il viaggio supera le 4 ore. Il treno resta uno dei modi piu civili per viaggiare col cane in Italia: meno stressante della macchina nei weekend di esodo, piu economico e flessibile dell&apos;aereo.</p>
+    `,
+    ai_generated: false,
+  },
+  {
+    slug: "cane-in-auto-estate-regola-22-gradi",
+    titolo: "Cane in auto d'estate: la regola dei 22°C che puo salvargli la vita",
+    categoria: "salute",
+    estratto: "Bastano 10 minuti in un'auto al sole con 22 gradi esterni perche dentro si superino i 40 gradi. Cosa devi sapere d'estate per non rischiare la vita del cane: temperature, sintomi, primo soccorso.",
+    img: "https://images.unsplash.com/photo-1543466835-00a7907e9de1?w=800&q=80",
+    tempo_lettura: "6 min",
+    data: "26 Giu 2026",
+    tags: ["salute", "estate", "auto", "colpo di calore", "cane"],
+    contenuto: `
+<p>Ogni estate in Italia muoiono cani lasciati in auto. Non parliamo di chi li dimentica per ore — bastano <strong>10 minuti</strong> in un parcheggio con 22 gradi all&apos;ombra fuori per portare l&apos;abitacolo oltre i 40. Questa guida riassume cosa sappiamo davvero e come comportarci ogni volta che usciamo col cane in estate.</p>
+
+<h2>La regola dei 22°C (e perche e cosi pericolosa)</h2>
+<p>Studi pubblicati su Pediatrics e ripresi da ANMVI dimostrano che con 22°C esterni un&apos;auto al sole raggiunge <strong>33°C in 10 minuti, 43°C in 30 minuti, oltre 50°C in un&apos;ora</strong>. Aprire i finestrini di 5 cm rallenta il fenomeno di pochi minuti, non lo blocca.</p>
+<p>Sopra i 40°C il cane non riesce piu a disperdere calore (i cani non sudano, ansimano). Sopra i 41°C iniziano danni a fegato, reni e cervello. Sopra i 43°C in 30-60 minuti si muore.</p>
+
+<h2>Razze piu a rischio</h2>
+<p>Tutti i cani sono a rischio, ma alcuni molto di piu:</p>
+<ul>
+<li><strong>Brachicefali</strong> (Bulldog Francese, Carlino, Boxer, Cavalier): sistema respiratorio compromesso, possono andare in colpo di calore anche a 25°C ambientali</li>
+<li><strong>Razze nordiche</strong> (Husky, Malamute, Bovaro Bernese): mantello fatto per il freddo</li>
+<li><strong>Cani anziani</strong>, cuccioli sotto i 6 mesi, cani in sovrappeso</li>
+<li><strong>Cani cardiopatici o con problemi respiratori</strong></li>
+</ul>
+
+<h2>Sintomi del colpo di calore</h2>
+<p>Riconoscerli subito e fondamentale:</p>
+<ol>
+<li><strong>Ansimare violentemente</strong>, lingua viola scura o blu</li>
+<li><strong>Saliva densa e schiumosa</strong>, gengive rosso fuoco</li>
+<li><strong>Andatura barcollante</strong>, debolezza muscolare</li>
+<li><strong>Vomito o diarrea</strong>, a volte con sangue</li>
+<li><strong>Confusione mentale</strong>, sguardo perso</li>
+<li><strong>Convulsioni</strong>, perdita di coscienza (fase avanzata, prognosi grave)</li>
+</ol>
+
+<h2>Cosa fare se trovi un cane in auto</h2>
+<p>Se vedi un cane chiuso in un&apos;auto con segni di sofferenza:</p>
+<ol>
+<li><strong>Chiama subito i Carabinieri (112) o la Polizia</strong>. Sono i soggetti autorizzati a forzare il veicolo. Ti raccomandiamo di non rompere i vetri da solo: rischi denuncia per danneggiamento</li>
+<li><strong>Cerca il proprietario</strong> nei negozi vicini facendo annunciare la targa al microfono</li>
+<li><strong>Riprendi tutto in video</strong> mentre aspetti: orario, temperatura, condizioni del cane</li>
+<li><strong>L&apos;art. 727 del Codice Penale</strong> prevede arresto fino a 18 mesi per abbandono o detenzione in condizioni incompatibili con la natura dell&apos;animale</li>
+</ol>
+
+<h2>Primo soccorso per il tuo cane in colpo di calore</h2>
+<ol>
+<li><strong>Sposta subito all&apos;ombra</strong> o in ambiente fresco (non aria condizionata diretta gelata)</li>
+<li><strong>Bagna con acqua tiepida</strong> (non ghiacciata) zampe, addome, ascelle, interno cosce. Mai acqua fredda direttamente sulla testa: vasocostrizione che peggiora la situazione</li>
+<li><strong>Offri acqua a piccoli sorsi</strong>, non a volonta. Mai forzare a bere se non e cosciente</li>
+<li><strong>Misura la temperatura rettale</strong>: oltre 40°C e emergenza, oltre 41°C corsa dal veterinario</li>
+<li><strong>Chiama il veterinario H24</strong> mentre prepari il trasporto. Continua a raffreddare durante il viaggio</li>
+</ol>
+<p>Anche se il cane sembra ripreso, <strong>vai sempre dal veterinario</strong>: i danni a fegato e reni si manifestano dopo 24-48 ore e possono essere fatali se non trattati.</p>
+
+<h2>Prevenzione: regole base per l&apos;estate</h2>
+<ul>
+<li><strong>Mai lasciare il cane in auto</strong>. Nemmeno 2 minuti. Nemmeno all&apos;ombra. Nemmeno con i finestrini aperti</li>
+<li><strong>Passeggiate</strong> prima delle 8 di mattina o dopo le 20:30. L&apos;asfalto a mezzogiorno supera i 50°C e brucia i cuscinetti in 60 secondi</li>
+<li><strong>Test asfalto</strong>: poggia il dorso della mano per 7 secondi. Se ti scotti, scotta anche al cane</li>
+<li><strong>Acqua sempre disponibile</strong> in casa, in macchina, sotto l&apos;ombrellone</li>
+<li><strong>Tappetini refrigeranti</strong> (10-30 euro): si attivano col peso del cane, durano 3-4 ore</li>
+<li><strong>Mai cane chiuso in giardino senza ombra</strong>. Una cuccia di plastica al sole diventa un forno</li>
+</ul>
+
+<h2>In viaggio</h2>
+<p>Se devi viaggiare in macchina con il cane d&apos;estate: parti presto, fai soste ogni 2 ore in zone ombreggiate, tieni l&apos;aria condizionata a 21-22°C, mai esporlo a aria diretta. Una bottiglia ghiacciata avvolta in un asciugamano vicino a lui aiuta nelle code.</p>
+
+<h2>In sintesi</h2>
+<p>22°C fuori non sono pochi se sei chiuso in auto. Il colpo di calore uccide piu cani in Italia di quanto si pensi e quasi sempre per disattenzione di chi ama davvero il proprio animale. Cinque minuti di vigilanza in piu d&apos;estate possono fare la differenza tra una passeggiata e una tragedia.</p>
+    `,
+    ai_generated: false,
+  },
+  {
+    slug: "gatto-solo-in-casa-quanto-tempo",
+    titolo: "Gatto solo in casa: quanto tempo e troppo? La guida onesta",
+    categoria: "gatti",
+    estratto: "Posso lasciare il gatto a casa da solo per un weekend? E per una settimana? La risposta dipende da eta, carattere e ambiente. Tutte le regole per un'assenza serena.",
+    img: "https://images.unsplash.com/photo-1573865526739-10659fec78a5?w=800&q=80",
+    tempo_lettura: "6 min",
+    data: "26 Giu 2026",
+    tags: ["gatti", "comportamento", "assenza", "vacanze", "consigli"],
+    contenuto: `
+<p>Il gatto e l&apos;animale domestico per eccellenza di chi non vuole sentirsi in colpa: indipendente, autonomo, non ha bisogno di passeggiate. Ma quanto e davvero indipendente? E soprattutto, fino a quando puo restare solo in casa senza che la sua salute o il suo equilibrio ne risentano? Vediamo cosa dicono comportamentisti e veterinari, senza romanzare.</p>
+
+<h2>Il mito del gatto autosufficiente</h2>
+<p>Diciamolo subito: il gatto NON e indipendente come si crede. E un animale solitario nei rapporti con i suoi simili, ma fortemente legato al suo umano e al suo territorio. Lasciarlo solo non e una scelta neutra — e una privazione che alcuni gatti tollerano molto bene e altri molto male.</p>
+<p>Studi recenti (Vitale, Behnke, Udell 2019 — Current Biology) hanno dimostrato che il <strong>65% dei gatti adulti mostra attaccamento sicuro</strong> al proprio umano, simile a quello dei bambini piccoli. Un gatto su tre soffre veramente quando il proprietario non c&apos;e.</p>
+
+<h2>La regola pratica per chi ha un gatto sano e adulto</h2>
+<p>Sintesi delle linee guida ISFM (International Society of Feline Medicine):</p>
+<ul>
+<li><strong>1 giorno (8-12 ore)</strong>: nessun problema per la maggior parte dei gatti. Cibo + acqua fresca + lettiera pulita bastano</li>
+<li><strong>1 notte (24 ore)</strong>: gestibile per gatti adulti sani con buona dotazione (vedi sotto)</li>
+<li><strong>Un weekend (48-72 ore)</strong>: limite massimo accettabile senza passaggio di una persona. Serve qualcuno che venga almeno UNA volta a controllare</li>
+<li><strong>4-7 giorni</strong>: serve obbligatoriamente un cat sitter o un vicino che venga 1 volta al giorno. Anche se il cibo c&apos;e</li>
+<li><strong>Oltre 7 giorni</strong>: pensione felina o cat sitter che dorme in casa</li>
+</ul>
+
+<h2>Perche non basta lasciare cibo e acqua per una settimana</h2>
+<p>I rischi reali di un&apos;assenza lunga senza supervisione:</p>
+<ol>
+<li><strong>Lipidosi epatica</strong>: se il gatto smette di mangiare per 48-72 ore (per stress da solitudine, cambio alimento, ansia), il fegato collassa. E una malattia gravissima, spesso fatale</li>
+<li><strong>Ostruzione urinaria</strong>: tipica del gatto maschio, puo svilupparsi in 24-48 ore. Senza intervento muore</li>
+<li><strong>Cibo umido che si guasta</strong> dopo 8 ore: il gatto smette di mangiarlo, possibile gastroenterite</li>
+<li><strong>Acqua finita o sporca</strong>: in estate evapora velocemente</li>
+<li><strong>Lettiera saturata</strong>: i gatti molto puliti smettono di farla, rischio infezioni vescica</li>
+<li><strong>Incidenti domestici</strong>: porta dell&apos;armadio chiusa con dentro il gatto, oggetti rotti, fili elettrici. Senza nessuno che controlla, possono finire male</li>
+</ol>
+
+<h2>Dotazione minima per un weekend</h2>
+<ul>
+<li><strong>2-3 ciotole di croccantini</strong> sparse in punti diversi della casa (no una sola, se la rovescia resta a digiuno)</li>
+<li><strong>3 fonti d&apos;acqua</strong>: due ciotole capienti + idealmente una fontanella elettrica (i gatti adorano l&apos;acqua corrente, bevono di piu)</li>
+<li><strong>2 lettiere</strong> minimo, in zone diverse. Regola classica: tante lettiere quanti i gatti + 1</li>
+<li><strong>Distributore automatico di cibo umido</strong> se mangia umido (15-50 euro): apre porzioni a orari programmati</li>
+<li><strong>Niente cibo umido lasciato all&apos;aperto</strong> oltre 4 ore</li>
+<li><strong>Finestre e balconi chiusi</strong> (cadute dall&apos;alto sono prima causa di morte accidentale dei gatti d&apos;appartamento)</li>
+<li><strong>Climatizzazione</strong>: se sei via in estate, lascia un ventilatore o un condizionatore programmato a 26°C. Il gatto soffre piu del caldo che del freddo</li>
+</ul>
+
+<h2>Gatto sitter o pensione: come scegliere</h2>
+<p>Per assenze sopra le 72 ore:</p>
+<ul>
+<li><strong>Cat sitter a domicilio</strong> (15-30 euro a visita): visita di 30-60 minuti, dare cibo, pulire lettiera, fare carezze. Tieni il gatto nel SUO ambiente, e l&apos;opzione meno stressante</li>
+<li><strong>Cat sitter overnight</strong> (50-90 euro a notte): persona che dorme a casa tua. Ideale per gatti molto attaccati, anziani o con terapie</li>
+<li><strong>Pensione felina specializzata</strong> (15-25 euro/giorno): solo se non hai alternative. Cambio ambiente = stress alto per il gatto. Verifica che sia SOLO per gatti, niente cani nei paraggi</li>
+<li><strong>Vicino o amico</strong>: gratis e affettuoso, ma chiedi che venga TUTTI i giorni e che ti mandi una foto</li>
+</ul>
+
+<h2>Come capire se il tuo gatto soffre quando sei via</h2>
+<p>Segnali al rientro che indicano sofferenza:</p>
+<ul>
+<li>Mangia tutto in 10 minuti come se fosse digiuno</li>
+<li>Marca il territorio con urina fuori lettiera (segnale di stress)</li>
+<li>Vomito persistente per 24-48 ore</li>
+<li>Atteggiamento appiccicoso o, al contrario, distaccato per giorni</li>
+<li>Eccessivo leccamento di una zona (alopecia da stress)</li>
+<li>Perdita di peso visibile dopo solo 3-4 giorni</li>
+</ul>
+<p>Se vedi questi segnali, il prossimo viaggio va organizzato diversamente.</p>
+
+<h2>Cosa NON fare mai</h2>
+<ul>
+<li>Lasciarlo solo oltre 24 ore senza nessuno che passi</li>
+<li>Lasciare cibo umido per piu di 4 ore</li>
+<li>Riempire una lettiera enorme pensando che basti — saranno spesso sporche per cattiva distribuzione</li>
+<li>Affidarlo a un cat sitter che non hai mai incontrato prima del viaggio</li>
+<li>Lasciarlo all&apos;esterno libero pensando &quot;tornera quando ha fame&quot;</li>
+</ul>
+
+<h2>In sintesi</h2>
+<p>Il gatto e meno indipendente di quanto raccontino i meme. Un weekend si gestisce con buona preparazione e un passaggio di una persona. Oltre, serve cat sitter o pensione. La vera prova del bravo proprietario non e quanto bene si comporta il gatto quando ci siamo — e quanto bene sta quando non ci siamo.</p>
+    `,
+    ai_generated: false,
+  },
+  {
+    slug: "forasacco-cane-riconoscere-veterinario",
+    titolo: "Forasacco nel cane: come riconoscerlo, dove cercarlo, quando correre dal vet",
+    categoria: "salute",
+    estratto: "Il forasacco e un nemico silenzioso del cane d'estate: piccolo, appuntito, capace di migrare ovunque nel corpo. Guida completa per riconoscerlo, evitarlo e capire quando e urgenza vera.",
+    img: "https://images.unsplash.com/photo-1601758228041-f3b2795255f1?w=800&q=80",
+    tempo_lettura: "7 min",
+    data: "26 Giu 2026",
+    tags: ["salute", "forasacco", "estate", "pronto soccorso", "cane"],
+    contenuto: `
+<p>Se hai un cane e vivi in Italia, da maggio a ottobre devi conoscere il forasacco. Sembra una sciocchezza — una piccola spiga d&apos;avena selvatica — ma e responsabile di migliaia di interventi d&apos;urgenza ogni estate nelle cliniche veterinarie italiane. Questo articolo spiega cosa e, come si presenta, dove cercarlo e quando andare di corsa dal veterinario.</p>
+
+<h2>Cos&apos;e il forasacco</h2>
+<p>Il forasacco e la spiga matura di alcune erbe selvatiche (Hordeum murinum, Avena fatua, Bromus). Si secca tra maggio e luglio diventando giallo paglierino, leggero, con punta acuminata e barbule a uncino che impediscono di tornare indietro: si conficca, prosegue, ma non esce mai.</p>
+<p>Una volta entrato nel corpo del cane, <strong>migra</strong>. Puo entrare da una zampa e arrivare al polmone, entrare dall&apos;orecchio e perforare il timpano, entrare dal naso e finire nei seni paranasali. La migrazione e lenta (giorni o settimane), ma non si ferma da sola.</p>
+
+<h2>Dove si conficca piu spesso</h2>
+<ol>
+<li><strong>Zampe (cuscinetti e spazi tra le dita)</strong>: 60% dei casi. Il cane lecca una zampa specifica, zoppica intermittente, comparsa di un foro arrossato tra le dita con piccola goccia di pus</li>
+<li><strong>Orecchio</strong>: 20% dei casi. Cane che scuote la testa violentemente da un lato, gratta l&apos;orecchio, geme, a volte tiene la testa inclinata. Emergenza vera</li>
+<li><strong>Naso</strong>: 10%. Starnuti violenti improvvisi, esplosivi, ripetuti. Spesso con epistassi (sangue dal naso)</li>
+<li><strong>Occhio</strong>: cane che strizza l&apos;occhio, lacrimazione, congiuntiva rossa</li>
+<li><strong>Bocca / gola</strong>: tosse insistente improvvisa, deglutizione difficile, salivazione anomala</li>
+<li><strong>Vulva, pene, ano</strong>: leccamento ossessivo della zona, gonfiore</li>
+<li><strong>Pelle</strong>: piccola pustola che non guarisce, soprattutto su petto, ascelle, addome</li>
+</ol>
+
+<h2>Razze piu a rischio</h2>
+<ul>
+<li><strong>Cocker, Setter, Springer Spaniel</strong>: orecchie lunghe pelose che spazzano l&apos;erba</li>
+<li><strong>Pastori (Border Collie, Australiano, Tedesco)</strong>: corrono nei campi, pelo lungo tra le dita</li>
+<li><strong>Cani da caccia e da seguita</strong>: passano ore nell&apos;erba alta</li>
+<li><strong>Razze a pelo lungo</strong> (Maltese, Bichon, Cavalier): il forasacco si nasconde nel pelo, non lo vedi</li>
+<li><strong>Cani anziani con pelo lungo</strong> mal toelettato</li>
+</ul>
+
+<h2>Quando e emergenza vera</h2>
+<p>Vai dal veterinario <strong>nella giornata stessa</strong>, anche di domenica:</p>
+<ul>
+<li>Scuote la testa violentemente e geme — sospetto forasacco nell&apos;orecchio</li>
+<li>Starnuti esplosivi a raffica con sangue dal naso</li>
+<li>Zoppica improvvisamente con leccamento ossessivo di una zampa</li>
+<li>Tosse continua improvvisa, soprattutto dopo una passeggiata in campagna</li>
+<li>Strizza un occhio, lacrimazione continua</li>
+</ul>
+<p>Aspettare significa permettere la migrazione: un forasacco nell&apos;orecchio puo perforare il timpano in 24-48 ore. Nel naso puo arrivare ai seni paranasali. Da una zampa puo migrare lungo i muscoli fino al torace.</p>
+
+<h2>Cosa fa il veterinario</h2>
+<p>Se il forasacco e in zampa o sotto pelle e visibile: <strong>estrazione con pinze</strong> in studio, anestesia locale, antibiotico per qualche giorno. Costo medio 50-150 euro.</p>
+<p>Se e nell&apos;orecchio o nel naso: <strong>otoscopio o endoscopio in sedazione</strong> per visualizzare ed estrarre. Costo 150-400 euro. Se non e visibile e si sospetta migrazione: <strong>TAC e chirurgia</strong> esplorativa. Costo 1.000-3.000 euro.</p>
+
+<h2>Cosa NON fare a casa</h2>
+<ul>
+<li><strong>Non estrarlo con le pinzette</strong> se la punta non e visibile e accessibile: rischi di romperlo lasciando un frammento dentro</li>
+<li><strong>Non spingere con cotton fioc</strong> nell&apos;orecchio: lo porti piu in profondita</li>
+<li><strong>Non aspettare &quot;a vedere se passa&quot;</strong>: non passa mai da solo</li>
+<li><strong>Non dare farmaci antinfiammatori umani</strong> (tachipirina, oki, voltaren): tossici per il cane</li>
+</ul>
+
+<h2>Prevenzione: i 6 gesti che ti evitano la corsa dal vet</h2>
+<ol>
+<li><strong>Controllo dopo ogni passeggiata in campagna</strong> da maggio a ottobre: ispeziona zampe (cuscinetti, spazi tra le dita), orecchie, ascelle, inguine, sotto la coda</li>
+<li><strong>Taglia il pelo</strong> tra i cuscinetti e davanti alle orecchie nei cani a pelo lungo</li>
+<li><strong>Evita prati incolti</strong> con erba alta secca: cerca parchi con erba tagliata corta</li>
+<li><strong>Spazzolatura accurata</strong> dopo le passeggiate, soprattutto orecchie e pancia</li>
+<li><strong>Toelettatura estiva</strong>: il pelo corto rende visibili i forasacchi e riduce le aree di nascondiglio</li>
+<li><strong>Maschere protettive per orecchie</strong> (snood) durante le escursioni nei boschi: 15-30 euro, salvano una vacanza</li>
+</ol>
+
+<h2>Stagionalita e geografia</h2>
+<p>Picco assoluto da <strong>giugno a settembre</strong> in tutta Italia. Le aree piu colpite sono campagne toscane, laziali, pugliesi, marchigiane. In montagna meno frequente. In citta presente nelle aree verdi non curate, nei parchi periferici, lungo i marciapiedi con erba selvatica.</p>
+
+<h2>In sintesi</h2>
+<p>Il forasacco e un nemico stagionale che molti proprietari sottovalutano. Una spiga da pochi millimetri puo trasformarsi in un intervento da migliaia di euro o, nei casi peggiori, mettere a rischio la vita del cane. Dieci minuti di controllo dopo ogni passeggiata e il giusto comportamento ai primi sintomi ti evitano nel 95% dei casi qualsiasi problema serio.</p>
+    `,
+    ai_generated: false,
+  },
+  {
+    slug: "cane-abbandonato-cosa-fare-step-by-step",
+    titolo: "Cane abbandonato in strada: cosa fare passo per passo (e cosa NON fare)",
+    categoria: "consigli",
+    estratto: "Trovi un cane vagante o legato a un palo: e abbandonato o smarrito? Ecco cosa fare nei primi 10 minuti, chi chiamare, come avvicinarlo, le leggi italiane e le responsabilita.",
+    img: "https://images.unsplash.com/photo-1601758125946-6ec2ef64daf8?w=800&q=80",
+    tempo_lettura: "7 min",
+    data: "26 Giu 2026",
+    tags: ["consigli", "abbandono", "smarriti", "soccorso", "cane"],
+    contenuto: `
+<p>Capita di trovare un cane apparentemente abbandonato — vagante in autostrada, legato a un palo in piazza, chiuso in un giardino vuoto da giorni. La differenza tra il salvataggio e una serie di errori inutili dipende dai primi 10 minuti. Questo articolo mette ordine in cosa fare davvero, chi chiamare e cosa la legge italiana ti permette o ti vieta.</p>
+
+<h2>Primo: e davvero abbandonato?</h2>
+<p>Non tutti i cani in strada sono abbandonati. Spesso sono <strong>smarriti</strong> — scappati 30 minuti prima da un giardino, una macchina, una passeggiata. Le statistiche delle ASL italiane indicano che <strong>l&apos;80% dei cani trovati in strada</strong> ha un proprietario che lo sta cercando in quel momento.</p>
+<p>Segnali che indicano un cane SMARRITO (non abbandonato):</p>
+<ul>
+<li>Collare con medaglietta o microchip</li>
+<li>Pelo pulito, peso normale, unghie curate</li>
+<li>Atteggiamento smarrito e disorientato, non emaciato</li>
+<li>Si lascia avvicinare con calma</li>
+</ul>
+<p>Segnali di cane ABBANDONATO:</p>
+<ul>
+<li>Pelo sporco, dermatiti, parassiti visibili</li>
+<li>Magrezza estrema, costole sporgenti</li>
+<li>Diffidenza estrema o, al contrario, ricerca disperata di contatto</li>
+<li>Trovato legato a un palo, davanti a un canile, in un&apos;area di servizio in autostrada</li>
+<li>Nessun collare ne segno di averlo mai avuto</li>
+</ul>
+
+<h2>I primi 10 minuti: cosa fare</h2>
+<ol>
+<li><strong>Mettiti in sicurezza tu</strong>. Se sei in una strada trafficata, accosta in modo sicuro, attiva le 4 frecce, prendi qualcosa di alto visibile (giubbotto, asciugamano)</li>
+<li><strong>Valuta da lontano</strong>: il cane mostra denti, ringhia, e visibilmente ferito? Non avvicinarti — chiama subito i Carabinieri (112) o il numero unico per gli animali del tuo comune</li>
+<li><strong>Avvicinati lentamente</strong>, di lato, senza guardarlo negli occhi. Parla con voce calma. Mai correre verso di lui</li>
+<li><strong>Offri qualcosa</strong> da mangiare se hai: un biscotto, un panino. Tienilo da lato (non frontale)</li>
+<li><strong>Cerca il collare con medaglietta</strong>: nome, telefono. Se c&apos;e, chiama subito il proprietario</li>
+<li><strong>Se non hai medaglietta</strong>: chiama il <strong>Servizio Veterinario ASL</strong> della tua zona, oppure i Carabinieri Forestali. Loro hanno il lettore microchip</li>
+</ol>
+
+<h2>Chi chiamare in ordine di priorita</h2>
+<ul>
+<li><strong>112</strong>: numero unico di emergenza. Inoltrano a chi di competenza (Carabinieri, Polizia, soccorso veterinario)</li>
+<li><strong>Polizia Locale del comune</strong>: di norma hanno convenzione con un canile sanitario e veterinari reperibili</li>
+<li><strong>Servizio Veterinario della ASL territoriale</strong>: numero verde regionale o numero sede ASL</li>
+<li><strong>Canile sanitario</strong> del comune (recupera, scansiona microchip, cura): cercalo su Google &quot;canile sanitario [tua provincia]&quot;</li>
+<li><strong>Associazioni di volontariato locali</strong>: ENPA, LAV, OIPA, LEIDAA, AISA, GUARDIE ZOOFILE — spesso piu rapide della burocrazia</li>
+</ul>
+<p>Importante: <strong>i veterinari privati per legge devono leggere il microchip gratuitamente</strong> a chi presenta un cane senza proprietario. Se non sei lontano da una clinica, e l&apos;opzione piu rapida.</p>
+
+<h2>Cosa dice la legge italiana</h2>
+<p>Riferimenti normativi essenziali:</p>
+<ul>
+<li><strong>Legge 281/1991 e leggi regionali</strong>: ogni cane in stato di vagantismo trovato sul territorio comunale deve essere preso in carico dal Servizio Veterinario ASL o dal canile sanitario convenzionato. <strong>Il cittadino non puo tenerlo legalmente</strong> senza segnalazione</li>
+<li><strong>Art. 727 Codice Penale</strong> (abbandono di animali): chi abbandona un animale e punito con arresto fino a 1 anno o multa fino a 10.000 euro. Se causa morte, fino a 18 mesi</li>
+<li><strong>Art. 544-ter</strong>: maltrattamento, reclusione 3-18 mesi o multa 5.000-30.000 euro</li>
+</ul>
+<p>Se vedi qualcuno che abbandona un cane: filma la scena (targa, volto, ora, luogo) e chiama subito il 112. La testimonianza video e prova efficace nei procedimenti.</p>
+
+<h2>Posso portarlo a casa mia?</h2>
+<p>Sintesi onesta:</p>
+<ul>
+<li><strong>Puoi e devi soccorrerlo</strong> (dargli acqua, riparo immediato, valutarne lo stato)</li>
+<li><strong>Devi segnalarlo entro 24 ore</strong> all&apos;ASL o alla Polizia Locale. Non farlo costituisce appropriazione indebita</li>
+<li><strong>Se il proprietario non si fa vivo</strong> entro 60 giorni dalla presa in carico ufficiale, il cane viene messo in adozione. Puoi essere il primo della lista se hai presentato richiesta</li>
+<li><strong>NON tenerlo nascosto</strong>: anche con buone intenzioni, e illegale. Soprattutto se ha microchip: sarai rintracciato</li>
+</ul>
+
+<h2>Cane chiuso in un&apos;auto al sole</h2>
+<p>Rimando alla nostra guida specifica: <a href="/magazine/cane-in-auto-estate-regola-22-gradi">Cane in auto d&apos;estate</a>. In sintesi: chiama 112 subito, non rompere i vetri da solo, riprendi tutto in video, non perdere di vista l&apos;auto.</p>
+
+<h2>Cane chiuso in un giardino apparentemente abbandonato</h2>
+<p>Segnale che il proprietario non c&apos;e da giorni: ciotole vuote, escrementi accumulati, cane visibilmente dimagrito, abbaiare disperato. Procedura:</p>
+<ol>
+<li>Citofona o suona ai vicini: chiedi se sanno qualcosa</li>
+<li>Chiama la Polizia Locale: hanno l&apos;autorita di entrare per soccorrere</li>
+<li>Documenta tutto: foto, video, ora, indirizzo</li>
+<li>Segnala alle <strong>Guardie Zoofile</strong> (Polizia Provinciale): hanno potere di accertamento</li>
+</ol>
+<p>Non scavalcare un muro o entrare in proprieta privata da solo: configura violazione di domicilio, anche se la causa e nobile.</p>
+
+<h2>Dopo il soccorso: come aiutare</h2>
+<p>Se il cane viene preso in carico dal canile sanitario:</p>
+<ul>
+<li>Visita il canile entro pochi giorni: chiedi se ha bisogno di stallo (ospitalita temporanea in casa)</li>
+<li>Aiuta a diffondere la sua foto sui gruppi Facebook locali e su <a href="/sos-smarriti">SOS smarriti di MifidoDiTe</a></li>
+<li>Considera l&apos;adozione: se hai spazio, tempo e risorse</li>
+<li>Dona materiale ai canili (coperte, cibo, lettiere) - quasi sempre in carenza</li>
+</ul>
+
+<h2>Cosa NON fare mai</h2>
+<ul>
+<li>Cercare di prenderlo in braccio se non si lascia avvicinare: morsi anche da cani normalmente docili in stato di panico</li>
+<li>Inseguirlo in strada: rischi incidenti per te e per gli automobilisti</li>
+<li>Dargli cibo umano (cioccolato, ossa cotte, uva, cipolla): tossici</li>
+<li>Tenerlo a casa per piu di 24 ore senza segnalazione ufficiale</li>
+<li>Postare la foto del cane sui social senza aver prima chiamato l&apos;ASL: rallenta il ritrovamento se ha microchip</li>
+</ul>
+
+<h2>In sintesi</h2>
+<p>Trovare un cane in difficolta e un piccolo dovere civico che inizia con tre numeri di telefono. Nei 10 minuti che dedichi a fermarti, capire e chiamare puoi salvare una vita o restituirla a chi la sta cercando da ore. Il modo migliore di aiutare un cane non e portarselo a casa di nascosto: e attivare la rete giusta affinche torni dal suo proprietario o trovi una nuova famiglia in regola.</p>
+    `,
+    ai_generated: false,
+  },
 ];

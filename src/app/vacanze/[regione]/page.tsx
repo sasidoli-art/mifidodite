@@ -3,12 +3,11 @@ import { Footer } from "@/components/landing/Footer";
 import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { MapPin, Star, ExternalLink } from "lucide-react";
+import { MapPin, Star } from "lucide-react";
 import {
   unslugifyRegioneVacanze,
   getVacanzeByRegione,
   getAllRegioniVacanze,
-  buildBookingUrl,
   PREZZO_LABEL,
 } from "@/lib/vacanze-seed";
 import { collectionJsonLd, breadcrumbJsonLd, jsonLdScript } from "@/lib/json-ld";
@@ -141,16 +140,6 @@ export default async function VacanzeRegionePage({ params }: { params: Promise<{
                     <p className="text-sm text-muted-foreground mt-2 line-clamp-2">{s.descrizione}</p>
                   </div>
                 </Link>
-                <div className="px-4 pb-4 mt-auto">
-                  <a
-                    href={buildBookingUrl(s.bookingQuery)}
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                    className="w-full inline-flex items-center justify-center gap-1.5 bg-[#003580] hover:bg-[#002659] text-white text-sm font-semibold rounded-full px-4 py-2.5 transition-colors"
-                  >
-                    Prenota su Booking <ExternalLink size={13} />
-                  </a>
-                </div>
               </div>
             ))}
           </div>

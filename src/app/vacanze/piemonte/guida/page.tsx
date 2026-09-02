@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import Link from "next/link";
 import { MapPin, Mountain, Wine, Utensils } from "lucide-react";
 import { VACANZE_SEED } from "@/lib/vacanze-seed";
+import { breadcrumbJsonLd, newsArticleJsonLd, jsonLdScript } from "@/lib/json-ld";
 
 export const metadata = {
   title: "Vacanze con il Cane in Piemonte 2026 — Hotel Pet-Friendly Torino, Alba, Asti | MifidoDiTe.eu",
@@ -130,6 +131,29 @@ export default function PiemonteGuida() {
             <Link href="/vacanze/piemonte" className="inline-flex items-center gap-2 bg-primary text-white font-semibold px-8 py-3 rounded-full hover:bg-primary-dark transition-colors">Vedi tutte le strutture in Piemonte →</Link>
           </section>
         </div>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={jsonLdScript(breadcrumbJsonLd([
+            { name: "Home", url: "/" },
+            { name: "Vacanze", url: "/vacanze" },
+            { name: "Piemonte", url: "/vacanze/piemonte" },
+            { name: "Guida", url: "/vacanze/piemonte/guida" },
+          ]))}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={jsonLdScript(newsArticleJsonLd({
+            titolo: "Vacanze con il Cane in Piemonte 2026",
+            descrizione: "Scopri le migliori vacanze con il cane in Piemonte. Hotel pet-friendly a Torino, Alba, Asti. Vigne, montagne e cultura con il tuo cane.",
+            slug: "piemonte-guida",
+            regione: "Piemonte",
+            img: "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1200&q=80",
+            datePublished: new Date().toISOString().split("T")[0],
+            autoreName: "MifidoDiTe Team",
+          }))}
+        />
       </main>
       <Footer />
     </>

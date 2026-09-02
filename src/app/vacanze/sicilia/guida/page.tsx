@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import Link from "next/link";
 import { MapPin, Waves, Utensils, Sun } from "lucide-react";
 import { VACANZE_SEED } from "@/lib/vacanze-seed";
+import { breadcrumbJsonLd, newsArticleJsonLd, jsonLdScript } from "@/lib/json-ld";
 
 export const metadata = {
   title: "Vacanze con il Cane in Sicilia 2026 — Hotel Pet-Friendly Palermo, Catania | MifidoDiTe.eu",
@@ -130,6 +131,29 @@ export default function SiciliaGuida() {
             <Link href="/vacanze/sicilia" className="inline-flex items-center gap-2 bg-primary text-white font-semibold px-8 py-3 rounded-full hover:bg-primary-dark transition-colors">Vedi tutte le strutture in Sicilia →</Link>
           </section>
         </div>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={jsonLdScript(breadcrumbJsonLd([
+            { name: "Home", url: "/" },
+            { name: "Vacanze", url: "/vacanze" },
+            { name: "Sicilia", url: "/vacanze/sicilia" },
+            { name: "Guida", url: "/vacanze/sicilia/guida" },
+          ]))}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={jsonLdScript(newsArticleJsonLd({
+            titolo: "Vacanze con il Cane in Sicilia 2026",
+            descrizione: "Scopri le migliori vacanze con il cane in Sicilia. Hotel e B&B pet-friendly a Palermo, Catania, Mondello. Spiagge, mare e cultura con il tuo cane.",
+            slug: "sicilia-guida",
+            regione: "Sicilia",
+            img: "https://images.unsplash.com/photo-1525174262454-b46e1a505f87?w=1200&q=80",
+            datePublished: new Date().toISOString().split("T")[0],
+            autoreName: "MifidoDiTe Team",
+          }))}
+        />
       </main>
       <Footer />
     </>

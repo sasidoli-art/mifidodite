@@ -234,6 +234,59 @@ export function collectionJsonLd(titolo: string, url: string, numberOfItems: num
   };
 }
 
+export interface NewsArticleJsonLd {
+  titolo: string;
+  descrizione: string;
+  slug: string;
+  regione: string;
+  img: string;
+  datePublished: string;
+  dateModified?: string;
+  autoreId?: string;
+  autoreName?: string;
+}
+
+export function newsArticleJsonLd(a: NewsArticleJsonLd): object {
+  const author: Record<string, unknown> = a.autoreId
+    ? {
+        "@type": "Person",
+        name: a.autoreName || "MifidoDiTe Team",
+      }
+    : {
+        "@type": "Organization",
+        name: ORG_NAME,
+        url: BASE_URL,
+      };
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    headline: a.titolo,
+    description: a.descrizione,
+    image: [a.img],
+    author,
+    publisher: {
+      "@type": "Organization",
+      name: ORG_NAME,
+      logo: {
+        "@type": "ImageObject",
+        url: ORG_LOGO,
+      },
+    },
+    datePublished: a.datePublished,
+    dateModified: a.dateModified || a.datePublished,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${BASE_URL}/vacanze/${a.regione.toLowerCase()}/guida`,
+    },
+    articleSection: "Guide Vacanze",
+    inLanguage: "it-IT",
+    copyrightHolder: COPYRIGHT_HOLDER,
+    copyrightYear: new Date(a.datePublished).getFullYear(),
+    isAccessibleForFree: true,
+  };
+}
+
 /**
  * Helper React per inserire JSON-LD in <script type="application/ld+json">
  * Usa dangerouslySetInnerHTML per evitare escape HTML degli operatori JSON.

@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import Link from "next/link";
 import { MapPin, Waves, Utensils, Sun } from "lucide-react";
 import { VACANZE_SEED } from "@/lib/vacanze-seed";
+import { breadcrumbJsonLd, newsArticleJsonLd, jsonLdScript } from "@/lib/json-ld";
 
 export const metadata = {
   title: "Vacanze con il Cane in Campania 2026 — Hotel Pet-Friendly Napoli, Sorrento, Costiera | MifidoDiTe.eu",
@@ -94,36 +95,132 @@ export default function CampaniaGuida() {
             </div>
           </div>
 
-          {/* Consigli */}
+          {/* Quando visitare */}
           <section className="mb-12 bg-white rounded-2xl border border-border p-8">
-            <h2 className="text-2xl font-bold text-foreground mb-6">Consigli per vacanze in Campania con il tuo cane</h2>
+            <h2 className="text-2xl font-bold text-foreground mb-6">Quando visitare la Campania con il cane</h2>
+            <div className="space-y-4 text-foreground/80">
+              <p>
+                La Campania ha quattro stagioni ben definite. <strong>Aprile-maggio e settembre-ottobre</strong> sono i periodi ideali: temperature miti (18-25°C), pochi turisti e il tuo cane avrà spazio per muoversi. L'estate (giugno-agosto) è calda e affollata; se visiti in questa stagione, esci presto al mattino e lascia il cane in un luogo fresco durante il giorno.
+              </p>
+              <p>
+                L'inverno è mite ma grigio (dicembre-febbraio), con temperature attorno ai 10°C. Perfetto se il tuo cane preferisce il fresco. Evita il periodo tra luglio e agosto se il tuo cane soffre il caldo, soprattutto sulle spiagge dove il sole riflette sulla sabbia.
+              </p>
+            </div>
+          </section>
+
+          {/* Come arrivare e muoversi */}
+          <section className="mb-12 bg-white rounded-2xl border border-border p-8">
+            <h2 className="text-2xl font-bold text-foreground mb-6">Come arrivare e muoversi con il cane</h2>
+            <div className="space-y-4 text-foreground/80">
+              <div>
+                <p className="font-semibold text-foreground mb-2">Aerei e treni</p>
+                <p className="text-sm">Napoli ha l'Aeroporto Capodichino (25 km dal centro). Le compagnie aeree europee accettano cani a pagamento (80-120€ per volo). Trenitalia ammette cani al guinzaglio gratuitamente sulle Frecce. Dalla stazione centrale raggiungi Sorrento e la Costiera in 1 ora.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-foreground mb-2">Auto e parcheggi</p>
+                <p className="text-sm">Noleggiare un'auto è consigliato per esplorare la Costiera. Parcheggi: a Napoli usa i park con accesso cani (Parcheggio Brin, Via Marina). A Sorrento e sulla costa i parcheggi sono limitati; arriva presto. Non portare il cane mai da solo in auto al sole.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-foreground mb-2">Traghetti e isole</p>
+                <p className="text-sm">Traghetti per Capri, Ischia e Procida partono da Napoli, Sorrento e Salerno. I cani viaggiano gratuitamente al guinzaglio. Per Capri: il cane deve indossare la museruola obbligatoria (ordinanza locale). Procida è la più cane-friendly; ha spiagge dedicate.</p>
+              </div>
+            </div>
+          </section>
+
+          {/* Ristoranti e food */}
+          <section className="mb-12 bg-white rounded-2xl border border-border p-8">
+            <h2 className="text-2xl font-bold text-foreground mb-6">Dove mangiare con il cane</h2>
+            <div className="space-y-4 text-foreground/80">
+              <p>
+                <strong>Napoli</strong>: Ristoranti lungo il lungomare accettano cani ai tavoli esterni. Prova pizzerie nel Centro Storico (via Spaccanapoli); molte hanno dehors. Bar e caffetterie sono generalmente pet-friendly se rimani all'esterno.
+              </p>
+              <p>
+                <strong>Sorrento e Costiera</strong>: Ristoranti con vista sul mare sulla Costiera Amalfitana accettano cani (prenotazione consigliata). Evita ore di punta (13-15, 20-22). Le trattorie locali a Positano, Ravello e Praiano hanno tavoli all'aperto cane-friendly.
+              </p>
+              <p>
+                <strong>Ischia e Procida</strong>: L'atmosfera è più rilassata. Ristoranti di pesce con spiaggia privata accettano cani; puoi anche fare pic-nic sulla spiaggia. Non mancare i piatti locali: alici fritte, pasta con le melanzane, limoncello (umano, non per il cane!).
+              </p>
+              <p className="text-sm text-muted-foreground">
+                ⚠️ Attenzione: non condividere aglio, cipolle, uva o avocado con il cane. Il sole mediterraneo è forte; porta acqua fresca.
+              </p>
+            </div>
+          </section>
+
+          {/* Attrazioni e attività */}
+          <section className="mb-12 bg-white rounded-2xl border border-border p-8">
+            <h2 className="text-2xl font-bold text-foreground mb-6">Attrazioni e attività con il cane</h2>
+            <div className="space-y-4 text-foreground/80">
+              <div>
+                <p className="font-semibold text-foreground mb-2">Sentieri costieri e escursioni</p>
+                <p className="text-sm">Sentiero Positano-Praiano: 1,5 ore, vista mozzafiato, perfetto per cani di taglia media. Sentiero dei Limoni (Furore): facile, al guinzaglio è permesso. Sentiero dell'Amalfi-Ravello: più impegnativo, per cani allenati.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-foreground mb-2">Spiagge e bagni</p>
+                <p className="text-sm">Marina Grande a Sorrento accetta cani mattina presto. Spiaggia Libera di Positano (zona ovest): cani liberi fino alle 10. Spiaggia Marina di Erchie (Salerno): completamente cane-friendly. Le isole (Procida, Ischia) hanno spiagge dedicate.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-foreground mb-2">Città e musei</p>
+                <p className="text-sm">Napoli centro: passeggia a Piazza Plebiscito, lungomare, Castel dell'Ovo al guinzaglio. Musei: purtroppo vietati ai cani, ma lascialo in hotel con aria condizionata. Pompei e Ercolano: esterna, al guinzaglio è permesso durante gli orari meno affollati (mattina presto).</p>
+              </div>
+            </div>
+          </section>
+
+          {/* Servizi veterinari e emergenze */}
+          <section className="mb-12 bg-white rounded-2xl border border-border p-8">
+            <h2 className="text-2xl font-bold text-foreground mb-6">Servizi veterinari e emergenze</h2>
+            <div className="space-y-4 text-foreground/80">
+              <p>
+                <strong>Ospedali veterinari 24/7 a Napoli:</strong> Clinica Veterinaria San Gennaro (Via Giovanni da Procida), Ospedale Veterinario Emergenza (Viale Colli Aminei). Entrambi hanno guardie notturne.
+              </p>
+              <p>
+                <strong>Farmacie veterinarie:</strong> Farmacia Veterinaria Capodichino (Napoli), Farmacia Sorrento (Sorrento). Hanno antiparassitari, disinfettanti e medicinali comuni.
+              </p>
+              <p>
+                <strong>Primi soccorsi in spiaggia:</strong> Colpo di calore: immergere in acqua fresca, non ghiacciata. Ustioni da sole: aloe vera, stare all'ombra. Punture di medusa: sciacquare con aceto o acqua salata, non acqua dolce. Se grave, raggiungere un ospedale veterinario.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                Porta un kit primo soccorso: garze, disinfettante, antidiarroico, antinfiammatorio, collare elisabettiano portatile.
+              </p>
+            </div>
+          </section>
+
+          {/* Consigli pratici */}
+          <section className="mb-12 bg-white rounded-2xl border border-border p-8">
+            <h2 className="text-2xl font-bold text-foreground mb-6">Consigli pratici per vacanze in Campania</h2>
             <ul className="space-y-4">
               <li className="flex gap-3">
                 <span className="text-primary font-bold flex-shrink-0 mt-1">→</span>
                 <div>
-                  <p className="font-semibold text-foreground">Spiagge cane-friendly sulla Costiera</p>
-                  <p className="text-sm text-muted-foreground">Sorrento e la Costiera hanno spiagge dedicate ai cani. Verifica gli orari e le regole prima di visitare.</p>
+                  <p className="font-semibold text-foreground">Documenti e microchip</p>
+                  <p className="text-sm text-muted-foreground">Porta passaporto europeo, microchip registrato, certificato rabbia (entro 12 mesi). Non obbligatorio, ma consigliato su traghetti.</p>
                 </div>
               </li>
               <li className="flex gap-3">
                 <span className="text-primary font-bold flex-shrink-0 mt-1">→</span>
                 <div>
-                  <p className="font-semibold text-foreground">Napoli è più cane-friendly di quanto pensi</p>
-                  <p className="text-sm text-muted-foreground">Piazza Plebiscito, lungomare, ristoranti con dehors: i napoletani adorano i cani. Portalo al guinzaglio nei centri storici.</p>
+                  <p className="font-semibold text-foreground">Protezione dal caldo e dal sole</p>
+                  <p className="text-sm text-muted-foreground">Protezione solare per tartufo e orecchi. Idratazione costante: almeno 200ml ogni ora d'attività. Giacchetto rinfrescante per cani che soffrono il caldo.</p>
                 </div>
               </li>
               <li className="flex gap-3">
                 <span className="text-primary font-bold flex-shrink-0 mt-1">→</span>
                 <div>
-                  <p className="font-semibold text-foreground">Calore estivo: protezione dal sole</p>
-                  <p className="text-sm text-muted-foreground">L'estate in Campania è calda. Porta sempre acqua fresca, ombrellone e mantieni il cane all'ombra durante le ore più calde.</p>
+                  <p className="font-semibold text-foreground">Antiparassitari e vaccinazioni</p>
+                  <p className="text-sm text-muted-foreground">Non saltare trattamento pulci/zecche: la Campania ha focolai. Booster rabbia consigliato prima della partenza.</p>
                 </div>
               </li>
               <li className="flex gap-3">
                 <span className="text-primary font-bold flex-shrink-0 mt-1">→</span>
                 <div>
-                  <p className="font-semibold text-foreground">Le isole (Capri, Ischia, Procida)</p>
-                  <p className="text-sm text-muted-foreground">I traghetti ammettono cani. Verifica le regole delle singole isole, ma generalmente sono pet-friendly.</p>
+                  <p className="font-semibold text-foreground">Spiagge e sabbia</p>
+                  <p className="text-sm text-muted-foreground">Risciacqua il cane dopo la spiaggia: il sale danneggia pelle e zampe. Asciuga bene le orecchie; l'acqua salata causa infezioni.</p>
+                </div>
+              </li>
+              <li className="flex gap-3">
+                <span className="text-primary font-bold flex-shrink-0 mt-1">→</span>
+                <div>
+                  <p className="font-semibold text-foreground">Guinzaglio e comportamento</p>
+                  <p className="text-sm text-muted-foreground">Napoli centro richiede guinzaglio. Spiagge libere: cani liberi solo dove consentito. Sii consapevole di altri cani e turisti.</p>
                 </div>
               </li>
             </ul>
@@ -173,6 +270,29 @@ export default function CampaniaGuida() {
             </Link>
           </section>
         </div>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={jsonLdScript(breadcrumbJsonLd([
+            { name: "Home", url: "/" },
+            { name: "Vacanze", url: "/vacanze" },
+            { name: "Campania", url: "/vacanze/campania" },
+            { name: "Guida", url: "/vacanze/campania/guida" },
+          ]))}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={jsonLdScript(newsArticleJsonLd({
+            titolo: "Vacanze con il Cane in Campania 2026",
+            descrizione: "Scopri le migliori vacanze con il cane in Campania. Hotel e B&B pet-friendly a Napoli, Sorrento, Costiera Amalfitana. Spiagge, storia e bellezza con il tuo cane.",
+            slug: "campania-guida",
+            regione: "Campania",
+            img: "https://images.unsplash.com/photo-1525174262454-b46e1a505f87?w=1200&q=80",
+            datePublished: new Date().toISOString().split("T")[0],
+            autoreName: "MifidoDiTe Team",
+          }))}
+        />
       </main>
       <Footer />
     </>

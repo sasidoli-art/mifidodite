@@ -227,8 +227,7 @@ export function SearchPage() {
             <div className="text-sm">
               <p className="font-semibold text-blue-900">Risultati da OpenStreetMap</p>
               <p className="text-blue-800 mt-0.5">
-                Mostriamo {osmResults.length > 0 ? `${osmResults.length} ` : ""}attivita reali da OpenStreetMap, la mappa libera del mondo. I dati possono essere incompleti — se sei il titolare,{" "}
-                <a href="/registra-attivita" className="underline font-semibold">registrati gratis</a> per gestire la tua scheda.
+                Mostriamo {osmResults.length > 0 ? `${osmResults.length} ` : ""}attivita reali da OpenStreetMap, la mappa libera del mondo. I dati possono essere incompleti — scrivici a info@mifidodite.eu per correzioni o aggiunte.
               </p>
             </div>
           </div>
@@ -287,15 +286,12 @@ export function SearchPage() {
               </a>
             </div>
 
-            {/* CTA professionisti */}
+            {/* Suggerimento */}
             <div className="bg-muted rounded-[20px] p-6 text-center border border-border">
-              <p className="text-sm text-foreground font-semibold mb-2">Sei un professionista del mondo pet?</p>
+              <p className="text-sm text-foreground font-semibold mb-2">Conosci un professionista da segnalare?</p>
               <p className="text-sm text-muted-foreground mb-4">
-                Registra la tua attivita gratis su MifidoDiTe.eu con il codice invito e fatti trovare dai proprietari della tua zona.
+                Scrivici a info@mifidodite.eu: aggiungeremo la struttura alle nostre mappe gratuite per aiutare altri proprietari.
               </p>
-              <a href="/registra-attivita" className="inline-flex items-center gap-2 bg-primary hover:bg-foreground text-white px-7 py-3.5 rounded-full font-semibold transition-all hover:shadow-lg hover:-translate-y-0.5 text-sm">
-                Registra la tua attivita
-              </a>
             </div>
           </div>
         );

@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import Link from "next/link";
-import { MapPin, Filter, X, Check, ExternalLink, Star } from "lucide-react";
+import { MapPin, Filter, X, Check, Star } from "lucide-react";
 import { MapVacanze } from "./MapVacanze";
 import type { VacanzeTipo, PrezzoFascia } from "@/lib/vacanze-types";
 
@@ -22,7 +22,6 @@ export interface VacanzeUI {
   img: string;
   lat: number;
   lng: number;
-  bookingUrl: string;
 }
 
 type FiltroTipo = "tutti" | VacanzeTipo;
@@ -246,16 +245,6 @@ export function VacanzeClient({ strutture }: Props) {
                         )}
                       </div>
                     </Link>
-                    <div className="px-4 pb-4 mt-auto">
-                      <a
-                        href={s.bookingUrl}
-                        target="_blank"
-                        rel="noopener noreferrer sponsored"
-                        className="w-full inline-flex items-center justify-center gap-1.5 bg-[#003580] hover:bg-[#002659] text-white text-sm font-semibold rounded-full px-4 py-2.5 transition-colors"
-                      >
-                        Prenota su Booking <ExternalLink size={13} />
-                      </a>
-                    </div>
                   </div>
                 ))}
               </div>

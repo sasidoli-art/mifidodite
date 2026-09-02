@@ -22,10 +22,6 @@ export function PetNews() {
     fetch("/api/strutture?_petnews=1")
       .catch(() => null);
 
-    // Carica gli articoli reali dal DB
-    fetch("/api/offerte?_pn=1")
-      .catch(() => null);
-
     // Carica 6 articoli piu recenti dalla pagina magazine
     fetch("/api/adozioni-list?tipo=adotta")
       .then(() => {})

@@ -1,0 +1,35 @@
+TEMPLATE DESTINATION GUIDE
+
+Usato per creare velocemente 13 guide regionali nuove.
+
+Struttura:
+1. Hero + Breadcrumb + H1
+2. Intro (2 paragrafi, 150-200 parole)
+3. Highlights (3 card tematiche)
+4. Quando visitare (clima, stagioni)
+5. Come arrivare (trasporti, auto, parcheggio)
+6. Ristoranti (opzioni pet-friendly)
+7. Attrazioni (sentieri, città, attività)
+8. Servizi veterinari (ospedali, farmacie)
+9. Consigli pratici (5 bullet)
+10. Strutture (top 3 da VACANZE_SEED)
+11. CTA "Vedi tutte le strutture"
+12. Schema: BreadcrumbList + NewsArticle
+
+REGIONI MANCANTI (13):
+- Lazio (Roma, Castelli Romani, mare Lido)
+- Umbria (Perugia, Assisi, Terni)
+- Marche (Ancona, Pesaro, Urbino)
+- Abruzzo (L'Aquila, Teramo, mare Adriatico)
+- Molise (Campobasso, Isernia, mare)
+- Basilicata (Matera, Potenza, costa Ionica)
+- Calabria (Cosenza, Reggio, Sila)
+- Sardegna (Cagliari, Costa Smeralda, spiagge)
+- Puglia (Bari, Lecce, Salento, mare Adriatico)
+- Liguria (Genova, Cinque Terre, Portofino)
+- Piemonte (Torino, Alba, Langhe, Dolomiti)
+- Valle d'Aosta (Aosta, Mont-Blanc, montagna)
+- Friuli-Venezia Giulia (Trieste, Gorizia, Adriatico)
+
+FILE PATTERN:
+c:\PROGETTI\mifidodite\app\src\app\vacanze\[regione-slug]\guida\page.tsx

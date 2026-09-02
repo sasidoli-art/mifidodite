@@ -85,7 +85,7 @@ export const ARTICOLI_VACANZE = [
 
 <ol>
 <li><strong>Parti dalla nostra scheda</strong> — verifica tipologia, fascia prezzo, tagli ammesse.</li>
-<li><strong>Clicca su "Prenota su Booking"</strong> — arrivi direttamente alla ricerca della struttura dove puoi vedere prezzi reali per le tue date, filtrare per "animali ammessi" e leggere le recensioni degli ospiti che hanno gia' viaggiato col cane.</li>
+<li><strong>Cerca la struttura online</strong> — usa il nome esatto della scheda per trovarla sul sito ufficiale o sui portali di prenotazione, dove vedi prezzi reali per le tue date e le recensioni degli ospiti che hanno gia' viaggiato col cane.</li>
 <li><strong>Scrivi al gestore</strong> prima di confermare per specificare: numero, taglia, razza, eventuali esigenze (cibo speciale, passeggiata, dog sitter).</li>
 <li><strong>Chiedi sempre per iscritto</strong> le regole specifiche: il cane puo' entrare in ristorante? Puo' salire sui mezzi del resort? Puo' accedere alla spiaggia privata?</li>
 <li><strong>Controlla la polizza annullamento</strong>: se il tuo cane si ammala o non puoi partire, la rimborsabilita' puo' salvarti migliaia di euro.</li>

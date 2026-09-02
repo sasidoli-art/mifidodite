@@ -4,6 +4,7 @@ import { Clock, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { ARTICOLI_SEED } from "@/lib/articoli-seed";
 import { articleJsonLd, jsonLdScript } from "@/lib/json-ld";
+import { ArticleAuthor } from "@/components/shared/ArticleAuthor";
 
 async function getArticolo(slug: string, preview: boolean = false) {
   if (process.env.DATABASE_URL) {
@@ -105,7 +106,11 @@ export default async function ArticoloPage({
 
   const correlati = await getCorrelati(articolo.categoria, slug);
 
-  // JSON-LD Article schema
+  // Articolo prodotto con assistenza AI? Default true (lo storico era cosi).
+  // I seed possono impostare ai_generated:false per pezzi scritti a mano.
+  const isAi = (articolo as { ai_generated?: boolean }).ai_generated !== false;
+
+  // JSON-LD Article schema + marcatura AI Act (Art. 50.4) sui contenuti AI-assistiti
   const articleLd = articleJsonLd({
     titolo: articolo.titolo,
     descrizione: articolo.estratto,
@@ -114,9 +119,19 @@ export default async function ArticoloPage({
     img: articolo.img,
     datePublished: articolo.data ? new Date(articolo.data).toISOString() : new Date().toISOString(),
   });
+  if (isAi) {
+    (articleLd as Record<string, unknown>).creator = {
+      "@type": "SoftwareApplication",
+      name: "Claude Haiku (Anthropic)",
+      applicationCategory: "ContentGeneration",
+    };
+    (articleLd as Record<string, unknown>).creativeWorkStatus = "AI-assisted, human-reviewed";
+  }
 
   return (
     <>
+      {isAi && <meta name="ai-generated" content="true" />}
+      {isAi && <meta name="ai-model" content="Claude Haiku (Anthropic)" />}
       <script type="application/ld+json" dangerouslySetInnerHTML={jsonLdScript(articleLd)} />
       <Header />
       <main className="flex-1 pt-16">
@@ -162,11 +177,21 @@ export default async function ArticoloPage({
             }}
           />
 
-          {/* Disclosure AI Act */}
-          <div className="flex items-center gap-2 bg-muted rounded-xl p-3 mb-6 text-xs text-muted-foreground">
-            <span>🤖</span>
-            <span>Questo articolo e stato scritto con l&apos;assistenza dell&apos;intelligenza artificiale e revisionato dalla redazione di MifidoDiTe.eu.</span>
+          {/* Author byline */}
+          <div className="mb-8">
+            <ArticleAuthor autoreId="team-mifidodite" data={articolo.data} tempoLettura={articolo.tempo_lettura} />
           </div>
+
+          {/* Disclosure AI Act art. 50.4 — visibile solo su articoli AI-assistiti */}
+          {isAi && (
+            <div className="flex items-start gap-2 bg-muted rounded-xl p-3 mb-6 text-xs text-muted-foreground">
+              <span aria-hidden>🤖</span>
+              <span>
+                Questo articolo e stato redatto con l&apos;assistenza di un modello linguistico (Claude Haiku, Anthropic)
+                e successivamente revisionato dalla redazione di MifidoDiTe.eu, in conformita all&apos;art. 50 AI Act (Reg. UE 2024/1689).
+              </span>
+            </div>
+          )}
 
           <article className="prose prose-lg max-w-none prose-headings:text-foreground prose-p:text-foreground/80 prose-a:text-primary prose-strong:text-foreground"
             dangerouslySetInnerHTML={{ __html: articolo.contenuto }} />

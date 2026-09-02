@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import Link from "next/link";
 import { MapPin, Bed, Utensils, Wine } from "lucide-react";
 import { VACANZE_SEED } from "@/lib/vacanze-seed";
+import { breadcrumbJsonLd, newsArticleJsonLd, jsonLdScript } from "@/lib/json-ld";
 
 export const metadata = {
   title: "Vacanze con il Cane in Toscana 2026 — Hotel e B&B Pet-Friendly | MifidoDiTe.eu",
@@ -173,6 +174,29 @@ export default function ToscanaGuida() {
             </Link>
           </section>
         </div>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={jsonLdScript(breadcrumbJsonLd([
+            { name: "Home", url: "/" },
+            { name: "Vacanze", url: "/vacanze" },
+            { name: "Toscana", url: "/vacanze/toscana" },
+            { name: "Guida", url: "/vacanze/toscana/guida" },
+          ]))}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={jsonLdScript(newsArticleJsonLd({
+            titolo: "Vacanze con il Cane in Toscana 2026",
+            descrizione: "Guida completa alle vacanze con il cane in Toscana. Scopri i migliori hotel e agriturismi pet-friendly, consigli per visitare Firenze, Siena e la Val d'Orcia con il tuo cane.",
+            slug: "toscana-guida",
+            regione: "Toscana",
+            img: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&q=80",
+            datePublished: new Date().toISOString().split("T")[0],
+            autoreName: "MifidoDiTe Team",
+          }))}
+        />
       </main>
       <Footer />
     </>

@@ -58,7 +58,6 @@ export function Footer() {
               <li><Link href="/magazine" className="hover:text-primary transition-colors">Magazine</Link></li>
               <li><Link href="/professionisti" className="hover:text-primary transition-colors">Cerca professionisti</Link></li>
               <li><Link href="/sos-smarriti" className="hover:text-red-400 transition-colors">SOS Smarriti</Link></li>
-              <li><Link href="/per-professionisti" className="hover:text-primary transition-colors">Per i professionisti</Link></li>
               <li><Link href="/chi-siamo" className="hover:text-primary transition-colors">Chi siamo</Link></li>
               <li><Link href="/privacy" className="hover:text-primary transition-colors">Privacy &amp; Termini</Link></li>
               <li><ManageCookiesButton /></li>

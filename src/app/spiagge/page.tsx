@@ -4,6 +4,7 @@ import { neon } from "@neondatabase/serverless";
 import { SPIAGGE_SEED, slugifyRegione, type SpiaggiaSeed } from "@/lib/spiagge-seed";
 import { SpiaggeClient, type SpiaggiaUI } from "./SpiaggeClient";
 import { NewsletterInline } from "@/components/shared/NewsletterInline";
+import { collectionJsonLd, jsonLdScript } from "@/lib/json-ld";
 
 export const dynamic = "force-dynamic";
 
@@ -136,6 +137,11 @@ export default async function SpiaggePage() {
             </p>
           </div>
         </section>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={jsonLdScript(collectionJsonLd("Spiagge Dog-Friendly in Italia", "/spiagge", spiagge.length))}
+        />
       </main>
       <Footer />
     </>

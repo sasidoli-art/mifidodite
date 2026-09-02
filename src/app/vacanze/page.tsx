@@ -1,7 +1,8 @@
 import { Header } from "@/components/landing/Header";
 import { Footer } from "@/components/landing/Footer";
-import { VACANZE_SEED, slugifyRegioneV, buildBookingUrl } from "@/lib/vacanze-seed";
+import { VACANZE_SEED, slugifyRegioneV } from "@/lib/vacanze-seed";
 import { VacanzeClient, type VacanzeUI } from "./VacanzeClient";
+import { collectionJsonLd, jsonLdScript } from "@/lib/json-ld";
 
 export const metadata = {
   title: "Hotel Pet-Friendly Italia | Vacanze con il Cane 2026 | MifidoDiTe.eu",
@@ -11,7 +12,7 @@ export const metadata = {
   openGraph: {
     type: "website",
     title: "Vacanze con il cane in Italia 2026 — Strutture pet-friendly",
-    description: "Hotel, agriturismi, masserie, camping e B&B verificati. Mappa, filtri e prenotazione su Booking.",
+    description: "Hotel, agriturismi, masserie, camping e B&B verificati. Mappa, filtri e contatti diretti per le tue vacanze col cane.",
     url: "https://www.mifidodite.eu/vacanze",
     siteName: "MifidoDiTe.eu",
     locale: "it_IT",
@@ -42,7 +43,6 @@ export default function VacanzePage() {
     img: s.img,
     lat: s.lat,
     lng: s.lng,
-    bookingUrl: buildBookingUrl(s.bookingQuery),
   }));
 
   const regioni = Array.from(new Set(strutture.map((s) => s.regione))).sort();
@@ -92,11 +92,16 @@ export default function VacanzePage() {
         <section className="py-8 bg-muted/50">
           <div className="max-w-3xl mx-auto px-4 text-center">
             <p className="text-sm text-muted-foreground">
-              Le politiche pet-friendly possono cambiare. Verifica sempre con la struttura o tramite Booking prima di prenotare.
-              I link &quot;Prenota su Booking&quot; sono affiliate e possono generare una piccola commissione a supporto del progetto.
+              Le politiche pet-friendly possono cambiare. Verifica sempre con la struttura prima di prenotare:
+              taglia massima, supplemento cane e regole interne possono variare di stagione in stagione.
             </p>
           </div>
         </section>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={jsonLdScript(collectionJsonLd("Strutture Pet-Friendly in Italia", "/vacanze", strutture.length))}
+        />
       </main>
       <Footer />
     </>

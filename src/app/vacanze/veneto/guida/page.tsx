@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/shared/Breadcrumbs";
 import Link from "next/link";
 import { MapPin, Landmark, Waves, Mountain } from "lucide-react";
 import { VACANZE_SEED } from "@/lib/vacanze-seed";
+import { breadcrumbJsonLd, newsArticleJsonLd, jsonLdScript } from "@/lib/json-ld";
 
 export const metadata = {
   title: "Vacanze con il Cane in Veneto 2026 — Hotel Pet-Friendly Venezia, Verona, Lago di Garda | MifidoDiTe.eu",
@@ -137,6 +138,29 @@ export default function VenetoGuida() {
             <Link href="/vacanze/veneto" className="inline-flex items-center gap-2 bg-primary text-white font-semibold px-8 py-3 rounded-full hover:bg-primary-dark transition-colors">Vedi tutte le strutture in Veneto →</Link>
           </section>
         </div>
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={jsonLdScript(breadcrumbJsonLd([
+            { name: "Home", url: "/" },
+            { name: "Vacanze", url: "/vacanze" },
+            { name: "Veneto", url: "/vacanze/veneto" },
+            { name: "Guida", url: "/vacanze/veneto/guida" },
+          ]))}
+        />
+
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={jsonLdScript(newsArticleJsonLd({
+            titolo: "Vacanze con il Cane in Veneto 2026",
+            descrizione: "Scopri le migliori vacanze con il cane in Veneto. Hotel pet-friendly a Venezia, Verona, Treviso. Laghi, montagne e città UNESCO con il tuo cane.",
+            slug: "veneto-guida",
+            regione: "Veneto",
+            img: "https://images.unsplash.com/photo-1522871906785-3c92e9d28b6f?w=1200&q=80",
+            datePublished: new Date().toISOString().split("T")[0],
+            autoreName: "MifidoDiTe Team",
+          }))}
+        />
       </main>
       <Footer />
     </>

@@ -38,7 +38,6 @@ const NAV_MOBILE_EXTRA = [
   { href: "/razioni-cane", label: "Razioni cane" },
   { href: "/eta-cane", label: "Eta cane" },
   { href: "/peso-ideale-cane", label: "Peso ideale" },
-  { href: "/offerte", label: "Offerte" },
   { href: "/adozioni", label: "Adozioni" },
   { href: "/cliniche", label: "Cliniche" },
   { href: "/chi-siamo", label: "Chi siamo" },
@@ -128,13 +127,6 @@ export function Header() {
 
             <div className="w-px h-5 bg-foreground/10 mx-2" />
 
-            <Link
-              href="/per-professionisti"
-              className="px-3.5 py-2 rounded-lg text-[14px] font-medium text-primary hover:bg-primary/5 transition-all"
-            >
-              Per professionisti
-            </Link>
-
             <button
               onClick={() => setShowNewsletter(true)}
               className="ml-2 bg-primary text-white px-5 py-2.5 rounded-full text-[14px] font-semibold transition-all hover:bg-primary-dark hover:shadow-md active:scale-[0.97]"
@@ -189,10 +181,6 @@ export function Header() {
                     </Link>
                   ))}
                   <div className="border-t border-border my-3" />
-                  <Link href="/per-professionisti"
-                    className="px-4 py-3 rounded-xl text-[15px] font-medium text-primary hover:bg-primary/5">
-                    Per professionisti
-                  </Link>
                   <button onClick={() => setShowNewsletter(true)}
                     className="mx-4 mt-3 py-3 rounded-full text-[15px] font-semibold bg-primary text-white text-center active:scale-[0.97]">
                     Iscriviti gratis

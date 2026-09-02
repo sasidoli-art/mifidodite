@@ -8,53 +8,61 @@ import { ARTICOLI_SEED } from "@/lib/articoli-seed";
 
 export const revalidate = 3600; // 1 ora
 
+// Date stabili per lastModified (anti-pattern Google: lastmod=now per tutto)
+// Aggiorna queste costanti SOLO quando il contenuto della sezione cambia davvero.
+const LASTMOD_STATIC = new Date("2026-06-03T00:00:00Z");   // pagine statiche principali
+const LASTMOD_LISTING = new Date("2026-06-03T00:00:00Z");  // listing regionali (cambiano con nuovi seed)
+const LASTMOD_DETTAGLIO = new Date("2026-04-13T00:00:00Z"); // schede dettaglio (stabili dal 13 aprile)
+const LASTMOD_GUIDE = new Date("2026-06-03T00:00:00Z");    // guide regionali (create giugno 2026)
+
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const baseUrl = "https://www.mifidodite.eu";
   const now = new Date();
 
   // === PAGINE STATICHE PRINCIPALI ===
+  // Solo homepage e magazine usano `now` (contenuti che cambiano davvero ogni giorno).
+  // Il resto usa date stabili: Google ignora lastmod=now su molti URL.
   const staticPages: MetadataRoute.Sitemap = [
     { url: baseUrl, lastModified: now, changeFrequency: "daily", priority: 1.0 },
 
     // Hub feature ad alto traffico
-    { url: `${baseUrl}/spiagge`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
-    { url: `${baseUrl}/vacanze`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
-    { url: `${baseUrl}/razze`, lastModified: now, changeFrequency: "weekly", priority: 0.95 },
-    { url: `${baseUrl}/ristoranti`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
-    { url: `${baseUrl}/sentieri`, lastModified: now, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${baseUrl}/spiagge`, lastModified: LASTMOD_LISTING, changeFrequency: "weekly", priority: 0.95 },
+    { url: `${baseUrl}/vacanze`, lastModified: LASTMOD_LISTING, changeFrequency: "weekly", priority: 0.95 },
+    { url: `${baseUrl}/razze`, lastModified: LASTMOD_LISTING, changeFrequency: "weekly", priority: 0.95 },
+    { url: `${baseUrl}/ristoranti`, lastModified: LASTMOD_LISTING, changeFrequency: "weekly", priority: 0.9 },
+    { url: `${baseUrl}/sentieri`, lastModified: LASTMOD_LISTING, changeFrequency: "weekly", priority: 0.9 },
     { url: `${baseUrl}/magazine`, lastModified: now, changeFrequency: "daily", priority: 0.9 },
-    { url: `${baseUrl}/professionisti`, lastModified: now, changeFrequency: "daily", priority: 0.9 },
+    { url: `${baseUrl}/professionisti`, lastModified: LASTMOD_LISTING, changeFrequency: "daily", priority: 0.9 },
 
     // Strumenti interattivi
-    { url: `${baseUrl}/quiz-razza`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${baseUrl}/costo-cane`, lastModified: now, changeFrequency: "monthly", priority: 0.8 },
-    { url: `${baseUrl}/razioni-cane`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
-    { url: `${baseUrl}/eta-cane`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
-    { url: `${baseUrl}/peso-ideale-cane`, lastModified: now, changeFrequency: "monthly", priority: 0.85 },
-    { url: `${baseUrl}/mappa`, lastModified: now, changeFrequency: "weekly", priority: 0.8 },
+    { url: `${baseUrl}/quiz-razza`, lastModified: LASTMOD_STATIC, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/quiz-vacanza`, lastModified: LASTMOD_GUIDE, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${baseUrl}/faq`, lastModified: LASTMOD_GUIDE, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${baseUrl}/guida-viaggio-cane-italia-2026`, lastModified: LASTMOD_GUIDE, changeFrequency: "monthly", priority: 0.9 },
+    { url: `${baseUrl}/costo-cane`, lastModified: LASTMOD_STATIC, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${baseUrl}/razioni-cane`, lastModified: LASTMOD_STATIC, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${baseUrl}/eta-cane`, lastModified: LASTMOD_STATIC, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${baseUrl}/peso-ideale-cane`, lastModified: LASTMOD_STATIC, changeFrequency: "monthly", priority: 0.85 },
+    { url: `${baseUrl}/mappa`, lastModified: LASTMOD_STATIC, changeFrequency: "weekly", priority: 0.8 },
 
     // Altre feature
-    { url: `${baseUrl}/adozioni`, lastModified: now, changeFrequency: "daily", priority: 0.8 },
-    { url: `${baseUrl}/sos-smarriti`, lastModified: now, changeFrequency: "daily", priority: 0.85 },
-    { url: `${baseUrl}/cliniche`, lastModified: now, changeFrequency: "weekly", priority: 0.75 },
-    { url: `${baseUrl}/offerte`, lastModified: now, changeFrequency: "weekly", priority: 0.7 },
-    { url: `${baseUrl}/eventi`, lastModified: now, changeFrequency: "weekly", priority: 0.6 },
+    { url: `${baseUrl}/adozioni`, lastModified: LASTMOD_LISTING, changeFrequency: "daily", priority: 0.8 },
+    { url: `${baseUrl}/sos-smarriti`, lastModified: LASTMOD_LISTING, changeFrequency: "daily", priority: 0.85 },
+    { url: `${baseUrl}/cliniche`, lastModified: LASTMOD_LISTING, changeFrequency: "weekly", priority: 0.75 },
+    { url: `${baseUrl}/eventi`, lastModified: LASTMOD_LISTING, changeFrequency: "weekly", priority: 0.6 },
 
     // Pagine di servizio
-    { url: `${baseUrl}/prezzi`, lastModified: now, changeFrequency: "monthly", priority: 0.6 },
-    { url: `${baseUrl}/per-professionisti`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
-    { url: `${baseUrl}/partner`, lastModified: now, changeFrequency: "monthly", priority: 0.5 },
-    { url: `${baseUrl}/chi-siamo`, lastModified: now, changeFrequency: "monthly", priority: 0.4 },
-    { url: `${baseUrl}/registra-attivita`, lastModified: now, changeFrequency: "monthly", priority: 0.4 },
-    { url: `${baseUrl}/legal`, lastModified: now, changeFrequency: "yearly", priority: 0.3 },
-    { url: `${baseUrl}/privacy`, lastModified: now, changeFrequency: "yearly", priority: 0.2 },
-    { url: `${baseUrl}/termini`, lastModified: now, changeFrequency: "yearly", priority: 0.2 },
+    { url: `${baseUrl}/prezzi`, lastModified: LASTMOD_STATIC, changeFrequency: "monthly", priority: 0.6 },
+    { url: `${baseUrl}/chi-siamo`, lastModified: LASTMOD_STATIC, changeFrequency: "monthly", priority: 0.4 },
+    { url: `${baseUrl}/legal`, lastModified: LASTMOD_STATIC, changeFrequency: "yearly", priority: 0.3 },
+    { url: `${baseUrl}/privacy`, lastModified: LASTMOD_STATIC, changeFrequency: "yearly", priority: 0.2 },
+    { url: `${baseUrl}/termini`, lastModified: LASTMOD_STATIC, changeFrequency: "yearly", priority: 0.2 },
   ];
 
   // === SPIAGGE — pagine regionali ===
   const spiaggeRegionali: MetadataRoute.Sitemap = getAllSpiagge().map((regione) => ({
     url: `${baseUrl}/spiagge/${regione}`,
-    lastModified: now,
+    lastModified: LASTMOD_LISTING,
     changeFrequency: "weekly" as const,
     priority: 0.85,
   }));
@@ -62,7 +70,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // === SPIAGGE — dettaglio singole (77) ===
   const spiaggeDettaglio: MetadataRoute.Sitemap = SPIAGGE_SEED.map((s) => ({
     url: `${baseUrl}/spiagge/${slugifyRegione(s.regione)}/${s.slug}`,
-    lastModified: now,
+    lastModified: LASTMOD_DETTAGLIO,
     changeFrequency: "monthly" as const,
     priority: 0.75,
   }));
@@ -70,7 +78,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // === RAZZE — dettaglio singole (20) ===
   const razzeDettaglio: MetadataRoute.Sitemap = RAZZE.map((r) => ({
     url: `${baseUrl}/razze/${r.slug}`,
-    lastModified: now,
+    lastModified: LASTMOD_DETTAGLIO,
     changeFrequency: "monthly" as const,
     priority: 0.85,
   }));
@@ -78,7 +86,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // === RISTORANTI — pagine regionali ===
   const ristorantiRegionali: MetadataRoute.Sitemap = getAllRegioniRistoranti().map((regione) => ({
     url: `${baseUrl}/ristoranti/${regione}`,
-    lastModified: now,
+    lastModified: LASTMOD_LISTING,
     changeFrequency: "weekly" as const,
     priority: 0.8,
   }));
@@ -94,14 +102,14 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // === SENTIERI — pagine regionali + dettaglio ===
   const sentieriRegionali: MetadataRoute.Sitemap = getAllRegioniSentieri().map((regione) => ({
     url: `${baseUrl}/sentieri/${regione}`,
-    lastModified: now,
+    lastModified: LASTMOD_LISTING,
     changeFrequency: "weekly" as const,
     priority: 0.8,
   }));
 
   const sentieriDettaglio: MetadataRoute.Sitemap = SENTIERI_SEED.map((s) => ({
     url: `${baseUrl}/sentieri/${slugifyRegioneS(s.regione)}/${s.slug}`,
-    lastModified: now,
+    lastModified: LASTMOD_DETTAGLIO,
     changeFrequency: "monthly" as const,
     priority: 0.7,
   }));
@@ -109,15 +117,57 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // === VACANZE — pagine regionali ===
   const vacanzeRegionali: MetadataRoute.Sitemap = getAllRegioniVacanze().map((regione) => ({
     url: `${baseUrl}/vacanze/${regione}`,
-    lastModified: now,
+    lastModified: LASTMOD_LISTING,
     changeFrequency: "weekly" as const,
     priority: 0.85,
+  }));
+
+  // === VACANZE — guide regionali statiche (20) ===
+  // Pagine /vacanze/{regione}/guida create manualmente. Aggiornare lista quando se ne aggiungono di nuove.
+  const VACANZE_GUIDE_SLUGS = [
+    "abruzzo", "basilicata", "calabria", "campania", "emilia-romagna",
+    "friuli-venezia-giulia", "lazio", "liguria", "lombardia", "marche",
+    "molise", "piemonte", "puglia", "sardegna", "sicilia", "toscana",
+    "trentino-alto-adige", "umbria", "valle-d-aosta", "veneto",
+  ];
+  const vacanzeGuide: MetadataRoute.Sitemap = VACANZE_GUIDE_SLUGS.map((slug) => ({
+    url: `${baseUrl}/vacanze/${slug}/guida`,
+    lastModified: LASTMOD_GUIDE,
+    changeFrequency: "monthly" as const,
+    priority: 0.9, // alta: sono pagine editoriali ricche di contenuto
+  }));
+
+  // === SPIAGGE — guide regionali statiche (15) ===
+  // Pagine /spiagge/{regione}/guida create per le regioni costiere.
+  const SPIAGGE_GUIDE_SLUGS = [
+    "abruzzo", "basilicata", "calabria", "campania", "emilia-romagna",
+    "friuli-venezia-giulia", "lazio", "liguria", "marche", "molise",
+    "puglia", "sardegna", "sicilia", "toscana", "veneto",
+  ];
+  const spiaggeGuide: MetadataRoute.Sitemap = SPIAGGE_GUIDE_SLUGS.map((slug) => ({
+    url: `${baseUrl}/spiagge/${slug}/guida`,
+    lastModified: LASTMOD_GUIDE,
+    changeFrequency: "monthly" as const,
+    priority: 0.9,
+  }));
+
+  // === SENTIERI — guide regionali statiche (14) ===
+  const SENTIERI_GUIDE_SLUGS = [
+    "abruzzo", "campania", "friuli-venezia-giulia", "lazio", "liguria",
+    "lombardia", "piemonte", "puglia", "sardegna", "sicilia", "toscana",
+    "trentino-alto-adige", "umbria", "veneto",
+  ];
+  const sentieriGuide: MetadataRoute.Sitemap = SENTIERI_GUIDE_SLUGS.map((slug) => ({
+    url: `${baseUrl}/sentieri/${slug}/guida`,
+    lastModified: LASTMOD_GUIDE,
+    changeFrequency: "monthly" as const,
+    priority: 0.9,
   }));
 
   // === VACANZE — dettaglio singole (89) ===
   const vacanzeDettaglio: MetadataRoute.Sitemap = VACANZE_SEED.map((s) => ({
     url: `${baseUrl}/vacanze/${slugifyRegioneV(s.regione)}/${s.slug}`,
-    lastModified: now,
+    lastModified: LASTMOD_DETTAGLIO,
     changeFrequency: "monthly" as const,
     priority: 0.75,
   }));
@@ -147,11 +197,27 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   }
 
   // Aggiungi articoli dal seed che non sono gia' nel DB (nuovi seed locali)
+  // Tenta di parsare la data italiana ("3 Giu 2026") dell'articolo, fallback a LASTMOD_STATIC.
+  const MESI_IT: Record<string, number> = {
+    gen: 0, feb: 1, mar: 2, apr: 3, mag: 4, giu: 5,
+    lug: 6, ago: 7, set: 8, ott: 9, nov: 10, dic: 11,
+  };
+  function parseDataIt(s: string | undefined): Date {
+    if (!s) return LASTMOD_STATIC;
+    const m = s.toLowerCase().match(/^(\d{1,2})\s+([a-z]{3})\s+(\d{4})$/);
+    if (!m) return LASTMOD_STATIC;
+    const giorno = parseInt(m[1], 10);
+    const mese = MESI_IT[m[2]];
+    const anno = parseInt(m[3], 10);
+    if (mese === undefined) return LASTMOD_STATIC;
+    return new Date(Date.UTC(anno, mese, giorno));
+  }
+
   const seedArticlePages: MetadataRoute.Sitemap = ARTICOLI_SEED
     .filter((a) => !dbArticleSlugs.has(a.slug))
     .map((a) => ({
       url: `${baseUrl}/magazine/${a.slug}`,
-      lastModified: now,
+      lastModified: parseDataIt((a as { data?: string }).data),
       changeFrequency: "monthly" as const,
       priority: 0.75, // leggermente alto perche' sono articoli nuovi hub/regionali
     }));
@@ -163,10 +229,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...ristorantiDettaglio,
     ...sentieriRegionali,
     ...sentieriDettaglio,
+    ...sentieriGuide,
     ...spiaggeRegionali,
     ...spiaggeDettaglio,
+    ...spiaggeGuide,
     ...vacanzeRegionali,
     ...vacanzeDettaglio,
+    ...vacanzeGuide,
     ...articlePages,
     ...seedArticlePages,
   ];

@@ -7,8 +7,16 @@ import { ARTICOLI_EVERGREEN } from "./articoli-evergreen-seed";
 import { ARTICOLI_REGIONALI } from "./articoli-regionali-seed";
 import { ARTICOLI_SHOPPING } from "./articoli-shopping-seed";
 import { ARTICOLI_EVENTI } from "./articoli-eventi-seed";
+import { ARTICOLI_ESTATE } from "./articoli-estate-seed";
+import { ARTICOLI_RAZZE } from "./articoli-razze-seed";
+import { ARTICOLI_COMPORTAMENTO } from "./articoli-comportamento-seed";
+import { ARTICOLI_SALUTE } from "./articoli-salute-seed";
 
 export const ARTICOLI_SEED = [
+  ...ARTICOLI_RAZZE,
+  ...ARTICOLI_COMPORTAMENTO,
+  ...ARTICOLI_SALUTE,
+  ...ARTICOLI_ESTATE,
   ...ARTICOLI_EVENTI,
   ...ARTICOLI_EVERGREEN,
   ...ARTICOLI_REGIONALI,

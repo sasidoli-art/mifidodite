@@ -1,136 +1,124 @@
-@import "tailwindcss";
-@import "tw-animate-css";
-@import "shadcn/tailwind.css";
-
-@custom-variant dark (&:is(.dark *));
-
 :root {
-  /* MifidoDiTe v3 — Warm Natural Palette */
-  --primary: #C4683C;
-  --primary-dark: #A3522D;
-  --primary-light: #E8875A;
-  --primary-foreground: #ffffff;
-  --secondary: #7A9E7E;
-  --secondary-foreground: #ffffff;
-  --accent: #D4A94C;
-  --accent-foreground: #ffffff;
-
-  /* Warm backgrounds */
-  --background: #FBF8F4;
-  --foreground: #3D2B1F;
-  --muted: #F5EDE3;
-  --muted-foreground: #7A6B5D;
+  --bg: #fffbf5;
+  --bg-accent: #fff1de;
   --card: #ffffff;
-  --card-foreground: #3D2B1F;
-  --border: rgba(61,43,31,.08);
-  --input: rgba(61,43,31,.08);
-  --ring: #C4683C;
-  --popover: #ffffff;
-  --popover-foreground: #3D2B1F;
-  --destructive: #DC2626;
-
-  /* Layout */
-  --radius: 1rem;
-  --border-width: 1px;
+  --ink: #2c2418;
+  --ink-soft: #6b5f4e;
+  --ink-faint: #9b8f7e;
+  --accent: #d97706;
+  --accent-soft: #f5d9ae;
+  --line: #efe4d3;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --color-primary: var(--primary);
-  --color-primary-dark: var(--primary-dark);
-  --color-primary-light: var(--primary-light);
-  --color-primary-foreground: var(--primary-foreground);
-  --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  --color-accent: var(--accent);
-  --color-accent-foreground: var(--accent-foreground);
-  --color-muted: var(--muted);
-  --color-muted-foreground: var(--muted-foreground);
-  --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  --color-border: var(--border);
-  --color-input: var(--input);
-  --color-ring: var(--ring);
-  --color-popover: var(--popover);
-  --color-popover-foreground: var(--popover-foreground);
-  --color-destructive: var(--destructive);
-  --font-sans: var(--font-body);
-  --font-heading: var(--font-heading);
-  --font-mono: ui-monospace, monospace;
-  --radius-sm: calc(var(--radius) * 0.6);
-  --radius-md: calc(var(--radius) * 0.8);
-  --radius-lg: var(--radius);
-  --radius-xl: calc(var(--radius) * 1.4);
-  --radius-2xl: calc(var(--radius) * 1.8);
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #17130d;
+    --bg-accent: #241c11;
+    --card: #1f1810;
+    --ink: #f5ede0;
+    --ink-soft: #c3b5a0;
+    --ink-faint: #8c7f6c;
+    --accent: #f0a868;
+    --accent-soft: #4a3718;
+    --line: #322718;
+  }
 }
 
-html {
-  scroll-behavior: smooth;
-}
+* { box-sizing: border-box; }
 
-body {
-  font-family: var(--font-body), "DM Sans", Arial, sans-serif;
-  background: var(--background);
-  color: var(--foreground);
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
 
-h1, h2, h3, h4 {
-  font-family: var(--font-heading), "Bricolage Grotesque", sans-serif;
+.wrap {
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 32px 20px;
+  background:
+    radial-gradient(1100px 520px at 50% -10%, var(--bg-accent), transparent 70%),
+    var(--bg);
 }
 
-/* Scroll reveal animations */
-@keyframes fadeUp { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
-@keyframes float { 0%,100% { transform:translateY(0); } 50% { transform:translateY(-12px); } }
-@keyframes shimmer { 0% { background-position:-200% center; } 100% { background-position:200% center; } }
-
-/* Card hover standard */
-.card-hover {
-  transition: all .4s cubic-bezier(.22,1,.36,1);
-}
-.card-hover:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 52px rgba(61,43,31,.1);
+.card {
+  width: 100%;
+  max-width: 620px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 52px 44px 40px;
+  box-shadow: 0 1px 2px rgba(44, 36, 24, .04), 0 14px 44px rgba(44, 36, 24, .07);
 }
 
-/* Button gradient bar on hover */
-.bar-hover::before {
-  content:''; position:absolute; top:0; left:0; right:0; height:3px;
-  background:linear-gradient(90deg, var(--primary), var(--accent));
-  transform:scaleX(0); transform-origin:left;
-  transition:transform .5s cubic-bezier(.22,1,.36,1);
-}
-.bar-hover:hover::before { transform:scaleX(1); }
-
-@layer base {
-  * {
-    @apply border-border outline-ring/50;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
-
-  a:focus-visible,
-  button:focus-visible,
-  input:focus-visible,
-  select:focus-visible,
-  textarea:focus-visible,
-  [role="button"]:focus-visible {
-    outline: 2px solid var(--primary);
-    outline-offset: 2px;
-  }
-
-  a, button, [role="button"], select, label[for] {
-    cursor: pointer;
-  }
+.mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--accent);
 }
 
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
+.mark span[aria-hidden] { font-size: 19px; }
+
+.badge {
+  display: inline-block;
+  margin: 26px 0 20px;
+  padding: 5px 13px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: .05em;
+}
+
+h1 {
+  margin: 0 0 22px;
+  font-size: clamp(30px, 6vw, 40px);
+  line-height: 1.14;
+  letter-spacing: -.022em;
+  font-weight: 700;
+}
+
+p {
+  margin: 0 0 17px;
+  font-size: 16.5px;
+  line-height: 1.68;
+  color: var(--ink-soft);
+}
+
+.note {
+  margin-top: 30px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+  font-size: 15px;
+}
+
+a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid var(--accent-soft);
+}
+
+a:hover { border-bottom-color: var(--accent); }
+
+footer {
+  margin-top: 30px;
+  font-size: 13px;
+  color: var(--ink-faint);
+}
+
+@media (max-width: 520px) {
+  .card { padding: 38px 26px 32px; border-radius: 16px; }
 }
